@@ -27,3 +27,8 @@
 <p align="center">
   <img src="/docs/screenshot.png">
 </p>
+
+<h2 align="center">Install</h2>
+<p align="center">
+  Windows XP, 7, 8.1, 10  |  Size: 0.5 MB  |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.1.0/QuickPictureViewer-Setup.msi">Download</a>
+</p>
