@@ -1,9 +1,9 @@
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.exe.config
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.exe
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.pdb
-C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.MainForm.resources
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.Properties.Resources.resources
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csproj.GenerateResource.cache
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.exe
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.pdb
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache

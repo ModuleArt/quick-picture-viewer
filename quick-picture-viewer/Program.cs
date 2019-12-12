@@ -14,6 +14,13 @@ namespace quick_picture_viewer
 		[STAThread]
 		static void Main(string[] args)
 		{
+			string folderName = null;
+			if (Environment.GetCommandLineArgs().Length > 1)
+			{
+				folderName = Environment.GetCommandLineArgs()[1];
+			}	
+			//MessageBox.Show(folderName);
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quick-picture-viewer", "quick-picture-viewer\quick-picture-viewer.csproj", "{53748C49-255E-424B-B789-5919CEFEF473}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QuickPictureViewer-Setup", "QuickPictureViewer-Setup\QuickPictureViewer-Setup.vdproj", "{1A3EB8FC-3D7C-45B0-A41C-B9D6529A7804}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{53748C49-255E-424B-B789-5919CEFEF473}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53748C49-255E-424B-B789-5919CEFEF473}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53748C49-255E-424B-B789-5919CEFEF473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3EB8FC-3D7C-45B0-A41C-B9D6529A7804}.Debug|Any CPU.ActiveCfg = Debug
+		{1A3EB8FC-3D7C-45B0-A41C-B9D6529A7804}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
