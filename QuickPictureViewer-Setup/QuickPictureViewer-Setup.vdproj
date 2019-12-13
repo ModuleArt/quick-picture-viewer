@@ -145,11 +145,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_9E165066DD6307D67C7B835ACD3F2087"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -245,15 +240,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:QuickPictureViewer"
-        "ProductCode" = "8:{2ED8F089-AE56-4EC4-B8C4-8411DF3C384C}"
-        "PackageCode" = "8:{FAAAE24A-7B85-4B4D-90A8-F6A2DC75EAD1}"
+        "ProductCode" = "8:{69586811-9894-4DDE-AE9A-A00C9B6A79B7}"
+        "PackageCode" = "8:{314E4783-ED0D-43B5-8DC2-2BF0705F64EE}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.2.0"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

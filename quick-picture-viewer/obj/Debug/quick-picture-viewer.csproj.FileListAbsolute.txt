@@ -7,3 +7,4 @@ C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.exe
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.pdb
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.AboutBox1.resources

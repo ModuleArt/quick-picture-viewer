@@ -41,9 +41,11 @@
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
-			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
+			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
+			this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
+			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
+			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutButton = new System.Windows.Forms.ToolStripButton();
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripButton();
@@ -51,9 +53,9 @@
 			this.flipHorizontalButton = new System.Windows.Forms.ToolStripButton();
 			this.flipVerticalButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.copyButton = new System.Windows.Forms.ToolStripButton();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
+			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -63,6 +65,7 @@
 			// 
 			// pictureBox
 			// 
+			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
 			this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pictureBox.Enabled = false;
@@ -96,6 +99,8 @@
 			this.picturePanel.Name = "picturePanel";
 			this.picturePanel.Size = new System.Drawing.Size(624, 394);
 			this.picturePanel.TabIndex = 2;
+			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			// 
 			// fileSystemWatcher1
 			// 
@@ -117,6 +122,7 @@
 			// 
 			// pathLabel
 			// 
+			this.pathLabel.BackColor = System.Drawing.Color.Transparent;
 			this.pathLabel.Image = ((System.Drawing.Image)(resources.GetObject("pathLabel.Image")));
 			this.pathLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
 			this.pathLabel.Name = "pathLabel";
@@ -125,6 +131,7 @@
 			// 
 			// sizeLabel
 			// 
+			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
 			this.sizeLabel.Image = ((System.Drawing.Image)(resources.GetObject("sizeLabel.Image")));
 			this.sizeLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
 			this.sizeLabel.Name = "sizeLabel";
@@ -133,6 +140,7 @@
 			// 
 			// zoomLabel
 			// 
+			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
 			this.zoomLabel.Image = ((System.Drawing.Image)(resources.GetObject("zoomLabel.Image")));
 			this.zoomLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
 			this.zoomLabel.Name = "zoomLabel";
@@ -141,13 +149,16 @@
 			// 
 			// toolStrip1
 			// 
+			this.toolStrip1.BackColor = System.Drawing.Color.White;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openButton,
             this.saveAsButton,
             this.toolStripSeparator1,
-            this.zoomInButton,
-            this.zoomOutButton,
             this.autoZoomButton,
+            this.zoomInButton,
+            this.zoomComboBox,
+            this.zoomOutButton,
+            this.fullscreenButton,
             this.toolStripSeparator2,
             this.aboutButton,
             this.rotateLeftButton,
@@ -159,6 +170,7 @@
             this.pasteButton});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
 			this.toolStrip1.Size = new System.Drawing.Size(624, 25);
 			this.toolStrip1.TabIndex = 16;
 			this.toolStrip1.Text = "toolStrip1";
@@ -170,7 +182,7 @@
 			this.openButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.openButton.Name = "openButton";
 			this.openButton.Size = new System.Drawing.Size(23, 22);
-			this.openButton.Text = "Open file";
+			this.openButton.Text = "Open file | Ctrl+O";
 			this.openButton.Click += new System.EventHandler(this.openButton_Click_1);
 			// 
 			// saveAsButton
@@ -181,13 +193,24 @@
 			this.saveAsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.saveAsButton.Name = "saveAsButton";
 			this.saveAsButton.Size = new System.Drawing.Size(23, 22);
-			this.saveAsButton.Text = "Save as";
+			this.saveAsButton.Text = "Save as | Ctrl + S";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
 			// 
 			// toolStripSeparator1
 			// 
+			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
+			// autoZoomButton
+			// 
+			this.autoZoomButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.autoZoomButton.Image = ((System.Drawing.Image)(resources.GetObject("autoZoomButton.Image")));
+			this.autoZoomButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.autoZoomButton.Name = "autoZoomButton";
+			this.autoZoomButton.Size = new System.Drawing.Size(23, 22);
+			this.autoZoomButton.Text = "Toggle auto zoom | Ctrl + A";
+			this.autoZoomButton.Click += new System.EventHandler(this.autoZoomButton_Click);
 			// 
 			// zoomInButton
 			// 
@@ -197,8 +220,31 @@
 			this.zoomInButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.zoomInButton.Name = "zoomInButton";
 			this.zoomInButton.Size = new System.Drawing.Size(23, 22);
-			this.zoomInButton.Text = "Zoom in";
+			this.zoomInButton.Text = "Zoom in | Ctrl + =";
 			this.zoomInButton.Click += new System.EventHandler(this.zoomInButton_Click);
+			// 
+			// zoomComboBox
+			// 
+			this.zoomComboBox.DropDownWidth = 75;
+			this.zoomComboBox.Enabled = false;
+			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.zoomComboBox.Items.AddRange(new object[] {
+            "5%",
+            "10%",
+            "25%",
+            "50%",
+            "75%",
+            "100%",
+            "125%",
+            "150%",
+            "200%",
+            "250%",
+            "500%"});
+			this.zoomComboBox.Name = "zoomComboBox";
+			this.zoomComboBox.Size = new System.Drawing.Size(75, 25);
+			this.zoomComboBox.Text = "Auto";
+			this.zoomComboBox.ToolTipText = "Zoom";
+			this.zoomComboBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
 			// zoomOutButton
 			// 
@@ -208,21 +254,22 @@
 			this.zoomOutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.zoomOutButton.Name = "zoomOutButton";
 			this.zoomOutButton.Size = new System.Drawing.Size(23, 22);
-			this.zoomOutButton.Text = "Zoom out";
+			this.zoomOutButton.Text = "Zoom out | Ctrl + Minus";
 			this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
 			// 
-			// autoZoomButton
+			// fullscreenButton
 			// 
-			this.autoZoomButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.autoZoomButton.Image = ((System.Drawing.Image)(resources.GetObject("autoZoomButton.Image")));
-			this.autoZoomButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.autoZoomButton.Name = "autoZoomButton";
-			this.autoZoomButton.Size = new System.Drawing.Size(23, 22);
-			this.autoZoomButton.Text = "Toggle auto zoom";
-			this.autoZoomButton.Click += new System.EventHandler(this.autoZoomButton_Click);
+			this.fullscreenButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.fullscreenButton.Image = ((System.Drawing.Image)(resources.GetObject("fullscreenButton.Image")));
+			this.fullscreenButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.fullscreenButton.Name = "fullscreenButton";
+			this.fullscreenButton.Size = new System.Drawing.Size(23, 22);
+			this.fullscreenButton.Text = "Toggle fullscreen | F11";
+			this.fullscreenButton.Click += new System.EventHandler(this.fullscreenButton_Click);
 			// 
 			// toolStripSeparator2
 			// 
+			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
 			// 
@@ -245,7 +292,7 @@
 			this.rotateLeftButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.rotateLeftButton.Name = "rotateLeftButton";
 			this.rotateLeftButton.Size = new System.Drawing.Size(23, 22);
-			this.rotateLeftButton.Text = "Rotate counter-clockwise";
+			this.rotateLeftButton.Text = "Rotate counter-clockwise | Ctrl + Shift + R";
 			this.rotateLeftButton.Click += new System.EventHandler(this.rotateLeftButton_Click);
 			// 
 			// rotateRightButton
@@ -256,7 +303,7 @@
 			this.rotateRightButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.rotateRightButton.Name = "rotateRightButton";
 			this.rotateRightButton.Size = new System.Drawing.Size(23, 22);
-			this.rotateRightButton.Text = "Rotate clockwise";
+			this.rotateRightButton.Text = "Rotate clockwise | Ctrl + R";
 			this.rotateRightButton.Click += new System.EventHandler(this.rotateRightButton_Click);
 			// 
 			// flipHorizontalButton
@@ -267,7 +314,7 @@
 			this.flipHorizontalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.flipHorizontalButton.Name = "flipHorizontalButton";
 			this.flipHorizontalButton.Size = new System.Drawing.Size(23, 22);
-			this.flipHorizontalButton.Text = "Flip horizontal";
+			this.flipHorizontalButton.Text = "Flip horizontal | Ctrl + H";
 			this.flipHorizontalButton.Click += new System.EventHandler(this.flipHorizontalButton_Click);
 			// 
 			// flipVerticalButton
@@ -278,28 +325,24 @@
 			this.flipVerticalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.flipVerticalButton.Name = "flipVerticalButton";
 			this.flipVerticalButton.Size = new System.Drawing.Size(23, 22);
-			this.flipVerticalButton.Text = "Flip vertical";
+			this.flipVerticalButton.Text = "Flip vertical | Ctrl + Shift + H";
 			this.flipVerticalButton.Click += new System.EventHandler(this.flipVerticalButton_Click);
 			// 
 			// toolStripSeparator3
 			// 
+			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
 			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-			// 
-			// saveFileDialog1
-			// 
-			this.saveFileDialog1.FileName = "image";
-			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
-    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp";
 			// 
 			// copyButton
 			// 
 			this.copyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.copyButton.Enabled = false;
 			this.copyButton.Image = ((System.Drawing.Image)(resources.GetObject("copyButton.Image")));
 			this.copyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.copyButton.Name = "copyButton";
 			this.copyButton.Size = new System.Drawing.Size(23, 22);
-			this.copyButton.Text = "Copy image";
+			this.copyButton.Text = "Copy image | Ctrl + C";
 			this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
 			// 
 			// pasteButton
@@ -309,22 +352,34 @@
 			this.pasteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.pasteButton.Name = "pasteButton";
 			this.pasteButton.Size = new System.Drawing.Size(23, 22);
-			this.pasteButton.Text = "Paste";
+			this.pasteButton.Text = "Paste | Ctrl + V";
 			this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
+			// 
+			// saveFileDialog1
+			// 
+			this.saveFileDialog1.FileName = "image";
+			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
+    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp";
 			// 
 			// MainForm
 			// 
+			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(624, 441);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.picturePanel);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MinimumSize = new System.Drawing.Size(340, 240);
+			this.KeyPreview = true;
+			this.MinimumSize = new System.Drawing.Size(240, 240);
 			this.Name = "MainForm";
 			this.Text = "Quick Picture Viewer";
 			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
+			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.picturePanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
@@ -364,6 +419,8 @@
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.ToolStripButton copyButton;
 		private System.Windows.Forms.ToolStripButton pasteButton;
+		private System.Windows.Forms.ToolStripComboBox zoomComboBox;
+		private System.Windows.Forms.ToolStripButton fullscreenButton;
 	}
 }
 
