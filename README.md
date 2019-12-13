@@ -23,13 +23,15 @@
   </a>
 </p>
 
-<h2 align="center">Screenshots</h2>
-<p align="center">
-  <img src="/docs/screenshot.png">
-</p>
-
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows XP, 7, 8.1, 10  |  Size: 0.5 MB  |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.1.0/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows XP, 7, 8.1, 10  |  Size: 0.5 MB  | v1.2.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.2.0/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a>
 </p>
+
+<h2 align="center">Screenshots</h2>
+<p align="center">
+  <img src="/docs/screenshots/main.png">
+  <img src="/docs/screenshots/about.png">
+</p>
+
