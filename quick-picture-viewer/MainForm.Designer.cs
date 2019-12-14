@@ -33,19 +33,17 @@
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.picturePanel = new System.Windows.Forms.Panel();
 			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-			this.pathLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.sizeLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.zoomLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+			this.prevButton = new System.Windows.Forms.ToolStripButton();
+			this.nextButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
 			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
-			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutButton = new System.Windows.Forms.ToolStripButton();
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripButton();
@@ -55,12 +53,23 @@
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.copyButton = new System.Windows.Forms.ToolStripButton();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
+			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
+			this.onTopButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.setAsDesktopButton = new System.Windows.Forms.ToolStripButton();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.fileLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.sizeLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.zoomLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
+			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pictureBox
@@ -107,58 +116,20 @@
 			this.fileSystemWatcher1.EnableRaisingEvents = true;
 			this.fileSystemWatcher1.SynchronizingObject = this;
 			// 
-			// statusStrip1
-			// 
-			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pathLabel,
-            this.sizeLabel,
-            this.zoomLabel});
-			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.statusStrip1.Location = new System.Drawing.Point(0, 419);
-			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(624, 22);
-			this.statusStrip1.TabIndex = 15;
-			this.statusStrip1.Text = "statusStrip1";
-			// 
-			// pathLabel
-			// 
-			this.pathLabel.BackColor = System.Drawing.Color.Transparent;
-			this.pathLabel.Image = ((System.Drawing.Image)(resources.GetObject("pathLabel.Image")));
-			this.pathLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-			this.pathLabel.Name = "pathLabel";
-			this.pathLabel.Size = new System.Drawing.Size(81, 22);
-			this.pathLabel.Text = "File: Empty";
-			// 
-			// sizeLabel
-			// 
-			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
-			this.sizeLabel.Image = ((System.Drawing.Image)(resources.GetObject("sizeLabel.Image")));
-			this.sizeLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-			this.sizeLabel.Name = "sizeLabel";
-			this.sizeLabel.Size = new System.Drawing.Size(89, 22);
-			this.sizeLabel.Text = "Size: 0 x 0 px";
-			// 
-			// zoomLabel
-			// 
-			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
-			this.zoomLabel.Image = ((System.Drawing.Image)(resources.GetObject("zoomLabel.Image")));
-			this.zoomLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-			this.zoomLabel.Name = "zoomLabel";
-			this.zoomLabel.Size = new System.Drawing.Size(87, 22);
-			this.zoomLabel.Text = "Zoom: Auto";
-			// 
 			// toolStrip1
 			// 
 			this.toolStrip1.BackColor = System.Drawing.Color.White;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openButton,
             this.saveAsButton,
+            this.toolStripSeparator4,
+            this.prevButton,
+            this.nextButton,
             this.toolStripSeparator1,
             this.autoZoomButton,
             this.zoomInButton,
             this.zoomComboBox,
             this.zoomOutButton,
-            this.fullscreenButton,
             this.toolStripSeparator2,
             this.aboutButton,
             this.rotateLeftButton,
@@ -167,7 +138,13 @@
             this.flipVerticalButton,
             this.toolStripSeparator3,
             this.copyButton,
-            this.pasteButton});
+            this.pasteButton,
+            this.screenshotButton,
+            this.toolStripSeparator6,
+            this.fullscreenButton,
+            this.onTopButton,
+            this.toolStripSeparator5,
+            this.setAsDesktopButton});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -182,7 +159,7 @@
 			this.openButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.openButton.Name = "openButton";
 			this.openButton.Size = new System.Drawing.Size(23, 22);
-			this.openButton.Text = "Open file | Ctrl+O";
+			this.openButton.Text = "Open file | Ctrl + O";
 			this.openButton.Click += new System.EventHandler(this.openButton_Click_1);
 			// 
 			// saveAsButton
@@ -196,6 +173,34 @@
 			this.saveAsButton.Text = "Save as | Ctrl + S";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
 			// 
+			// toolStripSeparator4
+			// 
+			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+			// 
+			// prevButton
+			// 
+			this.prevButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.prevButton.Enabled = false;
+			this.prevButton.Image = ((System.Drawing.Image)(resources.GetObject("prevButton.Image")));
+			this.prevButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.prevButton.Name = "prevButton";
+			this.prevButton.Size = new System.Drawing.Size(23, 22);
+			this.prevButton.Text = "Previous image in folder | Left arrow";
+			this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
+			// 
+			// nextButton
+			// 
+			this.nextButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.nextButton.Enabled = false;
+			this.nextButton.Image = ((System.Drawing.Image)(resources.GetObject("nextButton.Image")));
+			this.nextButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.nextButton.Name = "nextButton";
+			this.nextButton.Size = new System.Drawing.Size(23, 22);
+			this.nextButton.Text = "Next image in folder | Right arrow";
+			this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -204,7 +209,10 @@
 			// 
 			// autoZoomButton
 			// 
+			this.autoZoomButton.Checked = true;
+			this.autoZoomButton.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.autoZoomButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.autoZoomButton.Enabled = false;
 			this.autoZoomButton.Image = ((System.Drawing.Image)(resources.GetObject("autoZoomButton.Image")));
 			this.autoZoomButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.autoZoomButton.Name = "autoZoomButton";
@@ -229,6 +237,7 @@
 			this.zoomComboBox.Enabled = false;
 			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.zoomComboBox.Items.AddRange(new object[] {
+            "Auto",
             "5%",
             "10%",
             "25%",
@@ -256,16 +265,6 @@
 			this.zoomOutButton.Size = new System.Drawing.Size(23, 22);
 			this.zoomOutButton.Text = "Zoom out | Ctrl + Minus";
 			this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
-			// 
-			// fullscreenButton
-			// 
-			this.fullscreenButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.fullscreenButton.Image = ((System.Drawing.Image)(resources.GetObject("fullscreenButton.Image")));
-			this.fullscreenButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.fullscreenButton.Name = "fullscreenButton";
-			this.fullscreenButton.Size = new System.Drawing.Size(23, 22);
-			this.fullscreenButton.Text = "Toggle fullscreen | F11";
-			this.fullscreenButton.Click += new System.EventHandler(this.fullscreenButton_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -355,11 +354,115 @@
 			this.pasteButton.Text = "Paste | Ctrl + V";
 			this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
 			// 
+			// screenshotButton
+			// 
+			this.screenshotButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.screenshotButton.Image = ((System.Drawing.Image)(resources.GetObject("screenshotButton.Image")));
+			this.screenshotButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.screenshotButton.Name = "screenshotButton";
+			this.screenshotButton.Size = new System.Drawing.Size(23, 22);
+			this.screenshotButton.Text = "toolStripButton1";
+			this.screenshotButton.ToolTipText = "Capture screen | F12";
+			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
+			// 
+			// toolStripSeparator6
+			// 
+			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator6.Name = "toolStripSeparator6";
+			this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+			// 
+			// fullscreenButton
+			// 
+			this.fullscreenButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.fullscreenButton.Image = ((System.Drawing.Image)(resources.GetObject("fullscreenButton.Image")));
+			this.fullscreenButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.fullscreenButton.Name = "fullscreenButton";
+			this.fullscreenButton.Size = new System.Drawing.Size(23, 22);
+			this.fullscreenButton.Text = "Toggle fullscreen | F11";
+			this.fullscreenButton.Click += new System.EventHandler(this.fullscreenButton_Click);
+			// 
+			// onTopButton
+			// 
+			this.onTopButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.onTopButton.Image = ((System.Drawing.Image)(resources.GetObject("onTopButton.Image")));
+			this.onTopButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.onTopButton.Name = "onTopButton";
+			this.onTopButton.Size = new System.Drawing.Size(23, 22);
+			this.onTopButton.Text = "Toggle always on top | Ctrl + T";
+			this.onTopButton.Click += new System.EventHandler(this.onTopButton_Click);
+			// 
+			// toolStripSeparator5
+			// 
+			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+			// 
+			// setAsDesktopButton
+			// 
+			this.setAsDesktopButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.setAsDesktopButton.Enabled = false;
+			this.setAsDesktopButton.Image = ((System.Drawing.Image)(resources.GetObject("setAsDesktopButton.Image")));
+			this.setAsDesktopButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.setAsDesktopButton.Name = "setAsDesktopButton";
+			this.setAsDesktopButton.Size = new System.Drawing.Size(23, 22);
+			this.setAsDesktopButton.Text = "Set as desktop background | Ctrl + B";
+			this.setAsDesktopButton.Click += new System.EventHandler(this.setAsDesktopButton_Click);
+			// 
 			// saveFileDialog1
 			// 
 			this.saveFileDialog1.FileName = "image";
 			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
     ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp";
+			// 
+			// directoryLabel
+			// 
+			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
+			this.directoryLabel.Image = ((System.Drawing.Image)(resources.GetObject("directoryLabel.Image")));
+			this.directoryLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+			this.directoryLabel.Name = "directoryLabel";
+			this.directoryLabel.Size = new System.Drawing.Size(96, 22);
+			this.directoryLabel.Text = "Folder: Empty";
+			// 
+			// fileLabel
+			// 
+			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
+			this.fileLabel.Image = ((System.Drawing.Image)(resources.GetObject("fileLabel.Image")));
+			this.fileLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+			this.fileLabel.Name = "fileLabel";
+			this.fileLabel.Size = new System.Drawing.Size(81, 22);
+			this.fileLabel.Text = "File: Empty";
+			// 
+			// sizeLabel
+			// 
+			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
+			this.sizeLabel.Image = ((System.Drawing.Image)(resources.GetObject("sizeLabel.Image")));
+			this.sizeLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+			this.sizeLabel.Name = "sizeLabel";
+			this.sizeLabel.Size = new System.Drawing.Size(89, 22);
+			this.sizeLabel.Text = "Size: 0 x 0 px";
+			// 
+			// zoomLabel
+			// 
+			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
+			this.zoomLabel.Image = ((System.Drawing.Image)(resources.GetObject("zoomLabel.Image")));
+			this.zoomLabel.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+			this.zoomLabel.Name = "zoomLabel";
+			this.zoomLabel.Size = new System.Drawing.Size(87, 22);
+			this.zoomLabel.Text = "Zoom: Auto";
+			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.directoryLabel,
+            this.fileLabel,
+            this.sizeLabel,
+            this.zoomLabel});
+			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+			this.statusStrip1.Location = new System.Drawing.Point(0, 419);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(624, 22);
+			this.statusStrip1.TabIndex = 15;
+			this.statusStrip1.Text = "statusStrip1";
 			// 
 			// MainForm
 			// 
@@ -373,7 +476,7 @@
 			this.Controls.Add(this.picturePanel);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
-			this.MinimumSize = new System.Drawing.Size(240, 240);
+			this.MinimumSize = new System.Drawing.Size(320, 240);
 			this.Name = "MainForm";
 			this.Text = "Quick Picture Viewer";
 			this.Load += new System.EventHandler(this.MainForm_Load);
@@ -383,10 +486,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.picturePanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-			this.statusStrip1.ResumeLayout(false);
-			this.statusStrip1.PerformLayout();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -398,10 +501,6 @@
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.Panel picturePanel;
 		private System.IO.FileSystemWatcher fileSystemWatcher1;
-		private System.Windows.Forms.StatusStrip statusStrip1;
-		private System.Windows.Forms.ToolStripStatusLabel pathLabel;
-		private System.Windows.Forms.ToolStripStatusLabel sizeLabel;
-		private System.Windows.Forms.ToolStripStatusLabel zoomLabel;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton openButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -421,6 +520,19 @@
 		private System.Windows.Forms.ToolStripButton pasteButton;
 		private System.Windows.Forms.ToolStripComboBox zoomComboBox;
 		private System.Windows.Forms.ToolStripButton fullscreenButton;
+		private System.Windows.Forms.ToolStripButton onTopButton;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel directoryLabel;
+		private System.Windows.Forms.ToolStripStatusLabel fileLabel;
+		private System.Windows.Forms.ToolStripStatusLabel sizeLabel;
+		private System.Windows.Forms.ToolStripStatusLabel zoomLabel;
+		private System.Windows.Forms.ToolStripButton screenshotButton;
+		private System.Windows.Forms.ToolStripButton nextButton;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+		private System.Windows.Forms.ToolStripButton prevButton;
+		private System.Windows.Forms.ToolStripButton setAsDesktopButton;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 	}
 }
 

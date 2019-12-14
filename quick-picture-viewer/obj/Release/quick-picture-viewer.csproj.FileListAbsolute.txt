@@ -1,0 +1,10 @@
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe.config
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.pdb
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.MainForm.resources
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.Properties.Resources.resources
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.csproj.GenerateResource.cache
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.exe
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.pdb
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.WallpaperForm.resources
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.AboutForm.resources

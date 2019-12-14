@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -15,12 +17,14 @@ namespace quick_picture_viewer
 		private bool autoZoom = true;
 		private Point panelMouseDownLocation;
 		private bool fullscreen = false;
+		private string currentFolder;
+		private string currentFile;
+		private bool alwaysOnTop = false;
 
 		public MainForm(string openPath)
 		{
-			this.openPath = openPath;
-
 			InitializeComponent();
+			this.openPath = openPath;
 		}
 
 		private void openButton_Click_1(object sender, EventArgs e)
@@ -35,7 +39,15 @@ namespace quick_picture_viewer
 		{
 			if(!string.IsNullOrEmpty(openPath))
 			{
-				openFile(openPath);
+				if(File.GetAttributes(openPath).HasFlag(FileAttributes.Directory))
+				{
+					currentFolder = openPath;
+					openFirstFileInFolder();
+				}
+				else
+				{
+					openFile(openPath);
+				}
 			}
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
@@ -45,7 +57,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				openImage(new Bitmap(path), path, Path.GetFileName(path));
+				openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 			}
 			catch
 			{
@@ -53,7 +65,7 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void openImage(Bitmap bitmap, string filePath, string fileName)
+		private void openImage(Bitmap bitmap, string directoryName, string fileName)
 		{
 			originalImage = bitmap;
 			pictureBox.Image = originalImage;
@@ -61,7 +73,26 @@ namespace quick_picture_viewer
 			width = pictureBox.Image.Size.Width;
 			height = pictureBox.Image.Size.Height;
 			sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px";
-			pathLabel.Text = "File: " + filePath;
+			fileLabel.Text = "File: " + fileName;
+
+			if(directoryName == null)
+			{
+				currentFolder = null;
+				currentFile = null;
+				directoryLabel.Text = "Folder: Not exists";
+
+				nextButton.Enabled = false;
+				prevButton.Enabled = false;
+			}
+			else
+			{
+				currentFolder = directoryName;
+				currentFile = fileName;
+				directoryLabel.Text = "Folder: " + directoryName;
+
+				nextButton.Enabled = true;
+				prevButton.Enabled = true;
+			}
 
 			this.Text = fileName + " - Quick Picture Viewer";
 
@@ -73,6 +104,8 @@ namespace quick_picture_viewer
 			rotateRightButton.Enabled = true;
 			saveAsButton.Enabled = true;
 			copyButton.Enabled = true;
+			autoZoomButton.Enabled = true;
+			setAsDesktopButton.Enabled = true;
 
 			zoomComboBox.Enabled = true;
 
@@ -103,6 +136,8 @@ namespace quick_picture_viewer
 		{
 			zoomFactor = newZoomFactor;
 
+			zoomLabel.Text = "Zoom: " + zoomFactor.ToString() + "%";
+
 			setAutoZoom(false);
 
 			int newWidth = Convert.ToInt32(width * zoomFactor / 100);
@@ -110,8 +145,11 @@ namespace quick_picture_viewer
 
 			Size newSize = new Size(newWidth, newHeight);
 
-			Bitmap bmp = new Bitmap(originalImage, newSize);
-			pictureBox.Image = bmp;
+			//Bitmap bmp = new Bitmap(originalImage, newSize);
+			//pictureBox.Image = bmp;
+
+			pictureBox.Size = newSize;
+			pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
 			//updatePictureBoxLocation();
 		}
@@ -140,20 +178,24 @@ namespace quick_picture_viewer
 		private void setZoomText(string text)
 		{
 			zoomComboBox.Text = text;
-			zoomLabel.Text = "Zoom: " + text;
 		}
 
 		private void setAutoZoom(bool b)
 		{
 			autoZoom = b;
+
+			autoZoomButton.Checked = b;
+
 			if (b)
 			{
-				pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+				//pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 				pictureBox.Dock = DockStyle.Fill;
+
+				zoomLabel.Text = "Zoom: Auto";
 			}
 			else
 			{
-				pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+				//pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
 				pictureBox.Dock = DockStyle.None;
 			}
 		}
@@ -172,17 +214,21 @@ namespace quick_picture_viewer
 
 		private void aboutButton_Click(object sender, EventArgs e)
 		{
-			//if(MessageBox.Show(
-			//	"Quick Picture Viewer\nv" + ProductVersion + "\n\nby Module Art\nAuthor: Jake Volynko\n\nVisit a project web page?\nhttps://github.com/ModuleArt/quick-picture-viewer/", 
-			//	"About", 
-			//	MessageBoxButtons.YesNo, 
-			//	MessageBoxIcon.Asterisk
-			//) == DialogResult.Yes)
-			//{
-			//	System.Diagnostics.Process.Start("https://github.com/ModuleArt/quick-picture-viewer/");
-			//} 
-			AboutBox1 aboutBox = new AboutBox1();
+			setAlwaysOnTop(false);
+			AboutForm aboutBox = new AboutForm();
 			aboutBox.ShowDialog();
+		}
+
+		private void setAlwaysOnTop(bool b)
+		{
+			alwaysOnTop = b;
+			this.TopMost = b;
+			onTopButton.Checked = b;
+
+			if(b)
+			{
+				setFullscreen(false);
+			}
 		}
 
 		private void flipVerticalButton_Click(object sender, EventArgs e)
@@ -217,7 +263,7 @@ namespace quick_picture_viewer
 		{
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
-				System.IO.FileStream fs = (System.IO.FileStream)saveFileDialog1.OpenFile();
+				System.IO.FileStream fs = (System.IO.FileStream) saveFileDialog1.OpenFile();
 				switch (saveFileDialog1.FilterIndex)
 				{
 					case 1:
@@ -246,7 +292,7 @@ namespace quick_picture_viewer
 		{
 			if (Clipboard.ContainsImage())
 			{
-				openImage(new Bitmap(Clipboard.GetImage()), "From clipboard", "From clipboard");
+				openImage(new Bitmap(Clipboard.GetImage()), null, "From clipboard");
 			}
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
@@ -388,10 +434,13 @@ namespace quick_picture_viewer
 
 			this.WindowState = FormWindowState.Normal;
 
+			fullscreenButton.Checked = b;
+
 			if (b)
 			{
 				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = FormWindowState.Maximized;
+				setAlwaysOnTop(false);
 			}
 			else
 			{
@@ -491,6 +540,14 @@ namespace quick_picture_viewer
 					{
 						zoomOutButton.PerformClick();
 					}
+					else if (e.KeyCode == Keys.T)
+					{
+						onTopButton.PerformClick();
+					}
+					else if (e.KeyCode == Keys.B)
+					{
+						setAsDesktopButton.PerformClick();
+					}
 				}
 			}
 			else
@@ -498,6 +555,10 @@ namespace quick_picture_viewer
 				if (e.KeyCode == Keys.F11)
 				{
 					fullscreenButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.F12)
+				{
+					screenshotButton.PerformClick();
 				}
 			}
 		}
@@ -509,7 +570,7 @@ namespace quick_picture_viewer
 
 			if (bitmap != null)
 			{
-				openImage(bitmap, "Dragged image", "Dragged image");
+				openImage(bitmap, null, "Dragged image");
 			}
 			else if (files.Length > 0)
 			{
@@ -528,6 +589,113 @@ namespace quick_picture_viewer
 			{
 				e.Effect = DragDropEffects.None;
 			}
+		}
+
+		private void onTopButton_Click(object sender, EventArgs e)
+		{
+			setAlwaysOnTop(!alwaysOnTop);
+		}
+
+		private void screenshotButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+
+			Bitmap bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+			using (Graphics g = Graphics.FromImage(bmp))
+			{
+				g.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size);
+
+				openImage(bmp, null, "Captured screen");
+			}
+
+			this.Show();
+		}
+
+		private void nextButton_Click(object sender, EventArgs e)
+		{
+			string[] filePaths = getCurrentFiles();
+
+			int currentIndex = 0;
+			for (int i = 0; i < filePaths.Length; i++)
+			{
+				if (filePaths[i] == Path.Combine(currentFolder, currentFile))
+				{
+					currentIndex = i;
+					break;
+				}
+			}
+
+			if (currentIndex == filePaths.Length - 1)
+			{
+				openFile(filePaths[0]);
+			}
+			else
+			{
+				openFile(filePaths[currentIndex + 1]);
+			}
+		}
+
+		private void prevButton_Click(object sender, EventArgs e)
+		{
+			string[] filePaths = getCurrentFiles();
+
+			int currentIndex = 0;
+			for (int i = 0; i < filePaths.Length; i++)
+			{
+				if (filePaths[i] == Path.Combine(currentFolder, currentFile))
+				{
+					currentIndex = i;
+					break;
+				}
+			}
+
+			if (currentIndex == 0)
+			{
+				openFile(filePaths[filePaths.Length - 1]);
+			}
+			else
+			{
+				openFile(filePaths[currentIndex - 1]);
+			}
+		}
+
+		private string[] getCurrentFiles()
+		{
+			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle" };
+			List<string> arlist = new List<string>();
+
+			string[] allFiles = Directory.GetFiles(currentFolder);
+			for(int i = 0; i < allFiles.Length; i++)
+			{
+				string ext = Path.GetExtension(allFiles[i]);
+				if (exts.Contains(ext))
+				{
+					arlist.Add(allFiles[i]);
+				}
+			}
+
+			return arlist.ToArray();
+		}
+
+		private void openFirstFileInFolder()
+		{
+			string[] filePaths = getCurrentFiles();
+
+			if(filePaths.Length > 0)
+			{
+				openFile(filePaths[0]);
+			}
+			else
+			{
+				MessageBox.Show("Directory is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void setAsDesktopButton_Click(object sender, EventArgs e)
+		{
+			setAlwaysOnTop(false);
+			WallpaperForm wallpaperForm = new WallpaperForm(originalImage);
+			wallpaperForm.ShowDialog();
 		}
 	}
 }
