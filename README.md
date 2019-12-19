@@ -33,3 +33,8 @@
   <img src="/docs/screenshots/desktop.png">
   <img src="/docs/screenshots/about.png">
 </p>
+
+<h2 align="center">Additional</h2>
+<p align="center">
+  <a href="https://winaero.com/blog/enable-dark-title-bars-custom-accent-color-windows-10/">Enable dark title bars</a> with custom accent color in Windows 10
+</p>
