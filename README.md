@@ -15,9 +15,6 @@
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF">
   </a>
-  <a alt="Discord channel" href="https://discord.gg/9q4D8SJ">
-    <img alt="Discord" src="https://img.shields.io/discord/625641944105877504?color=%237289DA&label=discord">
-  </a>
   <a alt="Buy ma a coffee" href="https://www.patreon.com/moduleart">
     <img alt="Patreon" src="https://img.shields.io/badge/donate-patreon-%23E85B46">
   </a>
