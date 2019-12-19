@@ -8,3 +8,4 @@ C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\qui
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.pdb
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.WallpaperForm.resources
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.AboutForm.resources
+C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.csprojAssemblyReference.cache

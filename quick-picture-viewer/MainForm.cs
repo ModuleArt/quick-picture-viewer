@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.FileIO;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -57,6 +59,9 @@ namespace quick_picture_viewer
 		{
 			try
 			{
+				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
+				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
+
 				openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 			}
 			catch
@@ -72,7 +77,6 @@ namespace quick_picture_viewer
 
 			width = pictureBox.Image.Size.Width;
 			height = pictureBox.Image.Size.Height;
-			sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px";
 			fileLabel.Text = "File: " + fileName;
 
 			if(directoryName == null)
@@ -80,18 +84,24 @@ namespace quick_picture_viewer
 				currentFolder = null;
 				currentFile = null;
 				directoryLabel.Text = "Folder: Not exists";
+				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px";
 
 				nextButton.Enabled = false;
 				prevButton.Enabled = false;
+				deleteButton.Enabled = false;
+				externalButton.Enabled = false;
 			}
 			else
 			{
 				currentFolder = directoryName;
 				currentFile = fileName;
 				directoryLabel.Text = "Folder: " + directoryName;
+				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px (" + bytesToSize(Path.Combine(directoryName, fileName)) + ")";
 
 				nextButton.Enabled = true;
 				prevButton.Enabled = true;
+				deleteButton.Enabled = true;
+				externalButton.Enabled = true;
 			}
 
 			this.Text = fileName + " - Quick Picture Viewer";
@@ -106,6 +116,14 @@ namespace quick_picture_viewer
 			copyButton.Enabled = true;
 			autoZoomButton.Enabled = true;
 			setAsDesktopButton.Enabled = true;
+			infoButton.Enabled = true;
+
+			saveContextItem.Enabled = true;
+			deleteContextItem.Enabled = true;
+			zoomContextItem.Enabled = true;
+			orientationContextItem.Enabled = true;
+			copyContextItem.Enabled = true;
+			desktopContextItem.Enabled = true;
 
 			zoomComboBox.Enabled = true;
 
@@ -434,17 +452,27 @@ namespace quick_picture_viewer
 
 			this.WindowState = FormWindowState.Normal;
 
-			fullscreenButton.Checked = b;
+			unfullscreenButton.Visible = b;
+
+			toolStrip1.Visible = !b;
+			statusStrip1.Visible = !b;
 
 			if (b)
 			{
 				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = FormWindowState.Maximized;
+
+				picturePanel.Dock = DockStyle.Fill;
+				picturePanel.BackColor = Color.Black;
+
 				setAlwaysOnTop(false);
 			}
 			else
 			{
 				this.FormBorderStyle = FormBorderStyle.Sizable;
+
+				picturePanel.Dock = DockStyle.None;
+				picturePanel.BackColor = Color.Transparent;
 			}
 		}
 
@@ -548,17 +576,45 @@ namespace quick_picture_viewer
 					{
 						setAsDesktopButton.PerformClick();
 					}
+					else if (e.KeyCode == Keys.I)
+					{
+						infoButton.PerformClick();
+					}
+					else if (e.KeyCode == Keys.E)
+					{
+						externalButton.PerformClick();
+					}
 				}
 			}
 			else
 			{
-				if (e.KeyCode == Keys.F11)
+				if (e.KeyCode == Keys.F)
 				{
 					fullscreenButton.PerformClick();
 				}
 				else if (e.KeyCode == Keys.F12)
 				{
 					screenshotButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.Delete)
+				{
+					deleteButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.F1)
+				{
+					aboutButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.Left)
+				{
+					prevButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.Right)
+				{
+					nextButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.Escape)
+				{
+					unfullscreenButton.PerformClick();
 				}
 			}
 		}
@@ -611,7 +667,7 @@ namespace quick_picture_viewer
 			this.Show();
 		}
 
-		private void nextButton_Click(object sender, EventArgs e)
+		private int nextFile()
 		{
 			string[] filePaths = getCurrentFiles();
 
@@ -633,6 +689,13 @@ namespace quick_picture_viewer
 			{
 				openFile(filePaths[currentIndex + 1]);
 			}
+
+			return filePaths.Length;
+		}
+
+		private void nextButton_Click(object sender, EventArgs e)
+		{
+			nextFile();
 		}
 
 		private void prevButton_Click(object sender, EventArgs e)
@@ -696,6 +759,219 @@ namespace quick_picture_viewer
 			setAlwaysOnTop(false);
 			WallpaperForm wallpaperForm = new WallpaperForm(originalImage);
 			wallpaperForm.ShowDialog();
+		}
+
+		private void deleteButton_Click(object sender, EventArgs e)
+		{
+			DialogResult d = MessageBox.Show(
+				"Are you sure you want to move this file to the Recyble Bin?",
+				"Delete file",
+				MessageBoxButtons.YesNo,
+				MessageBoxIcon.Question
+			);
+
+			if (d == DialogResult.Yes)
+			{
+				string path = Path.Combine(currentFolder, currentFile);
+				if (FileSystem.FileExists(path))
+				{
+					originalImage.Dispose();
+					originalImage = null;
+					pictureBox.Image.Dispose();
+					pictureBox.Image = null;
+
+					if (nextFile() <= 1)
+					{
+						closeFile();
+					}
+					FileSystem.DeleteFile(path, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin, UICancelOption.DoNothing);
+				}
+				else
+				{
+					MessageBox.Show("File not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+		}
+
+		private void closeFile()
+		{
+			originalImage.Dispose();
+			originalImage = null;
+			pictureBox.Image.Dispose();
+			pictureBox.Image = null;
+
+			saveAsButton.Enabled = false;
+			deleteButton.Enabled = false;
+			prevButton.Enabled = false;
+			nextButton.Enabled = false;
+			autoZoomButton.Enabled = false;
+			zoomInButton.Enabled = false;
+			zoomOutButton.Enabled = false;
+			rotateLeftButton.Enabled = false;
+			rotateRightButton.Enabled = false;
+			flipHorizontalButton.Enabled = false;
+			flipVerticalButton.Enabled = false;
+			copyButton.Enabled = false;
+			setAsDesktopButton.Enabled = false;
+			infoButton.Enabled = false;
+			externalButton.Enabled = false;
+
+			saveContextItem.Enabled = false;
+			deleteContextItem.Enabled = false;
+			zoomContextItem.Enabled = false;
+			orientationContextItem.Enabled = false;
+			copyContextItem.Enabled = false;
+			desktopContextItem.Enabled = false;
+
+			zoomComboBox.Enabled = false;
+
+			directoryLabel.Text = "Folder: Empty";
+			fileLabel.Text = "File: Empty";
+			sizeLabel.Text = "Size: 0 x 0 px";
+			dateCreatedLabel.Text = "Created: Unknown";
+			dateModifiedLabel.Text = "Modified: Unknown";
+
+			setZoomText("Auto");
+		}
+
+		private void openContextItem_Click(object sender, EventArgs e)
+		{
+			openButton.PerformClick();
+		}
+
+		private void saveContextItem_Click(object sender, EventArgs e)
+		{
+			saveAsButton.PerformClick();
+		}
+
+		private void deleteContextItem_Click(object sender, EventArgs e)
+		{
+			deleteButton.PerformClick();
+		}
+
+		private void prevContextItem_Click(object sender, EventArgs e)
+		{
+			prevButton.PerformClick();
+		}
+
+		private void nextContextItem_Click(object sender, EventArgs e)
+		{
+			nextButton.PerformClick();
+		}
+
+		private void autoZoomContextItem_Click(object sender, EventArgs e)
+		{
+			autoZoomButton.PerformClick();
+		}
+
+		private void zoomInContextItem_Click(object sender, EventArgs e)
+		{
+			zoomInButton.PerformClick();
+		}
+
+		private void zoomOutContextItem_Click(object sender, EventArgs e)
+		{
+			zoomOutButton.PerformClick();
+		}
+
+		private void rotateLeftContextItem_Click(object sender, EventArgs e)
+		{
+			rotateLeftButton.PerformClick();
+		}
+
+		private void rotateRightContextItem_Click(object sender, EventArgs e)
+		{
+			rotateRightButton.PerformClick();
+		}
+
+		private void flipHorizontalContextItem_Click(object sender, EventArgs e)
+		{
+			flipHorizontalButton.PerformClick();
+		}
+
+		private void flipVerticalContextItem_Click(object sender, EventArgs e)
+		{
+			flipVerticalButton.PerformClick();
+		}
+
+		private void copyContextItem_Click(object sender, EventArgs e)
+		{
+			copyButton.PerformClick();
+		}
+
+		private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			pasteButton.PerformClick();
+		}
+
+		private void fullscreenContextItem_Click(object sender, EventArgs e)
+		{
+			fullscreenButton.PerformClick();
+		}
+
+		private void onTopContextItem_Click(object sender, EventArgs e)
+		{
+			onTopButton.PerformClick();
+		}
+
+		private void screenshotContextItem_Click(object sender, EventArgs e)
+		{
+			screenshotButton.PerformClick();
+		}
+
+		private void desktopContextItem_Click(object sender, EventArgs e)
+		{
+			setAsDesktopButton.PerformClick();
+		}
+
+		private string bytesToSize(string path)
+		{
+			string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+			double len = new FileInfo(path).Length;
+			int order = 0;
+			while (len >= 1024 && order < sizes.Length - 1)
+			{
+				order++;
+				len = len / 1024;
+			}
+
+			return String.Format("{0:0.##} {1}", len, sizes[order]);
+		}
+
+		private void infoButton_Click(object sender, EventArgs e)
+		{
+			setAlwaysOnTop(false);
+			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile);
+			infoForm.ShowDialog();
+		}
+
+		private void picturePanel_DoubleClick(object sender, EventArgs e)
+		{
+			if (zoomFactor <= 150)
+			{
+				setZoomText("250%");
+			}
+			else
+			{
+				setZoomText("100%");
+			}
+		}
+
+		private void showOpenWithDialog(string path)
+		{
+			var args = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "shell32.dll");
+			args += ",OpenAs_RunDLL " + path;
+			Process.Start("rundll32.exe", args);
+		}
+
+		private void externalButton_Click(object sender, EventArgs e)
+		{
+			showOpenWithDialog(Path.Combine(currentFolder, currentFile));
+		}
+
+		private void unfullscreenButton_Click(object sender, EventArgs e)
+		{
+			setFullscreen(false);
 		}
 	}
 }

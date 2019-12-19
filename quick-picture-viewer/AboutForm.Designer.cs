@@ -38,6 +38,8 @@
 			this.projectLink = new System.Windows.Forms.LinkLabel();
 			this.okButton = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.issuesLink = new System.Windows.Forms.LinkLabel();
+			this.updatesLink = new System.Windows.Forms.LinkLabel();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -76,7 +78,7 @@
 			// companyLabel
 			// 
 			this.companyLabel.AutoSize = true;
-			this.companyLabel.Location = new System.Drawing.Point(6, 71);
+			this.companyLabel.Location = new System.Drawing.Point(6, 97);
 			this.companyLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.companyLabel.Name = "companyLabel";
 			this.companyLabel.Size = new System.Drawing.Size(72, 13);
@@ -86,7 +88,7 @@
 			// authorLabel
 			// 
 			this.authorLabel.AutoSize = true;
-			this.authorLabel.Location = new System.Drawing.Point(6, 90);
+			this.authorLabel.Location = new System.Drawing.Point(6, 116);
 			this.authorLabel.Margin = new System.Windows.Forms.Padding(3);
 			this.authorLabel.Name = "authorLabel";
 			this.authorLabel.Size = new System.Drawing.Size(108, 13);
@@ -96,7 +98,7 @@
 			// descriptionLabel
 			// 
 			this.descriptionLabel.AutoSize = true;
-			this.descriptionLabel.Location = new System.Drawing.Point(6, 116);
+			this.descriptionLabel.Location = new System.Drawing.Point(6, 142);
 			this.descriptionLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.descriptionLabel.Name = "descriptionLabel";
 			this.descriptionLabel.Size = new System.Drawing.Size(192, 13);
@@ -106,30 +108,32 @@
 			// developerLink
 			// 
 			this.developerLink.AutoSize = true;
-			this.developerLink.Location = new System.Drawing.Point(8, 142);
+			this.developerLink.Location = new System.Drawing.Point(8, 168);
 			this.developerLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.developerLink.Name = "developerLink";
 			this.developerLink.Size = new System.Drawing.Size(58, 13);
 			this.developerLink.TabIndex = 32;
 			this.developerLink.TabStop = true;
 			this.developerLink.Text = "Module Art";
+			this.developerLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.developerLink_LinkClicked);
 			// 
 			// projectLink
 			// 
 			this.projectLink.AutoSize = true;
-			this.projectLink.Location = new System.Drawing.Point(72, 142);
+			this.projectLink.Location = new System.Drawing.Point(72, 168);
 			this.projectLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.projectLink.Name = "projectLink";
 			this.projectLink.Size = new System.Drawing.Size(67, 13);
 			this.projectLink.TabIndex = 33;
 			this.projectLink.TabStop = true;
 			this.projectLink.Text = "Project page";
+			this.projectLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.projectLink_LinkClicked);
 			// 
 			// okButton
 			// 
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.okButton.Location = new System.Drawing.Point(190, 291);
+			this.okButton.Location = new System.Drawing.Point(190, 317);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(75, 23);
@@ -138,6 +142,8 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.updatesLink);
+			this.groupBox1.Controls.Add(this.issuesLink);
 			this.groupBox1.Controls.Add(this.versionLabel);
 			this.groupBox1.Controls.Add(this.projectLink);
 			this.groupBox1.Controls.Add(this.companyLabel);
@@ -148,17 +154,41 @@
 			this.groupBox1.Location = new System.Drawing.Point(9, 109);
 			this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(256, 175);
+			this.groupBox1.Size = new System.Drawing.Size(256, 201);
 			this.groupBox1.TabIndex = 34;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Info";
+			// 
+			// issuesLink
+			// 
+			this.issuesLink.AutoSize = true;
+			this.issuesLink.Location = new System.Drawing.Point(145, 168);
+			this.issuesLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.issuesLink.Name = "issuesLink";
+			this.issuesLink.Size = new System.Drawing.Size(37, 13);
+			this.issuesLink.TabIndex = 34;
+			this.issuesLink.TabStop = true;
+			this.issuesLink.Text = "Issues";
+			this.issuesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.issuesLink_LinkClicked);
+			// 
+			// updatesLink
+			// 
+			this.updatesLink.AutoSize = true;
+			this.updatesLink.Location = new System.Drawing.Point(6, 71);
+			this.updatesLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.updatesLink.Name = "updatesLink";
+			this.updatesLink.Size = new System.Drawing.Size(94, 13);
+			this.updatesLink.TabIndex = 35;
+			this.updatesLink.TabStop = true;
+			this.updatesLink.Text = "Check for updates";
+			this.updatesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.updatesLink_LinkClicked);
 			// 
 			// AboutForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(274, 323);
+			this.ClientSize = new System.Drawing.Size(274, 349);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);
@@ -190,5 +220,7 @@
 		private System.Windows.Forms.LinkLabel projectLink;
 		private System.Windows.Forms.Button okButton;
 		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.LinkLabel issuesLink;
+		private System.Windows.Forms.LinkLabel updatesLink;
 	}
 }
