@@ -240,15 +240,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:QuickPictureViewer"
-        "ProductCode" = "8:{4DD3ED65-B3B9-4ADA-9574-7C02B619AE28}"
-        "PackageCode" = "8:{C1B60484-E36F-49E6-B23D-6D0262E92CB2}"
+        "ProductCode" = "8:{9004A78C-938F-459F-A1E4-B99FF58E6512}"
+        "PackageCode" = "8:{F08DBA2C-DE47-4352-A7DB-870647B75147}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.4.0"
+        "ProductVersion" = "8:1.5.0"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -979,11 +979,27 @@
                                         }
                                         "Values"
                                         {
+                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_35598E2894FE44F2A3FA4F011D2F186B"
+                                            {
+                                            "Name" = "8:"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:Open with QuickPictureViewer"
+                                            }
                                         }
                                     }
                                 }
                                 "Values"
                                 {
+                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_C258817A570D4635BCD3A1B2F7CBB15B"
+                                    {
+                                    "Name" = "8:"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "ValueTypes" = "3:1"
+                                    "Value" = "8:open"
+                                    }
                                 }
                             }
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_80C045B224A94CC49E59BE2BDDA4F789"
@@ -1000,7 +1016,7 @@
                                 {
                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_644163D1BA2844FA957AEF49976AE5D2"
                                     {
-                                    "Name" = "8:DefaultIcon"
+                                    "Name" = "8:"
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "ValueTypes" = "3:1"

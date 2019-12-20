@@ -38,8 +38,8 @@
 			this.projectLink = new System.Windows.Forms.LinkLabel();
 			this.okButton = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.issuesLink = new System.Windows.Forms.LinkLabel();
 			this.updatesLink = new System.Windows.Forms.LinkLabel();
+			this.issuesLink = new System.Windows.Forms.LinkLabel();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -133,6 +133,7 @@
 			// 
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.okButton.Location = new System.Drawing.Point(190, 317);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
@@ -159,18 +160,6 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Info";
 			// 
-			// issuesLink
-			// 
-			this.issuesLink.AutoSize = true;
-			this.issuesLink.Location = new System.Drawing.Point(145, 168);
-			this.issuesLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-			this.issuesLink.Name = "issuesLink";
-			this.issuesLink.Size = new System.Drawing.Size(37, 13);
-			this.issuesLink.TabIndex = 34;
-			this.issuesLink.TabStop = true;
-			this.issuesLink.Text = "Issues";
-			this.issuesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.issuesLink_LinkClicked);
-			// 
 			// updatesLink
 			// 
 			this.updatesLink.AutoSize = true;
@@ -182,6 +171,18 @@
 			this.updatesLink.TabStop = true;
 			this.updatesLink.Text = "Check for updates";
 			this.updatesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.updatesLink_LinkClicked);
+			// 
+			// issuesLink
+			// 
+			this.issuesLink.AutoSize = true;
+			this.issuesLink.Location = new System.Drawing.Point(145, 168);
+			this.issuesLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.issuesLink.Name = "issuesLink";
+			this.issuesLink.Size = new System.Drawing.Size(37, 13);
+			this.issuesLink.TabIndex = 34;
+			this.issuesLink.TabStop = true;
+			this.issuesLink.Text = "Issues";
+			this.issuesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.issuesLink_LinkClicked);
 			// 
 			// AboutForm
 			// 

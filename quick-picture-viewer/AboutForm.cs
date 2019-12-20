@@ -14,7 +14,20 @@ namespace quick_picture_viewer
 		public AboutForm()
 		{
 			InitializeComponent();
-			this.versionLabel.Text = String.Format("Version: {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString().Substring(0, 5));
+
+			versionLabel.Text = String.Format("Version: {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString().Substring(0, 5));
+
+			if (ThemeManager.isDarkTheme())
+			{
+				this.BackColor = Color.FromArgb(32, 32, 32);
+				this.ForeColor = Color.White;
+				this.groupBox1.ForeColor = Color.White;
+
+				updatesLink.LinkColor = Color.FromArgb(150, 150, 150);
+				developerLink.LinkColor = Color.FromArgb(150, 150, 150);
+				projectLink.LinkColor = Color.FromArgb(150, 150, 150);
+				issuesLink.LinkColor = Color.FromArgb(150, 150, 150);
+			}
 		}
 
 		private void developerLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -48,6 +48,16 @@ namespace quick_picture_viewer
 			resolutionTextBox.Text = Math.Round(bitmap.HorizontalResolution) + " x " + Math.Round(bitmap.VerticalResolution) + " DPI";
 			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " inches";
 			cmTextBox.Text = cmWidth.ToString("0.#") + " x " + cmHeight.ToString("0.#") + " centimeters";
+
+			if (ThemeManager.isDarkTheme())
+			{
+				this.BackColor = Color.FromArgb(32, 32, 32);
+				this.ForeColor = Color.White;
+
+				this.fileGroup.ForeColor = Color.White;
+				this.sizeGroup.ForeColor = Color.White;
+				this.dateGroup.ForeColor = Color.White;
+			}
 		}
 
 		private string bytesToSize(string path)

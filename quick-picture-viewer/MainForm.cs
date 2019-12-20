@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.FileIO;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -52,7 +53,14 @@ namespace quick_picture_viewer
 				}
 			}
 
+			toolStrip1.Renderer = new ToolStripOverride();
+
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
+
+			if (ThemeManager.isDarkTheme())
+			{
+				applyDarkTheme();
+			}
 		}
 
 		private void openFile(string path)
@@ -117,13 +125,6 @@ namespace quick_picture_viewer
 			autoZoomButton.Enabled = true;
 			setAsDesktopButton.Enabled = true;
 			infoButton.Enabled = true;
-
-			saveContextItem.Enabled = true;
-			deleteContextItem.Enabled = true;
-			zoomContextItem.Enabled = true;
-			orientationContextItem.Enabled = true;
-			copyContextItem.Enabled = true;
-			desktopContextItem.Enabled = true;
 
 			zoomComboBox.Enabled = true;
 
@@ -321,10 +322,11 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseDown(object sender, MouseEventArgs e)
 		{
-			if (e.Button == MouseButtons.Left && !autoZoom) {
+			if (e.Button == MouseButtons.Left && !autoZoom)
+			{
 				panelMouseDownLocation = new Point(
-					e.Location.X + picturePanel.HorizontalScroll.Value, 
-					e.Location.Y + picturePanel.VerticalScroll.Value
+					this.PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
+					this.PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
 				);
 			}
 		}
@@ -333,12 +335,12 @@ namespace quick_picture_viewer
 		{
 			if (e.Button == MouseButtons.Left && !autoZoom)
 			{
-				int newX = panelMouseDownLocation.X - e.X;
-				int newY = panelMouseDownLocation.Y - e.Y;
+				int newX = panelMouseDownLocation.X - this.PointToClient(Cursor.Position).X;
+				int newY = panelMouseDownLocation.Y - this.PointToClient(Cursor.Position).Y;
 
-				if(newX > picturePanel.HorizontalScroll.Minimum)
+				if (newX > picturePanel.HorizontalScroll.Minimum)
 				{
-					if(newX < picturePanel.HorizontalScroll.Maximum)
+					if (newX < picturePanel.HorizontalScroll.Maximum)
 					{
 						picturePanel.HorizontalScroll.Value = newX;
 					}
@@ -374,24 +376,6 @@ namespace quick_picture_viewer
 		{
 			if(Control.ModifierKeys == Keys.Control)
 			{
-				int newVertical = picturePanel.VerticalScroll.Value + e.Delta;
-
-				if (newVertical > picturePanel.VerticalScroll.Minimum)
-				{
-					if (newVertical < picturePanel.VerticalScroll.Maximum)
-					{
-						picturePanel.VerticalScroll.Value = newVertical;
-					}
-					else
-					{
-						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
-					}
-				}
-				else 
-				{
-					picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
-				}
-
 				if (e.Delta > 0)
 				{
 					zoomIn();
@@ -399,44 +383,6 @@ namespace quick_picture_viewer
 				else if(e.Delta < 0)
 				{
 					zoomOut();
-				}
-			}
-			else if (Control.ModifierKeys == Keys.Shift && !autoZoom)
-			{
-				int newVertical = picturePanel.VerticalScroll.Value + e.Delta;
-
-				if (newVertical > picturePanel.VerticalScroll.Minimum)
-				{
-					if (newVertical < picturePanel.VerticalScroll.Maximum)
-					{
-						picturePanel.VerticalScroll.Value = newVertical;
-					}
-					else
-					{
-						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
-					}
-				}
-				else
-				{
-					picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
-				}
-
-				int newHorizontal = picturePanel.HorizontalScroll.Value + e.Delta;
-
-				if (newHorizontal > picturePanel.HorizontalScroll.Minimum)
-				{
-					if(newHorizontal < picturePanel.HorizontalScroll.Maximum)
-					{
-						picturePanel.HorizontalScroll.Value = newHorizontal;
-					}
-					else
-					{
-						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
-					}
-				}
-				else
-				{
-					picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
 				}
 			}
 		}
@@ -452,8 +398,6 @@ namespace quick_picture_viewer
 
 			this.WindowState = FormWindowState.Normal;
 
-			unfullscreenButton.Visible = b;
-
 			toolStrip1.Visible = !b;
 			statusStrip1.Visible = !b;
 
@@ -463,7 +407,7 @@ namespace quick_picture_viewer
 				this.WindowState = FormWindowState.Maximized;
 
 				picturePanel.Dock = DockStyle.Fill;
-				picturePanel.BackColor = Color.Black;
+				pictureBox.BackColor = Color.Black;
 
 				setAlwaysOnTop(false);
 			}
@@ -472,7 +416,7 @@ namespace quick_picture_viewer
 				this.FormBorderStyle = FormBorderStyle.Sizable;
 
 				picturePanel.Dock = DockStyle.None;
-				picturePanel.BackColor = Color.Transparent;
+				pictureBox.BackColor = Color.Transparent;
 			}
 		}
 
@@ -614,7 +558,7 @@ namespace quick_picture_viewer
 				}
 				else if (e.KeyCode == Keys.Escape)
 				{
-					unfullscreenButton.PerformClick();
+					setFullscreen(false);
 				}
 			}
 		}
@@ -816,13 +760,6 @@ namespace quick_picture_viewer
 			infoButton.Enabled = false;
 			externalButton.Enabled = false;
 
-			saveContextItem.Enabled = false;
-			deleteContextItem.Enabled = false;
-			zoomContextItem.Enabled = false;
-			orientationContextItem.Enabled = false;
-			copyContextItem.Enabled = false;
-			desktopContextItem.Enabled = false;
-
 			zoomComboBox.Enabled = false;
 
 			directoryLabel.Text = "Folder: Empty";
@@ -832,96 +769,6 @@ namespace quick_picture_viewer
 			dateModifiedLabel.Text = "Modified: Unknown";
 
 			setZoomText("Auto");
-		}
-
-		private void openContextItem_Click(object sender, EventArgs e)
-		{
-			openButton.PerformClick();
-		}
-
-		private void saveContextItem_Click(object sender, EventArgs e)
-		{
-			saveAsButton.PerformClick();
-		}
-
-		private void deleteContextItem_Click(object sender, EventArgs e)
-		{
-			deleteButton.PerformClick();
-		}
-
-		private void prevContextItem_Click(object sender, EventArgs e)
-		{
-			prevButton.PerformClick();
-		}
-
-		private void nextContextItem_Click(object sender, EventArgs e)
-		{
-			nextButton.PerformClick();
-		}
-
-		private void autoZoomContextItem_Click(object sender, EventArgs e)
-		{
-			autoZoomButton.PerformClick();
-		}
-
-		private void zoomInContextItem_Click(object sender, EventArgs e)
-		{
-			zoomInButton.PerformClick();
-		}
-
-		private void zoomOutContextItem_Click(object sender, EventArgs e)
-		{
-			zoomOutButton.PerformClick();
-		}
-
-		private void rotateLeftContextItem_Click(object sender, EventArgs e)
-		{
-			rotateLeftButton.PerformClick();
-		}
-
-		private void rotateRightContextItem_Click(object sender, EventArgs e)
-		{
-			rotateRightButton.PerformClick();
-		}
-
-		private void flipHorizontalContextItem_Click(object sender, EventArgs e)
-		{
-			flipHorizontalButton.PerformClick();
-		}
-
-		private void flipVerticalContextItem_Click(object sender, EventArgs e)
-		{
-			flipVerticalButton.PerformClick();
-		}
-
-		private void copyContextItem_Click(object sender, EventArgs e)
-		{
-			copyButton.PerformClick();
-		}
-
-		private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			pasteButton.PerformClick();
-		}
-
-		private void fullscreenContextItem_Click(object sender, EventArgs e)
-		{
-			fullscreenButton.PerformClick();
-		}
-
-		private void onTopContextItem_Click(object sender, EventArgs e)
-		{
-			onTopButton.PerformClick();
-		}
-
-		private void screenshotContextItem_Click(object sender, EventArgs e)
-		{
-			screenshotButton.PerformClick();
-		}
-
-		private void desktopContextItem_Click(object sender, EventArgs e)
-		{
-			setAsDesktopButton.PerformClick();
 		}
 
 		private string bytesToSize(string path)
@@ -947,14 +794,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_DoubleClick(object sender, EventArgs e)
 		{
-			if (zoomFactor <= 150)
-			{
-				setZoomText("250%");
-			}
-			else
-			{
-				setZoomText("100%");
-			}
+			fullscreenButton.PerformClick();
 		}
 
 		private void showOpenWithDialog(string path)
@@ -969,9 +809,16 @@ namespace quick_picture_viewer
 			showOpenWithDialog(Path.Combine(currentFolder, currentFile));
 		}
 
-		private void unfullscreenButton_Click(object sender, EventArgs e)
+		private void applyDarkTheme()
 		{
-			setFullscreen(false);
+			this.BackColor = Color.Black;
+
+			toolStrip1.BackColor = Color.Black;
+
+			picturePanel.BackColor = Color.FromArgb(32, 32, 32);
+
+			statusStrip1.BackColor = Color.FromArgb(51, 51, 51);
+			statusStrip1.ForeColor = Color.White;
 		}
 	}
 }

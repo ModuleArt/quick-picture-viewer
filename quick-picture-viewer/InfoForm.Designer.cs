@@ -32,13 +32,13 @@
 			this.fileNameLabel = new System.Windows.Forms.Label();
 			this.okButton = new System.Windows.Forms.Button();
 			this.fileGroup = new System.Windows.Forms.GroupBox();
-			this.folderLabel = new System.Windows.Forms.Label();
-			this.fileNameTextBox = new System.Windows.Forms.TextBox();
-			this.folderTextBox = new System.Windows.Forms.TextBox();
-			this.fullPathTextBox = new System.Windows.Forms.TextBox();
-			this.fullPathLabel = new System.Windows.Forms.Label();
 			this.compressionTextBox = new System.Windows.Forms.TextBox();
 			this.compressionLabel = new System.Windows.Forms.Label();
+			this.fullPathTextBox = new System.Windows.Forms.TextBox();
+			this.fullPathLabel = new System.Windows.Forms.Label();
+			this.folderTextBox = new System.Windows.Forms.TextBox();
+			this.fileNameTextBox = new System.Windows.Forms.TextBox();
+			this.folderLabel = new System.Windows.Forms.Label();
 			this.sizeTextBox = new System.Windows.Forms.TextBox();
 			this.sizeLabel = new System.Windows.Forms.Label();
 			this.megapixelsTextBox = new System.Windows.Forms.TextBox();
@@ -50,13 +50,13 @@
 			this.cmTextBox = new System.Windows.Forms.TextBox();
 			this.cmLabel = new System.Windows.Forms.Label();
 			this.sizeGroup = new System.Windows.Forms.GroupBox();
-			this.dateGroup = new System.Windows.Forms.GroupBox();
-			this.createdLabel = new System.Windows.Forms.Label();
-			this.createdTextBox = new System.Windows.Forms.TextBox();
-			this.modifiedLabel = new System.Windows.Forms.Label();
-			this.modifiedTextBox = new System.Windows.Forms.TextBox();
 			this.diskSizeTextBox = new System.Windows.Forms.TextBox();
 			this.diskSizeLabel = new System.Windows.Forms.Label();
+			this.dateGroup = new System.Windows.Forms.GroupBox();
+			this.modifiedLabel = new System.Windows.Forms.Label();
+			this.modifiedTextBox = new System.Windows.Forms.TextBox();
+			this.createdLabel = new System.Windows.Forms.Label();
+			this.createdTextBox = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.fileGroup.SuspendLayout();
 			this.sizeGroup.SuspendLayout();
@@ -88,6 +88,7 @@
 			// 
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.okButton.Location = new System.Drawing.Point(190, 546);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
@@ -113,31 +114,23 @@
 			this.fileGroup.TabStop = false;
 			this.fileGroup.Text = "File";
 			// 
-			// folderLabel
+			// compressionTextBox
 			// 
-			this.folderLabel.AutoSize = true;
-			this.folderLabel.Location = new System.Drawing.Point(6, 52);
-			this.folderLabel.Margin = new System.Windows.Forms.Padding(3);
-			this.folderLabel.Name = "folderLabel";
-			this.folderLabel.Size = new System.Drawing.Size(39, 13);
-			this.folderLabel.TabIndex = 28;
-			this.folderLabel.Text = "Folder:";
+			this.compressionTextBox.Location = new System.Drawing.Point(87, 101);
+			this.compressionTextBox.Name = "compressionTextBox";
+			this.compressionTextBox.ReadOnly = true;
+			this.compressionTextBox.Size = new System.Drawing.Size(163, 20);
+			this.compressionTextBox.TabIndex = 34;
 			// 
-			// fileNameTextBox
+			// compressionLabel
 			// 
-			this.fileNameTextBox.Location = new System.Drawing.Point(87, 23);
-			this.fileNameTextBox.Name = "fileNameTextBox";
-			this.fileNameTextBox.ReadOnly = true;
-			this.fileNameTextBox.Size = new System.Drawing.Size(163, 20);
-			this.fileNameTextBox.TabIndex = 29;
-			// 
-			// folderTextBox
-			// 
-			this.folderTextBox.Location = new System.Drawing.Point(87, 49);
-			this.folderTextBox.Name = "folderTextBox";
-			this.folderTextBox.ReadOnly = true;
-			this.folderTextBox.Size = new System.Drawing.Size(163, 20);
-			this.folderTextBox.TabIndex = 30;
+			this.compressionLabel.AutoSize = true;
+			this.compressionLabel.Location = new System.Drawing.Point(6, 104);
+			this.compressionLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.compressionLabel.Name = "compressionLabel";
+			this.compressionLabel.Size = new System.Drawing.Size(70, 13);
+			this.compressionLabel.TabIndex = 33;
+			this.compressionLabel.Text = "Compression:";
 			// 
 			// fullPathTextBox
 			// 
@@ -157,23 +150,31 @@
 			this.fullPathLabel.TabIndex = 31;
 			this.fullPathLabel.Text = "Full path:";
 			// 
-			// compressionTextBox
+			// folderTextBox
 			// 
-			this.compressionTextBox.Location = new System.Drawing.Point(87, 101);
-			this.compressionTextBox.Name = "compressionTextBox";
-			this.compressionTextBox.ReadOnly = true;
-			this.compressionTextBox.Size = new System.Drawing.Size(163, 20);
-			this.compressionTextBox.TabIndex = 34;
+			this.folderTextBox.Location = new System.Drawing.Point(87, 49);
+			this.folderTextBox.Name = "folderTextBox";
+			this.folderTextBox.ReadOnly = true;
+			this.folderTextBox.Size = new System.Drawing.Size(163, 20);
+			this.folderTextBox.TabIndex = 30;
 			// 
-			// compressionLabel
+			// fileNameTextBox
 			// 
-			this.compressionLabel.AutoSize = true;
-			this.compressionLabel.Location = new System.Drawing.Point(6, 104);
-			this.compressionLabel.Margin = new System.Windows.Forms.Padding(3);
-			this.compressionLabel.Name = "compressionLabel";
-			this.compressionLabel.Size = new System.Drawing.Size(70, 13);
-			this.compressionLabel.TabIndex = 33;
-			this.compressionLabel.Text = "Compression:";
+			this.fileNameTextBox.Location = new System.Drawing.Point(87, 23);
+			this.fileNameTextBox.Name = "fileNameTextBox";
+			this.fileNameTextBox.ReadOnly = true;
+			this.fileNameTextBox.Size = new System.Drawing.Size(163, 20);
+			this.fileNameTextBox.TabIndex = 29;
+			// 
+			// folderLabel
+			// 
+			this.folderLabel.AutoSize = true;
+			this.folderLabel.Location = new System.Drawing.Point(6, 52);
+			this.folderLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.folderLabel.Name = "folderLabel";
+			this.folderLabel.Size = new System.Drawing.Size(39, 13);
+			this.folderLabel.TabIndex = 28;
+			this.folderLabel.Text = "Folder:";
 			// 
 			// sizeTextBox
 			// 
@@ -287,6 +288,24 @@
 			this.sizeGroup.TabStop = false;
 			this.sizeGroup.Text = "Size";
 			// 
+			// diskSizeTextBox
+			// 
+			this.diskSizeTextBox.Location = new System.Drawing.Point(87, 153);
+			this.diskSizeTextBox.Name = "diskSizeTextBox";
+			this.diskSizeTextBox.ReadOnly = true;
+			this.diskSizeTextBox.Size = new System.Drawing.Size(163, 20);
+			this.diskSizeTextBox.TabIndex = 46;
+			// 
+			// diskSizeLabel
+			// 
+			this.diskSizeLabel.AutoSize = true;
+			this.diskSizeLabel.Location = new System.Drawing.Point(6, 156);
+			this.diskSizeLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.diskSizeLabel.Name = "diskSizeLabel";
+			this.diskSizeLabel.Size = new System.Drawing.Size(52, 13);
+			this.diskSizeLabel.TabIndex = 45;
+			this.diskSizeLabel.Text = "Disk size:";
+			// 
 			// dateGroup
 			// 
 			this.dateGroup.Controls.Add(this.modifiedLabel);
@@ -300,24 +319,6 @@
 			this.dateGroup.TabIndex = 46;
 			this.dateGroup.TabStop = false;
 			this.dateGroup.Text = "Date";
-			// 
-			// createdLabel
-			// 
-			this.createdLabel.AutoSize = true;
-			this.createdLabel.Location = new System.Drawing.Point(6, 26);
-			this.createdLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-			this.createdLabel.Name = "createdLabel";
-			this.createdLabel.Size = new System.Drawing.Size(47, 13);
-			this.createdLabel.TabIndex = 37;
-			this.createdLabel.Text = "Created:";
-			// 
-			// createdTextBox
-			// 
-			this.createdTextBox.Location = new System.Drawing.Point(87, 23);
-			this.createdTextBox.Name = "createdTextBox";
-			this.createdTextBox.ReadOnly = true;
-			this.createdTextBox.Size = new System.Drawing.Size(163, 20);
-			this.createdTextBox.TabIndex = 38;
 			// 
 			// modifiedLabel
 			// 
@@ -337,23 +338,23 @@
 			this.modifiedTextBox.Size = new System.Drawing.Size(163, 20);
 			this.modifiedTextBox.TabIndex = 40;
 			// 
-			// diskSizeTextBox
+			// createdLabel
 			// 
-			this.diskSizeTextBox.Location = new System.Drawing.Point(87, 153);
-			this.diskSizeTextBox.Name = "diskSizeTextBox";
-			this.diskSizeTextBox.ReadOnly = true;
-			this.diskSizeTextBox.Size = new System.Drawing.Size(163, 20);
-			this.diskSizeTextBox.TabIndex = 46;
+			this.createdLabel.AutoSize = true;
+			this.createdLabel.Location = new System.Drawing.Point(6, 26);
+			this.createdLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.createdLabel.Name = "createdLabel";
+			this.createdLabel.Size = new System.Drawing.Size(47, 13);
+			this.createdLabel.TabIndex = 37;
+			this.createdLabel.Text = "Created:";
 			// 
-			// diskSizeLabel
+			// createdTextBox
 			// 
-			this.diskSizeLabel.AutoSize = true;
-			this.diskSizeLabel.Location = new System.Drawing.Point(6, 156);
-			this.diskSizeLabel.Margin = new System.Windows.Forms.Padding(3);
-			this.diskSizeLabel.Name = "diskSizeLabel";
-			this.diskSizeLabel.Size = new System.Drawing.Size(52, 13);
-			this.diskSizeLabel.TabIndex = 45;
-			this.diskSizeLabel.Text = "Disk size:";
+			this.createdTextBox.Location = new System.Drawing.Point(87, 23);
+			this.createdTextBox.Name = "createdTextBox";
+			this.createdTextBox.ReadOnly = true;
+			this.createdTextBox.Size = new System.Drawing.Size(163, 20);
+			this.createdTextBox.TabIndex = 38;
 			// 
 			// InfoForm
 			// 
