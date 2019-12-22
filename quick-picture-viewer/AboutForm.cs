@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -21,12 +18,17 @@ namespace quick_picture_viewer
 			{
 				this.BackColor = Color.FromArgb(32, 32, 32);
 				this.ForeColor = Color.White;
-				this.groupBox1.ForeColor = Color.White;
 
-				updatesLink.LinkColor = Color.FromArgb(150, 150, 150);
-				developerLink.LinkColor = Color.FromArgb(150, 150, 150);
-				projectLink.LinkColor = Color.FromArgb(150, 150, 150);
-				issuesLink.LinkColor = Color.FromArgb(150, 150, 150);
+				infoGroup.ForeColor = Color.White;
+				pagesGroup.ForeColor = Color.White;
+
+				Color linkColor = ThemeManager.getColorizationColor();
+
+				updatesLink.LinkColor = linkColor;
+				developerLink.LinkColor = linkColor;
+				projectLink.LinkColor = linkColor;
+				issuesLink.LinkColor = linkColor;
+				makeDefaultLink.LinkColor = linkColor;
 			}
 		}
 
@@ -47,7 +49,14 @@ namespace quick_picture_viewer
 
 		private void updatesLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://github.com/ModuleArt/quick-picture-viewer/releases/");
+			MainForm parent = (MainForm) this.Owner;
+
+			parent.checkForUpdates(true);
+		}
+
+		private void makeDefaultLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start("ms-settings:defaultapps");
 		}
 	}
 }

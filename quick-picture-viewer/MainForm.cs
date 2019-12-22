@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualBasic.FileIO;
-using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using GitHubUpdate;
 
 namespace quick_picture_viewer
 {
@@ -60,6 +60,31 @@ namespace quick_picture_viewer
 			if (ThemeManager.isDarkTheme())
 			{
 				applyDarkTheme();
+			}
+
+			checkForUpdates(false);
+		}
+
+		public async void checkForUpdates(bool showUpToDateDialog)
+		{
+			var checker = new UpdateChecker("ModuleArt", "quick-picture-viewer");
+
+			UpdateType update = await checker.CheckUpdate();
+
+			if (update == UpdateType.None)
+			{
+				if (showUpToDateDialog)
+				{
+					MessageBox.Show("Application is up to date", "Updator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+			}
+			else
+			{
+				var result = new UpdateNotifyDialog(checker).ShowDialog();
+				if (result == DialogResult.Yes)
+				{
+					checker.DownloadAsset("QuickPictureViewer-Setup.msi");
+				}
 			}
 		}
 
@@ -125,6 +150,7 @@ namespace quick_picture_viewer
 			autoZoomButton.Enabled = true;
 			setAsDesktopButton.Enabled = true;
 			infoButton.Enabled = true;
+			printButton.Enabled = true;
 
 			zoomComboBox.Enabled = true;
 
@@ -162,31 +188,30 @@ namespace quick_picture_viewer
 			int newWidth = Convert.ToInt32(width * zoomFactor / 100);
 			int newHeight = Convert.ToInt32(height * zoomFactor / 100);
 
+			int newScrollH = Convert.ToInt32(picturePanel.HorizontalScroll.Value * zoomFactor / 100);
+			int newScrollV = Convert.ToInt32(picturePanel.VerticalScroll.Value * zoomFactor / 100);
+
 			Size newSize = new Size(newWidth, newHeight);
 
-			//Bitmap bmp = new Bitmap(originalImage, newSize);
-			//pictureBox.Image = bmp;
-
 			pictureBox.Size = newSize;
-			pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
-			//updatePictureBoxLocation();
+			updatePictureBoxLocation();
 		}
-
+						
 		private void updatePictureBoxLocation()
 		{
-			if (pictureBox.Image.Width < picturePanel.Width)
+			if (pictureBox.Width < picturePanel.Width)
 			{
-				pictureBox.Left = (picturePanel.Width - pictureBox.Image.Width) / 2 - picturePanel.HorizontalScroll.Value;
+				pictureBox.Left = (picturePanel.Width - pictureBox.Width) / 2;
 			}
 			else
 			{
 				pictureBox.Left = 0;
 			}
 
-			if (pictureBox.Image.Height < picturePanel.Height)
+			if (pictureBox.Height < picturePanel.Height)
 			{
-				pictureBox.Top = (picturePanel.Height - pictureBox.Image.Height) / 2 - picturePanel.VerticalScroll.Value;
+				pictureBox.Top = (picturePanel.Height - pictureBox.Height) / 2;
 			}
 			else
 			{
@@ -207,14 +232,12 @@ namespace quick_picture_viewer
 
 			if (b)
 			{
-				//pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 				pictureBox.Dock = DockStyle.Fill;
 
 				zoomLabel.Text = "Zoom: Auto";
 			}
 			else
 			{
-				//pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
 				pictureBox.Dock = DockStyle.None;
 			}
 		}
@@ -235,6 +258,7 @@ namespace quick_picture_viewer
 		{
 			setAlwaysOnTop(false);
 			AboutForm aboutBox = new AboutForm();
+			aboutBox.Owner = this;
 			aboutBox.ShowDialog();
 		}
 
@@ -296,6 +320,9 @@ namespace quick_picture_viewer
 						break;
 					case 4:
 						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Bmp);
+						break;
+					case 5:
+						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Tiff);
 						break;
 				}
 				fs.Close();
@@ -528,6 +555,10 @@ namespace quick_picture_viewer
 					{
 						externalButton.PerformClick();
 					}
+					else if (e.KeyCode == Keys.P)
+					{
+						printButton.PerformClick();
+					}
 				}
 			}
 			else
@@ -759,6 +790,7 @@ namespace quick_picture_viewer
 			setAsDesktopButton.Enabled = false;
 			infoButton.Enabled = false;
 			externalButton.Enabled = false;
+			printButton.Enabled = false;
 
 			zoomComboBox.Enabled = false;
 
@@ -813,12 +845,70 @@ namespace quick_picture_viewer
 		{
 			this.BackColor = Color.Black;
 
+			this.ForeColor = Color.White;
+
 			toolStrip1.BackColor = Color.Black;
 
 			picturePanel.BackColor = Color.FromArgb(32, 32, 32);
 
 			statusStrip1.BackColor = Color.FromArgb(51, 51, 51);
-			statusStrip1.ForeColor = Color.White;
+		}
+
+		private void MainForm_SizeChanged(object sender, EventArgs e)
+		{
+			updatePictureBoxLocation();
+		}
+
+		private void printButton_Click(object sender, EventArgs e)
+		{
+			if (printDialog1.ShowDialog() == DialogResult.OK)
+			{
+				if (currentFile != null) 
+				{
+					printDocument1.DocumentName = currentFile;
+				}
+				printDocument1.Print();
+			}
+		}
+
+		private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+		{
+			RectangleF marginBounds = e.MarginBounds;
+			RectangleF printableArea = e.PageSettings.PrintableArea;
+
+			int availableWidth = (int)Math.Floor(printDocument1.OriginAtMargins
+				? marginBounds.Width
+				: (e.PageSettings.Landscape
+					? printableArea.Height
+					: printableArea.Width));
+
+			int availableHeight = (int)Math.Floor(printDocument1.OriginAtMargins
+				? marginBounds.Height
+				: (e.PageSettings.Landscape
+					? printableArea.Width
+					: printableArea.Height));
+
+			if (availableWidth > originalImage.Width && availableHeight > originalImage.Height)
+			{
+				e.Graphics.DrawImage(originalImage, 0, 0, originalImage.Width, originalImage.Height);
+			} 
+			else
+			{
+				double scaleW = availableWidth / (double) originalImage.Width;
+				double scaleH = availableHeight / (double) originalImage.Height;
+
+				Console.WriteLine("scaleW = " + scaleW);
+				Console.WriteLine("scaleH = " + scaleH);
+
+				if (scaleW < scaleH)
+				{
+					e.Graphics.DrawImage(originalImage, 0, 0, availableWidth, Convert.ToInt32(originalImage.Height * scaleW));
+				}
+				else
+				{
+					e.Graphics.DrawImage(originalImage, 0, 0, Convert.ToInt32(originalImage.Width * scaleH), availableHeight);
+				}
+			}
 		}
 	}
 }

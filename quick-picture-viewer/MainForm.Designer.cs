@@ -29,15 +29,14 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.picturePanel = new CustomPanel();
 			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.deleteButton = new System.Windows.Forms.ToolStripButton();
 			this.externalButton = new System.Windows.Forms.ToolStripButton();
+			this.printButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
 			this.nextButton = new System.Windows.Forms.ToolStripButton();
@@ -70,54 +69,21 @@
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.dateCreatedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-			this.picturePanel.SuspendLayout();
+			this.printDialog1 = new System.Windows.Forms.PrintDialog();
+			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
+			this.picturePanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// pictureBox
-			// 
-			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox.InitialImage = null;
-			this.pictureBox.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
-			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(714, 402);
-			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox.TabIndex = 0;
-			this.pictureBox.TabStop = false;
-			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			// 
 			// openFileDialog1
 			// 
 			this.openFileDialog1.FileName = "image";
-			this.openFileDialog1.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.exif, *.gif, *.bmp, *.dib, *." +
-    "rle) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif; *.exif; *.gif; *.bmp, *.dib; *.rle";
-			// 
-			// picturePanel
-			// 
-			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.picturePanel.AutoScroll = true;
-			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-			this.picturePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.picturePanel.Controls.Add(this.pictureBox);
-			this.picturePanel.Location = new System.Drawing.Point(0, 35);
-			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(714, 402);
-			this.picturePanel.TabIndex = 2;
-			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.openFileDialog1.Filter = resources.GetString("openFileDialog1.Filter");
 			// 
 			// fileSystemWatcher1
 			// 
@@ -133,6 +99,7 @@
             this.saveAsButton,
             this.deleteButton,
             this.externalButton,
+            this.printButton,
             this.toolStripSeparator4,
             this.prevButton,
             this.nextButton,
@@ -216,6 +183,19 @@
 			this.externalButton.Text = "Open file with external app | Ctrl + E";
 			this.externalButton.Click += new System.EventHandler(this.externalButton_Click);
 			// 
+			// printButton
+			// 
+			this.printButton.AutoSize = false;
+			this.printButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.printButton.Enabled = false;
+			this.printButton.Image = ((System.Drawing.Image)(resources.GetObject("printButton.Image")));
+			this.printButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.printButton.Margin = new System.Windows.Forms.Padding(0);
+			this.printButton.Name = "printButton";
+			this.printButton.Size = new System.Drawing.Size(24, 25);
+			this.printButton.Text = "Print | Ctrl + P";
+			this.printButton.Click += new System.EventHandler(this.printButton_Click);
+			// 
 			// toolStripSeparator4
 			// 
 			this.toolStripSeparator4.AutoSize = false;
@@ -286,6 +266,7 @@
 			// 
 			// zoomComboBox
 			// 
+			this.zoomComboBox.AutoSize = false;
 			this.zoomComboBox.DropDownWidth = 75;
 			this.zoomComboBox.Enabled = false;
 			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -304,8 +285,7 @@
             "500%"});
 			this.zoomComboBox.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.zoomComboBox.Name = "zoomComboBox";
-			this.zoomComboBox.Size = new System.Drawing.Size(75, 25);
-			this.zoomComboBox.Text = "Auto";
+			this.zoomComboBox.Size = new System.Drawing.Size(55, 23);
 			this.zoomComboBox.ToolTipText = "Zoom";
 			this.zoomComboBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
@@ -506,7 +486,7 @@
 			// 
 			this.saveFileDialog1.FileName = "image";
 			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
-    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp";
+    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff";
 			// 
 			// directoryLabel
 			// 
@@ -578,11 +558,57 @@
 			this.dateModifiedLabel.Size = new System.Drawing.Size(128, 16);
 			this.dateModifiedLabel.Text = "Modified: Unknown";
 			// 
+			// printDialog1
+			// 
+			this.printDialog1.Document = this.printDocument1;
+			this.printDialog1.UseEXDialog = true;
+			// 
+			// printDocument1
+			// 
+			this.printDocument1.OriginAtMargins = true;
+			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+			// 
+			// picturePanel
+			// 
+			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.picturePanel.AutoScroll = true;
+			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.picturePanel.Controls.Add(this.pictureBox);
+			this.picturePanel.Location = new System.Drawing.Point(0, 35);
+			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
+			this.picturePanel.Name = "picturePanel";
+			this.picturePanel.Size = new System.Drawing.Size(714, 402);
+			this.picturePanel.TabIndex = 2;
+			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			// 
+			// pictureBox
+			// 
+			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox.InitialImage = null;
+			this.pictureBox.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
+			this.pictureBox.Name = "pictureBox";
+			this.pictureBox.Size = new System.Drawing.Size(714, 402);
+			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox.TabIndex = 0;
+			this.pictureBox.TabStop = false;
+			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(714, 463);
 			this.Controls.Add(this.picturePanel);
@@ -590,21 +616,22 @@
 			this.Controls.Add(this.statusStrip1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
-			this.MinimumSize = new System.Drawing.Size(340, 240);
+			this.MinimumSize = new System.Drawing.Size(240, 240);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Quick Picture Viewer";
 			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-			this.picturePanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
+			this.picturePanel.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -614,7 +641,6 @@
 
 		private System.Windows.Forms.PictureBox pictureBox;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
-		private System.Windows.Forms.Panel picturePanel;
 		private System.IO.FileSystemWatcher fileSystemWatcher1;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton openButton;
@@ -653,6 +679,10 @@
 		private System.Windows.Forms.ToolStripStatusLabel dateModifiedLabel;
 		private System.Windows.Forms.ToolStripButton infoButton;
 		private System.Windows.Forms.ToolStripButton externalButton;
+		private CustomPanel picturePanel;
+		private System.Windows.Forms.ToolStripButton printButton;
+		private System.Windows.Forms.PrintDialog printDialog1;
+		private System.Drawing.Printing.PrintDocument printDocument1;
 	}
 }
 

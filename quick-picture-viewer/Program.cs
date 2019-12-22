@@ -8,18 +8,12 @@ namespace quick_picture_viewer
 {
 	static class Program
 	{
-		/// <summary>
-		/// The main entry point for the application.
-		/// </summary>
 		[STAThread]
 		static void Main(string[] args)
 		{
-			string folderName = null;
-			if (Environment.GetCommandLineArgs().Length > 1)
-			{
-				folderName = Environment.GetCommandLineArgs()[1];
-			}	
-			//MessageBox.Show(folderName);
+			if (Environment.OSVersion.Version.Major >= 6) { 
+				SetProcessDPIAware(); 
+			}
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
@@ -33,5 +27,8 @@ namespace quick_picture_viewer
 				Application.Run(new MainForm(string.Empty));
 			}
 		}
+
+		[System.Runtime.InteropServices.DllImport("user32.dll")]
+		private static extern bool SetProcessDPIAware();
 	}
 }

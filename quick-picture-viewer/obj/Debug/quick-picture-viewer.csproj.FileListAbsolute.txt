@@ -22,3 +22,7 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-pic
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.InfoForm.resources
 C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.InfoForm.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\GitHubUpdate.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Octokit.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Semver.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csproj.CopyComplete

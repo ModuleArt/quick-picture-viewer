@@ -37,11 +37,14 @@
 			this.developerLink = new System.Windows.Forms.LinkLabel();
 			this.projectLink = new System.Windows.Forms.LinkLabel();
 			this.okButton = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.infoGroup = new System.Windows.Forms.GroupBox();
+			this.makeDefaultLink = new System.Windows.Forms.LinkLabel();
 			this.updatesLink = new System.Windows.Forms.LinkLabel();
 			this.issuesLink = new System.Windows.Forms.LinkLabel();
+			this.pagesGroup = new System.Windows.Forms.GroupBox();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
-			this.groupBox1.SuspendLayout();
+			this.infoGroup.SuspendLayout();
+			this.pagesGroup.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// logoPictureBox
@@ -108,7 +111,7 @@
 			// developerLink
 			// 
 			this.developerLink.AutoSize = true;
-			this.developerLink.Location = new System.Drawing.Point(8, 168);
+			this.developerLink.Location = new System.Drawing.Point(6, 26);
 			this.developerLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.developerLink.Name = "developerLink";
 			this.developerLink.Size = new System.Drawing.Size(58, 13);
@@ -120,7 +123,7 @@
 			// projectLink
 			// 
 			this.projectLink.AutoSize = true;
-			this.projectLink.Location = new System.Drawing.Point(72, 168);
+			this.projectLink.Location = new System.Drawing.Point(70, 26);
 			this.projectLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.projectLink.Name = "projectLink";
 			this.projectLink.Size = new System.Drawing.Size(67, 13);
@@ -134,31 +137,41 @@
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.okButton.Location = new System.Drawing.Point(190, 317);
+			this.okButton.Location = new System.Drawing.Point(190, 386);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(75, 23);
 			this.okButton.TabIndex = 21;
 			this.okButton.Text = "&OK";
 			// 
-			// groupBox1
+			// infoGroup
 			// 
-			this.groupBox1.Controls.Add(this.updatesLink);
-			this.groupBox1.Controls.Add(this.issuesLink);
-			this.groupBox1.Controls.Add(this.versionLabel);
-			this.groupBox1.Controls.Add(this.projectLink);
-			this.groupBox1.Controls.Add(this.companyLabel);
-			this.groupBox1.Controls.Add(this.developerLink);
-			this.groupBox1.Controls.Add(this.productLabel);
-			this.groupBox1.Controls.Add(this.descriptionLabel);
-			this.groupBox1.Controls.Add(this.authorLabel);
-			this.groupBox1.Location = new System.Drawing.Point(9, 109);
-			this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(256, 201);
-			this.groupBox1.TabIndex = 34;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Info";
+			this.infoGroup.Controls.Add(this.makeDefaultLink);
+			this.infoGroup.Controls.Add(this.updatesLink);
+			this.infoGroup.Controls.Add(this.versionLabel);
+			this.infoGroup.Controls.Add(this.companyLabel);
+			this.infoGroup.Controls.Add(this.productLabel);
+			this.infoGroup.Controls.Add(this.descriptionLabel);
+			this.infoGroup.Controls.Add(this.authorLabel);
+			this.infoGroup.Location = new System.Drawing.Point(9, 109);
+			this.infoGroup.Margin = new System.Windows.Forms.Padding(0);
+			this.infoGroup.Name = "infoGroup";
+			this.infoGroup.Size = new System.Drawing.Size(256, 200);
+			this.infoGroup.TabIndex = 34;
+			this.infoGroup.TabStop = false;
+			this.infoGroup.Text = "Info";
+			// 
+			// makeDefaultLink
+			// 
+			this.makeDefaultLink.AutoSize = true;
+			this.makeDefaultLink.Location = new System.Drawing.Point(6, 168);
+			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.makeDefaultLink.Name = "makeDefaultLink";
+			this.makeDefaultLink.Size = new System.Drawing.Size(136, 13);
+			this.makeDefaultLink.TabIndex = 36;
+			this.makeDefaultLink.TabStop = true;
+			this.makeDefaultLink.Text = "Set as default photo viewer";
+			this.makeDefaultLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeDefaultLink_LinkClicked);
 			// 
 			// updatesLink
 			// 
@@ -175,7 +188,7 @@
 			// issuesLink
 			// 
 			this.issuesLink.AutoSize = true;
-			this.issuesLink.Location = new System.Drawing.Point(145, 168);
+			this.issuesLink.Location = new System.Drawing.Point(143, 26);
 			this.issuesLink.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.issuesLink.Name = "issuesLink";
 			this.issuesLink.Size = new System.Drawing.Size(37, 13);
@@ -184,13 +197,27 @@
 			this.issuesLink.Text = "Issues";
 			this.issuesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.issuesLink_LinkClicked);
 			// 
+			// pagesGroup
+			// 
+			this.pagesGroup.Controls.Add(this.developerLink);
+			this.pagesGroup.Controls.Add(this.projectLink);
+			this.pagesGroup.Controls.Add(this.issuesLink);
+			this.pagesGroup.Location = new System.Drawing.Point(9, 319);
+			this.pagesGroup.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.pagesGroup.Name = "pagesGroup";
+			this.pagesGroup.Size = new System.Drawing.Size(256, 58);
+			this.pagesGroup.TabIndex = 37;
+			this.pagesGroup.TabStop = false;
+			this.pagesGroup.Text = "Links";
+			// 
 			// AboutForm
 			// 
 			this.AcceptButton = this.okButton;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(274, 349);
-			this.Controls.Add(this.groupBox1);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+			this.ClientSize = new System.Drawing.Size(274, 418);
+			this.Controls.Add(this.pagesGroup);
+			this.Controls.Add(this.infoGroup);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -203,8 +230,10 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "About";
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
+			this.infoGroup.ResumeLayout(false);
+			this.infoGroup.PerformLayout();
+			this.pagesGroup.ResumeLayout(false);
+			this.pagesGroup.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -220,8 +249,10 @@
 		private System.Windows.Forms.LinkLabel developerLink;
 		private System.Windows.Forms.LinkLabel projectLink;
 		private System.Windows.Forms.Button okButton;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox infoGroup;
 		private System.Windows.Forms.LinkLabel issuesLink;
 		private System.Windows.Forms.LinkLabel updatesLink;
+		private System.Windows.Forms.LinkLabel makeDefaultLink;
+		private System.Windows.Forms.GroupBox pagesGroup;
 	}
 }
