@@ -22,7 +22,7 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows XP, 7, 8.1, 10  |  Size: 0.5 MB  | v1.5.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.5.0/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows XP, 7, 8.1, 10  |  Size: 0.5 MB  | v1.6.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.6.0/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a>
 </p>
 
@@ -36,5 +36,6 @@
 
 <h2 align="center">Additional</h2>
 <p align="center">
-  <a href="https://winaero.com/blog/enable-dark-title-bars-custom-accent-color-windows-10/">Enable dark title bars</a> with custom accent color in Windows 10
+  How to <a href="https://winaero.com/blog/enable-dark-title-bars-custom-accent-color-windows-10/">enable dark title bars</a> with custom accent color in Windows 10<br>
+  How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10
 </p>
