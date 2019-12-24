@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>picture.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>quick_picture_viewer.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="GitHubUpdate, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GitHubUpdate.1.2.0.0\lib\net45\GitHubUpdate.dll</HintPath>

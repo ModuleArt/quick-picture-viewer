@@ -56,7 +56,6 @@
 			this.copyButton = new System.Windows.Forms.ToolStripButton();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
 			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.onTopButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -73,6 +72,7 @@
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
@@ -119,10 +119,10 @@
             this.copyButton,
             this.pasteButton,
             this.screenshotButton,
-            this.toolStripSeparator6,
+            this.toolStripSeparator5,
             this.fullscreenButton,
             this.onTopButton,
-            this.toolStripSeparator5,
+            this.toolStripSeparator6,
             this.setAsDesktopButton});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
@@ -432,12 +432,6 @@
 			this.screenshotButton.ToolTipText = "Capture screen | F12";
 			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
 			// 
-			// toolStripSeparator6
-			// 
-			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator6.Name = "toolStripSeparator6";
-			this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-			// 
 			// fullscreenButton
 			// 
 			this.fullscreenButton.AutoSize = false;
@@ -586,6 +580,7 @@
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// pictureBox
 			// 
@@ -603,6 +598,14 @@
 			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// toolStripSeparator6
+			// 
+			this.toolStripSeparator6.AutoSize = false;
+			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator6.Name = "toolStripSeparator6";
+			this.toolStripSeparator6.Size = new System.Drawing.Size(6, 16);
 			// 
 			// MainForm
 			// 
@@ -673,7 +676,6 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripButton prevButton;
 		private System.Windows.Forms.ToolStripButton setAsDesktopButton;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripButton deleteButton;
 		private System.Windows.Forms.ToolStripStatusLabel dateCreatedLabel;
 		private System.Windows.Forms.ToolStripStatusLabel dateModifiedLabel;
@@ -683,6 +685,7 @@
 		private System.Windows.Forms.ToolStripButton printButton;
 		private System.Windows.Forms.PrintDialog printDialog1;
 		private System.Drawing.Printing.PrintDocument printDocument1;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 	}
 }
 

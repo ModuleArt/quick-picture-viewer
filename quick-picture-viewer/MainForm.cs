@@ -351,11 +351,18 @@ namespace quick_picture_viewer
 		{
 			if (e.Button == MouseButtons.Left && !autoZoom)
 			{
+				Cursor.Current = Cursors.SizeAll;
+
 				panelMouseDownLocation = new Point(
 					this.PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
 					this.PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
 				);
 			}
+		}
+
+		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
+		{
+			Cursor.Current = Cursors.Default;
 		}
 
 		private void picturePanel_MouseMove(object sender, MouseEventArgs e)
