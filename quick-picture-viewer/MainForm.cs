@@ -524,6 +524,10 @@ namespace quick_picture_viewer
 					{
 						flipVerticalButton.PerformClick();
 					}
+					else if (e.KeyCode == Keys.E)
+					{
+						showFileButton.PerformClick();
+					}
 				}
 				else
 				{
@@ -874,11 +878,11 @@ namespace quick_picture_viewer
 
 			this.ForeColor = Color.White;
 
-			toolStrip1.BackColor = Color.Black;
+			toolStrip1.BackColor = ThemeManager.MainColorDark;
 
-			picturePanel.BackColor = Color.FromArgb(32, 32, 32);
+			picturePanel.BackColor = ThemeManager.BackColorDark;
 
-			statusStrip1.BackColor = Color.FromArgb(51, 51, 51);
+			statusStrip1.BackColor = ThemeManager.SecondColorDark;
 		}
 
 		private void MainForm_SizeChanged(object sender, EventArgs e)
@@ -888,13 +892,17 @@ namespace quick_picture_viewer
 
 		private void printButton_Click(object sender, EventArgs e)
 		{
-			if (printDialog1.ShowDialog() == DialogResult.OK)
+			PrintForm pf = new PrintForm(printDocument1);
+			if (pf.ShowDialog() == DialogResult.OK)
 			{
-				if (currentFile != null) 
+				if (printDialog1.ShowDialog() == DialogResult.OK)
 				{
-					printDocument1.DocumentName = currentFile;
+					if (currentFile != null)
+					{
+						printDocument1.DocumentName = currentFile;
+					}
+					printDocument1.Print();
 				}
-				printDocument1.Print();
 			}
 		}
 

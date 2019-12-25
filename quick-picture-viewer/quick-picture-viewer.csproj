@@ -46,8 +46,8 @@
     <Reference Include="Octokit, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Octokit.0.3.4\lib\net45\Octokit.dll</HintPath>
     </Reference>
-    <Reference Include="Semver, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\semver.1.1.2\lib\net451\Semver.dll</HintPath>
+    <Reference Include="Semver, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Semver.2.0.5\lib\net452\Semver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="ThemeManager.cs" />
     <Compile Include="ToolStripOverride.cs" />
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WallpaperForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WallpaperForm.resx">
       <DependentUpon>WallpaperForm.cs</DependentUpon>

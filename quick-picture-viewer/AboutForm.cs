@@ -16,19 +16,21 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isDarkTheme())
 			{
-				this.BackColor = Color.FromArgb(32, 32, 32);
+				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
 				infoGroup.ForeColor = Color.White;
 				pagesGroup.ForeColor = Color.White;
 
-				Color linkColor = ThemeManager.getColorizationColor();
+				Color linkColor = ThemeManager.AccentColorDark;
 
 				updatesLink.LinkColor = linkColor;
 				developerLink.LinkColor = linkColor;
 				projectLink.LinkColor = linkColor;
 				issuesLink.LinkColor = linkColor;
 				makeDefaultLink.LinkColor = linkColor;
+
+				okButton.BackColor = ThemeManager.MainColorDark;
 			}
 		}
 

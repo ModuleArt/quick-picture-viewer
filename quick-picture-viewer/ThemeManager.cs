@@ -5,6 +5,11 @@ namespace quick_picture_viewer
 {
 	class ThemeManager
 	{
+		public static Color MainColorDark = Color.Black;
+		public static Color BackColorDark = Color.FromArgb(32, 32, 32);
+		public static Color SecondColorDark = Color.FromArgb(51, 51, 51);
+		public static Color AccentColorDark = Color.FromArgb(110, 110, 110);
+
 		public static bool isDarkTheme()
 		{
 			if (isWindows10())

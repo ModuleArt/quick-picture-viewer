@@ -15,7 +15,7 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isDarkTheme())
 			{
-				this.BackColor = Color.FromArgb(32, 32, 32);
+				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 				this.groupBox1.ForeColor = Color.White;
 			}

@@ -36,6 +36,7 @@
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.deleteButton = new System.Windows.Forms.ToolStripButton();
 			this.externalButton = new System.Windows.Forms.ToolStripButton();
+			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.printButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
@@ -72,7 +73,6 @@
 			this.hasChangesLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -99,12 +99,12 @@
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openButton,
             this.saveAsButton,
-            this.deleteButton,
             this.externalButton,
-            this.showFileButton,
             this.printButton,
+            this.deleteButton,
             this.toolStripSeparator4,
             this.prevButton,
+            this.showFileButton,
             this.nextButton,
             this.toolStripSeparator1,
             this.autoZoomButton,
@@ -118,10 +118,10 @@
             this.flipHorizontalButton,
             this.flipVerticalButton,
             this.toolStripSeparator3,
+            this.screenshotButton,
             this.infoButton,
             this.copyButton,
             this.pasteButton,
-            this.screenshotButton,
             this.toolStripSeparator5,
             this.fullscreenButton,
             this.onTopButton,
@@ -185,6 +185,20 @@
 			this.externalButton.Size = new System.Drawing.Size(24, 25);
 			this.externalButton.Text = "Open file with external app | Ctrl + E";
 			this.externalButton.Click += new System.EventHandler(this.externalButton_Click);
+			// 
+			// showFileButton
+			// 
+			this.showFileButton.AutoSize = false;
+			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.showFileButton.Enabled = false;
+			this.showFileButton.Image = ((System.Drawing.Image)(resources.GetObject("showFileButton.Image")));
+			this.showFileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
+			this.showFileButton.Name = "showFileButton";
+			this.showFileButton.Size = new System.Drawing.Size(24, 25);
+			this.showFileButton.Text = "Show file in explorer | Ctrl + Shift + E";
+			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl + Shift + E";
+			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// printButton
 			// 
@@ -583,20 +597,6 @@
 			this.printDocument1.DocumentName = "Image";
 			this.printDocument1.OriginAtMargins = true;
 			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-			// 
-			// showFileButton
-			// 
-			this.showFileButton.AutoSize = false;
-			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.showFileButton.Enabled = false;
-			this.showFileButton.Image = ((System.Drawing.Image)(resources.GetObject("showFileButton.Image")));
-			this.showFileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
-			this.showFileButton.Name = "showFileButton";
-			this.showFileButton.Size = new System.Drawing.Size(24, 25);
-			this.showFileButton.Text = "Show file in explorer | Ctrl + Shift + E";
-			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl + Shift + E";
-			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// picturePanel
 			// 
