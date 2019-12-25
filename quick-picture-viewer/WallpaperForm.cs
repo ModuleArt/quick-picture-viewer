@@ -25,23 +25,27 @@ namespace quick_picture_viewer
 		{
 			if (stretchedRadio.Checked)
 			{
-				Wallpaper.Set(bmp, Wallpaper.Style.Stretch);
+				WallpaperManager.Set(bmp, WallpaperManager.Style.Stretch);
 			}
 			else if (tiledRadio.Checked)
 			{
-				Wallpaper.Set(bmp, Wallpaper.Style.Tile);
+				WallpaperManager.Set(bmp, WallpaperManager.Style.Tile);
 			}
 			else if (centeredRadio.Checked)
 			{
-				Wallpaper.Set(bmp, Wallpaper.Style.Center);
+				WallpaperManager.Set(bmp, WallpaperManager.Style.Center);
 			}
 			else if (fillRadio.Checked)
 			{
-				Wallpaper.Set(bmp, Wallpaper.Style.Fill);
+				WallpaperManager.Set(bmp, WallpaperManager.Style.Fill);
 			}
 			else if (fitRadio.Checked)
 			{
-				Wallpaper.Set(bmp, Wallpaper.Style.Fit);
+				WallpaperManager.Set(bmp, WallpaperManager.Style.Fit);
+			}
+			else if (spanRadio.Checked)
+			{
+				WallpaperManager.Set(bmp, WallpaperManager.Style.Span);
 			}
 		}
 	}

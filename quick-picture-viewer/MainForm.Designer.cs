@@ -42,9 +42,9 @@
 			this.nextButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
-			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
-			this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
 			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
+			this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
+			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutButton = new System.Windows.Forms.ToolStripButton();
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripButton();
@@ -56,9 +56,10 @@
 			this.copyButton = new System.Windows.Forms.ToolStripButton();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
 			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.onTopButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.setAsDesktopButton = new System.Windows.Forms.ToolStripButton();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -68,11 +69,12 @@
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.dateCreatedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.hasChangesLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
@@ -99,15 +101,16 @@
             this.saveAsButton,
             this.deleteButton,
             this.externalButton,
+            this.showFileButton,
             this.printButton,
             this.toolStripSeparator4,
             this.prevButton,
             this.nextButton,
             this.toolStripSeparator1,
             this.autoZoomButton,
-            this.zoomInButton,
-            this.zoomComboBox,
             this.zoomOutButton,
+            this.zoomComboBox,
+            this.zoomInButton,
             this.toolStripSeparator2,
             this.aboutButton,
             this.rotateLeftButton,
@@ -128,7 +131,7 @@
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Padding = new System.Windows.Forms.Padding(5);
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-			this.toolStrip1.Size = new System.Drawing.Size(714, 35);
+			this.toolStrip1.Size = new System.Drawing.Size(764, 35);
 			this.toolStrip1.TabIndex = 16;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -251,18 +254,18 @@
 			this.autoZoomButton.Text = "Toggle auto zoom | Ctrl + A";
 			this.autoZoomButton.Click += new System.EventHandler(this.autoZoomButton_Click);
 			// 
-			// zoomInButton
+			// zoomOutButton
 			// 
-			this.zoomInButton.AutoSize = false;
-			this.zoomInButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.zoomInButton.Enabled = false;
-			this.zoomInButton.Image = ((System.Drawing.Image)(resources.GetObject("zoomInButton.Image")));
-			this.zoomInButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.zoomInButton.Margin = new System.Windows.Forms.Padding(0);
-			this.zoomInButton.Name = "zoomInButton";
-			this.zoomInButton.Size = new System.Drawing.Size(24, 25);
-			this.zoomInButton.Text = "Zoom in | Ctrl + =";
-			this.zoomInButton.Click += new System.EventHandler(this.zoomInButton_Click);
+			this.zoomOutButton.AutoSize = false;
+			this.zoomOutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.zoomOutButton.Enabled = false;
+			this.zoomOutButton.Image = ((System.Drawing.Image)(resources.GetObject("zoomOutButton.Image")));
+			this.zoomOutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.zoomOutButton.Margin = new System.Windows.Forms.Padding(0);
+			this.zoomOutButton.Name = "zoomOutButton";
+			this.zoomOutButton.Size = new System.Drawing.Size(24, 25);
+			this.zoomOutButton.Text = "Zoom out | Ctrl + Minus";
+			this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
 			// 
 			// zoomComboBox
 			// 
@@ -289,18 +292,18 @@
 			this.zoomComboBox.ToolTipText = "Zoom";
 			this.zoomComboBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
-			// zoomOutButton
+			// zoomInButton
 			// 
-			this.zoomOutButton.AutoSize = false;
-			this.zoomOutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.zoomOutButton.Enabled = false;
-			this.zoomOutButton.Image = ((System.Drawing.Image)(resources.GetObject("zoomOutButton.Image")));
-			this.zoomOutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.zoomOutButton.Margin = new System.Windows.Forms.Padding(0);
-			this.zoomOutButton.Name = "zoomOutButton";
-			this.zoomOutButton.Size = new System.Drawing.Size(24, 25);
-			this.zoomOutButton.Text = "Zoom out | Ctrl + Minus";
-			this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
+			this.zoomInButton.AutoSize = false;
+			this.zoomInButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.zoomInButton.Enabled = false;
+			this.zoomInButton.Image = ((System.Drawing.Image)(resources.GetObject("zoomInButton.Image")));
+			this.zoomInButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.zoomInButton.Margin = new System.Windows.Forms.Padding(0);
+			this.zoomInButton.Name = "zoomInButton";
+			this.zoomInButton.Size = new System.Drawing.Size(24, 25);
+			this.zoomInButton.Text = "Zoom in | Ctrl + =";
+			this.zoomInButton.Click += new System.EventHandler(this.zoomInButton_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -432,6 +435,13 @@
 			this.screenshotButton.ToolTipText = "Capture screen | F12";
 			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
 			// 
+			// toolStripSeparator5
+			// 
+			this.toolStripSeparator5.AutoSize = false;
+			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 16);
+			// 
 			// fullscreenButton
 			// 
 			this.fullscreenButton.AutoSize = false;
@@ -456,12 +466,12 @@
 			this.onTopButton.Text = "Toggle always on top | Ctrl + T";
 			this.onTopButton.Click += new System.EventHandler(this.onTopButton_Click);
 			// 
-			// toolStripSeparator5
+			// toolStripSeparator6
 			// 
-			this.toolStripSeparator5.AutoSize = false;
-			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 16);
+			this.toolStripSeparator6.AutoSize = false;
+			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator6.Name = "toolStripSeparator6";
+			this.toolStripSeparator6.Size = new System.Drawing.Size(6, 16);
 			// 
 			// setAsDesktopButton
 			// 
@@ -526,11 +536,12 @@
             this.sizeLabel,
             this.zoomLabel,
             this.dateCreatedLabel,
-            this.dateModifiedLabel});
+            this.dateModifiedLabel,
+            this.hasChangesLabel});
 			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.statusStrip1.Location = new System.Drawing.Point(0, 437);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 465);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(714, 26);
+			this.statusStrip1.Size = new System.Drawing.Size(764, 26);
 			this.statusStrip1.TabIndex = 15;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -552,6 +563,16 @@
 			this.dateModifiedLabel.Size = new System.Drawing.Size(128, 16);
 			this.dateModifiedLabel.Text = "Modified: Unknown";
 			// 
+			// hasChangesLabel
+			// 
+			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
+			this.hasChangesLabel.Image = ((System.Drawing.Image)(resources.GetObject("hasChangesLabel.Image")));
+			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.hasChangesLabel.Name = "hasChangesLabel";
+			this.hasChangesLabel.Size = new System.Drawing.Size(76, 16);
+			this.hasChangesLabel.Text = "Not saved";
+			this.hasChangesLabel.Visible = false;
+			// 
 			// printDialog1
 			// 
 			this.printDialog1.Document = this.printDocument1;
@@ -559,8 +580,23 @@
 			// 
 			// printDocument1
 			// 
+			this.printDocument1.DocumentName = "Image";
 			this.printDocument1.OriginAtMargins = true;
 			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+			// 
+			// showFileButton
+			// 
+			this.showFileButton.AutoSize = false;
+			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.showFileButton.Enabled = false;
+			this.showFileButton.Image = ((System.Drawing.Image)(resources.GetObject("showFileButton.Image")));
+			this.showFileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
+			this.showFileButton.Name = "showFileButton";
+			this.showFileButton.Size = new System.Drawing.Size(24, 25);
+			this.showFileButton.Text = "Show file in explorer | Ctrl + Shift + E";
+			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl + Shift + E";
+			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// picturePanel
 			// 
@@ -575,7 +611,7 @@
 			this.picturePanel.Location = new System.Drawing.Point(0, 35);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(714, 402);
+			this.picturePanel.Size = new System.Drawing.Size(764, 430);
 			this.picturePanel.TabIndex = 2;
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
@@ -591,7 +627,7 @@
 			this.pictureBox.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(714, 402);
+			this.pictureBox.Size = new System.Drawing.Size(764, 430);
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
@@ -600,20 +636,13 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
-			// toolStripSeparator6
-			// 
-			this.toolStripSeparator6.AutoSize = false;
-			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator6.Name = "toolStripSeparator6";
-			this.toolStripSeparator6.Size = new System.Drawing.Size(6, 16);
-			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(714, 463);
+			this.ClientSize = new System.Drawing.Size(764, 491);
 			this.Controls.Add(this.picturePanel);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.statusStrip1);
@@ -623,6 +652,7 @@
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Quick Picture Viewer";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
@@ -686,6 +716,8 @@
 		private System.Windows.Forms.PrintDialog printDialog1;
 		private System.Drawing.Printing.PrintDocument printDocument1;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+		private System.Windows.Forms.ToolStripStatusLabel hasChangesLabel;
+		private System.Windows.Forms.ToolStripButton showFileButton;
 	}
 }
 

@@ -23,6 +23,7 @@ namespace quick_picture_viewer
 		private string currentFolder;
 		private string currentFile;
 		private bool alwaysOnTop = false;
+		private bool imageChanged = false;
 
 		public MainForm(string openPath)
 		{
@@ -95,6 +96,8 @@ namespace quick_picture_viewer
 				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
 				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
 
+				setImageChanged(false);
+
 				openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 			}
 			catch
@@ -123,6 +126,7 @@ namespace quick_picture_viewer
 				prevButton.Enabled = false;
 				deleteButton.Enabled = false;
 				externalButton.Enabled = false;
+				showFileButton.Enabled = false;
 			}
 			else
 			{
@@ -135,6 +139,7 @@ namespace quick_picture_viewer
 				prevButton.Enabled = true;
 				deleteButton.Enabled = true;
 				externalButton.Enabled = true;
+				showFileButton.Enabled = true;
 			}
 
 			this.Text = fileName + " - Quick Picture Viewer";
@@ -155,6 +160,12 @@ namespace quick_picture_viewer
 			zoomComboBox.Enabled = true;
 
 			setZoomText("Auto");
+		}
+
+		private void setImageChanged(bool b)
+		{
+			imageChanged = b;
+			hasChangesLabel.Visible = b;
 		}
 
 		private void zoomInButton_Click(object sender, EventArgs e)
@@ -279,6 +290,7 @@ namespace quick_picture_viewer
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
 			pictureBox.Image = originalImage;
 			setZoomText("Auto");
+			setImageChanged(true);
 		}
 
 		private void flipHorizontalButton_Click(object sender, EventArgs e)
@@ -286,6 +298,7 @@ namespace quick_picture_viewer
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
 			pictureBox.Image = originalImage;
 			setZoomText("Auto");
+			setImageChanged(true);
 		}
 
 		private void rotateLeftButton_Click(object sender, EventArgs e)
@@ -293,6 +306,7 @@ namespace quick_picture_viewer
 			originalImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
 			pictureBox.Image = originalImage;
 			setZoomText("Auto");
+			setImageChanged(true);
 		}
 
 		private void rotateRightButton_Click(object sender, EventArgs e)
@@ -300,6 +314,7 @@ namespace quick_picture_viewer
 			originalImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
 			pictureBox.Image = originalImage;
 			setZoomText("Auto");
+			setImageChanged(true);
 		}
 
 		private void saveAsButton_Click(object sender, EventArgs e)
@@ -326,6 +341,7 @@ namespace quick_picture_viewer
 						break;
 				}
 				fs.Close();
+				openFile(saveFileDialog1.FileName);
 			}
 		}
 
@@ -339,6 +355,7 @@ namespace quick_picture_viewer
 			if (Clipboard.ContainsImage())
 			{
 				openImage(new Bitmap(Clipboard.GetImage()), null, "From clipboard");
+				setImageChanged(true);
 			}
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
@@ -609,6 +626,7 @@ namespace quick_picture_viewer
 			if (bitmap != null)
 			{
 				openImage(bitmap, null, "Dragged image");
+				setImageChanged(true);
 			}
 			else if (files.Length > 0)
 			{
@@ -644,6 +662,7 @@ namespace quick_picture_viewer
 				g.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size);
 
 				openImage(bmp, null, "Captured screen");
+				setImageChanged(true);
 			}
 
 			this.Show();
@@ -798,6 +817,7 @@ namespace quick_picture_viewer
 			infoButton.Enabled = false;
 			externalButton.Enabled = false;
 			printButton.Enabled = false;
+			showFileButton.Enabled = false;
 
 			zoomComboBox.Enabled = false;
 
@@ -916,6 +936,27 @@ namespace quick_picture_viewer
 					e.Graphics.DrawImage(originalImage, 0, 0, Convert.ToInt32(originalImage.Width * scaleH), availableHeight);
 				}
 			}
+		}
+
+		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if(imageChanged)
+			{
+				var window = MessageBox.Show(
+					"All unsaved data will be lost.\nAre you sure you want to close the application?",
+					"Warning",
+					MessageBoxButtons.YesNo, 
+					MessageBoxIcon.Question
+				);
+
+				e.Cancel = (window == DialogResult.No);
+			}
+		}
+
+		private void showFileButton_Click(object sender, EventArgs e)
+		{
+			string argument = "/select, \"" + Path.Combine(currentFolder, currentFile) + "\"";
+			Process.Start("explorer.exe", argument);
 		}
 	}
 }

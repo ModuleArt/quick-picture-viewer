@@ -36,6 +36,7 @@
 			this.stretchedRadio = new System.Windows.Forms.RadioButton();
 			this.centeredRadio = new System.Windows.Forms.RadioButton();
 			this.tiledRadio = new System.Windows.Forms.RadioButton();
+			this.spanRadio = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -56,7 +57,7 @@
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.okButton.Location = new System.Drawing.Point(190, 267);
+			this.okButton.Location = new System.Drawing.Point(190, 291);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(75, 23);
@@ -66,6 +67,7 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.spanRadio);
 			this.groupBox1.Controls.Add(this.fitRadio);
 			this.groupBox1.Controls.Add(this.fillRadio);
 			this.groupBox1.Controls.Add(this.stretchedRadio);
@@ -74,7 +76,7 @@
 			this.groupBox1.Location = new System.Drawing.Point(9, 109);
 			this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(256, 150);
+			this.groupBox1.Size = new System.Drawing.Size(256, 173);
 			this.groupBox1.TabIndex = 31;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Choose a fit";
@@ -132,12 +134,22 @@
 			this.tiledRadio.Text = "Tile";
 			this.tiledRadio.UseVisualStyleBackColor = true;
 			// 
+			// spanRadio
+			// 
+			this.spanRadio.AutoSize = true;
+			this.spanRadio.Location = new System.Drawing.Point(6, 141);
+			this.spanRadio.Name = "spanRadio";
+			this.spanRadio.Size = new System.Drawing.Size(50, 17);
+			this.spanRadio.TabIndex = 5;
+			this.spanRadio.Text = "Span";
+			this.spanRadio.UseVisualStyleBackColor = true;
+			// 
 			// WallpaperForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 299);
+			this.ClientSize = new System.Drawing.Size(274, 323);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);
@@ -167,5 +179,6 @@
 		private System.Windows.Forms.RadioButton stretchedRadio;
 		private System.Windows.Forms.RadioButton fitRadio;
 		private System.Windows.Forms.RadioButton fillRadio;
+		private System.Windows.Forms.RadioButton spanRadio;
 	}
 }

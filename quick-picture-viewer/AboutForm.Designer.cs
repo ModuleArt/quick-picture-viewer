@@ -94,9 +94,9 @@
 			this.authorLabel.Location = new System.Drawing.Point(6, 116);
 			this.authorLabel.Margin = new System.Windows.Forms.Padding(3);
 			this.authorLabel.Name = "authorLabel";
-			this.authorLabel.Size = new System.Drawing.Size(108, 13);
+			this.authorLabel.Size = new System.Drawing.Size(122, 13);
 			this.authorLabel.TabIndex = 30;
-			this.authorLabel.Text = "Author: Jake Volynko";
+			this.authorLabel.Text = "Author: Eugene Volynko";
 			// 
 			// descriptionLabel
 			// 
