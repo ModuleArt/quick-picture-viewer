@@ -24,6 +24,7 @@ namespace quick_picture_viewer
 		private string currentFile;
 		private bool alwaysOnTop = false;
 		private bool imageChanged = false;
+		private bool darkMode = false;
 
 		public MainForm(string openPath)
 		{
@@ -58,7 +59,8 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
-			if (ThemeManager.isDarkTheme())
+			darkMode = ThemeManager.isDarkTheme();
+			if(darkMode)
 			{
 				applyDarkTheme();
 			}
@@ -68,23 +70,33 @@ namespace quick_picture_viewer
 
 		public async void checkForUpdates(bool showUpToDateDialog)
 		{
-			var checker = new UpdateChecker("ModuleArt", "quick-picture-viewer");
+			try
+			{
+				var checker = new UpdateChecker("ModuleArt", "quick-picture-viewer");
 
-			UpdateType update = await checker.CheckUpdate();
+				UpdateType update = await checker.CheckUpdate();
 
-			if (update == UpdateType.None)
+				if (update == UpdateType.None)
+				{
+					if (showUpToDateDialog)
+					{
+						MessageBox.Show("Application is up to date", "Updator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					}
+				}
+				else
+				{
+					var result = new UpdateNotifyDialog(checker).ShowDialog();
+					if (result == DialogResult.Yes)
+					{
+						checker.DownloadAsset("QuickPictureViewer-Setup.msi");
+					}
+				}
+			}
+			catch
 			{
 				if (showUpToDateDialog)
 				{
-					MessageBox.Show("Application is up to date", "Updator", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				}
-			}
-			else
-			{
-				var result = new UpdateNotifyDialog(checker).ShowDialog();
-				if (result == DialogResult.Yes)
-				{
-					checker.DownloadAsset("QuickPictureViewer-Setup.msi");
+					MessageBox.Show("Connection error", "Updator", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
 		}
@@ -457,8 +469,9 @@ namespace quick_picture_viewer
 				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = FormWindowState.Maximized;
 
-				picturePanel.Dock = DockStyle.Fill;
-				pictureBox.BackColor = Color.Black;
+				picturePanel.Top = 0;
+				picturePanel.Height = this.ClientSize.Height;
+				picturePanel.BackColor = Color.Black;
 
 				setAlwaysOnTop(false);
 			}
@@ -466,8 +479,9 @@ namespace quick_picture_viewer
 			{
 				this.FormBorderStyle = FormBorderStyle.Sizable;
 
-				picturePanel.Dock = DockStyle.None;
-				pictureBox.BackColor = Color.Transparent;
+				picturePanel.Top = toolStrip1.Height;
+				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
+				picturePanel.BackColor = Color.Transparent;
 			}
 		}
 
@@ -527,6 +541,10 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.E)
 					{
 						showFileButton.PerformClick();
+					}
+					else if (e.KeyCode == Keys.C)
+					{
+						checkboardButton.PerformClick();
 					}
 				}
 				else
@@ -589,9 +607,16 @@ namespace quick_picture_viewer
 					}
 				}
 			}
+			else if (e.Alt)
+			{
+				if (e.KeyCode == Keys.Enter)
+				{
+					fullscreenButton.PerformClick();
+				}
+			}
 			else
 			{
-				if (e.KeyCode == Keys.F)
+				if (e.KeyCode == Keys.F || e.KeyCode == Keys.F11)
 				{
 					fullscreenButton.PerformClick();
 				}
@@ -618,6 +643,14 @@ namespace quick_picture_viewer
 				else if (e.KeyCode == Keys.Escape)
 				{
 					setFullscreen(false);
+				}
+				else if (e.KeyCode == Keys.Down)
+				{
+					zoomOut();
+				}
+				else if (e.KeyCode == Keys.Up)
+				{
+					zoomIn();
 				}
 			}
 		}
@@ -874,20 +907,21 @@ namespace quick_picture_viewer
 
 		private void applyDarkTheme()
 		{
-			this.BackColor = Color.Black;
-
 			this.ForeColor = Color.White;
 
 			toolStrip1.BackColor = ThemeManager.MainColorDark;
 
-			picturePanel.BackColor = ThemeManager.BackColorDark;
+			this.BackColor = ThemeManager.BackColorDark;
 
 			statusStrip1.BackColor = ThemeManager.SecondColorDark;
 		}
 
 		private void MainForm_SizeChanged(object sender, EventArgs e)
 		{
-			updatePictureBoxLocation();
+			if(!autoZoom)
+			{
+				updatePictureBoxLocation();
+			}
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
@@ -965,6 +999,27 @@ namespace quick_picture_viewer
 		{
 			string argument = "/select, \"" + Path.Combine(currentFolder, currentFile) + "\"";
 			Process.Start("explorer.exe", argument);
+		}
+
+		private void checkboardButton_Click(object sender, EventArgs e)
+		{
+			if (checkboardButton.Checked)
+			{
+				checkboardButton.Checked = false;
+				pictureBox.BackgroundImage = null;
+			}
+			else
+			{
+				checkboardButton.Checked = true;
+				if(darkMode)
+				{
+					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-dark.png");
+				}
+				else
+				{
+					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-light.png");
+				}
+			}
 		}
 	}
 }

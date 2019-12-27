@@ -29,9 +29,9 @@
 		{
 			this.okButton = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-			this.marginsCheckBox = new System.Windows.Forms.CheckBox();
 			this.horizontalCheckBox = new System.Windows.Forms.CheckBox();
+			this.marginsCheckBox = new System.Windows.Forms.CheckBox();
+			this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -60,13 +60,17 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Options";
 			// 
-			// printPreviewControl1
+			// horizontalCheckBox
 			// 
-			this.printPreviewControl1.Location = new System.Drawing.Point(9, 9);
-			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0);
-			this.printPreviewControl1.Name = "printPreviewControl1";
-			this.printPreviewControl1.Size = new System.Drawing.Size(256, 256);
-			this.printPreviewControl1.TabIndex = 0;
+			this.horizontalCheckBox.AutoSize = true;
+			this.horizontalCheckBox.Location = new System.Drawing.Point(6, 26);
+			this.horizontalCheckBox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.horizontalCheckBox.Name = "horizontalCheckBox";
+			this.horizontalCheckBox.Size = new System.Drawing.Size(79, 17);
+			this.horizontalCheckBox.TabIndex = 1;
+			this.horizontalCheckBox.Text = "Landscape";
+			this.horizontalCheckBox.UseVisualStyleBackColor = true;
+			this.horizontalCheckBox.CheckedChanged += new System.EventHandler(this.horizontalCheckBox_CheckedChanged);
 			// 
 			// marginsCheckBox
 			// 
@@ -81,17 +85,13 @@
 			this.marginsCheckBox.UseVisualStyleBackColor = true;
 			this.marginsCheckBox.CheckedChanged += new System.EventHandler(this.marginsCheckBox_CheckedChanged);
 			// 
-			// horizontalCheckBox
+			// printPreviewControl1
 			// 
-			this.horizontalCheckBox.AutoSize = true;
-			this.horizontalCheckBox.Location = new System.Drawing.Point(6, 26);
-			this.horizontalCheckBox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-			this.horizontalCheckBox.Name = "horizontalCheckBox";
-			this.horizontalCheckBox.Size = new System.Drawing.Size(79, 17);
-			this.horizontalCheckBox.TabIndex = 1;
-			this.horizontalCheckBox.Text = "Landscape";
-			this.horizontalCheckBox.UseVisualStyleBackColor = true;
-			this.horizontalCheckBox.CheckedChanged += new System.EventHandler(this.horizontalCheckBox_CheckedChanged);
+			this.printPreviewControl1.Location = new System.Drawing.Point(9, 9);
+			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0);
+			this.printPreviewControl1.Name = "printPreviewControl1";
+			this.printPreviewControl1.Size = new System.Drawing.Size(256, 256);
+			this.printPreviewControl1.TabIndex = 0;
 			// 
 			// PrintForm
 			// 

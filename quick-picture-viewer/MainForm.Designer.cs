@@ -34,12 +34,12 @@
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
-			this.deleteButton = new System.Windows.Forms.ToolStripButton();
 			this.externalButton = new System.Windows.Forms.ToolStripButton();
-			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.printButton = new System.Windows.Forms.ToolStripButton();
+			this.deleteButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
+			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.nextButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
@@ -53,11 +53,12 @@
 			this.flipHorizontalButton = new System.Windows.Forms.ToolStripButton();
 			this.flipVerticalButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.copyButton = new System.Windows.Forms.ToolStripButton();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
-			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.onTopButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -123,6 +124,7 @@
             this.copyButton,
             this.pasteButton,
             this.toolStripSeparator5,
+            this.checkboardButton,
             this.fullscreenButton,
             this.onTopButton,
             this.toolStripSeparator6,
@@ -160,19 +162,6 @@
 			this.saveAsButton.Text = "Save as | Ctrl + S";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
 			// 
-			// deleteButton
-			// 
-			this.deleteButton.AutoSize = false;
-			this.deleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.deleteButton.Enabled = false;
-			this.deleteButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.Image")));
-			this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.deleteButton.Margin = new System.Windows.Forms.Padding(0);
-			this.deleteButton.Name = "deleteButton";
-			this.deleteButton.Size = new System.Drawing.Size(24, 25);
-			this.deleteButton.Text = "Move file to trash | Delete";
-			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
-			// 
 			// externalButton
 			// 
 			this.externalButton.AutoSize = false;
@@ -186,20 +175,6 @@
 			this.externalButton.Text = "Open file with external app | Ctrl + E";
 			this.externalButton.Click += new System.EventHandler(this.externalButton_Click);
 			// 
-			// showFileButton
-			// 
-			this.showFileButton.AutoSize = false;
-			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.showFileButton.Enabled = false;
-			this.showFileButton.Image = ((System.Drawing.Image)(resources.GetObject("showFileButton.Image")));
-			this.showFileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
-			this.showFileButton.Name = "showFileButton";
-			this.showFileButton.Size = new System.Drawing.Size(24, 25);
-			this.showFileButton.Text = "Show file in explorer | Ctrl + Shift + E";
-			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl + Shift + E";
-			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
-			// 
 			// printButton
 			// 
 			this.printButton.AutoSize = false;
@@ -212,6 +187,19 @@
 			this.printButton.Size = new System.Drawing.Size(24, 25);
 			this.printButton.Text = "Print | Ctrl + P";
 			this.printButton.Click += new System.EventHandler(this.printButton_Click);
+			// 
+			// deleteButton
+			// 
+			this.deleteButton.AutoSize = false;
+			this.deleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.deleteButton.Enabled = false;
+			this.deleteButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.Image")));
+			this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.deleteButton.Margin = new System.Windows.Forms.Padding(0);
+			this.deleteButton.Name = "deleteButton";
+			this.deleteButton.Size = new System.Drawing.Size(24, 25);
+			this.deleteButton.Text = "Move file to trash | Delete";
+			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
 			// toolStripSeparator4
 			// 
@@ -232,6 +220,20 @@
 			this.prevButton.Size = new System.Drawing.Size(24, 25);
 			this.prevButton.Text = "Previous image in folder | Left arrow";
 			this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
+			// 
+			// showFileButton
+			// 
+			this.showFileButton.AutoSize = false;
+			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.showFileButton.Enabled = false;
+			this.showFileButton.Image = ((System.Drawing.Image)(resources.GetObject("showFileButton.Image")));
+			this.showFileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
+			this.showFileButton.Name = "showFileButton";
+			this.showFileButton.Size = new System.Drawing.Size(24, 25);
+			this.showFileButton.Text = "Show file in explorer | Ctrl + Shift + E";
+			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl + Shift + E";
+			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// nextButton
 			// 
@@ -398,6 +400,19 @@
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
 			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 16);
 			// 
+			// screenshotButton
+			// 
+			this.screenshotButton.AutoSize = false;
+			this.screenshotButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.screenshotButton.Image = ((System.Drawing.Image)(resources.GetObject("screenshotButton.Image")));
+			this.screenshotButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.screenshotButton.Margin = new System.Windows.Forms.Padding(0);
+			this.screenshotButton.Name = "screenshotButton";
+			this.screenshotButton.Size = new System.Drawing.Size(24, 25);
+			this.screenshotButton.Text = "toolStripButton1";
+			this.screenshotButton.ToolTipText = "Capture screen | F12";
+			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
+			// 
 			// infoButton
 			// 
 			this.infoButton.AutoSize = false;
@@ -436,25 +451,25 @@
 			this.pasteButton.Text = "Paste | Ctrl + V";
 			this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
 			// 
-			// screenshotButton
-			// 
-			this.screenshotButton.AutoSize = false;
-			this.screenshotButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.screenshotButton.Image = ((System.Drawing.Image)(resources.GetObject("screenshotButton.Image")));
-			this.screenshotButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.screenshotButton.Margin = new System.Windows.Forms.Padding(0);
-			this.screenshotButton.Name = "screenshotButton";
-			this.screenshotButton.Size = new System.Drawing.Size(24, 25);
-			this.screenshotButton.Text = "toolStripButton1";
-			this.screenshotButton.ToolTipText = "Capture screen | F12";
-			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
-			// 
 			// toolStripSeparator5
 			// 
 			this.toolStripSeparator5.AutoSize = false;
 			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
 			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 16);
+			// 
+			// checkboardButton
+			// 
+			this.checkboardButton.AutoSize = false;
+			this.checkboardButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.checkboardButton.Image = ((System.Drawing.Image)(resources.GetObject("checkboardButton.Image")));
+			this.checkboardButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.checkboardButton.Margin = new System.Windows.Forms.Padding(0);
+			this.checkboardButton.Name = "checkboardButton";
+			this.checkboardButton.Size = new System.Drawing.Size(24, 25);
+			this.checkboardButton.Text = "Toggle checkboard background | Ctrl + Shift +C";
+			this.checkboardButton.ToolTipText = "Toggle checkboard background | Ctrl + Shift +C";
+			this.checkboardButton.Click += new System.EventHandler(this.checkboardButton_Click);
 			// 
 			// fullscreenButton
 			// 
@@ -606,7 +621,6 @@
 			this.picturePanel.AutoScroll = true;
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-			this.picturePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 35);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
@@ -617,11 +631,11 @@
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			this.picturePanel.Resize += new System.EventHandler(this.MainForm_SizeChanged);
 			// 
 			// pictureBox
 			// 
 			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pictureBox.InitialImage = null;
 			this.pictureBox.Location = new System.Drawing.Point(0, 0);
@@ -654,7 +668,6 @@
 			this.Text = "Quick Picture Viewer";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
-			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
@@ -718,6 +731,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripStatusLabel hasChangesLabel;
 		private System.Windows.Forms.ToolStripButton showFileButton;
+		private System.Windows.Forms.ToolStripButton checkboardButton;
 	}
 }
 
