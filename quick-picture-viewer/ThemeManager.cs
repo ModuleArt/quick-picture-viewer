@@ -44,5 +44,19 @@ namespace quick_picture_viewer
 				return Color.Blue;
 			}
 		}
+
+		public static Color getAccentColor()
+		{
+			if (isWindows10())
+			{
+				string root = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\DWM";
+				string colorcode = Registry.GetValue(root, "AccentColor", null).ToString();
+				return System.Drawing.ColorTranslator.FromHtml(colorcode);
+			}
+			else
+			{
+				return Color.White;
+			}
+		}
 	}
 }

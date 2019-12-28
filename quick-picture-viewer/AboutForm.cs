@@ -22,7 +22,7 @@ namespace quick_picture_viewer
 				infoGroup.ForeColor = Color.White;
 				pagesGroup.ForeColor = Color.White;
 
-				Color linkColor = ThemeManager.AccentColorDark;
+				Color linkColor = ThemeManager.getColorizationColor();
 
 				updatesLink.LinkColor = linkColor;
 				developerLink.LinkColor = linkColor;

@@ -105,12 +105,11 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
-				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
-
 				setImageChanged(false);
 
 				openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
+
+				//RecentFilesManager.AddToRecentlyUsedDocs(path);
 			}
 			catch
 			{
@@ -139,19 +138,27 @@ namespace quick_picture_viewer
 				deleteButton.Enabled = false;
 				externalButton.Enabled = false;
 				showFileButton.Enabled = false;
+
+				dateCreatedLabel.Text = "Created: Unknown";
+				dateModifiedLabel.Text = "Modified: Unknown";
 			}
 			else
 			{
+				string path = Path.Combine(directoryName, fileName);
+
 				currentFolder = directoryName;
 				currentFile = fileName;
 				directoryLabel.Text = "Folder: " + directoryName;
-				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px (" + bytesToSize(Path.Combine(directoryName, fileName)) + ")";
+				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px (" + bytesToSize(path) + ")";
 
 				nextButton.Enabled = true;
 				prevButton.Enabled = true;
 				deleteButton.Enabled = true;
 				externalButton.Enabled = true;
 				showFileButton.Enabled = true;
+
+				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
+				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
 			}
 
 			this.Text = fileName + " - Quick Picture Viewer";
