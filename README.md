@@ -42,3 +42,8 @@
   How to <a href="https://winaero.com/blog/enable-dark-title-bars-custom-accent-color-windows-10/">enable dark title bars</a> with custom accent color in Windows 10<br>
   How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10
 </p>
+
+<h2 align="center">Inspirers</h2>
+<p align="center">
+  <a href="https://www.irfanview.com/">IrfanView</a> v4.53 by Irfan Skiljan
+</p>
