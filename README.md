@@ -4,7 +4,7 @@
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  Quick Picture Viewer is a lightweight photo viewer for Windows, build on top of WinForms (C#).
+  Quick Picture Viewer is a lightweight desktop photo viewer for Windows, build on top of WinForms (C#).
 </p>
 
 <p align="center">
