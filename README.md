@@ -47,3 +47,8 @@
 <p align="center">
   <a href="https://www.irfanview.com/">IrfanView</a> v4.53 by Irfan Skiljan
 </p>
+
+<h2 align="center">Other "Quick" apps</h2>
+<p align="center">
+  <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - A color picker and color editor utility to get and save colors code
+</p>
