@@ -4,7 +4,7 @@
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  Quick Picture Viewer is a lightweight photo viewer for Windows, build on top of WinForms (C#).
+  Quick Picture Viewer is a lightweight desktop photo viewer for Windows, build on top of WinForms (C#).
 </p>
 
 <p align="center">
@@ -22,13 +22,14 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows XP, 7, 8.1, 10  |  Size: 0.5 MB  | v1.7.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.7.0/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows XP, 7, 8.1, 10  |  Size: 0.9 MB  | v1.7.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.7.0/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a>
 </p>
 
 <h2 align="center">Screenshots</h2>
 <p align="center">
   <img src="/docs/screenshots/main.png">
+  <img src="/docs/screenshots/checkboard.png">
   <img src="/docs/screenshots/info.png">
   <img src="/docs/screenshots/desktop.png">
   <img src="/docs/screenshots/print.png">
@@ -40,4 +41,14 @@
 <p align="center">
   How to <a href="https://winaero.com/blog/enable-dark-title-bars-custom-accent-color-windows-10/">enable dark title bars</a> with custom accent color in Windows 10<br>
   How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10
+</p>
+
+<h2 align="center">Inspirers</h2>
+<p align="center">
+  <a href="https://www.irfanview.com/">IrfanView</a> v4.53 by Irfan Skiljan
+</p>
+
+<h2 align="center">Other "Quick" apps</h2>
+<p align="center">
+  <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - A color picker and color editor utility to get and save colors code
 </p>
