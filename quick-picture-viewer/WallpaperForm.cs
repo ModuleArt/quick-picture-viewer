@@ -17,7 +17,11 @@ namespace quick_picture_viewer
 			{
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
-				this.groupBox1.ForeColor = Color.White;
+
+				groupBox1.ForeColor = Color.White;
+
+				okButton.BackColor = ThemeManager.SecondColorDark;
+				okButton.Image = Properties.Resources.white_desktop;
 			}
 		}
 
@@ -46,6 +50,14 @@ namespace quick_picture_viewer
 			else if (spanRadio.Checked)
 			{
 				WallpaperManager.Set(bmp, WallpaperManager.Style.Span);
+			}
+		}
+
+		private void WallpaperForm_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Escape)
+			{
+				this.Close();
 			}
 		}
 	}

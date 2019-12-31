@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -11,7 +8,8 @@ namespace quick_picture_viewer
 		[STAThread]
 		static void Main(string[] args)
 		{
-			if (Environment.OSVersion.Version.Major >= 6) { 
+			if (Environment.OSVersion.Version.Major >= 6) 
+			{ 
 				SetProcessDPIAware(); 
 			}
 

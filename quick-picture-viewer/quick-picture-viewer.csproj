@@ -124,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -138,6 +139,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\imgs\light\white-zoomout.png" />
+    <None Include="resources\imgs\light\white-zoomin.png" />
+    <None Include="resources\imgs\light\white-zoom.png" />
+    <None Include="resources\imgs\light\white-trash.png" />
+    <None Include="resources\imgs\light\white-size.png" />
+    <None Include="resources\imgs\light\white-screenshot.png" />
+    <None Include="resources\imgs\light\white-saveas.png" />
+    <None Include="resources\imgs\light\white-rotater.png" />
+    <None Include="resources\imgs\light\white-rotatel.png" />
+    <None Include="resources\imgs\light\white-print.png" />
+    <None Include="resources\imgs\light\white-prev.png" />
+    <None Include="resources\imgs\light\white-popup.png" />
+    <None Include="resources\imgs\light\white-picfolder.png" />
+    <None Include="resources\imgs\light\white-paste.png" />
+    <None Include="resources\imgs\light\white-open.png" />
+    <None Include="resources\imgs\light\white-ontop.png" />
+    <None Include="resources\imgs\light\white-next.png" />
+    <None Include="resources\imgs\light\white-info.png" />
+    <None Include="resources\imgs\light\white-imgfile.png" />
+    <None Include="resources\imgs\light\white-history.png" />
+    <None Include="resources\imgs\light\white-grid.png" />
+    <None Include="resources\imgs\light\white-fullscreen.png" />
+    <None Include="resources\imgs\light\white-flipv.png" />
+    <None Include="resources\imgs\light\white-fliph.png" />
+    <None Include="resources\imgs\light\white-erase.png" />
+    <None Include="resources\imgs\light\white-docfolder.png" />
+    <None Include="resources\imgs\light\white-desktop.png" />
+    <None Include="resources\imgs\light\white-copy.png" />
+    <None Include="resources\imgs\light\white-clock.png" />
+    <None Include="resources\imgs\light\white-autozoom.png" />
+    <None Include="resources\imgs\light\white-about.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />

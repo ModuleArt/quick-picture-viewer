@@ -22,7 +22,7 @@ namespace quick_picture_viewer
 				infoGroup.ForeColor = Color.White;
 				pagesGroup.ForeColor = Color.White;
 
-				Color linkColor = ThemeManager.getColorizationColor();
+				Color linkColor = ThemeManager.AccentColorDark;
 
 				updatesLink.LinkColor = linkColor;
 				developerLink.LinkColor = linkColor;
@@ -30,7 +30,7 @@ namespace quick_picture_viewer
 				issuesLink.LinkColor = linkColor;
 				makeDefaultLink.LinkColor = linkColor;
 
-				okButton.BackColor = ThemeManager.MainColorDark;
+				okButton.BackColor = ThemeManager.SecondColorDark;
 			}
 		}
 
@@ -59,6 +59,14 @@ namespace quick_picture_viewer
 		private void makeDefaultLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			Process.Start("ms-settings:defaultapps");
+		}
+
+		private void AboutForm_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Escape)
+			{
+				this.Close();
+			}
 		}
 	}
 }

@@ -34,9 +34,9 @@
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
-			this.externalButton = new System.Windows.Forms.ToolStripButton();
 			this.printButton = new System.Windows.Forms.ToolStripButton();
 			this.deleteButton = new System.Windows.Forms.ToolStripButton();
+			this.externalButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
 			this.showFileButton = new System.Windows.Forms.ToolStripButton();
@@ -100,9 +100,9 @@
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openButton,
             this.saveAsButton,
-            this.externalButton,
             this.printButton,
             this.deleteButton,
+            this.externalButton,
             this.toolStripSeparator4,
             this.prevButton,
             this.showFileButton,
@@ -152,6 +152,7 @@
 			// saveAsButton
 			// 
 			this.saveAsButton.AutoSize = false;
+			this.saveAsButton.BackColor = System.Drawing.Color.Transparent;
 			this.saveAsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.saveAsButton.Enabled = false;
 			this.saveAsButton.Image = ((System.Drawing.Image)(resources.GetObject("saveAsButton.Image")));
@@ -161,19 +162,6 @@
 			this.saveAsButton.Size = new System.Drawing.Size(24, 25);
 			this.saveAsButton.Text = "Save as | Ctrl + S";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
-			// 
-			// externalButton
-			// 
-			this.externalButton.AutoSize = false;
-			this.externalButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.externalButton.Enabled = false;
-			this.externalButton.Image = ((System.Drawing.Image)(resources.GetObject("externalButton.Image")));
-			this.externalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.externalButton.Margin = new System.Windows.Forms.Padding(0);
-			this.externalButton.Name = "externalButton";
-			this.externalButton.Size = new System.Drawing.Size(24, 25);
-			this.externalButton.Text = "Open file with external app | Ctrl + E";
-			this.externalButton.Click += new System.EventHandler(this.externalButton_Click);
 			// 
 			// printButton
 			// 
@@ -200,6 +188,19 @@
 			this.deleteButton.Size = new System.Drawing.Size(24, 25);
 			this.deleteButton.Text = "Move file to trash | Delete";
 			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+			// 
+			// externalButton
+			// 
+			this.externalButton.AutoSize = false;
+			this.externalButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.externalButton.Enabled = false;
+			this.externalButton.Image = ((System.Drawing.Image)(resources.GetObject("externalButton.Image")));
+			this.externalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.externalButton.Margin = new System.Windows.Forms.Padding(0);
+			this.externalButton.Name = "externalButton";
+			this.externalButton.Size = new System.Drawing.Size(24, 25);
+			this.externalButton.Text = "Open file with external app | Ctrl + E";
+			this.externalButton.Click += new System.EventHandler(this.externalButton_Click);
 			// 
 			// toolStripSeparator4
 			// 
@@ -519,7 +520,8 @@
 			// 
 			this.saveFileDialog1.FileName = "image";
 			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
-    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff";
+    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff|ICO (*.ico)|*.i" +
+    "co";
 			// 
 			// directoryLabel
 			// 

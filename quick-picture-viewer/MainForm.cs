@@ -26,6 +26,8 @@ namespace quick_picture_viewer
 		private bool imageChanged = false;
 		private bool darkMode = false;
 
+		public bool printCenterImage = true;
+
 		public MainForm(string openPath)
 		{
 			InitializeComponent();
@@ -286,9 +288,12 @@ namespace quick_picture_viewer
 
 		private void aboutButton_Click(object sender, EventArgs e)
 		{
-			setAlwaysOnTop(false);
 			AboutForm aboutBox = new AboutForm();
 			aboutBox.Owner = this;
+			if (alwaysOnTop)
+			{
+				aboutBox.TopMost = true;
+			}
 			aboutBox.ShowDialog();
 		}
 
@@ -357,6 +362,9 @@ namespace quick_picture_viewer
 						break;
 					case 5:
 						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Tiff);
+						break;
+					case 6:
+						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Icon);
 						break;
 				}
 				fs.Close();
@@ -801,8 +809,11 @@ namespace quick_picture_viewer
 
 		private void setAsDesktopButton_Click(object sender, EventArgs e)
 		{
-			setAlwaysOnTop(false);
 			WallpaperForm wallpaperForm = new WallpaperForm(originalImage);
+			if (alwaysOnTop)
+			{
+				wallpaperForm.TopMost = true;
+			}
 			wallpaperForm.ShowDialog();
 		}
 
@@ -890,8 +901,11 @@ namespace quick_picture_viewer
 
 		private void infoButton_Click(object sender, EventArgs e)
 		{
-			setAlwaysOnTop(false);
 			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile);
+			if (alwaysOnTop)
+			{
+				infoForm.TopMost = true;
+			}
 			infoForm.ShowDialog();
 		}
 
@@ -915,12 +929,49 @@ namespace quick_picture_viewer
 		private void applyDarkTheme()
 		{
 			this.ForeColor = Color.White;
-
-			toolStrip1.BackColor = ThemeManager.MainColorDark;
-
 			this.BackColor = ThemeManager.BackColorDark;
-
+			toolStrip1.BackColor = ThemeManager.MainColorDark;
 			statusStrip1.BackColor = ThemeManager.SecondColorDark;
+
+			openButton.Image = Properties.Resources.white_open;
+			saveAsButton.Image = Properties.Resources.white_saveas;
+			printButton.Image = Properties.Resources.white_print;
+			deleteButton.Image = Properties.Resources.white_trash;
+			externalButton.Image = Properties.Resources.white_popup;
+
+			prevButton.Image = Properties.Resources.white_prev;
+			showFileButton.Image = Properties.Resources.white_picfolder;
+			nextButton.Image = Properties.Resources.white_next;
+
+			autoZoomButton.Image = Properties.Resources.white_autozoom;
+			zoomInButton.Image = Properties.Resources.white_zoomin;
+			zoomOutButton.Image = Properties.Resources.white_zoomout;
+
+			rotateLeftButton.Image = Properties.Resources.white_rotatel;
+			rotateRightButton.Image = Properties.Resources.white_rotater;
+			flipHorizontalButton.Image = Properties.Resources.white_fliph;
+			flipVerticalButton.Image = Properties.Resources.white_flipv;
+
+			screenshotButton.Image = Properties.Resources.white_screenshot;
+			infoButton.Image = Properties.Resources.white_info;
+			copyButton.Image = Properties.Resources.white_copy;
+			pasteButton.Image = Properties.Resources.white_paste;
+
+			checkboardButton.Image = Properties.Resources.white_grid;
+			fullscreenButton.Image = Properties.Resources.white_fullscreen;
+			onTopButton.Image = Properties.Resources.white_ontop;
+
+			setAsDesktopButton.Image = Properties.Resources.white_desktop;
+
+			aboutButton.Image = Properties.Resources.white_about;
+
+			directoryLabel.Image = Properties.Resources.white_picfolder;
+			fileLabel.Image = Properties.Resources.white_imgfile;
+			sizeLabel.Image = Properties.Resources.white_size;
+			zoomLabel.Image = Properties.Resources.white_zoom;
+			dateCreatedLabel.Image = Properties.Resources.white_clock;
+			dateModifiedLabel.Image = Properties.Resources.white_history;
+			hasChangesLabel.Image = Properties.Resources.white_erase;
 		}
 
 		private void MainForm_SizeChanged(object sender, EventArgs e)
@@ -934,6 +985,11 @@ namespace quick_picture_viewer
 		private void printButton_Click(object sender, EventArgs e)
 		{
 			PrintForm pf = new PrintForm(printDocument1);
+			pf.Owner = this;
+			if (alwaysOnTop)
+			{
+				pf.TopMost = true;
+			}
 			if (pf.ShowDialog() == DialogResult.OK)
 			{
 				if (printDialog1.ShowDialog() == DialogResult.OK)
@@ -966,23 +1022,41 @@ namespace quick_picture_viewer
 
 			if (availableWidth > originalImage.Width && availableHeight > originalImage.Height)
 			{
-				e.Graphics.DrawImage(originalImage, 0, 0, originalImage.Width, originalImage.Height);
+				int x = 0;
+				int y = 0;
+				if (printCenterImage)
+				{
+					x = (availableWidth - originalImage.Width) / 2;
+					y = (availableHeight - originalImage.Height) / 2;
+				}
+				e.Graphics.DrawImage(originalImage, x, y, originalImage.Width, originalImage.Height);
 			} 
 			else
 			{
 				double scaleW = availableWidth / (double) originalImage.Width;
 				double scaleH = availableHeight / (double) originalImage.Height;
 
-				Console.WriteLine("scaleW = " + scaleW);
-				Console.WriteLine("scaleH = " + scaleH);
-
 				if (scaleW < scaleH)
 				{
-					e.Graphics.DrawImage(originalImage, 0, 0, availableWidth, Convert.ToInt32(originalImage.Height * scaleW));
+					int x = 0;
+					int y = 0;
+					if (printCenterImage)
+					{
+						x = (availableWidth - Convert.ToInt32(originalImage.Width * scaleW)) / 2;
+						y = (availableHeight - Convert.ToInt32(originalImage.Height * scaleW)) / 2;
+					}
+					e.Graphics.DrawImage(originalImage, x, y, availableWidth, Convert.ToInt32(originalImage.Height * scaleW));
 				}
 				else
 				{
-					e.Graphics.DrawImage(originalImage, 0, 0, Convert.ToInt32(originalImage.Width * scaleH), availableHeight);
+					int x = 0;
+					int y = 0;
+					if (printCenterImage)
+					{
+						x = (availableWidth - Convert.ToInt32(originalImage.Width * scaleH)) / 2;
+						y = (availableHeight - Convert.ToInt32(originalImage.Height * scaleH)) / 2;
+					}
+					e.Graphics.DrawImage(originalImage, x, y, Convert.ToInt32(originalImage.Width * scaleH), availableHeight);
 				}
 			}
 		}

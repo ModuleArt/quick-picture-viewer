@@ -16,9 +16,47 @@ namespace quick_picture_viewer
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
-				this.fileGroup.ForeColor = Color.White;
-				this.sizeGroup.ForeColor = Color.White;
-				this.dateGroup.ForeColor = Color.White;
+				fileGroup.ForeColor = Color.White;
+				sizeGroup.ForeColor = Color.White;
+				dateGroup.ForeColor = Color.White;
+
+				okButton.BackColor = ThemeManager.SecondColorDark;
+
+				fileNameTextBox.BackColor = ThemeManager.SecondColorDark;
+				fileNameTextBox.ForeColor = Color.White;
+
+				folderTextBox.BackColor = ThemeManager.SecondColorDark;
+				folderTextBox.ForeColor = Color.White;
+
+				fullPathTextBox.BackColor = ThemeManager.SecondColorDark;
+				fullPathTextBox.ForeColor = Color.White;
+
+				compressionTextBox.BackColor = ThemeManager.SecondColorDark;
+				compressionTextBox.ForeColor = Color.White;
+
+				sizeTextBox.BackColor = ThemeManager.SecondColorDark;
+				sizeTextBox.ForeColor = Color.White;
+
+				megapixelsTextBox.BackColor = ThemeManager.SecondColorDark;
+				megapixelsTextBox.ForeColor = Color.White;
+
+				resolutionTextBox.BackColor = ThemeManager.SecondColorDark;
+				resolutionTextBox.ForeColor = Color.White;
+
+				inchesTextBox.BackColor = ThemeManager.SecondColorDark;
+				inchesTextBox.ForeColor = Color.White;
+
+				cmTextBox.BackColor = ThemeManager.SecondColorDark;
+				cmTextBox.ForeColor = Color.White;
+
+				diskSizeTextBox.BackColor = ThemeManager.SecondColorDark;
+				diskSizeTextBox.ForeColor = Color.White;
+
+				createdTextBox.BackColor = ThemeManager.SecondColorDark;
+				createdTextBox.ForeColor = Color.White;
+
+				modifiedTextBox.BackColor = ThemeManager.SecondColorDark;
+				modifiedTextBox.ForeColor = Color.White;
 			}
 
 			if (directoryName == null)
@@ -57,7 +95,7 @@ namespace quick_picture_viewer
 			megapixelsTextBox.Text = ((((float) bitmap.Height * bitmap.Width) / 1000000)).ToString("0.##") + " megapixels";
 			resolutionTextBox.Text = Math.Round(bitmap.HorizontalResolution) + " x " + Math.Round(bitmap.VerticalResolution) + " DPI";
 			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " inches";
-			cmTextBox.Text = cmWidth.ToString("0.#") + " x " + cmHeight.ToString("0.#") + " centimeters";
+			cmTextBox.Text = cmWidth.ToString("0.##") + " x " + cmHeight.ToString("0.##") + " centimeters";
 		}
 
 		private string bytesToSize(string path)
@@ -100,6 +138,14 @@ namespace quick_picture_viewer
 			}
 
 			return result;
+		}
+
+		private void InfoForm_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Escape)
+			{
+				this.Close();
+			}
 		}
 	}
 }

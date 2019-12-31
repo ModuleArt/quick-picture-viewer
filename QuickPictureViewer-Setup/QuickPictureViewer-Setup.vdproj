@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8C71C896463C4CCCB03CBC79E6FD3DB7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "OwnerKey" = "8:_4B597F9189B6419DBE3695587B370B9E"
         "MsmSig" = "8:_UNDEFINED"
@@ -58,6 +64,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D21A6DCCE4504877B118867DDEB9D95B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E1FCCD0DC1E64CF1B4C617BF1F155352"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -82,19 +94,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FB4E1A894C32F41DD15A53F0A8CA45B9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3C0B7A6F79AF61BEFCBB282512D986F5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
+        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,7 +106,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
+        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3C0B7A6F79AF61BEFCBB282512D986F5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FB4E1A894C32F41DD15A53F0A8CA45B9"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -242,11 +254,6 @@
             "AssemblyAsmDisplayName" = "8:GitHubUpdate, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3C0B7A6F79AF61BEFCBB282512D986F5"
-                    {
-                    "Name" = "8:GitHubUpdate.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:GitHubUpdate.dll"
             "TargetName" = "8:"
@@ -273,11 +280,6 @@
             "AssemblyAsmDisplayName" = "8:Octokit, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_602081345A8B570EE42EFE35A1D60858"
-                    {
-                    "Name" = "8:Octokit.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Octokit.dll"
             "TargetName" = "8:"
@@ -297,6 +299,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8C71C896463C4CCCB03CBC79E6FD3DB7"
+            {
+            "SourcePath" = "8:..\\quick-picture-viewer\\resources\\imgs\\checkboard-dark.png"
+            "TargetName" = "8:checkboard-dark.png"
+            "Tag" = "8:"
+            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9E165066DD6307D67C7B835ACD3F2087"
             {
             "AssemblyRegister" = "3:1"
@@ -304,11 +326,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_9E165066DD6307D67C7B835ACD3F2087"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -368,6 +385,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1FCCD0DC1E64CF1B4C617BF1F155352"
+            {
+            "SourcePath" = "8:..\\quick-picture-viewer\\resources\\imgs\\checkboard-light.png"
+            "TargetName" = "8:checkboard-light.png"
+            "Tag" = "8:"
+            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E7C9FCADD09243EDA7D07D2534D4A336"
             {
             "SourcePath" = "8:..\\quick-picture-viewer\\resources\\imgs\\picture80.bmp"
@@ -395,11 +432,6 @@
             "AssemblyAsmDisplayName" = "8:Semver, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_FB4E1A894C32F41DD15A53F0A8CA45B9"
-                    {
-                    "Name" = "8:Semver.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Semver.dll"
             "TargetName" = "8:"
@@ -475,15 +507,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:QuickPictureViewer"
-        "ProductCode" = "8:{F026BB76-FDFB-43C5-85FA-014E3ADC07E0}"
-        "PackageCode" = "8:{89C84850-EE1B-4B89-A363-7DE5CBAC1F49}"
+        "ProductCode" = "8:{21CEAFD5-34BD-41DA-B6FD-352F4E6195C1}"
+        "PackageCode" = "8:{99F6AAD8-BA8D-4CF8-8A91-0D6E376A3692}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.7.0"
+        "ProductVersion" = "8:1.8.0"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
