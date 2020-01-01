@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="/quick-picture-viewer/resources/imgs/picture80.png">
+  <img src="/quick-picture-viewer/resources/imgs/picture96.png">
 </p>
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  Quick Picture Viewer is a lightweight desktop photo viewer for Windows, build on top of WinForms (C#).
+  Quick Picture Viewer is a lightweight desktop photo viewer for Windows, built on top of WinForms (C#).
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows XP, 7, 8.1, 10  |  Size: 0.9 MB  | v1.7.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.7.0/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows 7, 8.1, 10  |  Size: 1 MB  | v1.8.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.8.0/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a>
 </p>
 

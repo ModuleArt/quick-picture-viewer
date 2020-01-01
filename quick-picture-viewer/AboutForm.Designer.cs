@@ -61,8 +61,8 @@
 			// productLabel
 			// 
 			this.productLabel.AutoSize = true;
-			this.productLabel.Location = new System.Drawing.Point(6, 29);
-			this.productLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.productLabel.Location = new System.Drawing.Point(6, 28);
+			this.productLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.productLabel.Name = "productLabel";
 			this.productLabel.Size = new System.Drawing.Size(116, 15);
 			this.productLabel.TabIndex = 27;
@@ -71,7 +71,7 @@
 			// versionLabel
 			// 
 			this.versionLabel.AutoSize = true;
-			this.versionLabel.Location = new System.Drawing.Point(6, 50);
+			this.versionLabel.Location = new System.Drawing.Point(6, 49);
 			this.versionLabel.Margin = new System.Windows.Forms.Padding(3);
 			this.versionLabel.Name = "versionLabel";
 			this.versionLabel.Size = new System.Drawing.Size(45, 15);
@@ -81,7 +81,7 @@
 			// companyLabel
 			// 
 			this.companyLabel.AutoSize = true;
-			this.companyLabel.Location = new System.Drawing.Point(6, 104);
+			this.companyLabel.Location = new System.Drawing.Point(6, 103);
 			this.companyLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.companyLabel.Name = "companyLabel";
 			this.companyLabel.Size = new System.Drawing.Size(83, 15);
@@ -91,7 +91,7 @@
 			// authorLabel
 			// 
 			this.authorLabel.AutoSize = true;
-			this.authorLabel.Location = new System.Drawing.Point(6, 125);
+			this.authorLabel.Location = new System.Drawing.Point(6, 124);
 			this.authorLabel.Margin = new System.Windows.Forms.Padding(3);
 			this.authorLabel.Name = "authorLabel";
 			this.authorLabel.Size = new System.Drawing.Size(134, 15);
@@ -101,12 +101,12 @@
 			// descriptionLabel
 			// 
 			this.descriptionLabel.AutoSize = true;
-			this.descriptionLabel.Location = new System.Drawing.Point(6, 152);
+			this.descriptionLabel.Location = new System.Drawing.Point(6, 151);
 			this.descriptionLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.descriptionLabel.Name = "descriptionLabel";
-			this.descriptionLabel.Size = new System.Drawing.Size(217, 15);
+			this.descriptionLabel.Size = new System.Drawing.Size(221, 30);
 			this.descriptionLabel.TabIndex = 31;
-			this.descriptionLabel.Text = "Lightweight picture viewer for Windows";
+			this.descriptionLabel.Text = "Lightweight desktop photo viewer for\r\nWindows, built on top of WinForms (C#)\r\n";
 			// 
 			// developerLink
 			// 
@@ -139,7 +139,7 @@
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(9, 413);
+			this.okButton.Location = new System.Drawing.Point(9, 429);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
@@ -159,7 +159,7 @@
 			this.infoGroup.Location = new System.Drawing.Point(9, 118);
 			this.infoGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.infoGroup.Name = "infoGroup";
-			this.infoGroup.Size = new System.Drawing.Size(256, 215);
+			this.infoGroup.Size = new System.Drawing.Size(256, 231);
 			this.infoGroup.TabIndex = 34;
 			this.infoGroup.TabStop = false;
 			this.infoGroup.Text = "Info";
@@ -167,7 +167,7 @@
 			// makeDefaultLink
 			// 
 			this.makeDefaultLink.AutoSize = true;
-			this.makeDefaultLink.Location = new System.Drawing.Point(6, 179);
+			this.makeDefaultLink.Location = new System.Drawing.Point(6, 193);
 			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.makeDefaultLink.Name = "makeDefaultLink";
 			this.makeDefaultLink.Size = new System.Drawing.Size(149, 15);
@@ -179,7 +179,7 @@
 			// updatesLink
 			// 
 			this.updatesLink.AutoSize = true;
-			this.updatesLink.Location = new System.Drawing.Point(6, 77);
+			this.updatesLink.Location = new System.Drawing.Point(6, 76);
 			this.updatesLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.updatesLink.Name = "updatesLink";
 			this.updatesLink.Size = new System.Drawing.Size(103, 15);
@@ -205,7 +205,7 @@
 			this.pagesGroup.Controls.Add(this.developerLink);
 			this.pagesGroup.Controls.Add(this.projectLink);
 			this.pagesGroup.Controls.Add(this.issuesLink);
-			this.pagesGroup.Location = new System.Drawing.Point(9, 342);
+			this.pagesGroup.Location = new System.Drawing.Point(9, 358);
 			this.pagesGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.pagesGroup.Name = "pagesGroup";
 			this.pagesGroup.Size = new System.Drawing.Size(256, 63);
@@ -218,7 +218,7 @@
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 445);
+			this.ClientSize = new System.Drawing.Size(274, 461);
 			this.Controls.Add(this.pagesGroup);
 			this.Controls.Add(this.infoGroup);
 			this.Controls.Add(this.okButton);

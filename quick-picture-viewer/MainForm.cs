@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using GitHubUpdate;
+using System.Drawing.Imaging;
 
 namespace quick_picture_viewer
 {
@@ -25,6 +26,7 @@ namespace quick_picture_viewer
 		private bool alwaysOnTop = false;
 		private bool imageChanged = false;
 		private bool darkMode = false;
+		private bool checkboardBackground = false;
 
 		public bool printCenterImage = true;
 
@@ -68,6 +70,9 @@ namespace quick_picture_viewer
 			}
 
 			checkForUpdates(false);
+
+			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
+			setCheckboardBackground(Properties.Settings.Default.CheckboardBackground, false);
 		}
 
 		public async void checkForUpdates(bool showUpToDateDialog)
@@ -297,7 +302,7 @@ namespace quick_picture_viewer
 			aboutBox.ShowDialog();
 		}
 
-		private void setAlwaysOnTop(bool b)
+		private void setAlwaysOnTop(bool b, bool saveToDisk)
 		{
 			alwaysOnTop = b;
 			this.TopMost = b;
@@ -306,6 +311,40 @@ namespace quick_picture_viewer
 			if(b)
 			{
 				setFullscreen(false);
+			}
+
+			if (saveToDisk)
+			{
+				Properties.Settings.Default.AlwaysOnTop = b;
+				Properties.Settings.Default.Save();
+			}
+		}
+
+		private void setCheckboardBackground(bool b, bool saveToDisk)
+		{
+			checkboardBackground = b;
+			checkboardButton.Checked = b;
+
+			if (b)
+			{
+				if (darkMode)
+				{
+					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-dark.png");
+				}
+				else
+				{
+					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-light.png");
+				}
+			}
+			else
+			{
+				pictureBox.BackgroundImage = null;
+			}
+
+			if (saveToDisk)
+			{
+				Properties.Settings.Default.CheckboardBackground = b;
+				Properties.Settings.Default.Save();
 			}
 		}
 
@@ -488,7 +527,7 @@ namespace quick_picture_viewer
 				picturePanel.Height = this.ClientSize.Height;
 				picturePanel.BackColor = Color.Black;
 
-				setAlwaysOnTop(false);
+				setAlwaysOnTop(false, true);
 			}
 			else
 			{
@@ -701,7 +740,7 @@ namespace quick_picture_viewer
 
 		private void onTopButton_Click(object sender, EventArgs e)
 		{
-			setAlwaysOnTop(!alwaysOnTop);
+			setAlwaysOnTop(!alwaysOnTop, true);
 		}
 
 		private void screenshotButton_Click(object sender, EventArgs e)
@@ -994,10 +1033,6 @@ namespace quick_picture_viewer
 			{
 				if (printDialog1.ShowDialog() == DialogResult.OK)
 				{
-					if (currentFile != null)
-					{
-						printDocument1.DocumentName = currentFile;
-					}
 					printDocument1.Print();
 				}
 			}
@@ -1084,23 +1119,7 @@ namespace quick_picture_viewer
 
 		private void checkboardButton_Click(object sender, EventArgs e)
 		{
-			if (checkboardButton.Checked)
-			{
-				checkboardButton.Checked = false;
-				pictureBox.BackgroundImage = null;
-			}
-			else
-			{
-				checkboardButton.Checked = true;
-				if(darkMode)
-				{
-					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-dark.png");
-				}
-				else
-				{
-					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-light.png");
-				}
-			}
+			setCheckboardBackground(!checkboardBackground, true);
 		}
 	}
 }

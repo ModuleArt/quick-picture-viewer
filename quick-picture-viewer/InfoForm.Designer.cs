@@ -57,6 +57,7 @@
 			this.modifiedTextBox = new System.Windows.Forms.TextBox();
 			this.createdLabel = new System.Windows.Forms.Label();
 			this.createdTextBox = new System.Windows.Forms.TextBox();
+			this.propertiesButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.fileGroup.SuspendLayout();
 			this.sizeGroup.SuspendLayout();
@@ -91,10 +92,10 @@
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(9, 573);
+			this.okButton.Location = new System.Drawing.Point(141, 573);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(256, 23);
+			this.okButton.Size = new System.Drawing.Size(124, 23);
 			this.okButton.TabIndex = 21;
 			this.okButton.Text = "Close";
 			this.okButton.UseVisualStyleBackColor = false;
@@ -148,6 +149,7 @@
 			this.fullPathTextBox.ReadOnly = true;
 			this.fullPathTextBox.Size = new System.Drawing.Size(153, 20);
 			this.fullPathTextBox.TabIndex = 32;
+			this.fullPathTextBox.Text = "Unknown";
 			this.fullPathTextBox.WordWrap = false;
 			// 
 			// fullPathLabel
@@ -170,6 +172,7 @@
 			this.folderTextBox.ReadOnly = true;
 			this.folderTextBox.Size = new System.Drawing.Size(153, 20);
 			this.folderTextBox.TabIndex = 30;
+			this.folderTextBox.Text = "Not exists";
 			// 
 			// fileNameTextBox
 			// 
@@ -182,6 +185,7 @@
 			this.fileNameTextBox.ReadOnly = true;
 			this.fileNameTextBox.Size = new System.Drawing.Size(153, 20);
 			this.fileNameTextBox.TabIndex = 29;
+			this.fileNameTextBox.Text = "None";
 			// 
 			// folderLabel
 			// 
@@ -330,6 +334,7 @@
 			this.diskSizeTextBox.ReadOnly = true;
 			this.diskSizeTextBox.Size = new System.Drawing.Size(153, 20);
 			this.diskSizeTextBox.TabIndex = 46;
+			this.diskSizeTextBox.Text = "Unknown";
 			// 
 			// diskSizeLabel
 			// 
@@ -375,6 +380,7 @@
 			this.modifiedTextBox.ReadOnly = true;
 			this.modifiedTextBox.Size = new System.Drawing.Size(153, 20);
 			this.modifiedTextBox.TabIndex = 40;
+			this.modifiedTextBox.Text = "Unknown";
 			// 
 			// createdLabel
 			// 
@@ -396,6 +402,27 @@
 			this.createdTextBox.ReadOnly = true;
 			this.createdTextBox.Size = new System.Drawing.Size(153, 20);
 			this.createdTextBox.TabIndex = 38;
+			this.createdTextBox.Text = "Unknown";
+			// 
+			// propertiesButton
+			// 
+			this.propertiesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.propertiesButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.propertiesButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.propertiesButton.Enabled = false;
+			this.propertiesButton.FlatAppearance.BorderSize = 0;
+			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));
+			this.propertiesButton.Location = new System.Drawing.Point(9, 573);
+			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0);
+			this.propertiesButton.Name = "propertiesButton";
+			this.propertiesButton.Size = new System.Drawing.Size(124, 23);
+			this.propertiesButton.TabIndex = 47;
+			this.propertiesButton.Text = "File properties";
+			this.propertiesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.propertiesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.propertiesButton.UseVisualStyleBackColor = false;
+			this.propertiesButton.Click += new System.EventHandler(this.propertiesButton_Click);
 			// 
 			// InfoForm
 			// 
@@ -403,6 +430,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(274, 605);
+			this.Controls.Add(this.propertiesButton);
 			this.Controls.Add(this.dateGroup);
 			this.Controls.Add(this.sizeGroup);
 			this.Controls.Add(this.fileGroup);
@@ -462,5 +490,6 @@
 		private System.Windows.Forms.TextBox modifiedTextBox;
 		private System.Windows.Forms.TextBox diskSizeTextBox;
 		private System.Windows.Forms.Label diskSizeLabel;
+		private System.Windows.Forms.Button propertiesButton;
 	}
 }

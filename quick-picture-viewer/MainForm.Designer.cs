@@ -95,7 +95,7 @@
 			// 
 			// toolStrip1
 			// 
-			this.toolStrip1.BackColor = System.Drawing.Color.White;
+			this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openButton,
@@ -133,7 +133,7 @@
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Padding = new System.Windows.Forms.Padding(5);
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-			this.toolStrip1.Size = new System.Drawing.Size(764, 35);
+			this.toolStrip1.Size = new System.Drawing.Size(768, 35);
 			this.toolStrip1.TabIndex = 16;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -268,7 +268,7 @@
 			this.autoZoomButton.Margin = new System.Windows.Forms.Padding(0);
 			this.autoZoomButton.Name = "autoZoomButton";
 			this.autoZoomButton.Size = new System.Drawing.Size(24, 25);
-			this.autoZoomButton.Text = "Toggle auto zoom | Ctrl + A";
+			this.autoZoomButton.Text = "Auto zoom | Ctrl + A";
 			this.autoZoomButton.Click += new System.EventHandler(this.autoZoomButton_Click);
 			// 
 			// zoomOutButton
@@ -410,7 +410,7 @@
 			this.screenshotButton.Margin = new System.Windows.Forms.Padding(0);
 			this.screenshotButton.Name = "screenshotButton";
 			this.screenshotButton.Size = new System.Drawing.Size(24, 25);
-			this.screenshotButton.Text = "toolStripButton1";
+			this.screenshotButton.Text = "Capture screen | F12";
 			this.screenshotButton.ToolTipText = "Capture screen | F12";
 			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
 			// 
@@ -449,7 +449,7 @@
 			this.pasteButton.Margin = new System.Windows.Forms.Padding(0);
 			this.pasteButton.Name = "pasteButton";
 			this.pasteButton.Size = new System.Drawing.Size(24, 25);
-			this.pasteButton.Text = "Paste | Ctrl + V";
+			this.pasteButton.Text = "Paste image | Ctrl + V";
 			this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
 			// 
 			// toolStripSeparator5
@@ -468,8 +468,8 @@
 			this.checkboardButton.Margin = new System.Windows.Forms.Padding(0);
 			this.checkboardButton.Name = "checkboardButton";
 			this.checkboardButton.Size = new System.Drawing.Size(24, 25);
-			this.checkboardButton.Text = "Toggle checkboard background | Ctrl + Shift +C";
-			this.checkboardButton.ToolTipText = "Toggle checkboard background | Ctrl + Shift +C";
+			this.checkboardButton.Text = "Checkboard background | Ctrl + Shift +C";
+			this.checkboardButton.ToolTipText = "Checkboard background | Ctrl + Shift +C";
 			this.checkboardButton.Click += new System.EventHandler(this.checkboardButton_Click);
 			// 
 			// fullscreenButton
@@ -481,7 +481,7 @@
 			this.fullscreenButton.Margin = new System.Windows.Forms.Padding(0);
 			this.fullscreenButton.Name = "fullscreenButton";
 			this.fullscreenButton.Size = new System.Drawing.Size(24, 25);
-			this.fullscreenButton.Text = "Toggle fullscreen | F";
+			this.fullscreenButton.Text = "Fullscreen | F";
 			this.fullscreenButton.Click += new System.EventHandler(this.fullscreenButton_Click);
 			// 
 			// onTopButton
@@ -493,7 +493,7 @@
 			this.onTopButton.Margin = new System.Windows.Forms.Padding(0);
 			this.onTopButton.Name = "onTopButton";
 			this.onTopButton.Size = new System.Drawing.Size(24, 25);
-			this.onTopButton.Text = "Toggle always on top | Ctrl + T";
+			this.onTopButton.Text = "Always on top | Ctrl + T";
 			this.onTopButton.Click += new System.EventHandler(this.onTopButton_Click);
 			// 
 			// toolStripSeparator6
@@ -570,9 +570,9 @@
             this.dateModifiedLabel,
             this.hasChangesLabel});
 			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.statusStrip1.Location = new System.Drawing.Point(0, 465);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 467);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(764, 26);
+			this.statusStrip1.Size = new System.Drawing.Size(768, 26);
 			this.statusStrip1.TabIndex = 15;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -627,7 +627,7 @@
 			this.picturePanel.Location = new System.Drawing.Point(0, 35);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(764, 430);
+			this.picturePanel.Size = new System.Drawing.Size(768, 432);
 			this.picturePanel.TabIndex = 2;
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
@@ -643,7 +643,7 @@
 			this.pictureBox.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(764, 430);
+			this.pictureBox.Size = new System.Drawing.Size(768, 432);
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
@@ -658,7 +658,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(764, 491);
+			this.ClientSize = new System.Drawing.Size(768, 493);
 			this.Controls.Add(this.picturePanel);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.statusStrip1);
@@ -703,7 +703,6 @@
 		private System.Windows.Forms.ToolStripButton rotateLeftButton;
 		private System.Windows.Forms.ToolStripButton rotateRightButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-		private System.Windows.Forms.ToolStripButton saveAsButton;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.ToolStripButton copyButton;
 		private System.Windows.Forms.ToolStripButton pasteButton;
@@ -734,6 +733,7 @@
 		private System.Windows.Forms.ToolStripStatusLabel hasChangesLabel;
 		private System.Windows.Forms.ToolStripButton showFileButton;
 		private System.Windows.Forms.ToolStripButton checkboardButton;
+		private System.Windows.Forms.ToolStripButton saveAsButton;
 	}
 }
 

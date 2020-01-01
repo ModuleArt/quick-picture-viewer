@@ -7,6 +7,8 @@ namespace quick_picture_viewer
 {
 	partial class InfoForm : Form
 	{
+		private string fullPath = null;
+
 		public InfoForm(Bitmap bitmap, string directoryName, string fileName)
 		{
 			InitializeComponent();
@@ -19,6 +21,9 @@ namespace quick_picture_viewer
 				fileGroup.ForeColor = Color.White;
 				sizeGroup.ForeColor = Color.White;
 				dateGroup.ForeColor = Color.White;
+
+				propertiesButton.BackColor = ThemeManager.SecondColorDark;
+				propertiesButton.Image = Properties.Resources.white_imgfile;
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 
@@ -59,20 +64,10 @@ namespace quick_picture_viewer
 				modifiedTextBox.ForeColor = Color.White;
 			}
 
-			if (directoryName == null)
-			{
-				fileNameTextBox.Text = "Unknown";
-				folderTextBox.Text = "Not exists";
-				fullPathTextBox.Text = "Unknown";
-
-				diskSizeTextBox.Text = "Unknown";
-
-				createdTextBox.Text = "Unknown";
-				modifiedTextBox.Text = "Unknown";
-			}
-			else
+			if (directoryName != null)
 			{
 				string path = Path.Combine(directoryName, fileName);
+				fullPath = path;
 
 				fileNameTextBox.Text = fileName;
 				folderTextBox.Text = directoryName;
@@ -82,6 +77,8 @@ namespace quick_picture_viewer
 
 				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
 				modifiedTextBox.Text = File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
+
+				propertiesButton.Enabled = true;
 			}
 
 			double inchesWidth = bitmap.Width / bitmap.HorizontalResolution;
@@ -146,6 +143,11 @@ namespace quick_picture_viewer
 			{
 				this.Close();
 			}
+		}
+
+		private void propertiesButton_Click(object sender, EventArgs e)
+		{
+			ShellManager.ShowFileProperties(fullPath);
 		}
 	}
 }
