@@ -233,6 +233,7 @@
 			// horizontalCheckBox
 			// 
 			this.horizontalCheckBox.AutoSize = true;
+			this.horizontalCheckBox.FlatAppearance.BorderSize = 0;
 			this.horizontalCheckBox.Location = new System.Drawing.Point(6, 55);
 			this.horizontalCheckBox.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.horizontalCheckBox.Name = "horizontalCheckBox";

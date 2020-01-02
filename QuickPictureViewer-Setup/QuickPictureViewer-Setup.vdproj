@@ -45,12 +45,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_8C71C896463C4CCCB03CBC79E6FD3DB7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "OwnerKey" = "8:_4B597F9189B6419DBE3695587B370B9E"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_D21A6DCCE4504877B118867DDEB9D95B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E1FCCD0DC1E64CF1B4C617BF1F155352"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -299,26 +287,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8C71C896463C4CCCB03CBC79E6FD3DB7"
-            {
-            "SourcePath" = "8:..\\quick-picture-viewer\\resources\\imgs\\checkboard-dark.png"
-            "TargetName" = "8:checkboard-dark.png"
-            "Tag" = "8:"
-            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9E165066DD6307D67C7B835ACD3F2087"
             {
             "AssemblyRegister" = "3:1"
@@ -369,26 +337,6 @@
             {
             "SourcePath" = "8:..\\quick-picture-viewer\\resources\\quick-picture-viewer.VisualElementsManifest.xml"
             "TargetName" = "8:quick-picture-viewer.VisualElementsManifest.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1FCCD0DC1E64CF1B4C617BF1F155352"
-            {
-            "SourcePath" = "8:..\\quick-picture-viewer\\resources\\imgs\\checkboard-light.png"
-            "TargetName" = "8:checkboard-light.png"
             "Tag" = "8:"
             "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
             "Condition" = "8:"
@@ -506,16 +454,16 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:QuickPictureViewer"
-        "ProductCode" = "8:{21CEAFD5-34BD-41DA-B6FD-352F4E6195C1}"
-        "PackageCode" = "8:{99F6AAD8-BA8D-4CF8-8A91-0D6E376A3692}"
+        "ProductName" = "8:Quick Picture Viewer"
+        "ProductCode" = "8:{FD9094C7-3EED-4B1A-BBF7-55D6FBC0FA0A}"
+        "PackageCode" = "8:{571294B7-EB05-4ECD-96FA-F68C387F00DA}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.8.0"
+        "ProductVersion" = "8:1.8.1"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1180,6 +1128,42 @@
                                 "Values"
                                 {
                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_D64528B06C04432A990CE233E6E424E6"
+                                    {
+                                    "Name" = "8:QuickPictureViewer"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "ValueTypes" = "3:1"
+                                    "Value" = "8:"
+                                    }
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_BE15651D2715445DB2590569DA9ADC0A"
+                    {
+                    "Name" = "8:.ico"
+                    "Condition" = "8:"
+                    "AlwaysCreate" = "11:FALSE"
+                    "DeleteAtUninstall" = "11:FALSE"
+                    "Transitive" = "11:FALSE"
+                        "Keys"
+                        {
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_BB2952E02E324E93A14E3518C6BF848F"
+                            {
+                            "Name" = "8:OpenWithProgids"
+                            "Condition" = "8:"
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                                "Keys"
+                                {
+                                }
+                                "Values"
+                                {
+                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_F2BFEB4DB44E426895B5B2AF133B763D"
                                     {
                                     "Name" = "8:QuickPictureViewer"
                                     "Condition" = "8:"

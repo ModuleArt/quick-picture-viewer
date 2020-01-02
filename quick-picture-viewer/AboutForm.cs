@@ -29,6 +29,7 @@ namespace quick_picture_viewer
 				projectLink.LinkColor = linkColor;
 				issuesLink.LinkColor = linkColor;
 				makeDefaultLink.LinkColor = linkColor;
+				licenseLink.LinkColor = linkColor;
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 			}
@@ -67,6 +68,11 @@ namespace quick_picture_viewer
 			{
 				this.Close();
 			}
+		}
+
+		private void licenseLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			System.Diagnostics.Process.Start("https://github.com/ModuleArt/quick-picture-viewer/blob/master/LICENSE.md/");
 		}
 	}
 }

@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using GitHubUpdate;
-using System.Drawing.Imaging;
 
 namespace quick_picture_viewer
 {
@@ -329,11 +328,11 @@ namespace quick_picture_viewer
 			{
 				if (darkMode)
 				{
-					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-dark.png");
+					pictureBox.BackgroundImage = Properties.Resources.checkboard_dark;
 				}
 				else
 				{
-					pictureBox.BackgroundImage = Bitmap.FromFile("checkboard-light.png");
+					pictureBox.BackgroundImage = Properties.Resources.checkboard_light;
 				}
 			}
 			else

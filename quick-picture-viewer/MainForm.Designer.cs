@@ -96,6 +96,7 @@
 			// toolStrip1
 			// 
 			this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+			this.toolStrip1.CanOverflow = false;
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openButton,
@@ -129,6 +130,7 @@
             this.onTopButton,
             this.toolStripSeparator6,
             this.setAsDesktopButton});
+			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Padding = new System.Windows.Forms.Padding(5);
@@ -289,7 +291,7 @@
 			this.zoomComboBox.AutoSize = false;
 			this.zoomComboBox.DropDownWidth = 75;
 			this.zoomComboBox.Enabled = false;
-			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
 			this.zoomComboBox.Items.AddRange(new object[] {
             "Auto",
             "5%",
