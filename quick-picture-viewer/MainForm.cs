@@ -6,7 +6,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using GitHubUpdate;
 
 namespace quick_picture_viewer
 {
@@ -78,11 +77,11 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				var checker = new UpdateChecker("ModuleArt", "quick-picture-viewer");
+				UpdateChecker checker = new UpdateChecker("ModuleArt", "quick-picture-viewer");
 
-				UpdateType update = await checker.CheckUpdate();
+				bool update = await checker.CheckUpdate();
 
-				if (update == UpdateType.None)
+				if (update == false)
 				{
 					if (showUpToDateDialog)
 					{
@@ -91,7 +90,13 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					CustomUpdateDialog updateDialog = new CustomUpdateDialog(checker, alwaysOnTop);
+					UpdateDialog updateDialog = new UpdateDialog(checker, "Quick Picture Viewer");
+
+					if (alwaysOnTop)
+					{
+						updateDialog.TopMost = true;
+					}
+
 					var result = updateDialog.ShowDialog();
 					if (result == DialogResult.Yes)
 					{
