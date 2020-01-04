@@ -91,10 +91,16 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					var result = new UpdateNotifyDialog(checker).ShowDialog();
+					CustomUpdateDialog updateDialog = new CustomUpdateDialog(checker, alwaysOnTop);
+					var result = updateDialog.ShowDialog();
 					if (result == DialogResult.Yes)
 					{
 						checker.DownloadAsset("QuickPictureViewer-Setup.msi");
+						this.Close();
+					}
+					else
+					{
+						updateDialog.Dispose();
 					}
 				}
 			}

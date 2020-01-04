@@ -242,6 +242,11 @@
             "AssemblyAsmDisplayName" = "8:GitHubUpdate, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_3C0B7A6F79AF61BEFCBB282512D986F5"
+                    {
+                    "Name" = "8:GitHubUpdate.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:GitHubUpdate.dll"
             "TargetName" = "8:"
@@ -268,6 +273,11 @@
             "AssemblyAsmDisplayName" = "8:Octokit, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_602081345A8B570EE42EFE35A1D60858"
+                    {
+                    "Name" = "8:Octokit.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Octokit.dll"
             "TargetName" = "8:"
@@ -294,6 +304,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_9E165066DD6307D67C7B835ACD3F2087"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -380,6 +395,11 @@
             "AssemblyAsmDisplayName" = "8:Semver, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_FB4E1A894C32F41DD15A53F0A8CA45B9"
+                    {
+                    "Name" = "8:Semver.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Semver.dll"
             "TargetName" = "8:"
@@ -455,15 +475,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Quick Picture Viewer"
-        "ProductCode" = "8:{FD9094C7-3EED-4B1A-BBF7-55D6FBC0FA0A}"
-        "PackageCode" = "8:{571294B7-EB05-4ECD-96FA-F68C387F00DA}"
+        "ProductCode" = "8:{417A051B-1D39-40D4-8081-E67E067BC454}"
+        "PackageCode" = "8:{B0E495D7-CF36-40CE-BF1A-AE427A178CE2}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.8.1"
+        "ProductVersion" = "8:1.8.2"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1909,7 +1929,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B597F9189B6419DBE3695587B370B9E"
             {
-            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Debug\\quick-picture-viewer.exe"
+            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Release\\quick-picture-viewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"

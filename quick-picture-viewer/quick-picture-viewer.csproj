@@ -33,8 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>picture.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>quick_picture_viewer.Program</StartupObject>
@@ -65,6 +64,9 @@
   <ItemGroup>
     <Compile Include="CustomPanel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomUpdateDialog.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="InfoForm.cs">
       <SubType>Form</SubType>
