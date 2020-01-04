@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>picture.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>quick_picture_viewer.Program</StartupObject>
@@ -175,9 +176,11 @@
     <None Include="resources\imgs\light\white-about.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="picture.ico" />
     <None Include="resources\imgs\checkboard-dark.png" />
     <None Include="resources\imgs\checkboard-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="picture.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
