@@ -90,7 +90,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					UpdateDialog updateDialog = new UpdateDialog(checker, "Quick Picture Viewer");
+					UpdateForm updateDialog = new UpdateForm(checker, "Quick Picture Viewer");
 
 					if (alwaysOnTop)
 					{

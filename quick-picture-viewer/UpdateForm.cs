@@ -4,18 +4,22 @@ using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	public partial class UpdateDialog : Form
+	public partial class UpdateForm : Form
 	{
 		private readonly UpdateChecker _checker;
 		private bool _loadednotes;
 
-		public UpdateDialog(UpdateChecker checker, string appName)
+		public UpdateForm(UpdateChecker checker, string appName)
 		{
 			_checker = checker;
 
 			InitializeComponent();
 
+			this.Height = 179;
+
 			label1.Text = string.Format(label1.Text, appName);
+			currentLabel.Text = string.Format(currentLabel.Text, _checker.CurrentVersion);
+			latestLabel.Text = string.Format(latestLabel.Text, _checker.LatestRelease.TagName);
 
 			if (ThemeManager.isDarkTheme())
 			{
@@ -28,15 +32,18 @@ namespace quick_picture_viewer
 			}
 		}
 
-		void panel1_Resize(object sender, EventArgs e)
-		{
-			label1.Left = (panel1.ClientSize.Width - label1.Width) / 2;
-			label2.Left = (panel1.ClientSize.Width - label2.Width) / 2;
-		}
-
 		async void boxReleaseNotes_CheckedChanged(object sender, EventArgs e)
 		{
-			ReleaseNotesPanel.Visible = boxReleaseNotes.Checked;
+			if (boxReleaseNotes.Checked)
+			{
+				this.Height = 386;
+			}
+			else
+			{
+				this.Height = 179;
+			}
+
+			ReleaseNotes.Visible = boxReleaseNotes.Checked;
 
 			if (_loadednotes) return;
 
