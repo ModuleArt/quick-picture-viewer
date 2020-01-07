@@ -42,8 +42,8 @@
 			this.updatesLink = new System.Windows.Forms.LinkLabel();
 			this.issuesLink = new System.Windows.Forms.LinkLabel();
 			this.pagesGroup = new System.Windows.Forms.GroupBox();
-			this.licenseLabel = new System.Windows.Forms.Label();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
+			this.licenseLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.infoGroup.SuspendLayout();
 			this.pagesGroup.SuspendLayout();
@@ -86,9 +86,9 @@
 			this.companyLabel.Location = new System.Drawing.Point(6, 103);
 			this.companyLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.companyLabel.Name = "companyLabel";
-			this.companyLabel.Size = new System.Drawing.Size(83, 15);
+			this.companyLabel.Size = new System.Drawing.Size(127, 15);
 			this.companyLabel.TabIndex = 29;
-			this.companyLabel.Text = "by Module Art";
+			this.companyLabel.Text = "Created by Module Art";
 			// 
 			// authorLabel
 			// 
@@ -216,16 +216,6 @@
 			this.pagesGroup.TabStop = false;
 			this.pagesGroup.Text = "Links";
 			// 
-			// licenseLabel
-			// 
-			this.licenseLabel.AutoSize = true;
-			this.licenseLabel.Location = new System.Drawing.Point(15, 338);
-			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
-			this.licenseLabel.Name = "licenseLabel";
-			this.licenseLabel.Size = new System.Drawing.Size(93, 15);
-			this.licenseLabel.TabIndex = 37;
-			this.licenseLabel.Text = "License: GPL-3.0";
-			// 
 			// licenseLink
 			// 
 			this.licenseLink.AutoSize = true;
@@ -237,6 +227,16 @@
 			this.licenseLink.TabStop = true;
 			this.licenseLink.Text = "License";
 			this.licenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.licenseLink_LinkClicked);
+			// 
+			// licenseLabel
+			// 
+			this.licenseLabel.AutoSize = true;
+			this.licenseLabel.Location = new System.Drawing.Point(15, 338);
+			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.licenseLabel.Name = "licenseLabel";
+			this.licenseLabel.Size = new System.Drawing.Size(93, 15);
+			this.licenseLabel.TabIndex = 37;
+			this.licenseLabel.Text = "License: GPL-3.0";
 			// 
 			// AboutForm
 			// 

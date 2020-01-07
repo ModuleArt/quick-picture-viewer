@@ -122,8 +122,6 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				setImageChanged(false);
-
 				openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 
 				//RecentFilesManager.AddToRecentlyUsedDocs(path);
@@ -136,6 +134,31 @@ namespace quick_picture_viewer
 
 		private void openImage(Bitmap bitmap, string directoryName, string fileName)
 		{
+			if (imageChanged)
+			{
+				var window = MessageBox.Show(
+					"All unsaved data will be lost.\nAre you sure you want to open new image?",
+					"Warning",
+					MessageBoxButtons.YesNo,
+					MessageBoxIcon.Question
+				);
+
+				if (window == DialogResult.No)
+				{
+					return;
+				}
+			}
+
+			setImageChanged(false);
+
+			if (originalImage != null)
+			{
+				originalImage.Dispose();
+				originalImage = null;
+				pictureBox.Image.Dispose();
+				pictureBox.Image = null;
+			}
+
 			originalImage = bitmap;
 			pictureBox.Image = originalImage;
 
@@ -156,8 +179,8 @@ namespace quick_picture_viewer
 				externalButton.Enabled = false;
 				showFileButton.Enabled = false;
 
-				dateCreatedLabel.Text = "Created: Unknown";
-				dateModifiedLabel.Text = "Modified: Unknown";
+				dateCreatedLabel.Visible = false;
+				dateModifiedLabel.Visible = false;
 			}
 			else
 			{
@@ -175,7 +198,9 @@ namespace quick_picture_viewer
 				showFileButton.Enabled = true;
 
 				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
+				dateCreatedLabel.Visible = true;
 				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
+				dateModifiedLabel.Visible = true;
 			}
 
 			this.Text = fileName + " - Quick Picture Viewer";
@@ -669,6 +694,10 @@ namespace quick_picture_viewer
 					{
 						printButton.PerformClick();
 					}
+					//else if (e.KeyCode == Keys.N)
+					//{
+					//	Process.Start("quick-picture-viewer.exe");
+					//}
 				}
 			}
 			else if (e.Alt)
@@ -756,6 +785,8 @@ namespace quick_picture_viewer
 		private void screenshotButton_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+
+			System.Threading.Thread.Sleep(100);
 
 			Bitmap bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 			using (Graphics g = Graphics.FromImage(bmp))
@@ -928,8 +959,8 @@ namespace quick_picture_viewer
 			directoryLabel.Text = "Folder: Empty";
 			fileLabel.Text = "File: Empty";
 			sizeLabel.Text = "Size: 0 x 0 px";
-			dateCreatedLabel.Text = "Created: Unknown";
-			dateModifiedLabel.Text = "Modified: Unknown";
+			dateCreatedLabel.Visible = false;
+			dateModifiedLabel.Visible = false;
 
 			setZoomText("Auto");
 		}

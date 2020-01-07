@@ -64,7 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
+        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
+        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -212,11 +212,6 @@
             "AssemblyAsmDisplayName" = "8:Octokit, Version=0.3.4.0, Culture=neutral, PublicKeyToken=900b0742ac17b4b1, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_602081345A8B570EE42EFE35A1D60858"
-                    {
-                    "Name" = "8:Octokit.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Octokit.dll"
             "TargetName" = "8:"
@@ -243,11 +238,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_9E165066DD6307D67C7B835ACD3F2087"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -383,15 +373,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Quick Picture Viewer"
-        "ProductCode" = "8:{46C7F6A6-7BAF-4538-8662-784E1FF3A0D8}"
-        "PackageCode" = "8:{8B4925D4-9A8B-407A-B716-85899C2F4448}"
+        "ProductCode" = "8:{432B286B-4E58-49A9-B89B-F748B1EE934E}"
+        "PackageCode" = "8:{2F513D95-79EC-4399-A67D-D4A6844C5004}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.9.1"
+        "ProductVersion" = "8:1.9.2"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1837,7 +1827,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B597F9189B6419DBE3695587B370B9E"
             {
-            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Debug\\quick-picture-viewer.exe"
+            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Release\\quick-picture-viewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"

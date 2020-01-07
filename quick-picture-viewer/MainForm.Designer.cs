@@ -114,7 +114,6 @@
             this.zoomComboBox,
             this.zoomInButton,
             this.toolStripSeparator2,
-            this.aboutButton,
             this.rotateLeftButton,
             this.rotateRightButton,
             this.flipHorizontalButton,
@@ -129,7 +128,8 @@
             this.fullscreenButton,
             this.onTopButton,
             this.toolStripSeparator6,
-            this.setAsDesktopButton});
+            this.setAsDesktopButton,
+            this.aboutButton});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
@@ -568,9 +568,9 @@
             this.fileLabel,
             this.sizeLabel,
             this.zoomLabel,
+            this.hasChangesLabel,
             this.dateCreatedLabel,
-            this.dateModifiedLabel,
-            this.hasChangesLabel});
+            this.dateModifiedLabel});
 			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.statusStrip1.Location = new System.Drawing.Point(0, 467);
 			this.statusStrip1.Name = "statusStrip1";
@@ -586,6 +586,7 @@
 			this.dateCreatedLabel.Name = "dateCreatedLabel";
 			this.dateCreatedLabel.Size = new System.Drawing.Size(121, 16);
 			this.dateCreatedLabel.Text = "Created: Unknown";
+			this.dateCreatedLabel.Visible = false;
 			// 
 			// dateModifiedLabel
 			// 
@@ -595,6 +596,7 @@
 			this.dateModifiedLabel.Name = "dateModifiedLabel";
 			this.dateModifiedLabel.Size = new System.Drawing.Size(128, 16);
 			this.dateModifiedLabel.Text = "Modified: Unknown";
+			this.dateModifiedLabel.Visible = false;
 			// 
 			// hasChangesLabel
 			// 
