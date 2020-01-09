@@ -41,7 +41,8 @@
 <p align="center">
   How to <a href="https://www.onmsft.com/how-to/how-to-get-dark-theme-title-bars-in-windows-10-without-changing-your-accent-colour/">enable dark title bars</a> with custom accent color in Windows 10<br>
   <img src="/docs/darkmode.png"><br>
-  How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10
+  How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10<br>
+  <img src="/docs/uninstall-photos.png">
 </p>
 
 <h2 align="center">Inspirers</h2>
