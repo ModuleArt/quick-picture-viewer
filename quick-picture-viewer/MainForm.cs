@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -26,12 +27,31 @@ namespace quick_picture_viewer
 		private bool darkMode = false;
 		private bool checkboardBackground = false;
 
+		System.Timers.Timer zoomInTimer = new System.Timers.Timer();
+		System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
+
 		public bool printCenterImage = true;
 
 		public MainForm(string openPath)
 		{
 			InitializeComponent();
 			this.openPath = openPath;
+
+			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
+			zoomInTimer.Interval = 50;
+
+			zoomOutTimer.Elapsed += new ElapsedEventHandler(zoomOutTimer_Event);
+			zoomOutTimer.Interval = 50;
+		}
+
+		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
+		{
+			zoomIn();
+		}
+
+		private void zoomOutTimer_Event(Object source, ElapsedEventArgs e)
+		{
+			zoomOut();
 		}
 
 		private void openButton_Click_1(object sender, EventArgs e)
@@ -60,6 +80,8 @@ namespace quick_picture_viewer
 			toolStrip1.Renderer = new ToolStripOverride();
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
+
+			zoomComboBox.ComboBox.MouseWheel += new MouseEventHandler(zoomComboBox_MouseWheel);
 
 			darkMode = ThemeManager.isDarkTheme();
 			if(darkMode)
@@ -293,7 +315,7 @@ namespace quick_picture_viewer
 
 		private void setZoomText(string text)
 		{
-			zoomComboBox.Text = text;
+			zoomComboBox.ComboBox.Invoke((MethodInvoker)(() => zoomComboBox.Text = text));
 		}
 
 		private void setAutoZoom(bool b)
@@ -522,6 +544,11 @@ namespace quick_picture_viewer
 					picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
 				}
 			}
+		}
+
+		private void zoomComboBox_MouseWheel(object sender, MouseEventArgs e)
+		{
+			((HandledMouseEventArgs)e).Handled = true;
 		}
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
@@ -1008,6 +1035,8 @@ namespace quick_picture_viewer
 
 		private void applyDarkTheme()
 		{
+			ThemeManager.setDarkModeToControl(picturePanel.Handle);
+
 			this.ForeColor = Color.White;
 			this.BackColor = ThemeManager.BackColorDark;
 			toolStrip1.BackColor = ThemeManager.MainColorDark;
@@ -1161,6 +1190,26 @@ namespace quick_picture_viewer
 		private void checkboardButton_Click(object sender, EventArgs e)
 		{
 			setCheckboardBackground(!checkboardBackground, true);
+		}
+
+		private void zoomInButton_MouseDown(object sender, MouseEventArgs e)
+		{
+			zoomInTimer.Start();
+		}
+
+		private void zoomOutButton_MouseDown(object sender, MouseEventArgs e)
+		{
+			zoomOutTimer.Start();
+		}
+
+		private void zoomOutButton_MouseUp(object sender, EventArgs e)
+		{
+			zoomOutTimer.Stop();
+		}
+
+		private void zoomInButton_MouseUp(object sender, EventArgs e)
+		{
+			zoomInTimer.Stop();
 		}
 	}
 }

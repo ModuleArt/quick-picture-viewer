@@ -1,14 +1,24 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace quick_picture_viewer
 {
 	class ThemeManager
 	{
-		public static Color MainColorDark = Color.Black;
-		public static Color BackColorDark = Color.FromArgb(32, 32, 32);
-		public static Color SecondColorDark = Color.FromArgb(51, 51, 51);
+		public static Color MainColorDark = Color.FromArgb(23, 23, 23);
+		public static Color BackColorDark = Color.FromArgb(37, 37, 37);
+		public static Color SecondColorDark = Color.FromArgb(56, 56, 56);
 		public static Color AccentColorDark = Color.FromArgb(73, 169, 207);
+
+		[DllImport("uxtheme.dll", SetLastError = true, ExactSpelling = true, CharSet = CharSet.Unicode)]
+		private static extern int SetWindowTheme(IntPtr hWnd, string pszSubAppName, string pszSubIdList);
+
+		public static void setDarkModeToControl(IntPtr handle)
+		{
+			SetWindowTheme(handle, "DarkMode_Explorer", null);
+		}
 
 		public static bool isDarkTheme()
 		{

@@ -47,7 +47,6 @@
 			this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
 			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.aboutButton = new System.Windows.Forms.ToolStripButton();
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripButton();
 			this.rotateRightButton = new System.Windows.Forms.ToolStripButton();
 			this.flipHorizontalButton = new System.Windows.Forms.ToolStripButton();
@@ -63,15 +62,16 @@
 			this.onTopButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.setAsDesktopButton = new System.Windows.Forms.ToolStripButton();
+			this.aboutButton = new System.Windows.Forms.ToolStripButton();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.fileLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.sizeLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.zoomLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.hasChangesLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateCreatedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.hasChangesLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
@@ -285,13 +285,16 @@
 			this.zoomOutButton.Size = new System.Drawing.Size(24, 25);
 			this.zoomOutButton.Text = "Zoom out | Ctrl + Minus";
 			this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
+			this.zoomOutButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.zoomOutButton_MouseDown);
+			this.zoomOutButton.MouseLeave += new System.EventHandler(this.zoomOutButton_MouseUp);
+			this.zoomOutButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.zoomOutButton_MouseUp);
 			// 
 			// zoomComboBox
 			// 
 			this.zoomComboBox.AutoSize = false;
 			this.zoomComboBox.DropDownWidth = 75;
 			this.zoomComboBox.Enabled = false;
-			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.zoomComboBox.Items.AddRange(new object[] {
             "Auto",
             "5%",
@@ -302,11 +305,15 @@
             "100%",
             "125%",
             "150%",
+            "175%",
             "200%",
             "250%",
+            "300%",
+            "400%",
             "500%"});
 			this.zoomComboBox.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.zoomComboBox.Name = "zoomComboBox";
+			this.zoomComboBox.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
 			this.zoomComboBox.Size = new System.Drawing.Size(55, 23);
 			this.zoomComboBox.ToolTipText = "Zoom";
 			this.zoomComboBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
@@ -323,6 +330,9 @@
 			this.zoomInButton.Size = new System.Drawing.Size(24, 25);
 			this.zoomInButton.Text = "Zoom in | Ctrl + =";
 			this.zoomInButton.Click += new System.EventHandler(this.zoomInButton_Click);
+			this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.zoomInButton_MouseDown);
+			this.zoomInButton.MouseLeave += new System.EventHandler(this.zoomInButton_MouseUp);
+			this.zoomInButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.zoomInButton_MouseUp);
 			// 
 			// toolStripSeparator2
 			// 
@@ -330,19 +340,6 @@
 			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 16);
-			// 
-			// aboutButton
-			// 
-			this.aboutButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-			this.aboutButton.AutoSize = false;
-			this.aboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.aboutButton.Image = ((System.Drawing.Image)(resources.GetObject("aboutButton.Image")));
-			this.aboutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.aboutButton.Margin = new System.Windows.Forms.Padding(0);
-			this.aboutButton.Name = "aboutButton";
-			this.aboutButton.Size = new System.Drawing.Size(24, 25);
-			this.aboutButton.Text = "About | F1";
-			this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
 			// 
 			// rotateLeftButton
 			// 
@@ -518,6 +515,19 @@
 			this.setAsDesktopButton.Text = "Set as desktop background | Ctrl + B";
 			this.setAsDesktopButton.Click += new System.EventHandler(this.setAsDesktopButton_Click);
 			// 
+			// aboutButton
+			// 
+			this.aboutButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			this.aboutButton.AutoSize = false;
+			this.aboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.aboutButton.Image = ((System.Drawing.Image)(resources.GetObject("aboutButton.Image")));
+			this.aboutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.aboutButton.Margin = new System.Windows.Forms.Padding(0);
+			this.aboutButton.Name = "aboutButton";
+			this.aboutButton.Size = new System.Drawing.Size(24, 25);
+			this.aboutButton.Text = "About | F1";
+			this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+			// 
 			// saveFileDialog1
 			// 
 			this.saveFileDialog1.FileName = "image";
@@ -578,6 +588,16 @@
 			this.statusStrip1.TabIndex = 15;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
+			// hasChangesLabel
+			// 
+			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
+			this.hasChangesLabel.Image = ((System.Drawing.Image)(resources.GetObject("hasChangesLabel.Image")));
+			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.hasChangesLabel.Name = "hasChangesLabel";
+			this.hasChangesLabel.Size = new System.Drawing.Size(76, 16);
+			this.hasChangesLabel.Text = "Not saved";
+			this.hasChangesLabel.Visible = false;
+			// 
 			// dateCreatedLabel
 			// 
 			this.dateCreatedLabel.BackColor = System.Drawing.Color.Transparent;
@@ -597,16 +617,6 @@
 			this.dateModifiedLabel.Size = new System.Drawing.Size(128, 16);
 			this.dateModifiedLabel.Text = "Modified: Unknown";
 			this.dateModifiedLabel.Visible = false;
-			// 
-			// hasChangesLabel
-			// 
-			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
-			this.hasChangesLabel.Image = ((System.Drawing.Image)(resources.GetObject("hasChangesLabel.Image")));
-			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.hasChangesLabel.Name = "hasChangesLabel";
-			this.hasChangesLabel.Size = new System.Drawing.Size(76, 16);
-			this.hasChangesLabel.Text = "Not saved";
-			this.hasChangesLabel.Visible = false;
 			// 
 			// printDialog1
 			// 
