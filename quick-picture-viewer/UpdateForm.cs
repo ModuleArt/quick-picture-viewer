@@ -23,6 +23,8 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isDarkTheme())
 			{
+				ThemeManager.enableDarkTitlebar(this.Handle);
+
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
@@ -49,6 +51,14 @@ namespace quick_picture_viewer
 
 			ReleaseNotes.DocumentText = await _checker.RenderReleaseNotes();
 			_loadednotes = true;
+		}
+
+		private void UpdateForm_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Escape)
+			{
+				this.Close();
+			}
 		}
 	}
 }

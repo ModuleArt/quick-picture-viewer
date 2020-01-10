@@ -16,6 +16,8 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isDarkTheme())
 			{
+				ThemeManager.enableDarkTitlebar(this.Handle);
+
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 

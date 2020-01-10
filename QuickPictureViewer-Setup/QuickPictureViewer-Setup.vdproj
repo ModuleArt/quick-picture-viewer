@@ -64,7 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
+        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
+        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -373,15 +373,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Quick Picture Viewer"
-        "ProductCode" = "8:{B3810BBD-C0B6-4EDE-A5D1-51D5475AE8B9}"
-        "PackageCode" = "8:{E00F1FBA-67B4-4B17-8A56-5BE69C24CCBB}"
+        "ProductCode" = "8:{B2FA8817-26BA-4186-8202-EBD9C5CDAA99}"
+        "PackageCode" = "8:{4BE7925D-0139-4943-8C39-4527037F1F29}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.9.3"
+        "ProductVersion" = "8:1.9.4"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

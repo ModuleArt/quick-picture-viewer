@@ -84,7 +84,7 @@ namespace quick_picture_viewer
 			zoomComboBox.ComboBox.MouseWheel += new MouseEventHandler(zoomComboBox_MouseWheel);
 
 			darkMode = ThemeManager.isDarkTheme();
-			if(darkMode)
+			if (darkMode)
 			{
 				applyDarkTheme();
 			}
@@ -1035,6 +1035,8 @@ namespace quick_picture_viewer
 
 		private void applyDarkTheme()
 		{
+			ThemeManager.enableDarkTitlebar(this.Handle);
+
 			ThemeManager.setDarkModeToControl(picturePanel.Handle);
 
 			this.ForeColor = Color.White;

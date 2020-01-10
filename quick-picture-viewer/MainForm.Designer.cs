@@ -95,7 +95,7 @@
 			// 
 			// toolStrip1
 			// 
-			this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+			this.toolStrip1.BackColor = System.Drawing.Color.White;
 			this.toolStrip1.CanOverflow = false;
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -207,9 +207,9 @@
 			// toolStripSeparator4
 			// 
 			this.toolStripSeparator4.AutoSize = false;
-			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
 			this.toolStripSeparator4.Name = "toolStripSeparator4";
-			this.toolStripSeparator4.Size = new System.Drawing.Size(6, 16);
+			this.toolStripSeparator4.Size = new System.Drawing.Size(2, 16);
 			// 
 			// prevButton
 			// 
@@ -254,9 +254,9 @@
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.AutoSize = false;
-			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 16);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(2, 16);
 			// 
 			// autoZoomButton
 			// 
@@ -337,9 +337,9 @@
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.AutoSize = false;
-			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 16);
+			this.toolStripSeparator2.Size = new System.Drawing.Size(2, 16);
 			// 
 			// rotateLeftButton
 			// 
@@ -398,7 +398,7 @@
 			this.toolStripSeparator3.AutoSize = false;
 			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(6, 16);
+			this.toolStripSeparator3.Size = new System.Drawing.Size(2, 16);
 			// 
 			// screenshotButton
 			// 
@@ -454,9 +454,9 @@
 			// toolStripSeparator5
 			// 
 			this.toolStripSeparator5.AutoSize = false;
-			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			this.toolStripSeparator5.Size = new System.Drawing.Size(6, 16);
+			this.toolStripSeparator5.Size = new System.Drawing.Size(2, 16);
 			// 
 			// checkboardButton
 			// 
@@ -498,9 +498,9 @@
 			// toolStripSeparator6
 			// 
 			this.toolStripSeparator6.AutoSize = false;
-			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
 			this.toolStripSeparator6.Name = "toolStripSeparator6";
-			this.toolStripSeparator6.Size = new System.Drawing.Size(6, 16);
+			this.toolStripSeparator6.Size = new System.Drawing.Size(2, 16);
 			// 
 			// setAsDesktopButton
 			// 
@@ -573,6 +573,7 @@
 			// 
 			// statusStrip1
 			// 
+			this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.directoryLabel,
             this.fileLabel,
@@ -671,7 +672,7 @@
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(768, 493);
 			this.Controls.Add(this.picturePanel);
 			this.Controls.Add(this.toolStrip1);
