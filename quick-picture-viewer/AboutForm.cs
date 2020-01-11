@@ -11,13 +11,14 @@ namespace quick_picture_viewer
 		public AboutForm()
 		{
 			InitializeComponent();
+		}
 
+		private void AboutForm_Load(object sender, EventArgs e)
+		{
 			versionLabel.Text = String.Format("Version: {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString().Substring(0, 5));
 
 			if (ThemeManager.isDarkTheme())
 			{
-				ThemeManager.enableDarkTitlebar(this.Handle);
-
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
@@ -34,6 +35,8 @@ namespace quick_picture_viewer
 				licenseLink.LinkColor = linkColor;
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
+
+				ThemeManager.enableDarkTitlebar(this.Handle, true);
 			}
 		}
 

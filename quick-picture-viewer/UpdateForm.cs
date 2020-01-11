@@ -23,8 +23,6 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isDarkTheme())
 			{
-				ThemeManager.enableDarkTitlebar(this.Handle);
-
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
@@ -32,6 +30,8 @@ namespace quick_picture_viewer
 				buttonNo.BackColor = ThemeManager.SecondColorDark;
 				boxReleaseNotes.BackColor = ThemeManager.SecondColorDark;
 			}
+
+			ThemeManager.enableDarkTitlebar(this.Handle, true);
 		}
 
 		async void boxReleaseNotes_CheckedChanged(object sender, EventArgs e)

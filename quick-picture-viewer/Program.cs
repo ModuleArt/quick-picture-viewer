@@ -13,17 +13,21 @@ namespace quick_picture_viewer
 				SetProcessDPIAware(); 
 			}
 
+			ThemeManager.allowDarkModeForApp(true);
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
+			string param;
 			if(args.Length > 0)
 			{
-				Application.Run(new MainForm(args[0]));
+				param = args[0];
 			}
 			else
 			{
-				Application.Run(new MainForm(string.Empty));
+				param = string.Empty;
 			}
+			Application.Run(new MainForm(param));
 		}
 
 		[System.Runtime.InteropServices.DllImport("user32.dll")]

@@ -64,7 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
+        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
+        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -373,15 +373,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Quick Picture Viewer"
-        "ProductCode" = "8:{B2FA8817-26BA-4186-8202-EBD9C5CDAA99}"
-        "PackageCode" = "8:{4BE7925D-0139-4943-8C39-4527037F1F29}"
+        "ProductCode" = "8:{19C61DD7-1087-4392-863E-FAD2AA7B6A13}"
+        "PackageCode" = "8:{959BC8F3-0719-4893-AA01-A29F1C3B2554}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.9.4"
+        "ProductVersion" = "8:1.9.5"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -389,7 +389,7 @@
         "Subject" = "8:"
         "ARPCONTACT" = "8:Module Art"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:Lightweight picture viewer for Windows"
+        "ARPCOMMENTS" = "8:Lightweight desktop photo viewer for Windows"
         "ARPURLINFOABOUT" = "8:https://moduleart.github.io"
         "ARPPRODUCTICON" = "8:_C3E94029681345CDB595943F27D860BD"
         "ARPIconIndex" = "3:0"
@@ -1827,7 +1827,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B597F9189B6419DBE3695587B370B9E"
             {
-            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Debug\\quick-picture-viewer.exe"
+            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Release\\quick-picture-viewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"

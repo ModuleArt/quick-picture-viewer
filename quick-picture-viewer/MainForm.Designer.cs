@@ -75,6 +75,7 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
@@ -297,24 +298,34 @@
 			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.zoomComboBox.Items.AddRange(new object[] {
             "Auto",
+            "2%",
+            "3%",
+            "4%",
             "5%",
+            "6%",
+            "7%",
+            "8%",
             "10%",
+            "13%",
+            "17%",
+            "20%",
             "25%",
+            "33%",
             "50%",
-            "75%",
+            "67%",
             "100%",
-            "125%",
             "150%",
-            "175%",
             "200%",
-            "250%",
             "300%",
             "400%",
-            "500%"});
+            "500%",
+            "600%",
+            "800%",
+            "1000%"});
 			this.zoomComboBox.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.zoomComboBox.Name = "zoomComboBox";
 			this.zoomComboBox.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-			this.zoomComboBox.Size = new System.Drawing.Size(55, 23);
+			this.zoomComboBox.Size = new System.Drawing.Size(60, 23);
 			this.zoomComboBox.ToolTipText = "Zoom";
 			this.zoomComboBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
@@ -638,6 +649,7 @@
 			this.picturePanel.AutoScroll = true;
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.Controls.Add(this.suggestionLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 35);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
@@ -648,7 +660,22 @@
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			this.picturePanel.Resize += new System.EventHandler(this.MainForm_SizeChanged);
+			// 
+			// suggestionLabel
+			// 
+			this.suggestionLabel.AutoSize = true;
+			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
+			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
+			this.suggestionLabel.Location = new System.Drawing.Point(9, 9);
+			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(9);
+			this.suggestionLabel.Name = "suggestionLabel";
+			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(3);
+			this.suggestionLabel.Size = new System.Drawing.Size(72, 21);
+			this.suggestionLabel.TabIndex = 1;
+			this.suggestionLabel.Text = "Suggestion";
+			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.suggestionLabel.Visible = false;
 			// 
 			// pictureBox
 			// 
@@ -688,12 +715,14 @@
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
+			this.Resize += new System.EventHandler(this.MainForm_Resize);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			this.picturePanel.ResumeLayout(false);
+			this.picturePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -749,6 +778,7 @@
 		private System.Windows.Forms.ToolStripButton showFileButton;
 		private System.Windows.Forms.ToolStripButton checkboardButton;
 		private System.Windows.Forms.ToolStripButton saveAsButton;
+		private System.Windows.Forms.Label suggestionLabel;
 	}
 }
 

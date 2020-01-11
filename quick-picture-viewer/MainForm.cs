@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -27,8 +28,10 @@ namespace quick_picture_viewer
 		private bool darkMode = false;
 		private bool checkboardBackground = false;
 
-		System.Timers.Timer zoomInTimer = new System.Timers.Timer();
-		System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
+		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
+		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
+
+		private Task suggestionTask = null;
 
 		public bool printCenterImage = true;
 
@@ -38,10 +41,10 @@ namespace quick_picture_viewer
 			this.openPath = openPath;
 
 			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
-			zoomInTimer.Interval = 50;
+			zoomInTimer.Interval = 100;
 
 			zoomOutTimer.Elapsed += new ElapsedEventHandler(zoomOutTimer_Event);
-			zoomOutTimer.Interval = 50;
+			zoomOutTimer.Interval = 100;
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -64,17 +67,24 @@ namespace quick_picture_viewer
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
-			if(!string.IsNullOrEmpty(openPath))
+			try
 			{
-				if(File.GetAttributes(openPath).HasFlag(FileAttributes.Directory))
+				if (!string.IsNullOrEmpty(openPath))
 				{
-					currentFolder = openPath;
-					openFirstFileInFolder();
+					if (File.GetAttributes(openPath).HasFlag(FileAttributes.Directory))
+					{
+						currentFolder = openPath;
+						openFirstFileInFolder();
+					}
+					else
+					{
+						openFile(openPath);
+					}
 				}
-				else
-				{
-					openFile(openPath);
-				}
+			}
+			catch
+			{
+				MessageBox.Show("Unable to open this file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 			toolStrip1.Renderer = new ToolStripOverride();
@@ -271,6 +281,21 @@ namespace quick_picture_viewer
 			setZoomText((zoomFactor - 5).ToString() + "%");
 		}
 
+		private void zoomToFit()
+		{
+			double zoomFactorX = picturePanel.Width / (double) originalImage.Width;
+			double zoomFactorY = picturePanel.Height / (double)originalImage.Height;
+
+			if (zoomFactorX > zoomFactorY)
+			{
+				zoomFactor = Convert.ToInt32(zoomFactorY * 100);
+			}
+			else
+			{
+				zoomFactor = Convert.ToInt32(zoomFactorX * 100);
+			}
+		}
+
 		private void setZoomFactor(int newZoomFactor)
 		{
 			zoomFactor = newZoomFactor;
@@ -340,7 +365,8 @@ namespace quick_picture_viewer
 		{
 			if (zoomComboBox.Text == "Auto")
 			{
-				setZoomText("100%");
+				zoomToFit();
+				setZoomText(zoomFactor + "%");
 			}
 			else
 			{
@@ -386,16 +412,16 @@ namespace quick_picture_viewer
 			{
 				if (darkMode)
 				{
-					pictureBox.BackgroundImage = Properties.Resources.checkboard_dark;
+					picturePanel.BackgroundImage = Properties.Resources.checkboard_dark;
 				}
 				else
 				{
-					pictureBox.BackgroundImage = Properties.Resources.checkboard_light;
+					picturePanel.BackgroundImage = Properties.Resources.checkboard_light;
 				}
 			}
 			else
 			{
-				pictureBox.BackgroundImage = null;
+				picturePanel.BackgroundImage = null;
 			}
 
 			if (saveToDisk)
@@ -471,6 +497,7 @@ namespace quick_picture_viewer
 		private void copyButton_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetImage(originalImage);
+			showSuggestion("Image is copied to clipboard");
 		}
 
 		private void pasteButton_Click(object sender, EventArgs e)
@@ -590,6 +617,8 @@ namespace quick_picture_viewer
 				picturePanel.BackColor = Color.Black;
 
 				setAlwaysOnTop(false, true);
+
+				showSuggestion("Press Esc / F / Alt + Enter / F11 to exit fullscreen mode");
 			}
 			else
 			{
@@ -607,7 +636,7 @@ namespace quick_picture_viewer
 			{
 				if (zoomComboBox.Text == "Auto")
 				{
-					setZoomFactor(100);
+					zoomToFit();
 					setAutoZoom(true);
 				}
 				else
@@ -615,16 +644,16 @@ namespace quick_picture_viewer
 					string substr = zoomComboBox.Text.Replace("%", "");
 					int zoom = int.Parse(substr);
 
-					if (zoom < 5)
+					if (zoom < 2)
 					{
-						zoom = 5;
+						zoom = 2;
 						setZoomText(zoom.ToString() + "%");
 					}
 					else
 					{
-						if (zoom > 500)
+						if (zoom > 1000)
 						{
-							zoom = 500;
+							zoom = 1000;
 							setZoomText(zoom.ToString() + "%");
 						}
 						else
@@ -1035,8 +1064,6 @@ namespace quick_picture_viewer
 
 		private void applyDarkTheme()
 		{
-			ThemeManager.enableDarkTitlebar(this.Handle);
-
 			ThemeManager.setDarkModeToControl(picturePanel.Handle);
 
 			this.ForeColor = Color.White;
@@ -1083,14 +1110,8 @@ namespace quick_picture_viewer
 			dateCreatedLabel.Image = Properties.Resources.white_clock;
 			dateModifiedLabel.Image = Properties.Resources.white_history;
 			hasChangesLabel.Image = Properties.Resources.white_erase;
-		}
 
-		private void MainForm_SizeChanged(object sender, EventArgs e)
-		{
-			if(!autoZoom)
-			{
-				updatePictureBoxLocation();
-			}
+			ThemeManager.enableDarkTitlebar(this.Handle, true);
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
@@ -1212,6 +1233,37 @@ namespace quick_picture_viewer
 		private void zoomInButton_MouseUp(object sender, EventArgs e)
 		{
 			zoomInTimer.Stop();
+		}
+
+		private void MainForm_Resize(object sender, EventArgs e)
+		{
+			if (!autoZoom)
+			{
+				updatePictureBoxLocation();
+			}
+		}
+
+		private void showSuggestion(string text)
+		{
+			if (suggestionTask == null)
+			{
+				suggestionLabel.Text = text;
+				suggestionLabel.Visible = true;
+				suggestionTask = hideSuggestion();
+			}
+			else
+			{
+				suggestionLabel.Text = text;
+				suggestionTask = hideSuggestion();
+			}
+		}
+
+		private async Task hideSuggestion()
+		{
+			await Task.Delay(3000);
+			suggestionLabel.Text = "";
+			suggestionLabel.Visible = false;
+			suggestionTask = null;
 		}
 	}
 }

@@ -15,8 +15,6 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isDarkTheme())
 			{
-				ThemeManager.enableDarkTitlebar(this.Handle);
-
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
@@ -64,6 +62,8 @@ namespace quick_picture_viewer
 
 				modifiedTextBox.BackColor = ThemeManager.SecondColorDark;
 				modifiedTextBox.ForeColor = Color.White;
+
+				ThemeManager.enableDarkTitlebar(this.Handle, true);
 			}
 
 			if (directoryName != null)

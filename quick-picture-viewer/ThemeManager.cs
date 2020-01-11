@@ -61,13 +61,18 @@ namespace quick_picture_viewer
 		private static extern bool AllowDarkModeForApp(bool allow);
 
 		[DllImport("user32.dll")]
-		private static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttribData data);
+		private static extern bool SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttribData data);
 
-		public static void enableDarkTitlebar(IntPtr handle)
+		[DllImport("user32.dll")]
+		private static extern bool UpdateWindow(IntPtr hWnd);
+
+		public static void allowDarkModeForApp(bool dark)
 		{
-			bool dark = true;
-
 			AllowDarkModeForApp(dark);
+		}
+
+		public static void enableDarkTitlebar(IntPtr handle, bool dark)
+		{
 			AllowDarkModeForWindow(handle, dark);
 
 			var sizeOfData = Marshal.SizeOf(dark);
@@ -78,9 +83,10 @@ namespace quick_picture_viewer
 				Attribute = WindowCompositionAttribute.WCA_USEDARKMODECOLORS,
 				Data = dataPtr,
 				SizeOfData = sizeOfData
-
 			};
 			SetWindowCompositionAttribute(handle, ref data);
+
+			UpdateWindow(handle);
 		}
 
 		public static void setDarkModeToControl(IntPtr handle)
@@ -128,7 +134,8 @@ namespace quick_picture_viewer
 			if (isWindows10())
 			{
 				string root = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\DWM";
-				string colorcode = Registry.GetValue(root, "AccentColor", null).ToString();
+				string colorcode = Convert.ToString(Registry.GetValue(root, "AccentColor", null));
+				Console.WriteLine(colorcode);
 				int colorInt = Math.Abs(Convert.ToInt32(colorcode));
 				return Color.FromArgb(colorInt);
 			}

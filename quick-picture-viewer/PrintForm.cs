@@ -11,10 +11,15 @@ namespace quick_picture_viewer
 		{
 			InitializeComponent();
 
+			leftMarginTextBox.Text = pd.DefaultPageSettings.Margins.Left.ToString();
+			topMarginTextBox.Text = pd.DefaultPageSettings.Margins.Top.ToString();
+			rightMarginTextBox.Text = pd.DefaultPageSettings.Margins.Right.ToString();
+			bottomMarginTextBox.Text = pd.DefaultPageSettings.Margins.Bottom.ToString();
+
+			printPreviewControl1.Document = pd;
+
 			if (ThemeManager.isDarkTheme())
 			{
-				ThemeManager.enableDarkTitlebar(this.Handle);
-
 				ThemeManager.setDarkModeToControl(printPreviewControl1.Handle);
 
 				this.BackColor = ThemeManager.BackColorDark;
@@ -43,14 +48,9 @@ namespace quick_picture_viewer
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 				okButton.Image = Properties.Resources.white_print;
+
+				ThemeManager.enableDarkTitlebar(this.Handle, true);
 			}
-
-			leftMarginTextBox.Text = pd.DefaultPageSettings.Margins.Left.ToString();
-			topMarginTextBox.Text = pd.DefaultPageSettings.Margins.Top.ToString();
-			rightMarginTextBox.Text = pd.DefaultPageSettings.Margins.Right.ToString();
-			bottomMarginTextBox.Text = pd.DefaultPageSettings.Margins.Bottom.ToString();
-
-			printPreviewControl1.Document = pd;
 		}
 
 		private void marginsCheckBox_CheckedChanged(object sender, EventArgs e)

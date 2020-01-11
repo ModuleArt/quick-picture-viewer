@@ -15,8 +15,6 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isDarkTheme())
 			{
-				ThemeManager.enableDarkTitlebar(this.Handle);
-
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
@@ -25,6 +23,8 @@ namespace quick_picture_viewer
 				okButton.BackColor = ThemeManager.SecondColorDark;
 				okButton.Image = Properties.Resources.white_desktop;
 			}
+
+			ThemeManager.enableDarkTitlebar(this.Handle, true);
 		}
 
 		private void okButton_Click(object sender, EventArgs e)
