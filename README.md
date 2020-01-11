@@ -22,7 +22,7 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows 7, 8.1, 10  |  Size: 1.1 MB  | v1.9.5 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.9.5/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows 7, 8.1, 10  |  Size: 1 MB  | v1.9.5 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.9.5/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a>
 </p>
 
@@ -39,8 +39,8 @@
 
 <h2 align="center">Additional</h2>
 <p align="center">
-  How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10:<br><br>
-  <img src="/docs/uninstall-photos.png">
+  How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10:<br>
+  <b>Powershell (Admin) ></b>   Get-AppxPackage *photos* | Remove-AppxPackage
 </p>
 
 <h2 align="center">Inspirers</h2>
