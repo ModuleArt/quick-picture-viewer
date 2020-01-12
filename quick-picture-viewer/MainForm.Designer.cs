@@ -658,6 +658,7 @@
 			this.picturePanel.TabIndex = 2;
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 

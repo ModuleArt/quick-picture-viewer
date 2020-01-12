@@ -155,8 +155,6 @@ namespace quick_picture_viewer
 			try
 			{
 				openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
-
-				//RecentFilesManager.AddToRecentlyUsedDocs(path);
 			}
 			catch
 			{
@@ -273,11 +271,19 @@ namespace quick_picture_viewer
 
 		private void zoomIn()
 		{
+			if (autoZoom)
+			{
+				zoomToFit();
+			}
 			setZoomText((zoomFactor + 5).ToString() + "%");
 		}
 
 		private void zoomOut()
 		{
+			if (autoZoom)
+			{
+				zoomToFit();
+			}
 			setZoomText((zoomFactor - 5).ToString() + "%");
 		}
 
@@ -618,7 +624,7 @@ namespace quick_picture_viewer
 
 				setAlwaysOnTop(false, true);
 
-				showSuggestion("Press Esc / F / Alt + Enter / F11 to exit fullscreen mode");
+				showSuggestion("Press Esc to exit fullscreen mode");
 			}
 			else
 			{
@@ -636,7 +642,6 @@ namespace quick_picture_viewer
 			{
 				if (zoomComboBox.Text == "Auto")
 				{
-					zoomToFit();
 					setAutoZoom(true);
 				}
 				else
@@ -750,10 +755,10 @@ namespace quick_picture_viewer
 					{
 						printButton.PerformClick();
 					}
-					//else if (e.KeyCode == Keys.N)
-					//{
-					//	Process.Start("quick-picture-viewer.exe");
-					//}
+					else if (e.KeyCode == Keys.N)
+					{
+						Process.Start("quick-picture-viewer.exe");
+					}
 				}
 			}
 			else if (e.Alt)
@@ -842,7 +847,7 @@ namespace quick_picture_viewer
 		{
 			this.Hide();
 
-			System.Threading.Thread.Sleep(100);
+			System.Threading.Thread.Sleep(250);
 
 			Bitmap bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 			using (Graphics g = Graphics.FromImage(bmp))
@@ -1264,6 +1269,11 @@ namespace quick_picture_viewer
 			suggestionLabel.Text = "";
 			suggestionLabel.Visible = false;
 			suggestionTask = null;
+		}
+
+		private void picturePanel_MouseEnter(object sender, EventArgs e)
+		{
+			picturePanel.Focus();
 		}
 	}
 }

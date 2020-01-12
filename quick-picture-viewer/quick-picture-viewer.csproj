@@ -98,7 +98,6 @@
     <Compile Include="InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecentFilesManager.cs" />
     <Compile Include="ShellManager.cs" />
     <Compile Include="ThemeManager.cs" />
     <Compile Include="ToolStripOverride.cs" />
