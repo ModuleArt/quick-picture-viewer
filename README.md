@@ -50,5 +50,5 @@
 
 <h2 align="center">Other "Quick" apps</h2>
 <p align="center">
-  <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - A color picker and color editor utility to get and save colors code
+  <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows
 </p>
