@@ -652,7 +652,7 @@ Also add information on how to contact you by electronic and paper mail.
   If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
-    Quick Picture Viewer  Copyright (C) 2019 Module Art (module.art.team@gmail.com)
+    Quick Picture Viewer  Copyright (C) 2020 Module Art (module.art.team@gmail.com)
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type `show c' for details.
