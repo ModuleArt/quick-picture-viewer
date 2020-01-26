@@ -35,16 +35,33 @@ namespace quick_picture_viewer
 
 		public bool printCenterImage = true;
 
-		public MainForm(string openPath)
+		public MainForm(string openPath, bool darkMode)
 		{
-			InitializeComponent();
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
+
+			}
+			this.darkMode = darkMode;
 			this.openPath = openPath;
+
+			InitializeComponent();
 
 			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
 			zoomInTimer.Interval = 100;
 
 			zoomOutTimer.Elapsed += new ElapsedEventHandler(zoomOutTimer_Event);
 			zoomOutTimer.Interval = 100;
+
+			toolStrip1.Renderer = new ToolStripOverride();
+			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
+			zoomComboBox.ComboBox.MouseWheel += new MouseEventHandler(zoomComboBox_MouseWheel);
+
+			if (darkMode)
+			{
+				applyDarkTheme();
+			}
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -87,18 +104,6 @@ namespace quick_picture_viewer
 				MessageBox.Show("Unable to open this file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
-			toolStrip1.Renderer = new ToolStripOverride();
-
-			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
-
-			zoomComboBox.ComboBox.MouseWheel += new MouseEventHandler(zoomComboBox_MouseWheel);
-
-			darkMode = ThemeManager.isDarkTheme();
-			if (darkMode)
-			{
-				applyDarkTheme();
-			}
-
 			checkForUpdates(false);
 
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
@@ -122,7 +127,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					UpdateForm updateDialog = new UpdateForm(checker, "Quick Picture Viewer");
+					UpdateForm updateDialog = new UpdateForm(checker, "Quick Picture Viewer", darkMode);
 
 					if (alwaysOnTop)
 					{
@@ -154,11 +159,23 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
+				if (Path.GetExtension(path) == ".webp")
+				{
+					byte[] rawWebP = File.ReadAllBytes(path);
+					using (WebP webp = new WebP())
+					{
+						openImage(webp.Decode(rawWebP), Path.GetDirectoryName(path), Path.GetFileName(path));
+					}
+				} 
+				else
+				{
+					openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
+				}
 			}
-			catch
+			catch (Exception ex)
 			{
 				MessageBox.Show("Unable to open this file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Console.WriteLine(ex);
 			}
 		}
 
@@ -493,6 +510,13 @@ namespace quick_picture_viewer
 						break;
 					case 6:
 						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Icon);
+						break;
+					case 7:
+						using (WebP webp = new WebP())
+						{
+							byte[] rawWebP = webp.EncodeLossy(originalImage);
+							fs.Write(rawWebP, 0, rawWebP.Length);
+						}
 						break;
 				}
 				fs.Close();
@@ -865,7 +889,7 @@ namespace quick_picture_viewer
 		{
 			string[] filePaths = getCurrentFiles();
 
-			int currentIndex = 0;
+			int currentIndex = -1;
 			for (int i = 0; i < filePaths.Length; i++)
 			{
 				if (filePaths[i] == Path.Combine(currentFolder, currentFile))
@@ -875,16 +899,24 @@ namespace quick_picture_viewer
 				}
 			}
 
-			if (currentIndex == filePaths.Length - 1)
+			if (currentIndex == -1)
 			{
-				openFile(filePaths[0]);
+				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return 0;
 			}
 			else
 			{
-				openFile(filePaths[currentIndex + 1]);
-			}
+				if (currentIndex == filePaths.Length - 1)
+				{
+					openFile(filePaths[0]);
+				}
+				else
+				{
+					openFile(filePaths[currentIndex + 1]);
+				}
 
-			return filePaths.Length;
+				return filePaths.Length;
+			}
 		}
 
 		private void nextButton_Click(object sender, EventArgs e)
@@ -892,11 +924,11 @@ namespace quick_picture_viewer
 			nextFile();
 		}
 
-		private void prevButton_Click(object sender, EventArgs e)
+		private void prevFile()
 		{
 			string[] filePaths = getCurrentFiles();
 
-			int currentIndex = 0;
+			int currentIndex = -1;
 			for (int i = 0; i < filePaths.Length; i++)
 			{
 				if (filePaths[i] == Path.Combine(currentFolder, currentFile))
@@ -906,19 +938,31 @@ namespace quick_picture_viewer
 				}
 			}
 
-			if (currentIndex == 0)
+			if (currentIndex == -1)
 			{
-				openFile(filePaths[filePaths.Length - 1]);
+				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			else
 			{
-				openFile(filePaths[currentIndex - 1]);
+				if (currentIndex == 0)
+				{
+					openFile(filePaths[filePaths.Length - 1]);
+				}
+				else
+				{
+					openFile(filePaths[currentIndex - 1]);
+				}
 			}
+		}
+
+		private void prevButton_Click(object sender, EventArgs e)
+		{
+			prevFile();
 		}
 
 		private string[] getCurrentFiles()
 		{
-			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle" };
+			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".webp" };
 			List<string> arlist = new List<string>();
 
 			string[] allFiles = Directory.GetFiles(currentFolder);
@@ -950,7 +994,7 @@ namespace quick_picture_viewer
 
 		private void setAsDesktopButton_Click(object sender, EventArgs e)
 		{
-			WallpaperForm wallpaperForm = new WallpaperForm(originalImage);
+			WallpaperForm wallpaperForm = new WallpaperForm(originalImage, darkMode);
 			if (alwaysOnTop)
 			{
 				wallpaperForm.TopMost = true;
@@ -1042,7 +1086,7 @@ namespace quick_picture_viewer
 
 		private void infoButton_Click(object sender, EventArgs e)
 		{
-			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile);
+			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile, darkMode);
 			if (alwaysOnTop)
 			{
 				infoForm.TopMost = true;
@@ -1115,13 +1159,11 @@ namespace quick_picture_viewer
 			dateCreatedLabel.Image = Properties.Resources.white_clock;
 			dateModifiedLabel.Image = Properties.Resources.white_history;
 			hasChangesLabel.Image = Properties.Resources.white_erase;
-
-			ThemeManager.enableDarkTitlebar(this.Handle, true);
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
 		{
-			PrintForm pf = new PrintForm(printDocument1);
+			PrintForm pf = new PrintForm(printDocument1, darkMode);
 			pf.Owner = this;
 			if (alwaysOnTop)
 			{
@@ -1211,8 +1253,16 @@ namespace quick_picture_viewer
 
 		private void showFileButton_Click(object sender, EventArgs e)
 		{
-			string argument = "/select, \"" + Path.Combine(currentFolder, currentFile) + "\"";
-			Process.Start("explorer.exe", argument);
+			string path = Path.Combine(currentFolder, currentFile);
+			if (FileSystem.FileExists(path))
+			{
+				string argument = "/select, \"" + path + "\"";
+				Process.Start("explorer.exe", argument);
+			}
+			else
+			{
+				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		private void checkboardButton_Click(object sender, EventArgs e)
@@ -1274,6 +1324,16 @@ namespace quick_picture_viewer
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
 			picturePanel.Focus();
+		}
+
+		private void zoomOutButton_MouseUp(object sender, MouseEventArgs e)
+		{
+
+		}
+
+		private void zoomInButton_MouseUp(object sender, MouseEventArgs e)
+		{
+
 		}
 	}
 }

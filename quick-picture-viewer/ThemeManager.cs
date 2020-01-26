@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
@@ -9,7 +10,7 @@ namespace quick_picture_viewer
 	{
 		public static Color MainColorDark = Color.Black;
 		public static Color BackColorDark = Color.FromArgb(32, 32, 32);
-		public static Color SecondColorDark = Color.FromArgb(51, 51, 51);
+		public static Color SecondColorDark = Color.FromArgb(56, 56, 56);
 		public static Color AccentColorDark = Color.FromArgb(73, 169, 207);
 
 		private enum WindowCompositionAttribute
@@ -63,15 +64,7 @@ namespace quick_picture_viewer
 		[DllImport("user32.dll")]
 		private static extern bool SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttribData data);
 
-		[DllImport("user32.dll")]
-		private static extern bool UpdateWindow(IntPtr hWnd);
-
-		public static void allowDarkModeForApp(bool dark)
-		{
-			AllowDarkModeForApp(dark);
-		}
-
-		public static void enableDarkTitlebar(IntPtr handle, bool dark)
+		private static void enableDarkTitlebar(IntPtr handle, bool dark)
 		{
 			AllowDarkModeForWindow(handle, dark);
 
@@ -86,7 +79,18 @@ namespace quick_picture_viewer
 			};
 			SetWindowCompositionAttribute(handle, ref data);
 
-			UpdateWindow(handle);
+			Marshal.FreeHGlobal(dataPtr);
+		}
+
+		public static void allowDarkModeForApp(bool dark)
+		{
+			AllowDarkModeForApp(dark);
+		}
+
+		public static void formHandleCreated(object sender, EventArgs e)
+		{
+			Form f = sender as Form;
+			enableDarkTitlebar(f.Handle, true);
 		}
 
 		public static void setDarkModeToControl(IntPtr handle)
@@ -113,36 +117,6 @@ namespace quick_picture_viewer
 			var reg = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
 			string productName = (string)reg.GetValue("ProductName");
 			return productName.StartsWith("Windows 10");
-		}
-
-		public static Color getColorizationColor()
-		{
-			if (isWindows10())
-			{
-				string root = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\DWM";
-				string colorcode = Registry.GetValue(root, "ColorizationColor", null).ToString();
-				return System.Drawing.ColorTranslator.FromHtml(colorcode);
-			}
-			else
-			{
-				return Color.Blue;
-			}
-		}
-
-		public static Color getAccentColor()
-		{
-			if (isWindows10())
-			{
-				string root = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\DWM";
-				string colorcode = Convert.ToString(Registry.GetValue(root, "AccentColor", null));
-				Console.WriteLine(colorcode);
-				int colorInt = Math.Abs(Convert.ToInt32(colorcode));
-				return Color.FromArgb(colorInt);
-			}
-			else
-			{
-				return Color.White;
-			}
 		}
 	}
 }

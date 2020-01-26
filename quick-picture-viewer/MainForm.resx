@@ -121,7 +121,7 @@
     <value>337, 17</value>
   </metadata>
   <data name="openFileDialog1.Filter" xml:space="preserve">
-    <value>Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.exif, *.gif, *.bmp, *.dib, *.rle, *.tiff, *.tif, *.ico) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif; *.exif; *.gif; *.bmp, *.dib; *.rle; *.tiff; *.tif; *.ico |PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg; *.jpeg; *.jpe; *.jfif; *.exif|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp; *.dib; *.rle|TIFF (*.tiff, *.tif)|*.tiff; *.tif|ICO (*.ico)|*.ico</value>
+    <value>Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.exif, *.gif, *.bmp, *.dib, *.rle, *.tiff, *.tif, *.ico, *.webp) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif; *.exif; *.gif; *.bmp, *.dib; *.rle; *.tiff; *.tif; *.ico; *.webp; |PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg; *.jpeg; *.jpe; *.jfif; *.exif|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp; *.dib; *.rle|TIFF (*.tiff, *.tif)|*.tiff; *.tif|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp|All files (*.*)|*.*</value>
   </data>
   <metadata name="fileSystemWatcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

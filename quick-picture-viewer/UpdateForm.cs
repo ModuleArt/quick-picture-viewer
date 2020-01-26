@@ -9,8 +9,14 @@ namespace quick_picture_viewer
 		private readonly UpdateChecker _checker;
 		private bool _loadednotes;
 
-		public UpdateForm(UpdateChecker checker, string appName)
+		public UpdateForm(UpdateChecker checker, string appName, bool darkMode)
 		{
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			_checker = checker;
 
 			InitializeComponent();
@@ -21,7 +27,7 @@ namespace quick_picture_viewer
 			currentLabel.Text = string.Format(currentLabel.Text, _checker.CurrentVersion);
 			latestLabel.Text = string.Format(latestLabel.Text, _checker.LatestRelease.TagName);
 
-			if (ThemeManager.isDarkTheme())
+			if (darkMode)
 			{
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
@@ -30,8 +36,6 @@ namespace quick_picture_viewer
 				buttonNo.BackColor = ThemeManager.SecondColorDark;
 				boxReleaseNotes.BackColor = ThemeManager.SecondColorDark;
 			}
-
-			ThemeManager.enableDarkTitlebar(this.Handle, true);
 		}
 
 		async void boxReleaseNotes_CheckedChanged(object sender, EventArgs e)

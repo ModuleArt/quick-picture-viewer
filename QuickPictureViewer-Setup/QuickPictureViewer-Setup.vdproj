@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7ABB3484FBCA49328652B215A0F47748"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "OwnerKey" = "8:_4B597F9189B6419DBE3695587B370B9E"
         "MsmSig" = "8:_UNDEFINED"
@@ -51,6 +57,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DD4EB7683A9A47E7AC82E6F3061DBB17"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E7C9FCADD09243EDA7D07D2534D4A336"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
+        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_602081345A8B570EE42EFE35A1D60858"
+        "OwnerKey" = "8:_9E165066DD6307D67C7B835ACD3F2087"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -212,6 +224,11 @@
             "AssemblyAsmDisplayName" = "8:Octokit, Version=0.3.4.0, Culture=neutral, PublicKeyToken=900b0742ac17b4b1, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_602081345A8B570EE42EFE35A1D60858"
+                    {
+                    "Name" = "8:Octokit.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Octokit.dll"
             "TargetName" = "8:"
@@ -231,6 +248,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7ABB3484FBCA49328652B215A0F47748"
+            {
+            "SourcePath" = "8:..\\quick-picture-viewer\\resources\\dlls\\libwebp_x86.dll"
+            "TargetName" = "8:libwebp_x86.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9E165066DD6307D67C7B835ACD3F2087"
             {
             "AssemblyRegister" = "3:1"
@@ -238,6 +275,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_9E165066DD6307D67C7B835ACD3F2087"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -297,6 +339,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD4EB7683A9A47E7AC82E6F3061DBB17"
+            {
+            "SourcePath" = "8:..\\quick-picture-viewer\\resources\\dlls\\libwebp_x64.dll"
+            "TargetName" = "8:libwebp_x64.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E7C9FCADD09243EDA7D07D2534D4A336"
             {
             "SourcePath" = "8:..\\quick-picture-viewer\\resources\\imgs\\picture80.bmp"
@@ -320,6 +382,328 @@
         }
         "FileType"
         {
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_08C4593302E74FE6BA4340F5A08F4A02"
+            {
+            "Name" = "8:QuickPictureViewer.exif"
+            "Description" = "8:"
+            "Extensions" = "8:exif"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_8A896E5CCF8F4D23ABE0C026446A6715"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_0C9A491070714EBDBCF592076C0CC440"
+            {
+            "Name" = "8:QuickPictureViewer.webp"
+            "Description" = "8:"
+            "Extensions" = "8:webp"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_3B5F699CA97A41CD8471BE30FC9266DD"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_1DCA708481DF4736A741AD6EA8C73F66"
+            {
+            "Name" = "8:QuickPictureViewer.jfif"
+            "Description" = "8:"
+            "Extensions" = "8:jfif"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_34358114E2DD40809AA033EC8102327A"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_34D514686D6A45C3A0CE6B1E95460147"
+            {
+            "Name" = "8:QuickPictureViewer.png"
+            "Description" = "8:"
+            "Extensions" = "8:png"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_165EFAB50DE14493B6213F994CBF54B2"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_36C13742433B45348B22D83E4332EEC1"
+            {
+            "Name" = "8:QuickPictureViewer.dib"
+            "Description" = "8:"
+            "Extensions" = "8:dib"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_B018F25B395341F99199D01D54D2BB76"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_5090E0F5263D408F98E737DBD9A0363C"
+            {
+            "Name" = "8:QuickPictureViewer.ico"
+            "Description" = "8:"
+            "Extensions" = "8:ico"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_AD553E50BC7741439450525E7497E165"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_6E35FB17DDBE4D68BC14513837067914"
+            {
+            "Name" = "8:QuickPictureViewer.tif"
+            "Description" = "8:"
+            "Extensions" = "8:tif"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_A46F126FA28247E6B8588B1FDAE35367"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_77F402CE0FF049968D323B2C91E3715E"
+            {
+            "Name" = "8:QuickPictureViewer.jpe"
+            "Description" = "8:"
+            "Extensions" = "8:jpe"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_A6DD808FF7914254A00B308B488CAFA4"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_7BA3CCDB85694596A45672B485ACFCF9"
+            {
+            "Name" = "8:QuickPictureViewer.bmp"
+            "Description" = "8:"
+            "Extensions" = "8:bmp"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_427D8F9C5E5D41EAAEC3F8E3A8155297"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_7F9E7F4DC7EF48D3BBA4192355435BBB"
+            {
+            "Name" = "8:QuickPictureViewer.gif"
+            "Description" = "8:"
+            "Extensions" = "8:gif"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_28D5303E17044BE9AE9A0E2A7E50FBA5"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_857497426974447AA8B4204FFC8F0507"
+            {
+            "Name" = "8:QuickPictureViewer.tiff"
+            "Description" = "8:"
+            "Extensions" = "8:tiff"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_BA4388D57D404D40B8624B2DF9482E22"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_B9FF07276D1A40249FEEEB43F1B6DFF5"
+            {
+            "Name" = "8:QuickPictureViewer.jpg"
+            "Description" = "8:"
+            "Extensions" = "8:jpg"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_ED8BAECDA25B43ABACF867114FE2CC53"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_C815F89AF6134B66BCFEEDA6A3B552CD"
+            {
+            "Name" = "8:QuickPictureViewer.rle"
+            "Description" = "8:"
+            "Extensions" = "8:rle"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_33CF7D5C218047F89A4CD11706F5CF10"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_ED85D848AE7A4A6EA1756CE197863524"
+            {
+            "Name" = "8:QuickPictureViewer.jpeg"
+            "Description" = "8:"
+            "Extensions" = "8:jpeg"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_4B597F9189B6419DBE3695587B370B9E"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_62A5E442C3B44306BC9719D37493CDF7"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
         }
         "Folder"
         {
@@ -373,15 +757,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Quick Picture Viewer"
-        "ProductCode" = "8:{5D0EFC40-5757-4846-9A93-F9451D5E85E3}"
-        "PackageCode" = "8:{0B72F35F-4FE4-43AE-A838-23841B016ECD}"
+        "ProductCode" = "8:{B1D26B6F-9D58-4D32-8026-779718DE936C}"
+        "PackageCode" = "8:{F6C87432-3710-44C8-8661-E0FFD7D82E81}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.9.6"
+        "ProductVersion" = "8:1.9.7"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -496,78 +880,6 @@
             {
                 "Keys"
                 {
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_01AFC7FA689F41CE857B8271130719A1"
-                    {
-                    "Name" = "8:.gif"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_1E42A1CB17B24ADC82E5559928385037"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_2A7F017C497F44AB90354EEEB99EF7DE"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_0B53D1B4C569445588655212353FF7E3"
-                    {
-                    "Name" = "8:.dib"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_FA31381768B245A7A293DF0BB44E24D4"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_FA1B7EBB95B441EFACC8B740A61277A5"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
                     "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_1CA63BF497264943BEF21031C3970943"
                     {
                     "Name" = "8:*"
@@ -648,42 +960,6 @@
                         {
                         }
                     }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4014A1CE16E34D2DB254792A3A94E5E6"
-                    {
-                    "Name" = "8:.exif"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_11E5C7273D8B4613B7667CEFADA563F1"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_0508FBC00A164CF0AD19A1B963135DB9"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
                     "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_47ECFA3FC5BD41C3B5118608A3AE36DF"
                     {
                     "Name" = "8:Directory"
@@ -742,7 +1018,7 @@
                                             "Condition" = "8:"
                                             "Transitive" = "11:FALSE"
                                             "ValueTypes" = "3:1"
-                                            "Value" = "8:Open background with QuickPictureViewer"
+                                            "Value" = "8:Browse folder with QuickPictureViewer"
                                             }
                                             "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_E0A422ECD3CE4BEB912EF6B8234A9770"
                                             {
@@ -837,258 +1113,6 @@
                                 }
                                 "Values"
                                 {
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_521431160B384E46A40F9D0793A57481"
-                    {
-                    "Name" = "8:.jfif"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_596FD5672BC947FDA96C1D97E88FDF5B"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_7EF8E47FDF3A4BFEA6003933D84182AE"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_84E3AD4B99F8440D80B83EB1AA4B9CD4"
-                    {
-                    "Name" = "8:.png"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4C5E6741F9D34E9181EFF8C56DE9A0C1"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_AC7792C3B37C4002BD356BF802D3853E"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_97F441F0E1224988AF13DFBD33D23F51"
-                    {
-                    "Name" = "8:.jpe"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_C8D85D5EF52548869B9BE21744D3783C"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_6B5A82CF05F74D06863BF33318061E41"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_A0B754DAA74547FAA1603DB559B3F705"
-                    {
-                    "Name" = "8:.jpeg"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_7172E090C79A47968439B04F2DB5F4D7"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_E1C09AB8418F4EA1992BA13E52F49584"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_A1EC32E490E241789C336590B5702C2F"
-                    {
-                    "Name" = "8:.rle"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_D7A8DD8E8AFB4C08B75906EBE6C60723"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_33F6F5D5382E49F9B7F9F844252921F7"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_B12674C2E01E458E92C578F45A2C43F9"
-                    {
-                    "Name" = "8:.jpg"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_0D0BF42FA9AE4D958E6B3DD3A0317159"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_D64528B06C04432A990CE233E6E424E6"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_BE15651D2715445DB2590569DA9ADC0A"
-                    {
-                    "Name" = "8:.ico"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_BB2952E02E324E93A14E3518C6BF848F"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_F2BFEB4DB44E426895B5B2AF133B763D"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
                                 }
                             }
                         }
@@ -1211,7 +1235,7 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "ValueTypes" = "3:1"
-                                    "Value" = "8:Lightweight picture viewer for Windows"
+                                    "Value" = "8:Lightweight desktop photo viewer for Windows"
                                     }
                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_265391A0E03C4F7D9692605414511E5D"
                                     {
@@ -1258,114 +1282,6 @@
                             "ValueTypes" = "3:1"
                             "Value" = "8:QuickPictureViewer image file"
                             }
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F0E1F22614D146B6A4EDC28E388B56DF"
-                    {
-                    "Name" = "8:.tiff"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_6153350527554A128C20D3A4643D5EEC"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_253EA435F14A49CF804E7102096EC19B"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F0FFB2196FD04AFF9D96E160D96CE429"
-                    {
-                    "Name" = "8:.bmp"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_77EC5F828F07424C874A26A7D19418DA"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_C3CA33E4496346919461A0B83DE5F127"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
-                        }
-                    }
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F699E8D6A73A4A0082DDE7D6ADB7E95B"
-                    {
-                    "Name" = "8:.tif"
-                    "Condition" = "8:"
-                    "AlwaysCreate" = "11:FALSE"
-                    "DeleteAtUninstall" = "11:FALSE"
-                    "Transitive" = "11:FALSE"
-                        "Keys"
-                        {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_0637BA09C2174DE685C2497BFAF06223"
-                            {
-                            "Name" = "8:OpenWithProgids"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_924F4F0747BA4597B0433623E2E3CD6B"
-                                    {
-                                    "Name" = "8:QuickPictureViewer"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                }
-                            }
-                        }
-                        "Values"
-                        {
                         }
                     }
                 }

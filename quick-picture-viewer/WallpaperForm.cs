@@ -8,12 +8,20 @@ namespace quick_picture_viewer
 	{
 		Bitmap bmp;
 
-		public WallpaperForm(Bitmap bmp)
+		public WallpaperForm(Bitmap bmp, bool darkMode)
 		{
-			InitializeComponent();
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			this.bmp = bmp;
 
-			if (ThemeManager.isDarkTheme())
+			InitializeComponent();
+			
+
+			if (darkMode)
 			{
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
@@ -23,8 +31,6 @@ namespace quick_picture_viewer
 				okButton.BackColor = ThemeManager.SecondColorDark;
 				okButton.Image = Properties.Resources.white_desktop;
 			}
-
-			ThemeManager.enableDarkTitlebar(this.Handle, true);
 		}
 
 		private void okButton_Click(object sender, EventArgs e)

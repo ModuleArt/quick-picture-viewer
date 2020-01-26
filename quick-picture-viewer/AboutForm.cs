@@ -8,16 +8,21 @@ namespace quick_picture_viewer
 {
 	partial class AboutForm : Form
 	{
+		private bool darkMode = ThemeManager.isDarkTheme();
+
 		public AboutForm()
 		{
-			InitializeComponent();
-		}
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
+			}
 
-		private void AboutForm_Load(object sender, EventArgs e)
-		{
+			InitializeComponent();
+
 			versionLabel.Text = String.Format("Version: {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString().Substring(0, 5));
 
-			if (ThemeManager.isDarkTheme())
+			if (darkMode)
 			{
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
@@ -35,8 +40,6 @@ namespace quick_picture_viewer
 				licenseLink.LinkColor = linkColor;
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
-
-				ThemeManager.enableDarkTitlebar(this.Handle, true);
 			}
 		}
 

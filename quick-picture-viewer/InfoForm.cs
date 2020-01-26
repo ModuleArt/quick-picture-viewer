@@ -9,11 +9,17 @@ namespace quick_picture_viewer
 	{
 		private string fullPath = null;
 
-		public InfoForm(Bitmap bitmap, string directoryName, string fileName)
+		public InfoForm(Bitmap bitmap, string directoryName, string fileName, bool darkMode)
 		{
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			InitializeComponent();
 
-			if (ThemeManager.isDarkTheme())
+			if (darkMode)
 			{
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
@@ -62,8 +68,6 @@ namespace quick_picture_viewer
 
 				modifiedTextBox.BackColor = ThemeManager.SecondColorDark;
 				modifiedTextBox.ForeColor = Color.White;
-
-				ThemeManager.enableDarkTitlebar(this.Handle, true);
 			}
 
 			if (directoryName != null)

@@ -27,7 +27,7 @@ namespace quick_picture_viewer
 			{
 				param = string.Empty;
 			}
-			Application.Run(new MainForm(param));
+			Application.Run(new MainForm(param, ThemeManager.isDarkTheme()));
 		}
 
 		[System.Runtime.InteropServices.DllImport("user32.dll")]

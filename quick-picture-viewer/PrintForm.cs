@@ -7,8 +7,14 @@ namespace quick_picture_viewer
 {
 	partial class PrintForm : Form
 	{
-		public PrintForm(PrintDocument pd)
+		public PrintForm(PrintDocument pd, bool darkMode)
 		{
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			InitializeComponent();
 
 			leftMarginTextBox.Text = pd.DefaultPageSettings.Margins.Left.ToString();
@@ -18,7 +24,7 @@ namespace quick_picture_viewer
 
 			printPreviewControl1.Document = pd;
 
-			if (ThemeManager.isDarkTheme())
+			if (darkMode)
 			{
 				ThemeManager.setDarkModeToControl(printPreviewControl1.Handle);
 
@@ -48,8 +54,6 @@ namespace quick_picture_viewer
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 				okButton.Image = Properties.Resources.white_print;
-
-				ThemeManager.enableDarkTitlebar(this.Handle, true);
 			}
 		}
 
