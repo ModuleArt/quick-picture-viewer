@@ -29,7 +29,7 @@
 
 <h2 align="center">Features</h2>
 - Supported file types: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp<br>
-- Basic image editing: rotate, flip<br>
+- Basic image editing: rotate, flip, change file type<br>
 - Built-in screenshoter<br>
 - Open image with external app or show in file explorer<br>
 - Copy, paste to clipboard<br>
