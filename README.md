@@ -31,15 +31,13 @@
 - Supported file types: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp<br>
 - Basic image editing: rotate, flip<br>
 - Built-in screenshoter<br>
-- Open image with external app<br>
-- Show file in explorer<br>
+- Open image with external app or show in file explorer<br>
 - Copy, paste to clipboard<br>
 - Checkboard background<br>
-- Fullscreen<br>
-- Always on top<br>
-- Set as desktop background<br>
+- Window can be always on top or fullscreen<br>
+- Set image as desktop background<br>
 - Print image<br>
-- Image details
+- View image details
 
 <h2 align="center">Other "Quick" apps</h2>
 <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows<br>
