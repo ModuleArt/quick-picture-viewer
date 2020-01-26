@@ -42,10 +42,8 @@
 - Image details
 
 <h2 align="center">Other "Quick" apps</h2>
-<p align="center">
-  <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows<br>
+<a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows<br>
 <a href="https://github.com/ModuleArt/quick-music-player/">Quick Music Player</a> - Lightweight desktop audio player for Windows
-</p>
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
