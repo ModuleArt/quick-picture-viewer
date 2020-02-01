@@ -15,7 +15,6 @@ namespace quick_picture_viewer
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			InitializeComponent();
@@ -27,8 +26,8 @@ namespace quick_picture_viewer
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
-				infoGroup.ForeColor = Color.White;
-				pagesGroup.ForeColor = Color.White;
+				infoGroup.Paint += ThemeManager.PaintDarkGroupBox;
+				pagesGroup.Paint += ThemeManager.PaintDarkGroupBox;
 
 				Color linkColor = ThemeManager.AccentColorDark;
 

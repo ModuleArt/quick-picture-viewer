@@ -13,7 +13,6 @@ namespace quick_picture_viewer
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			this.bmp = bmp;
@@ -26,7 +25,7 @@ namespace quick_picture_viewer
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
-				groupBox1.ForeColor = Color.White;
+				groupBox1.Paint += ThemeManager.PaintDarkGroupBox;
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 				okButton.Image = Properties.Resources.white_desktop;

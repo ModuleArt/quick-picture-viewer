@@ -7,15 +7,29 @@ namespace quick_picture_viewer
 {
 	partial class PrintForm : Form
 	{
+		private bool darkMode;
+
 		public PrintForm(PrintDocument pd, bool darkMode)
 		{
+			this.darkMode = darkMode;
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			InitializeComponent();
+
+			titleTextBox.AutoSize = false;
+			titleTextBox.Height = 20;
+
+			leftMarginTextBox.AutoSize = false;
+			leftMarginTextBox.Height = 20;
+			topMarginTextBox.AutoSize = false;
+			topMarginTextBox.Height = 20;
+			rightMarginTextBox.AutoSize = false;
+			rightMarginTextBox.Height = 20;
+			bottomMarginTextBox.AutoSize = false;
+			bottomMarginTextBox.Height = 20;
 
 			leftMarginTextBox.Text = pd.DefaultPageSettings.Margins.Left.ToString();
 			topMarginTextBox.Text = pd.DefaultPageSettings.Margins.Top.ToString();
@@ -33,7 +47,7 @@ namespace quick_picture_viewer
 
 				printPreviewControl1.BackColor = ThemeManager.BackColorDark;
 
-				groupBox1.ForeColor = Color.White;
+				groupBox1.Paint += ThemeManager.PaintDarkGroupBox;
 
 				titleTextBox.BackColor = ThemeManager.SecondColorDark;
 				titleTextBox.ForeColor = Color.White;
@@ -110,6 +124,50 @@ namespace quick_picture_viewer
 			{
 				MessageBox.Show("Unable to parse document margins", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+		}
+
+		private void setMarginsButton_Paint(object sender, PaintEventArgs e)
+		{
+			if (darkMode)
+			{
+				Button btn = (Button)sender;
+
+				btn.Text = string.Empty;
+				TextFormatFlags flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
+
+				if (btn.Enabled)
+				{
+					TextRenderer.DrawText(e.Graphics, "Set margins", btn.Font, e.ClipRectangle, Color.White, flags);
+				}
+				else
+				{
+					TextRenderer.DrawText(e.Graphics, "Set margins", btn.Font, e.ClipRectangle, ThemeManager.SecondColorDark, flags);
+				}
+			}
+		}
+
+		private void setMarginsButton_EnabledChanged(object sender, EventArgs e)
+		{
+			if (darkMode)
+			{
+				Button btn = (Button)sender;
+
+				if (btn.Enabled)
+				{
+					btn.BackColor = ThemeManager.SecondColorDark;
+				}
+				else
+				{
+					btn.BackColor = ThemeManager.BackColorDark;
+				}
+			}
+		}
+
+		private void PrintForm_Load(object sender, EventArgs e)
+		{
+			centerCheckbox.Checked = (this.Owner as MainForm).printCenterImage;
+			marginsCheckBox.Checked = printPreviewControl1.Document.OriginAtMargins;
+			horizontalCheckBox.Checked = printPreviewControl1.Document.DefaultPageSettings.Landscape;
 		}
 	}
 }

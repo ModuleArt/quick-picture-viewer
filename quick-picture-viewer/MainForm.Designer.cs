@@ -298,6 +298,7 @@
 			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.zoomComboBox.Items.AddRange(new object[] {
             "Auto",
+            "1%",
             "2%",
             "3%",
             "4%",

@@ -104,7 +104,9 @@
 			this.setMarginsButton.TabIndex = 44;
 			this.setMarginsButton.Text = "Set margins";
 			this.setMarginsButton.UseVisualStyleBackColor = false;
+			this.setMarginsButton.EnabledChanged += new System.EventHandler(this.setMarginsButton_EnabledChanged);
 			this.setMarginsButton.Click += new System.EventHandler(this.setMarginsButton_Click);
+			this.setMarginsButton.Paint += new System.Windows.Forms.PaintEventHandler(this.setMarginsButton_Paint);
 			// 
 			// label4
 			// 
@@ -164,9 +166,8 @@
 			this.bottomMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.bottomMarginTextBox.Location = new System.Drawing.Point(216, 157);
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-			this.bottomMarginTextBox.Multiline = true;
 			this.bottomMarginTextBox.Name = "bottomMarginTextBox";
-			this.bottomMarginTextBox.Size = new System.Drawing.Size(34, 20);
+			this.bottomMarginTextBox.Size = new System.Drawing.Size(34, 23);
 			this.bottomMarginTextBox.TabIndex = 39;
 			// 
 			// rightMarginTextBox
@@ -174,9 +175,8 @@
 			this.rightMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.rightMarginTextBox.Location = new System.Drawing.Point(179, 157);
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-			this.rightMarginTextBox.Multiline = true;
 			this.rightMarginTextBox.Name = "rightMarginTextBox";
-			this.rightMarginTextBox.Size = new System.Drawing.Size(34, 20);
+			this.rightMarginTextBox.Size = new System.Drawing.Size(34, 23);
 			this.rightMarginTextBox.TabIndex = 38;
 			// 
 			// topMarginTextBox
@@ -184,9 +184,8 @@
 			this.topMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.topMarginTextBox.Location = new System.Drawing.Point(142, 157);
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-			this.topMarginTextBox.Multiline = true;
 			this.topMarginTextBox.Name = "topMarginTextBox";
-			this.topMarginTextBox.Size = new System.Drawing.Size(34, 20);
+			this.topMarginTextBox.Size = new System.Drawing.Size(34, 23);
 			this.topMarginTextBox.TabIndex = 37;
 			// 
 			// marginsLabel
@@ -204,9 +203,8 @@
 			this.leftMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.leftMarginTextBox.Location = new System.Drawing.Point(105, 157);
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-			this.leftMarginTextBox.Multiline = true;
 			this.leftMarginTextBox.Name = "leftMarginTextBox";
-			this.leftMarginTextBox.Size = new System.Drawing.Size(34, 20);
+			this.leftMarginTextBox.Size = new System.Drawing.Size(34, 23);
 			this.leftMarginTextBox.TabIndex = 35;
 			// 
 			// titleLabel
@@ -224,9 +222,8 @@
 			this.titleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.titleTextBox.Location = new System.Drawing.Point(101, 26);
 			this.titleTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
-			this.titleTextBox.Multiline = true;
 			this.titleTextBox.Name = "titleTextBox";
-			this.titleTextBox.Size = new System.Drawing.Size(149, 20);
+			this.titleTextBox.Size = new System.Drawing.Size(149, 23);
 			this.titleTextBox.TabIndex = 33;
 			this.titleTextBox.Text = "Image";
 			// 
@@ -286,6 +283,7 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Print preview";
+			this.Load += new System.EventHandler(this.PrintForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrintForm_KeyDown);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

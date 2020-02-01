@@ -31,7 +31,7 @@ namespace quick_picture_viewer
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
 
-		private Task suggestionTask = null;
+		private System.Threading.Timer suggestionTimer;
 
 		public bool printCenterImage = true;
 
@@ -40,9 +40,8 @@ namespace quick_picture_viewer
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
-
 			}
+
 			this.darkMode = darkMode;
 			this.openPath = openPath;
 
@@ -673,9 +672,9 @@ namespace quick_picture_viewer
 					string substr = zoomComboBox.Text.Replace("%", "");
 					int zoom = int.Parse(substr);
 
-					if (zoom < 2)
+					if (zoom < 1)
 					{
-						zoom = 2;
+						zoom = 1;
 						setZoomText(zoom.ToString() + "%");
 					}
 					else
@@ -1300,40 +1299,32 @@ namespace quick_picture_viewer
 
 		private void showSuggestion(string text)
 		{
-			if (suggestionTask == null)
+			suggestionLabel.Text = text;
+			suggestionLabel.Visible = true;
+
+			if (suggestionTimer != null)
 			{
-				suggestionLabel.Text = text;
-				suggestionLabel.Visible = true;
-				suggestionTask = hideSuggestion();
+				suggestionTimer.Dispose();
 			}
-			else
+			suggestionTimer = new System.Threading.Timer((obj) =>
 			{
-				suggestionLabel.Text = text;
-				suggestionTask = hideSuggestion();
-			}
+				hideSuggestion();
+				
+			}, null, 3000, System.Threading.Timeout.Infinite);
 		}
 
-		private async Task hideSuggestion()
+		private void hideSuggestion()
 		{
-			await Task.Delay(3000);
-			suggestionLabel.Text = "";
-			suggestionLabel.Visible = false;
-			suggestionTask = null;
+			suggestionTimer.Dispose();
+			suggestionLabel.Invoke((MethodInvoker)(() => {
+				suggestionLabel.Text = string.Empty;
+				suggestionLabel.Visible = false;
+			}));
 		}
 
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
 			picturePanel.Focus();
-		}
-
-		private void zoomOutButton_MouseUp(object sender, MouseEventArgs e)
-		{
-
-		}
-
-		private void zoomInButton_MouseUp(object sender, MouseEventArgs e)
-		{
-
 		}
 	}
 }

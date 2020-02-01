@@ -118,5 +118,21 @@ namespace quick_picture_viewer
 			string productName = (string)reg.GetValue("ProductName");
 			return productName.StartsWith("Windows 10");
 		}
+
+		public static void PaintDarkGroupBox(object sender, PaintEventArgs p)
+		{
+			GroupBox box = (GroupBox)sender;
+
+			SolidBrush brush = new SolidBrush(ThemeManager.SecondColorDark);
+			Pen pen = new Pen(brush, 1);
+
+			p.Graphics.Clear(ThemeManager.BackColorDark);
+			p.Graphics.DrawString(box.Text, box.Font, Brushes.White, 0, -3);
+
+			p.Graphics.DrawLine(pen, 0, 16, 0, box.Height - 2);
+			p.Graphics.DrawLine(pen, 0, 16, box.Width - 1, 16);
+			p.Graphics.DrawLine(pen, box.Width - 1, 16, box.Width - 1, box.Height - 2);
+			p.Graphics.DrawLine(pen, 0, box.Height - 2, box.Width - 1, box.Height - 2);
+		}
 	}
 }

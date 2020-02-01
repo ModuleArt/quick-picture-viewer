@@ -8,13 +8,14 @@ namespace quick_picture_viewer
 	partial class InfoForm : Form
 	{
 		private string fullPath = null;
+		private bool darkMode;
 
 		public InfoForm(Bitmap bitmap, string directoryName, string fileName, bool darkMode)
 		{
+			this.darkMode = darkMode;
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			InitializeComponent();
@@ -24,9 +25,9 @@ namespace quick_picture_viewer
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
-				fileGroup.ForeColor = Color.White;
-				sizeGroup.ForeColor = Color.White;
-				dateGroup.ForeColor = Color.White;
+				fileGroup.Paint += ThemeManager.PaintDarkGroupBox;
+				sizeGroup.Paint += ThemeManager.PaintDarkGroupBox;
+				dateGroup.Paint += ThemeManager.PaintDarkGroupBox;
 
 				propertiesButton.BackColor = ThemeManager.SecondColorDark;
 				propertiesButton.Image = Properties.Resources.white_imgfile;
@@ -85,6 +86,14 @@ namespace quick_picture_viewer
 				modifiedTextBox.Text = File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
 
 				propertiesButton.Enabled = true;
+			} 
+			else
+			{
+				if (darkMode)
+				{
+					propertiesButton.Image = null;
+					propertiesButton.BackColor = ThemeManager.BackColorDark;
+				}
 			}
 
 			double inchesWidth = bitmap.Width / bitmap.HorizontalResolution;
@@ -154,6 +163,22 @@ namespace quick_picture_viewer
 		private void propertiesButton_Click(object sender, EventArgs e)
 		{
 			ShellManager.ShowFileProperties(fullPath);
+		}
+
+		private void propertiesButton_Paint(object sender, PaintEventArgs e)
+		{
+			if (darkMode)
+			{
+				Button btn = (Button)sender;
+
+				if (!btn.Enabled)
+				{
+					btn.Text = string.Empty;
+					TextFormatFlags flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
+
+					TextRenderer.DrawText(e.Graphics, "File properties", btn.Font, e.ClipRectangle, ThemeManager.SecondColorDark, flags);
+				}
+			}
 		}
 	}
 }

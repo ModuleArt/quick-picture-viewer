@@ -8,9 +8,9 @@ namespace quick_picture_viewer
 		[STAThread]
 		static void Main(string[] args)
 		{
-			if (Environment.OSVersion.Version.Major >= 6) 
-			{ 
-				SetProcessDPIAware(); 
+			if (Environment.OSVersion.Version.Major >= 6)
+			{
+				SetProcessDPIAware();
 			}
 
 			ThemeManager.allowDarkModeForApp(true);

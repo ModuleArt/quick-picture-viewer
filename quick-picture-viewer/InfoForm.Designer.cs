@@ -423,6 +423,7 @@
 			this.propertiesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.propertiesButton.UseVisualStyleBackColor = false;
 			this.propertiesButton.Click += new System.EventHandler(this.propertiesButton_Click);
+			this.propertiesButton.Paint += new System.Windows.Forms.PaintEventHandler(this.propertiesButton_Paint);
 			// 
 			// InfoForm
 			// 

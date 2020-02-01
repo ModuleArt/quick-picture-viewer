@@ -14,7 +14,6 @@ namespace quick_picture_viewer
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-				this.Shown += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			_checker = checker;

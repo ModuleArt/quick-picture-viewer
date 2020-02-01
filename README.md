@@ -22,7 +22,7 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows 7, 8.1, 10  |  Size: 1.7 MB  | v1.9.7 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.9.7/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows 7, 8.1, 10  |  Size: 1.9 MB  | v1.9.8 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.9.8/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
