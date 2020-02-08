@@ -25,3 +25,6 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.csproj.CopyComplete
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.PrintForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.UpdateForm.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.xml

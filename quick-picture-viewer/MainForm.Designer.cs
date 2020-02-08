@@ -41,6 +41,7 @@
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
 			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.nextButton = new System.Windows.Forms.ToolStripButton();
+			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
@@ -61,8 +62,9 @@
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.onTopButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-			this.setAsDesktopButton = new System.Windows.Forms.ToolStripButton();
-			this.aboutButton = new System.Windows.Forms.ToolStripButton();
+			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
+			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.fileLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -109,6 +111,7 @@
             this.prevButton,
             this.showFileButton,
             this.nextButton,
+            this.slideshowButton,
             this.toolStripSeparator1,
             this.autoZoomButton,
             this.zoomOutButton,
@@ -129,8 +132,7 @@
             this.fullscreenButton,
             this.onTopButton,
             this.toolStripSeparator6,
-            this.setAsDesktopButton,
-            this.aboutButton});
+            this.moreButton});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
@@ -251,6 +253,19 @@
 			this.nextButton.Size = new System.Drawing.Size(24, 25);
 			this.nextButton.Text = "Next image in folder | Right arrow";
 			this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+			// 
+			// slideshowButton
+			// 
+			this.slideshowButton.AutoSize = false;
+			this.slideshowButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.slideshowButton.Enabled = false;
+			this.slideshowButton.Image = ((System.Drawing.Image)(resources.GetObject("slideshowButton.Image")));
+			this.slideshowButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.slideshowButton.Margin = new System.Windows.Forms.Padding(0);
+			this.slideshowButton.Name = "slideshowButton";
+			this.slideshowButton.Size = new System.Drawing.Size(24, 25);
+			this.slideshowButton.Text = "Slideshow | Ctrl + Shift + S";
+			this.slideshowButton.Click += new System.EventHandler(this.slideshowButton_Click);
 			// 
 			// toolStripSeparator1
 			// 
@@ -514,30 +529,41 @@
 			this.toolStripSeparator6.Name = "toolStripSeparator6";
 			this.toolStripSeparator6.Size = new System.Drawing.Size(2, 16);
 			// 
+			// moreButton
+			// 
+			this.moreButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			this.moreButton.AutoSize = false;
+			this.moreButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.moreButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setAsDesktopButton,
+            this.aboutButton});
+			this.moreButton.Image = ((System.Drawing.Image)(resources.GetObject("moreButton.Image")));
+			this.moreButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.moreButton.Margin = new System.Windows.Forms.Padding(0);
+			this.moreButton.Name = "moreButton";
+			this.moreButton.ShowDropDownArrow = false;
+			this.moreButton.Size = new System.Drawing.Size(24, 25);
+			this.moreButton.Text = "More options | Ctrl + Shift + M";
+			this.moreButton.ToolTipText = "More options";
+			// 
 			// setAsDesktopButton
 			// 
-			this.setAsDesktopButton.AutoSize = false;
-			this.setAsDesktopButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.setAsDesktopButton.Enabled = false;
 			this.setAsDesktopButton.Image = ((System.Drawing.Image)(resources.GetObject("setAsDesktopButton.Image")));
-			this.setAsDesktopButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.setAsDesktopButton.Margin = new System.Windows.Forms.Padding(0);
 			this.setAsDesktopButton.Name = "setAsDesktopButton";
-			this.setAsDesktopButton.Size = new System.Drawing.Size(24, 25);
-			this.setAsDesktopButton.Text = "Set as desktop background | Ctrl + B";
+			this.setAsDesktopButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+			this.setAsDesktopButton.Size = new System.Drawing.Size(257, 22);
+			this.setAsDesktopButton.Text = "Set as desktop background";
 			this.setAsDesktopButton.Click += new System.EventHandler(this.setAsDesktopButton_Click);
 			// 
 			// aboutButton
 			// 
-			this.aboutButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-			this.aboutButton.AutoSize = false;
-			this.aboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.aboutButton.BackColor = System.Drawing.Color.Black;
 			this.aboutButton.Image = ((System.Drawing.Image)(resources.GetObject("aboutButton.Image")));
-			this.aboutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.aboutButton.Margin = new System.Windows.Forms.Padding(0);
 			this.aboutButton.Name = "aboutButton";
-			this.aboutButton.Size = new System.Drawing.Size(24, 25);
-			this.aboutButton.Text = "About | F1";
+			this.aboutButton.ShortcutKeys = System.Windows.Forms.Keys.F1;
+			this.aboutButton.Size = new System.Drawing.Size(257, 22);
+			this.aboutButton.Text = "About";
 			this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
 			// 
 			// saveFileDialog1
@@ -743,7 +769,6 @@
 		private System.Windows.Forms.ToolStripButton zoomOutButton;
 		private System.Windows.Forms.ToolStripButton autoZoomButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-		private System.Windows.Forms.ToolStripButton aboutButton;
 		private System.Windows.Forms.ToolStripButton flipVerticalButton;
 		private System.Windows.Forms.ToolStripButton flipHorizontalButton;
 		private System.Windows.Forms.ToolStripButton rotateLeftButton;
@@ -765,7 +790,6 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripButton prevButton;
-		private System.Windows.Forms.ToolStripButton setAsDesktopButton;
 		private System.Windows.Forms.ToolStripButton deleteButton;
 		private System.Windows.Forms.ToolStripStatusLabel dateCreatedLabel;
 		private System.Windows.Forms.ToolStripStatusLabel dateModifiedLabel;
@@ -781,6 +805,10 @@
 		private System.Windows.Forms.ToolStripButton checkboardButton;
 		private System.Windows.Forms.ToolStripButton saveAsButton;
 		private System.Windows.Forms.Label suggestionLabel;
+		private System.Windows.Forms.ToolStripButton slideshowButton;
+		private System.Windows.Forms.ToolStripDropDownButton moreButton;
+		private System.Windows.Forms.ToolStripMenuItem setAsDesktopButton;
+		private System.Windows.Forms.ToolStripMenuItem aboutButton;
 	}
 }
 

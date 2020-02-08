@@ -19,7 +19,9 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 
-			versionLabel.Text = String.Format("Version: {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString().Substring(0, 5));
+			string fullVer = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+			int lastDotIndex = fullVer.LastIndexOf('.');
+			versionLabel.Text = String.Format("Version: {0}", fullVer.Substring(0, lastDotIndex));
 
 			if (darkMode)
 			{

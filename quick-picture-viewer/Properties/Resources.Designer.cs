@@ -223,6 +223,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap white_more {
+            get {
+                object obj = ResourceManager.GetObject("white_more", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white_next {
             get {
                 object obj = ResourceManager.GetObject("white-next", resourceCulture);
@@ -346,6 +356,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_size {
             get {
                 object obj = ResourceManager.GetObject("white-size", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_slideshow {
+            get {
+                object obj = ResourceManager.GetObject("white_slideshow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -22,13 +22,13 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows 7, 8.1, 10  |  Size: 1.9 MB  | v1.9.8 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.9.8/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows 7, 8.1, 10  |  Size: 2.2 MB  | v1.10.0 |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.10.0/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
 
 <h2 align="center">Features</h2>
-- Supported file types: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp<br>
+- Supported file types: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg<br>
 - Basic image editing: rotate, flip, change file type<br>
 - Built-in screenshoter<br>
 - Open image with external app or show in file explorer<br>
@@ -50,7 +50,6 @@
   <img src="/docs/screenshots/desktop.png">
   <img src="/docs/screenshots/print.png">
   <img src="/docs/screenshots/about.png">
-  <img src="/docs/screenshots/win7.png">
 </p>
 
 <h2 align="center">Additional</h2>
