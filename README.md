@@ -37,7 +37,8 @@
 - Window can be always on top or fullscreen<br>
 - Set image as desktop background<br>
 - Print image<br>
-- View image details
+- View image details<br>
+- Slideshow
 
 <h2 align="center">Other "Quick" apps</h2>
 <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows<br>
