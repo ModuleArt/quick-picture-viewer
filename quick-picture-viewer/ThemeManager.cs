@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -127,6 +128,8 @@ namespace quick_picture_viewer
 			Pen pen = new Pen(brush, 1);
 
 			p.Graphics.Clear(ThemeManager.BackColorDark);
+
+			p.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
 			p.Graphics.DrawString(box.Text, box.Font, Brushes.White, 0, -3);
 
 			p.Graphics.DrawLine(pen, 0, 16, 0, box.Height - 2);

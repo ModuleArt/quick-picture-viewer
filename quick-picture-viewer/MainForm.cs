@@ -28,6 +28,7 @@ namespace quick_picture_viewer
 		private bool darkMode = false;
 		private bool checkboardBackground = false;
 		private bool slideshow = false;
+		private int svgSize;
 
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
@@ -85,6 +86,7 @@ namespace quick_picture_viewer
 
 		private void openButton_Click_1(object sender, EventArgs e)
 		{
+			setSlideshow(false);
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				openFile(openFileDialog1.FileName);
@@ -117,6 +119,7 @@ namespace quick_picture_viewer
 
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
 			setCheckboardBackground(Properties.Settings.Default.CheckboardBackground, false);
+			svgSize = Properties.Settings.Default.SvgSize;
 		}
 
 		public async void checkForUpdates(bool showUpToDateDialog)
@@ -164,6 +167,18 @@ namespace quick_picture_viewer
 			}
 		}
 
+		private void showTypeOpsButton(bool show, string type)
+		{
+			this.Invoke((MethodInvoker)(() => {
+				typeOpsButton.Visible = show;
+
+				if (show)
+				{
+					typeOpsButton.Text = String.Format("{0} options", type);
+				}
+			}));
+		}
+
 		private void openFile(string path)
 		{
 			try
@@ -176,27 +191,45 @@ namespace quick_picture_viewer
 					{
 						openImage(webp.Decode(rawWebP), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
+					showTypeOpsButton(false, null);
 				} 
 				else if (ext == ".ico") 
 				{
 					Bitmap bmp = new Icon(path, 128, 128).ToBitmap();
 					openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+					showTypeOpsButton(false, null);
 				}
 				else if (ext == ".svg")
 				{
-					var svgDocument = Svg.SvgDocument.Open(path);
-					svgDocument.ShapeRendering = SvgShapeRendering.Auto;
-
-					openImage(svgDocument.Draw(512, 512), Path.GetDirectoryName(path), Path.GetFileName(path));
+					openSvg(path, svgSize, svgSize);
 				}
 				else
 				{
 					openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
+					showTypeOpsButton(false, null);
 				}
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show("Unable to open this file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Console.WriteLine(ex);
+			}
+		}
+
+		public void openSvg(string path, int width, int height)
+		{
+			try
+			{
+				var svgDocument = Svg.SvgDocument.Open(path);
+				svgDocument.ShapeRendering = SvgShapeRendering.Auto;
+
+				openImage(svgDocument.Draw(width, height), Path.GetDirectoryName(path), Path.GetFileName(path));
+
+				showTypeOpsButton(true, "SVG");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Unable to find SVG file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Console.WriteLine(ex);
 			}
 		}
@@ -248,6 +281,7 @@ namespace quick_picture_viewer
 				deleteButton.Enabled = false;
 				externalButton.Enabled = false;
 				showFileButton.Enabled = false;
+				reloadButton.Enabled = false;
 
 				dateCreatedLabel.Visible = false;
 				dateModifiedLabel.Visible = false;
@@ -267,6 +301,7 @@ namespace quick_picture_viewer
 				deleteButton.Enabled = true;
 				externalButton.Enabled = true;
 				showFileButton.Enabled = true;
+				reloadButton.Enabled = true;
 
 				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
 				dateCreatedLabel.Visible = true;
@@ -282,12 +317,14 @@ namespace quick_picture_viewer
 			flipHorizontalButton.Enabled = true;
 			rotateLeftButton.Enabled = true;
 			rotateRightButton.Enabled = true;
+			rotate180Button.Enabled = true;
 			saveAsButton.Enabled = true;
 			copyButton.Enabled = true;
 			autoZoomButton.Enabled = true;
 			setAsDesktopButton.Enabled = true;
 			infoButton.Enabled = true;
 			printButton.Enabled = true;
+			miniViewButton.Enabled = true;
 
 			zoomComboBox.Enabled = true;
 
@@ -435,7 +472,7 @@ namespace quick_picture_viewer
 		private void setSlideshow(bool b)
 		{
 			slideshow = b;
-			slideshowButton.Checked = b;
+			slideshowButton.GetCurrentParent().Invoke((MethodInvoker)(() => slideshowButton.Checked = b));
 			if (b)
 			{
 				setFullscreen(b);
@@ -527,6 +564,7 @@ namespace quick_picture_viewer
 
 		private void saveAsButton_Click(object sender, EventArgs e)
 		{
+			setSlideshow(false);
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				System.IO.FileStream fs = (System.IO.FileStream) saveFileDialog1.OpenFile();
@@ -692,6 +730,8 @@ namespace quick_picture_viewer
 				picturePanel.Height = this.ClientSize.Height;
 				picturePanel.BackColor = Color.Black;
 
+				typeOpsButton.Left = this.ClientRectangle.Width + 9;
+
 				setAlwaysOnTop(false, true);
 
 				showSuggestion("Press Esc to exit fullscreen mode");
@@ -705,6 +745,8 @@ namespace quick_picture_viewer
 				picturePanel.Top = toolStrip1.Height;
 				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
 				picturePanel.BackColor = Color.Transparent;
+
+				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 9;
 			}
 		}
 
@@ -752,15 +794,7 @@ namespace quick_picture_viewer
 			{
 				if (e.Shift)
 				{
-					if (e.KeyCode == Keys.R)
-					{
-						rotateLeftButton.PerformClick();
-					}
-					else if (e.KeyCode == Keys.H)
-					{
-						flipVerticalButton.PerformClick();
-					}
-					else if (e.KeyCode == Keys.E)
+					if (e.KeyCode == Keys.E)
 					{
 						showFileButton.PerformClick();
 					}
@@ -771,6 +805,10 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.S)
 					{
 						slideshowButton.PerformClick();
+					}
+					else if (e.KeyCode == Keys.P)
+					{
+						miniViewButton.PerformClick();
 					}
 				}
 				else
@@ -786,14 +824,6 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.A)
 					{
 						autoZoomButton.PerformClick();
-					}
-					else if (e.KeyCode == Keys.R)
-					{
-						rotateRightButton.PerformClick();
-					}
-					else if (e.KeyCode == Keys.H)
-					{
-						flipHorizontalButton.PerformClick();
 					}
 					else if (e.KeyCode == Keys.C)
 					{
@@ -815,10 +845,6 @@ namespace quick_picture_viewer
 					{
 						onTopButton.PerformClick();
 					}
-					//else if (e.KeyCode == Keys.B)
-					//{
-					//	setAsDesktopButton.PerformClick();
-					//}
 					else if (e.KeyCode == Keys.I)
 					{
 						infoButton.PerformClick();
@@ -831,10 +857,6 @@ namespace quick_picture_viewer
 					{
 						printButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.N)
-					{
-						Process.Start("quick-picture-viewer.exe");
-					}
 				}
 			}
 			else if (e.Alt)
@@ -842,6 +864,58 @@ namespace quick_picture_viewer
 				if (e.KeyCode == Keys.Enter)
 				{
 					fullscreenButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.Down)
+				{
+					int newVerticalValue = picturePanel.VerticalScroll.Value + picturePanel.VerticalScroll.LargeChange;
+					
+					if (newVerticalValue >= picturePanel.VerticalScroll.Maximum)
+					{
+						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
+					}
+					else
+					{
+						picturePanel.VerticalScroll.Value = newVerticalValue;
+					}
+				}
+				else if (e.KeyCode == Keys.Up)
+				{
+					int newVerticalValue = picturePanel.VerticalScroll.Value - picturePanel.VerticalScroll.LargeChange;
+
+					if (newVerticalValue <= picturePanel.VerticalScroll.Minimum)
+					{
+						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
+					}
+					else
+					{
+						picturePanel.VerticalScroll.Value = newVerticalValue;
+					}
+				}
+				else if (e.KeyCode == Keys.Left)
+				{
+					int newHorizontalValue = picturePanel.HorizontalScroll.Value - picturePanel.HorizontalScroll.LargeChange;
+
+					if (newHorizontalValue <= picturePanel.HorizontalScroll.Minimum)
+					{
+						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
+					}
+					else
+					{
+						picturePanel.HorizontalScroll.Value = newHorizontalValue;
+					}
+				}
+				else if (e.KeyCode == Keys.Right)
+				{
+					int newHorizontalValue = picturePanel.HorizontalScroll.Value + picturePanel.HorizontalScroll.LargeChange;
+
+					if (newHorizontalValue >= picturePanel.HorizontalScroll.Maximum)
+					{
+						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
+					}
+					else
+					{
+						picturePanel.HorizontalScroll.Value = newHorizontalValue;
+					}
 				}
 			}
 			else
@@ -858,10 +932,6 @@ namespace quick_picture_viewer
 				{
 					deleteButton.PerformClick();
 				}
-				//else if (e.KeyCode == Keys.F1)
-				//{
-				//	aboutButton.PerformClick();
-				//}
 				else if (e.KeyCode == Keys.Left)
 				{
 					prevButton.PerformClick();
@@ -953,6 +1023,7 @@ namespace quick_picture_viewer
 
 			if (currentIndex == -1)
 			{
+				setSlideshow(false);
 				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return 0;
 			}
@@ -1103,14 +1174,17 @@ namespace quick_picture_viewer
 			zoomOutButton.Enabled = false;
 			rotateLeftButton.Enabled = false;
 			rotateRightButton.Enabled = false;
+			rotate180Button.Enabled = false;
 			flipHorizontalButton.Enabled = false;
 			flipVerticalButton.Enabled = false;
 			copyButton.Enabled = false;
 			setAsDesktopButton.Enabled = false;
+			reloadButton.Enabled = false;
 			infoButton.Enabled = false;
 			externalButton.Enabled = false;
 			printButton.Enabled = false;
 			showFileButton.Enabled = false;
+			miniViewButton.Enabled = false;
 
 			zoomComboBox.Enabled = false;
 
@@ -1190,10 +1264,16 @@ namespace quick_picture_viewer
 			zoomInButton.Image = Properties.Resources.white_zoomin;
 			zoomOutButton.Image = Properties.Resources.white_zoomout;
 
+			editButton.Image = Properties.Resources.white_edit;
+			editButton.DropDown.BackColor = ThemeManager.SecondColorDark;
+			editButton.DropDown.ForeColor = Color.White;
 			rotateLeftButton.Image = Properties.Resources.white_rotatel;
 			rotateRightButton.Image = Properties.Resources.white_rotater;
 			flipHorizontalButton.Image = Properties.Resources.white_fliph;
 			flipVerticalButton.Image = Properties.Resources.white_flipv;
+			rotate180Button.Image = Properties.Resources.white_degree;
+			resizeButton.Image = Properties.Resources.white_size;
+			cropButton.Image = Properties.Resources.white_crop;
 
 			screenshotButton.Image = Properties.Resources.white_screenshot;
 			infoButton.Image = Properties.Resources.white_info;
@@ -1203,12 +1283,15 @@ namespace quick_picture_viewer
 			checkboardButton.Image = Properties.Resources.white_grid;
 			fullscreenButton.Image = Properties.Resources.white_fullscreen;
 			onTopButton.Image = Properties.Resources.white_ontop;
+			miniViewButton.Image = Properties.Resources.white_miniview;
 
 			moreButton.Image = Properties.Resources.white_more;
-			//setAsDesktopButton.Image = Properties.Resources.white_desktop;
-			//setAsDesktopButton.ForeColor = Color.White;
-			//aboutButton.Image = Properties.Resources.white_about;
-			//aboutButton.ForeColor = Color.White;
+			moreButton.DropDown.BackColor = ThemeManager.SecondColorDark;
+			moreButton.DropDown.ForeColor = Color.White;
+			setAsDesktopButton.Image = Properties.Resources.white_desktop;
+			aboutButton.Image = Properties.Resources.white_about;
+			reloadButton.Image = Properties.Resources.white_sync;
+			newWindowButton.Image = Properties.Resources.white_newwindow;
 
 			directoryLabel.Image = Properties.Resources.white_picfolder;
 			fileLabel.Image = Properties.Resources.white_imgfile;
@@ -1217,10 +1300,15 @@ namespace quick_picture_viewer
 			dateCreatedLabel.Image = Properties.Resources.white_clock;
 			dateModifiedLabel.Image = Properties.Resources.white_history;
 			hasChangesLabel.Image = Properties.Resources.white_erase;
+
+			typeOpsButton.Image = Properties.Resources.white_options;
+			typeOpsButton.BackColor = ThemeManager.SecondColorDark;
+			typeOpsButton.ForeColor = Color.White;
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
 		{
+			setSlideshow(false);
 			PrintForm pf = new PrintForm(printDocument1, darkMode);
 			pf.Owner = this;
 			if (alwaysOnTop)
@@ -1389,6 +1477,46 @@ namespace quick_picture_viewer
 		private void slideshowButton_Click(object sender, EventArgs e)
 		{
 			setSlideshow(!slideshow);
+		}
+
+		private void typeOpsButton_Click(object sender, EventArgs e)
+		{
+			Button b = sender as Button;
+			string type = b.Text.Substring(0, b.Text.IndexOf(' ')).ToLower();
+
+			if (type == "svg")
+			{
+				SvgOpsForm sof = new SvgOpsForm(Path.Combine(currentFolder, currentFile), pictureBox.Image.Width, pictureBox.Image.Height, darkMode);
+				sof.Owner = this;
+				sof.ShowDialog();
+			}
+		}
+
+		private void reloadButton_Click(object sender, EventArgs e)
+		{
+			openFile(Path.Combine(currentFolder, currentFile));
+		}
+
+		private void newWindowButton_Click(object sender, EventArgs e)
+		{
+			Process.Start("quick-picture-viewer.exe");
+		}
+
+		private void rotate180Button_Click(object sender, EventArgs e)
+		{
+			originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
+			pictureBox.Image = originalImage;
+			setZoomText("Auto");
+			setImageChanged(true);
+		}
+
+		private void miniViewButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+
+			MiniViewForm mvf = new MiniViewForm(originalImage, this.Text);
+			mvf.Owner = this;
+			mvf.Show();
 		}
 	}
 }

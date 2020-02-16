@@ -108,7 +108,19 @@
     <Compile Include="InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MiniViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniViewForm.Designer.cs">
+      <DependentUpon>MiniViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShellManager.cs" />
+    <Compile Include="SvgOpsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SvgOpsForm.Designer.cs">
+      <DependentUpon>SvgOpsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeManager.cs" />
     <Compile Include="ToolStripOverride.cs" />
     <Compile Include="PrintForm.cs">
@@ -149,8 +161,14 @@
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MiniViewForm.resx">
+      <DependentUpon>MiniViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SvgOpsForm.resx">
+      <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
@@ -239,6 +257,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-close.png" />
+    <None Include="resources\imgs\light\white-miniview.png" />
+    <None Include="resources\imgs\light\white-newwindow.png" />
+    <None Include="resources\imgs\light\white-sync.png" />
+    <None Include="resources\imgs\light\white-crop.png" />
+    <None Include="resources\imgs\light\white-degree.png" />
+    <None Include="resources\imgs\light\white-edit.png" />
+    <None Include="resources\imgs\light\white-options.png" />
     <None Include="resources\imgs\light\white-more.png" />
     <None Include="resources\imgs\light\white-slideshow.png" />
   </ItemGroup>

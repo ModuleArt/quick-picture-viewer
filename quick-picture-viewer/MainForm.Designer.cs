@@ -48,10 +48,16 @@
 			this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
 			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.rotateLeftButton = new System.Windows.Forms.ToolStripButton();
-			this.rotateRightButton = new System.Windows.Forms.ToolStripButton();
-			this.flipHorizontalButton = new System.Windows.Forms.ToolStripButton();
-			this.flipVerticalButton = new System.Windows.Forms.ToolStripButton();
+			this.editButton = new System.Windows.Forms.ToolStripDropDownButton();
+			this.flipHorizontalButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.flipVerticalButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+			this.rotateRightButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.rotateLeftButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.rotate180Button = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+			this.resizeButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.cropButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
@@ -61,9 +67,14 @@
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.onTopButton = new System.Windows.Forms.ToolStripButton();
+			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
+			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -77,6 +88,7 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -118,10 +130,7 @@
             this.zoomComboBox,
             this.zoomInButton,
             this.toolStripSeparator2,
-            this.rotateLeftButton,
-            this.rotateRightButton,
-            this.flipHorizontalButton,
-            this.flipVerticalButton,
+            this.editButton,
             this.toolStripSeparator3,
             this.screenshotButton,
             this.infoButton,
@@ -131,6 +140,7 @@
             this.checkboardButton,
             this.fullscreenButton,
             this.onTopButton,
+            this.miniViewButton,
             this.toolStripSeparator6,
             this.moreButton});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
@@ -368,57 +378,113 @@
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			this.toolStripSeparator2.Size = new System.Drawing.Size(2, 16);
 			// 
-			// rotateLeftButton
+			// editButton
 			// 
-			this.rotateLeftButton.AutoSize = false;
-			this.rotateLeftButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.rotateLeftButton.Enabled = false;
-			this.rotateLeftButton.Image = ((System.Drawing.Image)(resources.GetObject("rotateLeftButton.Image")));
-			this.rotateLeftButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.rotateLeftButton.Margin = new System.Windows.Forms.Padding(0);
-			this.rotateLeftButton.Name = "rotateLeftButton";
-			this.rotateLeftButton.Size = new System.Drawing.Size(24, 25);
-			this.rotateLeftButton.Text = "Rotate counter-clockwise | Ctrl + Shift + R";
-			this.rotateLeftButton.Click += new System.EventHandler(this.rotateLeftButton_Click);
-			// 
-			// rotateRightButton
-			// 
-			this.rotateRightButton.AutoSize = false;
-			this.rotateRightButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.rotateRightButton.Enabled = false;
-			this.rotateRightButton.Image = ((System.Drawing.Image)(resources.GetObject("rotateRightButton.Image")));
-			this.rotateRightButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.rotateRightButton.Margin = new System.Windows.Forms.Padding(0);
-			this.rotateRightButton.Name = "rotateRightButton";
-			this.rotateRightButton.Size = new System.Drawing.Size(24, 25);
-			this.rotateRightButton.Text = "Rotate clockwise | Ctrl + R";
-			this.rotateRightButton.Click += new System.EventHandler(this.rotateRightButton_Click);
+			this.editButton.AutoSize = false;
+			this.editButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.flipHorizontalButton,
+            this.flipVerticalButton,
+            this.toolStripSeparator7,
+            this.rotateRightButton,
+            this.rotateLeftButton,
+            this.rotate180Button,
+            this.toolStripSeparator8,
+            this.resizeButton,
+            this.cropButton});
+			this.editButton.Image = ((System.Drawing.Image)(resources.GetObject("editButton.Image")));
+			this.editButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.editButton.Margin = new System.Windows.Forms.Padding(0);
+			this.editButton.Name = "editButton";
+			this.editButton.ShowDropDownArrow = false;
+			this.editButton.Size = new System.Drawing.Size(47, 25);
+			this.editButton.Text = "Edit";
+			this.editButton.ToolTipText = "Edit image";
 			// 
 			// flipHorizontalButton
 			// 
-			this.flipHorizontalButton.AutoSize = false;
-			this.flipHorizontalButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.flipHorizontalButton.Enabled = false;
 			this.flipHorizontalButton.Image = ((System.Drawing.Image)(resources.GetObject("flipHorizontalButton.Image")));
-			this.flipHorizontalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.flipHorizontalButton.Margin = new System.Windows.Forms.Padding(0);
 			this.flipHorizontalButton.Name = "flipHorizontalButton";
-			this.flipHorizontalButton.Size = new System.Drawing.Size(24, 25);
-			this.flipHorizontalButton.Text = "Flip horizontal | Ctrl + H";
+			this.flipHorizontalButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+			this.flipHorizontalButton.Size = new System.Drawing.Size(282, 22);
+			this.flipHorizontalButton.Text = "Flip horizontal";
 			this.flipHorizontalButton.Click += new System.EventHandler(this.flipHorizontalButton_Click);
 			// 
 			// flipVerticalButton
 			// 
-			this.flipVerticalButton.AutoSize = false;
-			this.flipVerticalButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.flipVerticalButton.Enabled = false;
 			this.flipVerticalButton.Image = ((System.Drawing.Image)(resources.GetObject("flipVerticalButton.Image")));
-			this.flipVerticalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.flipVerticalButton.Margin = new System.Windows.Forms.Padding(0);
 			this.flipVerticalButton.Name = "flipVerticalButton";
-			this.flipVerticalButton.Size = new System.Drawing.Size(24, 25);
-			this.flipVerticalButton.Text = "Flip vertical | Ctrl + Shift + H";
+			this.flipVerticalButton.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.H)));
+			this.flipVerticalButton.Size = new System.Drawing.Size(282, 22);
+			this.flipVerticalButton.Text = "Flip vertical";
 			this.flipVerticalButton.Click += new System.EventHandler(this.flipVerticalButton_Click);
+			// 
+			// toolStripSeparator7
+			// 
+			this.toolStripSeparator7.Margin = new System.Windows.Forms.Padding(3);
+			this.toolStripSeparator7.Name = "toolStripSeparator7";
+			this.toolStripSeparator7.Size = new System.Drawing.Size(279, 6);
+			// 
+			// rotateRightButton
+			// 
+			this.rotateRightButton.Enabled = false;
+			this.rotateRightButton.Image = ((System.Drawing.Image)(resources.GetObject("rotateRightButton.Image")));
+			this.rotateRightButton.Name = "rotateRightButton";
+			this.rotateRightButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+			this.rotateRightButton.Size = new System.Drawing.Size(282, 22);
+			this.rotateRightButton.Text = "Rotate clockwise";
+			this.rotateRightButton.Click += new System.EventHandler(this.rotateRightButton_Click);
+			// 
+			// rotateLeftButton
+			// 
+			this.rotateLeftButton.Enabled = false;
+			this.rotateLeftButton.Image = ((System.Drawing.Image)(resources.GetObject("rotateLeftButton.Image")));
+			this.rotateLeftButton.Name = "rotateLeftButton";
+			this.rotateLeftButton.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.G)));
+			this.rotateLeftButton.Size = new System.Drawing.Size(282, 22);
+			this.rotateLeftButton.Text = "Rotate counter-clockwise";
+			this.rotateLeftButton.Click += new System.EventHandler(this.rotateLeftButton_Click);
+			// 
+			// rotate180Button
+			// 
+			this.rotate180Button.Enabled = false;
+			this.rotate180Button.Image = ((System.Drawing.Image)(resources.GetObject("rotate180Button.Image")));
+			this.rotate180Button.Name = "rotate180Button";
+			this.rotate180Button.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.J)));
+			this.rotate180Button.Size = new System.Drawing.Size(282, 22);
+			this.rotate180Button.Text = "Rotate 180°";
+			this.rotate180Button.Click += new System.EventHandler(this.rotate180Button_Click);
+			// 
+			// toolStripSeparator8
+			// 
+			this.toolStripSeparator8.Margin = new System.Windows.Forms.Padding(3);
+			this.toolStripSeparator8.Name = "toolStripSeparator8";
+			this.toolStripSeparator8.Size = new System.Drawing.Size(279, 6);
+			this.toolStripSeparator8.Visible = false;
+			// 
+			// resizeButton
+			// 
+			this.resizeButton.Enabled = false;
+			this.resizeButton.Image = ((System.Drawing.Image)(resources.GetObject("resizeButton.Image")));
+			this.resizeButton.Name = "resizeButton";
+			this.resizeButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+			this.resizeButton.Size = new System.Drawing.Size(282, 22);
+			this.resizeButton.Text = "Resize";
+			this.resizeButton.Visible = false;
+			// 
+			// cropButton
+			// 
+			this.cropButton.Enabled = false;
+			this.cropButton.Image = ((System.Drawing.Image)(resources.GetObject("cropButton.Image")));
+			this.cropButton.Name = "cropButton";
+			this.cropButton.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.R)));
+			this.cropButton.Size = new System.Drawing.Size(282, 22);
+			this.cropButton.Text = "Crop";
+			this.cropButton.Visible = false;
 			// 
 			// toolStripSeparator3
 			// 
@@ -522,6 +588,20 @@
 			this.onTopButton.Text = "Always on top | Ctrl + T";
 			this.onTopButton.Click += new System.EventHandler(this.onTopButton_Click);
 			// 
+			// miniViewButton
+			// 
+			this.miniViewButton.AutoSize = false;
+			this.miniViewButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.miniViewButton.Enabled = false;
+			this.miniViewButton.Image = ((System.Drawing.Image)(resources.GetObject("miniViewButton.Image")));
+			this.miniViewButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.miniViewButton.Margin = new System.Windows.Forms.Padding(0);
+			this.miniViewButton.Name = "miniViewButton";
+			this.miniViewButton.Size = new System.Drawing.Size(24, 25);
+			this.miniViewButton.Text = "Picture in picture | Ctrl + Shift + P";
+			this.miniViewButton.ToolTipText = "Picture in picture | Ctrl + Shift + P";
+			this.miniViewButton.Click += new System.EventHandler(this.miniViewButton_Click);
+			// 
 			// toolStripSeparator6
 			// 
 			this.toolStripSeparator6.AutoSize = false;
@@ -533,18 +613,31 @@
 			// 
 			this.moreButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 			this.moreButton.AutoSize = false;
-			this.moreButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.moreButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reloadButton,
             this.setAsDesktopButton,
+            this.toolStripSeparator9,
+            this.newWindowButton,
+            this.toolStripSeparator10,
             this.aboutButton});
 			this.moreButton.Image = ((System.Drawing.Image)(resources.GetObject("moreButton.Image")));
 			this.moreButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.moreButton.Margin = new System.Windows.Forms.Padding(0);
 			this.moreButton.Name = "moreButton";
 			this.moreButton.ShowDropDownArrow = false;
-			this.moreButton.Size = new System.Drawing.Size(24, 25);
-			this.moreButton.Text = "More options | Ctrl + Shift + M";
+			this.moreButton.Size = new System.Drawing.Size(55, 25);
+			this.moreButton.Text = "More";
 			this.moreButton.ToolTipText = "More options";
+			// 
+			// reloadButton
+			// 
+			this.reloadButton.Enabled = false;
+			this.reloadButton.Image = ((System.Drawing.Image)(resources.GetObject("reloadButton.Image")));
+			this.reloadButton.Name = "reloadButton";
+			this.reloadButton.ShortcutKeys = System.Windows.Forms.Keys.F5;
+			this.reloadButton.Size = new System.Drawing.Size(257, 22);
+			this.reloadButton.Text = "Reload file";
+			this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
 			// 
 			// setAsDesktopButton
 			// 
@@ -555,6 +648,27 @@
 			this.setAsDesktopButton.Size = new System.Drawing.Size(257, 22);
 			this.setAsDesktopButton.Text = "Set as desktop background";
 			this.setAsDesktopButton.Click += new System.EventHandler(this.setAsDesktopButton_Click);
+			// 
+			// toolStripSeparator9
+			// 
+			this.toolStripSeparator9.Margin = new System.Windows.Forms.Padding(3);
+			this.toolStripSeparator9.Name = "toolStripSeparator9";
+			this.toolStripSeparator9.Size = new System.Drawing.Size(254, 6);
+			// 
+			// newWindowButton
+			// 
+			this.newWindowButton.Image = ((System.Drawing.Image)(resources.GetObject("newWindowButton.Image")));
+			this.newWindowButton.Name = "newWindowButton";
+			this.newWindowButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+			this.newWindowButton.Size = new System.Drawing.Size(257, 22);
+			this.newWindowButton.Text = "New window";
+			this.newWindowButton.Click += new System.EventHandler(this.newWindowButton_Click);
+			// 
+			// toolStripSeparator10
+			// 
+			this.toolStripSeparator10.Margin = new System.Windows.Forms.Padding(3);
+			this.toolStripSeparator10.Name = "toolStripSeparator10";
+			this.toolStripSeparator10.Size = new System.Drawing.Size(254, 6);
 			// 
 			// aboutButton
 			// 
@@ -676,6 +790,7 @@
 			this.picturePanel.AutoScroll = true;
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.Controls.Add(this.typeOpsButton);
 			this.picturePanel.Controls.Add(this.suggestionLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 35);
@@ -688,6 +803,27 @@
 			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// typeOpsButton
+			// 
+			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
+			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.typeOpsButton.Location = new System.Drawing.Point(659, 400);
+			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 9);
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.Size = new System.Drawing.Size(100, 23);
+			this.typeOpsButton.TabIndex = 2;
+			this.typeOpsButton.Text = "TYPE options";
+			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.Visible = false;
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
 			// 
 			// suggestionLabel
 			// 
@@ -769,10 +905,6 @@
 		private System.Windows.Forms.ToolStripButton zoomOutButton;
 		private System.Windows.Forms.ToolStripButton autoZoomButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-		private System.Windows.Forms.ToolStripButton flipVerticalButton;
-		private System.Windows.Forms.ToolStripButton flipHorizontalButton;
-		private System.Windows.Forms.ToolStripButton rotateLeftButton;
-		private System.Windows.Forms.ToolStripButton rotateRightButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.ToolStripButton copyButton;
@@ -809,6 +941,22 @@
 		private System.Windows.Forms.ToolStripDropDownButton moreButton;
 		private System.Windows.Forms.ToolStripMenuItem setAsDesktopButton;
 		private System.Windows.Forms.ToolStripMenuItem aboutButton;
+		private System.Windows.Forms.Button typeOpsButton;
+		private System.Windows.Forms.ToolStripMenuItem reloadButton;
+		private System.Windows.Forms.ToolStripDropDownButton editButton;
+		private System.Windows.Forms.ToolStripMenuItem rotateLeftButton;
+		private System.Windows.Forms.ToolStripMenuItem rotateRightButton;
+		private System.Windows.Forms.ToolStripMenuItem flipHorizontalButton;
+		private System.Windows.Forms.ToolStripMenuItem flipVerticalButton;
+		private System.Windows.Forms.ToolStripMenuItem newWindowButton;
+		private System.Windows.Forms.ToolStripMenuItem resizeButton;
+		private System.Windows.Forms.ToolStripMenuItem rotate180Button;
+		private System.Windows.Forms.ToolStripMenuItem cropButton;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+		private System.Windows.Forms.ToolStripButton miniViewButton;
 	}
 }
 

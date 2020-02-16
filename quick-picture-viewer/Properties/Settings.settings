@@ -8,5 +8,8 @@
     <Setting Name="CheckboardBackground" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="SvgSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">512</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

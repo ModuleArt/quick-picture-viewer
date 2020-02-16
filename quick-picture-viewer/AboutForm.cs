@@ -23,6 +23,15 @@ namespace quick_picture_viewer
 			int lastDotIndex = fullVer.LastIndexOf('.');
 			versionLabel.Text = String.Format("Version: {0}", fullVer.Substring(0, lastDotIndex));
 
+			if (IntPtr.Size == 4)
+			{
+				versionLabel.Text += " (x32)";
+			} 
+			else if (IntPtr.Size == 8)
+			{
+				versionLabel.Text += " (x64)";
+			}
+
 			if (darkMode)
 			{
 				this.BackColor = ThemeManager.BackColorDark;

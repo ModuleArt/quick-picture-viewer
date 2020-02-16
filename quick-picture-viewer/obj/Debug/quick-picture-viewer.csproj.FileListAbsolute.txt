@@ -29,3 +29,5 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_pic
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Fizzler.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Svg.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Svg.xml
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.SvgOpsForm.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.MiniViewForm.resources
