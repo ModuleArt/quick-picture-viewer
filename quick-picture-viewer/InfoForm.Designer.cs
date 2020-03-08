@@ -58,6 +58,8 @@
 			this.createdLabel = new System.Windows.Forms.Label();
 			this.createdTextBox = new System.Windows.Forms.TextBox();
 			this.propertiesButton = new System.Windows.Forms.Button();
+			this.ratioTextBox = new System.Windows.Forms.TextBox();
+			this.ratioLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.fileGroup.SuspendLayout();
 			this.sizeGroup.SuspendLayout();
@@ -92,7 +94,7 @@
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(141, 573);
+			this.okButton.Location = new System.Drawing.Point(141, 599);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(124, 23);
@@ -304,6 +306,8 @@
 			// 
 			// sizeGroup
 			// 
+			this.sizeGroup.Controls.Add(this.ratioLabel);
+			this.sizeGroup.Controls.Add(this.ratioTextBox);
 			this.sizeGroup.Controls.Add(this.diskSizeTextBox);
 			this.sizeGroup.Controls.Add(this.diskSizeLabel);
 			this.sizeGroup.Controls.Add(this.cmTextBox);
@@ -319,7 +323,7 @@
 			this.sizeGroup.Location = new System.Drawing.Point(9, 270);
 			this.sizeGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.sizeGroup.Name = "sizeGroup";
-			this.sizeGroup.Size = new System.Drawing.Size(256, 195);
+			this.sizeGroup.Size = new System.Drawing.Size(256, 221);
 			this.sizeGroup.TabIndex = 45;
 			this.sizeGroup.TabStop = false;
 			this.sizeGroup.Text = "Size";
@@ -352,7 +356,7 @@
 			this.dateGroup.Controls.Add(this.modifiedTextBox);
 			this.dateGroup.Controls.Add(this.createdLabel);
 			this.dateGroup.Controls.Add(this.createdTextBox);
-			this.dateGroup.Location = new System.Drawing.Point(9, 474);
+			this.dateGroup.Location = new System.Drawing.Point(9, 500);
 			this.dateGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.dateGroup.Name = "dateGroup";
 			this.dateGroup.Size = new System.Drawing.Size(256, 91);
@@ -413,7 +417,7 @@
 			this.propertiesButton.FlatAppearance.BorderSize = 0;
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));
-			this.propertiesButton.Location = new System.Drawing.Point(9, 573);
+			this.propertiesButton.Location = new System.Drawing.Point(9, 599);
 			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0);
 			this.propertiesButton.Name = "propertiesButton";
 			this.propertiesButton.Size = new System.Drawing.Size(124, 23);
@@ -425,12 +429,33 @@
 			this.propertiesButton.Click += new System.EventHandler(this.propertiesButton_Click);
 			this.propertiesButton.Paint += new System.Windows.Forms.PaintEventHandler(this.propertiesButton_Paint);
 			// 
+			// ratioTextBox
+			// 
+			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.ratioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.ratioTextBox.Location = new System.Drawing.Point(97, 182);
+			this.ratioTextBox.Multiline = true;
+			this.ratioTextBox.Name = "ratioTextBox";
+			this.ratioTextBox.ReadOnly = true;
+			this.ratioTextBox.Size = new System.Drawing.Size(153, 20);
+			this.ratioTextBox.TabIndex = 47;
+			// 
+			// ratioLabel
+			// 
+			this.ratioLabel.AutoSize = true;
+			this.ratioLabel.Location = new System.Drawing.Point(6, 184);
+			this.ratioLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.ratioLabel.Name = "ratioLabel";
+			this.ratioLabel.Size = new System.Drawing.Size(73, 15);
+			this.ratioLabel.TabIndex = 48;
+			this.ratioLabel.Text = "Aspect ratio:";
+			// 
 			// InfoForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 605);
+			this.ClientSize = new System.Drawing.Size(274, 631);
 			this.Controls.Add(this.propertiesButton);
 			this.Controls.Add(this.dateGroup);
 			this.Controls.Add(this.sizeGroup);
@@ -492,5 +517,7 @@
 		private System.Windows.Forms.TextBox diskSizeTextBox;
 		private System.Windows.Forms.Label diskSizeLabel;
 		private System.Windows.Forms.Button propertiesButton;
+		private System.Windows.Forms.Label ratioLabel;
+		private System.Windows.Forms.TextBox ratioTextBox;
 	}
 }

@@ -75,6 +75,7 @@
 			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
 			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -87,9 +88,9 @@
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.suggestionLabel = new System.Windows.Forms.Label();
+			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
@@ -149,7 +150,7 @@
 			this.toolStrip1.Padding = new System.Windows.Forms.Padding(5);
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
 			this.toolStrip1.Size = new System.Drawing.Size(768, 35);
-			this.toolStrip1.TabIndex = 16;
+			this.toolStrip1.TabIndex = 1;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
 			// openButton
@@ -619,6 +620,7 @@
             this.toolStripSeparator9,
             this.newWindowButton,
             this.toolStripSeparator10,
+            this.settingsButton,
             this.aboutButton});
 			this.moreButton.Image = ((System.Drawing.Image)(resources.GetObject("moreButton.Image")));
 			this.moreButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -669,6 +671,16 @@
 			this.toolStripSeparator10.Margin = new System.Windows.Forms.Padding(3);
 			this.toolStripSeparator10.Name = "toolStripSeparator10";
 			this.toolStripSeparator10.Size = new System.Drawing.Size(254, 6);
+			// 
+			// settingsButton
+			// 
+			this.settingsButton.BackColor = System.Drawing.Color.Black;
+			this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+			this.settingsButton.Name = "settingsButton";
+			this.settingsButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Oemcomma)));
+			this.settingsButton.Size = new System.Drawing.Size(257, 22);
+			this.settingsButton.Text = "Settings";
+			this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
 			// 
 			// aboutButton
 			// 
@@ -738,7 +750,7 @@
 			this.statusStrip1.Location = new System.Drawing.Point(0, 467);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(768, 26);
-			this.statusStrip1.TabIndex = 15;
+			this.statusStrip1.TabIndex = 4;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
 			// hasChangesLabel
@@ -782,28 +794,6 @@
 			this.printDocument1.OriginAtMargins = true;
 			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
 			// 
-			// picturePanel
-			// 
-			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.picturePanel.AutoScroll = true;
-			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-			this.picturePanel.Controls.Add(this.typeOpsButton);
-			this.picturePanel.Controls.Add(this.suggestionLabel);
-			this.picturePanel.Controls.Add(this.pictureBox);
-			this.picturePanel.Location = new System.Drawing.Point(0, 35);
-			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(768, 432);
-			this.picturePanel.TabIndex = 2;
-			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
-			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
 			// typeOpsButton
 			// 
 			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -814,11 +804,12 @@
 			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
 			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(659, 400);
-			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 9);
+			this.typeOpsButton.Location = new System.Drawing.Point(642, 418);
+			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0);
 			this.typeOpsButton.Name = "typeOpsButton";
 			this.typeOpsButton.Size = new System.Drawing.Size(100, 23);
-			this.typeOpsButton.TabIndex = 2;
+			this.typeOpsButton.TabIndex = 4;
+			this.typeOpsButton.TabStop = false;
 			this.typeOpsButton.Text = "TYPE options";
 			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.typeOpsButton.UseVisualStyleBackColor = false;
@@ -831,15 +822,34 @@
 			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
 			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
-			this.suggestionLabel.Location = new System.Drawing.Point(9, 9);
+			this.suggestionLabel.Location = new System.Drawing.Point(9, 43);
 			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(9);
 			this.suggestionLabel.Name = "suggestionLabel";
 			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(3);
 			this.suggestionLabel.Size = new System.Drawing.Size(72, 21);
-			this.suggestionLabel.TabIndex = 1;
+			this.suggestionLabel.TabIndex = 3;
 			this.suggestionLabel.Text = "Suggestion";
 			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.suggestionLabel.Visible = false;
+			// 
+			// picturePanel
+			// 
+			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.picturePanel.AutoScroll = true;
+			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.Controls.Add(this.pictureBox);
+			this.picturePanel.Location = new System.Drawing.Point(0, 35);
+			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
+			this.picturePanel.Name = "picturePanel";
+			this.picturePanel.Size = new System.Drawing.Size(768, 432);
+			this.picturePanel.TabIndex = 2;
+			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// pictureBox
 			// 
@@ -865,6 +875,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(768, 493);
+			this.Controls.Add(this.suggestionLabel);
+			this.Controls.Add(this.typeOpsButton);
 			this.Controls.Add(this.picturePanel);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.statusStrip1);
@@ -886,7 +898,6 @@
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			this.picturePanel.ResumeLayout(false);
-			this.picturePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -957,6 +968,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
 		private System.Windows.Forms.ToolStripButton miniViewButton;
+		private System.Windows.Forms.ToolStripMenuItem settingsButton;
 	}
 }
 

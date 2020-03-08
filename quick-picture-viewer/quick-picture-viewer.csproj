@@ -114,6 +114,12 @@
     <Compile Include="MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShellManager.cs" />
     <Compile Include="SvgOpsForm.cs">
       <SubType>Form</SubType>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SvgOpsForm.resx">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
@@ -257,6 +266,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-settings.png" />
     <None Include="resources\imgs\light\white-close.png" />
     <None Include="resources\imgs\light\white-miniview.png" />
     <None Include="resources\imgs\light\white-newwindow.png" />

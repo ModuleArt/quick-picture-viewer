@@ -28,7 +28,6 @@ namespace quick_picture_viewer
 		private bool darkMode = false;
 		private bool checkboardBackground = false;
 		private bool slideshow = false;
-		private int svgSize;
 
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
@@ -49,6 +48,8 @@ namespace quick_picture_viewer
 			this.openPath = openPath;
 
 			InitializeComponent();
+
+			settingsButton.ShortcutKeyDisplayString = "Ctrl+Comma";
 
 			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
 			zoomInTimer.Interval = 100;
@@ -115,11 +116,13 @@ namespace quick_picture_viewer
 				MessageBox.Show("Unable to open this file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
-			checkForUpdates(false);
+			if (Properties.Settings.Default.CheckForUpdates)
+			{
+				checkForUpdates(false);
+			}
 
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
 			setCheckboardBackground(Properties.Settings.Default.CheckboardBackground, false);
-			svgSize = Properties.Settings.Default.SvgSize;
 		}
 
 		public async void checkForUpdates(bool showUpToDateDialog)
@@ -146,7 +149,7 @@ namespace quick_picture_viewer
 						updateDialog.TopMost = true;
 					}
 
-					var result = updateDialog.ShowDialog();
+					DialogResult result = updateDialog.ShowDialog();
 					if (result == DialogResult.Yes)
 					{
 						checker.DownloadAsset("QuickPictureViewer-Setup.msi");
@@ -201,7 +204,7 @@ namespace quick_picture_viewer
 				}
 				else if (ext == ".svg")
 				{
-					openSvg(path, svgSize, svgSize);
+					openSvg(path, -1, -1);
 				}
 				else
 				{
@@ -220,8 +223,18 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				var svgDocument = Svg.SvgDocument.Open(path);
+				Svg.SvgDocument svgDocument = Svg.SvgDocument.Open(path);
 				svgDocument.ShapeRendering = SvgShapeRendering.Auto;
+
+				if (width == -1)
+				{
+					width = Convert.ToInt32(svgDocument.Width.Value);
+				}
+
+				if (height == -1)
+				{
+					height = Convert.ToInt32(svgDocument.Height.Value);
+				}
 
 				openImage(svgDocument.Draw(width, height), Path.GetDirectoryName(path), Path.GetFileName(path));
 
@@ -238,7 +251,7 @@ namespace quick_picture_viewer
 		{
 			if (imageChanged)
 			{
-				var window = MessageBox.Show(
+				DialogResult window = MessageBox.Show(
 					"All unsaved data will be lost.\nAre you sure you want to open new image?",
 					"Warning",
 					MessageBoxButtons.YesNo,
@@ -303,9 +316,9 @@ namespace quick_picture_viewer
 				showFileButton.Enabled = true;
 				reloadButton.Enabled = true;
 
-				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
+				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
 				dateCreatedLabel.Visible = true;
-				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
+				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
 				dateModifiedLabel.Visible = true;
 			}
 
@@ -460,7 +473,7 @@ namespace quick_picture_viewer
 
 		private void aboutButton_Click(object sender, EventArgs e)
 		{
-			AboutForm aboutBox = new AboutForm();
+			AboutForm aboutBox = new AboutForm(darkMode);
 			aboutBox.Owner = this;
 			if (alwaysOnTop)
 			{
@@ -730,9 +743,11 @@ namespace quick_picture_viewer
 				picturePanel.Height = this.ClientSize.Height;
 				picturePanel.BackColor = Color.Black;
 
-				typeOpsButton.Left = this.ClientRectangle.Width + 9;
+				typeOpsButton.Left = this.ClientRectangle.Width + 26;
 
 				setAlwaysOnTop(false, true);
+
+				suggestionLabel.Location = new Point(9, 9);
 
 				showSuggestion("Press Esc to exit fullscreen mode");
 			}
@@ -746,7 +761,9 @@ namespace quick_picture_viewer
 				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
 				picturePanel.BackColor = Color.Transparent;
 
-				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 9;
+				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 26;
+
+				suggestionLabel.Location = new Point(9, 43);
 			}
 		}
 
@@ -1230,7 +1247,7 @@ namespace quick_picture_viewer
 
 		private void showOpenWithDialog(string path)
 		{
-			var args = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "shell32.dll");
+			string args = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "shell32.dll");
 			args += ",OpenAs_RunDLL " + path;
 			Process.Start("rundll32.exe", args);
 		}
@@ -1292,6 +1309,7 @@ namespace quick_picture_viewer
 			aboutButton.Image = Properties.Resources.white_about;
 			reloadButton.Image = Properties.Resources.white_sync;
 			newWindowButton.Image = Properties.Resources.white_newwindow;
+			settingsButton.Image = Properties.Resources.white_settings;
 
 			directoryLabel.Image = Properties.Resources.white_picfolder;
 			fileLabel.Image = Properties.Resources.white_imgfile;
@@ -1386,7 +1404,7 @@ namespace quick_picture_viewer
 		{
 			if(imageChanged)
 			{
-				var window = MessageBox.Show(
+				DialogResult window = MessageBox.Show(
 					"All unsaved data will be lost.\nAre you sure you want to close the application?",
 					"Warning",
 					MessageBoxButtons.YesNo, 
@@ -1469,11 +1487,6 @@ namespace quick_picture_viewer
 			}));
 		}
 
-		private void picturePanel_MouseEnter(object sender, EventArgs e)
-		{
-			picturePanel.Focus();
-		}
-
 		private void slideshowButton_Click(object sender, EventArgs e)
 		{
 			setSlideshow(!slideshow);
@@ -1517,6 +1530,17 @@ namespace quick_picture_viewer
 			MiniViewForm mvf = new MiniViewForm(originalImage, this.Text);
 			mvf.Owner = this;
 			mvf.Show();
+		}
+
+		private void settingsButton_Click(object sender, EventArgs e)
+		{
+			SettingsForm settingsBox = new SettingsForm(darkMode);
+			settingsBox.Owner = this;
+			if (alwaysOnTop)
+			{
+				settingsBox.TopMost = true;
+			}
+			settingsBox.ShowDialog();
 		}
 	}
 }

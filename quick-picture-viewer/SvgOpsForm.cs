@@ -34,6 +34,9 @@ namespace quick_picture_viewer
 				size256Button.BackColor = ThemeManager.SecondColorDark;
 				size512Button.BackColor = ThemeManager.SecondColorDark;
 				size1024Button.BackColor = ThemeManager.SecondColorDark;
+				defaultSizeButton.BackColor = ThemeManager.SecondColorDark;
+				size128Button.BackColor = ThemeManager.SecondColorDark;
+				size64Button.BackColor = ThemeManager.SecondColorDark;
 			}
 		}
 
@@ -45,9 +48,6 @@ namespace quick_picture_viewer
 			int height = (int)heightNumeric.Value;
 
 			mf.openSvg(path, width, height);
-
-			Properties.Settings.Default.SvgSize = width;
-			Properties.Settings.Default.Save();
 
 			this.Close();
 		}
@@ -85,13 +85,12 @@ namespace quick_picture_viewer
 
 		private void setPreset(int size)
 		{
-			bool aspectChecked = aspectRatioCheckbox.Checked;
-
-			aspectRatioCheckbox.Checked = false;
 			widthNumeric.Value = size;
-			heightNumeric.Value = size;
 
-			aspectRatioCheckbox.Checked = aspectChecked;
+			if (!aspectRatioCheckbox.Checked)
+			{
+				heightNumeric.Value = size;
+			}
 		}
 
 		private void aspectRatioCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -108,6 +107,31 @@ namespace quick_picture_viewer
 			{
 				this.Close();
 			}
+		}
+
+		private void defaultSizeButton_Click(object sender, EventArgs e)
+		{
+			Svg.SvgDocument svgDocument = Svg.SvgDocument.Open(path);
+
+			int width = Convert.ToInt32(svgDocument.Width.Value);
+			int height = Convert.ToInt32(svgDocument.Height.Value);
+
+			bool aspectChecked = aspectRatioCheckbox.Checked;
+
+			widthNumeric.Value = width;
+			heightNumeric.Value = height;
+
+			aspectRatioCheckbox.Checked = aspectChecked;
+		}
+
+		private void size64Button_Click(object sender, EventArgs e)
+		{
+			setPreset(64);
+		}
+
+		private void size128Button_Click(object sender, EventArgs e)
+		{
+			setPreset(128);
 		}
 	}
 }

@@ -41,6 +41,9 @@
 			this.size1024Button = new System.Windows.Forms.Button();
 			this.size512Button = new System.Windows.Forms.Button();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
+			this.defaultSizeButton = new System.Windows.Forms.Button();
+			this.size64Button = new System.Windows.Forms.Button();
+			this.size128Button = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -54,7 +57,7 @@
 			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(9, 285);
+			this.okButton.Location = new System.Drawing.Point(9, 314);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
@@ -66,7 +69,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(7, 118);
+			this.label1.Location = new System.Drawing.Point(7, 147);
 			this.label1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(42, 15);
@@ -76,7 +79,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(137, 118);
+			this.label2.Location = new System.Drawing.Point(137, 147);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(46, 15);
 			this.label2.TabIndex = 4;
@@ -85,7 +88,7 @@
 			// widthNumeric
 			// 
 			this.widthNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.widthNumeric.Location = new System.Drawing.Point(55, 116);
+			this.widthNumeric.Location = new System.Drawing.Point(55, 145);
 			this.widthNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -109,7 +112,7 @@
 			// heightNumeric
 			// 
 			this.heightNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.heightNumeric.Location = new System.Drawing.Point(189, 116);
+			this.heightNumeric.Location = new System.Drawing.Point(189, 145);
 			this.heightNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -135,7 +138,7 @@
 			this.aspectRatioCheckbox.AutoSize = true;
 			this.aspectRatioCheckbox.Checked = true;
 			this.aspectRatioCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.aspectRatioCheckbox.Location = new System.Drawing.Point(6, 86);
+			this.aspectRatioCheckbox.Location = new System.Drawing.Point(6, 115);
 			this.aspectRatioCheckbox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.aspectRatioCheckbox.Name = "aspectRatioCheckbox";
 			this.aspectRatioCheckbox.Size = new System.Drawing.Size(137, 19);
@@ -146,6 +149,9 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.size128Button);
+			this.groupBox1.Controls.Add(this.size64Button);
+			this.groupBox1.Controls.Add(this.defaultSizeButton);
 			this.groupBox1.Controls.Add(this.size256Button);
 			this.groupBox1.Controls.Add(this.presetsLabel);
 			this.groupBox1.Controls.Add(this.size1024Button);
@@ -158,21 +164,21 @@
 			this.groupBox1.Location = new System.Drawing.Point(10, 119);
 			this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(255, 158);
+			this.groupBox1.Size = new System.Drawing.Size(255, 187);
 			this.groupBox1.TabIndex = 8;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Load vector size";
+			this.groupBox1.Text = "Rasterize vector";
 			// 
 			// size256Button
 			// 
 			this.size256Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size256Button.FlatAppearance.BorderSize = 0;
 			this.size256Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size256Button.Location = new System.Drawing.Point(6, 50);
+			this.size256Button.Location = new System.Drawing.Point(6, 79);
 			this.size256Button.Name = "size256Button";
 			this.size256Button.Size = new System.Drawing.Size(77, 23);
 			this.size256Button.TabIndex = 36;
-			this.size256Button.Text = "256 x 256";
+			this.size256Button.Text = "256 px";
 			this.size256Button.UseVisualStyleBackColor = false;
 			this.size256Button.Click += new System.EventHandler(this.size256Button_Click);
 			// 
@@ -191,11 +197,11 @@
 			this.size1024Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size1024Button.FlatAppearance.BorderSize = 0;
 			this.size1024Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size1024Button.Location = new System.Drawing.Point(172, 50);
+			this.size1024Button.Location = new System.Drawing.Point(172, 79);
 			this.size1024Button.Name = "size1024Button";
 			this.size1024Button.Size = new System.Drawing.Size(77, 23);
 			this.size1024Button.TabIndex = 9;
-			this.size1024Button.Text = "1024 x 1024";
+			this.size1024Button.Text = "1024 px";
 			this.size1024Button.UseVisualStyleBackColor = false;
 			this.size1024Button.Click += new System.EventHandler(this.size1024Button_Click);
 			// 
@@ -204,11 +210,11 @@
 			this.size512Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size512Button.FlatAppearance.BorderSize = 0;
 			this.size512Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size512Button.Location = new System.Drawing.Point(89, 50);
+			this.size512Button.Location = new System.Drawing.Point(89, 79);
 			this.size512Button.Name = "size512Button";
 			this.size512Button.Size = new System.Drawing.Size(77, 23);
 			this.size512Button.TabIndex = 8;
-			this.size512Button.Text = "512 x 512";
+			this.size512Button.Text = "512 px";
 			this.size512Button.UseVisualStyleBackColor = false;
 			this.size512Button.Click += new System.EventHandler(this.size512Button_Click);
 			// 
@@ -223,12 +229,51 @@
 			this.logoPictureBox.TabIndex = 13;
 			this.logoPictureBox.TabStop = false;
 			// 
+			// defaultSizeButton
+			// 
+			this.defaultSizeButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.defaultSizeButton.FlatAppearance.BorderSize = 0;
+			this.defaultSizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.defaultSizeButton.Location = new System.Drawing.Point(6, 50);
+			this.defaultSizeButton.Name = "defaultSizeButton";
+			this.defaultSizeButton.Size = new System.Drawing.Size(77, 23);
+			this.defaultSizeButton.TabIndex = 37;
+			this.defaultSizeButton.Text = "Default size";
+			this.defaultSizeButton.UseVisualStyleBackColor = false;
+			this.defaultSizeButton.Click += new System.EventHandler(this.defaultSizeButton_Click);
+			// 
+			// size64Button
+			// 
+			this.size64Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size64Button.FlatAppearance.BorderSize = 0;
+			this.size64Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.size64Button.Location = new System.Drawing.Point(89, 50);
+			this.size64Button.Name = "size64Button";
+			this.size64Button.Size = new System.Drawing.Size(77, 23);
+			this.size64Button.TabIndex = 38;
+			this.size64Button.Text = "64 px";
+			this.size64Button.UseVisualStyleBackColor = false;
+			this.size64Button.Click += new System.EventHandler(this.size64Button_Click);
+			// 
+			// size128Button
+			// 
+			this.size128Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size128Button.FlatAppearance.BorderSize = 0;
+			this.size128Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.size128Button.Location = new System.Drawing.Point(172, 50);
+			this.size128Button.Name = "size128Button";
+			this.size128Button.Size = new System.Drawing.Size(77, 23);
+			this.size128Button.TabIndex = 39;
+			this.size128Button.Text = "128 px";
+			this.size128Button.UseVisualStyleBackColor = false;
+			this.size128Button.Click += new System.EventHandler(this.size128Button_Click);
+			// 
 			// SvgOpsForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 317);
+			this.ClientSize = new System.Drawing.Size(274, 346);
 			this.Controls.Add(this.logoPictureBox);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.okButton);
@@ -264,5 +309,8 @@
 		private System.Windows.Forms.Label presetsLabel;
 		private System.Windows.Forms.Button size256Button;
 		private System.Windows.Forms.PictureBox logoPictureBox;
+		private System.Windows.Forms.Button defaultSizeButton;
+		private System.Windows.Forms.Button size128Button;
+		private System.Windows.Forms.Button size64Button;
 	}
 }

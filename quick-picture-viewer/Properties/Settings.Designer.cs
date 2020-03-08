@@ -49,13 +49,25 @@ namespace quick_picture_viewer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("512")]
-        public int SvgSize {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CheckForUpdates {
             get {
-                return ((int)(this["SvgSize"]));
+                return ((bool)(this["CheckForUpdates"]));
             }
             set {
-                this["SvgSize"] = value;
+                this["CheckForUpdates"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Theme {
+            get {
+                return ((int)(this["Theme"]));
+            }
+            set {
+                this["Theme"] = value;
             }
         }
     }

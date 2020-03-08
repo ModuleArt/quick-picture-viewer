@@ -8,10 +8,12 @@ namespace quick_picture_viewer
 {
 	partial class AboutForm : Form
 	{
-		private bool darkMode = ThemeManager.isDarkTheme();
+		private bool darkMode;
 
-		public AboutForm()
+		public AboutForm(bool darkMode)
 		{
+			this.darkMode = darkMode;
+
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
@@ -30,6 +32,11 @@ namespace quick_picture_viewer
 			else if (IntPtr.Size == 8)
 			{
 				versionLabel.Text += " (x64)";
+			}
+
+			if (ThemeManager.isWindows10())
+			{
+				makeDefaultLink.Enabled = true;
 			}
 
 			if (darkMode)

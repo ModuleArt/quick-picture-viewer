@@ -46,7 +46,7 @@
 			this.buttonNo.FlatAppearance.BorderSize = 0;
 			this.buttonNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonNo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonNo.Location = new System.Drawing.Point(206, 108);
+			this.buttonNo.Location = new System.Drawing.Point(290, 108);
 			this.buttonNo.Margin = new System.Windows.Forms.Padding(0);
 			this.buttonNo.Name = "buttonNo";
 			this.buttonNo.Size = new System.Drawing.Size(75, 23);
@@ -62,7 +62,7 @@
 			this.buttonYes.FlatAppearance.BorderSize = 0;
 			this.buttonYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonYes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonYes.Location = new System.Drawing.Point(290, 108);
+			this.buttonYes.Location = new System.Drawing.Point(205, 108);
 			this.buttonYes.Margin = new System.Windows.Forms.Padding(0);
 			this.buttonYes.Name = "buttonYes";
 			this.buttonYes.Size = new System.Drawing.Size(75, 23);

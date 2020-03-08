@@ -13,8 +13,6 @@ namespace quick_picture_viewer
 				SetProcessDPIAware();
 			}
 
-			ThemeManager.allowDarkModeForApp(true);
-
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
@@ -27,7 +25,28 @@ namespace quick_picture_viewer
 			{
 				param = string.Empty;
 			}
-			Application.Run(new MainForm(param, ThemeManager.isDarkTheme()));
+
+			bool darkMode;
+			int theme = Properties.Settings.Default.Theme;
+			if (theme == 0)
+			{
+				darkMode = ThemeManager.isDarkTheme();
+			}
+			else if (theme == 1)
+			{
+				darkMode = false;
+			}
+			else
+			{
+				darkMode = true;
+			}
+
+			if (darkMode)
+			{
+				ThemeManager.allowDarkModeForApp(true);
+			}
+
+			Application.Run(new MainForm(param, darkMode));
 		}
 
 		[System.Runtime.InteropServices.DllImport("user32.dll")]

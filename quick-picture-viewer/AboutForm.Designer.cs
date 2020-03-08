@@ -169,6 +169,7 @@
 			// makeDefaultLink
 			// 
 			this.makeDefaultLink.AutoSize = true;
+			this.makeDefaultLink.Enabled = false;
 			this.makeDefaultLink.Location = new System.Drawing.Point(6, 193);
 			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.makeDefaultLink.Name = "makeDefaultLink";

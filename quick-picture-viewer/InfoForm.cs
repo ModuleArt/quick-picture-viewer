@@ -64,6 +64,9 @@ namespace quick_picture_viewer
 				diskSizeTextBox.BackColor = ThemeManager.SecondColorDark;
 				diskSizeTextBox.ForeColor = Color.White;
 
+				ratioTextBox.BackColor = ThemeManager.SecondColorDark;
+				ratioTextBox.ForeColor = Color.White;
+
 				createdTextBox.BackColor = ThemeManager.SecondColorDark;
 				createdTextBox.ForeColor = Color.White;
 
@@ -82,8 +85,8 @@ namespace quick_picture_viewer
 
 				diskSizeTextBox.Text = bytesToSize(path);
 
-				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " / " + File.GetCreationTime(path).ToLongTimeString();
-				modifiedTextBox.Text = File.GetLastWriteTime(path).ToShortDateString() + " / " + File.GetLastWriteTime(path).ToLongTimeString();
+				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
+				modifiedTextBox.Text = File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
 
 				propertiesButton.Enabled = true;
 			} 
@@ -108,6 +111,21 @@ namespace quick_picture_viewer
 			resolutionTextBox.Text = Math.Round(bitmap.HorizontalResolution) + " x " + Math.Round(bitmap.VerticalResolution) + " DPI";
 			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " inches";
 			cmTextBox.Text = cmWidth.ToString("0.##") + " x " + cmHeight.ToString("0.##") + " centimeters";
+			ratioTextBox.Text = string.Format("{0} : {1}", bitmap.Width / GCD(bitmap.Width, bitmap.Height), bitmap.Height / GCD(bitmap.Width, bitmap.Height));
+		}
+
+		private int GCD(int a, int b)
+		{
+			int Remainder;
+
+			while (b != 0)
+			{
+				Remainder = a % b;
+				a = b;
+				b = Remainder;
+			}
+
+			return a;
 		}
 
 		private string bytesToSize(string path)

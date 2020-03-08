@@ -31,6 +31,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiniViewForm));
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
+			this.gripButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -68,12 +69,29 @@
 			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.suggestionLabel.Visible = false;
 			// 
+			// gripButton
+			// 
+			this.gripButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.gripButton.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+			this.gripButton.FlatAppearance.BorderSize = 0;
+			this.gripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.gripButton.Image = ((System.Drawing.Image)(resources.GetObject("gripButton.Image")));
+			this.gripButton.Location = new System.Drawing.Point(370, 370);
+			this.gripButton.Margin = new System.Windows.Forms.Padding(9);
+			this.gripButton.Name = "gripButton";
+			this.gripButton.Size = new System.Drawing.Size(21, 21);
+			this.gripButton.TabIndex = 3;
+			this.gripButton.TabStop = false;
+			this.gripButton.UseVisualStyleBackColor = true;
+			this.gripButton.Visible = false;
+			// 
 			// MiniViewForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(400, 400);
+			this.Controls.Add(this.gripButton);
 			this.Controls.Add(this.suggestionLabel);
 			this.Controls.Add(this.pictureBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -95,5 +113,6 @@
 
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label suggestionLabel;
+		private System.Windows.Forms.Button gripButton;
 	}
 }

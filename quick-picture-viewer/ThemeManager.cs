@@ -103,9 +103,16 @@ namespace quick_picture_viewer
 		{
 			if (isWindows10())
 			{
-				string root = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize";
-				string str = Registry.GetValue(root, "AppsUseLightTheme", null).ToString();
-				return (str == "0");
+				try
+				{
+					string root = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize";
+					string str = Registry.GetValue(root, "AppsUseLightTheme", null).ToString();
+					return (str == "0");
+				}
+				catch
+				{
+					return false;
+				}
 			}
 			else
 			{
@@ -115,9 +122,16 @@ namespace quick_picture_viewer
 
 		public static bool isWindows10()
 		{
-			var reg = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
-			string productName = (string)reg.GetValue("ProductName");
-			return productName.StartsWith("Windows 10");
+			try
+			{
+				var reg = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
+				string productName = (string)reg.GetValue("ProductName");
+				return productName.StartsWith("Windows 10");
+			}
+			catch
+			{
+				return false;
+			}
 		}
 
 		public static void PaintDarkGroupBox(object sender, PaintEventArgs p)
