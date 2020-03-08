@@ -22,7 +22,7 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.11.0">v1.11.0</a> (2.2 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.11.0/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.0">v1.12.0</a> (2.3 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.0/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
@@ -56,7 +56,8 @@
 <h2 align="center">Additional</h2>
 <p align="center">
   How to <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">uninstall built-in photos app</a> in Windows 10:<br>
-  <b>Powershell (Admin) ></b>   Get-AppxPackage *photos* | Remove-AppxPackage
+  <b>Powershell (Admin) ></b>   Get-AppxPackage *photos* | Remove-AppxPackage<br><br>
+  <a href="https://github.com/tibold/svg-explorer-extension/">Extension module</a> for Windows Explorer to render SVG thumbnails
 </p>
 
 <h2 align="center">Inspirers</h2>
