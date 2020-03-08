@@ -74,12 +74,10 @@ namespace quick_picture_viewer
 			return await Github.Miscellaneous.RenderRawMarkdown(LatestRelease.Body);
 		}
 
-		public void DownloadAsset(string assetname)
+		public string GetAssetUrl(string assetname)
 		{
 			const string template = "https://github.com/{0}/{1}/releases/download/{2}/{3}";
-			var url = string.Format(template, RepositoryOwner, RepostoryName, LatestRelease.TagName, assetname);
-
-			System.Diagnostics.Process.Start(url);
+			return string.Format(template, RepositoryOwner, RepostoryName, LatestRelease.TagName, assetname);
 		}
 	}
 }

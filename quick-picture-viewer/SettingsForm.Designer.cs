@@ -49,7 +49,7 @@
 			this.logoPictureBox.Location = new System.Drawing.Point(9, 9);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(256, 100);
+			this.logoPictureBox.Size = new System.Drawing.Size(256, 80);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 12;
 			this.logoPictureBox.TabStop = false;
@@ -61,7 +61,7 @@
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(9, 257);
+			this.okButton.Location = new System.Drawing.Point(9, 237);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
@@ -74,7 +74,7 @@
 			this.tabControl1.Controls.Add(this.themeTab);
 			this.tabControl1.Controls.Add(this.updatesTab);
 			this.tabControl1.ItemSize = new System.Drawing.Size(40, 23);
-			this.tabControl1.Location = new System.Drawing.Point(9, 118);
+			this.tabControl1.Location = new System.Drawing.Point(9, 98);
 			this.tabControl1.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.tabControl1.Multiline = true;
 			this.tabControl1.Name = "tabControl1";
@@ -141,7 +141,7 @@
 			this.updatesTab.Location = new System.Drawing.Point(4, 27);
 			this.updatesTab.Name = "updatesTab";
 			this.updatesTab.Padding = new System.Windows.Forms.Padding(3);
-			this.updatesTab.Size = new System.Drawing.Size(248, 131);
+			this.updatesTab.Size = new System.Drawing.Size(248, 99);
 			this.updatesTab.TabIndex = 0;
 			this.updatesTab.Text = "Updates";
 			this.updatesTab.UseVisualStyleBackColor = true;
@@ -163,7 +163,7 @@
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 289);
+			this.ClientSize = new System.Drawing.Size(274, 269);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);

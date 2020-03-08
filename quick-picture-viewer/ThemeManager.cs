@@ -144,7 +144,7 @@ namespace quick_picture_viewer
 			p.Graphics.Clear(ThemeManager.BackColorDark);
 
 			p.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
-			p.Graphics.DrawString(box.Text, box.Font, Brushes.White, 0, -3);
+			p.Graphics.DrawString(box.Text, box.Font, Brushes.White, -1, -3);
 
 			p.Graphics.DrawLine(pen, 0, 16, 0, box.Height - 2);
 			p.Graphics.DrawLine(pen, 0, 16, box.Width - 1, 16);

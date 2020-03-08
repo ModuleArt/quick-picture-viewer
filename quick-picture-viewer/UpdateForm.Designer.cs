@@ -51,7 +51,7 @@
 			this.buttonNo.Name = "buttonNo";
 			this.buttonNo.Size = new System.Drawing.Size(75, 23);
 			this.buttonNo.TabIndex = 2;
-			this.buttonNo.Text = "No";
+			this.buttonNo.Text = "Close";
 			this.buttonNo.UseVisualStyleBackColor = false;
 			// 
 			// buttonYes
@@ -67,7 +67,7 @@
 			this.buttonYes.Name = "buttonYes";
 			this.buttonYes.Size = new System.Drawing.Size(75, 23);
 			this.buttonYes.TabIndex = 1;
-			this.buttonYes.Text = "Yes";
+			this.buttonYes.Text = "Download";
 			this.buttonYes.UseVisualStyleBackColor = false;
 			// 
 			// label1

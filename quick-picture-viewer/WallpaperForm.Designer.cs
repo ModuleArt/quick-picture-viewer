@@ -47,7 +47,7 @@
 			this.logoPictureBox.Location = new System.Drawing.Point(9, 9);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(256, 100);
+			this.logoPictureBox.Size = new System.Drawing.Size(256, 80);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 12;
 			this.logoPictureBox.TabStop = false;
@@ -60,7 +60,7 @@
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
-			this.okButton.Location = new System.Drawing.Point(9, 237);
+			this.okButton.Location = new System.Drawing.Point(9, 217);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
@@ -79,7 +79,7 @@
 			this.groupBox1.Controls.Add(this.stretchedRadio);
 			this.groupBox1.Controls.Add(this.centeredRadio);
 			this.groupBox1.Controls.Add(this.tiledRadio);
-			this.groupBox1.Location = new System.Drawing.Point(9, 118);
+			this.groupBox1.Location = new System.Drawing.Point(9, 98);
 			this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(256, 111);
@@ -155,7 +155,7 @@
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 269);
+			this.ClientSize = new System.Drawing.Size(274, 249);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);

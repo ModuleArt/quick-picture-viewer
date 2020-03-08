@@ -55,7 +55,7 @@
 			this.logoPictureBox.Location = new System.Drawing.Point(9, 9);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(256, 100);
+			this.logoPictureBox.Size = new System.Drawing.Size(256, 80);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 12;
 			this.logoPictureBox.TabStop = false;
@@ -141,7 +141,7 @@
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(9, 451);
+			this.okButton.Location = new System.Drawing.Point(9, 431);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
@@ -151,6 +151,7 @@
 			// 
 			// infoGroup
 			// 
+			this.infoGroup.Controls.Add(this.licenseLabel);
 			this.infoGroup.Controls.Add(this.makeDefaultLink);
 			this.infoGroup.Controls.Add(this.updatesLink);
 			this.infoGroup.Controls.Add(this.versionLabel);
@@ -158,7 +159,7 @@
 			this.infoGroup.Controls.Add(this.productLabel);
 			this.infoGroup.Controls.Add(this.descriptionLabel);
 			this.infoGroup.Controls.Add(this.authorLabel);
-			this.infoGroup.Location = new System.Drawing.Point(9, 118);
+			this.infoGroup.Location = new System.Drawing.Point(9, 98);
 			this.infoGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.infoGroup.Name = "infoGroup";
 			this.infoGroup.Size = new System.Drawing.Size(256, 253);
@@ -209,7 +210,7 @@
 			this.pagesGroup.Controls.Add(this.developerLink);
 			this.pagesGroup.Controls.Add(this.projectLink);
 			this.pagesGroup.Controls.Add(this.issuesLink);
-			this.pagesGroup.Location = new System.Drawing.Point(9, 380);
+			this.pagesGroup.Location = new System.Drawing.Point(9, 360);
 			this.pagesGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.pagesGroup.Name = "pagesGroup";
 			this.pagesGroup.Size = new System.Drawing.Size(256, 63);
@@ -232,7 +233,7 @@
 			// licenseLabel
 			// 
 			this.licenseLabel.AutoSize = true;
-			this.licenseLabel.Location = new System.Drawing.Point(15, 338);
+			this.licenseLabel.Location = new System.Drawing.Point(6, 220);
 			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.licenseLabel.Name = "licenseLabel";
 			this.licenseLabel.Size = new System.Drawing.Size(93, 15);
@@ -244,8 +245,7 @@
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 483);
-			this.Controls.Add(this.licenseLabel);
+			this.ClientSize = new System.Drawing.Size(274, 463);
 			this.Controls.Add(this.pagesGroup);
 			this.Controls.Add(this.infoGroup);
 			this.Controls.Add(this.okButton);
@@ -269,7 +269,6 @@
 			this.pagesGroup.ResumeLayout(false);
 			this.pagesGroup.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 

@@ -27,11 +27,17 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoForm));
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.fileNameLabel = new System.Windows.Forms.Label();
 			this.okButton = new System.Windows.Forms.Button();
 			this.fileGroup = new System.Windows.Forms.GroupBox();
+			this.extensionTextBox = new System.Windows.Forms.TextBox();
+			this.extensionLabel = new System.Windows.Forms.Label();
+			this.copyPathButton = new System.Windows.Forms.Button();
+			this.copyFolderButton = new System.Windows.Forms.Button();
+			this.copyNameButton = new System.Windows.Forms.Button();
 			this.compressionTextBox = new System.Windows.Forms.TextBox();
 			this.compressionLabel = new System.Windows.Forms.Label();
 			this.fullPathTextBox = new System.Windows.Forms.TextBox();
@@ -50,6 +56,8 @@
 			this.cmTextBox = new System.Windows.Forms.TextBox();
 			this.cmLabel = new System.Windows.Forms.Label();
 			this.sizeGroup = new System.Windows.Forms.GroupBox();
+			this.ratioLabel = new System.Windows.Forms.Label();
+			this.ratioTextBox = new System.Windows.Forms.TextBox();
 			this.diskSizeTextBox = new System.Windows.Forms.TextBox();
 			this.diskSizeLabel = new System.Windows.Forms.Label();
 			this.dateGroup = new System.Windows.Forms.GroupBox();
@@ -58,8 +66,7 @@
 			this.createdLabel = new System.Windows.Forms.Label();
 			this.createdTextBox = new System.Windows.Forms.TextBox();
 			this.propertiesButton = new System.Windows.Forms.Button();
-			this.ratioTextBox = new System.Windows.Forms.TextBox();
-			this.ratioLabel = new System.Windows.Forms.Label();
+			this.copyTooltip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.fileGroup.SuspendLayout();
 			this.sizeGroup.SuspendLayout();
@@ -72,7 +79,7 @@
 			this.logoPictureBox.Location = new System.Drawing.Point(9, 9);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(256, 100);
+			this.logoPictureBox.Size = new System.Drawing.Size(356, 80);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 12;
 			this.logoPictureBox.TabStop = false;
@@ -94,7 +101,7 @@
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(141, 599);
+			this.okButton.Location = new System.Drawing.Point(241, 579);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(124, 23);
@@ -104,6 +111,11 @@
 			// 
 			// fileGroup
 			// 
+			this.fileGroup.Controls.Add(this.extensionTextBox);
+			this.fileGroup.Controls.Add(this.extensionLabel);
+			this.fileGroup.Controls.Add(this.copyPathButton);
+			this.fileGroup.Controls.Add(this.copyFolderButton);
+			this.fileGroup.Controls.Add(this.copyNameButton);
 			this.fileGroup.Controls.Add(this.compressionTextBox);
 			this.fileGroup.Controls.Add(this.compressionLabel);
 			this.fileGroup.Controls.Add(this.fullPathTextBox);
@@ -112,13 +124,83 @@
 			this.fileGroup.Controls.Add(this.fileNameTextBox);
 			this.fileGroup.Controls.Add(this.folderLabel);
 			this.fileGroup.Controls.Add(this.fileNameLabel);
-			this.fileGroup.Location = new System.Drawing.Point(9, 118);
+			this.fileGroup.Location = new System.Drawing.Point(9, 98);
 			this.fileGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.fileGroup.Name = "fileGroup";
-			this.fileGroup.Size = new System.Drawing.Size(256, 143);
+			this.fileGroup.Size = new System.Drawing.Size(356, 143);
 			this.fileGroup.TabIndex = 34;
 			this.fileGroup.TabStop = false;
 			this.fileGroup.Text = "File";
+			// 
+			// extensionTextBox
+			// 
+			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.extensionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.extensionTextBox.Location = new System.Drawing.Point(252, 104);
+			this.extensionTextBox.Multiline = true;
+			this.extensionTextBox.Name = "extensionTextBox";
+			this.extensionTextBox.ReadOnly = true;
+			this.extensionTextBox.Size = new System.Drawing.Size(70, 20);
+			this.extensionTextBox.TabIndex = 52;
+			this.extensionTextBox.Text = "Unknown";
+			// 
+			// extensionLabel
+			// 
+			this.extensionLabel.AutoSize = true;
+			this.extensionLabel.Location = new System.Drawing.Point(180, 106);
+			this.extensionLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.extensionLabel.Name = "extensionLabel";
+			this.extensionLabel.Size = new System.Drawing.Size(61, 15);
+			this.extensionLabel.TabIndex = 51;
+			this.extensionLabel.Text = "Extension:";
+			// 
+			// copyPathButton
+			// 
+			this.copyPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.copyPathButton.BackColor = System.Drawing.SystemColors.Control;
+			this.copyPathButton.FlatAppearance.BorderSize = 0;
+			this.copyPathButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.copyPathButton.Image = ((System.Drawing.Image)(resources.GetObject("copyPathButton.Image")));
+			this.copyPathButton.Location = new System.Drawing.Point(324, 75);
+			this.copyPathButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+			this.copyPathButton.Name = "copyPathButton";
+			this.copyPathButton.Size = new System.Drawing.Size(26, 25);
+			this.copyPathButton.TabIndex = 50;
+			this.copyPathButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.copyPathButton.UseVisualStyleBackColor = false;
+			this.copyPathButton.Click += new System.EventHandler(this.copyPathButton_Click);
+			// 
+			// copyFolderButton
+			// 
+			this.copyFolderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.copyFolderButton.BackColor = System.Drawing.SystemColors.Control;
+			this.copyFolderButton.FlatAppearance.BorderSize = 0;
+			this.copyFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.copyFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("copyFolderButton.Image")));
+			this.copyFolderButton.Location = new System.Drawing.Point(324, 49);
+			this.copyFolderButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+			this.copyFolderButton.Name = "copyFolderButton";
+			this.copyFolderButton.Size = new System.Drawing.Size(26, 25);
+			this.copyFolderButton.TabIndex = 49;
+			this.copyFolderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.copyFolderButton.UseVisualStyleBackColor = false;
+			this.copyFolderButton.Click += new System.EventHandler(this.copyFolderButton_Click);
+			// 
+			// copyNameButton
+			// 
+			this.copyNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.copyNameButton.BackColor = System.Drawing.SystemColors.Control;
+			this.copyNameButton.FlatAppearance.BorderSize = 0;
+			this.copyNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.copyNameButton.Image = ((System.Drawing.Image)(resources.GetObject("copyNameButton.Image")));
+			this.copyNameButton.Location = new System.Drawing.Point(324, 23);
+			this.copyNameButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+			this.copyNameButton.Name = "copyNameButton";
+			this.copyNameButton.Size = new System.Drawing.Size(26, 25);
+			this.copyNameButton.TabIndex = 48;
+			this.copyNameButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.copyNameButton.UseVisualStyleBackColor = false;
+			this.copyNameButton.Click += new System.EventHandler(this.copyNameButton_Click);
 			// 
 			// compressionTextBox
 			// 
@@ -128,7 +210,7 @@
 			this.compressionTextBox.Multiline = true;
 			this.compressionTextBox.Name = "compressionTextBox";
 			this.compressionTextBox.ReadOnly = true;
-			this.compressionTextBox.Size = new System.Drawing.Size(153, 20);
+			this.compressionTextBox.Size = new System.Drawing.Size(70, 20);
 			this.compressionTextBox.TabIndex = 34;
 			// 
 			// compressionLabel
@@ -149,7 +231,7 @@
 			this.fullPathTextBox.Multiline = true;
 			this.fullPathTextBox.Name = "fullPathTextBox";
 			this.fullPathTextBox.ReadOnly = true;
-			this.fullPathTextBox.Size = new System.Drawing.Size(153, 20);
+			this.fullPathTextBox.Size = new System.Drawing.Size(225, 20);
 			this.fullPathTextBox.TabIndex = 32;
 			this.fullPathTextBox.Text = "Unknown";
 			this.fullPathTextBox.WordWrap = false;
@@ -172,7 +254,7 @@
 			this.folderTextBox.Multiline = true;
 			this.folderTextBox.Name = "folderTextBox";
 			this.folderTextBox.ReadOnly = true;
-			this.folderTextBox.Size = new System.Drawing.Size(153, 20);
+			this.folderTextBox.Size = new System.Drawing.Size(225, 20);
 			this.folderTextBox.TabIndex = 30;
 			this.folderTextBox.Text = "Not exists";
 			// 
@@ -181,11 +263,11 @@
 			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.fileNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.fileNameTextBox.Location = new System.Drawing.Point(97, 26);
-			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 0, 3);
 			this.fileNameTextBox.Multiline = true;
 			this.fileNameTextBox.Name = "fileNameTextBox";
 			this.fileNameTextBox.ReadOnly = true;
-			this.fileNameTextBox.Size = new System.Drawing.Size(153, 20);
+			this.fileNameTextBox.Size = new System.Drawing.Size(225, 20);
 			this.fileNameTextBox.TabIndex = 29;
 			this.fileNameTextBox.Text = "None";
 			// 
@@ -204,10 +286,11 @@
 			this.sizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.sizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.sizeTextBox.Location = new System.Drawing.Point(97, 26);
+			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
 			this.sizeTextBox.Multiline = true;
 			this.sizeTextBox.Name = "sizeTextBox";
 			this.sizeTextBox.ReadOnly = true;
-			this.sizeTextBox.Size = new System.Drawing.Size(153, 20);
+			this.sizeTextBox.Size = new System.Drawing.Size(249, 20);
 			this.sizeTextBox.TabIndex = 36;
 			// 
 			// sizeLabel
@@ -228,7 +311,7 @@
 			this.megapixelsTextBox.Multiline = true;
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
 			this.megapixelsTextBox.ReadOnly = true;
-			this.megapixelsTextBox.Size = new System.Drawing.Size(153, 20);
+			this.megapixelsTextBox.Size = new System.Drawing.Size(249, 20);
 			this.megapixelsTextBox.TabIndex = 38;
 			// 
 			// megapixelsLabel
@@ -249,7 +332,7 @@
 			this.resolutionTextBox.Multiline = true;
 			this.resolutionTextBox.Name = "resolutionTextBox";
 			this.resolutionTextBox.ReadOnly = true;
-			this.resolutionTextBox.Size = new System.Drawing.Size(153, 20);
+			this.resolutionTextBox.Size = new System.Drawing.Size(249, 20);
 			this.resolutionTextBox.TabIndex = 40;
 			// 
 			// resolutionLabel
@@ -270,7 +353,7 @@
 			this.inchesTextBox.Multiline = true;
 			this.inchesTextBox.Name = "inchesTextBox";
 			this.inchesTextBox.ReadOnly = true;
-			this.inchesTextBox.Size = new System.Drawing.Size(153, 20);
+			this.inchesTextBox.Size = new System.Drawing.Size(249, 20);
 			this.inchesTextBox.TabIndex = 42;
 			// 
 			// inchesLabel
@@ -291,7 +374,7 @@
 			this.cmTextBox.Multiline = true;
 			this.cmTextBox.Name = "cmTextBox";
 			this.cmTextBox.ReadOnly = true;
-			this.cmTextBox.Size = new System.Drawing.Size(153, 20);
+			this.cmTextBox.Size = new System.Drawing.Size(249, 20);
 			this.cmTextBox.TabIndex = 44;
 			// 
 			// cmLabel
@@ -320,13 +403,34 @@
 			this.sizeGroup.Controls.Add(this.megapixelsLabel);
 			this.sizeGroup.Controls.Add(this.resolutionTextBox);
 			this.sizeGroup.Controls.Add(this.resolutionLabel);
-			this.sizeGroup.Location = new System.Drawing.Point(9, 270);
+			this.sizeGroup.Location = new System.Drawing.Point(9, 250);
 			this.sizeGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.sizeGroup.Name = "sizeGroup";
-			this.sizeGroup.Size = new System.Drawing.Size(256, 221);
+			this.sizeGroup.Size = new System.Drawing.Size(356, 221);
 			this.sizeGroup.TabIndex = 45;
 			this.sizeGroup.TabStop = false;
 			this.sizeGroup.Text = "Size";
+			// 
+			// ratioLabel
+			// 
+			this.ratioLabel.AutoSize = true;
+			this.ratioLabel.Location = new System.Drawing.Point(6, 184);
+			this.ratioLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.ratioLabel.Name = "ratioLabel";
+			this.ratioLabel.Size = new System.Drawing.Size(73, 15);
+			this.ratioLabel.TabIndex = 48;
+			this.ratioLabel.Text = "Aspect ratio:";
+			// 
+			// ratioTextBox
+			// 
+			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.ratioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.ratioTextBox.Location = new System.Drawing.Point(97, 182);
+			this.ratioTextBox.Multiline = true;
+			this.ratioTextBox.Name = "ratioTextBox";
+			this.ratioTextBox.ReadOnly = true;
+			this.ratioTextBox.Size = new System.Drawing.Size(249, 20);
+			this.ratioTextBox.TabIndex = 47;
 			// 
 			// diskSizeTextBox
 			// 
@@ -336,7 +440,7 @@
 			this.diskSizeTextBox.Multiline = true;
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
 			this.diskSizeTextBox.ReadOnly = true;
-			this.diskSizeTextBox.Size = new System.Drawing.Size(153, 20);
+			this.diskSizeTextBox.Size = new System.Drawing.Size(249, 20);
 			this.diskSizeTextBox.TabIndex = 46;
 			this.diskSizeTextBox.Text = "Unknown";
 			// 
@@ -356,10 +460,10 @@
 			this.dateGroup.Controls.Add(this.modifiedTextBox);
 			this.dateGroup.Controls.Add(this.createdLabel);
 			this.dateGroup.Controls.Add(this.createdTextBox);
-			this.dateGroup.Location = new System.Drawing.Point(9, 500);
+			this.dateGroup.Location = new System.Drawing.Point(9, 480);
 			this.dateGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.dateGroup.Name = "dateGroup";
-			this.dateGroup.Size = new System.Drawing.Size(256, 91);
+			this.dateGroup.Size = new System.Drawing.Size(356, 91);
 			this.dateGroup.TabIndex = 46;
 			this.dateGroup.TabStop = false;
 			this.dateGroup.Text = "Date";
@@ -382,7 +486,7 @@
 			this.modifiedTextBox.Multiline = true;
 			this.modifiedTextBox.Name = "modifiedTextBox";
 			this.modifiedTextBox.ReadOnly = true;
-			this.modifiedTextBox.Size = new System.Drawing.Size(153, 20);
+			this.modifiedTextBox.Size = new System.Drawing.Size(249, 20);
 			this.modifiedTextBox.TabIndex = 40;
 			this.modifiedTextBox.Text = "Unknown";
 			// 
@@ -404,7 +508,7 @@
 			this.createdTextBox.Multiline = true;
 			this.createdTextBox.Name = "createdTextBox";
 			this.createdTextBox.ReadOnly = true;
-			this.createdTextBox.Size = new System.Drawing.Size(153, 20);
+			this.createdTextBox.Size = new System.Drawing.Size(249, 20);
 			this.createdTextBox.TabIndex = 38;
 			this.createdTextBox.Text = "Unknown";
 			// 
@@ -412,12 +516,11 @@
 			// 
 			this.propertiesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.propertiesButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.propertiesButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.propertiesButton.Enabled = false;
 			this.propertiesButton.FlatAppearance.BorderSize = 0;
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));
-			this.propertiesButton.Location = new System.Drawing.Point(9, 599);
+			this.propertiesButton.Location = new System.Drawing.Point(9, 579);
 			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0);
 			this.propertiesButton.Name = "propertiesButton";
 			this.propertiesButton.Size = new System.Drawing.Size(124, 23);
@@ -429,33 +532,12 @@
 			this.propertiesButton.Click += new System.EventHandler(this.propertiesButton_Click);
 			this.propertiesButton.Paint += new System.Windows.Forms.PaintEventHandler(this.propertiesButton_Paint);
 			// 
-			// ratioTextBox
-			// 
-			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.ratioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.ratioTextBox.Location = new System.Drawing.Point(97, 182);
-			this.ratioTextBox.Multiline = true;
-			this.ratioTextBox.Name = "ratioTextBox";
-			this.ratioTextBox.ReadOnly = true;
-			this.ratioTextBox.Size = new System.Drawing.Size(153, 20);
-			this.ratioTextBox.TabIndex = 47;
-			// 
-			// ratioLabel
-			// 
-			this.ratioLabel.AutoSize = true;
-			this.ratioLabel.Location = new System.Drawing.Point(6, 184);
-			this.ratioLabel.Margin = new System.Windows.Forms.Padding(3);
-			this.ratioLabel.Name = "ratioLabel";
-			this.ratioLabel.Size = new System.Drawing.Size(73, 15);
-			this.ratioLabel.TabIndex = 48;
-			this.ratioLabel.Text = "Aspect ratio:";
-			// 
 			// InfoForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 631);
+			this.ClientSize = new System.Drawing.Size(374, 611);
 			this.Controls.Add(this.propertiesButton);
 			this.Controls.Add(this.dateGroup);
 			this.Controls.Add(this.sizeGroup);
@@ -519,5 +601,11 @@
 		private System.Windows.Forms.Button propertiesButton;
 		private System.Windows.Forms.Label ratioLabel;
 		private System.Windows.Forms.TextBox ratioTextBox;
+		private System.Windows.Forms.Button copyNameButton;
+		private System.Windows.Forms.Button copyFolderButton;
+		private System.Windows.Forms.Button copyPathButton;
+		private System.Windows.Forms.TextBox extensionTextBox;
+		private System.Windows.Forms.Label extensionLabel;
+		private System.Windows.Forms.ToolTip copyTooltip;
 	}
 }

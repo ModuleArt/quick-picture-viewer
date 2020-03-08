@@ -101,6 +101,12 @@
     <Compile Include="CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DownloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadForm.Designer.cs">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IcoWrapper.cs" />
     <Compile Include="InfoForm.cs">
       <SubType>Form</SubType>
@@ -164,6 +170,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebPWrapper.cs" />
+    <EmbeddedResource Include="DownloadForm.resx">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,7 +274,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="picture.ico" />
     <None Include="resources\imgs\light\white-settings.png" />
     <None Include="resources\imgs\light\white-close.png" />
     <None Include="resources\imgs\light\white-miniview.png" />
@@ -277,6 +285,9 @@
     <None Include="resources\imgs\light\white-options.png" />
     <None Include="resources\imgs\light\white-more.png" />
     <None Include="resources\imgs\light\white-slideshow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="picture.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

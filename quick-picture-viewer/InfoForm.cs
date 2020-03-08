@@ -20,6 +20,10 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 
+			copyTooltip.SetToolTip(copyNameButton, "Copy value");
+			copyTooltip.SetToolTip(copyFolderButton, "Copy value");
+			copyTooltip.SetToolTip(copyPathButton, "Copy value");
+
 			if (darkMode)
 			{
 				this.BackColor = ThemeManager.BackColorDark;
@@ -45,6 +49,9 @@ namespace quick_picture_viewer
 
 				compressionTextBox.BackColor = ThemeManager.SecondColorDark;
 				compressionTextBox.ForeColor = Color.White;
+
+				extensionTextBox.BackColor = ThemeManager.SecondColorDark;
+				extensionTextBox.ForeColor = Color.White;
 
 				sizeTextBox.BackColor = ThemeManager.SecondColorDark;
 				sizeTextBox.ForeColor = Color.White;
@@ -72,6 +79,13 @@ namespace quick_picture_viewer
 
 				modifiedTextBox.BackColor = ThemeManager.SecondColorDark;
 				modifiedTextBox.ForeColor = Color.White;
+
+				copyNameButton.Image = Properties.Resources.white_copy;
+				copyNameButton.BackColor = ThemeManager.BackColorDark;
+				copyFolderButton.Image = Properties.Resources.white_copy;
+				copyFolderButton.BackColor = ThemeManager.BackColorDark;
+				copyPathButton.Image = Properties.Resources.white_copy;
+				copyPathButton.BackColor = ThemeManager.BackColorDark;
 			}
 
 			if (directoryName != null)
@@ -84,6 +98,7 @@ namespace quick_picture_viewer
 				fullPathTextBox.Text = path;
 
 				diskSizeTextBox.Text = bytesToSize(path);
+				extensionTextBox.Text = Path.GetExtension(path).Substring(1, Path.GetExtension(path).Length - 1).ToLower();
 
 				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
 				modifiedTextBox.Text = File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
@@ -197,6 +212,21 @@ namespace quick_picture_viewer
 					TextRenderer.DrawText(e.Graphics, "File properties", btn.Font, e.ClipRectangle, ThemeManager.SecondColorDark, flags);
 				}
 			}
+		}
+
+		private void copyNameButton_Click(object sender, EventArgs e)
+		{
+			Clipboard.SetText(fileNameTextBox.Text);
+		}
+
+		private void copyFolderButton_Click(object sender, EventArgs e)
+		{
+			Clipboard.SetText(folderTextBox.Text);
+		}
+
+		private void copyPathButton_Click(object sender, EventArgs e)
+		{
+			Clipboard.SetText(fullPathTextBox.Text);
 		}
 	}
 }

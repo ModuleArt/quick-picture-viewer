@@ -28,6 +28,11 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 
+			this.MaximumSize = new Size(
+				Screen.FromHandle(this.Handle).WorkingArea.Width / 2,
+				Screen.FromHandle(this.Handle).WorkingArea.Height / 2
+			);
+
 			ratio = (float)image.Width / (float)image.Height;
 
 			if (image.Width > image.Height)
@@ -41,6 +46,11 @@ namespace quick_picture_viewer
 				this.Height = 400;
 			}
 
+			if (this.Width <= 200)
+			{
+				this.Height = Convert.ToInt32(this.Width / ratio);
+			}
+
 			pictureBox1.Image = image;
 
 			resizeTimer.Elapsed += new ElapsedEventHandler(resizeTimer_Elapsed);
@@ -51,17 +61,10 @@ namespace quick_picture_viewer
 		{
 			this.Invoke((MethodInvoker)(() => {
 				Point curPos = this.PointToClient(Cursor.Position);
+
 				int newWidth = curSize.Width + curPos.X - startPos.X;
-				int maxWidth = Screen.PrimaryScreen.WorkingArea.Width / 2;
-				if (newWidth < 200)
-				{
-					newWidth = 200;
-				}
-				else if (newWidth > maxWidth)
-				{
-					newWidth = maxWidth;
-				}
-				int newHeight = Convert.ToInt32(((float)newWidth / ratio));
+				int newHeight = Convert.ToInt32((float)newWidth / ratio);
+
 				this.Size = new Size(newWidth, newHeight);
 			}));
 		}

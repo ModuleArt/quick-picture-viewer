@@ -78,8 +78,8 @@ namespace quick_picture_viewer
 		private void updatesLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			MainForm parent = (MainForm) this.Owner;
-
 			parent.checkForUpdates(true);
+			this.Close();
 		}
 
 		private void makeDefaultLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

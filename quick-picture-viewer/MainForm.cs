@@ -152,8 +152,13 @@ namespace quick_picture_viewer
 					DialogResult result = updateDialog.ShowDialog();
 					if (result == DialogResult.Yes)
 					{
-						checker.DownloadAsset("QuickPictureViewer-Setup.msi");
-						this.Close();
+						DownloadForm downloadBox = new DownloadForm(checker.GetAssetUrl("QuickPictureViewer-Setup.msi"), darkMode);
+						downloadBox.Owner = this;
+						if (alwaysOnTop)
+						{
+							downloadBox.TopMost = true;
+						}
+						downloadBox.ShowDialog();
 					}
 					else
 					{
