@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using Microsoft.Win32;
 
 namespace quick_picture_viewer
 {
@@ -19,7 +21,7 @@ namespace quick_picture_viewer
                 this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
             }
 
-            fileName = System.IO.Path.GetFileName(url);
+            fileName = Path.Combine(GetDownloadFolderPath(), System.IO.Path.GetFileName(url));
 
             InitializeComponent();
 
@@ -38,6 +40,18 @@ namespace quick_picture_viewer
             wc.DownloadFileCompleted += wc_DownloadFileCompleted;
 
             wc.DownloadFileAsync(new Uri(url), fileName);
+        }
+
+        private string GetDownloadFolderPath()
+        {
+            try
+            {
+                return Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders", "{374DE290-123F-4565-9164-39C4925E467B}", String.Empty).ToString();
+            }
+            catch
+            {
+                return "";
+            }
         }
 
         private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
