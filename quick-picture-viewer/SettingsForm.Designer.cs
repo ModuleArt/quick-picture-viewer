@@ -65,7 +65,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 21;
+			this.okButton.TabIndex = 0;
 			this.okButton.Text = "Close";
 			this.okButton.UseVisualStyleBackColor = false;
 			// 
@@ -80,7 +80,7 @@
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(256, 130);
-			this.tabControl1.TabIndex = 22;
+			this.tabControl1.TabIndex = 0;
 			this.tabControl1.TabStop = false;
 			this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
 			// 

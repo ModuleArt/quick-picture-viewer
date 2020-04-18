@@ -38,12 +38,12 @@
 			this.projectLink = new System.Windows.Forms.LinkLabel();
 			this.okButton = new System.Windows.Forms.Button();
 			this.infoGroup = new System.Windows.Forms.GroupBox();
+			this.licenseLabel = new System.Windows.Forms.Label();
 			this.makeDefaultLink = new System.Windows.Forms.LinkLabel();
 			this.updatesLink = new System.Windows.Forms.LinkLabel();
 			this.issuesLink = new System.Windows.Forms.LinkLabel();
 			this.pagesGroup = new System.Windows.Forms.GroupBox();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
-			this.licenseLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.infoGroup.SuspendLayout();
 			this.pagesGroup.SuspendLayout();
@@ -117,7 +117,7 @@
 			this.developerLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.developerLink.Name = "developerLink";
 			this.developerLink.Size = new System.Drawing.Size(67, 15);
-			this.developerLink.TabIndex = 32;
+			this.developerLink.TabIndex = 2;
 			this.developerLink.TabStop = true;
 			this.developerLink.Text = "Module Art";
 			this.developerLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.developerLink_LinkClicked);
@@ -129,7 +129,7 @@
 			this.projectLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.projectLink.Name = "projectLink";
 			this.projectLink.Size = new System.Drawing.Size(73, 15);
-			this.projectLink.TabIndex = 33;
+			this.projectLink.TabIndex = 3;
 			this.projectLink.TabStop = true;
 			this.projectLink.Text = "Project page";
 			this.projectLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.projectLink_LinkClicked);
@@ -145,7 +145,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 21;
+			this.okButton.TabIndex = 6;
 			this.okButton.Text = "Close";
 			this.okButton.UseVisualStyleBackColor = false;
 			// 
@@ -167,6 +167,16 @@
 			this.infoGroup.TabStop = false;
 			this.infoGroup.Text = "Info";
 			// 
+			// licenseLabel
+			// 
+			this.licenseLabel.AutoSize = true;
+			this.licenseLabel.Location = new System.Drawing.Point(6, 220);
+			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.licenseLabel.Name = "licenseLabel";
+			this.licenseLabel.Size = new System.Drawing.Size(93, 15);
+			this.licenseLabel.TabIndex = 37;
+			this.licenseLabel.Text = "License: GPL-3.0";
+			// 
 			// makeDefaultLink
 			// 
 			this.makeDefaultLink.AutoSize = true;
@@ -175,7 +185,7 @@
 			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.makeDefaultLink.Name = "makeDefaultLink";
 			this.makeDefaultLink.Size = new System.Drawing.Size(149, 15);
-			this.makeDefaultLink.TabIndex = 36;
+			this.makeDefaultLink.TabIndex = 1;
 			this.makeDefaultLink.TabStop = true;
 			this.makeDefaultLink.Text = "Set as default photo viewer";
 			this.makeDefaultLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeDefaultLink_LinkClicked);
@@ -187,7 +197,7 @@
 			this.updatesLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.updatesLink.Name = "updatesLink";
 			this.updatesLink.Size = new System.Drawing.Size(103, 15);
-			this.updatesLink.TabIndex = 35;
+			this.updatesLink.TabIndex = 0;
 			this.updatesLink.TabStop = true;
 			this.updatesLink.Text = "Check for updates";
 			this.updatesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.updatesLink_LinkClicked);
@@ -199,7 +209,7 @@
 			this.issuesLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.issuesLink.Name = "issuesLink";
 			this.issuesLink.Size = new System.Drawing.Size(38, 15);
-			this.issuesLink.TabIndex = 34;
+			this.issuesLink.TabIndex = 4;
 			this.issuesLink.TabStop = true;
 			this.issuesLink.Text = "Issues";
 			this.issuesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.issuesLink_LinkClicked);
@@ -225,20 +235,10 @@
 			this.licenseLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.licenseLink.Name = "licenseLink";
 			this.licenseLink.Size = new System.Drawing.Size(46, 15);
-			this.licenseLink.TabIndex = 35;
+			this.licenseLink.TabIndex = 5;
 			this.licenseLink.TabStop = true;
 			this.licenseLink.Text = "License";
 			this.licenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.licenseLink_LinkClicked);
-			// 
-			// licenseLabel
-			// 
-			this.licenseLabel.AutoSize = true;
-			this.licenseLabel.Location = new System.Drawing.Point(6, 220);
-			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
-			this.licenseLabel.Name = "licenseLabel";
-			this.licenseLabel.Size = new System.Drawing.Size(93, 15);
-			this.licenseLabel.TabIndex = 37;
-			this.licenseLabel.Text = "License: GPL-3.0";
 			// 
 			// AboutForm
 			// 

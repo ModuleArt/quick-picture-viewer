@@ -107,7 +107,7 @@
 			this.boxReleaseNotes.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.boxReleaseNotes.Name = "boxReleaseNotes";
 			this.boxReleaseNotes.Size = new System.Drawing.Size(83, 23);
-			this.boxReleaseNotes.TabIndex = 3;
+			this.boxReleaseNotes.TabIndex = 0;
 			this.boxReleaseNotes.Text = "What\'s new?";
 			this.boxReleaseNotes.UseVisualStyleBackColor = false;
 			this.boxReleaseNotes.CheckedChanged += new System.EventHandler(this.boxReleaseNotes_CheckedChanged);
@@ -123,7 +123,7 @@
 			this.ReleaseNotes.Name = "ReleaseNotes";
 			this.ReleaseNotes.ScriptErrorsSuppressed = true;
 			this.ReleaseNotes.Size = new System.Drawing.Size(347, 196);
-			this.ReleaseNotes.TabIndex = 0;
+			this.ReleaseNotes.TabIndex = 3;
 			this.ReleaseNotes.Visible = false;
 			this.ReleaseNotes.WebBrowserShortcutsEnabled = false;
 			// 

@@ -105,7 +105,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(124, 23);
-			this.okButton.TabIndex = 21;
+			this.okButton.TabIndex = 18;
 			this.okButton.Text = "Close";
 			this.okButton.UseVisualStyleBackColor = false;
 			// 
@@ -141,7 +141,7 @@
 			this.extensionTextBox.Name = "extensionTextBox";
 			this.extensionTextBox.ReadOnly = true;
 			this.extensionTextBox.Size = new System.Drawing.Size(70, 20);
-			this.extensionTextBox.TabIndex = 52;
+			this.extensionTextBox.TabIndex = 7;
 			this.extensionTextBox.Text = "Unknown";
 			// 
 			// extensionLabel
@@ -165,7 +165,7 @@
 			this.copyPathButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
 			this.copyPathButton.Name = "copyPathButton";
 			this.copyPathButton.Size = new System.Drawing.Size(26, 25);
-			this.copyPathButton.TabIndex = 50;
+			this.copyPathButton.TabIndex = 5;
 			this.copyPathButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyPathButton.UseVisualStyleBackColor = false;
 			this.copyPathButton.Click += new System.EventHandler(this.copyPathButton_Click);
@@ -181,7 +181,7 @@
 			this.copyFolderButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
 			this.copyFolderButton.Name = "copyFolderButton";
 			this.copyFolderButton.Size = new System.Drawing.Size(26, 25);
-			this.copyFolderButton.TabIndex = 49;
+			this.copyFolderButton.TabIndex = 3;
 			this.copyFolderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyFolderButton.UseVisualStyleBackColor = false;
 			this.copyFolderButton.Click += new System.EventHandler(this.copyFolderButton_Click);
@@ -197,7 +197,7 @@
 			this.copyNameButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
 			this.copyNameButton.Name = "copyNameButton";
 			this.copyNameButton.Size = new System.Drawing.Size(26, 25);
-			this.copyNameButton.TabIndex = 48;
+			this.copyNameButton.TabIndex = 1;
 			this.copyNameButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyNameButton.UseVisualStyleBackColor = false;
 			this.copyNameButton.Click += new System.EventHandler(this.copyNameButton_Click);
@@ -211,7 +211,7 @@
 			this.compressionTextBox.Name = "compressionTextBox";
 			this.compressionTextBox.ReadOnly = true;
 			this.compressionTextBox.Size = new System.Drawing.Size(70, 20);
-			this.compressionTextBox.TabIndex = 34;
+			this.compressionTextBox.TabIndex = 6;
 			// 
 			// compressionLabel
 			// 
@@ -232,7 +232,7 @@
 			this.fullPathTextBox.Name = "fullPathTextBox";
 			this.fullPathTextBox.ReadOnly = true;
 			this.fullPathTextBox.Size = new System.Drawing.Size(225, 20);
-			this.fullPathTextBox.TabIndex = 32;
+			this.fullPathTextBox.TabIndex = 4;
 			this.fullPathTextBox.Text = "Unknown";
 			this.fullPathTextBox.WordWrap = false;
 			// 
@@ -255,7 +255,7 @@
 			this.folderTextBox.Name = "folderTextBox";
 			this.folderTextBox.ReadOnly = true;
 			this.folderTextBox.Size = new System.Drawing.Size(225, 20);
-			this.folderTextBox.TabIndex = 30;
+			this.folderTextBox.TabIndex = 2;
 			this.folderTextBox.Text = "Not exists";
 			// 
 			// fileNameTextBox
@@ -268,7 +268,7 @@
 			this.fileNameTextBox.Name = "fileNameTextBox";
 			this.fileNameTextBox.ReadOnly = true;
 			this.fileNameTextBox.Size = new System.Drawing.Size(225, 20);
-			this.fileNameTextBox.TabIndex = 29;
+			this.fileNameTextBox.TabIndex = 0;
 			this.fileNameTextBox.Text = "None";
 			// 
 			// folderLabel
@@ -291,7 +291,7 @@
 			this.sizeTextBox.Name = "sizeTextBox";
 			this.sizeTextBox.ReadOnly = true;
 			this.sizeTextBox.Size = new System.Drawing.Size(249, 20);
-			this.sizeTextBox.TabIndex = 36;
+			this.sizeTextBox.TabIndex = 8;
 			// 
 			// sizeLabel
 			// 
@@ -312,7 +312,7 @@
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
 			this.megapixelsTextBox.ReadOnly = true;
 			this.megapixelsTextBox.Size = new System.Drawing.Size(249, 20);
-			this.megapixelsTextBox.TabIndex = 38;
+			this.megapixelsTextBox.TabIndex = 9;
 			// 
 			// megapixelsLabel
 			// 
@@ -333,7 +333,7 @@
 			this.resolutionTextBox.Name = "resolutionTextBox";
 			this.resolutionTextBox.ReadOnly = true;
 			this.resolutionTextBox.Size = new System.Drawing.Size(249, 20);
-			this.resolutionTextBox.TabIndex = 40;
+			this.resolutionTextBox.TabIndex = 10;
 			// 
 			// resolutionLabel
 			// 
@@ -354,7 +354,7 @@
 			this.inchesTextBox.Name = "inchesTextBox";
 			this.inchesTextBox.ReadOnly = true;
 			this.inchesTextBox.Size = new System.Drawing.Size(249, 20);
-			this.inchesTextBox.TabIndex = 42;
+			this.inchesTextBox.TabIndex = 11;
 			// 
 			// inchesLabel
 			// 
@@ -375,7 +375,7 @@
 			this.cmTextBox.Name = "cmTextBox";
 			this.cmTextBox.ReadOnly = true;
 			this.cmTextBox.Size = new System.Drawing.Size(249, 20);
-			this.cmTextBox.TabIndex = 44;
+			this.cmTextBox.TabIndex = 12;
 			// 
 			// cmLabel
 			// 
@@ -430,7 +430,7 @@
 			this.ratioTextBox.Name = "ratioTextBox";
 			this.ratioTextBox.ReadOnly = true;
 			this.ratioTextBox.Size = new System.Drawing.Size(249, 20);
-			this.ratioTextBox.TabIndex = 47;
+			this.ratioTextBox.TabIndex = 14;
 			// 
 			// diskSizeTextBox
 			// 
@@ -441,7 +441,7 @@
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
 			this.diskSizeTextBox.ReadOnly = true;
 			this.diskSizeTextBox.Size = new System.Drawing.Size(249, 20);
-			this.diskSizeTextBox.TabIndex = 46;
+			this.diskSizeTextBox.TabIndex = 13;
 			this.diskSizeTextBox.Text = "Unknown";
 			// 
 			// diskSizeLabel
@@ -487,7 +487,7 @@
 			this.modifiedTextBox.Name = "modifiedTextBox";
 			this.modifiedTextBox.ReadOnly = true;
 			this.modifiedTextBox.Size = new System.Drawing.Size(249, 20);
-			this.modifiedTextBox.TabIndex = 40;
+			this.modifiedTextBox.TabIndex = 16;
 			this.modifiedTextBox.Text = "Unknown";
 			// 
 			// createdLabel
@@ -509,7 +509,7 @@
 			this.createdTextBox.Name = "createdTextBox";
 			this.createdTextBox.ReadOnly = true;
 			this.createdTextBox.Size = new System.Drawing.Size(249, 20);
-			this.createdTextBox.TabIndex = 38;
+			this.createdTextBox.TabIndex = 15;
 			this.createdTextBox.Text = "Unknown";
 			// 
 			// propertiesButton
@@ -524,7 +524,7 @@
 			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0);
 			this.propertiesButton.Name = "propertiesButton";
 			this.propertiesButton.Size = new System.Drawing.Size(124, 23);
-			this.propertiesButton.TabIndex = 47;
+			this.propertiesButton.TabIndex = 17;
 			this.propertiesButton.Text = "File properties";
 			this.propertiesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.propertiesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

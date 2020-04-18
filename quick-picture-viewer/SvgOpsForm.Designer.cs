@@ -61,7 +61,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 2;
+			this.okButton.TabIndex = 8;
 			this.okButton.Text = "Resize SVG";
 			this.okButton.UseVisualStyleBackColor = false;
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
@@ -125,7 +125,7 @@
             0});
 			this.heightNumeric.Name = "heightNumeric";
 			this.heightNumeric.Size = new System.Drawing.Size(60, 23);
-			this.heightNumeric.TabIndex = 6;
+			this.heightNumeric.TabIndex = 7;
 			this.heightNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -142,7 +142,7 @@
 			this.aspectRatioCheckbox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.aspectRatioCheckbox.Name = "aspectRatioCheckbox";
 			this.aspectRatioCheckbox.Size = new System.Drawing.Size(137, 19);
-			this.aspectRatioCheckbox.TabIndex = 7;
+			this.aspectRatioCheckbox.TabIndex = 6;
 			this.aspectRatioCheckbox.Text = "Maintain aspect ratio";
 			this.aspectRatioCheckbox.UseVisualStyleBackColor = true;
 			this.aspectRatioCheckbox.CheckedChanged += new System.EventHandler(this.aspectRatioCheckbox_CheckedChanged);
@@ -177,7 +177,7 @@
 			this.size128Button.Location = new System.Drawing.Point(172, 50);
 			this.size128Button.Name = "size128Button";
 			this.size128Button.Size = new System.Drawing.Size(77, 23);
-			this.size128Button.TabIndex = 39;
+			this.size128Button.TabIndex = 2;
 			this.size128Button.Text = "128 px";
 			this.size128Button.UseVisualStyleBackColor = false;
 			this.size128Button.Click += new System.EventHandler(this.size128Button_Click);
@@ -190,7 +190,7 @@
 			this.size64Button.Location = new System.Drawing.Point(89, 50);
 			this.size64Button.Name = "size64Button";
 			this.size64Button.Size = new System.Drawing.Size(77, 23);
-			this.size64Button.TabIndex = 38;
+			this.size64Button.TabIndex = 1;
 			this.size64Button.Text = "64 px";
 			this.size64Button.UseVisualStyleBackColor = false;
 			this.size64Button.Click += new System.EventHandler(this.size64Button_Click);
@@ -203,7 +203,7 @@
 			this.defaultSizeButton.Location = new System.Drawing.Point(6, 50);
 			this.defaultSizeButton.Name = "defaultSizeButton";
 			this.defaultSizeButton.Size = new System.Drawing.Size(77, 23);
-			this.defaultSizeButton.TabIndex = 37;
+			this.defaultSizeButton.TabIndex = 0;
 			this.defaultSizeButton.Text = "Default size";
 			this.defaultSizeButton.UseVisualStyleBackColor = false;
 			this.defaultSizeButton.Click += new System.EventHandler(this.defaultSizeButton_Click);
@@ -216,7 +216,7 @@
 			this.size256Button.Location = new System.Drawing.Point(6, 79);
 			this.size256Button.Name = "size256Button";
 			this.size256Button.Size = new System.Drawing.Size(77, 23);
-			this.size256Button.TabIndex = 36;
+			this.size256Button.TabIndex = 3;
 			this.size256Button.Text = "256 px";
 			this.size256Button.UseVisualStyleBackColor = false;
 			this.size256Button.Click += new System.EventHandler(this.size256Button_Click);
@@ -239,7 +239,7 @@
 			this.size1024Button.Location = new System.Drawing.Point(172, 79);
 			this.size1024Button.Name = "size1024Button";
 			this.size1024Button.Size = new System.Drawing.Size(77, 23);
-			this.size1024Button.TabIndex = 9;
+			this.size1024Button.TabIndex = 5;
 			this.size1024Button.Text = "1024 px";
 			this.size1024Button.UseVisualStyleBackColor = false;
 			this.size1024Button.Click += new System.EventHandler(this.size1024Button_Click);
@@ -252,7 +252,7 @@
 			this.size512Button.Location = new System.Drawing.Point(89, 79);
 			this.size512Button.Name = "size512Button";
 			this.size512Button.Size = new System.Drawing.Size(77, 23);
-			this.size512Button.TabIndex = 8;
+			this.size512Button.TabIndex = 4;
 			this.size512Button.Text = "512 px";
 			this.size512Button.UseVisualStyleBackColor = false;
 			this.size512Button.Click += new System.EventHandler(this.size512Button_Click);

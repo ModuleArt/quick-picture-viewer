@@ -64,7 +64,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 21;
+			this.okButton.TabIndex = 6;
 			this.okButton.Text = "Set background";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -103,7 +103,7 @@
 			this.fitRadio.Location = new System.Drawing.Point(6, 51);
 			this.fitRadio.Name = "fitRadio";
 			this.fitRadio.Size = new System.Drawing.Size(38, 19);
-			this.fitRadio.TabIndex = 4;
+			this.fitRadio.TabIndex = 2;
 			this.fitRadio.Text = "Fit";
 			this.fitRadio.UseVisualStyleBackColor = true;
 			// 
@@ -115,7 +115,7 @@
 			this.fillRadio.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.fillRadio.Name = "fillRadio";
 			this.fillRadio.Size = new System.Drawing.Size(40, 19);
-			this.fillRadio.TabIndex = 3;
+			this.fillRadio.TabIndex = 0;
 			this.fillRadio.TabStop = true;
 			this.fillRadio.Text = "Fill";
 			this.fillRadio.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
 			this.stretchedRadio.Location = new System.Drawing.Point(6, 76);
 			this.stretchedRadio.Name = "stretchedRadio";
 			this.stretchedRadio.Size = new System.Drawing.Size(62, 19);
-			this.stretchedRadio.TabIndex = 2;
+			this.stretchedRadio.TabIndex = 4;
 			this.stretchedRadio.Text = "Stretch";
 			this.stretchedRadio.UseVisualStyleBackColor = true;
 			// 
@@ -136,7 +136,7 @@
 			this.centeredRadio.Location = new System.Drawing.Point(124, 51);
 			this.centeredRadio.Name = "centeredRadio";
 			this.centeredRadio.Size = new System.Drawing.Size(60, 19);
-			this.centeredRadio.TabIndex = 1;
+			this.centeredRadio.TabIndex = 3;
 			this.centeredRadio.Text = "Center";
 			this.centeredRadio.UseVisualStyleBackColor = true;
 			// 
@@ -146,7 +146,7 @@
 			this.tiledRadio.Location = new System.Drawing.Point(124, 26);
 			this.tiledRadio.Name = "tiledRadio";
 			this.tiledRadio.Size = new System.Drawing.Size(43, 19);
-			this.tiledRadio.TabIndex = 0;
+			this.tiledRadio.TabIndex = 1;
 			this.tiledRadio.Text = "Tile";
 			this.tiledRadio.UseVisualStyleBackColor = true;
 			// 

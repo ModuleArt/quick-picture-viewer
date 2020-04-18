@@ -29,8 +29,8 @@ namespace quick_picture_viewer
 			InitializeComponent();
 
 			this.MaximumSize = new Size(
-				Screen.FromHandle(this.Handle).WorkingArea.Width / 2,
-				Screen.FromHandle(this.Handle).WorkingArea.Height / 2
+				Convert.ToInt32(Screen.FromHandle(this.Handle).WorkingArea.Width / 1.25f),
+				Convert.ToInt32(Screen.FromHandle(this.Handle).WorkingArea.Height / 1.25f)
 			);
 
 			ratio = (float)image.Width / (float)image.Height;

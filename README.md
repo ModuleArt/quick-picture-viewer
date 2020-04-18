@@ -4,7 +4,7 @@
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  Quick Picture Viewer is a lightweight desktop photo viewer for Windows, built on top of WinForms (C#).
+  Quick Picture Viewer is a lightweight, versatile desktop photo viewer for Windows, built on top of WinForms (C#).
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
 
 <h2 align="center">Install</h2>
 <p align="center">
-  Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.0">v1.12.0</a> (2.3 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.0/QuickPictureViewer-Setup.msi">Download</a><br>
+  Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.1">v1.12.1</a> (2.3 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.1/QuickPictureViewer-Setup.msi">Download</a><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
@@ -32,13 +32,15 @@
 - Basic image editing: rotate, flip, change file type<br>
 - Built-in screenshoter<br>
 - Open image with external app or show in file explorer<br>
+- Picture in picture mode<br>
 - Copy, paste to clipboard<br>
 - Checkboard background<br>
 - Window can be always on top or fullscreen<br>
 - Set image as desktop background<br>
 - Print image<br>
 - View image details<br>
-- Slideshow
+- Slideshow<br>
+- Dark mode
 
 <h2 align="center">Other "Quick" apps</h2>
 <p align="center">

@@ -77,7 +77,7 @@
 			this.cancelButton.Margin = new System.Windows.Forms.Padding(0);
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(124, 23);
-			this.cancelButton.TabIndex = 22;
+			this.cancelButton.TabIndex = 1;
 			this.cancelButton.Text = "Cancel";
 			this.cancelButton.UseVisualStyleBackColor = false;
 			this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -93,7 +93,7 @@
 			this.updateButton.Margin = new System.Windows.Forms.Padding(0);
 			this.updateButton.Name = "updateButton";
 			this.updateButton.Size = new System.Drawing.Size(124, 23);
-			this.updateButton.TabIndex = 23;
+			this.updateButton.TabIndex = 0;
 			this.updateButton.Text = "Update";
 			this.updateButton.UseVisualStyleBackColor = false;
 			this.updateButton.Visible = false;
@@ -103,7 +103,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(274, 188);
+			this.ClientSize = new System.Drawing.Size(270, 184);
 			this.ControlBox = false;
 			this.Controls.Add(this.updateButton);
 			this.Controls.Add(this.cancelButton);

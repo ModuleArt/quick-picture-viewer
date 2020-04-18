@@ -184,6 +184,8 @@ namespace quick_picture_viewer
 				{
 					typeOpsButton.Text = String.Format("{0} options", type);
 				}
+
+				typeOpsButton.Focus();
 			}));
 		}
 
@@ -1517,7 +1519,7 @@ namespace quick_picture_viewer
 
 		private void newWindowButton_Click(object sender, EventArgs e)
 		{
-			Process.Start("quick-picture-viewer.exe");
+			Process.Start(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "quick-picture-viewer.exe"));
 		}
 
 		private void rotate180Button_Click(object sender, EventArgs e)
@@ -1546,6 +1548,21 @@ namespace quick_picture_viewer
 				settingsBox.TopMost = true;
 			}
 			settingsBox.ShowDialog();
+		}
+
+		private void typeOpsButton_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+		{
+			if (!e.Alt && !e.Shift && !e.Control)
+			{
+				if (e.KeyCode == Keys.Left)
+				{
+					prevButton.PerformClick();
+				}
+				else if (e.KeyCode == Keys.Right)
+				{
+					nextButton.PerformClick();
+				}
+			}
 		}
 	}
 }

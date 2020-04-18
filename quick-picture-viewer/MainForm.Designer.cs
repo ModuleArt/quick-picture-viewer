@@ -808,13 +808,14 @@
 			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0);
 			this.typeOpsButton.Name = "typeOpsButton";
 			this.typeOpsButton.Size = new System.Drawing.Size(100, 23);
-			this.typeOpsButton.TabIndex = 4;
+			this.typeOpsButton.TabIndex = 0;
 			this.typeOpsButton.TabStop = false;
 			this.typeOpsButton.Text = "TYPE options";
 			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.typeOpsButton.UseVisualStyleBackColor = false;
 			this.typeOpsButton.Visible = false;
 			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
 			// 
 			// suggestionLabel
 			// 

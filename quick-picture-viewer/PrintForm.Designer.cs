@@ -61,7 +61,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 21;
+			this.okButton.TabIndex = 9;
 			this.okButton.Text = "Print";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -101,7 +101,7 @@
 			this.setMarginsButton.Location = new System.Drawing.Point(105, 183);
 			this.setMarginsButton.Name = "setMarginsButton";
 			this.setMarginsButton.Size = new System.Drawing.Size(145, 23);
-			this.setMarginsButton.TabIndex = 44;
+			this.setMarginsButton.TabIndex = 8;
 			this.setMarginsButton.Text = "Set margins";
 			this.setMarginsButton.UseVisualStyleBackColor = false;
 			this.setMarginsButton.EnabledChanged += new System.EventHandler(this.setMarginsButton_EnabledChanged);
@@ -168,7 +168,7 @@
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
 			this.bottomMarginTextBox.Name = "bottomMarginTextBox";
 			this.bottomMarginTextBox.Size = new System.Drawing.Size(34, 23);
-			this.bottomMarginTextBox.TabIndex = 39;
+			this.bottomMarginTextBox.TabIndex = 7;
 			// 
 			// rightMarginTextBox
 			// 
@@ -177,7 +177,7 @@
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
 			this.rightMarginTextBox.Name = "rightMarginTextBox";
 			this.rightMarginTextBox.Size = new System.Drawing.Size(34, 23);
-			this.rightMarginTextBox.TabIndex = 38;
+			this.rightMarginTextBox.TabIndex = 6;
 			// 
 			// topMarginTextBox
 			// 
@@ -186,7 +186,7 @@
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
 			this.topMarginTextBox.Name = "topMarginTextBox";
 			this.topMarginTextBox.Size = new System.Drawing.Size(34, 23);
-			this.topMarginTextBox.TabIndex = 37;
+			this.topMarginTextBox.TabIndex = 5;
 			// 
 			// marginsLabel
 			// 
@@ -205,7 +205,7 @@
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
 			this.leftMarginTextBox.Name = "leftMarginTextBox";
 			this.leftMarginTextBox.Size = new System.Drawing.Size(34, 23);
-			this.leftMarginTextBox.TabIndex = 35;
+			this.leftMarginTextBox.TabIndex = 4;
 			// 
 			// titleLabel
 			// 
@@ -224,7 +224,7 @@
 			this.titleTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
 			this.titleTextBox.Name = "titleTextBox";
 			this.titleTextBox.Size = new System.Drawing.Size(149, 23);
-			this.titleTextBox.TabIndex = 33;
+			this.titleTextBox.TabIndex = 0;
 			this.titleTextBox.Text = "Image";
 			// 
 			// horizontalCheckBox
@@ -248,7 +248,7 @@
 			this.marginsCheckBox.Location = new System.Drawing.Point(6, 105);
 			this.marginsCheckBox.Name = "marginsCheckBox";
 			this.marginsCheckBox.Size = new System.Drawing.Size(107, 19);
-			this.marginsCheckBox.TabIndex = 0;
+			this.marginsCheckBox.TabIndex = 3;
 			this.marginsCheckBox.Text = "Margin bounds";
 			this.marginsCheckBox.UseVisualStyleBackColor = true;
 			this.marginsCheckBox.CheckedChanged += new System.EventHandler(this.marginsCheckBox_CheckedChanged);
