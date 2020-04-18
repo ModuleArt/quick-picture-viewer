@@ -41,7 +41,9 @@
 - Slideshow
 
 <h2 align="center">Other "Quick" apps</h2>
-<a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows
+<p align="center">
+  <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows
+</p>
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
