@@ -32,12 +32,12 @@
 			this.okButton = new System.Windows.Forms.Button();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.themeTab = new System.Windows.Forms.TabPage();
+			this.licenseLabel = new System.Windows.Forms.Label();
 			this.darkThemeRadio = new System.Windows.Forms.RadioButton();
 			this.lightThemeRadio = new System.Windows.Forms.RadioButton();
 			this.systemThemeRadio = new System.Windows.Forms.RadioButton();
 			this.updatesTab = new System.Windows.Forms.TabPage();
 			this.updatesCheckBox = new System.Windows.Forms.CheckBox();
-			this.licenseLabel = new System.Windows.Forms.Label();
 			this.fullscreenTab = new System.Windows.Forms.TabPage();
 			this.fullscrCursorCheckBox = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
@@ -78,13 +78,14 @@
 			this.tabControl1.Controls.Add(this.themeTab);
 			this.tabControl1.Controls.Add(this.updatesTab);
 			this.tabControl1.Controls.Add(this.fullscreenTab);
-			this.tabControl1.ItemSize = new System.Drawing.Size(40, 23);
+			this.tabControl1.ItemSize = new System.Drawing.Size(80, 23);
 			this.tabControl1.Location = new System.Drawing.Point(9, 98);
 			this.tabControl1.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.tabControl1.Multiline = true;
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(256, 151);
+			this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
 			this.tabControl1.TabIndex = 0;
 			this.tabControl1.TabStop = false;
 			this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
@@ -102,6 +103,16 @@
 			this.themeTab.TabIndex = 1;
 			this.themeTab.Text = "Theme";
 			this.themeTab.UseVisualStyleBackColor = true;
+			// 
+			// licenseLabel
+			// 
+			this.licenseLabel.AutoSize = true;
+			this.licenseLabel.Location = new System.Drawing.Point(9, 93);
+			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.licenseLabel.Name = "licenseLabel";
+			this.licenseLabel.Size = new System.Drawing.Size(120, 15);
+			this.licenseLabel.TabIndex = 38;
+			this.licenseLabel.Text = "* App restart required";
 			// 
 			// darkThemeRadio
 			// 
@@ -163,16 +174,6 @@
 			this.updatesCheckBox.Text = "Check for updates on app startup";
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
 			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
-			// 
-			// licenseLabel
-			// 
-			this.licenseLabel.AutoSize = true;
-			this.licenseLabel.Location = new System.Drawing.Point(9, 93);
-			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
-			this.licenseLabel.Name = "licenseLabel";
-			this.licenseLabel.Size = new System.Drawing.Size(120, 15);
-			this.licenseLabel.TabIndex = 38;
-			this.licenseLabel.Text = "* App restart required";
 			// 
 			// fullscreenTab
 			// 

@@ -94,7 +94,7 @@
 			this.updateButton.Name = "updateButton";
 			this.updateButton.Size = new System.Drawing.Size(124, 23);
 			this.updateButton.TabIndex = 0;
-			this.updateButton.Text = "Update";
+			this.updateButton.Text = "Install";
 			this.updateButton.UseVisualStyleBackColor = false;
 			this.updateButton.Visible = false;
 			this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
@@ -103,7 +103,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(270, 184);
+			this.ClientSize = new System.Drawing.Size(274, 188);
 			this.ControlBox = false;
 			this.Controls.Add(this.updateButton);
 			this.Controls.Add(this.cancelButton);
