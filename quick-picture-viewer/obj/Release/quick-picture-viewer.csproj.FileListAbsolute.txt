@@ -32,3 +32,7 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_p
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.SvgOpsForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.DownloadForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.SettingsForm.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.xml
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml

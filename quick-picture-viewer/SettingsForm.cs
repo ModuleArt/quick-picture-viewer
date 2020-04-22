@@ -49,6 +49,7 @@ namespace quick_picture_viewer
 			}
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
+			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -123,6 +124,12 @@ namespace quick_picture_viewer
 			_stringFlags.Alignment = StringAlignment.Center;
 			_stringFlags.LineAlignment = StringAlignment.Center;
 			g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+		}
+
+		private void fullscrCursorCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.ShowCursorInFullscreen = fullscrCursorCheckBox.Checked;
+			Properties.Settings.Default.Save();
 		}
 	}
 }

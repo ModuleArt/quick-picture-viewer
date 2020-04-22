@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.FileIO;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using Svg;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,8 @@ namespace quick_picture_viewer
 
 		private System.Threading.Timer suggestionTimer;
 
+		private CustomJumplist jumplist;
+
 		public bool printCenterImage = true;
 
 		public MainForm(string openPath, bool darkMode)
@@ -48,6 +51,8 @@ namespace quick_picture_viewer
 			this.openPath = openPath;
 
 			InitializeComponent();
+
+			jumplist = new CustomJumplist(this.Handle);
 
 			settingsButton.ShortcutKeyDisplayString = "Ctrl+Comma";
 
@@ -183,9 +188,8 @@ namespace quick_picture_viewer
 				if (show)
 				{
 					typeOpsButton.Text = String.Format("{0} options", type);
+					typeOpsButton.Focus();
 				}
-
-				typeOpsButton.Focus();
 			}));
 		}
 
@@ -739,9 +743,12 @@ namespace quick_picture_viewer
 
 			if (b)
 			{
-				Bitmap bitmap = new Bitmap(1, 1);
-				IntPtr ptr = bitmap.GetHicon();
-				picturePanel.Cursor = new Cursor(ptr);
+				if (!Properties.Settings.Default.ShowCursorInFullscreen)
+				{
+					Bitmap bitmap = new Bitmap(1, 1);
+					IntPtr ptr = bitmap.GetHicon();
+					picturePanel.Cursor = new Cursor(ptr);
+				}
 
 				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = FormWindowState.Maximized;
@@ -1519,6 +1526,11 @@ namespace quick_picture_viewer
 
 		private void newWindowButton_Click(object sender, EventArgs e)
 		{
+			NewWindow();
+		}
+
+		private void NewWindow()
+		{
 			Process.Start(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "quick-picture-viewer.exe"));
 		}
 
@@ -1562,6 +1574,22 @@ namespace quick_picture_viewer
 				{
 					nextButton.PerformClick();
 				}
+				else if (e.KeyCode == Keys.Down)
+				{
+					zoomOut();
+				}
+				else if (e.KeyCode == Keys.Up)
+				{
+					zoomIn();
+				}
+			}
+		}
+
+		private void typeOpsButton_VisibleChanged(object sender, EventArgs e)
+		{
+			if (typeOpsButton.Visible)
+			{
+				typeOpsButton.Focus();
 			}
 		}
 	}

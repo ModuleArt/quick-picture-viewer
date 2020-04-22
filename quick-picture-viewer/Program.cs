@@ -16,10 +16,19 @@ namespace quick_picture_viewer
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
+			Console.WriteLine(args.Length);
+
 			string param;
-			if(args.Length > 0)
+			if (args.Length > 0)
 			{
-				param = args[0];
+				if (args[0] == "-1")
+				{
+					param = string.Empty;
+				}
+				else
+				{
+					param = args[0];
+				}
 			}
 			else
 			{

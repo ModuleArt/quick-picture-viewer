@@ -814,6 +814,7 @@
 			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.typeOpsButton.UseVisualStyleBackColor = false;
 			this.typeOpsButton.Visible = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
 			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
 			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
 			// 

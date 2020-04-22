@@ -70,5 +70,17 @@ namespace quick_picture_viewer.Properties {
                 this["Theme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowCursorInFullscreen {
+            get {
+                return ((bool)(this["ShowCursorInFullscreen"]));
+            }
+            set {
+                this["ShowCursorInFullscreen"] = value;
+            }
+        }
     }
 }
