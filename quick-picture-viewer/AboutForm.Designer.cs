@@ -27,6 +27,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.productLabel = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
 			this.issuesLink = new System.Windows.Forms.LinkLabel();
 			this.pagesGroup = new System.Windows.Forms.GroupBox();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
+			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.infoGroup.SuspendLayout();
 			this.pagesGroup.SuspendLayout();
@@ -120,6 +122,7 @@
 			this.developerLink.TabIndex = 2;
 			this.developerLink.TabStop = true;
 			this.developerLink.Text = "Module Art";
+			this.aboutTooltip.SetToolTip(this.developerLink, "Open developer page in browser");
 			this.developerLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.developerLink_LinkClicked);
 			// 
 			// projectLink
@@ -132,6 +135,7 @@
 			this.projectLink.TabIndex = 3;
 			this.projectLink.TabStop = true;
 			this.projectLink.Text = "Project page";
+			this.aboutTooltip.SetToolTip(this.projectLink, "Open project page in browser");
 			this.projectLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.projectLink_LinkClicked);
 			// 
 			// okButton
@@ -188,6 +192,7 @@
 			this.makeDefaultLink.TabIndex = 1;
 			this.makeDefaultLink.TabStop = true;
 			this.makeDefaultLink.Text = "Set as default photo viewer";
+			this.aboutTooltip.SetToolTip(this.makeDefaultLink, "Open Windows settings");
 			this.makeDefaultLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeDefaultLink_LinkClicked);
 			// 
 			// updatesLink
@@ -212,6 +217,7 @@
 			this.issuesLink.TabIndex = 4;
 			this.issuesLink.TabStop = true;
 			this.issuesLink.Text = "Issues";
+			this.aboutTooltip.SetToolTip(this.issuesLink, "Open GitHub issues page in browser");
 			this.issuesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.issuesLink_LinkClicked);
 			// 
 			// pagesGroup
@@ -238,6 +244,7 @@
 			this.licenseLink.TabIndex = 5;
 			this.licenseLink.TabStop = true;
 			this.licenseLink.Text = "License";
+			this.aboutTooltip.SetToolTip(this.licenseLink, "Open license page in browser");
 			this.licenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.licenseLink_LinkClicked);
 			// 
 			// AboutForm
@@ -290,5 +297,6 @@
 		private System.Windows.Forms.GroupBox pagesGroup;
 		private System.Windows.Forms.Label licenseLabel;
 		private System.Windows.Forms.LinkLabel licenseLink;
+		private System.Windows.Forms.ToolTip aboutTooltip;
 	}
 }

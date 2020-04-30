@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.buttonNo = new System.Windows.Forms.Button();
 			this.buttonYes = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,9 @@
 			this.ReleaseNotes = new System.Windows.Forms.WebBrowser();
 			this.currentLabel = new System.Windows.Forms.Label();
 			this.latestLabel = new System.Windows.Forms.Label();
+			this.latestReleaseLink = new System.Windows.Forms.LinkLabel();
+			this.currentVersionLink = new System.Windows.Forms.LinkLabel();
+			this.browserTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
 			// buttonNo
@@ -133,11 +137,11 @@
 			this.currentLabel.AutoSize = true;
 			this.currentLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.currentLabel.Location = new System.Drawing.Point(12, 60);
-			this.currentLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.currentLabel.Margin = new System.Windows.Forms.Padding(3, 9, 0, 3);
 			this.currentLabel.Name = "currentLabel";
-			this.currentLabel.Size = new System.Drawing.Size(114, 15);
+			this.currentLabel.Size = new System.Drawing.Size(91, 15);
 			this.currentLabel.TabIndex = 4;
-			this.currentLabel.Text = "Current version: v{0}";
+			this.currentLabel.Text = "Current version:";
 			this.currentLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// latestLabel
@@ -146,22 +150,50 @@
 			this.latestLabel.AutoSize = true;
 			this.latestLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.latestLabel.Location = new System.Drawing.Point(12, 81);
-			this.latestLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.latestLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
 			this.latestLabel.Name = "latestLabel";
-			this.latestLabel.Size = new System.Drawing.Size(97, 15);
+			this.latestLabel.Size = new System.Drawing.Size(80, 15);
 			this.latestLabel.TabIndex = 5;
-			this.latestLabel.Text = "Latest release: {0}";
+			this.latestLabel.Text = "Latest release:";
 			this.latestLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// latestReleaseLink
+			// 
+			this.latestReleaseLink.AutoSize = true;
+			this.latestReleaseLink.Location = new System.Drawing.Point(86, 81);
+			this.latestReleaseLink.Margin = new System.Windows.Forms.Padding(0);
+			this.latestReleaseLink.Name = "latestReleaseLink";
+			this.latestReleaseLink.Size = new System.Drawing.Size(37, 13);
+			this.latestReleaseLink.TabIndex = 6;
+			this.latestReleaseLink.TabStop = true;
+			this.latestReleaseLink.Text = "v0.0.0";
+			this.browserTooltip.SetToolTip(this.latestReleaseLink, "Open release page in browser");
+			this.latestReleaseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.latestReleaseLink_LinkClicked);
+			// 
+			// currentVersionLink
+			// 
+			this.currentVersionLink.AutoSize = true;
+			this.currentVersionLink.Location = new System.Drawing.Point(97, 61);
+			this.currentVersionLink.Margin = new System.Windows.Forms.Padding(0);
+			this.currentVersionLink.Name = "currentVersionLink";
+			this.currentVersionLink.Size = new System.Drawing.Size(37, 13);
+			this.currentVersionLink.TabIndex = 7;
+			this.currentVersionLink.TabStop = true;
+			this.currentVersionLink.Text = "v0.0.0";
+			this.browserTooltip.SetToolTip(this.currentVersionLink, "Open release page in browser");
+			this.currentVersionLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.currentVersionLink_LinkClicked);
 			// 
 			// UpdateForm
 			// 
 			this.AcceptButton = this.buttonYes;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.CancelButton = this.buttonNo;
 			this.ClientSize = new System.Drawing.Size(374, 347);
 			this.ControlBox = false;
+			this.Controls.Add(this.currentVersionLink);
+			this.Controls.Add(this.latestReleaseLink);
 			this.Controls.Add(this.buttonNo);
 			this.Controls.Add(this.latestLabel);
 			this.Controls.Add(this.buttonYes);
@@ -172,6 +204,8 @@
 			this.Controls.Add(this.label1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.KeyPreview = true;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.MinimumSize = new System.Drawing.Size(320, 39);
 			this.Name = "UpdateForm";
 			this.ShowInTaskbar = false;
@@ -192,5 +226,8 @@
 		private System.Windows.Forms.Button buttonYes;
 		private System.Windows.Forms.Label latestLabel;
 		private System.Windows.Forms.Label currentLabel;
+		private System.Windows.Forms.LinkLabel latestReleaseLink;
+		private System.Windows.Forms.LinkLabel currentVersionLink;
+		private System.Windows.Forms.ToolTip browserTooltip;
 	}
 }

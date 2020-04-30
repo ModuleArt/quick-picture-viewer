@@ -16,8 +16,6 @@ namespace quick_picture_viewer
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-			Console.WriteLine(args.Length);
-
 			string param;
 			if (args.Length > 0)
 			{

@@ -20,11 +20,14 @@ namespace quick_picture_viewer
 		private float ratio;
 		private bool closing = false;
 
+		private bool checkboardBackground = false;
+
 		System.Timers.Timer resizeTimer = new System.Timers.Timer();
 
-		public MiniViewForm(Image image, string title)
+		public MiniViewForm(Image image, string title, bool checkboardBackground)
 		{
 			this.Text = title;
+			this.checkboardBackground = checkboardBackground;
 
 			InitializeComponent();
 
@@ -52,6 +55,8 @@ namespace quick_picture_viewer
 			}
 
 			pictureBox1.Image = image;
+
+			setCheckboardBackground(checkboardBackground);
 
 			resizeTimer.Elapsed += new ElapsedEventHandler(resizeTimer_Elapsed);
 			resizeTimer.Interval = 50;
@@ -131,6 +136,46 @@ namespace quick_picture_viewer
 			Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
 			this.Left = workingArea.Left + workingArea.Width - this.Size.Width - 32;
 			this.Top = workingArea.Top + 32;
+		}
+
+		private void setCheckboardBackground(bool b)
+		{
+			checkboardBackground = b;
+
+			if (b)
+			{
+				pictureBox1.BackgroundImage = Properties.Resources.checkboard_dark;
+			}
+			else
+			{
+				pictureBox1.BackgroundImage = null;
+			}
+		}
+
+		private void MiniViewForm_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Control)
+			{
+				if (e.Shift)
+				{
+					if (e.KeyCode == Keys.C)
+					{
+						(this.Owner as MainForm).setCheckboardBackground(!checkboardBackground, true);
+						setCheckboardBackground(!checkboardBackground);
+					}
+					else if (e.KeyCode == Keys.P)
+					{
+						this.Close();
+					}
+				}
+			}
+			else
+			{
+				if (e.KeyCode == Keys.Escape)
+				{
+					this.Close();
+				}
+			}
 		}
 	}
 }

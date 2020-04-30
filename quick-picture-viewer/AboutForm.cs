@@ -47,14 +47,12 @@ namespace quick_picture_viewer
 				infoGroup.Paint += ThemeManager.PaintDarkGroupBox;
 				pagesGroup.Paint += ThemeManager.PaintDarkGroupBox;
 
-				Color linkColor = ThemeManager.AccentColorDark;
-
-				updatesLink.LinkColor = linkColor;
-				developerLink.LinkColor = linkColor;
-				projectLink.LinkColor = linkColor;
-				issuesLink.LinkColor = linkColor;
-				makeDefaultLink.LinkColor = linkColor;
-				licenseLink.LinkColor = linkColor;
+				updatesLink.LinkColor = ThemeManager.AccentColorDark;
+				developerLink.LinkColor = ThemeManager.AccentColorDark;
+				projectLink.LinkColor = ThemeManager.AccentColorDark;
+				issuesLink.LinkColor = ThemeManager.AccentColorDark;
+				makeDefaultLink.LinkColor = ThemeManager.AccentColorDark;
+				licenseLink.LinkColor = ThemeManager.AccentColorDark;
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 			}
@@ -62,7 +60,7 @@ namespace quick_picture_viewer
 
 		private void developerLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://moduleart.github.io/");
+			System.Diagnostics.Process.Start("https://github.com/ModuleArt/");
 		}
 
 		private void projectLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

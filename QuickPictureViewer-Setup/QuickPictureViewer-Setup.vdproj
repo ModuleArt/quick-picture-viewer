@@ -1148,15 +1148,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Quick Picture Viewer"
-        "ProductCode" = "8:{A95953EE-26CA-468D-A544-2EA80ADC413F}"
-        "PackageCode" = "8:{E91560A9-C5C6-4869-91BB-2DFF833BED70}"
+        "ProductCode" = "8:{A69CF45B-21C1-4C26-9EA0-A7781E00C574}"
+        "PackageCode" = "8:{6397B973-612B-4276-90BB-11576B735461}"
         "UpgradeCode" = "8:{D9871B4D-DF1B-418F-A7BF-D5F44A9FCFCE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.12.4"
+        "ProductVersion" = "8:1.12.5"
         "Manufacturer" = "8:Module Art"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -2134,7 +2134,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B597F9189B6419DBE3695587B370B9E"
             {
-            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Debug\\quick-picture-viewer.exe"
+            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Release\\quick-picture-viewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"

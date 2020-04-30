@@ -51,11 +51,11 @@
 			this.editButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.flipHorizontalButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.flipVerticalButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator7 = new quick_picture_viewer.CustomMenuSeparator();
 			this.rotateRightButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.rotate180Button = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator8 = new quick_picture_viewer.CustomMenuSeparator();
 			this.resizeButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.cropButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -72,9 +72,9 @@
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator9 = new quick_picture_viewer.CustomMenuSeparator();
 			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator10 = new quick_picture_viewer.CustomMenuSeparator();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -91,6 +91,7 @@
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
@@ -842,6 +843,7 @@
 			this.picturePanel.AutoScroll = true;
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 35);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
@@ -852,6 +854,20 @@
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// pleaseOpenLabel
+			// 
+			this.pleaseOpenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
+			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
+			this.pleaseOpenLabel.Size = new System.Drawing.Size(768, 432);
+			this.pleaseOpenLabel.TabIndex = 5;
+			this.pleaseOpenLabel.Text = "Please open an image to view or edit";
+			this.pleaseOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.pleaseOpenLabel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			// 
 			// pictureBox
 			// 
@@ -965,12 +981,13 @@
 		private System.Windows.Forms.ToolStripMenuItem resizeButton;
 		private System.Windows.Forms.ToolStripMenuItem rotate180Button;
 		private System.Windows.Forms.ToolStripMenuItem cropButton;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
 		private System.Windows.Forms.ToolStripButton miniViewButton;
 		private System.Windows.Forms.ToolStripMenuItem settingsButton;
+		private System.Windows.Forms.Label pleaseOpenLabel;
+		private CustomMenuSeparator toolStripSeparator7;
+		private CustomMenuSeparator toolStripSeparator8;
+		private CustomMenuSeparator toolStripSeparator9;
+		private CustomMenuSeparator toolStripSeparator10;
 	}
 }
 

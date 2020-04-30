@@ -28,19 +28,22 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DownloadForm));
 			this.progressBar1 = new System.Windows.Forms.ProgressBar();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.statusLabel = new System.Windows.Forms.Label();
 			this.cancelButton = new System.Windows.Forms.Button();
 			this.updateButton = new System.Windows.Forms.Button();
+			this.manuallyLink = new System.Windows.Forms.LinkLabel();
+			this.browserTooltip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// progressBar1
 			// 
-			this.progressBar1.Location = new System.Drawing.Point(9, 123);
-			this.progressBar1.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
+			this.progressBar1.Location = new System.Drawing.Point(9, 120);
+			this.progressBar1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 9);
 			this.progressBar1.Name = "progressBar1";
 			this.progressBar1.Size = new System.Drawing.Size(256, 23);
 			this.progressBar1.TabIndex = 0;
@@ -60,7 +63,7 @@
 			// 
 			this.statusLabel.AutoSize = true;
 			this.statusLabel.Location = new System.Drawing.Point(12, 98);
-			this.statusLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.statusLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 9);
 			this.statusLabel.Name = "statusLabel";
 			this.statusLabel.Size = new System.Drawing.Size(99, 13);
 			this.statusLabel.TabIndex = 14;
@@ -68,12 +71,11 @@
 			// 
 			// cancelButton
 			// 
-			this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.cancelButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.cancelButton.FlatAppearance.BorderSize = 0;
 			this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.cancelButton.Location = new System.Drawing.Point(141, 156);
+			this.cancelButton.Location = new System.Drawing.Point(141, 152);
 			this.cancelButton.Margin = new System.Windows.Forms.Padding(0);
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(124, 23);
@@ -84,28 +86,41 @@
 			// 
 			// updateButton
 			// 
-			this.updateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.updateButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.updateButton.FlatAppearance.BorderSize = 0;
 			this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.updateButton.Location = new System.Drawing.Point(9, 156);
+			this.updateButton.Location = new System.Drawing.Point(9, 152);
 			this.updateButton.Margin = new System.Windows.Forms.Padding(0);
 			this.updateButton.Name = "updateButton";
 			this.updateButton.Size = new System.Drawing.Size(124, 23);
 			this.updateButton.TabIndex = 0;
 			this.updateButton.Text = "Install";
+			this.browserTooltip.SetToolTip(this.updateButton, "Run installer");
 			this.updateButton.UseVisualStyleBackColor = false;
 			this.updateButton.Visible = false;
 			this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
 			// 
+			// manuallyLink
+			// 
+			this.manuallyLink.AutoSize = true;
+			this.manuallyLink.Location = new System.Drawing.Point(12, 157);
+			this.manuallyLink.Margin = new System.Windows.Forms.Padding(0);
+			this.manuallyLink.Name = "manuallyLink";
+			this.manuallyLink.Size = new System.Drawing.Size(99, 13);
+			this.manuallyLink.TabIndex = 15;
+			this.manuallyLink.TabStop = true;
+			this.manuallyLink.Text = "Download manually";
+			this.browserTooltip.SetToolTip(this.manuallyLink, "Open download link in browser");
+			this.manuallyLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.manuallyLink_LinkClicked);
+			// 
 			// DownloadForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(274, 188);
-			this.ControlBox = false;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+			this.ClientSize = new System.Drawing.Size(274, 184);
 			this.Controls.Add(this.updateButton);
+			this.Controls.Add(this.manuallyLink);
 			this.Controls.Add(this.cancelButton);
 			this.Controls.Add(this.statusLabel);
 			this.Controls.Add(this.logoPictureBox);
@@ -118,6 +133,7 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Update downloader";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DownloadForm_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -131,5 +147,7 @@
 		private System.Windows.Forms.Label statusLabel;
 		private System.Windows.Forms.Button cancelButton;
 		private System.Windows.Forms.Button updateButton;
+		private System.Windows.Forms.LinkLabel manuallyLink;
+		private System.Windows.Forms.ToolTip browserTooltip;
 	}
 }

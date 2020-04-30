@@ -1,15 +1,16 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
 	public class ToolStripOverride : ToolStripSystemRenderer
 	{
-		private bool darkMode;
+		//private bool darkMode;
 
 		public ToolStripOverride(bool darkMode) 
 		{
-			this.darkMode = darkMode;
+			//this.darkMode = darkMode;
 		}
 
 		protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e) { }

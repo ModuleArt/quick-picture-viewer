@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualBasic.FileIO;
-using Microsoft.WindowsAPICodePack.Taskbar;
 using Svg;
 using System;
 using System.Collections.Generic;
@@ -36,8 +35,6 @@ namespace quick_picture_viewer
 
 		private System.Threading.Timer suggestionTimer;
 
-		private CustomJumplist jumplist;
-
 		public bool printCenterImage = true;
 
 		public MainForm(string openPath, bool darkMode)
@@ -47,12 +44,12 @@ namespace quick_picture_viewer
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
+			CustomJumplist jumplist = new CustomJumplist(this.Handle);
+
 			this.darkMode = darkMode;
 			this.openPath = openPath;
 
 			InitializeComponent();
-
-			jumplist = new CustomJumplist(this.Handle);
 
 			settingsButton.ShortcutKeyDisplayString = "Ctrl+Comma";
 
@@ -203,8 +200,14 @@ namespace quick_picture_viewer
 					byte[] rawWebP = File.ReadAllBytes(path);
 					using (WebP webp = new WebP())
 					{
+						//WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
+						//decoderOptions.use_threads = 1;
+						//decoderOptions.alpha_dithering_strength = 50;
+
+						//openImage(webp.Decode(rawWebP, new WebPDecoderOptions()), Path.GetDirectoryName(path), Path.GetFileName(path));
 						openImage(webp.Decode(rawWebP), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
+
 					showTypeOpsButton(false, null);
 				} 
 				else if (ext == ".ico") 
@@ -317,7 +320,7 @@ namespace quick_picture_viewer
 				currentFolder = directoryName;
 				currentFile = fileName;
 				directoryLabel.Text = "Folder: " + directoryName;
-				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px (" + bytesToSize(path) + ")";
+				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
 				nextButton.Enabled = true;
 				prevButton.Enabled = true;
@@ -351,6 +354,8 @@ namespace quick_picture_viewer
 			miniViewButton.Enabled = true;
 
 			zoomComboBox.Enabled = true;
+
+			pleaseOpenLabel.Visible = false;
 
 			setZoomText("Auto");
 		}
@@ -526,7 +531,7 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void setCheckboardBackground(bool b, bool saveToDisk)
+		public void setCheckboardBackground(bool b, bool saveToDisk)
 		{
 			checkboardBackground = b;
 			checkboardButton.Checked = b;
@@ -763,6 +768,8 @@ namespace quick_picture_viewer
 
 				suggestionLabel.Location = new Point(9, 9);
 
+				pleaseOpenLabel.ForeColor = Color.White;
+
 				showSuggestion("Press Esc to exit fullscreen mode");
 			}
 			else
@@ -778,6 +785,8 @@ namespace quick_picture_viewer
 				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 26;
 
 				suggestionLabel.Location = new Point(9, 43);
+
+				pleaseOpenLabel.ForeColor = this.ForeColor;
 			}
 		}
 
@@ -1219,6 +1228,8 @@ namespace quick_picture_viewer
 
 			zoomComboBox.Enabled = false;
 
+			pleaseOpenLabel.Visible = true;
+
 			directoryLabel.Text = "Folder: Empty";
 			fileLabel.Text = "File: Empty";
 			sizeLabel.Text = "Size: 0 x 0 px";
@@ -1228,20 +1239,6 @@ namespace quick_picture_viewer
 			setZoomText("Auto");
 			setSlideshow(false);
 			setFullscreen(false);
-		}
-
-		private string bytesToSize(string path)
-		{
-			string[] sizes = { "B", "KB", "MB", "GB", "TB" };
-			double len = new FileInfo(path).Length;
-			int order = 0;
-			while (len >= 1024 && order < sizes.Length - 1)
-			{
-				order++;
-				len = len / 1024;
-			}
-
-			return String.Format("{0:0.##} {1}", len, sizes[order]);
 		}
 
 		private void infoButton_Click(object sender, EventArgs e)
@@ -1546,7 +1543,7 @@ namespace quick_picture_viewer
 		{
 			this.Hide();
 
-			MiniViewForm mvf = new MiniViewForm(originalImage, this.Text);
+			MiniViewForm mvf = new MiniViewForm(originalImage, this.Text, checkboardBackground);
 			mvf.Owner = this;
 			mvf.Show();
 		}

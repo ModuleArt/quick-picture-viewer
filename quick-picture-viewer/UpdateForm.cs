@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -23,8 +24,9 @@ namespace quick_picture_viewer
 			this.Height = 179;
 
 			label1.Text = string.Format(label1.Text, appName);
-			currentLabel.Text = string.Format(currentLabel.Text, _checker.CurrentVersion);
-			latestLabel.Text = string.Format(latestLabel.Text, _checker.LatestRelease.TagName);
+
+			currentVersionLink.Text = "v" + _checker.CurrentVersion;
+			latestReleaseLink.Text = _checker.LatestRelease.TagName;
 
 			if (darkMode)
 			{
@@ -34,6 +36,9 @@ namespace quick_picture_viewer
 				buttonYes.BackColor = ThemeManager.SecondColorDark;
 				buttonNo.BackColor = ThemeManager.SecondColorDark;
 				boxReleaseNotes.BackColor = ThemeManager.SecondColorDark;
+
+				currentVersionLink.LinkColor = ThemeManager.AccentColorDark;
+				latestReleaseLink.LinkColor = ThemeManager.AccentColorDark;
 			}
 		}
 
@@ -62,6 +67,18 @@ namespace quick_picture_viewer
 			{
 				this.Close();
 			}
+		}
+
+		private void latestReleaseLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			string url = "https://github.com/" + _checker.RepositoryOwner + "/" + _checker.RepostoryName + "/releases/tag/" + _checker.LatestRelease.TagName;
+			Process.Start(url);
+		}
+
+		private void currentVersionLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			string url = "https://github.com/" + _checker.RepositoryOwner + "/" + _checker.RepostoryName + "/releases/tag/v" + _checker.CurrentVersion;
+			Process.Start(url);
 		}
 	}
 }

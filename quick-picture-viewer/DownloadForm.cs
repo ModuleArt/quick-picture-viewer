@@ -13,6 +13,7 @@ namespace quick_picture_viewer
 	{
         private string fileName;
         private WebClient wc;
+        private string url;
 
 		public DownloadForm(string url, bool darkMode)
 		{
@@ -21,6 +22,7 @@ namespace quick_picture_viewer
                 this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
             }
 
+            this.url = url;
             fileName = Path.Combine(GetDownloadFolderPath(), System.IO.Path.GetFileName(url));
 
             InitializeComponent();
@@ -32,6 +34,8 @@ namespace quick_picture_viewer
 
                 cancelButton.BackColor = ThemeManager.SecondColorDark;
                 updateButton.BackColor = ThemeManager.SecondColorDark;
+
+                manuallyLink.LinkColor = ThemeManager.AccentColorDark;
             }
 
             wc = new WebClient();
@@ -57,7 +61,7 @@ namespace quick_picture_viewer
         private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-            statusLabel.Text = string.Format("Downloading... {0}%", e.ProgressPercentage);
+            statusLabel.Text = string.Format("Downloading... {0}% ({1} / {2})", e.ProgressPercentage, Converter.BytesToSize(e.BytesReceived), Converter.BytesToSize(e.TotalBytesToReceive));
         }
 
         private void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -85,6 +89,18 @@ namespace quick_picture_viewer
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
+        {
+            wc.CancelAsync();
+        }
+
+        private void manuallyLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            wc.CancelAsync();
+            Process.Start(url);
+            this.Close();
+        }
+
+        private void DownloadForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             wc.CancelAsync();
         }
