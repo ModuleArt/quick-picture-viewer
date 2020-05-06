@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -65,14 +66,13 @@ namespace quick_picture_viewer
 		[DllImport("user32.dll")]
 		private static extern bool SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttribData data);
 
-		private static void enableDarkTitlebar(IntPtr handle, bool dark)
+		public static void enableDarkTitlebar(IntPtr handle, bool dark)
 		{
 			AllowDarkModeForWindow(handle, dark);
+			int sizeOfData = Marshal.SizeOf(dark);
+			IntPtr dataPtr = Marshal.AllocHGlobal(sizeOfData);
 
-			var sizeOfData = Marshal.SizeOf(dark);
-			var dataPtr = Marshal.AllocHGlobal(sizeOfData);
-
-			var data = new WindowCompositionAttribData
+			WindowCompositionAttribData data = new WindowCompositionAttribData
 			{
 				Attribute = WindowCompositionAttribute.WCA_USEDARKMODECOLORS,
 				Data = dataPtr,
@@ -86,12 +86,6 @@ namespace quick_picture_viewer
 		public static void allowDarkModeForApp(bool dark)
 		{
 			AllowDarkModeForApp(dark);
-		}
-
-		public static void formHandleCreated(object sender, EventArgs e)
-		{
-			Form f = sender as Form;
-			enableDarkTitlebar(f.Handle, true);
 		}
 
 		public static void setDarkModeToControl(IntPtr handle)
@@ -143,12 +137,12 @@ namespace quick_picture_viewer
 
 			p.Graphics.Clear(ThemeManager.BackColorDark);
 
-			p.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
-			p.Graphics.DrawString(box.Text, box.Font, Brushes.White, -1, -3);
+			p.Graphics.TextRenderingHint = TextRenderingHint.SystemDefault;
+			p.Graphics.DrawString(box.Text, box.Font, Brushes.White, -2, -3);
 
-			p.Graphics.DrawLine(pen, 0, 16, 0, box.Height - 2);
-			p.Graphics.DrawLine(pen, 0, 16, box.Width - 1, 16);
-			p.Graphics.DrawLine(pen, box.Width - 1, 16, box.Width - 1, box.Height - 2);
+			p.Graphics.DrawLine(pen, 0, 20, 0, box.Height - 2); //left border
+			p.Graphics.DrawLine(pen, p.Graphics.MeasureString(box.Text, box.Font).Width + 6, 8, box.Width - 1, 8); //top border
+			p.Graphics.DrawLine(pen, box.Width - 1, 8, box.Width - 1, box.Height - 2);
 			p.Graphics.DrawLine(pen, 0, box.Height - 2, box.Width - 1, box.Height - 2);
 		}
 	}

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -13,11 +14,6 @@ namespace quick_picture_viewer
 		public AboutForm(bool darkMode)
 		{
 			this.darkMode = darkMode;
-
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
 
 			InitializeComponent();
 
@@ -55,6 +51,8 @@ namespace quick_picture_viewer
 				licenseLink.LinkColor = ThemeManager.AccentColorDark;
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
+
+				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 		}
 

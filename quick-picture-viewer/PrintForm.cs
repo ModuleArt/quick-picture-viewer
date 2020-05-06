@@ -12,10 +12,6 @@ namespace quick_picture_viewer
 		public PrintForm(PrintDocument pd, bool darkMode)
 		{
 			this.darkMode = darkMode;
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
 
 			InitializeComponent();
 
@@ -68,6 +64,8 @@ namespace quick_picture_viewer
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 				okButton.Image = Properties.Resources.white_print;
+
+				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 		}
 

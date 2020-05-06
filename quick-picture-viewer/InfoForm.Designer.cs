@@ -134,7 +134,7 @@
 			// 
 			// extensionTextBox
 			// 
-			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.extensionTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.extensionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.extensionTextBox.Location = new System.Drawing.Point(252, 104);
 			this.extensionTextBox.Multiline = true;
@@ -204,7 +204,7 @@
 			// 
 			// compressionTextBox
 			// 
-			this.compressionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.compressionTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.compressionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.compressionTextBox.Location = new System.Drawing.Point(97, 104);
 			this.compressionTextBox.Multiline = true;
@@ -225,7 +225,7 @@
 			// 
 			// fullPathTextBox
 			// 
-			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.fullPathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.fullPathTextBox.Location = new System.Drawing.Point(97, 78);
 			this.fullPathTextBox.Multiline = true;
@@ -248,7 +248,7 @@
 			// 
 			// folderTextBox
 			// 
-			this.folderTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.folderTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.folderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.folderTextBox.Location = new System.Drawing.Point(97, 52);
 			this.folderTextBox.Multiline = true;
@@ -260,7 +260,7 @@
 			// 
 			// fileNameTextBox
 			// 
-			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.fileNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.fileNameTextBox.Location = new System.Drawing.Point(97, 26);
 			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 0, 3);
@@ -283,7 +283,7 @@
 			// 
 			// sizeTextBox
 			// 
-			this.sizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.sizeTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.sizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.sizeTextBox.Location = new System.Drawing.Point(97, 26);
 			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
@@ -305,7 +305,7 @@
 			// 
 			// megapixelsTextBox
 			// 
-			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.megapixelsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.megapixelsTextBox.Location = new System.Drawing.Point(97, 52);
 			this.megapixelsTextBox.Multiline = true;
@@ -326,7 +326,7 @@
 			// 
 			// resolutionTextBox
 			// 
-			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.resolutionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.resolutionTextBox.Location = new System.Drawing.Point(97, 78);
 			this.resolutionTextBox.Multiline = true;
@@ -347,7 +347,7 @@
 			// 
 			// inchesTextBox
 			// 
-			this.inchesTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.inchesTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.inchesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.inchesTextBox.Location = new System.Drawing.Point(97, 104);
 			this.inchesTextBox.Multiline = true;
@@ -368,7 +368,7 @@
 			// 
 			// cmTextBox
 			// 
-			this.cmTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cmTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.cmTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.cmTextBox.Location = new System.Drawing.Point(97, 130);
 			this.cmTextBox.Multiline = true;
@@ -423,7 +423,7 @@
 			// 
 			// ratioTextBox
 			// 
-			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.ratioTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.ratioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.ratioTextBox.Location = new System.Drawing.Point(97, 182);
 			this.ratioTextBox.Multiline = true;
@@ -434,7 +434,7 @@
 			// 
 			// diskSizeTextBox
 			// 
-			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.diskSizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.diskSizeTextBox.Location = new System.Drawing.Point(97, 156);
 			this.diskSizeTextBox.Multiline = true;
@@ -480,7 +480,7 @@
 			// 
 			// modifiedTextBox
 			// 
-			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.modifiedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.modifiedTextBox.Location = new System.Drawing.Point(97, 52);
 			this.modifiedTextBox.Multiline = true;
@@ -502,7 +502,7 @@
 			// 
 			// createdTextBox
 			// 
-			this.createdTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.createdTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.createdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.createdTextBox.Location = new System.Drawing.Point(97, 26);
 			this.createdTextBox.Multiline = true;

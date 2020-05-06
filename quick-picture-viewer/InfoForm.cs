@@ -13,10 +13,6 @@ namespace quick_picture_viewer
 		public InfoForm(Bitmap bitmap, string directoryName, string fileName, bool darkMode)
 		{
 			this.darkMode = darkMode;
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
 
 			InitializeComponent();
 
@@ -86,6 +82,8 @@ namespace quick_picture_viewer
 				copyFolderButton.BackColor = ThemeManager.BackColorDark;
 				copyPathButton.Image = Properties.Resources.white_copy;
 				copyPathButton.BackColor = ThemeManager.BackColorDark;
+
+				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 
 			if (directoryName != null)

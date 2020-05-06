@@ -17,11 +17,6 @@ namespace quick_picture_viewer
 
 		public DownloadForm(string url, bool darkMode)
 		{
-            if (darkMode)
-            {
-                this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-            }
-
             this.url = url;
             fileName = Path.Combine(GetDownloadFolderPath(), System.IO.Path.GetFileName(url));
 
@@ -36,6 +31,8 @@ namespace quick_picture_viewer
                 updateButton.BackColor = ThemeManager.SecondColorDark;
 
                 manuallyLink.LinkColor = ThemeManager.AccentColorDark;
+
+                ThemeManager.enableDarkTitlebar(Handle, true);
             }
 
             wc = new WebClient();

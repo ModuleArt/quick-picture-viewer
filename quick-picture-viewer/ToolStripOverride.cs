@@ -6,11 +6,11 @@ namespace quick_picture_viewer
 {
 	public class ToolStripOverride : ToolStripSystemRenderer
 	{
-		//private bool darkMode;
+		private bool darkMode;
 
 		public ToolStripOverride(bool darkMode) 
 		{
-			//this.darkMode = darkMode;
+			this.darkMode = darkMode;
 		}
 
 		protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e) { }
@@ -28,5 +28,14 @@ namespace quick_picture_viewer
 		//	}
 		//}
 
+		protected override void OnRenderButtonBackground(ToolStripItemRenderEventArgs e)
+		{
+			base.OnRenderButtonBackground(e);
+
+			if (darkMode && (e.Item as ToolStripButton).Checked)
+			{
+				e.Graphics.DrawRectangle(new Pen(ThemeManager.AccentColorDark), new Rectangle(1, 1, e.Item.Width - 4, e.Item.Height - 5));
+			}
+		}
 	}
 }

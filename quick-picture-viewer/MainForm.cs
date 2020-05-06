@@ -39,11 +39,6 @@ namespace quick_picture_viewer
 
 		public MainForm(string openPath, bool darkMode)
 		{
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
-
 			CustomJumplist jumplist = new CustomJumplist(this.Handle);
 
 			this.darkMode = darkMode;
@@ -1333,6 +1328,8 @@ namespace quick_picture_viewer
 			typeOpsButton.Image = Properties.Resources.white_options;
 			typeOpsButton.BackColor = ThemeManager.SecondColorDark;
 			typeOpsButton.ForeColor = Color.White;
+
+			ThemeManager.enableDarkTitlebar(Handle, true);
 		}
 
 		private void printButton_Click(object sender, EventArgs e)

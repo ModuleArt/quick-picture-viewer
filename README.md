@@ -74,5 +74,6 @@
   JosePineiro for <a href="https://github.com/JosePineiro/WebP-wrapper/">WebPWrapper</a> (WebP support)<br>
   nixxquality for <a href="https://github.com/nixxquality/GitHubUpdate/">GitHubUpdate</a> (Update checker)<br>
   darkfall for <a href="https://gist.github.com/darkfall/1656050/">PngIconConverter</a> (Ico support)<br>
-  vvvv for <a href="https://github.com/vvvv/SVG/">SVG</a> (SVG support)
+  vvvv for <a href="https://github.com/vvvv/SVG/">SVG</a> (SVG support)<br>
+  Alaa Ben Fatma for <a href="https://www.codeproject.com/Articles/1106140/VisualStudio-Like-TabControl">VisualStudio-Like TabControl</a> (Settings window)
 </p>

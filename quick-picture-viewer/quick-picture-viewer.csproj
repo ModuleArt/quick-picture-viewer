@@ -114,6 +114,9 @@
     <Compile Include="CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DownloadForm.cs">
       <SubType>Form</SubType>
     </Compile>

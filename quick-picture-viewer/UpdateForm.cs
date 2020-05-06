@@ -12,11 +12,6 @@ namespace quick_picture_viewer
 
 		public UpdateForm(UpdateChecker checker, string appName, bool darkMode)
 		{
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
-
 			_checker = checker;
 
 			InitializeComponent();
@@ -39,6 +34,8 @@ namespace quick_picture_viewer
 
 				currentVersionLink.LinkColor = ThemeManager.AccentColorDark;
 				latestReleaseLink.LinkColor = ThemeManager.AccentColorDark;
+
+				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 		}
 

@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3ADD11E91ACE168EC9CD078073F335A2"
+        "OwnerKey" = "8:_4B597F9189B6419DBE3695587B370B9E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_40C6127B5946D5700E47558CE31268DA"
         "OwnerKey" = "8:_341B7369063EAED72B9D222BFCD21278"
         "MsmSig" = "8:_UNDEFINED"
@@ -65,18 +71,6 @@
         {
         "MsmKey" = "8:_602081345A8B570EE42EFE35A1D60858"
         "OwnerKey" = "8:_4B597F9189B6419DBE3695587B370B9E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_700D8167AC94774D9A8B754D63C815CA"
-        "OwnerKey" = "8:_4B597F9189B6419DBE3695587B370B9E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_700D8167AC94774D9A8B754D63C815CA"
-        "OwnerKey" = "8:_D79912B2D03E5FCE7D19CDBE1E8A91F2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -160,7 +154,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_700D8167AC94774D9A8B754D63C815CA"
+        "OwnerKey" = "8:_3ADD11E91ACE168EC9CD078073F335A2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -399,6 +393,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3ADD11E91ACE168EC9CD078073F335A2"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_3ADD11E91ACE168EC9CD078073F335A2"
+                    {
+                    "Name" = "8:Microsoft.WindowsAPICodePack.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsAPICodePack.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40C6127B5946D5700E47558CE31268DA"
             {
             "AssemblyRegister" = "3:1"
@@ -444,37 +469,6 @@
                     }
                 }
             "SourcePath" = "8:Octokit.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_700D8167AC94774D9A8B754D63C815CA"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_700D8167AC94774D9A8B754D63C815CA"
-                    {
-                    "Name" = "8:Microsoft.WindowsAPICodePack.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Microsoft.WindowsAPICodePack.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"
@@ -1165,7 +1159,7 @@
         "ARPCONTACT" = "8:Module Art"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Lightweight, versatile desktop photo viewer for Windows"
-        "ARPURLINFOABOUT" = "8:https://moduleart.github.io"
+        "ARPURLINFOABOUT" = "8:https://github.com/ModuleArt"
         "ARPPRODUCTICON" = "8:_C3E94029681345CDB595943F27D860BD"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -2134,7 +2128,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B597F9189B6419DBE3695587B370B9E"
             {
-            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Release\\quick-picture-viewer.exe"
+            "SourcePath" = "8:..\\quick-picture-viewer\\obj\\Debug\\quick-picture-viewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_259C1F6F99A84F81BA44246337DEBF66"

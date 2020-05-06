@@ -88,7 +88,7 @@
 			// widthNumeric
 			// 
 			this.widthNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.widthNumeric.Location = new System.Drawing.Point(55, 145);
+			this.widthNumeric.Location = new System.Drawing.Point(56, 145);
 			this.widthNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -112,7 +112,7 @@
 			// heightNumeric
 			// 
 			this.heightNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.heightNumeric.Location = new System.Drawing.Point(189, 145);
+			this.heightNumeric.Location = new System.Drawing.Point(190, 145);
 			this.heightNumeric.Maximum = new decimal(new int[] {
             10000,
             0,

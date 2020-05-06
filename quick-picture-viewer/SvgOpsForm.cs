@@ -11,10 +11,6 @@ namespace quick_picture_viewer
 
 		public SvgOpsForm(string path, int width, int height, bool darkMode)
 		{
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
 			this.path = path;
 			this.aspectRatio = width / (float)height;
 
@@ -37,6 +33,8 @@ namespace quick_picture_viewer
 				defaultSizeButton.BackColor = ThemeManager.SecondColorDark;
 				size128Button.BackColor = ThemeManager.SecondColorDark;
 				size64Button.BackColor = ThemeManager.SecondColorDark;
+
+				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 		}
 

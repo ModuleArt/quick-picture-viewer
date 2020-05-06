@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
-using System.Reflection;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -14,11 +13,6 @@ namespace quick_picture_viewer
 		{
 			this.darkMode = darkMode;
 
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
-
 			InitializeComponent();
 
 			if (darkMode)
@@ -26,12 +20,16 @@ namespace quick_picture_viewer
 				this.BackColor = ThemeManager.BackColorDark;
 				this.ForeColor = Color.White;
 
-				for(int i = 0; i < tabControl1.TabPages.Count; i++)
-				{
-					tabControl1.TabPages[i].ForeColor = Color.Black;
-				}
-
 				okButton.BackColor = ThemeManager.SecondColorDark;
+
+				settingsTabs.BackTabColor = ThemeManager.BackColorDark;
+				settingsTabs.BorderColor = ThemeManager.SecondColorDark;
+				settingsTabs.ActiveColor = ThemeManager.AccentColorDark;
+				settingsTabs.HeaderColor = ThemeManager.SecondColorDark;
+				settingsTabs.TextColor = Color.White;
+				settingsTabs.HorizontalLineColor = Color.Transparent;
+
+				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 
 			int theme = Properties.Settings.Default.Theme;
@@ -91,39 +89,6 @@ namespace quick_picture_viewer
 				Properties.Settings.Default.Theme = 2;
 				Properties.Settings.Default.Save();
 			}
-		}
-
-		private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
-		{
-			Graphics g = e.Graphics;
-			Brush _textBrush;
-
-			// Get the item from the collection.
-			TabPage _tabPage = tabControl1.TabPages[e.Index];
-
-			// Get the real bounds for the tab rectangle.
-			Rectangle _tabBounds = tabControl1.GetTabRect(e.Index);
-
-			if (e.State == DrawItemState.Selected)
-			{
-				// Draw a different background color, and don't paint a focus rectangle.
-				_textBrush = new SolidBrush(Color.White);
-
-				g.FillRectangle(Brushes.Gray, e.Bounds);
-			}
-			else
-			{	_textBrush = new System.Drawing.SolidBrush(e.ForeColor);
-				e.DrawBackground();
-			}
-
-			// Use our own font.
-			Font _tabFont = this.Font;
-
-			// Draw string. Center the text.
-			StringFormat _stringFlags = new StringFormat();
-			_stringFlags.Alignment = StringAlignment.Center;
-			_stringFlags.LineAlignment = StringAlignment.Center;
-			g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
 		}
 
 		private void fullscrCursorCheckBox_CheckedChanged(object sender, EventArgs e)

@@ -10,11 +10,6 @@ namespace quick_picture_viewer
 
 		public WallpaperForm(Bitmap bmp, bool darkMode)
 		{
-			if (darkMode)
-			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
-			}
-
 			this.bmp = bmp;
 
 			InitializeComponent();
@@ -29,6 +24,8 @@ namespace quick_picture_viewer
 
 				okButton.BackColor = ThemeManager.SecondColorDark;
 				okButton.Image = Properties.Resources.white_desktop;
+
+				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 		}
 
