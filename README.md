@@ -50,9 +50,8 @@
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
-  <img src="/docs/screenshots/checkboard.png">
+  <img src="/docs/screenshots/svg.png">
   <img src="/docs/screenshots/info.png">
-  <img src="/docs/screenshots/desktop.png">
   <img src="/docs/screenshots/print.png">
   <img src="/docs/screenshots/about.png">
 </p>
