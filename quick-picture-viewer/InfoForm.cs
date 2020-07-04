@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickLibrary;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -12,6 +13,11 @@ namespace quick_picture_viewer
 
 		public InfoForm(Bitmap bitmap, string directoryName, string fileName, bool darkMode)
 		{
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			this.darkMode = darkMode;
 
 			InitializeComponent();
@@ -20,71 +26,7 @@ namespace quick_picture_viewer
 			copyTooltip.SetToolTip(copyFolderButton, "Copy value");
 			copyTooltip.SetToolTip(copyPathButton, "Copy value");
 
-			if (darkMode)
-			{
-				this.BackColor = ThemeManager.BackColorDark;
-				this.ForeColor = Color.White;
-
-				fileGroup.Paint += ThemeManager.PaintDarkGroupBox;
-				sizeGroup.Paint += ThemeManager.PaintDarkGroupBox;
-				dateGroup.Paint += ThemeManager.PaintDarkGroupBox;
-
-				propertiesButton.BackColor = ThemeManager.SecondColorDark;
-				propertiesButton.Image = Properties.Resources.white_imgfile;
-
-				okButton.BackColor = ThemeManager.SecondColorDark;
-
-				fileNameTextBox.BackColor = ThemeManager.SecondColorDark;
-				fileNameTextBox.ForeColor = Color.White;
-
-				folderTextBox.BackColor = ThemeManager.SecondColorDark;
-				folderTextBox.ForeColor = Color.White;
-
-				fullPathTextBox.BackColor = ThemeManager.SecondColorDark;
-				fullPathTextBox.ForeColor = Color.White;
-
-				compressionTextBox.BackColor = ThemeManager.SecondColorDark;
-				compressionTextBox.ForeColor = Color.White;
-
-				extensionTextBox.BackColor = ThemeManager.SecondColorDark;
-				extensionTextBox.ForeColor = Color.White;
-
-				sizeTextBox.BackColor = ThemeManager.SecondColorDark;
-				sizeTextBox.ForeColor = Color.White;
-
-				megapixelsTextBox.BackColor = ThemeManager.SecondColorDark;
-				megapixelsTextBox.ForeColor = Color.White;
-
-				resolutionTextBox.BackColor = ThemeManager.SecondColorDark;
-				resolutionTextBox.ForeColor = Color.White;
-
-				inchesTextBox.BackColor = ThemeManager.SecondColorDark;
-				inchesTextBox.ForeColor = Color.White;
-
-				cmTextBox.BackColor = ThemeManager.SecondColorDark;
-				cmTextBox.ForeColor = Color.White;
-
-				diskSizeTextBox.BackColor = ThemeManager.SecondColorDark;
-				diskSizeTextBox.ForeColor = Color.White;
-
-				ratioTextBox.BackColor = ThemeManager.SecondColorDark;
-				ratioTextBox.ForeColor = Color.White;
-
-				createdTextBox.BackColor = ThemeManager.SecondColorDark;
-				createdTextBox.ForeColor = Color.White;
-
-				modifiedTextBox.BackColor = ThemeManager.SecondColorDark;
-				modifiedTextBox.ForeColor = Color.White;
-
-				copyNameButton.Image = Properties.Resources.white_copy;
-				copyNameButton.BackColor = ThemeManager.BackColorDark;
-				copyFolderButton.Image = Properties.Resources.white_copy;
-				copyFolderButton.BackColor = ThemeManager.BackColorDark;
-				copyPathButton.Image = Properties.Resources.white_copy;
-				copyPathButton.BackColor = ThemeManager.BackColorDark;
-
-				ThemeManager.enableDarkTitlebar(Handle, true);
-			}
+			applyDarkMode(darkMode);
 
 			if (directoryName != null)
 			{
@@ -108,7 +50,7 @@ namespace quick_picture_viewer
 				if (darkMode)
 				{
 					propertiesButton.Image = null;
-					propertiesButton.BackColor = ThemeManager.BackColorDark;
+					propertiesButton.BackColor = ThemeManager.DarkBackColor;
 				}
 			}
 
@@ -124,7 +66,77 @@ namespace quick_picture_viewer
 			resolutionTextBox.Text = Math.Round(bitmap.HorizontalResolution) + " x " + Math.Round(bitmap.VerticalResolution) + " DPI";
 			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " inches";
 			cmTextBox.Text = cmWidth.ToString("0.##") + " x " + cmHeight.ToString("0.##") + " centimeters";
-			ratioTextBox.Text = string.Format("{0} : {1}", bitmap.Width / GCD(bitmap.Width, bitmap.Height), bitmap.Height / GCD(bitmap.Width, bitmap.Height));
+
+			int firstRatio = bitmap.Width / GCD(bitmap.Width, bitmap.Height);
+			int secondRatio = bitmap.Height / GCD(bitmap.Width, bitmap.Height);
+			ratioTextBox.Text = string.Format("{0} : {1} (", firstRatio, secondRatio);
+			if (firstRatio == secondRatio)
+			{
+				ratioTextBox.Text += "Square)";
+			}
+			else if (firstRatio > secondRatio)
+			{
+				ratioTextBox.Text += "Landscape)";
+			}
+			else
+			{
+				ratioTextBox.Text += "Portrait)";
+			}
+
+			fileNameTextBox.Focus();
+		}
+
+		private void applyDarkMode(bool dark)
+		{
+			if (dark)
+			{
+				this.BackColor = ThemeManager.DarkBackColor;
+				this.ForeColor = Color.White;
+
+				propertiesButton.BackColor = ThemeManager.DarkSecondColor;
+				propertiesButton.Image = Properties.Resources.white_imgfile;
+
+				copyNameButton.Image = Properties.Resources.white_copy;
+				copyNameButton.BackColor = ThemeManager.DarkSecondColor;
+				copyFolderButton.Image = Properties.Resources.white_copy;
+				copyFolderButton.BackColor = ThemeManager.DarkSecondColor;
+				copyPathButton.Image = Properties.Resources.white_copy;
+				copyPathButton.BackColor = ThemeManager.DarkSecondColor;
+
+				fileNameTextBox.BackColor = ThemeManager.DarkSecondColor;
+				fileNameTextBox.ForeColor = Color.White;
+				folderTextBox.BackColor = ThemeManager.DarkSecondColor;
+				folderTextBox.ForeColor = Color.White;
+				fullPathTextBox.BackColor = ThemeManager.DarkSecondColor;
+				fullPathTextBox.ForeColor = Color.White;
+				compressionTextBox.BackColor = ThemeManager.DarkSecondColor;
+				compressionTextBox.ForeColor = Color.White;
+				extensionTextBox.BackColor = ThemeManager.DarkSecondColor;
+				extensionTextBox.ForeColor = Color.White;
+				sizeTextBox.BackColor = ThemeManager.DarkSecondColor;
+				sizeTextBox.ForeColor = Color.White;
+				megapixelsTextBox.BackColor = ThemeManager.DarkSecondColor;
+				megapixelsTextBox.ForeColor = Color.White;
+				resolutionTextBox.BackColor = ThemeManager.DarkSecondColor;
+				resolutionTextBox.ForeColor = Color.White;
+				inchesTextBox.BackColor = ThemeManager.DarkSecondColor;
+				inchesTextBox.ForeColor = Color.White;
+				cmTextBox.BackColor = ThemeManager.DarkSecondColor;
+				cmTextBox.ForeColor = Color.White;
+				diskSizeTextBox.BackColor = ThemeManager.DarkSecondColor;
+				diskSizeTextBox.ForeColor = Color.White;
+				ratioTextBox.BackColor = ThemeManager.DarkSecondColor;
+				ratioTextBox.ForeColor = Color.White;
+				createdTextBox.BackColor = ThemeManager.DarkSecondColor;
+				createdTextBox.ForeColor = Color.White;
+				modifiedTextBox.BackColor = ThemeManager.DarkSecondColor;
+				modifiedTextBox.ForeColor = Color.White;
+			}
+
+			fileGroup.SetDarkMode(dark);
+			sizeGroup.SetDarkMode(dark);
+			dateGroup.SetDarkMode(dark);
+			okButton.SetDarkMode(dark);
 		}
 
 		private int GCD(int a, int b)
@@ -207,7 +219,7 @@ namespace quick_picture_viewer
 					btn.Text = string.Empty;
 					TextFormatFlags flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
 
-					TextRenderer.DrawText(e.Graphics, "File properties", btn.Font, e.ClipRectangle, ThemeManager.SecondColorDark, flags);
+					TextRenderer.DrawText(e.Graphics, "File properties", btn.Font, e.ClipRectangle, ThemeManager.DarkSecondColor, flags);
 				}
 			}
 		}

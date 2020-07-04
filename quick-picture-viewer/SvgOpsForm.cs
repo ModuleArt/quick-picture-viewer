@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickLibrary;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,6 +12,11 @@ namespace quick_picture_viewer
 
 		public SvgOpsForm(string path, int width, int height, bool darkMode)
 		{
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			this.path = path;
 			this.aspectRatio = width / (float)height;
 
@@ -18,23 +24,14 @@ namespace quick_picture_viewer
 
 			widthNumeric.Value = width;
 			heightNumeric.Value = height;
+		}
 
-			if (darkMode)
+		private void applyDarkMode(bool dark)
+		{
+			if (dark)
 			{
-				this.BackColor = ThemeManager.BackColorDark;
+				this.BackColor = ThemeManager.DarkBackColor;
 				this.ForeColor = Color.White;
-
-				groupBox1.Paint += ThemeManager.PaintDarkGroupBox;
-
-				okButton.BackColor = ThemeManager.SecondColorDark;
-				size256Button.BackColor = ThemeManager.SecondColorDark;
-				size512Button.BackColor = ThemeManager.SecondColorDark;
-				size1024Button.BackColor = ThemeManager.SecondColorDark;
-				defaultSizeButton.BackColor = ThemeManager.SecondColorDark;
-				size128Button.BackColor = ThemeManager.SecondColorDark;
-				size64Button.BackColor = ThemeManager.SecondColorDark;
-
-				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
 		}
 

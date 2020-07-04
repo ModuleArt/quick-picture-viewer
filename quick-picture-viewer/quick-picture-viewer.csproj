@@ -89,6 +89,10 @@
       <HintPath>..\packages\Octokit.0.3.4\lib\net45\Octokit.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
+    <Reference Include="QuickLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\quick-library\QuickLibrary\bin\Release\QuickLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Svg, Version=3.0.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
       <HintPath>..\packages\Svg.3.0.102\lib\net452\Svg.dll</HintPath>
     </Reference>
@@ -108,20 +112,8 @@
   <ItemGroup>
     <Compile Include="Converter.cs" />
     <Compile Include="CustomJumplist.cs" />
-    <Compile Include="CustomMenuSeparator.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CustomPanel.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomTabControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DownloadForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DownloadForm.Designer.cs">
-      <DependentUpon>DownloadForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IcoWrapper.cs" />
     <Compile Include="InfoForm.cs">
@@ -149,8 +141,6 @@
     <Compile Include="SvgOpsForm.Designer.cs">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemeManager.cs" />
-    <Compile Include="ToolStripOverride.cs" />
     <Compile Include="PrintForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +176,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebPWrapper.cs" />
-    <EmbeddedResource Include="DownloadForm.resx">
-      <DependentUpon>DownloadForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>

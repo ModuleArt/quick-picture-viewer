@@ -37,15 +37,16 @@
 			this.descriptionLabel = new System.Windows.Forms.Label();
 			this.developerLink = new System.Windows.Forms.LinkLabel();
 			this.projectLink = new System.Windows.Forms.LinkLabel();
-			this.okButton = new System.Windows.Forms.Button();
-			this.infoGroup = new System.Windows.Forms.GroupBox();
+			this.infoGroup = new QuickLibrary.QlibGroupBox();
 			this.licenseLabel = new System.Windows.Forms.Label();
 			this.makeDefaultLink = new System.Windows.Forms.LinkLabel();
 			this.updatesLink = new System.Windows.Forms.LinkLabel();
 			this.issuesLink = new System.Windows.Forms.LinkLabel();
-			this.pagesGroup = new System.Windows.Forms.GroupBox();
+			this.pagesGroup = new QuickLibrary.QlibGroupBox();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.developerLabel = new System.Windows.Forms.Label();
+			this.githubLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.infoGroup.SuspendLayout();
 			this.pagesGroup.SuspendLayout();
@@ -65,8 +66,8 @@
 			// productLabel
 			// 
 			this.productLabel.AutoSize = true;
-			this.productLabel.Location = new System.Drawing.Point(6, 28);
-			this.productLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.productLabel.Location = new System.Drawing.Point(9, 25);
+			this.productLabel.Margin = new System.Windows.Forms.Padding(9, 9, 0, 0);
 			this.productLabel.Name = "productLabel";
 			this.productLabel.Size = new System.Drawing.Size(116, 15);
 			this.productLabel.TabIndex = 27;
@@ -75,18 +76,21 @@
 			// versionLabel
 			// 
 			this.versionLabel.AutoSize = true;
-			this.versionLabel.Location = new System.Drawing.Point(6, 49);
-			this.versionLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.versionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+			this.versionLabel.Location = new System.Drawing.Point(125, 25);
+			this.versionLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.versionLabel.Name = "versionLabel";
+			this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.versionLabel.Size = new System.Drawing.Size(45, 15);
 			this.versionLabel.TabIndex = 28;
 			this.versionLabel.Text = "Version";
+			this.versionLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// companyLabel
 			// 
 			this.companyLabel.AutoSize = true;
-			this.companyLabel.Location = new System.Drawing.Point(6, 103);
-			this.companyLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.companyLabel.Location = new System.Drawing.Point(9, 136);
+			this.companyLabel.Margin = new System.Windows.Forms.Padding(9, 9, 0, 0);
 			this.companyLabel.Name = "companyLabel";
 			this.companyLabel.Size = new System.Drawing.Size(127, 15);
 			this.companyLabel.TabIndex = 29;
@@ -95,28 +99,29 @@
 			// authorLabel
 			// 
 			this.authorLabel.AutoSize = true;
-			this.authorLabel.Location = new System.Drawing.Point(6, 124);
-			this.authorLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.authorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+			this.authorLabel.Location = new System.Drawing.Point(136, 136);
+			this.authorLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.authorLabel.Name = "authorLabel";
-			this.authorLabel.Size = new System.Drawing.Size(134, 15);
+			this.authorLabel.Size = new System.Drawing.Size(99, 15);
 			this.authorLabel.TabIndex = 30;
-			this.authorLabel.Text = "Author: Eugene Volynko";
+			this.authorLabel.Text = "(Eugene Volynko)";
 			// 
 			// descriptionLabel
 			// 
-			this.descriptionLabel.AutoSize = true;
-			this.descriptionLabel.Location = new System.Drawing.Point(6, 151);
-			this.descriptionLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.descriptionLabel.Location = new System.Drawing.Point(9, 73);
+			this.descriptionLabel.Margin = new System.Windows.Forms.Padding(9, 9, 9, 0);
 			this.descriptionLabel.Name = "descriptionLabel";
-			this.descriptionLabel.Size = new System.Drawing.Size(221, 30);
+			this.descriptionLabel.Size = new System.Drawing.Size(238, 30);
 			this.descriptionLabel.TabIndex = 31;
-			this.descriptionLabel.Text = "Lightweight desktop photo viewer for\r\nWindows, built on top of WinForms (C#)\r\n";
+			this.descriptionLabel.Text = "Lightweight, versatile desktop photo viewer for Windows, built on top of WinForms" +
+    "";
 			// 
 			// developerLink
 			// 
 			this.developerLink.AutoSize = true;
-			this.developerLink.Location = new System.Drawing.Point(6, 28);
-			this.developerLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.developerLink.Location = new System.Drawing.Point(72, 25);
+			this.developerLink.Margin = new System.Windows.Forms.Padding(0);
 			this.developerLink.Name = "developerLink";
 			this.developerLink.Size = new System.Drawing.Size(67, 15);
 			this.developerLink.TabIndex = 2;
@@ -128,8 +133,8 @@
 			// projectLink
 			// 
 			this.projectLink.AutoSize = true;
-			this.projectLink.Location = new System.Drawing.Point(79, 28);
-			this.projectLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.projectLink.Location = new System.Drawing.Point(57, 49);
+			this.projectLink.Margin = new System.Windows.Forms.Padding(0);
 			this.projectLink.Name = "projectLink";
 			this.projectLink.Size = new System.Drawing.Size(73, 15);
 			this.projectLink.TabIndex = 3;
@@ -138,23 +143,10 @@
 			this.aboutTooltip.SetToolTip(this.projectLink, "Open project page in browser");
 			this.projectLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.projectLink_LinkClicked);
 			// 
-			// okButton
-			// 
-			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.okButton.FlatAppearance.BorderSize = 0;
-			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(9, 431);
-			this.okButton.Margin = new System.Windows.Forms.Padding(0);
-			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 6;
-			this.okButton.Text = "Close";
-			this.okButton.UseVisualStyleBackColor = false;
-			// 
 			// infoGroup
 			// 
+			this.infoGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.infoGroup.Controls.Add(this.licenseLabel);
 			this.infoGroup.Controls.Add(this.makeDefaultLink);
 			this.infoGroup.Controls.Add(this.updatesLink);
@@ -166,7 +158,8 @@
 			this.infoGroup.Location = new System.Drawing.Point(9, 98);
 			this.infoGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.infoGroup.Name = "infoGroup";
-			this.infoGroup.Size = new System.Drawing.Size(256, 253);
+			this.infoGroup.Padding = new System.Windows.Forms.Padding(0);
+			this.infoGroup.Size = new System.Drawing.Size(256, 193);
 			this.infoGroup.TabIndex = 34;
 			this.infoGroup.TabStop = false;
 			this.infoGroup.Text = "Info";
@@ -174,8 +167,8 @@
 			// licenseLabel
 			// 
 			this.licenseLabel.AutoSize = true;
-			this.licenseLabel.Location = new System.Drawing.Point(6, 220);
-			this.licenseLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.licenseLabel.Location = new System.Drawing.Point(9, 160);
+			this.licenseLabel.Margin = new System.Windows.Forms.Padding(9, 9, 0, 0);
 			this.licenseLabel.Name = "licenseLabel";
 			this.licenseLabel.Size = new System.Drawing.Size(93, 15);
 			this.licenseLabel.TabIndex = 37;
@@ -185,8 +178,8 @@
 			// 
 			this.makeDefaultLink.AutoSize = true;
 			this.makeDefaultLink.Enabled = false;
-			this.makeDefaultLink.Location = new System.Drawing.Point(6, 193);
-			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.makeDefaultLink.Location = new System.Drawing.Point(9, 112);
+			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(9, 9, 0, 0);
 			this.makeDefaultLink.Name = "makeDefaultLink";
 			this.makeDefaultLink.Size = new System.Drawing.Size(149, 15);
 			this.makeDefaultLink.TabIndex = 1;
@@ -198,8 +191,8 @@
 			// updatesLink
 			// 
 			this.updatesLink.AutoSize = true;
-			this.updatesLink.Location = new System.Drawing.Point(6, 76);
-			this.updatesLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.updatesLink.Location = new System.Drawing.Point(9, 49);
+			this.updatesLink.Margin = new System.Windows.Forms.Padding(9, 9, 0, 0);
 			this.updatesLink.Name = "updatesLink";
 			this.updatesLink.Size = new System.Drawing.Size(103, 15);
 			this.updatesLink.TabIndex = 0;
@@ -210,8 +203,8 @@
 			// issuesLink
 			// 
 			this.issuesLink.AutoSize = true;
-			this.issuesLink.Location = new System.Drawing.Point(158, 28);
-			this.issuesLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.issuesLink.Location = new System.Drawing.Point(130, 49);
+			this.issuesLink.Margin = new System.Windows.Forms.Padding(0);
 			this.issuesLink.Name = "issuesLink";
 			this.issuesLink.Size = new System.Drawing.Size(38, 15);
 			this.issuesLink.TabIndex = 4;
@@ -222,14 +215,17 @@
 			// 
 			// pagesGroup
 			// 
+			this.pagesGroup.Controls.Add(this.githubLabel);
+			this.pagesGroup.Controls.Add(this.developerLabel);
 			this.pagesGroup.Controls.Add(this.licenseLink);
 			this.pagesGroup.Controls.Add(this.developerLink);
 			this.pagesGroup.Controls.Add(this.projectLink);
 			this.pagesGroup.Controls.Add(this.issuesLink);
-			this.pagesGroup.Location = new System.Drawing.Point(9, 360);
+			this.pagesGroup.Location = new System.Drawing.Point(9, 300);
 			this.pagesGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.pagesGroup.Name = "pagesGroup";
-			this.pagesGroup.Size = new System.Drawing.Size(256, 63);
+			this.pagesGroup.Padding = new System.Windows.Forms.Padding(0);
+			this.pagesGroup.Size = new System.Drawing.Size(256, 82);
 			this.pagesGroup.TabIndex = 37;
 			this.pagesGroup.TabStop = false;
 			this.pagesGroup.Text = "Links";
@@ -237,8 +233,8 @@
 			// licenseLink
 			// 
 			this.licenseLink.AutoSize = true;
-			this.licenseLink.Location = new System.Drawing.Point(202, 28);
-			this.licenseLink.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.licenseLink.Location = new System.Drawing.Point(168, 49);
+			this.licenseLink.Margin = new System.Windows.Forms.Padding(0);
 			this.licenseLink.Name = "licenseLink";
 			this.licenseLink.Size = new System.Drawing.Size(46, 15);
 			this.licenseLink.TabIndex = 5;
@@ -247,15 +243,33 @@
 			this.aboutTooltip.SetToolTip(this.licenseLink, "Open license page in browser");
 			this.licenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.licenseLink_LinkClicked);
 			// 
+			// developerLabel
+			// 
+			this.developerLabel.AutoSize = true;
+			this.developerLabel.Location = new System.Drawing.Point(9, 25);
+			this.developerLabel.Margin = new System.Windows.Forms.Padding(9, 9, 0, 0);
+			this.developerLabel.Name = "developerLabel";
+			this.developerLabel.Size = new System.Drawing.Size(63, 15);
+			this.developerLabel.TabIndex = 38;
+			this.developerLabel.Text = "Developer:";
+			// 
+			// githubLabel
+			// 
+			this.githubLabel.AutoSize = true;
+			this.githubLabel.Location = new System.Drawing.Point(9, 49);
+			this.githubLabel.Margin = new System.Windows.Forms.Padding(9, 9, 0, 0);
+			this.githubLabel.Name = "githubLabel";
+			this.githubLabel.Size = new System.Drawing.Size(48, 15);
+			this.githubLabel.TabIndex = 39;
+			this.githubLabel.Text = "GitHub:";
+			// 
 			// AboutForm
 			// 
-			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 463);
+			this.ClientSize = new System.Drawing.Size(274, 390);
 			this.Controls.Add(this.pagesGroup);
 			this.Controls.Add(this.infoGroup);
-			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);
 			this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -289,14 +303,15 @@
 		private System.Windows.Forms.Label descriptionLabel;
 		private System.Windows.Forms.LinkLabel developerLink;
 		private System.Windows.Forms.LinkLabel projectLink;
-		private System.Windows.Forms.Button okButton;
-		private System.Windows.Forms.GroupBox infoGroup;
+		private QuickLibrary.QlibGroupBox infoGroup;
 		private System.Windows.Forms.LinkLabel issuesLink;
 		private System.Windows.Forms.LinkLabel updatesLink;
 		private System.Windows.Forms.LinkLabel makeDefaultLink;
-		private System.Windows.Forms.GroupBox pagesGroup;
+		private QuickLibrary.QlibGroupBox pagesGroup;
 		private System.Windows.Forms.Label licenseLabel;
 		private System.Windows.Forms.LinkLabel licenseLink;
 		private System.Windows.Forms.ToolTip aboutTooltip;
+		private System.Windows.Forms.Label developerLabel;
+		private System.Windows.Forms.Label githubLabel;
 	}
 }

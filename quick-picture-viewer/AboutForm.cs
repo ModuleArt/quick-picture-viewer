@@ -1,30 +1,32 @@
-﻿using System;
+﻿using QuickLibrary;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
 	partial class AboutForm : Form
 	{
-		private bool darkMode;
-
 		public AboutForm(bool darkMode)
 		{
-			this.darkMode = darkMode;
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+			}
 
 			InitializeComponent();
 
 			string fullVer = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			int lastDotIndex = fullVer.LastIndexOf('.');
-			versionLabel.Text = String.Format("Version: {0}", fullVer.Substring(0, lastDotIndex));
+			versionLabel.Text = String.Format("v{0}", fullVer.Substring(0, lastDotIndex));
 
 			if (IntPtr.Size == 4)
 			{
 				versionLabel.Text += " (x32)";
-			} 
+			}
 			else if (IntPtr.Size == 8)
 			{
 				versionLabel.Text += " (x64)";
@@ -35,40 +37,41 @@ namespace quick_picture_viewer
 				makeDefaultLink.Enabled = true;
 			}
 
-			if (darkMode)
+			updatesLink.LinkColor = ThemeManager.AccentColor;
+			developerLink.LinkColor = ThemeManager.AccentColor;
+			projectLink.LinkColor = ThemeManager.AccentColor;
+			issuesLink.LinkColor = ThemeManager.AccentColor;
+			makeDefaultLink.LinkColor = ThemeManager.AccentColor;
+			licenseLink.LinkColor = ThemeManager.AccentColor;
+
+			applyDarkMode(darkMode);
+		}
+
+		private void applyDarkMode(bool dark)
+		{
+			if (dark)
 			{
-				this.BackColor = ThemeManager.BackColorDark;
+				this.BackColor = ThemeManager.DarkBackColor;
 				this.ForeColor = Color.White;
-
-				infoGroup.Paint += ThemeManager.PaintDarkGroupBox;
-				pagesGroup.Paint += ThemeManager.PaintDarkGroupBox;
-
-				updatesLink.LinkColor = ThemeManager.AccentColorDark;
-				developerLink.LinkColor = ThemeManager.AccentColorDark;
-				projectLink.LinkColor = ThemeManager.AccentColorDark;
-				issuesLink.LinkColor = ThemeManager.AccentColorDark;
-				makeDefaultLink.LinkColor = ThemeManager.AccentColorDark;
-				licenseLink.LinkColor = ThemeManager.AccentColorDark;
-
-				okButton.BackColor = ThemeManager.SecondColorDark;
-
-				ThemeManager.enableDarkTitlebar(Handle, true);
 			}
+
+			infoGroup.SetDarkMode(dark);
+			pagesGroup.SetDarkMode(dark);
 		}
 
 		private void developerLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://github.com/ModuleArt/");
+			Process.Start("https://moduleart.github.io");
 		}
 
 		private void projectLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://github.com/ModuleArt/quick-picture-viewer/");
+			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/");
 		}
 
 		private void issuesLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://github.com/ModuleArt/quick-picture-viewer/issues/");
+			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/issues/");
 		}
 
 		private void updatesLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -93,7 +96,13 @@ namespace quick_picture_viewer
 
 		private void licenseLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("https://github.com/ModuleArt/quick-picture-viewer/blob/master/LICENSE.md/");
+			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/blob/master/LICENSE.md/");
 		}
+
+		[DllImport("User32.dll", CharSet = CharSet.Auto)]
+		public static extern int ReleaseDC(IntPtr hWnd, IntPtr hDC);
+
+		[DllImport("User32.dll")]
+		private static extern IntPtr GetWindowDC(IntPtr hWnd);
 	}
 }

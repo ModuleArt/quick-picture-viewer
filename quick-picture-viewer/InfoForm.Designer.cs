@@ -29,10 +29,9 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoForm));
-			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.fileNameLabel = new System.Windows.Forms.Label();
-			this.okButton = new System.Windows.Forms.Button();
-			this.fileGroup = new System.Windows.Forms.GroupBox();
+			this.okButton = new QuickLibrary.QlibTextButton();
+			this.fileGroup = new QuickLibrary.QlibGroupBox();
 			this.extensionTextBox = new System.Windows.Forms.TextBox();
 			this.extensionLabel = new System.Windows.Forms.Label();
 			this.copyPathButton = new System.Windows.Forms.Button();
@@ -55,40 +54,28 @@
 			this.inchesLabel = new System.Windows.Forms.Label();
 			this.cmTextBox = new System.Windows.Forms.TextBox();
 			this.cmLabel = new System.Windows.Forms.Label();
-			this.sizeGroup = new System.Windows.Forms.GroupBox();
+			this.sizeGroup = new QuickLibrary.QlibGroupBox();
 			this.ratioLabel = new System.Windows.Forms.Label();
 			this.ratioTextBox = new System.Windows.Forms.TextBox();
 			this.diskSizeTextBox = new System.Windows.Forms.TextBox();
 			this.diskSizeLabel = new System.Windows.Forms.Label();
-			this.dateGroup = new System.Windows.Forms.GroupBox();
+			this.dateGroup = new QuickLibrary.QlibGroupBox();
 			this.modifiedLabel = new System.Windows.Forms.Label();
 			this.modifiedTextBox = new System.Windows.Forms.TextBox();
 			this.createdLabel = new System.Windows.Forms.Label();
 			this.createdTextBox = new System.Windows.Forms.TextBox();
 			this.propertiesButton = new System.Windows.Forms.Button();
 			this.copyTooltip = new System.Windows.Forms.ToolTip(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.fileGroup.SuspendLayout();
 			this.sizeGroup.SuspendLayout();
 			this.dateGroup.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// logoPictureBox
-			// 
-			this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-			this.logoPictureBox.Location = new System.Drawing.Point(9, 9);
-			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
-			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(356, 80);
-			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.logoPictureBox.TabIndex = 12;
-			this.logoPictureBox.TabStop = false;
-			// 
 			// fileNameLabel
 			// 
 			this.fileNameLabel.AutoSize = true;
-			this.fileNameLabel.Location = new System.Drawing.Point(6, 28);
-			this.fileNameLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.fileNameLabel.Location = new System.Drawing.Point(47, 29);
+			this.fileNameLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.fileNameLabel.Name = "fileNameLabel";
 			this.fileNameLabel.Size = new System.Drawing.Size(42, 15);
 			this.fileNameLabel.TabIndex = 27;
@@ -96,16 +83,15 @@
 			// 
 			// okButton
 			// 
-			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(241, 579);
-			this.okButton.Margin = new System.Windows.Forms.Padding(0);
+			this.okButton.Location = new System.Drawing.Point(545, 287);
+			this.okButton.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(124, 23);
-			this.okButton.TabIndex = 18;
+			this.okButton.Size = new System.Drawing.Size(130, 23);
+			this.okButton.TabIndex = 21;
 			this.okButton.Text = "Close";
 			this.okButton.UseVisualStyleBackColor = false;
 			// 
@@ -124,11 +110,12 @@
 			this.fileGroup.Controls.Add(this.fileNameTextBox);
 			this.fileGroup.Controls.Add(this.folderLabel);
 			this.fileGroup.Controls.Add(this.fileNameLabel);
-			this.fileGroup.Location = new System.Drawing.Point(9, 98);
-			this.fileGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
+			this.fileGroup.Location = new System.Drawing.Point(9, 9);
+			this.fileGroup.Margin = new System.Windows.Forms.Padding(0);
 			this.fileGroup.Name = "fileGroup";
-			this.fileGroup.Size = new System.Drawing.Size(356, 143);
-			this.fileGroup.TabIndex = 34;
+			this.fileGroup.Padding = new System.Windows.Forms.Padding(0);
+			this.fileGroup.Size = new System.Drawing.Size(356, 162);
+			this.fileGroup.TabIndex = 0;
 			this.fileGroup.TabStop = false;
 			this.fileGroup.Text = "File";
 			// 
@@ -136,19 +123,19 @@
 			// 
 			this.extensionTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.extensionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.extensionTextBox.Location = new System.Drawing.Point(252, 104);
-			this.extensionTextBox.Multiline = true;
+			this.extensionTextBox.Location = new System.Drawing.Point(255, 121);
+			this.extensionTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.extensionTextBox.Name = "extensionTextBox";
 			this.extensionTextBox.ReadOnly = true;
-			this.extensionTextBox.Size = new System.Drawing.Size(70, 20);
-			this.extensionTextBox.TabIndex = 7;
+			this.extensionTextBox.Size = new System.Drawing.Size(60, 23);
+			this.extensionTextBox.TabIndex = 8;
 			this.extensionTextBox.Text = "Unknown";
 			// 
 			// extensionLabel
 			// 
 			this.extensionLabel.AutoSize = true;
-			this.extensionLabel.Location = new System.Drawing.Point(180, 106);
-			this.extensionLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.extensionLabel.Location = new System.Drawing.Point(185, 123);
+			this.extensionLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.extensionLabel.Name = "extensionLabel";
 			this.extensionLabel.Size = new System.Drawing.Size(61, 15);
 			this.extensionLabel.TabIndex = 51;
@@ -156,48 +143,48 @@
 			// 
 			// copyPathButton
 			// 
-			this.copyPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyPathButton.BackColor = System.Drawing.SystemColors.Control;
-			this.copyPathButton.FlatAppearance.BorderSize = 0;
+			this.copyPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.copyPathButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyPathButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.copyPathButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyPathButton.Image = ((System.Drawing.Image)(resources.GetObject("copyPathButton.Image")));
-			this.copyPathButton.Location = new System.Drawing.Point(324, 75);
-			this.copyPathButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+			this.copyPathButton.Location = new System.Drawing.Point(324, 89);
+			this.copyPathButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyPathButton.Name = "copyPathButton";
-			this.copyPathButton.Size = new System.Drawing.Size(26, 25);
-			this.copyPathButton.TabIndex = 5;
+			this.copyPathButton.Size = new System.Drawing.Size(23, 23);
+			this.copyPathButton.TabIndex = 6;
 			this.copyPathButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyPathButton.UseVisualStyleBackColor = false;
 			this.copyPathButton.Click += new System.EventHandler(this.copyPathButton_Click);
 			// 
 			// copyFolderButton
 			// 
-			this.copyFolderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyFolderButton.BackColor = System.Drawing.SystemColors.Control;
-			this.copyFolderButton.FlatAppearance.BorderSize = 0;
+			this.copyFolderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.copyFolderButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyFolderButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.copyFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("copyFolderButton.Image")));
-			this.copyFolderButton.Location = new System.Drawing.Point(324, 49);
-			this.copyFolderButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+			this.copyFolderButton.Location = new System.Drawing.Point(324, 57);
+			this.copyFolderButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyFolderButton.Name = "copyFolderButton";
-			this.copyFolderButton.Size = new System.Drawing.Size(26, 25);
-			this.copyFolderButton.TabIndex = 3;
+			this.copyFolderButton.Size = new System.Drawing.Size(23, 23);
+			this.copyFolderButton.TabIndex = 4;
 			this.copyFolderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyFolderButton.UseVisualStyleBackColor = false;
 			this.copyFolderButton.Click += new System.EventHandler(this.copyFolderButton_Click);
 			// 
 			// copyNameButton
 			// 
-			this.copyNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyNameButton.BackColor = System.Drawing.SystemColors.Control;
-			this.copyNameButton.FlatAppearance.BorderSize = 0;
+			this.copyNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.copyNameButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyNameButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.copyNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyNameButton.Image = ((System.Drawing.Image)(resources.GetObject("copyNameButton.Image")));
-			this.copyNameButton.Location = new System.Drawing.Point(324, 23);
-			this.copyNameButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+			this.copyNameButton.Location = new System.Drawing.Point(324, 25);
+			this.copyNameButton.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.copyNameButton.Name = "copyNameButton";
-			this.copyNameButton.Size = new System.Drawing.Size(26, 25);
-			this.copyNameButton.TabIndex = 1;
+			this.copyNameButton.Size = new System.Drawing.Size(23, 23);
+			this.copyNameButton.TabIndex = 2;
 			this.copyNameButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyNameButton.UseVisualStyleBackColor = false;
 			this.copyNameButton.Click += new System.EventHandler(this.copyNameButton_Click);
@@ -206,18 +193,18 @@
 			// 
 			this.compressionTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.compressionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.compressionTextBox.Location = new System.Drawing.Point(97, 104);
-			this.compressionTextBox.Multiline = true;
+			this.compressionTextBox.Location = new System.Drawing.Point(98, 121);
+			this.compressionTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.compressionTextBox.Name = "compressionTextBox";
 			this.compressionTextBox.ReadOnly = true;
-			this.compressionTextBox.Size = new System.Drawing.Size(70, 20);
-			this.compressionTextBox.TabIndex = 6;
+			this.compressionTextBox.Size = new System.Drawing.Size(60, 23);
+			this.compressionTextBox.TabIndex = 7;
 			// 
 			// compressionLabel
 			// 
 			this.compressionLabel.AutoSize = true;
-			this.compressionLabel.Location = new System.Drawing.Point(6, 106);
-			this.compressionLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.compressionLabel.Location = new System.Drawing.Point(9, 123);
+			this.compressionLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
 			this.compressionLabel.Name = "compressionLabel";
 			this.compressionLabel.Size = new System.Drawing.Size(80, 15);
 			this.compressionLabel.TabIndex = 33;
@@ -227,20 +214,20 @@
 			// 
 			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.fullPathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.fullPathTextBox.Location = new System.Drawing.Point(97, 78);
-			this.fullPathTextBox.Multiline = true;
+			this.fullPathTextBox.Location = new System.Drawing.Point(98, 89);
+			this.fullPathTextBox.Margin = new System.Windows.Forms.Padding(9);
 			this.fullPathTextBox.Name = "fullPathTextBox";
 			this.fullPathTextBox.ReadOnly = true;
-			this.fullPathTextBox.Size = new System.Drawing.Size(225, 20);
-			this.fullPathTextBox.TabIndex = 4;
+			this.fullPathTextBox.Size = new System.Drawing.Size(217, 23);
+			this.fullPathTextBox.TabIndex = 5;
 			this.fullPathTextBox.Text = "Unknown";
 			this.fullPathTextBox.WordWrap = false;
 			// 
 			// fullPathLabel
 			// 
 			this.fullPathLabel.AutoSize = true;
-			this.fullPathLabel.Location = new System.Drawing.Point(6, 80);
-			this.fullPathLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.fullPathLabel.Location = new System.Drawing.Point(33, 91);
+			this.fullPathLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.fullPathLabel.Name = "fullPathLabel";
 			this.fullPathLabel.Size = new System.Drawing.Size(56, 15);
 			this.fullPathLabel.TabIndex = 31;
@@ -250,32 +237,31 @@
 			// 
 			this.folderTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.folderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.folderTextBox.Location = new System.Drawing.Point(97, 52);
-			this.folderTextBox.Multiline = true;
+			this.folderTextBox.Location = new System.Drawing.Point(98, 57);
+			this.folderTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.folderTextBox.Name = "folderTextBox";
 			this.folderTextBox.ReadOnly = true;
-			this.folderTextBox.Size = new System.Drawing.Size(225, 20);
-			this.folderTextBox.TabIndex = 2;
+			this.folderTextBox.Size = new System.Drawing.Size(217, 23);
+			this.folderTextBox.TabIndex = 3;
 			this.folderTextBox.Text = "Not exists";
 			// 
 			// fileNameTextBox
 			// 
 			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.fileNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.fileNameTextBox.Location = new System.Drawing.Point(97, 26);
-			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(3, 9, 0, 3);
-			this.fileNameTextBox.Multiline = true;
+			this.fileNameTextBox.Location = new System.Drawing.Point(98, 25);
+			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(9);
 			this.fileNameTextBox.Name = "fileNameTextBox";
 			this.fileNameTextBox.ReadOnly = true;
-			this.fileNameTextBox.Size = new System.Drawing.Size(225, 20);
-			this.fileNameTextBox.TabIndex = 0;
+			this.fileNameTextBox.Size = new System.Drawing.Size(217, 23);
+			this.fileNameTextBox.TabIndex = 1;
 			this.fileNameTextBox.Text = "None";
 			// 
 			// folderLabel
 			// 
 			this.folderLabel.AutoSize = true;
-			this.folderLabel.Location = new System.Drawing.Point(6, 54);
-			this.folderLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.folderLabel.Location = new System.Drawing.Point(46, 59);
+			this.folderLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.folderLabel.Name = "folderLabel";
 			this.folderLabel.Size = new System.Drawing.Size(43, 15);
 			this.folderLabel.TabIndex = 28;
@@ -285,19 +271,18 @@
 			// 
 			this.sizeTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.sizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.sizeTextBox.Location = new System.Drawing.Point(97, 26);
-			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
-			this.sizeTextBox.Multiline = true;
+			this.sizeTextBox.Location = new System.Drawing.Point(103, 25);
+			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.sizeTextBox.Name = "sizeTextBox";
 			this.sizeTextBox.ReadOnly = true;
-			this.sizeTextBox.Size = new System.Drawing.Size(249, 20);
-			this.sizeTextBox.TabIndex = 8;
+			this.sizeTextBox.Size = new System.Drawing.Size(189, 23);
+			this.sizeTextBox.TabIndex = 13;
 			// 
 			// sizeLabel
 			// 
 			this.sizeLabel.AutoSize = true;
-			this.sizeLabel.Location = new System.Drawing.Point(6, 28);
-			this.sizeLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.sizeLabel.Location = new System.Drawing.Point(40, 27);
+			this.sizeLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
 			this.sizeLabel.Name = "sizeLabel";
 			this.sizeLabel.Size = new System.Drawing.Size(54, 15);
 			this.sizeLabel.TabIndex = 35;
@@ -307,18 +292,18 @@
 			// 
 			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.megapixelsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.megapixelsTextBox.Location = new System.Drawing.Point(97, 52);
-			this.megapixelsTextBox.Multiline = true;
+			this.megapixelsTextBox.Location = new System.Drawing.Point(103, 57);
+			this.megapixelsTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
 			this.megapixelsTextBox.ReadOnly = true;
-			this.megapixelsTextBox.Size = new System.Drawing.Size(249, 20);
-			this.megapixelsTextBox.TabIndex = 9;
+			this.megapixelsTextBox.Size = new System.Drawing.Size(189, 23);
+			this.megapixelsTextBox.TabIndex = 14;
 			// 
 			// megapixelsLabel
 			// 
 			this.megapixelsLabel.AutoSize = true;
-			this.megapixelsLabel.Location = new System.Drawing.Point(6, 54);
-			this.megapixelsLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.megapixelsLabel.Location = new System.Drawing.Point(35, 59);
+			this.megapixelsLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.megapixelsLabel.Name = "megapixelsLabel";
 			this.megapixelsLabel.Size = new System.Drawing.Size(59, 15);
 			this.megapixelsLabel.TabIndex = 37;
@@ -328,18 +313,18 @@
 			// 
 			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.resolutionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.resolutionTextBox.Location = new System.Drawing.Point(97, 78);
-			this.resolutionTextBox.Multiline = true;
+			this.resolutionTextBox.Location = new System.Drawing.Point(103, 89);
+			this.resolutionTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.resolutionTextBox.Name = "resolutionTextBox";
 			this.resolutionTextBox.ReadOnly = true;
-			this.resolutionTextBox.Size = new System.Drawing.Size(249, 20);
-			this.resolutionTextBox.TabIndex = 10;
+			this.resolutionTextBox.Size = new System.Drawing.Size(189, 23);
+			this.resolutionTextBox.TabIndex = 15;
 			// 
 			// resolutionLabel
 			// 
 			this.resolutionLabel.AutoSize = true;
-			this.resolutionLabel.Location = new System.Drawing.Point(6, 80);
-			this.resolutionLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.resolutionLabel.Location = new System.Drawing.Point(28, 91);
+			this.resolutionLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.resolutionLabel.Name = "resolutionLabel";
 			this.resolutionLabel.Size = new System.Drawing.Size(66, 15);
 			this.resolutionLabel.TabIndex = 39;
@@ -349,18 +334,18 @@
 			// 
 			this.inchesTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.inchesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.inchesTextBox.Location = new System.Drawing.Point(97, 104);
-			this.inchesTextBox.Multiline = true;
+			this.inchesTextBox.Location = new System.Drawing.Point(103, 121);
+			this.inchesTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.inchesTextBox.Name = "inchesTextBox";
 			this.inchesTextBox.ReadOnly = true;
-			this.inchesTextBox.Size = new System.Drawing.Size(249, 20);
-			this.inchesTextBox.TabIndex = 11;
+			this.inchesTextBox.Size = new System.Drawing.Size(189, 23);
+			this.inchesTextBox.TabIndex = 16;
 			// 
 			// inchesLabel
 			// 
 			this.inchesLabel.AutoSize = true;
-			this.inchesLabel.Location = new System.Drawing.Point(6, 106);
-			this.inchesLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.inchesLabel.Location = new System.Drawing.Point(16, 123);
+			this.inchesLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.inchesLabel.Name = "inchesLabel";
 			this.inchesLabel.Size = new System.Drawing.Size(78, 15);
 			this.inchesLabel.TabIndex = 41;
@@ -370,18 +355,18 @@
 			// 
 			this.cmTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.cmTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.cmTextBox.Location = new System.Drawing.Point(97, 130);
-			this.cmTextBox.Multiline = true;
+			this.cmTextBox.Location = new System.Drawing.Point(103, 153);
+			this.cmTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.cmTextBox.Name = "cmTextBox";
 			this.cmTextBox.ReadOnly = true;
-			this.cmTextBox.Size = new System.Drawing.Size(249, 20);
-			this.cmTextBox.TabIndex = 12;
+			this.cmTextBox.Size = new System.Drawing.Size(189, 23);
+			this.cmTextBox.TabIndex = 17;
 			// 
 			// cmLabel
 			// 
 			this.cmLabel.AutoSize = true;
-			this.cmLabel.Location = new System.Drawing.Point(6, 132);
-			this.cmLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.cmLabel.Location = new System.Drawing.Point(9, 155);
+			this.cmLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
 			this.cmLabel.Name = "cmLabel";
 			this.cmLabel.Size = new System.Drawing.Size(85, 15);
 			this.cmLabel.TabIndex = 43;
@@ -403,19 +388,20 @@
 			this.sizeGroup.Controls.Add(this.megapixelsLabel);
 			this.sizeGroup.Controls.Add(this.resolutionTextBox);
 			this.sizeGroup.Controls.Add(this.resolutionLabel);
-			this.sizeGroup.Location = new System.Drawing.Point(9, 250);
-			this.sizeGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
+			this.sizeGroup.Location = new System.Drawing.Point(374, 9);
+			this.sizeGroup.Margin = new System.Windows.Forms.Padding(0);
 			this.sizeGroup.Name = "sizeGroup";
-			this.sizeGroup.Size = new System.Drawing.Size(356, 221);
-			this.sizeGroup.TabIndex = 45;
+			this.sizeGroup.Padding = new System.Windows.Forms.Padding(0);
+			this.sizeGroup.Size = new System.Drawing.Size(301, 269);
+			this.sizeGroup.TabIndex = 12;
 			this.sizeGroup.TabStop = false;
 			this.sizeGroup.Text = "Size";
 			// 
 			// ratioLabel
 			// 
 			this.ratioLabel.AutoSize = true;
-			this.ratioLabel.Location = new System.Drawing.Point(6, 184);
-			this.ratioLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.ratioLabel.Location = new System.Drawing.Point(21, 219);
+			this.ratioLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.ratioLabel.Name = "ratioLabel";
 			this.ratioLabel.Size = new System.Drawing.Size(73, 15);
 			this.ratioLabel.TabIndex = 48;
@@ -425,30 +411,30 @@
 			// 
 			this.ratioTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.ratioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.ratioTextBox.Location = new System.Drawing.Point(97, 182);
-			this.ratioTextBox.Multiline = true;
+			this.ratioTextBox.Location = new System.Drawing.Point(103, 217);
+			this.ratioTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.ratioTextBox.Name = "ratioTextBox";
 			this.ratioTextBox.ReadOnly = true;
-			this.ratioTextBox.Size = new System.Drawing.Size(249, 20);
-			this.ratioTextBox.TabIndex = 14;
+			this.ratioTextBox.Size = new System.Drawing.Size(189, 23);
+			this.ratioTextBox.TabIndex = 19;
 			// 
 			// diskSizeTextBox
 			// 
 			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.diskSizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.diskSizeTextBox.Location = new System.Drawing.Point(97, 156);
-			this.diskSizeTextBox.Multiline = true;
+			this.diskSizeTextBox.Location = new System.Drawing.Point(103, 185);
+			this.diskSizeTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
 			this.diskSizeTextBox.ReadOnly = true;
-			this.diskSizeTextBox.Size = new System.Drawing.Size(249, 20);
-			this.diskSizeTextBox.TabIndex = 13;
+			this.diskSizeTextBox.Size = new System.Drawing.Size(189, 23);
+			this.diskSizeTextBox.TabIndex = 18;
 			this.diskSizeTextBox.Text = "Unknown";
 			// 
 			// diskSizeLabel
 			// 
 			this.diskSizeLabel.AutoSize = true;
-			this.diskSizeLabel.Location = new System.Drawing.Point(6, 158);
-			this.diskSizeLabel.Margin = new System.Windows.Forms.Padding(3);
+			this.diskSizeLabel.Location = new System.Drawing.Point(40, 187);
+			this.diskSizeLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.diskSizeLabel.Name = "diskSizeLabel";
 			this.diskSizeLabel.Size = new System.Drawing.Size(54, 15);
 			this.diskSizeLabel.TabIndex = 45;
@@ -460,19 +446,20 @@
 			this.dateGroup.Controls.Add(this.modifiedTextBox);
 			this.dateGroup.Controls.Add(this.createdLabel);
 			this.dateGroup.Controls.Add(this.createdTextBox);
-			this.dateGroup.Location = new System.Drawing.Point(9, 480);
+			this.dateGroup.Location = new System.Drawing.Point(9, 180);
 			this.dateGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.dateGroup.Name = "dateGroup";
-			this.dateGroup.Size = new System.Drawing.Size(356, 91);
-			this.dateGroup.TabIndex = 46;
+			this.dateGroup.Padding = new System.Windows.Forms.Padding(0);
+			this.dateGroup.Size = new System.Drawing.Size(356, 98);
+			this.dateGroup.TabIndex = 9;
 			this.dateGroup.TabStop = false;
 			this.dateGroup.Text = "Date";
 			// 
 			// modifiedLabel
 			// 
 			this.modifiedLabel.AutoSize = true;
-			this.modifiedLabel.Location = new System.Drawing.Point(6, 54);
-			this.modifiedLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.modifiedLabel.Location = new System.Drawing.Point(31, 59);
+			this.modifiedLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.modifiedLabel.Name = "modifiedLabel";
 			this.modifiedLabel.Size = new System.Drawing.Size(58, 15);
 			this.modifiedLabel.TabIndex = 39;
@@ -482,19 +469,19 @@
 			// 
 			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.modifiedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.modifiedTextBox.Location = new System.Drawing.Point(97, 52);
-			this.modifiedTextBox.Multiline = true;
+			this.modifiedTextBox.Location = new System.Drawing.Point(98, 57);
+			this.modifiedTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.modifiedTextBox.Name = "modifiedTextBox";
 			this.modifiedTextBox.ReadOnly = true;
-			this.modifiedTextBox.Size = new System.Drawing.Size(249, 20);
-			this.modifiedTextBox.TabIndex = 16;
+			this.modifiedTextBox.Size = new System.Drawing.Size(249, 23);
+			this.modifiedTextBox.TabIndex = 11;
 			this.modifiedTextBox.Text = "Unknown";
 			// 
 			// createdLabel
 			// 
 			this.createdLabel.AutoSize = true;
-			this.createdLabel.Location = new System.Drawing.Point(6, 28);
-			this.createdLabel.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+			this.createdLabel.Location = new System.Drawing.Point(38, 27);
+			this.createdLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.createdLabel.Name = "createdLabel";
 			this.createdLabel.Size = new System.Drawing.Size(51, 15);
 			this.createdLabel.TabIndex = 37;
@@ -504,27 +491,26 @@
 			// 
 			this.createdTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.createdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.createdTextBox.Location = new System.Drawing.Point(97, 26);
-			this.createdTextBox.Multiline = true;
+			this.createdTextBox.Location = new System.Drawing.Point(98, 25);
+			this.createdTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.createdTextBox.Name = "createdTextBox";
 			this.createdTextBox.ReadOnly = true;
-			this.createdTextBox.Size = new System.Drawing.Size(249, 20);
-			this.createdTextBox.TabIndex = 15;
+			this.createdTextBox.Size = new System.Drawing.Size(249, 23);
+			this.createdTextBox.TabIndex = 10;
 			this.createdTextBox.Text = "Unknown";
 			// 
 			// propertiesButton
 			// 
-			this.propertiesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.propertiesButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.propertiesButton.Enabled = false;
-			this.propertiesButton.FlatAppearance.BorderSize = 0;
+			this.propertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));
-			this.propertiesButton.Location = new System.Drawing.Point(9, 579);
-			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0);
+			this.propertiesButton.Location = new System.Drawing.Point(9, 287);
+			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.propertiesButton.Name = "propertiesButton";
-			this.propertiesButton.Size = new System.Drawing.Size(124, 23);
-			this.propertiesButton.TabIndex = 17;
+			this.propertiesButton.Size = new System.Drawing.Size(130, 23);
+			this.propertiesButton.TabIndex = 20;
 			this.propertiesButton.Text = "File properties";
 			this.propertiesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.propertiesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -537,13 +523,12 @@
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(374, 611);
+			this.ClientSize = new System.Drawing.Size(684, 319);
 			this.Controls.Add(this.propertiesButton);
 			this.Controls.Add(this.dateGroup);
 			this.Controls.Add(this.sizeGroup);
 			this.Controls.Add(this.fileGroup);
 			this.Controls.Add(this.okButton);
-			this.Controls.Add(this.logoPictureBox);
 			this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.KeyPreview = true;
@@ -556,7 +541,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Image info";
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InfoForm_KeyDown);
-			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
 			this.fileGroup.ResumeLayout(false);
 			this.fileGroup.PerformLayout();
 			this.sizeGroup.ResumeLayout(false);
@@ -568,11 +552,9 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.PictureBox logoPictureBox;
 		private System.Windows.Forms.Label fileNameLabel;
-		private System.Windows.Forms.Button okButton;
-		private System.Windows.Forms.GroupBox fileGroup;
+		private QuickLibrary.QlibTextButton okButton;
+		private QuickLibrary.QlibGroupBox fileGroup;
 		private System.Windows.Forms.Label folderLabel;
 		private System.Windows.Forms.TextBox fileNameTextBox;
 		private System.Windows.Forms.TextBox folderTextBox;
@@ -590,8 +572,8 @@
 		private System.Windows.Forms.Label inchesLabel;
 		private System.Windows.Forms.TextBox cmTextBox;
 		private System.Windows.Forms.Label cmLabel;
-		private System.Windows.Forms.GroupBox sizeGroup;
-		private System.Windows.Forms.GroupBox dateGroup;
+		private QuickLibrary.QlibGroupBox sizeGroup;
+		private QuickLibrary.QlibGroupBox dateGroup;
 		private System.Windows.Forms.Label createdLabel;
 		private System.Windows.Forms.TextBox createdTextBox;
 		private System.Windows.Forms.Label modifiedLabel;

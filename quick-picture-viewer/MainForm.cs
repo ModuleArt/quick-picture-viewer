@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.FileIO;
+using QuickLibrary;
 using Svg;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,11 @@ namespace quick_picture_viewer
 
 		public MainForm(string openPath, bool darkMode)
 		{
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			CustomJumplist jumplist = new CustomJumplist(this.Handle);
 
 			this.darkMode = darkMode;
@@ -57,14 +63,10 @@ namespace quick_picture_viewer
 			slideshowTimer.Elapsed += new ElapsedEventHandler(slideshowTimer_Event);
 			slideshowTimer.Interval += 5000;
 
-			toolStrip1.Renderer = new ToolStripOverride(darkMode);
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 			zoomComboBox.ComboBox.MouseWheel += new MouseEventHandler(zoomComboBox_MouseWheel);
 
-			if (darkMode)
-			{
-				applyDarkTheme();
-			}
+			applyDarkTheme(darkMode);
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -195,12 +197,14 @@ namespace quick_picture_viewer
 					byte[] rawWebP = File.ReadAllBytes(path);
 					using (WebP webp = new WebP())
 					{
-						//WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
-						//decoderOptions.use_threads = 1;
-						//decoderOptions.alpha_dithering_strength = 50;
+						WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
+						decoderOptions.use_threads = 1;
+						decoderOptions.alpha_dithering_strength = 50;
+
+						webp.Decode(rawWebP, new WebPDecoderOptions());
 
 						//openImage(webp.Decode(rawWebP, new WebPDecoderOptions()), Path.GetDirectoryName(path), Path.GetFileName(path));
-						openImage(webp.Decode(rawWebP), Path.GetDirectoryName(path), Path.GetFileName(path));
+						//openImage(webp.Decode(rawWebP), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
 
 					showTypeOpsButton(false, null);
@@ -1263,73 +1267,76 @@ namespace quick_picture_viewer
 			showOpenWithDialog(Path.Combine(currentFolder, currentFile));
 		}
 
-		private void applyDarkTheme()
+		private void applyDarkTheme(bool dark)
 		{
-			ThemeManager.setDarkModeToControl(picturePanel.Handle);
+			if (dark)
+			{
+				ThemeManager.setDarkModeToControl(picturePanel.Handle);
 
-			this.ForeColor = Color.White;
-			this.BackColor = ThemeManager.BackColorDark;
-			toolStrip1.BackColor = ThemeManager.MainColorDark;
-			statusStrip1.BackColor = ThemeManager.SecondColorDark;
+				this.ForeColor = Color.White;
+				this.BackColor = ThemeManager.DarkBackColor;
+				statusStrip1.BackColor = ThemeManager.DarkSecondColor;
 
-			openButton.Image = Properties.Resources.white_open;
-			saveAsButton.Image = Properties.Resources.white_saveas;
-			printButton.Image = Properties.Resources.white_print;
-			deleteButton.Image = Properties.Resources.white_trash;
-			externalButton.Image = Properties.Resources.white_popup;
+				openButton.Image = Properties.Resources.white_open;
+				saveAsButton.Image = Properties.Resources.white_saveas;
+				printButton.Image = Properties.Resources.white_print;
+				deleteButton.Image = Properties.Resources.white_trash;
+				externalButton.Image = Properties.Resources.white_popup;
 
-			prevButton.Image = Properties.Resources.white_prev;
-			showFileButton.Image = Properties.Resources.white_picfolder;
-			nextButton.Image = Properties.Resources.white_next;
-			slideshowButton.Image = Properties.Resources.white_slideshow;
+				prevButton.Image = Properties.Resources.white_prev;
+				showFileButton.Image = Properties.Resources.white_picfolder;
+				nextButton.Image = Properties.Resources.white_next;
+				slideshowButton.Image = Properties.Resources.white_slideshow;
 
-			autoZoomButton.Image = Properties.Resources.white_autozoom;
-			zoomInButton.Image = Properties.Resources.white_zoomin;
-			zoomOutButton.Image = Properties.Resources.white_zoomout;
+				autoZoomButton.Image = Properties.Resources.white_autozoom;
+				zoomInButton.Image = Properties.Resources.white_zoomin;
+				zoomOutButton.Image = Properties.Resources.white_zoomout;
 
-			editButton.Image = Properties.Resources.white_edit;
-			editButton.DropDown.BackColor = ThemeManager.SecondColorDark;
-			editButton.DropDown.ForeColor = Color.White;
-			rotateLeftButton.Image = Properties.Resources.white_rotatel;
-			rotateRightButton.Image = Properties.Resources.white_rotater;
-			flipHorizontalButton.Image = Properties.Resources.white_fliph;
-			flipVerticalButton.Image = Properties.Resources.white_flipv;
-			rotate180Button.Image = Properties.Resources.white_degree;
-			resizeButton.Image = Properties.Resources.white_size;
-			cropButton.Image = Properties.Resources.white_crop;
+				editButton.Image = Properties.Resources.white_edit;
+				editButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
+				editButton.DropDown.ForeColor = Color.White;
+				rotateLeftButton.Image = Properties.Resources.white_rotatel;
+				rotateRightButton.Image = Properties.Resources.white_rotater;
+				flipHorizontalButton.Image = Properties.Resources.white_fliph;
+				flipVerticalButton.Image = Properties.Resources.white_flipv;
+				rotate180Button.Image = Properties.Resources.white_degree;
+				resizeButton.Image = Properties.Resources.white_size;
+				cropButton.Image = Properties.Resources.white_crop;
 
-			screenshotButton.Image = Properties.Resources.white_screenshot;
-			infoButton.Image = Properties.Resources.white_info;
-			copyButton.Image = Properties.Resources.white_copy;
-			pasteButton.Image = Properties.Resources.white_paste;
+				screenshotButton.Image = Properties.Resources.white_screenshot;
+				infoButton.Image = Properties.Resources.white_info;
+				copyButton.Image = Properties.Resources.white_copy;
+				pasteButton.Image = Properties.Resources.white_paste;
 
-			checkboardButton.Image = Properties.Resources.white_grid;
-			fullscreenButton.Image = Properties.Resources.white_fullscreen;
-			onTopButton.Image = Properties.Resources.white_ontop;
-			miniViewButton.Image = Properties.Resources.white_miniview;
+				checkboardButton.Image = Properties.Resources.white_grid;
+				fullscreenButton.Image = Properties.Resources.white_fullscreen;
+				onTopButton.Image = Properties.Resources.white_ontop;
+				miniViewButton.Image = Properties.Resources.white_miniview;
 
-			moreButton.Image = Properties.Resources.white_more;
-			moreButton.DropDown.BackColor = ThemeManager.SecondColorDark;
-			moreButton.DropDown.ForeColor = Color.White;
-			setAsDesktopButton.Image = Properties.Resources.white_desktop;
-			aboutButton.Image = Properties.Resources.white_about;
-			reloadButton.Image = Properties.Resources.white_sync;
-			newWindowButton.Image = Properties.Resources.white_newwindow;
-			settingsButton.Image = Properties.Resources.white_settings;
+				moreButton.Image = Properties.Resources.white_more;
+				moreButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
+				moreButton.DropDown.ForeColor = Color.White;
+				setAsDesktopButton.Image = Properties.Resources.white_desktop;
+				aboutButton.Image = Properties.Resources.white_about;
+				reloadButton.Image = Properties.Resources.white_sync;
+				newWindowButton.Image = Properties.Resources.white_newwindow;
+				settingsButton.Image = Properties.Resources.white_settings;
 
-			directoryLabel.Image = Properties.Resources.white_picfolder;
-			fileLabel.Image = Properties.Resources.white_imgfile;
-			sizeLabel.Image = Properties.Resources.white_size;
-			zoomLabel.Image = Properties.Resources.white_zoom;
-			dateCreatedLabel.Image = Properties.Resources.white_clock;
-			dateModifiedLabel.Image = Properties.Resources.white_history;
-			hasChangesLabel.Image = Properties.Resources.white_erase;
+				directoryLabel.Image = Properties.Resources.white_picfolder;
+				fileLabel.Image = Properties.Resources.white_imgfile;
+				sizeLabel.Image = Properties.Resources.white_size;
+				zoomLabel.Image = Properties.Resources.white_zoom;
+				dateCreatedLabel.Image = Properties.Resources.white_clock;
+				dateModifiedLabel.Image = Properties.Resources.white_history;
+				hasChangesLabel.Image = Properties.Resources.white_erase;
 
-			typeOpsButton.Image = Properties.Resources.white_options;
-			typeOpsButton.BackColor = ThemeManager.SecondColorDark;
-			typeOpsButton.ForeColor = Color.White;
+				typeOpsButton.Image = Properties.Resources.white_options;
+				typeOpsButton.BackColor = ThemeManager.DarkSecondColor;
+				typeOpsButton.ForeColor = Color.White;
+			}
 
-			ThemeManager.enableDarkTitlebar(Handle, true);
+			toolStrip1.SetDarkMode(dark, true);
+			zoomComboBox.SetDarkMode(dark);
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
@@ -1452,15 +1459,7 @@ namespace quick_picture_viewer
 			zoomOutTimer.Start();
 		}
 
-		private void zoomOutButton_MouseUp(object sender, EventArgs e)
-		{
-			zoomOutTimer.Stop();
-		}
-
-		private void zoomInButton_MouseUp(object sender, EventArgs e)
-		{
-			zoomInTimer.Stop();
-		}
+		
 
 		private void MainForm_Resize(object sender, EventArgs e)
 		{
@@ -1516,6 +1515,7 @@ namespace quick_picture_viewer
 		private void reloadButton_Click(object sender, EventArgs e)
 		{
 			openFile(Path.Combine(currentFolder, currentFile));
+			showSuggestion("File reloaded");
 		}
 
 		private void newWindowButton_Click(object sender, EventArgs e)
@@ -1585,6 +1585,26 @@ namespace quick_picture_viewer
 			{
 				typeOpsButton.Focus();
 			}
+		}
+
+		private void zoomOutButton_MouseLeave(object sender, EventArgs e)
+		{
+			zoomOutTimer.Stop();
+		}
+
+		private void zoomOutButton_MouseUp(object sender, MouseEventArgs e)
+		{
+			zoomOutTimer.Stop();
+		}
+
+		private void zoomInButton_MouseLeave(object sender, EventArgs e)
+		{
+			zoomInTimer.Stop();
+		}
+
+		private void zoomInButton_MouseUp(object sender, MouseEventArgs e)
+		{
+			zoomInTimer.Stop();
 		}
 	}
 }

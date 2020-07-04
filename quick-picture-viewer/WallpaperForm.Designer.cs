@@ -30,151 +30,139 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WallpaperForm));
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.okButton = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.spanRadio = new System.Windows.Forms.RadioButton();
-			this.fitRadio = new System.Windows.Forms.RadioButton();
-			this.fillRadio = new System.Windows.Forms.RadioButton();
-			this.stretchedRadio = new System.Windows.Forms.RadioButton();
-			this.centeredRadio = new System.Windows.Forms.RadioButton();
-			this.tiledRadio = new System.Windows.Forms.RadioButton();
+			this.titlePanel = new System.Windows.Forms.Panel();
+			this.titleLabel = new System.Windows.Forms.Label();
+			this.closeBtn = new System.Windows.Forms.Button();
+			this.fitLabel = new System.Windows.Forms.Label();
+			this.fitComboBox = new QuickLibrary.QlibComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
-			this.groupBox1.SuspendLayout();
+			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// logoPictureBox
 			// 
 			this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-			this.logoPictureBox.Location = new System.Drawing.Point(9, 9);
+			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(256, 80);
+			this.logoPictureBox.Size = new System.Drawing.Size(257, 100);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 12;
 			this.logoPictureBox.TabStop = false;
+			this.logoPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.logoPictureBox_MouseDown);
 			// 
 			// okButton
 			// 
-			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.okButton.BackColor = System.Drawing.SystemColors.Control;
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
-			this.okButton.Location = new System.Drawing.Point(9, 217);
-			this.okButton.Margin = new System.Windows.Forms.Padding(0);
+			this.okButton.Location = new System.Drawing.Point(10, 211);
+			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 6;
-			this.okButton.Text = "Set background";
+			this.okButton.Size = new System.Drawing.Size(237, 32);
+			this.okButton.TabIndex = 3;
+			this.okButton.TabStop = false;
+			this.okButton.Text = " Set background";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.okButton.UseVisualStyleBackColor = false;
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
 			// 
-			// groupBox1
+			// titlePanel
 			// 
-			this.groupBox1.Controls.Add(this.spanRadio);
-			this.groupBox1.Controls.Add(this.fitRadio);
-			this.groupBox1.Controls.Add(this.fillRadio);
-			this.groupBox1.Controls.Add(this.stretchedRadio);
-			this.groupBox1.Controls.Add(this.centeredRadio);
-			this.groupBox1.Controls.Add(this.tiledRadio);
-			this.groupBox1.Location = new System.Drawing.Point(9, 98);
-			this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(256, 111);
-			this.groupBox1.TabIndex = 31;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Choose a fit";
+			this.titlePanel.Controls.Add(this.titleLabel);
+			this.titlePanel.Controls.Add(this.closeBtn);
+			this.titlePanel.Location = new System.Drawing.Point(0, 0);
+			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
+			this.titlePanel.Name = "titlePanel";
+			this.titlePanel.Size = new System.Drawing.Size(257, 32);
+			this.titlePanel.TabIndex = 0;
+			this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
 			// 
-			// spanRadio
+			// titleLabel
 			// 
-			this.spanRadio.AutoSize = true;
-			this.spanRadio.Location = new System.Drawing.Point(124, 76);
-			this.spanRadio.Name = "spanRadio";
-			this.spanRadio.Size = new System.Drawing.Size(51, 19);
-			this.spanRadio.TabIndex = 5;
-			this.spanRadio.Text = "Span";
-			this.spanRadio.UseVisualStyleBackColor = true;
+			this.titleLabel.AutoSize = true;
+			this.titleLabel.Location = new System.Drawing.Point(10, 7);
+			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(175, 19);
+			this.titleLabel.TabIndex = 16;
+			this.titleLabel.Text = "Set as desktop background";
+			this.titleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseDown);
 			// 
-			// fitRadio
+			// closeBtn
 			// 
-			this.fitRadio.AutoSize = true;
-			this.fitRadio.Location = new System.Drawing.Point(6, 51);
-			this.fitRadio.Name = "fitRadio";
-			this.fitRadio.Size = new System.Drawing.Size(38, 19);
-			this.fitRadio.TabIndex = 2;
-			this.fitRadio.Text = "Fit";
-			this.fitRadio.UseVisualStyleBackColor = true;
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+			this.closeBtn.Location = new System.Drawing.Point(225, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 1;
+			this.closeBtn.UseVisualStyleBackColor = true;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// fillRadio
+			// fitLabel
 			// 
-			this.fillRadio.AutoSize = true;
-			this.fillRadio.Checked = true;
-			this.fillRadio.Location = new System.Drawing.Point(6, 26);
-			this.fillRadio.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-			this.fillRadio.Name = "fillRadio";
-			this.fillRadio.Size = new System.Drawing.Size(40, 19);
-			this.fillRadio.TabIndex = 0;
-			this.fillRadio.TabStop = true;
-			this.fillRadio.Text = "Fill";
-			this.fillRadio.UseVisualStyleBackColor = true;
+			this.fitLabel.AutoSize = true;
+			this.fitLabel.Location = new System.Drawing.Point(10, 141);
+			this.fitLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
+			this.fitLabel.Name = "fitLabel";
+			this.fitLabel.Size = new System.Drawing.Size(85, 19);
+			this.fitLabel.TabIndex = 15;
+			this.fitLabel.Text = "Choose a fit:";
 			// 
-			// stretchedRadio
+			// fitComboBox
 			// 
-			this.stretchedRadio.AutoSize = true;
-			this.stretchedRadio.Location = new System.Drawing.Point(6, 76);
-			this.stretchedRadio.Name = "stretchedRadio";
-			this.stretchedRadio.Size = new System.Drawing.Size(62, 19);
-			this.stretchedRadio.TabIndex = 4;
-			this.stretchedRadio.Text = "Stretch";
-			this.stretchedRadio.UseVisualStyleBackColor = true;
-			// 
-			// centeredRadio
-			// 
-			this.centeredRadio.AutoSize = true;
-			this.centeredRadio.Location = new System.Drawing.Point(124, 51);
-			this.centeredRadio.Name = "centeredRadio";
-			this.centeredRadio.Size = new System.Drawing.Size(60, 19);
-			this.centeredRadio.TabIndex = 3;
-			this.centeredRadio.Text = "Center";
-			this.centeredRadio.UseVisualStyleBackColor = true;
-			// 
-			// tiledRadio
-			// 
-			this.tiledRadio.AutoSize = true;
-			this.tiledRadio.Location = new System.Drawing.Point(124, 26);
-			this.tiledRadio.Name = "tiledRadio";
-			this.tiledRadio.Size = new System.Drawing.Size(43, 19);
-			this.tiledRadio.TabIndex = 1;
-			this.tiledRadio.Text = "Tile";
-			this.tiledRadio.UseVisualStyleBackColor = true;
+			this.fitComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.fitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.fitComboBox.FormattingEnabled = true;
+			this.fitComboBox.ItemHeight = 26;
+			this.fitComboBox.Items.AddRange(new object[] {
+            "Fill",
+            "Fit",
+            "Stretch",
+            "Tile",
+            "Center",
+            "Span"});
+			this.fitComboBox.Location = new System.Drawing.Point(10, 169);
+			this.fitComboBox.Margin = new System.Windows.Forms.Padding(0);
+			this.fitComboBox.Name = "fitComboBox";
+			this.fitComboBox.Size = new System.Drawing.Size(237, 32);
+			this.fitComboBox.TabIndex = 2;
 			// 
 			// WallpaperForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 249);
-			this.Controls.Add(this.groupBox1);
+			this.BackColor = System.Drawing.Color.White;
+			this.ClientSize = new System.Drawing.Size(257, 253);
+			this.Controls.Add(this.fitLabel);
+			this.Controls.Add(this.fitComboBox);
+			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);
-			this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "WallpaperForm";
-			this.Padding = new System.Windows.Forms.Padding(9);
+			this.Padding = new System.Windows.Forms.Padding(10);
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Set as desktop background";
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WallpaperForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
+			this.titlePanel.ResumeLayout(false);
+			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -182,12 +170,10 @@
 
 		private System.Windows.Forms.PictureBox logoPictureBox;
 		private System.Windows.Forms.Button okButton;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.RadioButton tiledRadio;
-		private System.Windows.Forms.RadioButton centeredRadio;
-		private System.Windows.Forms.RadioButton stretchedRadio;
-		private System.Windows.Forms.RadioButton fitRadio;
-		private System.Windows.Forms.RadioButton fillRadio;
-		private System.Windows.Forms.RadioButton spanRadio;
+		private System.Windows.Forms.Panel titlePanel;
+		private System.Windows.Forms.Button closeBtn;
+		private QuickLibrary.QlibComboBox fitComboBox;
+		private System.Windows.Forms.Label fitLabel;
+		private System.Windows.Forms.Label titleLabel;
 	}
 }

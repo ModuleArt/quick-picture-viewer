@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickLibrary;
+using System;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer

@@ -31,52 +31,6 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.openButton = new System.Windows.Forms.ToolStripButton();
-			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
-			this.printButton = new System.Windows.Forms.ToolStripButton();
-			this.deleteButton = new System.Windows.Forms.ToolStripButton();
-			this.externalButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-			this.prevButton = new System.Windows.Forms.ToolStripButton();
-			this.showFileButton = new System.Windows.Forms.ToolStripButton();
-			this.nextButton = new System.Windows.Forms.ToolStripButton();
-			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
-			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
-			this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
-			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.editButton = new System.Windows.Forms.ToolStripDropDownButton();
-			this.flipHorizontalButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.flipVerticalButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator7 = new quick_picture_viewer.CustomMenuSeparator();
-			this.rotateRightButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.rotateLeftButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.rotate180Button = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator8 = new quick_picture_viewer.CustomMenuSeparator();
-			this.resizeButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.cropButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
-			this.infoButton = new System.Windows.Forms.ToolStripButton();
-			this.copyButton = new System.Windows.Forms.ToolStripButton();
-			this.pasteButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
-			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
-			this.onTopButton = new System.Windows.Forms.ToolStripButton();
-			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
-			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator9 = new quick_picture_viewer.CustomMenuSeparator();
-			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator10 = new quick_picture_viewer.CustomMenuSeparator();
-			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.fileLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -93,11 +47,57 @@
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.toolStrip1 = new QuickLibrary.QlibToolStrip();
+			this.openButton = new System.Windows.Forms.ToolStripButton();
+			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
+			this.printButton = new System.Windows.Forms.ToolStripButton();
+			this.deleteButton = new System.Windows.Forms.ToolStripButton();
+			this.externalButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+			this.prevButton = new System.Windows.Forms.ToolStripButton();
+			this.showFileButton = new System.Windows.Forms.ToolStripButton();
+			this.nextButton = new System.Windows.Forms.ToolStripButton();
+			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
+			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
+			this.zoomComboBox = new QuickLibrary.QlibToolStripComboBox();
+			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.editButton = new System.Windows.Forms.ToolStripDropDownButton();
+			this.flipHorizontalButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.flipVerticalButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator7 = new QuickLibrary.QlibMenuSeparator();
+			this.rotateRightButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.rotateLeftButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.rotate180Button = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator8 = new QuickLibrary.QlibMenuSeparator();
+			this.resizeButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.cropButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
+			this.infoButton = new System.Windows.Forms.ToolStripButton();
+			this.copyButton = new System.Windows.Forms.ToolStripButton();
+			this.pasteButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
+			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
+			this.onTopButton = new System.Windows.Forms.ToolStripButton();
+			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
+			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator9 = new QuickLibrary.QlibMenuSeparator();
+			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator10 = new QuickLibrary.QlibMenuSeparator();
+			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// openFileDialog1
@@ -109,6 +109,199 @@
 			// 
 			this.fileSystemWatcher1.EnableRaisingEvents = true;
 			this.fileSystemWatcher1.SynchronizingObject = this;
+			// 
+			// saveFileDialog1
+			// 
+			this.saveFileDialog1.FileName = "image";
+			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
+    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff|ICO (*.ico)|*.i" +
+    "co|WEBP (*.webp)|*.webp";
+			// 
+			// directoryLabel
+			// 
+			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
+			this.directoryLabel.Image = ((System.Drawing.Image)(resources.GetObject("directoryLabel.Image")));
+			this.directoryLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.directoryLabel.Name = "directoryLabel";
+			this.directoryLabel.Size = new System.Drawing.Size(96, 16);
+			this.directoryLabel.Text = "Folder: Empty";
+			// 
+			// fileLabel
+			// 
+			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
+			this.fileLabel.Image = ((System.Drawing.Image)(resources.GetObject("fileLabel.Image")));
+			this.fileLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.fileLabel.Name = "fileLabel";
+			this.fileLabel.Size = new System.Drawing.Size(81, 16);
+			this.fileLabel.Text = "File: Empty";
+			// 
+			// sizeLabel
+			// 
+			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
+			this.sizeLabel.Image = ((System.Drawing.Image)(resources.GetObject("sizeLabel.Image")));
+			this.sizeLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.sizeLabel.Name = "sizeLabel";
+			this.sizeLabel.Size = new System.Drawing.Size(89, 16);
+			this.sizeLabel.Text = "Size: 0 x 0 px";
+			// 
+			// zoomLabel
+			// 
+			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
+			this.zoomLabel.Image = ((System.Drawing.Image)(resources.GetObject("zoomLabel.Image")));
+			this.zoomLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.zoomLabel.Name = "zoomLabel";
+			this.zoomLabel.Size = new System.Drawing.Size(87, 16);
+			this.zoomLabel.Text = "Zoom: Auto";
+			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.directoryLabel,
+            this.fileLabel,
+            this.sizeLabel,
+            this.zoomLabel,
+            this.hasChangesLabel,
+            this.dateCreatedLabel,
+            this.dateModifiedLabel});
+			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+			this.statusStrip1.Location = new System.Drawing.Point(0, 467);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(768, 26);
+			this.statusStrip1.TabIndex = 4;
+			this.statusStrip1.Text = "statusStrip1";
+			// 
+			// hasChangesLabel
+			// 
+			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
+			this.hasChangesLabel.Image = ((System.Drawing.Image)(resources.GetObject("hasChangesLabel.Image")));
+			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.hasChangesLabel.Name = "hasChangesLabel";
+			this.hasChangesLabel.Size = new System.Drawing.Size(76, 16);
+			this.hasChangesLabel.Text = "Not saved";
+			this.hasChangesLabel.Visible = false;
+			// 
+			// dateCreatedLabel
+			// 
+			this.dateCreatedLabel.BackColor = System.Drawing.Color.Transparent;
+			this.dateCreatedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateCreatedLabel.Image")));
+			this.dateCreatedLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.dateCreatedLabel.Name = "dateCreatedLabel";
+			this.dateCreatedLabel.Size = new System.Drawing.Size(121, 16);
+			this.dateCreatedLabel.Text = "Created: Unknown";
+			this.dateCreatedLabel.Visible = false;
+			// 
+			// dateModifiedLabel
+			// 
+			this.dateModifiedLabel.BackColor = System.Drawing.Color.Transparent;
+			this.dateModifiedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateModifiedLabel.Image")));
+			this.dateModifiedLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.dateModifiedLabel.Name = "dateModifiedLabel";
+			this.dateModifiedLabel.Size = new System.Drawing.Size(128, 16);
+			this.dateModifiedLabel.Text = "Modified: Unknown";
+			this.dateModifiedLabel.Visible = false;
+			// 
+			// printDialog1
+			// 
+			this.printDialog1.Document = this.printDocument1;
+			this.printDialog1.UseEXDialog = true;
+			// 
+			// printDocument1
+			// 
+			this.printDocument1.DocumentName = "Image";
+			this.printDocument1.OriginAtMargins = true;
+			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+			// 
+			// typeOpsButton
+			// 
+			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
+			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.typeOpsButton.Location = new System.Drawing.Point(642, 418);
+			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0);
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.Size = new System.Drawing.Size(100, 23);
+			this.typeOpsButton.TabIndex = 0;
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.Text = "TYPE options";
+			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.Visible = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
+			// 
+			// suggestionLabel
+			// 
+			this.suggestionLabel.AutoSize = true;
+			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
+			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
+			this.suggestionLabel.Location = new System.Drawing.Point(9, 43);
+			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(9);
+			this.suggestionLabel.Name = "suggestionLabel";
+			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(3);
+			this.suggestionLabel.Size = new System.Drawing.Size(72, 21);
+			this.suggestionLabel.TabIndex = 3;
+			this.suggestionLabel.Text = "Suggestion";
+			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.suggestionLabel.Visible = false;
+			// 
+			// picturePanel
+			// 
+			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.picturePanel.AutoScroll = true;
+			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
+			this.picturePanel.Controls.Add(this.pictureBox);
+			this.picturePanel.Location = new System.Drawing.Point(0, 35);
+			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
+			this.picturePanel.Name = "picturePanel";
+			this.picturePanel.Size = new System.Drawing.Size(768, 432);
+			this.picturePanel.TabIndex = 2;
+			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// pleaseOpenLabel
+			// 
+			this.pleaseOpenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
+			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
+			this.pleaseOpenLabel.Size = new System.Drawing.Size(768, 432);
+			this.pleaseOpenLabel.TabIndex = 5;
+			this.pleaseOpenLabel.Text = "Please open an image to view or edit";
+			this.pleaseOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.pleaseOpenLabel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			// 
+			// pictureBox
+			// 
+			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox.InitialImage = null;
+			this.pictureBox.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
+			this.pictureBox.Name = "pictureBox";
+			this.pictureBox.Size = new System.Drawing.Size(768, 432);
+			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox.TabIndex = 0;
+			this.pictureBox.TabStop = false;
+			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// toolStrip1
 			// 
@@ -314,7 +507,7 @@
 			this.zoomOutButton.Text = "Zoom out | Ctrl + Minus";
 			this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
 			this.zoomOutButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.zoomOutButton_MouseDown);
-			this.zoomOutButton.MouseLeave += new System.EventHandler(this.zoomOutButton_MouseUp);
+			this.zoomOutButton.MouseLeave += new System.EventHandler(this.zoomOutButton_MouseLeave);
 			this.zoomOutButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.zoomOutButton_MouseUp);
 			// 
 			// zoomComboBox
@@ -322,7 +515,7 @@
 			this.zoomComboBox.AutoSize = false;
 			this.zoomComboBox.DropDownWidth = 75;
 			this.zoomComboBox.Enabled = false;
-			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.zoomComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
 			this.zoomComboBox.Items.AddRange(new object[] {
             "Auto",
             "1%",
@@ -353,7 +546,7 @@
 			this.zoomComboBox.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.zoomComboBox.Name = "zoomComboBox";
 			this.zoomComboBox.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-			this.zoomComboBox.Size = new System.Drawing.Size(60, 23);
+			this.zoomComboBox.Size = new System.Drawing.Size(60, 24);
 			this.zoomComboBox.ToolTipText = "Zoom";
 			this.zoomComboBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
@@ -370,7 +563,7 @@
 			this.zoomInButton.Text = "Zoom in | Ctrl + =";
 			this.zoomInButton.Click += new System.EventHandler(this.zoomInButton_Click);
 			this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.zoomInButton_MouseDown);
-			this.zoomInButton.MouseLeave += new System.EventHandler(this.zoomInButton_MouseUp);
+			this.zoomInButton.MouseLeave += new System.EventHandler(this.zoomInButton_MouseLeave);
 			this.zoomInButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.zoomInButton_MouseUp);
 			// 
 			// toolStripSeparator2
@@ -693,199 +886,6 @@
 			this.aboutButton.Text = "About";
 			this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
 			// 
-			// saveFileDialog1
-			// 
-			this.saveFileDialog1.FileName = "image";
-			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
-    ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff|ICO (*.ico)|*.i" +
-    "co|WEBP (*.webp)|*.webp";
-			// 
-			// directoryLabel
-			// 
-			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
-			this.directoryLabel.Image = ((System.Drawing.Image)(resources.GetObject("directoryLabel.Image")));
-			this.directoryLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.directoryLabel.Name = "directoryLabel";
-			this.directoryLabel.Size = new System.Drawing.Size(96, 16);
-			this.directoryLabel.Text = "Folder: Empty";
-			// 
-			// fileLabel
-			// 
-			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
-			this.fileLabel.Image = ((System.Drawing.Image)(resources.GetObject("fileLabel.Image")));
-			this.fileLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.fileLabel.Name = "fileLabel";
-			this.fileLabel.Size = new System.Drawing.Size(81, 16);
-			this.fileLabel.Text = "File: Empty";
-			// 
-			// sizeLabel
-			// 
-			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
-			this.sizeLabel.Image = ((System.Drawing.Image)(resources.GetObject("sizeLabel.Image")));
-			this.sizeLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.sizeLabel.Name = "sizeLabel";
-			this.sizeLabel.Size = new System.Drawing.Size(89, 16);
-			this.sizeLabel.Text = "Size: 0 x 0 px";
-			// 
-			// zoomLabel
-			// 
-			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
-			this.zoomLabel.Image = ((System.Drawing.Image)(resources.GetObject("zoomLabel.Image")));
-			this.zoomLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.zoomLabel.Name = "zoomLabel";
-			this.zoomLabel.Size = new System.Drawing.Size(87, 16);
-			this.zoomLabel.Text = "Zoom: Auto";
-			// 
-			// statusStrip1
-			// 
-			this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.directoryLabel,
-            this.fileLabel,
-            this.sizeLabel,
-            this.zoomLabel,
-            this.hasChangesLabel,
-            this.dateCreatedLabel,
-            this.dateModifiedLabel});
-			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.statusStrip1.Location = new System.Drawing.Point(0, 467);
-			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(768, 26);
-			this.statusStrip1.TabIndex = 4;
-			this.statusStrip1.Text = "statusStrip1";
-			// 
-			// hasChangesLabel
-			// 
-			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
-			this.hasChangesLabel.Image = ((System.Drawing.Image)(resources.GetObject("hasChangesLabel.Image")));
-			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.hasChangesLabel.Name = "hasChangesLabel";
-			this.hasChangesLabel.Size = new System.Drawing.Size(76, 16);
-			this.hasChangesLabel.Text = "Not saved";
-			this.hasChangesLabel.Visible = false;
-			// 
-			// dateCreatedLabel
-			// 
-			this.dateCreatedLabel.BackColor = System.Drawing.Color.Transparent;
-			this.dateCreatedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateCreatedLabel.Image")));
-			this.dateCreatedLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.dateCreatedLabel.Name = "dateCreatedLabel";
-			this.dateCreatedLabel.Size = new System.Drawing.Size(121, 16);
-			this.dateCreatedLabel.Text = "Created: Unknown";
-			this.dateCreatedLabel.Visible = false;
-			// 
-			// dateModifiedLabel
-			// 
-			this.dateModifiedLabel.BackColor = System.Drawing.Color.Transparent;
-			this.dateModifiedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateModifiedLabel.Image")));
-			this.dateModifiedLabel.Margin = new System.Windows.Forms.Padding(5);
-			this.dateModifiedLabel.Name = "dateModifiedLabel";
-			this.dateModifiedLabel.Size = new System.Drawing.Size(128, 16);
-			this.dateModifiedLabel.Text = "Modified: Unknown";
-			this.dateModifiedLabel.Visible = false;
-			// 
-			// printDialog1
-			// 
-			this.printDialog1.Document = this.printDocument1;
-			this.printDialog1.UseEXDialog = true;
-			// 
-			// printDocument1
-			// 
-			this.printDocument1.DocumentName = "Image";
-			this.printDocument1.OriginAtMargins = true;
-			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-			// 
-			// typeOpsButton
-			// 
-			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
-			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(642, 418);
-			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0);
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.Size = new System.Drawing.Size(100, 23);
-			this.typeOpsButton.TabIndex = 0;
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.Text = "TYPE options";
-			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.Visible = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
-			// 
-			// suggestionLabel
-			// 
-			this.suggestionLabel.AutoSize = true;
-			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
-			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
-			this.suggestionLabel.Location = new System.Drawing.Point(9, 43);
-			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(9);
-			this.suggestionLabel.Name = "suggestionLabel";
-			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(3);
-			this.suggestionLabel.Size = new System.Drawing.Size(72, 21);
-			this.suggestionLabel.TabIndex = 3;
-			this.suggestionLabel.Text = "Suggestion";
-			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.suggestionLabel.Visible = false;
-			// 
-			// picturePanel
-			// 
-			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.picturePanel.AutoScroll = true;
-			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
-			this.picturePanel.Controls.Add(this.pictureBox);
-			this.picturePanel.Location = new System.Drawing.Point(0, 35);
-			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(768, 432);
-			this.picturePanel.TabIndex = 2;
-			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// pleaseOpenLabel
-			// 
-			this.pleaseOpenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
-			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
-			this.pleaseOpenLabel.Size = new System.Drawing.Size(768, 432);
-			this.pleaseOpenLabel.TabIndex = 5;
-			this.pleaseOpenLabel.Text = "Please open an image to view or edit";
-			this.pleaseOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.pleaseOpenLabel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			// 
-			// pictureBox
-			// 
-			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox.InitialImage = null;
-			this.pictureBox.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
-			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(768, 432);
-			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox.TabIndex = 0;
-			this.pictureBox.TabStop = false;
-			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -911,12 +911,12 @@
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			this.Resize += new System.EventHandler(this.MainForm_Resize);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-			this.toolStrip1.ResumeLayout(false);
-			this.toolStrip1.PerformLayout();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			this.picturePanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+			this.toolStrip1.ResumeLayout(false);
+			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -927,7 +927,7 @@
 		private System.Windows.Forms.PictureBox pictureBox;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.IO.FileSystemWatcher fileSystemWatcher1;
-		private System.Windows.Forms.ToolStrip toolStrip1;
+		private QuickLibrary.QlibToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton openButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton zoomInButton;
@@ -938,7 +938,7 @@
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.ToolStripButton copyButton;
 		private System.Windows.Forms.ToolStripButton pasteButton;
-		private System.Windows.Forms.ToolStripComboBox zoomComboBox;
+		private QuickLibrary.QlibToolStripComboBox zoomComboBox;
 		private System.Windows.Forms.ToolStripButton fullscreenButton;
 		private System.Windows.Forms.ToolStripButton onTopButton;
 		private System.Windows.Forms.StatusStrip statusStrip1;
@@ -984,10 +984,10 @@
 		private System.Windows.Forms.ToolStripButton miniViewButton;
 		private System.Windows.Forms.ToolStripMenuItem settingsButton;
 		private System.Windows.Forms.Label pleaseOpenLabel;
-		private CustomMenuSeparator toolStripSeparator7;
-		private CustomMenuSeparator toolStripSeparator8;
-		private CustomMenuSeparator toolStripSeparator9;
-		private CustomMenuSeparator toolStripSeparator10;
+		private QuickLibrary.QlibMenuSeparator toolStripSeparator7;
+		private QuickLibrary.QlibMenuSeparator toolStripSeparator8;
+		private QuickLibrary.QlibMenuSeparator toolStripSeparator9;
+		private QuickLibrary.QlibMenuSeparator toolStripSeparator10;
 	}
 }
 

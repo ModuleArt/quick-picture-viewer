@@ -1,36 +1,20 @@
-﻿using System;
+﻿using QuickLibrary;
+using System;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
 	partial class SettingsForm : Form
 	{
-		private bool darkMode;
-
 		public SettingsForm(bool darkMode)
 		{
-			this.darkMode = darkMode;
-
-			InitializeComponent();
-
 			if (darkMode)
 			{
-				this.BackColor = ThemeManager.BackColorDark;
-				this.ForeColor = Color.White;
-
-				okButton.BackColor = ThemeManager.SecondColorDark;
-
-				settingsTabs.BackTabColor = ThemeManager.BackColorDark;
-				settingsTabs.BorderColor = ThemeManager.SecondColorDark;
-				settingsTabs.ActiveColor = ThemeManager.AccentColorDark;
-				settingsTabs.HeaderColor = ThemeManager.SecondColorDark;
-				settingsTabs.TextColor = Color.White;
-				settingsTabs.HorizontalLineColor = Color.Transparent;
-
-				ThemeManager.enableDarkTitlebar(Handle, true);
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
+
+			InitializeComponent();
 
 			int theme = Properties.Settings.Default.Theme;
 			if (theme == 0)
@@ -48,6 +32,29 @@ namespace quick_picture_viewer
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
+
+			applyDarkMode(darkMode);
+		}
+
+		private void applyDarkMode(bool dark)
+		{
+			if (dark)
+			{
+				this.BackColor = ThemeManager.DarkBackColor;
+				this.ForeColor = Color.White;
+
+				settingsTabs.BackTabColor = ThemeManager.DarkBackColor;
+				settingsTabs.BorderColor = ThemeManager.DarkSecondColor;
+				settingsTabs.HeaderColor = ThemeManager.DarkSecondColor;
+				settingsTabs.TextColor = Color.White;
+				settingsTabs.HorizontalLineColor = Color.Transparent;
+			}
+
+			updatesCheckBox.SetDarkMode(dark);
+			fullscrCursorCheckBox.SetDarkMode(dark);
+			darkThemeRadio.SetDarkMode(dark);
+			lightThemeRadio.SetDarkMode(dark);
+			systemThemeRadio.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickLibrary;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -12,6 +13,11 @@ namespace quick_picture_viewer
 
 		public UpdateForm(UpdateChecker checker, string appName, bool darkMode)
 		{
+			if (darkMode)
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			_checker = checker;
 
 			InitializeComponent();
@@ -23,19 +29,20 @@ namespace quick_picture_viewer
 			currentVersionLink.Text = "v" + _checker.CurrentVersion;
 			latestReleaseLink.Text = _checker.LatestRelease.TagName;
 
-			if (darkMode)
+			currentVersionLink.LinkColor = ThemeManager.AccentColor;
+			latestReleaseLink.LinkColor = ThemeManager.AccentColor;
+
+			applyDarkMode(darkMode);
+		}
+
+		private void applyDarkMode(bool dark)
+		{
+			if (dark)
 			{
-				this.BackColor = ThemeManager.BackColorDark;
+				this.BackColor = ThemeManager.DarkBackColor;
 				this.ForeColor = Color.White;
 
-				buttonYes.BackColor = ThemeManager.SecondColorDark;
-				buttonNo.BackColor = ThemeManager.SecondColorDark;
-				boxReleaseNotes.BackColor = ThemeManager.SecondColorDark;
-
-				currentVersionLink.LinkColor = ThemeManager.AccentColorDark;
-				latestReleaseLink.LinkColor = ThemeManager.AccentColorDark;
-
-				ThemeManager.enableDarkTitlebar(Handle, true);
+				boxReleaseNotes.BackColor = ThemeManager.DarkSecondColor;
 			}
 		}
 
