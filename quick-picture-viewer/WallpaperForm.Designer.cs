@@ -45,11 +45,10 @@
 			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(257, 100);
+			this.logoPictureBox.Size = new System.Drawing.Size(256, 100);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 12;
 			this.logoPictureBox.TabStop = false;
-			this.logoPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.logoPictureBox_MouseDown);
 			// 
 			// okButton
 			// 
@@ -61,9 +60,8 @@
 			this.okButton.Location = new System.Drawing.Point(10, 211);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(237, 32);
+			this.okButton.Size = new System.Drawing.Size(236, 32);
 			this.okButton.TabIndex = 3;
-			this.okButton.TabStop = false;
 			this.okButton.Text = " Set background";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -77,9 +75,8 @@
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(257, 32);
+			this.titlePanel.Size = new System.Drawing.Size(256, 32);
 			this.titlePanel.TabIndex = 0;
-			this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
 			// 
 			// titleLabel
 			// 
@@ -90,14 +87,13 @@
 			this.titleLabel.Size = new System.Drawing.Size(175, 19);
 			this.titleLabel.TabIndex = 16;
 			this.titleLabel.Text = "Set as desktop background";
-			this.titleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseDown);
 			// 
 			// closeBtn
 			// 
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-			this.closeBtn.Location = new System.Drawing.Point(225, 0);
+			this.closeBtn.Location = new System.Drawing.Point(224, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
@@ -131,7 +127,7 @@
 			this.fitComboBox.Location = new System.Drawing.Point(10, 169);
 			this.fitComboBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fitComboBox.Name = "fitComboBox";
-			this.fitComboBox.Size = new System.Drawing.Size(237, 32);
+			this.fitComboBox.Size = new System.Drawing.Size(236, 32);
 			this.fitComboBox.TabIndex = 2;
 			// 
 			// WallpaperForm
@@ -140,7 +136,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(257, 253);
+			this.ClientSize = new System.Drawing.Size(256, 253);
 			this.Controls.Add(this.fitLabel);
 			this.Controls.Add(this.fitComboBox);
 			this.Controls.Add(this.titlePanel);

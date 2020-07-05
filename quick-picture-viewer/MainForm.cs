@@ -761,7 +761,7 @@ namespace quick_picture_viewer
 				picturePanel.Height = this.ClientSize.Height;
 				picturePanel.BackColor = Color.Black;
 
-				typeOpsButton.Left = this.ClientRectangle.Width + 26;
+				typeOpsButton.Left = this.ClientRectangle.Width + 27;
 
 				setAlwaysOnTop(false, true);
 
@@ -781,7 +781,7 @@ namespace quick_picture_viewer
 				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
 				picturePanel.BackColor = Color.Transparent;
 
-				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 26;
+				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 27;
 
 				suggestionLabel.Location = new Point(9, 43);
 

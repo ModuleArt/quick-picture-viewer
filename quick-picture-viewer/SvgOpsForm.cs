@@ -1,11 +1,12 @@
 ﻿using QuickLibrary;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	public partial class SvgOpsForm : Form
+	public partial class SvgOpsForm : QlibBorderlessForm
 	{
 		string path;
 		float aspectRatio;
@@ -22,6 +23,10 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 
+			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
+
+			applyDarkMode(darkMode);
+
 			widthNumeric.Value = width;
 			heightNumeric.Value = height;
 		}
@@ -32,7 +37,25 @@ namespace quick_picture_viewer
 			{
 				this.BackColor = ThemeManager.DarkBackColor;
 				this.ForeColor = Color.White;
+
+				defaultSizeButton.BackColor = ThemeManager.DarkSecondColor;
+				size16Button.BackColor = ThemeManager.DarkSecondColor;
+				size32Button.BackColor = ThemeManager.DarkSecondColor;
+				size64Button.BackColor = ThemeManager.DarkSecondColor;
+				size128Button.BackColor = ThemeManager.DarkSecondColor;
+				size256Button.BackColor = ThemeManager.DarkSecondColor;
+				size512Button.BackColor = ThemeManager.DarkSecondColor;
+				size1024Button.BackColor = ThemeManager.DarkSecondColor;
+
+				okButton.BackColor = ThemeManager.DarkSecondColor;
+				okButton.Image = Properties.Resources.white_size;
+
+				closeBtn.Image = Properties.Resources.white_close;
 			}
+
+			widthNumeric.SetDarkMode(dark);
+			heightNumeric.SetDarkMode(dark);
+			aspectRatioCheckbox.SetDarkMode(dark);
 		}
 
 		private void okButton_Click(object sender, System.EventArgs e)
@@ -127,6 +150,21 @@ namespace quick_picture_viewer
 		private void size128Button_Click(object sender, EventArgs e)
 		{
 			setPreset(128);
+		}
+
+		private void size32Button_Click(object sender, EventArgs e)
+		{
+			setPreset(32);
+		}
+
+		private void closeBtn_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void size16Button_Click(object sender, EventArgs e)
+		{
+			setPreset(16);
 		}
 	}
 }

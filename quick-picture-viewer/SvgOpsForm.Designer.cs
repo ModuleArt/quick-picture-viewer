@@ -30,12 +30,11 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SvgOpsForm));
 			this.okButton = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.widthNumeric = new System.Windows.Forms.NumericUpDown();
-			this.heightNumeric = new System.Windows.Forms.NumericUpDown();
-			this.aspectRatioCheckbox = new System.Windows.Forms.CheckBox();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.widthLabel = new System.Windows.Forms.Label();
+			this.heightLabel = new System.Windows.Forms.Label();
+			this.widthNumeric = new QuickLibrary.QlibNumericBox();
+			this.heightNumeric = new QuickLibrary.QlibNumericBox();
+			this.aspectRatioCheckbox = new QuickLibrary.QlibCheckBox();
 			this.size128Button = new System.Windows.Forms.Button();
 			this.size64Button = new System.Windows.Forms.Button();
 			this.defaultSizeButton = new System.Windows.Forms.Button();
@@ -43,52 +42,61 @@
 			this.presetsLabel = new System.Windows.Forms.Label();
 			this.size1024Button = new System.Windows.Forms.Button();
 			this.size512Button = new System.Windows.Forms.Button();
+			this.titlePanel = new System.Windows.Forms.Panel();
+			this.titleLabel = new System.Windows.Forms.Label();
+			this.closeBtn = new System.Windows.Forms.Button();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
+			this.size32Button = new System.Windows.Forms.Button();
+			this.size16Button = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).BeginInit();
-			this.groupBox1.SuspendLayout();
+			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// okButton
 			// 
-			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.okButton.BackColor = System.Drawing.SystemColors.Control;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(9, 294);
-			this.okButton.Margin = new System.Windows.Forms.Padding(0);
+			this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
+			this.okButton.Location = new System.Drawing.Point(10, 394);
+			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(256, 23);
-			this.okButton.TabIndex = 8;
-			this.okButton.Text = "Resize SVG";
+			this.okButton.Size = new System.Drawing.Size(236, 32);
+			this.okButton.TabIndex = 13;
+			this.okButton.Text = " Resize SVG";
+			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.okButton.UseVisualStyleBackColor = false;
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
 			// 
-			// label1
+			// widthLabel
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(7, 147);
-			this.label1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(42, 15);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "Width:";
+			this.widthLabel.AutoSize = true;
+			this.widthLabel.Location = new System.Drawing.Point(10, 330);
+			this.widthLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.widthLabel.Name = "widthLabel";
+			this.widthLabel.Size = new System.Drawing.Size(49, 19);
+			this.widthLabel.TabIndex = 3;
+			this.widthLabel.Text = "Width:";
 			// 
-			// label2
+			// heightLabel
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(137, 147);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(46, 15);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Height:";
+			this.heightLabel.AutoSize = true;
+			this.heightLabel.Location = new System.Drawing.Point(129, 330);
+			this.heightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.heightLabel.Name = "heightLabel";
+			this.heightLabel.Size = new System.Drawing.Size(53, 19);
+			this.heightLabel.TabIndex = 4;
+			this.heightLabel.Text = "Height:";
 			// 
 			// widthNumeric
 			// 
+			this.widthNumeric.BackColor = System.Drawing.SystemColors.Control;
 			this.widthNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.widthNumeric.Location = new System.Drawing.Point(56, 145);
+			this.widthNumeric.Location = new System.Drawing.Point(10, 359);
+			this.widthNumeric.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.widthNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -100,8 +108,8 @@
             0,
             0});
 			this.widthNumeric.Name = "widthNumeric";
-			this.widthNumeric.Size = new System.Drawing.Size(60, 23);
-			this.widthNumeric.TabIndex = 5;
+			this.widthNumeric.Size = new System.Drawing.Size(113, 25);
+			this.widthNumeric.TabIndex = 11;
 			this.widthNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -111,8 +119,10 @@
 			// 
 			// heightNumeric
 			// 
+			this.heightNumeric.BackColor = System.Drawing.SystemColors.Control;
 			this.heightNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.heightNumeric.Location = new System.Drawing.Point(190, 145);
+			this.heightNumeric.Location = new System.Drawing.Point(133, 359);
+			this.heightNumeric.Margin = new System.Windows.Forms.Padding(0);
 			this.heightNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -124,8 +134,8 @@
             0,
             0});
 			this.heightNumeric.Name = "heightNumeric";
-			this.heightNumeric.Size = new System.Drawing.Size(60, 23);
-			this.heightNumeric.TabIndex = 7;
+			this.heightNumeric.Size = new System.Drawing.Size(113, 25);
+			this.heightNumeric.TabIndex = 12;
 			this.heightNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -135,88 +145,69 @@
 			// 
 			// aspectRatioCheckbox
 			// 
-			this.aspectRatioCheckbox.AutoSize = true;
 			this.aspectRatioCheckbox.Checked = true;
 			this.aspectRatioCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.aspectRatioCheckbox.Location = new System.Drawing.Point(6, 115);
-			this.aspectRatioCheckbox.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.aspectRatioCheckbox.Location = new System.Drawing.Point(10, 297);
+			this.aspectRatioCheckbox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.aspectRatioCheckbox.Name = "aspectRatioCheckbox";
-			this.aspectRatioCheckbox.Size = new System.Drawing.Size(137, 19);
-			this.aspectRatioCheckbox.TabIndex = 6;
+			this.aspectRatioCheckbox.Size = new System.Drawing.Size(236, 23);
+			this.aspectRatioCheckbox.TabIndex = 10;
 			this.aspectRatioCheckbox.Text = "Maintain aspect ratio";
 			this.aspectRatioCheckbox.UseVisualStyleBackColor = true;
 			this.aspectRatioCheckbox.CheckedChanged += new System.EventHandler(this.aspectRatioCheckbox_CheckedChanged);
 			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.size128Button);
-			this.groupBox1.Controls.Add(this.size64Button);
-			this.groupBox1.Controls.Add(this.defaultSizeButton);
-			this.groupBox1.Controls.Add(this.size256Button);
-			this.groupBox1.Controls.Add(this.presetsLabel);
-			this.groupBox1.Controls.Add(this.size1024Button);
-			this.groupBox1.Controls.Add(this.size512Button);
-			this.groupBox1.Controls.Add(this.aspectRatioCheckbox);
-			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Controls.Add(this.heightNumeric);
-			this.groupBox1.Controls.Add(this.label2);
-			this.groupBox1.Controls.Add(this.widthNumeric);
-			this.groupBox1.Location = new System.Drawing.Point(9, 99);
-			this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(256, 187);
-			this.groupBox1.TabIndex = 8;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Rasterize vector";
-			// 
 			// size128Button
 			// 
-			this.size128Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size128Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size128Button.FlatAppearance.BorderSize = 0;
 			this.size128Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size128Button.Location = new System.Drawing.Point(172, 50);
+			this.size128Button.Location = new System.Drawing.Point(174, 213);
+			this.size128Button.Margin = new System.Windows.Forms.Padding(0);
 			this.size128Button.Name = "size128Button";
-			this.size128Button.Size = new System.Drawing.Size(77, 23);
-			this.size128Button.TabIndex = 2;
+			this.size128Button.Size = new System.Drawing.Size(72, 32);
+			this.size128Button.TabIndex = 6;
 			this.size128Button.Text = "128 px";
 			this.size128Button.UseVisualStyleBackColor = false;
 			this.size128Button.Click += new System.EventHandler(this.size128Button_Click);
 			// 
 			// size64Button
 			// 
-			this.size64Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size64Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size64Button.FlatAppearance.BorderSize = 0;
 			this.size64Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size64Button.Location = new System.Drawing.Point(89, 50);
+			this.size64Button.Location = new System.Drawing.Point(92, 213);
+			this.size64Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size64Button.Name = "size64Button";
-			this.size64Button.Size = new System.Drawing.Size(77, 23);
-			this.size64Button.TabIndex = 1;
+			this.size64Button.Size = new System.Drawing.Size(72, 32);
+			this.size64Button.TabIndex = 5;
 			this.size64Button.Text = "64 px";
 			this.size64Button.UseVisualStyleBackColor = false;
 			this.size64Button.Click += new System.EventHandler(this.size64Button_Click);
 			// 
 			// defaultSizeButton
 			// 
-			this.defaultSizeButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.defaultSizeButton.BackColor = System.Drawing.SystemColors.Control;
 			this.defaultSizeButton.FlatAppearance.BorderSize = 0;
 			this.defaultSizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.defaultSizeButton.Location = new System.Drawing.Point(6, 50);
+			this.defaultSizeButton.Location = new System.Drawing.Point(10, 171);
+			this.defaultSizeButton.Margin = new System.Windows.Forms.Padding(0);
 			this.defaultSizeButton.Name = "defaultSizeButton";
-			this.defaultSizeButton.Size = new System.Drawing.Size(77, 23);
-			this.defaultSizeButton.TabIndex = 0;
+			this.defaultSizeButton.Size = new System.Drawing.Size(154, 32);
+			this.defaultSizeButton.TabIndex = 2;
 			this.defaultSizeButton.Text = "Default size";
 			this.defaultSizeButton.UseVisualStyleBackColor = false;
 			this.defaultSizeButton.Click += new System.EventHandler(this.defaultSizeButton_Click);
 			// 
 			// size256Button
 			// 
-			this.size256Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size256Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size256Button.FlatAppearance.BorderSize = 0;
 			this.size256Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size256Button.Location = new System.Drawing.Point(6, 79);
+			this.size256Button.Location = new System.Drawing.Point(10, 255);
+			this.size256Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size256Button.Name = "size256Button";
-			this.size256Button.Size = new System.Drawing.Size(77, 23);
-			this.size256Button.TabIndex = 3;
+			this.size256Button.Size = new System.Drawing.Size(72, 32);
+			this.size256Button.TabIndex = 7;
 			this.size256Button.Text = "256 px";
 			this.size256Button.UseVisualStyleBackColor = false;
 			this.size256Button.Click += new System.EventHandler(this.size256Button_Click);
@@ -224,93 +215,177 @@
 			// presetsLabel
 			// 
 			this.presetsLabel.AutoSize = true;
-			this.presetsLabel.Location = new System.Drawing.Point(7, 29);
-			this.presetsLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.presetsLabel.Location = new System.Drawing.Point(10, 142);
+			this.presetsLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.presetsLabel.Name = "presetsLabel";
-			this.presetsLabel.Size = new System.Drawing.Size(47, 15);
+			this.presetsLabel.Size = new System.Drawing.Size(56, 19);
 			this.presetsLabel.TabIndex = 35;
 			this.presetsLabel.Text = "Presets:";
 			// 
 			// size1024Button
 			// 
-			this.size1024Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size1024Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size1024Button.FlatAppearance.BorderSize = 0;
 			this.size1024Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size1024Button.Location = new System.Drawing.Point(172, 79);
+			this.size1024Button.Location = new System.Drawing.Point(174, 255);
+			this.size1024Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size1024Button.Name = "size1024Button";
-			this.size1024Button.Size = new System.Drawing.Size(77, 23);
-			this.size1024Button.TabIndex = 5;
+			this.size1024Button.Size = new System.Drawing.Size(72, 32);
+			this.size1024Button.TabIndex = 9;
 			this.size1024Button.Text = "1024 px";
 			this.size1024Button.UseVisualStyleBackColor = false;
 			this.size1024Button.Click += new System.EventHandler(this.size1024Button_Click);
 			// 
 			// size512Button
 			// 
-			this.size512Button.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.size512Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size512Button.FlatAppearance.BorderSize = 0;
 			this.size512Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size512Button.Location = new System.Drawing.Point(89, 79);
+			this.size512Button.Location = new System.Drawing.Point(92, 255);
+			this.size512Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size512Button.Name = "size512Button";
-			this.size512Button.Size = new System.Drawing.Size(77, 23);
-			this.size512Button.TabIndex = 4;
+			this.size512Button.Size = new System.Drawing.Size(72, 32);
+			this.size512Button.TabIndex = 8;
 			this.size512Button.Text = "512 px";
 			this.size512Button.UseVisualStyleBackColor = false;
 			this.size512Button.Click += new System.EventHandler(this.size512Button_Click);
 			// 
+			// titlePanel
+			// 
+			this.titlePanel.Controls.Add(this.titleLabel);
+			this.titlePanel.Controls.Add(this.closeBtn);
+			this.titlePanel.Location = new System.Drawing.Point(0, 0);
+			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
+			this.titlePanel.Name = "titlePanel";
+			this.titlePanel.Size = new System.Drawing.Size(256, 32);
+			this.titlePanel.TabIndex = 0;
+			// 
+			// titleLabel
+			// 
+			this.titleLabel.AutoSize = true;
+			this.titleLabel.Location = new System.Drawing.Point(9, 7);
+			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(85, 19);
+			this.titleLabel.TabIndex = 16;
+			this.titleLabel.Text = "SVG options";
+			// 
+			// closeBtn
+			// 
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+			this.closeBtn.Location = new System.Drawing.Point(224, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 1;
+			this.closeBtn.UseVisualStyleBackColor = true;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
 			// logoPictureBox
 			// 
 			this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-			this.logoPictureBox.Location = new System.Drawing.Point(9, 9);
+			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(255, 80);
+			this.logoPictureBox.Size = new System.Drawing.Size(256, 100);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.logoPictureBox.TabIndex = 13;
+			this.logoPictureBox.TabIndex = 37;
 			this.logoPictureBox.TabStop = false;
+			// 
+			// size32Button
+			// 
+			this.size32Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size32Button.FlatAppearance.BorderSize = 0;
+			this.size32Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.size32Button.Location = new System.Drawing.Point(10, 213);
+			this.size32Button.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+			this.size32Button.Name = "size32Button";
+			this.size32Button.Size = new System.Drawing.Size(72, 32);
+			this.size32Button.TabIndex = 4;
+			this.size32Button.Text = "32 px";
+			this.size32Button.UseVisualStyleBackColor = false;
+			this.size32Button.Click += new System.EventHandler(this.size32Button_Click);
+			// 
+			// size16Button
+			// 
+			this.size16Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size16Button.FlatAppearance.BorderSize = 0;
+			this.size16Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.size16Button.Location = new System.Drawing.Point(174, 171);
+			this.size16Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.size16Button.Name = "size16Button";
+			this.size16Button.Size = new System.Drawing.Size(72, 32);
+			this.size16Button.TabIndex = 3;
+			this.size16Button.Text = "16 px";
+			this.size16Button.UseVisualStyleBackColor = false;
+			this.size16Button.Click += new System.EventHandler(this.size16Button_Click);
 			// 
 			// SvgOpsForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(274, 326);
+			this.BackColor = System.Drawing.Color.White;
+			this.ClientSize = new System.Drawing.Size(256, 436);
+			this.Controls.Add(this.size16Button);
+			this.Controls.Add(this.heightNumeric);
+			this.Controls.Add(this.widthLabel);
+			this.Controls.Add(this.heightLabel);
+			this.Controls.Add(this.aspectRatioCheckbox);
+			this.Controls.Add(this.widthNumeric);
+			this.Controls.Add(this.size32Button);
+			this.Controls.Add(this.size1024Button);
+			this.Controls.Add(this.size256Button);
+			this.Controls.Add(this.size512Button);
+			this.Controls.Add(this.size128Button);
+			this.Controls.Add(this.titlePanel);
+			this.Controls.Add(this.size64Button);
 			this.Controls.Add(this.logoPictureBox);
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.defaultSizeButton);
 			this.Controls.Add(this.okButton);
-			this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.Controls.Add(this.presetsLabel);
+			this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "SvgOpsForm";
+			this.Padding = new System.Windows.Forms.Padding(10);
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "SVG options";
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SvgOpsForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
+			this.titlePanel.ResumeLayout(false);
+			this.titlePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 		private System.Windows.Forms.Button okButton;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.NumericUpDown widthNumeric;
-		private System.Windows.Forms.NumericUpDown heightNumeric;
-		private System.Windows.Forms.CheckBox aspectRatioCheckbox;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.Label widthLabel;
+		private System.Windows.Forms.Label heightLabel;
+		private QuickLibrary.QlibNumericBox widthNumeric;
+		private QuickLibrary.QlibNumericBox heightNumeric;
+		private QuickLibrary.QlibCheckBox aspectRatioCheckbox;
 		private System.Windows.Forms.Button size512Button;
 		private System.Windows.Forms.Button size1024Button;
 		private System.Windows.Forms.Label presetsLabel;
 		private System.Windows.Forms.Button size256Button;
-		private System.Windows.Forms.PictureBox logoPictureBox;
 		private System.Windows.Forms.Button defaultSizeButton;
 		private System.Windows.Forms.Button size128Button;
 		private System.Windows.Forms.Button size64Button;
+		private System.Windows.Forms.Panel titlePanel;
+		private System.Windows.Forms.Label titleLabel;
+		private System.Windows.Forms.Button closeBtn;
+		private System.Windows.Forms.PictureBox logoPictureBox;
+		private System.Windows.Forms.Button size32Button;
+		private System.Windows.Forms.Button size16Button;
 	}
 }

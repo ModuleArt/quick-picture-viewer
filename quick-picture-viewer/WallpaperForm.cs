@@ -1,24 +1,14 @@
 ﻿using QuickLibrary;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	partial class WallpaperForm : Form
+	partial class WallpaperForm : QlibBorderlessForm
 	{
 		Bitmap bmp;
-
-		protected override CreateParams CreateParams
-		{
-			get
-			{
-				const int CS_DROPSHADOW = 0x20000;
-				CreateParams cp = base.CreateParams;
-				cp.ClassStyle |= CS_DROPSHADOW;
-				return cp;
-			}
-		}
 
 		public WallpaperForm(Bitmap bmp, bool darkMode)
 		{
@@ -30,6 +20,8 @@ namespace quick_picture_viewer
 			this.bmp = bmp;
 
 			InitializeComponent();
+
+			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
 
 			applyDarkMode(darkMode);
 
@@ -91,26 +83,6 @@ namespace quick_picture_viewer
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
-		}
-
-		private void panel1_MouseDown(object sender, MouseEventArgs e)
-		{
-			if (e.Button == MouseButtons.Left)
-			{
-				Cursor.Current = Cursors.SizeAll;
-				NativeMethodsManager.ReleaseCapture();
-				NativeMethodsManager.SendMessage(Handle, 0xA1, 0x2, 0);
-			}
-		}
-
-		private void titleLabel_MouseDown(object sender, MouseEventArgs e)
-		{
-			panel1_MouseDown(sender, e);
-		}
-
-		private void logoPictureBox_MouseDown(object sender, MouseEventArgs e)
-		{
-			panel1_MouseDown(sender, e);
 		}
 	}
 }

@@ -44,9 +44,6 @@
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.suggestionLabel = new System.Windows.Forms.Label();
-			this.picturePanel = new quick_picture_viewer.CustomPanel();
-			this.pleaseOpenLabel = new System.Windows.Forms.Label();
-			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.toolStrip1 = new QuickLibrary.QlibToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
@@ -93,11 +90,14 @@
 			this.toolStripSeparator10 = new QuickLibrary.QlibMenuSeparator();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.pleaseOpenLabel = new System.Windows.Forms.Label();
+			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
+			this.toolStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// openFileDialog1
@@ -222,10 +222,10 @@
 			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
 			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(642, 418);
+			this.typeOpsButton.Location = new System.Drawing.Point(641, 408);
 			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0);
 			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.Size = new System.Drawing.Size(100, 23);
+			this.typeOpsButton.Size = new System.Drawing.Size(100, 32);
 			this.typeOpsButton.TabIndex = 0;
 			this.typeOpsButton.TabStop = false;
 			this.typeOpsButton.Text = "TYPE options";
@@ -251,57 +251,6 @@
 			this.suggestionLabel.Text = "Suggestion";
 			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.suggestionLabel.Visible = false;
-			// 
-			// picturePanel
-			// 
-			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.picturePanel.AutoScroll = true;
-			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
-			this.picturePanel.Controls.Add(this.pictureBox);
-			this.picturePanel.Location = new System.Drawing.Point(0, 35);
-			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(768, 432);
-			this.picturePanel.TabIndex = 2;
-			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// pleaseOpenLabel
-			// 
-			this.pleaseOpenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
-			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
-			this.pleaseOpenLabel.Size = new System.Drawing.Size(768, 432);
-			this.pleaseOpenLabel.TabIndex = 5;
-			this.pleaseOpenLabel.Text = "Please open an image to view or edit";
-			this.pleaseOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.pleaseOpenLabel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			// 
-			// pictureBox
-			// 
-			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox.InitialImage = null;
-			this.pictureBox.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
-			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(768, 432);
-			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox.TabIndex = 0;
-			this.pictureBox.TabStop = false;
-			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// toolStrip1
 			// 
@@ -886,6 +835,57 @@
 			this.aboutButton.Text = "About";
 			this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
 			// 
+			// picturePanel
+			// 
+			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.picturePanel.AutoScroll = true;
+			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
+			this.picturePanel.Controls.Add(this.pictureBox);
+			this.picturePanel.Location = new System.Drawing.Point(0, 35);
+			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
+			this.picturePanel.Name = "picturePanel";
+			this.picturePanel.Size = new System.Drawing.Size(768, 432);
+			this.picturePanel.TabIndex = 2;
+			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// pleaseOpenLabel
+			// 
+			this.pleaseOpenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
+			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
+			this.pleaseOpenLabel.Size = new System.Drawing.Size(768, 432);
+			this.pleaseOpenLabel.TabIndex = 5;
+			this.pleaseOpenLabel.Text = "Please open an image to view or edit";
+			this.pleaseOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.pleaseOpenLabel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			// 
+			// pictureBox
+			// 
+			this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox.InitialImage = null;
+			this.pictureBox.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
+			this.pictureBox.Name = "pictureBox";
+			this.pictureBox.Size = new System.Drawing.Size(768, 432);
+			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox.TabIndex = 0;
+			this.pictureBox.TabStop = false;
+			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -913,10 +913,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
-			this.picturePanel.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
+			this.picturePanel.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
