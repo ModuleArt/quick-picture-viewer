@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	partial class WallpaperForm : QlibBorderlessForm
+	partial class WallpaperForm : QlibFixedForm
 	{
 		Bitmap bmp;
 

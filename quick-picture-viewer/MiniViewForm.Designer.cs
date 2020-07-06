@@ -57,13 +57,13 @@
 			// 
 			this.suggestionLabel.AutoSize = true;
 			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
-			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
-			this.suggestionLabel.Location = new System.Drawing.Point(9, 9);
-			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(9);
+			this.suggestionLabel.Location = new System.Drawing.Point(10, 10);
+			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.suggestionLabel.Name = "suggestionLabel";
 			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(3);
-			this.suggestionLabel.Size = new System.Drawing.Size(127, 21);
+			this.suggestionLabel.Size = new System.Drawing.Size(139, 23);
 			this.suggestionLabel.TabIndex = 2;
 			this.suggestionLabel.Text = "Right click to go back";
 			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,10 +76,10 @@
 			this.gripButton.FlatAppearance.BorderSize = 0;
 			this.gripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.gripButton.Image = ((System.Drawing.Image)(resources.GetObject("gripButton.Image")));
-			this.gripButton.Location = new System.Drawing.Point(370, 370);
-			this.gripButton.Margin = new System.Windows.Forms.Padding(9);
+			this.gripButton.Location = new System.Drawing.Point(367, 367);
+			this.gripButton.Margin = new System.Windows.Forms.Padding(0);
 			this.gripButton.Name = "gripButton";
-			this.gripButton.Size = new System.Drawing.Size(21, 21);
+			this.gripButton.Size = new System.Drawing.Size(23, 23);
 			this.gripButton.TabIndex = 3;
 			this.gripButton.TabStop = false;
 			this.gripButton.UseVisualStyleBackColor = true;
@@ -94,11 +94,15 @@
 			this.Controls.Add(this.gripButton);
 			this.Controls.Add(this.suggestionLabel);
 			this.Controls.Add(this.pictureBox1);
+			this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.MinimumSize = new System.Drawing.Size(200, 200);
 			this.Name = "MiniViewForm";
+			this.Padding = new System.Windows.Forms.Padding(10);
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Quick Picture Viewer";

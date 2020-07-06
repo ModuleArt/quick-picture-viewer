@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	public partial class SvgOpsForm : QlibBorderlessForm
+	public partial class SvgOpsForm : QlibFixedForm
 	{
 		string path;
 		float aspectRatio;

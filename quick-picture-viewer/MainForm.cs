@@ -363,6 +363,15 @@ namespace quick_picture_viewer
 		{
 			imageChanged = b;
 			hasChangesLabel.Visible = b;
+
+			if (b)
+			{
+				this.Text = "* " + currentFile + " - Quick Picture Viewer";
+			}
+			else
+			{
+				this.Text = currentFile + " - Quick Picture Viewer";
+			}
 		}
 
 		private void zoomInButton_Click(object sender, EventArgs e)

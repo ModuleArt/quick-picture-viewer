@@ -1,11 +1,12 @@
 ﻿using QuickLibrary;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	partial class SettingsForm : Form
+	partial class SettingsForm : QlibFixedForm
 	{
 		public SettingsForm(bool darkMode)
 		{
@@ -15,6 +16,10 @@ namespace quick_picture_viewer
 			}
 
 			InitializeComponent();
+
+			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
+
+			applyDarkMode(darkMode);
 
 			int theme = Properties.Settings.Default.Theme;
 			if (theme == 0)
@@ -32,8 +37,6 @@ namespace quick_picture_viewer
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
-
-			applyDarkMode(darkMode);
 		}
 
 		private void applyDarkMode(bool dark)
@@ -48,6 +51,8 @@ namespace quick_picture_viewer
 				settingsTabs.HeaderColor = ThemeManager.DarkSecondColor;
 				settingsTabs.TextColor = Color.White;
 				settingsTabs.HorizontalLineColor = Color.Transparent;
+
+				closeBtn.Image = Properties.Resources.white_close;
 			}
 
 			updatesCheckBox.SetDarkMode(dark);
@@ -102,6 +107,11 @@ namespace quick_picture_viewer
 		{
 			Properties.Settings.Default.ShowCursorInFullscreen = fullscrCursorCheckBox.Checked;
 			Properties.Settings.Default.Save();
+		}
+
+		private void closeBtn_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }

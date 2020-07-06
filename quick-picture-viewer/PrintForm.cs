@@ -1,12 +1,13 @@
 ﻿using QuickLibrary;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	partial class PrintForm : Form
+	partial class PrintForm : QlibFixedForm
 	{
 		private bool darkMode;
 
@@ -21,14 +22,16 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 
+			SetDraggableControls(new List<Control>() { titlePanel, titleLabel, printPreviewControl1 });
+
+			applyDarkMode(darkMode);
+
 			leftMarginTextBox.Text = pd.DefaultPageSettings.Margins.Left.ToString();
 			topMarginTextBox.Text = pd.DefaultPageSettings.Margins.Top.ToString();
 			rightMarginTextBox.Text = pd.DefaultPageSettings.Margins.Right.ToString();
 			bottomMarginTextBox.Text = pd.DefaultPageSettings.Margins.Bottom.ToString();
 
 			printPreviewControl1.Document = pd;
-
-			applyDarkMode(darkMode);
 		}
 
 		private void applyDarkMode(bool dark)
@@ -55,13 +58,17 @@ namespace quick_picture_viewer
 				topMarginTextBox.ForeColor = Color.White;
 				bottomMarginTextBox.BackColor = ThemeManager.DarkSecondColor;
 				bottomMarginTextBox.ForeColor = Color.White;
+
+				okButton.BackColor = ThemeManager.DarkSecondColor;
+				okButton.Image = Properties.Resources.white_print;
+
+				closeBtn.Image = Properties.Resources.white_close;
 			}
 
 			marginsCheckBox.SetDarkMode(dark);
 			horizontalCheckBox.SetDarkMode(dark);
 			centerCheckbox.SetDarkMode(dark);
 			setMarginsButton.SetDarkMode(dark);
-			groupBox1.SetDarkMode(dark);
 		}
 
 		private void marginsCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -161,6 +168,11 @@ namespace quick_picture_viewer
 			centerCheckbox.Checked = (this.Owner as MainForm).printCenterImage;
 			marginsCheckBox.Checked = printPreviewControl1.Document.OriginAtMargins;
 			horizontalCheckBox.Checked = printPreviewControl1.Document.DefaultPageSettings.Landscape;
+		}
+
+		private void closeBtn_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }
