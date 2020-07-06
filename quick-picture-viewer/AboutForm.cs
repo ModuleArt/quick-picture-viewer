@@ -1,5 +1,6 @@
 ﻿using QuickLibrary;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	partial class AboutForm : Form
+	partial class AboutForm : QlibFixedForm
 	{
 		public AboutForm(bool darkMode)
 		{
@@ -18,6 +19,10 @@ namespace quick_picture_viewer
 			}
 
 			InitializeComponent();
+
+			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
+
+			applyDarkMode(darkMode);
 
 			string fullVer = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			int lastDotIndex = fullVer.LastIndexOf('.');
@@ -38,13 +43,11 @@ namespace quick_picture_viewer
 			}
 
 			updatesLink.LinkColor = ThemeManager.AccentColor;
-			developerLink.LinkColor = ThemeManager.AccentColor;
+			websiteLink.LinkColor = ThemeManager.AccentColor;
 			projectLink.LinkColor = ThemeManager.AccentColor;
 			issuesLink.LinkColor = ThemeManager.AccentColor;
 			makeDefaultLink.LinkColor = ThemeManager.AccentColor;
 			licenseLink.LinkColor = ThemeManager.AccentColor;
-
-			applyDarkMode(darkMode);
 		}
 
 		private void applyDarkMode(bool dark)
@@ -53,10 +56,9 @@ namespace quick_picture_viewer
 			{
 				this.BackColor = ThemeManager.DarkBackColor;
 				this.ForeColor = Color.White;
-			}
 
-			infoGroup.SetDarkMode(dark);
-			pagesGroup.SetDarkMode(dark);
+				closeBtn.Image = Properties.Resources.white_close;
+			}
 		}
 
 		private void developerLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -104,5 +106,10 @@ namespace quick_picture_viewer
 
 		[DllImport("User32.dll")]
 		private static extern IntPtr GetWindowDC(IntPtr hWnd);
+
+		private void closeBtn_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }

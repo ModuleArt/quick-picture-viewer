@@ -121,41 +121,42 @@
 			// 
 			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
 			this.directoryLabel.Image = ((System.Drawing.Image)(resources.GetObject("directoryLabel.Image")));
-			this.directoryLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.directoryLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.directoryLabel.Name = "directoryLabel";
-			this.directoryLabel.Size = new System.Drawing.Size(96, 16);
+			this.directoryLabel.Size = new System.Drawing.Size(104, 17);
 			this.directoryLabel.Text = "Folder: Empty";
 			// 
 			// fileLabel
 			// 
 			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
 			this.fileLabel.Image = ((System.Drawing.Image)(resources.GetObject("fileLabel.Image")));
-			this.fileLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.fileLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.fileLabel.Name = "fileLabel";
-			this.fileLabel.Size = new System.Drawing.Size(81, 16);
+			this.fileLabel.Size = new System.Drawing.Size(86, 17);
 			this.fileLabel.Text = "File: Empty";
 			// 
 			// sizeLabel
 			// 
 			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
 			this.sizeLabel.Image = ((System.Drawing.Image)(resources.GetObject("sizeLabel.Image")));
-			this.sizeLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.sizeLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.sizeLabel.Name = "sizeLabel";
-			this.sizeLabel.Size = new System.Drawing.Size(89, 16);
+			this.sizeLabel.Size = new System.Drawing.Size(100, 17);
 			this.sizeLabel.Text = "Size: 0 x 0 px";
 			// 
 			// zoomLabel
 			// 
 			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
 			this.zoomLabel.Image = ((System.Drawing.Image)(resources.GetObject("zoomLabel.Image")));
-			this.zoomLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.zoomLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.zoomLabel.Name = "zoomLabel";
-			this.zoomLabel.Size = new System.Drawing.Size(87, 16);
+			this.zoomLabel.Size = new System.Drawing.Size(92, 17);
 			this.zoomLabel.Text = "Zoom: Auto";
 			// 
 			// statusStrip1
 			// 
 			this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.directoryLabel,
             this.fileLabel,
@@ -165,9 +166,9 @@
             this.dateCreatedLabel,
             this.dateModifiedLabel});
 			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.statusStrip1.Location = new System.Drawing.Point(0, 467);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 466);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(768, 26);
+			this.statusStrip1.Size = new System.Drawing.Size(768, 33);
 			this.statusStrip1.TabIndex = 4;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -175,9 +176,9 @@
 			// 
 			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
 			this.hasChangesLabel.Image = ((System.Drawing.Image)(resources.GetObject("hasChangesLabel.Image")));
-			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.hasChangesLabel.Name = "hasChangesLabel";
-			this.hasChangesLabel.Size = new System.Drawing.Size(76, 16);
+			this.hasChangesLabel.Size = new System.Drawing.Size(84, 17);
 			this.hasChangesLabel.Text = "Not saved";
 			this.hasChangesLabel.Visible = false;
 			// 
@@ -185,9 +186,9 @@
 			// 
 			this.dateCreatedLabel.BackColor = System.Drawing.Color.Transparent;
 			this.dateCreatedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateCreatedLabel.Image")));
-			this.dateCreatedLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.dateCreatedLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.dateCreatedLabel.Name = "dateCreatedLabel";
-			this.dateCreatedLabel.Size = new System.Drawing.Size(121, 16);
+			this.dateCreatedLabel.Size = new System.Drawing.Size(130, 17);
 			this.dateCreatedLabel.Text = "Created: Unknown";
 			this.dateCreatedLabel.Visible = false;
 			// 
@@ -195,9 +196,9 @@
 			// 
 			this.dateModifiedLabel.BackColor = System.Drawing.Color.Transparent;
 			this.dateModifiedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateModifiedLabel.Image")));
-			this.dateModifiedLabel.Margin = new System.Windows.Forms.Padding(5);
+			this.dateModifiedLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.dateModifiedLabel.Name = "dateModifiedLabel";
-			this.dateModifiedLabel.Size = new System.Drawing.Size(128, 16);
+			this.dateModifiedLabel.Size = new System.Drawing.Size(137, 17);
 			this.dateModifiedLabel.Text = "Modified: Unknown";
 			this.dateModifiedLabel.Visible = false;
 			// 
@@ -219,13 +220,14 @@
 			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.typeOpsButton.FlatAppearance.BorderSize = 0;
 			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.typeOpsButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
 			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(641, 408);
+			this.typeOpsButton.Location = new System.Drawing.Point(628, 414);
 			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0);
 			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.Size = new System.Drawing.Size(100, 32);
+			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
 			this.typeOpsButton.TabIndex = 0;
 			this.typeOpsButton.TabStop = false;
 			this.typeOpsButton.Text = "TYPE options";
@@ -240,13 +242,13 @@
 			// 
 			this.suggestionLabel.AutoSize = true;
 			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
-			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
-			this.suggestionLabel.Location = new System.Drawing.Point(9, 43);
-			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(9);
+			this.suggestionLabel.Location = new System.Drawing.Point(10, 44);
+			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(10);
 			this.suggestionLabel.Name = "suggestionLabel";
 			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(3);
-			this.suggestionLabel.Size = new System.Drawing.Size(72, 21);
+			this.suggestionLabel.Size = new System.Drawing.Size(79, 23);
 			this.suggestionLabel.TabIndex = 3;
 			this.suggestionLabel.Text = "Suggestion";
 			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -540,8 +542,8 @@
 			this.editButton.Margin = new System.Windows.Forms.Padding(0);
 			this.editButton.Name = "editButton";
 			this.editButton.ShowDropDownArrow = false;
-			this.editButton.Size = new System.Drawing.Size(47, 25);
-			this.editButton.Text = "Edit";
+			this.editButton.Size = new System.Drawing.Size(50, 25);
+			this.editButton.Text = " Edit";
 			this.editButton.ToolTipText = "Edit image";
 			// 
 			// flipHorizontalButton
@@ -770,8 +772,8 @@
 			this.moreButton.Margin = new System.Windows.Forms.Padding(0);
 			this.moreButton.Name = "moreButton";
 			this.moreButton.ShowDropDownArrow = false;
-			this.moreButton.Size = new System.Drawing.Size(55, 25);
-			this.moreButton.Text = "More";
+			this.moreButton.Size = new System.Drawing.Size(58, 25);
+			this.moreButton.Text = " More";
 			this.moreButton.ToolTipText = "More options";
 			// 
 			// reloadButton
@@ -860,7 +862,7 @@
 			this.pleaseOpenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
 			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
 			this.pleaseOpenLabel.Size = new System.Drawing.Size(768, 432);
@@ -892,7 +894,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.ClientSize = new System.Drawing.Size(768, 493);
+			this.ClientSize = new System.Drawing.Size(768, 499);
 			this.Controls.Add(this.suggestionLabel);
 			this.Controls.Add(this.typeOpsButton);
 			this.Controls.Add(this.picturePanel);

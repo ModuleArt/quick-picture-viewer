@@ -27,6 +27,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WallpaperForm));
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.okButton = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
 			this.closeBtn = new System.Windows.Forms.Button();
 			this.fitLabel = new System.Windows.Forms.Label();
 			this.fitComboBox = new QuickLibrary.QlibComboBox();
+			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
@@ -98,6 +100,7 @@
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
 			this.closeBtn.TabIndex = 1;
+			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
@@ -168,5 +171,6 @@
 		private QuickLibrary.QlibComboBox fitComboBox;
 		private System.Windows.Forms.Label fitLabel;
 		private System.Windows.Forms.Label titleLabel;
+		private System.Windows.Forms.ToolTip aboutTooltip;
 	}
 }

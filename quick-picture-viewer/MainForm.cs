@@ -142,21 +142,14 @@ namespace quick_picture_viewer
 				else
 				{
 					UpdateForm updateDialog = new UpdateForm(checker, "Quick Picture Viewer", darkMode);
-
-					if (alwaysOnTop)
-					{
-						updateDialog.TopMost = true;
-					}
+					updateDialog.TopMost = alwaysOnTop;
 
 					DialogResult result = updateDialog.ShowDialog();
 					if (result == DialogResult.Yes)
 					{
 						DownloadForm downloadBox = new DownloadForm(checker.GetAssetUrl("QuickPictureViewer-Setup.msi"), darkMode);
 						downloadBox.Owner = this;
-						if (alwaysOnTop)
-						{
-							downloadBox.TopMost = true;
-						}
+						downloadBox.TopMost = alwaysOnTop;
 						downloadBox.ShowDialog();
 					}
 					else
@@ -165,11 +158,12 @@ namespace quick_picture_viewer
 					}
 				}
 			}
-			catch
+			catch (Exception ex)
 			{
 				if (showUpToDateDialog)
 				{
 					MessageBox.Show("Connection error", "Updator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					Console.WriteLine(ex);
 				}
 			}
 		}
@@ -199,11 +193,11 @@ namespace quick_picture_viewer
 					{
 						WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
 						decoderOptions.use_threads = 1;
-						decoderOptions.alpha_dithering_strength = 50;
+						decoderOptions.alpha_dithering_strength = 100;
 
-						webp.Decode(rawWebP, new WebPDecoderOptions());
+						//webp.Decode(rawWebP, new WebPDecoderOptions());
 
-						//openImage(webp.Decode(rawWebP, new WebPDecoderOptions()), Path.GetDirectoryName(path), Path.GetFileName(path));
+						openImage(webp.Decode(rawWebP, decoderOptions), Path.GetDirectoryName(path), Path.GetFileName(path));
 						//openImage(webp.Decode(rawWebP), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
 

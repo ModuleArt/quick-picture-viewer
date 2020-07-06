@@ -27,6 +27,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintForm));
 			this.okButton = new System.Windows.Forms.Button();
 			this.setMarginsButton = new QuickLibrary.QlibTextButton();
@@ -48,6 +49,7 @@
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.closeBtn = new System.Windows.Forms.Button();
+			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -66,6 +68,7 @@
 			this.okButton.Text = "Print";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.aboutTooltip.SetToolTip(this.okButton, "Choose print method");
 			this.okButton.UseVisualStyleBackColor = false;
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
 			// 
@@ -274,6 +277,7 @@
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
 			this.closeBtn.TabIndex = 1;
+			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
@@ -340,5 +344,6 @@
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.Button closeBtn;
+		private System.Windows.Forms.ToolTip aboutTooltip;
 	}
 }

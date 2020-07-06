@@ -147,13 +147,6 @@
     <Compile Include="PrintForm.Designer.cs">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateChecker.cs" />
-    <Compile Include="UpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateForm.Designer.cs">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="WallpaperForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SvgOpsForm.resx">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateForm.resx">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WallpaperForm.resx">
       <DependentUpon>WallpaperForm.cs</DependentUpon>
