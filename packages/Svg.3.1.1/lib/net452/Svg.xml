@@ -238,17 +238,6 @@
             </summary>
             <param name="renderer">The <see cref="T:Svg.ISvgRenderer"/> to have its clipping region reset.</param>
         </member>
-        <member name="P:Svg.SvgVisualElement.Visible">
-            <summary>
-            Gets or sets a value to determine whether the element will be rendered.
-            </summary>
-        </member>
-        <member name="P:Svg.SvgVisualElement.Display">
-            <summary>
-            Gets or sets a value to determine whether the element will be rendered.
-            Needed to support SVG attribute display="none"
-            </summary>
-        </member>
         <member name="P:Svg.SvgVisualElement.EnableBackground">
             <summary>
             Gets or sets the fill <see cref="T:Svg.SvgPaintServer"/> of this element.
@@ -348,6 +337,59 @@
             This rule determines the "insideness" of a point on the canvas by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses. If this number is odd, the point is inside; if even, the point is outside.
             </summary>
         </member>
+        <member name="F:Svg.SvgClipRule.Inherit">
+            <summary>
+            The value is inherited from the parent element.
+            </summary>
+        </member>
+        <member name="T:Svg.SvgMask">
+            <summary>
+            Defines an alpha mask for compositing the current object into the background.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgMask.MaskUnits">
+            <summary>
+            Defines the coordinate system for attributes <see cref="P:Svg.SvgMask.X"/>, <see cref="P:Svg.SvgMask.Y"/>, <see cref="P:Svg.SvgMask.Width"/> and <see cref="P:Svg.SvgMask.Height"/>.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgMask.MaskContentUnits">
+            <summary>
+            Defines the coordinate system for the contents of the mask.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgMask.X">
+            <summary>
+            The x-axis coordinate of one corner of the rectangle for the largest possible offscreen buffer.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgMask.Y">
+            <summary>
+            The y-axis coordinate of one corner of the rectangle for the largest possible offscreen buffer.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgMask.Width">
+            <summary>
+            The width of the largest possible offscreen buffer.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgMask.Height">
+            <summary>
+            The height of the largest possible offscreen buffer.
+            </summary>
+        </member>
+        <member name="P:Svg.EnumBaseConverter`1.CaseHandlingMode">
+            <summary>Defines if the enum literal shall be converted to camelCase, PascalCase or kebab-case.</summary>
+        </member>
+        <member name="M:Svg.EnumBaseConverter`1.#ctor(Svg.EnumBaseConverter{`0}.CaseHandling)">
+            <summary>Creates a new instance.</summary>
+            <param name="caseHandling">Defines if the value shall be converted to camelCase, PascalCase, lowercase or kebab-case.</param>
+        </member>
+        <member name="M:Svg.EnumBaseConverter`1.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>Attempts to convert the provided value to <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="M:Svg.EnumBaseConverter`1.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>Attempts to convert the value to the destination type.</summary>
+        </member>
         <member name="T:Svg.ISvgViewPort">
             <summary>
             Provides properties and methods to be implemented by view port elements.
@@ -403,11 +445,14 @@
             Indicates that the coordinate system of the entire document is to be used.
             </summary>
         </member>
+        <member name="T:Svg.SvgFontStretch">
+            <summary>The desired amount of condensing or expansion in the glyphs used to render the text.</summary>
+        </member>
         <member name="T:Svg.SvgFontStyle">
             <summary>This is the descriptor for the style of a font and takes the same values as the 'font-style' property, except that a comma-separated list is permitted.</summary>
         </member>
-        <member name="F:Svg.SvgFontStyle.All">
-            <summary>Indicates that the font-face supplies all styles (normal, oblique and italic).</summary>
+        <member name="F:Svg.SvgFontStyle.Inherit">
+            <summary>The value is inherited from the parent element.</summary>
         </member>
         <member name="F:Svg.SvgFontStyle.Normal">
             <summary>Specifies a font that is classified as 'normal' in the UA's font database.</summary>
@@ -418,11 +463,11 @@
         <member name="F:Svg.SvgFontStyle.Italic">
             <summary>Specifies a font that is classified as 'italic' in the UA's font database, or, if that is not available, one labeled 'oblique'. Fonts with Italic, Cursive, or Kursiv in their names will typically be labeled 'italic'</summary>
         </member>
+        <member name="F:Svg.SvgFontStyle.All">
+            <summary>Indicates that the font-face supplies all styles (normal, oblique and italic).</summary>
+        </member>
         <member name="T:Svg.SvgFontWeight">
             <summary>The weight of a face relative to others in the same font family.</summary>
-        </member>
-        <member name="F:Svg.SvgFontWeight.All">
-            <summary>All font weights.</summary>
         </member>
         <member name="F:Svg.SvgFontWeight.Inherit">
             <summary>The value is inherited from the parent element.</summary>
@@ -434,10 +479,10 @@
             <summary>Same as <see cref="F:Svg.SvgFontWeight.W700"/>.</summary>
         </member>
         <member name="F:Svg.SvgFontWeight.Bolder">
-            <summary>One font weight darker than the parent element.</summary>
+            <summary>One font weight darker than the parent element.(do not use font-face.)</summary>
         </member>
         <member name="F:Svg.SvgFontWeight.Lighter">
-            <summary>One font weight lighter than the parent element.</summary>
+            <summary>One font weight lighter than the parent element.(do not use font-face.)</summary>
         </member>
         <member name="F:Svg.SvgFontWeight.W100">
             <summary></summary>
@@ -465,6 +510,31 @@
         </member>
         <member name="F:Svg.SvgFontWeight.W900">
             <summary></summary>
+        </member>
+        <member name="F:Svg.SvgFontWeight.All">
+            <summary>All font weights.</summary>
+        </member>
+        <member name="T:Svg.SvgNumberCollection">
+            <summary>
+            Represents a list of <see cref="T:System.Single"/>.
+            </summary>
+        </member>
+        <member name="T:Svg.SvgNumberCollectionConverter">
+            <summary>
+            A class to convert string into <see cref="T:Svg.SvgNumberCollection"/> instances.
+            </summary>
+        </member>
+        <member name="M:Svg.SvgNumberCollectionConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the given object to the type of this converter, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="culture">The <see cref="T:System.Globalization.CultureInfo"/> to use as the current culture.</param>
+            <param name="value">The <see cref="T:System.Object"/> to convert.</param>
+            <returns>
+            An <see cref="T:System.Object"/> that represents the converted value.
+            </returns>
+            <exception cref="T:System.NotSupportedException">The conversion cannot be performed. </exception>
         </member>
         <member name="T:Svg.SvgOrient">
             <summary>
@@ -949,19 +1019,6 @@
             An element used to group SVG shapes.
             </summary>
         </member>
-        <member name="M:Svg.SvgGroup.AddMarkers">
-            <summary>
-            If the group has marker attributes defined, add them to all children
-            that are able to display markers. Only done once.
-            </summary>
-        </member>
-        <member name="M:Svg.SvgGroup.Render(Svg.ISvgRenderer)">
-            <summary>
-            Add group markers to children before rendering them.
-            This is only done on first rendering.
-            </summary>
-            <param name="renderer">The <see cref="T:Svg.ISvgRenderer"/> to render the child <see cref="T:Svg.SvgElement"/>s to.</param>
-        </member>
         <member name="M:Svg.SvgGroup.Path(Svg.ISvgRenderer)">
             <summary>
             Gets the <see cref="T:System.Drawing.Drawing2D.GraphicsPath"/> for this element.
@@ -1186,10 +1243,9 @@
             Gets or sets the height of the resulting filter graphic.
             </summary>
         </member>
-        <member name="P:Svg.FilterEffects.SvgFilter.ColorInterpolationFilters">
+        <member name="P:Svg.FilterEffects.SvgFilter.Href">
             <summary>
-            Gets or sets the color-interpolation-filters of the resulting filter graphic.
-            NOT currently mapped through to bitmap
+            Gets or sets reference to another filter element within the current document fragment.
             </summary>
         </member>
         <member name="M:Svg.FilterEffects.SvgFilter.Render(Svg.ISvgRenderer)">
@@ -1202,26 +1258,6 @@
             <summary>
             Publish the element name to be able to differentiate non-svg elements.
             </summary>
-        </member>
-        <member name="P:Svg.EnumBaseConverter`1.CaseHandlingMode">
-            <summary> Defines if the enum literal shall be converted to lower camel case or lower case.</summary>
-        </member>
-        <member name="P:Svg.EnumBaseConverter`1.DefaultValue">
-            <summary>If specified, upon conversion, the default value will result in 'null'.</summary>
-        </member>
-        <member name="M:Svg.EnumBaseConverter`1.#ctor">
-            <summary>Creates a new instance.</summary>
-        </member>
-        <member name="M:Svg.EnumBaseConverter`1.#ctor(`0,Svg.EnumBaseConverter{`0}.CaseHandling)">
-            <summary>Creates a new instance.</summary>
-            <param name="defaultValue">Specified the default value of the enum.</param>
-            <param name="caseHandling">Defines if the value shall be converted to lower camel case or lower case</param>
-        </member>
-        <member name="M:Svg.EnumBaseConverter`1.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
-            <summary>Attempts to convert the provided value to <typeparamref name="T"/>.</summary>
-        </member>
-        <member name="M:Svg.EnumBaseConverter`1.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
-            <summary>Attempts to convert the value to the destination type.</summary>
         </member>
         <member name="T:Svg.ISvgStylable">
             <summary>
@@ -1453,7 +1489,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Svg.SvgMarker.GetClone(Svg.SvgVisualElement)">
+        <member name="M:Svg.SvgMarker.GetClone(Svg.SvgVisualElement,Svg.ISvgRenderer)">
             <summary>
             Get a clone of the current path, scaled for the stroke width
             </summary>
@@ -1701,7 +1737,7 @@
             </summary>
             <references>https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering</references>
             <remarks>
-            Default is <see cref="F:Svg.SvgShapeRendering.Inherit"/>. That means the value comes from the parent element. If parents are also not set, then the value is <see cref="F:Svg.SvgShapeRendering.Auto"/>.
+            Default is <see cref="F:Svg.SvgShapeRendering.Auto"/>.
             </remarks>
         </member>
         <member name="F:Svg.SvgShapeRendering.Inherit">
@@ -2334,6 +2370,20 @@
             Fired when an Atrribute of this Element has changed
             </summary>
         </member>
+        <member name="M:Svg.SvgElement.RegisterEvents(Svg.ISvgEventCaller)">
+            <summary>
+            Use this method to provide your implementation ISvgEventCaller which can register Actions 
+            and call them if one of the events occurs. Make sure, that your SvgElement has a unique ID.
+            The SvgTextElement overwrites this and regsiters the Change event tor its text content.
+            </summary>
+            <param name="caller"></param>
+        </member>
+        <member name="M:Svg.SvgElement.UnregisterEvents(Svg.ISvgEventCaller)">
+            <summary>
+            Use this method to provide your implementation ISvgEventCaller to unregister Actions
+            </summary>
+            <param name="caller"></param>
+        </member>
         <member name="P:Svg.SvgElement.IsPathDirty">
             <summary>
             Gets or sets a value indicating whether this element's 'Path' is dirty.
@@ -2382,6 +2432,28 @@
             Refers to the AnitAlias rendering of shapes.
             </summary>
         </member>
+        <member name="P:Svg.SvgElement.ColorInterpolation">
+            <summary>
+            Gets or sets the color space for gradient interpolations, color animations and alpha compositing.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgElement.ColorInterpolationFilters">
+            <summary>
+            Gets or sets the color space for imaging operations performed via filter effects.
+            NOT currently mapped through to bitmap
+            </summary>
+        </member>
+        <member name="P:Svg.SvgElement.Visibility">
+            <summary>
+            Gets or sets a value to determine whether the element will be rendered.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgElement.Display">
+            <summary>
+            Gets or sets a value to determine whether the element will be rendered.
+            Needed to support SVG attribute display="none"
+            </summary>
+        </member>
         <member name="P:Svg.SvgElement.TextAnchor">
             <summary>
             Gets or sets the text anchor.
@@ -2420,6 +2492,11 @@
         <member name="P:Svg.SvgElement.FontWeight">
             <summary>
             Refers to the boldness of the font.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgElement.FontStretch">
+            <summary>
+            Indicates the desired amount of condensing or expansion in the glyphs used to render the text.
             </summary>
         </member>
         <member name="P:Svg.SvgElement.TextTransformation">
@@ -3009,6 +3086,96 @@
             An <see cref="T:System.Object"/> that represents the converted value.
             </returns>
             <exception cref="T:System.NotSupportedException">The conversion cannot be performed. </exception>
+        </member>
+        <member name="T:Svg.Web.SvgHandler">
+            <summary>
+            A handler to asynchronously render Scalable Vector Graphics files (usually *.svg or *.xml file extensions).
+            </summary>
+            <remarks>
+            <para>If a crawler requests the SVG file the raw XML will be returned rather than the image to allow crawlers to better read the image.</para>
+            <para>Adding "?raw=true" to the querystring will alos force the handler to render the raw SVG.</para>
+            </remarks>
+        </member>
+        <member name="P:Svg.Web.SvgHandler.IsReusable">
+            <summary>
+            Gets a value indicating whether another request can use the <see cref="T:System.Web.IHttpHandler"/> instance.
+            </summary>
+            <value></value>
+            <returns>true if the <see cref="T:System.Web.IHttpHandler"/> instance is reusable; otherwise, false.</returns>
+        </member>
+        <member name="M:Svg.Web.SvgHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Enables processing of HTTP Web requests by a custom HttpHandler that implements the <see cref="T:System.Web.IHttpHandler"/> interface.
+            </summary>
+            <param name="context">An <see cref="T:System.Web.HttpContext"/> object that provides references to the intrinsic server objects (for example, Request, Response, Session, and Server) used to service HTTP requests.</param>
+        </member>
+        <member name="M:Svg.Web.SvgHandler.BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)">
+            <summary>
+            Initiates an asynchronous call to the HTTP handler.
+            </summary>
+            <param name="context">An <see cref="T:System.Web.HttpContext"/> object that provides references to intrinsic server objects (for example, Request, Response, Session, and Server) used to service HTTP requests.</param>
+            <param name="cb">The <see cref="T:System.AsyncCallback"/> to call when the asynchronous method call is complete. If <paramref name="cb"/> is null, the delegate is not called.</param>
+            <param name="extraData">Any extra data needed to process the request.</param>
+            <returns>
+            An <see cref="T:System.IAsyncResult"/> that contains information about the status of the process.
+            </returns>
+        </member>
+        <member name="M:Svg.Web.SvgHandler.EndProcessRequest(System.IAsyncResult)">
+            <summary>
+            Provides an asynchronous process End method when the process ends.
+            </summary>
+            <param name="result">An <see cref="T:System.IAsyncResult"/> that contains information about the status of the process.</param>
+        </member>
+        <member name="T:Svg.Web.SvgHandler.SvgAsyncRender">
+            <summary>
+            The class to be used when 
+            </summary>
+        </member>
+        <member name="T:Svg.Web.SvgHandler.SvgAsyncRenderState">
+            <summary>
+            Represents the state of a request for SVG rendering.
+            </summary>
+        </member>
+        <member name="M:Svg.Web.SvgHandler.SvgAsyncRenderState.#ctor(System.Web.HttpContext,System.AsyncCallback,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Svg.Web.SvgHandler.SvgAsyncRenderState"/> class.
+            </summary>
+            <param name="context">The <see cref="T:System.Web.HttpContext"/> of the request.</param>
+            <param name="callback">The delegate to be called when the rendering is complete.</param>
+            <param name="extraData">The extra data.</param>
+        </member>
+        <member name="M:Svg.Web.SvgHandler.SvgAsyncRenderState.CompleteRequest">
+            <summary>
+            Indicates that the rendering is complete and the waiting thread may proceed.
+            </summary>
+        </member>
+        <member name="P:Svg.Web.SvgHandler.SvgAsyncRenderState.AsyncState">
+            <summary>
+            Gets a user-defined object that qualifies or contains information about an asynchronous operation.
+            </summary>
+            <value></value>
+            <returns>A user-defined object that qualifies or contains information about an asynchronous operation.</returns>
+        </member>
+        <member name="P:Svg.Web.SvgHandler.SvgAsyncRenderState.CompletedSynchronously">
+            <summary>
+            Gets an indication of whether the asynchronous operation completed synchronously.
+            </summary>
+            <value></value>
+            <returns>true if the asynchronous operation completed synchronously; otherwise, false.</returns>
+        </member>
+        <member name="P:Svg.Web.SvgHandler.SvgAsyncRenderState.IsCompleted">
+            <summary>
+            Gets an indication whether the asynchronous operation has completed.
+            </summary>
+            <value></value>
+            <returns>true if the operation is complete; otherwise, false.</returns>
+        </member>
+        <member name="P:Svg.Web.SvgHandler.SvgAsyncRenderState.AsyncWaitHandle">
+            <summary>
+            Gets a <see cref="T:System.Threading.WaitHandle"/> that is used to wait for an asynchronous operation to complete.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Threading.WaitHandle"/> that is used to wait for an asynchronous operation to complete.</returns>
         </member>
     </members>
 </doc>

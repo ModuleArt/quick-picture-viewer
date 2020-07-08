@@ -43,9 +43,9 @@
 			this.githubLabel = new System.Windows.Forms.Label();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.closeBtn = new System.Windows.Forms.Button();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
-			this.closeBtn = new System.Windows.Forms.Button();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
@@ -144,7 +144,6 @@
 			// makeDefaultLink
 			// 
 			this.makeDefaultLink.AutoSize = true;
-			this.makeDefaultLink.Enabled = false;
 			this.makeDefaultLink.Location = new System.Drawing.Point(10, 248);
 			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.makeDefaultLink.Name = "makeDefaultLink";
@@ -153,6 +152,7 @@
 			this.makeDefaultLink.TabStop = true;
 			this.makeDefaultLink.Text = "Set as default photo viewer";
 			this.aboutTooltip.SetToolTip(this.makeDefaultLink, "Open Windows settings");
+			this.makeDefaultLink.Visible = false;
 			this.makeDefaultLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeDefaultLink_LinkClicked);
 			// 
 			// updatesLink
@@ -203,6 +203,20 @@
 			this.aboutTooltip.SetToolTip(this.licenseLink, "Open GitHub license page");
 			this.licenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.licenseLink_LinkClicked);
 			// 
+			// closeBtn
+			// 
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+			this.closeBtn.Location = new System.Drawing.Point(268, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 1;
+			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
+			this.closeBtn.UseVisualStyleBackColor = true;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
 			// titlePanel
 			// 
 			this.titlePanel.Controls.Add(this.titleLabel);
@@ -222,20 +236,6 @@
 			this.titleLabel.Size = new System.Drawing.Size(47, 19);
 			this.titleLabel.TabIndex = 16;
 			this.titleLabel.Text = "About";
-			// 
-			// closeBtn
-			// 
-			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-			this.closeBtn.Location = new System.Drawing.Point(268, 0);
-			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.closeBtn.Name = "closeBtn";
-			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
-			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
-			this.closeBtn.UseVisualStyleBackColor = true;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// logoPictureBox
 			// 

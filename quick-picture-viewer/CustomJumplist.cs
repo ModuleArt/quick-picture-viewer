@@ -10,7 +10,8 @@ namespace quick_picture_viewer
 
         public CustomJumplist(IntPtr windowHandle)
         {
-            list = JumpList.CreateJumpListForIndividualWindow(TaskbarManager.Instance.ApplicationId, windowHandle);
+            //list = JumpList.CreateJumpListForIndividualWindow(TaskbarManager.Instance.ApplicationId, windowHandle);
+            list = JumpList.CreateJumpList();
             list.KnownCategoryToDisplay = JumpListKnownCategoryType.Recent;
             BuildList();
         }

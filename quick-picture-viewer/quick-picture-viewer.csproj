@@ -93,8 +93,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\quick-library\QuickLibrary\bin\Release\QuickLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Svg, Version=3.0.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
-      <HintPath>..\packages\Svg.3.0.102\lib\net452\Svg.dll</HintPath>
+    <Reference Include="Svg, Version=3.1.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.3.1.1\lib\net452\Svg.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -224,7 +224,7 @@
 			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
 			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(628, 414);
+			this.typeOpsButton.Location = new System.Drawing.Point(628, 408);
 			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(0);
 			this.typeOpsButton.Name = "typeOpsButton";
 			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
@@ -907,6 +907,7 @@
 			this.Text = "Quick Picture Viewer";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);

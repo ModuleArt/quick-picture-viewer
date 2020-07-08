@@ -39,7 +39,7 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isWindows10())
 			{
-				makeDefaultLink.Enabled = true;
+				makeDefaultLink.Visible = true;
 			}
 
 			updatesLink.LinkColor = ThemeManager.AccentColor;

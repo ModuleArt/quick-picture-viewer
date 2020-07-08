@@ -45,8 +45,6 @@ namespace quick_picture_viewer
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
-			CustomJumplist jumplist = new CustomJumplist(this.Handle);
-
 			this.darkMode = darkMode;
 			this.openPath = openPath;
 
@@ -1608,6 +1606,19 @@ namespace quick_picture_viewer
 		private void zoomInButton_MouseUp(object sender, MouseEventArgs e)
 		{
 			zoomInTimer.Stop();
+		}
+
+		private void MainForm_Shown(object sender, EventArgs e)
+		{
+			try
+			{
+
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+			}
+			CustomJumplist jumplist = new CustomJumplist(this.Handle);
 		}
 	}
 }
