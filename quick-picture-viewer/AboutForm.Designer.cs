@@ -77,7 +77,7 @@
 			// companyLabel
 			// 
 			this.companyLabel.AutoSize = true;
-			this.companyLabel.Location = new System.Drawing.Point(10, 277);
+			this.companyLabel.Location = new System.Drawing.Point(10, 315);
 			this.companyLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.companyLabel.Name = "companyLabel";
 			this.companyLabel.Size = new System.Drawing.Size(76, 19);
@@ -88,7 +88,7 @@
 			// 
 			this.authorLabel.AutoSize = true;
 			this.authorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-			this.authorLabel.Location = new System.Drawing.Point(165, 277);
+			this.authorLabel.Location = new System.Drawing.Point(165, 315);
 			this.authorLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.authorLabel.Name = "authorLabel";
 			this.authorLabel.Size = new System.Drawing.Size(115, 19);
@@ -100,15 +100,15 @@
 			this.descriptionLabel.Location = new System.Drawing.Point(10, 200);
 			this.descriptionLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.descriptionLabel.Name = "descriptionLabel";
-			this.descriptionLabel.Size = new System.Drawing.Size(280, 38);
+			this.descriptionLabel.Size = new System.Drawing.Size(280, 76);
 			this.descriptionLabel.TabIndex = 31;
 			this.descriptionLabel.Text = "Lightweight, versatile desktop photo viewer for Windows, built on top of WinForms" +
-    " (C#).";
+    " (C#). The best replacement for the default Windows image viewer.";
 			// 
 			// websiteLink
 			// 
 			this.websiteLink.AutoSize = true;
-			this.websiteLink.Location = new System.Drawing.Point(86, 277);
+			this.websiteLink.Location = new System.Drawing.Point(86, 315);
 			this.websiteLink.Margin = new System.Windows.Forms.Padding(0);
 			this.websiteLink.Name = "websiteLink";
 			this.websiteLink.Size = new System.Drawing.Size(79, 19);
@@ -121,7 +121,7 @@
 			// projectLink
 			// 
 			this.projectLink.AutoSize = true;
-			this.projectLink.Location = new System.Drawing.Point(66, 335);
+			this.projectLink.Location = new System.Drawing.Point(66, 373);
 			this.projectLink.Margin = new System.Windows.Forms.Padding(0);
 			this.projectLink.Name = "projectLink";
 			this.projectLink.Size = new System.Drawing.Size(85, 19);
@@ -134,7 +134,7 @@
 			// licenseLabel
 			// 
 			this.licenseLabel.AutoSize = true;
-			this.licenseLabel.Location = new System.Drawing.Point(10, 306);
+			this.licenseLabel.Location = new System.Drawing.Point(10, 344);
 			this.licenseLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.licenseLabel.Name = "licenseLabel";
 			this.licenseLabel.Size = new System.Drawing.Size(56, 19);
@@ -144,7 +144,7 @@
 			// makeDefaultLink
 			// 
 			this.makeDefaultLink.AutoSize = true;
-			this.makeDefaultLink.Location = new System.Drawing.Point(10, 248);
+			this.makeDefaultLink.Location = new System.Drawing.Point(10, 286);
 			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.makeDefaultLink.Name = "makeDefaultLink";
 			this.makeDefaultLink.Size = new System.Drawing.Size(175, 19);
@@ -170,7 +170,7 @@
 			// issuesLink
 			// 
 			this.issuesLink.AutoSize = true;
-			this.issuesLink.Location = new System.Drawing.Point(151, 335);
+			this.issuesLink.Location = new System.Drawing.Point(151, 373);
 			this.issuesLink.Margin = new System.Windows.Forms.Padding(0);
 			this.issuesLink.Name = "issuesLink";
 			this.issuesLink.Size = new System.Drawing.Size(46, 19);
@@ -183,7 +183,7 @@
 			// githubLabel
 			// 
 			this.githubLabel.AutoSize = true;
-			this.githubLabel.Location = new System.Drawing.Point(10, 335);
+			this.githubLabel.Location = new System.Drawing.Point(10, 373);
 			this.githubLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.githubLabel.Name = "githubLabel";
 			this.githubLabel.Size = new System.Drawing.Size(56, 19);
@@ -193,7 +193,7 @@
 			// licenseLink
 			// 
 			this.licenseLink.AutoSize = true;
-			this.licenseLink.Location = new System.Drawing.Point(66, 306);
+			this.licenseLink.Location = new System.Drawing.Point(66, 344);
 			this.licenseLink.Margin = new System.Windows.Forms.Padding(0);
 			this.licenseLink.Name = "licenseLink";
 			this.licenseLink.Size = new System.Drawing.Size(59, 19);
@@ -251,7 +251,7 @@
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(300, 372);
+			this.ClientSize = new System.Drawing.Size(300, 410);
 			this.Controls.Add(this.githubLabel);
 			this.Controls.Add(this.issuesLink);
 			this.Controls.Add(this.projectLink);

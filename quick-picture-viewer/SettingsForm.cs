@@ -37,6 +37,7 @@ namespace quick_picture_viewer
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
+			zoomWheelCheckBox.Checked = Properties.Settings.Default.NoCtrlZoom;
 		}
 
 		private void applyDarkMode(bool dark)
@@ -60,6 +61,7 @@ namespace quick_picture_viewer
 			darkThemeRadio.SetDarkMode(dark);
 			lightThemeRadio.SetDarkMode(dark);
 			systemThemeRadio.SetDarkMode(dark);
+			zoomWheelCheckBox.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -112,6 +114,12 @@ namespace quick_picture_viewer
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void zoomWheelCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.NoCtrlZoom = zoomWheelCheckBox.Checked;
+			Properties.Settings.Default.Save();
 		}
 	}
 }

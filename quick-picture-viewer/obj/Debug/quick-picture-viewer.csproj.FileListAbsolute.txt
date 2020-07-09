@@ -37,3 +37,4 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Microsoft
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.pdb
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Pfim.dll

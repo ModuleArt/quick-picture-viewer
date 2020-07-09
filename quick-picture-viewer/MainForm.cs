@@ -5,8 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -29,6 +31,7 @@ namespace quick_picture_viewer
 		private bool darkMode = false;
 		private bool checkboardBackground = false;
 		private bool slideshow = false;
+		private GCHandle tmpGcHandle;
 
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
@@ -192,11 +195,7 @@ namespace quick_picture_viewer
 						WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
 						decoderOptions.use_threads = 1;
 						decoderOptions.alpha_dithering_strength = 100;
-
-						//webp.Decode(rawWebP, new WebPDecoderOptions());
-
 						openImage(webp.Decode(rawWebP, decoderOptions), Path.GetDirectoryName(path), Path.GetFileName(path));
-						//openImage(webp.Decode(rawWebP), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
 
 					showTypeOpsButton(false, null);
@@ -211,6 +210,10 @@ namespace quick_picture_viewer
 				{
 					openSvg(path, -1, -1);
 				}
+				else if (ext == ".dds" || ext == ".tga")
+				{
+					openDdsOrTga(path);
+				}
 				else
 				{
 					openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
@@ -224,11 +227,63 @@ namespace quick_picture_viewer
 			}
 		}
 
+		public void openDdsOrTga(string path)
+		{
+			try
+			{
+				using (var image = Pfim.Pfim.FromFile(path))
+				{
+					PixelFormat format;
+
+					switch (image.Format)
+					{
+						case Pfim.ImageFormat.Rgba32:
+							format = PixelFormat.Format32bppArgb;
+							break;
+						case Pfim.ImageFormat.Rgb24:
+							format = PixelFormat.Format24bppRgb;
+							break;
+						case Pfim.ImageFormat.Rgba16:
+							format = PixelFormat.Format16bppArgb1555;
+							break;
+						case Pfim.ImageFormat.Rgb8:
+							format = PixelFormat.Format8bppIndexed;
+							break;
+						default:
+							throw new NotImplementedException();
+					}
+
+					try
+					{
+						if (tmpGcHandle != null && tmpGcHandle.IsAllocated)
+						{
+							tmpGcHandle.Free();
+						}
+
+						tmpGcHandle = GCHandle.Alloc(image.Data, GCHandleType.Pinned);
+						var data = Marshal.UnsafeAddrOfPinnedArrayElement(image.Data, 0);
+						var bitmap = new Bitmap(image.Width, image.Height, image.Stride, format, data);
+						openImage(bitmap, Path.GetDirectoryName(path), Path.GetFileName(path));
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show("DDS/TGA memory error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						Console.WriteLine(ex);
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Unable to open DDS or TGA file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Console.WriteLine(ex);
+			}
+		}
+
 		public void openSvg(string path, int width, int height)
 		{
 			try
 			{
-				Svg.SvgDocument svgDocument = Svg.SvgDocument.Open(path);
+				SvgDocument svgDocument = SvgDocument.Open(path);
 				svgDocument.ShapeRendering = SvgShapeRendering.Auto;
 
 				if (width == -1)
@@ -247,7 +302,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Unable to find SVG file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Unable to open SVG file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Console.WriteLine(ex);
 			}
 		}
@@ -279,19 +334,40 @@ namespace quick_picture_viewer
 				pictureBox.Image = null;
 			}
 
+			const int exifOrientationID = 0x112; //274
+			if (bitmap.PropertyIdList.Contains(exifOrientationID))
+			{
+				var prop = bitmap.GetPropertyItem(exifOrientationID);
+				int val = BitConverter.ToUInt16(prop.Value, 0);
+				var rot = RotateFlipType.RotateNoneFlipNone;
+
+				if (val == 3 || val == 4)
+					rot = RotateFlipType.Rotate180FlipNone;
+				else if (val == 5 || val == 6)
+					rot = RotateFlipType.Rotate90FlipNone;
+				else if (val == 7 || val == 8)
+					rot = RotateFlipType.Rotate270FlipNone;
+
+				if (val == 2 || val == 4 || val == 5 || val == 7)
+					rot |= RotateFlipType.RotateNoneFlipX;
+
+				if (rot != RotateFlipType.RotateNoneFlipNone)
+					bitmap.RotateFlip(rot);
+			}
+
 			originalImage = bitmap;
 			pictureBox.Image = originalImage;
 
 			width = pictureBox.Image.Size.Width;
 			height = pictureBox.Image.Size.Height;
-			fileLabel.Text = "File: " + fileName;
+			fileLabel.Text = " File: " + fileName;
 
 			if(directoryName == null)
 			{
 				currentFolder = null;
 				currentFile = null;
-				directoryLabel.Text = "Folder: Not exists";
-				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px";
+				directoryLabel.Text = " Folder: Not exists";
+				sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px";
 
 				nextButton.Enabled = false;
 				prevButton.Enabled = false;
@@ -310,8 +386,8 @@ namespace quick_picture_viewer
 
 				currentFolder = directoryName;
 				currentFile = fileName;
-				directoryLabel.Text = "Folder: " + directoryName;
-				sizeLabel.Text = "Size: " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
+				directoryLabel.Text = " Folder: " + directoryName;
+				sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
 				nextButton.Enabled = true;
 				prevButton.Enabled = true;
@@ -321,9 +397,9 @@ namespace quick_picture_viewer
 				showFileButton.Enabled = true;
 				reloadButton.Enabled = true;
 
-				dateCreatedLabel.Text = "Created: " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
+				dateCreatedLabel.Text = " Created: " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
 				dateCreatedLabel.Visible = true;
-				dateModifiedLabel.Text = "Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
+				dateModifiedLabel.Text = " Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
 				dateModifiedLabel.Visible = true;
 			}
 
@@ -413,7 +489,7 @@ namespace quick_picture_viewer
 		{
 			zoomFactor = newZoomFactor;
 
-			zoomLabel.Text = "Zoom: " + zoomFactor.ToString() + "%";
+			zoomLabel.Text = " Zoom: " + zoomFactor.ToString() + "%";
 
 			setAutoZoom(false);
 
@@ -466,7 +542,7 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.Fill;
 
-				zoomLabel.Text = "Zoom: Auto";
+				zoomLabel.Text = " Zoom: Auto";
 			}
 			else
 			{
@@ -596,7 +672,7 @@ namespace quick_picture_viewer
 			setSlideshow(false);
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
-				System.IO.FileStream fs = (System.IO.FileStream) saveFileDialog1.OpenFile();
+				FileStream fs = (FileStream) saveFileDialog1.OpenFile();
 				switch (saveFileDialog1.FilterIndex)
 				{
 					case 1:
@@ -719,7 +795,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
 		{
-			if(Control.ModifierKeys == Keys.Control)
+			if(Control.ModifierKeys == Keys.Control || Properties.Settings.Default.NoCtrlZoom)
 			{
 				if (e.Delta > 0)
 				{
@@ -1125,7 +1201,7 @@ namespace quick_picture_viewer
 
 		private string[] getCurrentFiles()
 		{
-			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg" };
+			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", "dds", ".tga" };
 			List<string> arlist = new List<string>();
 
 			string[] allFiles = Directory.GetFiles(currentFolder);
@@ -1230,9 +1306,9 @@ namespace quick_picture_viewer
 
 			pleaseOpenLabel.Visible = true;
 
-			directoryLabel.Text = "Folder: Empty";
-			fileLabel.Text = "File: Empty";
-			sizeLabel.Text = "Size: 0 x 0 px";
+			directoryLabel.Text = " Folder: Empty";
+			fileLabel.Text = " File: Empty";
+			sizeLabel.Text = " Size: 0 x 0 px";
 			dateCreatedLabel.Visible = false;
 			dateModifiedLabel.Visible = false;
 
@@ -1612,13 +1688,12 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-
+				CustomJumplist jumplist = new CustomJumplist(this.Handle);
 			}
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex);
 			}
-			CustomJumplist jumplist = new CustomJumplist(this.Handle);
 		}
 	}
 }

@@ -31,13 +31,14 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
 			this.settingsTabs = new QuickLibrary.QlibTabControl();
 			this.themePage = new System.Windows.Forms.TabPage();
-			this.licenseLabel = new System.Windows.Forms.Label();
+			this.restartLabel1 = new System.Windows.Forms.Label();
 			this.systemThemeRadio = new QuickLibrary.QlibRadioButton();
 			this.darkThemeRadio = new QuickLibrary.QlibRadioButton();
 			this.lightThemeRadio = new QuickLibrary.QlibRadioButton();
 			this.updatesPage = new System.Windows.Forms.TabPage();
 			this.updatesCheckBox = new QuickLibrary.QlibCheckBox();
-			this.fullscreenPage = new System.Windows.Forms.TabPage();
+			this.mousePage = new System.Windows.Forms.TabPage();
+			this.zoomWheelCheckBox = new QuickLibrary.QlibCheckBox();
 			this.fullscrCursorCheckBox = new QuickLibrary.QlibCheckBox();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
 			this.updatesPage.SuspendLayout();
-			this.fullscreenPage.SuspendLayout();
+			this.mousePage.SuspendLayout();
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -60,7 +61,7 @@
 			this.settingsTabs.ClosingMessage = null;
 			this.settingsTabs.Controls.Add(this.themePage);
 			this.settingsTabs.Controls.Add(this.updatesPage);
-			this.settingsTabs.Controls.Add(this.fullscreenPage);
+			this.settingsTabs.Controls.Add(this.mousePage);
 			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.ControlLight;
 			this.settingsTabs.HorizontalLineColor = System.Drawing.Color.Transparent;
 			this.settingsTabs.ItemSize = new System.Drawing.Size(240, 16);
@@ -79,7 +80,7 @@
 			// themePage
 			// 
 			this.themePage.BackColor = System.Drawing.Color.White;
-			this.themePage.Controls.Add(this.licenseLabel);
+			this.themePage.Controls.Add(this.restartLabel1);
 			this.themePage.Controls.Add(this.systemThemeRadio);
 			this.themePage.Controls.Add(this.darkThemeRadio);
 			this.themePage.Controls.Add(this.lightThemeRadio);
@@ -91,15 +92,15 @@
 			this.themePage.TabIndex = 0;
 			this.themePage.Text = "Theme";
 			// 
-			// licenseLabel
+			// restartLabel1
 			// 
-			this.licenseLabel.AutoSize = true;
-			this.licenseLabel.Location = new System.Drawing.Point(10, 116);
-			this.licenseLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.licenseLabel.Name = "licenseLabel";
-			this.licenseLabel.Size = new System.Drawing.Size(143, 19);
-			this.licenseLabel.TabIndex = 38;
-			this.licenseLabel.Text = "* App restart required";
+			this.restartLabel1.AutoSize = true;
+			this.restartLabel1.Location = new System.Drawing.Point(10, 116);
+			this.restartLabel1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.restartLabel1.Name = "restartLabel1";
+			this.restartLabel1.Size = new System.Drawing.Size(143, 19);
+			this.restartLabel1.TabIndex = 38;
+			this.restartLabel1.Text = "* App restart required";
 			// 
 			// systemThemeRadio
 			// 
@@ -159,17 +160,29 @@
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
 			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
 			// 
-			// fullscreenPage
+			// mousePage
 			// 
-			this.fullscreenPage.BackColor = System.Drawing.Color.White;
-			this.fullscreenPage.Controls.Add(this.fullscrCursorCheckBox);
-			this.fullscreenPage.Location = new System.Drawing.Point(4, 20);
-			this.fullscreenPage.Margin = new System.Windows.Forms.Padding(0);
-			this.fullscreenPage.Name = "fullscreenPage";
-			this.fullscreenPage.Padding = new System.Windows.Forms.Padding(10);
-			this.fullscreenPage.Size = new System.Drawing.Size(272, 180);
-			this.fullscreenPage.TabIndex = 2;
-			this.fullscreenPage.Text = "Fullscreen";
+			this.mousePage.BackColor = System.Drawing.Color.White;
+			this.mousePage.Controls.Add(this.zoomWheelCheckBox);
+			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
+			this.mousePage.Location = new System.Drawing.Point(4, 20);
+			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
+			this.mousePage.Name = "mousePage";
+			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
+			this.mousePage.Size = new System.Drawing.Size(272, 180);
+			this.mousePage.TabIndex = 2;
+			this.mousePage.Text = "Mouse";
+			// 
+			// zoomWheelCheckBox
+			// 
+			this.zoomWheelCheckBox.Location = new System.Drawing.Point(10, 42);
+			this.zoomWheelCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.zoomWheelCheckBox.Name = "zoomWheelCheckBox";
+			this.zoomWheelCheckBox.Size = new System.Drawing.Size(252, 32);
+			this.zoomWheelCheckBox.TabIndex = 2;
+			this.zoomWheelCheckBox.Text = "Mouse wheel to zoom";
+			this.zoomWheelCheckBox.UseVisualStyleBackColor = true;
+			this.zoomWheelCheckBox.CheckedChanged += new System.EventHandler(this.zoomWheelCheckBox_CheckedChanged);
 			// 
 			// fullscrCursorCheckBox
 			// 
@@ -236,7 +249,7 @@
 			this.themePage.ResumeLayout(false);
 			this.themePage.PerformLayout();
 			this.updatesPage.ResumeLayout(false);
-			this.fullscreenPage.ResumeLayout(false);
+			this.mousePage.ResumeLayout(false);
 			this.titlePanel.ResumeLayout(false);
 			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
@@ -248,15 +261,16 @@
 		private QuickLibrary.QlibRadioButton systemThemeRadio;
 		private QuickLibrary.QlibRadioButton darkThemeRadio;
 		private QuickLibrary.QlibCheckBox updatesCheckBox;
-		private System.Windows.Forms.Label licenseLabel;
+		private System.Windows.Forms.Label restartLabel1;
 		private QuickLibrary.QlibCheckBox fullscrCursorCheckBox;
 		private QuickLibrary.QlibTabControl settingsTabs;
 		private System.Windows.Forms.TabPage themePage;
 		private System.Windows.Forms.TabPage updatesPage;
-		private System.Windows.Forms.TabPage fullscreenPage;
+		private System.Windows.Forms.TabPage mousePage;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.Button closeBtn;
 		private System.Windows.Forms.ToolTip aboutTooltip;
+		private QuickLibrary.QlibCheckBox zoomWheelCheckBox;
 	}
 }

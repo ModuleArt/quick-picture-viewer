@@ -82,5 +82,17 @@ namespace quick_picture_viewer.Properties {
                 this["ShowCursorInFullscreen"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool NoCtrlZoom {
+            get {
+                return ((bool)(this["NoCtrlZoom"]));
+            }
+            set {
+                this["NoCtrlZoom"] = value;
+            }
+        }
     }
 }

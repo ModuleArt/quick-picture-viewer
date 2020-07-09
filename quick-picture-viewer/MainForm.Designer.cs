@@ -123,8 +123,8 @@
 			this.directoryLabel.Image = ((System.Drawing.Image)(resources.GetObject("directoryLabel.Image")));
 			this.directoryLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.directoryLabel.Name = "directoryLabel";
-			this.directoryLabel.Size = new System.Drawing.Size(104, 17);
-			this.directoryLabel.Text = "Folder: Empty";
+			this.directoryLabel.Size = new System.Drawing.Size(108, 17);
+			this.directoryLabel.Text = " Folder: Empty";
 			// 
 			// fileLabel
 			// 
@@ -132,8 +132,8 @@
 			this.fileLabel.Image = ((System.Drawing.Image)(resources.GetObject("fileLabel.Image")));
 			this.fileLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.fileLabel.Name = "fileLabel";
-			this.fileLabel.Size = new System.Drawing.Size(86, 17);
-			this.fileLabel.Text = "File: Empty";
+			this.fileLabel.Size = new System.Drawing.Size(90, 17);
+			this.fileLabel.Text = " File: Empty";
 			// 
 			// sizeLabel
 			// 
@@ -141,8 +141,8 @@
 			this.sizeLabel.Image = ((System.Drawing.Image)(resources.GetObject("sizeLabel.Image")));
 			this.sizeLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.sizeLabel.Name = "sizeLabel";
-			this.sizeLabel.Size = new System.Drawing.Size(100, 17);
-			this.sizeLabel.Text = "Size: 0 x 0 px";
+			this.sizeLabel.Size = new System.Drawing.Size(104, 17);
+			this.sizeLabel.Text = " Size: 0 x 0 px";
 			// 
 			// zoomLabel
 			// 
@@ -150,8 +150,8 @@
 			this.zoomLabel.Image = ((System.Drawing.Image)(resources.GetObject("zoomLabel.Image")));
 			this.zoomLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.zoomLabel.Name = "zoomLabel";
-			this.zoomLabel.Size = new System.Drawing.Size(92, 17);
-			this.zoomLabel.Text = "Zoom: Auto";
+			this.zoomLabel.Size = new System.Drawing.Size(96, 17);
+			this.zoomLabel.Text = " Zoom: Auto";
 			// 
 			// statusStrip1
 			// 
@@ -178,8 +178,8 @@
 			this.hasChangesLabel.Image = ((System.Drawing.Image)(resources.GetObject("hasChangesLabel.Image")));
 			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.hasChangesLabel.Name = "hasChangesLabel";
-			this.hasChangesLabel.Size = new System.Drawing.Size(84, 17);
-			this.hasChangesLabel.Text = "Not saved";
+			this.hasChangesLabel.Size = new System.Drawing.Size(88, 17);
+			this.hasChangesLabel.Text = " Not saved";
 			this.hasChangesLabel.Visible = false;
 			// 
 			// dateCreatedLabel
@@ -188,8 +188,8 @@
 			this.dateCreatedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateCreatedLabel.Image")));
 			this.dateCreatedLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.dateCreatedLabel.Name = "dateCreatedLabel";
-			this.dateCreatedLabel.Size = new System.Drawing.Size(130, 17);
-			this.dateCreatedLabel.Text = "Created: Unknown";
+			this.dateCreatedLabel.Size = new System.Drawing.Size(134, 17);
+			this.dateCreatedLabel.Text = " Created: Unknown";
 			this.dateCreatedLabel.Visible = false;
 			// 
 			// dateModifiedLabel
@@ -198,8 +198,8 @@
 			this.dateModifiedLabel.Image = ((System.Drawing.Image)(resources.GetObject("dateModifiedLabel.Image")));
 			this.dateModifiedLabel.Margin = new System.Windows.Forms.Padding(8);
 			this.dateModifiedLabel.Name = "dateModifiedLabel";
-			this.dateModifiedLabel.Size = new System.Drawing.Size(137, 17);
-			this.dateModifiedLabel.Text = "Modified: Unknown";
+			this.dateModifiedLabel.Size = new System.Drawing.Size(141, 17);
+			this.dateModifiedLabel.Text = " Modified: Unknown";
 			this.dateModifiedLabel.Visible = false;
 			// 
 			// printDialog1

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
@@ -15,7 +14,7 @@ namespace quick_picture_viewer
 				base.OnMouseWheel(e);
 				this.VScroll = true;
 			}
-			else if (this.VScroll && (Control.ModifierKeys & Keys.Control) == Keys.Control)
+			else if ((this.VScroll && (Control.ModifierKeys & Keys.Control) == Keys.Control) || Properties.Settings.Default.NoCtrlZoom)
 			{
 				this.VScroll = false;
 				this.HScroll = false;
