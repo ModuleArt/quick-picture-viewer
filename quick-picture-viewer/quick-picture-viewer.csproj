@@ -284,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-move.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

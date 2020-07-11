@@ -230,7 +230,7 @@
 			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
 			this.typeOpsButton.TabIndex = 0;
 			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.Text = "TYPE options";
+			this.typeOpsButton.Text = " TYPE options";
 			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.typeOpsButton.UseVisualStyleBackColor = false;
 			this.typeOpsButton.Visible = false;
@@ -307,7 +307,8 @@
 			this.openButton.Margin = new System.Windows.Forms.Padding(0);
 			this.openButton.Name = "openButton";
 			this.openButton.Size = new System.Drawing.Size(24, 25);
-			this.openButton.Text = "Open file | Ctrl + O";
+			this.openButton.Text = "Open file | Ctrl+O";
+			this.openButton.ToolTipText = "Open file | Ctrl+O";
 			this.openButton.Click += new System.EventHandler(this.openButton_Click_1);
 			// 
 			// saveAsButton
@@ -321,7 +322,8 @@
 			this.saveAsButton.Margin = new System.Windows.Forms.Padding(0);
 			this.saveAsButton.Name = "saveAsButton";
 			this.saveAsButton.Size = new System.Drawing.Size(24, 25);
-			this.saveAsButton.Text = "Save as | Ctrl + S";
+			this.saveAsButton.Text = "Save as | Ctrl+S";
+			this.saveAsButton.ToolTipText = "Save as | Ctrl+S";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
 			// 
 			// printButton
@@ -334,7 +336,8 @@
 			this.printButton.Margin = new System.Windows.Forms.Padding(0);
 			this.printButton.Name = "printButton";
 			this.printButton.Size = new System.Drawing.Size(24, 25);
-			this.printButton.Text = "Print | Ctrl + P";
+			this.printButton.Text = "Print | Ctrl+P";
+			this.printButton.ToolTipText = "Print | Ctrl+P";
 			this.printButton.Click += new System.EventHandler(this.printButton_Click);
 			// 
 			// deleteButton
@@ -360,7 +363,8 @@
 			this.externalButton.Margin = new System.Windows.Forms.Padding(0);
 			this.externalButton.Name = "externalButton";
 			this.externalButton.Size = new System.Drawing.Size(24, 25);
-			this.externalButton.Text = "Open file with external app | Ctrl + E";
+			this.externalButton.Text = "Open file with external app | Ctrl+E";
+			this.externalButton.ToolTipText = "Open file with external app | Ctrl+E";
 			this.externalButton.Click += new System.EventHandler(this.externalButton_Click);
 			// 
 			// toolStripSeparator4
@@ -393,8 +397,8 @@
 			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
 			this.showFileButton.Name = "showFileButton";
 			this.showFileButton.Size = new System.Drawing.Size(24, 25);
-			this.showFileButton.Text = "Show file in explorer | Ctrl + Shift + E";
-			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl + Shift + E";
+			this.showFileButton.Text = "Show file in explorer | Ctrl+Shift+E";
+			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl+Shift+E";
 			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// nextButton
@@ -420,7 +424,8 @@
 			this.slideshowButton.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowButton.Name = "slideshowButton";
 			this.slideshowButton.Size = new System.Drawing.Size(24, 25);
-			this.slideshowButton.Text = "Slideshow | Ctrl + Shift + S";
+			this.slideshowButton.Text = "Slideshow | Ctrl+Shift+S";
+			this.slideshowButton.ToolTipText = "Slideshow | Ctrl+Shift+S";
 			this.slideshowButton.Click += new System.EventHandler(this.slideshowButton_Click);
 			// 
 			// toolStripSeparator1
@@ -442,7 +447,8 @@
 			this.autoZoomButton.Margin = new System.Windows.Forms.Padding(0);
 			this.autoZoomButton.Name = "autoZoomButton";
 			this.autoZoomButton.Size = new System.Drawing.Size(24, 25);
-			this.autoZoomButton.Text = "Auto zoom | Ctrl + A";
+			this.autoZoomButton.Text = "Auto zoom | Ctrl+A";
+			this.autoZoomButton.ToolTipText = "Auto zoom | Ctrl+A";
 			this.autoZoomButton.Click += new System.EventHandler(this.autoZoomButton_Click);
 			// 
 			// zoomOutButton
@@ -455,7 +461,8 @@
 			this.zoomOutButton.Margin = new System.Windows.Forms.Padding(0);
 			this.zoomOutButton.Name = "zoomOutButton";
 			this.zoomOutButton.Size = new System.Drawing.Size(24, 25);
-			this.zoomOutButton.Text = "Zoom out | Ctrl + Minus";
+			this.zoomOutButton.Text = "Zoom out | Ctrl+Minus";
+			this.zoomOutButton.ToolTipText = "Zoom out | Ctrl+Minus";
 			this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
 			this.zoomOutButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.zoomOutButton_MouseDown);
 			this.zoomOutButton.MouseLeave += new System.EventHandler(this.zoomOutButton_MouseLeave);
@@ -511,7 +518,8 @@
 			this.zoomInButton.Margin = new System.Windows.Forms.Padding(0);
 			this.zoomInButton.Name = "zoomInButton";
 			this.zoomInButton.Size = new System.Drawing.Size(24, 25);
-			this.zoomInButton.Text = "Zoom in | Ctrl + =";
+			this.zoomInButton.Text = "Zoom in | Ctrl+Plus";
+			this.zoomInButton.ToolTipText = "Zoom in | Ctrl+Plus";
 			this.zoomInButton.Click += new System.EventHandler(this.zoomInButton_Click);
 			this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.zoomInButton_MouseDown);
 			this.zoomInButton.MouseLeave += new System.EventHandler(this.zoomInButton_MouseLeave);
@@ -662,7 +670,8 @@
 			this.infoButton.Margin = new System.Windows.Forms.Padding(0);
 			this.infoButton.Name = "infoButton";
 			this.infoButton.Size = new System.Drawing.Size(24, 25);
-			this.infoButton.Text = "Image info | Ctrl + I";
+			this.infoButton.Text = "Image info | Ctrl+I";
+			this.infoButton.ToolTipText = "Image info | Ctrl+I";
 			this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
 			// 
 			// copyButton
@@ -675,7 +684,8 @@
 			this.copyButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyButton.Name = "copyButton";
 			this.copyButton.Size = new System.Drawing.Size(24, 25);
-			this.copyButton.Text = "Copy image | Ctrl + C";
+			this.copyButton.Text = "Copy image | Ctrl+C";
+			this.copyButton.ToolTipText = "Copy image | Ctrl+C";
 			this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
 			// 
 			// pasteButton
@@ -687,7 +697,8 @@
 			this.pasteButton.Margin = new System.Windows.Forms.Padding(0);
 			this.pasteButton.Name = "pasteButton";
 			this.pasteButton.Size = new System.Drawing.Size(24, 25);
-			this.pasteButton.Text = "Paste image | Ctrl + V";
+			this.pasteButton.Text = "Paste image | Ctrl+V";
+			this.pasteButton.ToolTipText = "Paste image | Ctrl+V";
 			this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
 			// 
 			// toolStripSeparator5
@@ -706,8 +717,8 @@
 			this.checkboardButton.Margin = new System.Windows.Forms.Padding(0);
 			this.checkboardButton.Name = "checkboardButton";
 			this.checkboardButton.Size = new System.Drawing.Size(24, 25);
-			this.checkboardButton.Text = "Checkboard background | Ctrl + Shift +C";
-			this.checkboardButton.ToolTipText = "Checkboard background | Ctrl + Shift +C";
+			this.checkboardButton.Text = "Checkboard background | Ctrl+Shift+C";
+			this.checkboardButton.ToolTipText = "Checkboard background | Ctrl+Shift+C";
 			this.checkboardButton.Click += new System.EventHandler(this.checkboardButton_Click);
 			// 
 			// fullscreenButton
@@ -731,7 +742,8 @@
 			this.onTopButton.Margin = new System.Windows.Forms.Padding(0);
 			this.onTopButton.Name = "onTopButton";
 			this.onTopButton.Size = new System.Drawing.Size(24, 25);
-			this.onTopButton.Text = "Always on top | Ctrl + T";
+			this.onTopButton.Text = "Always on top | Ctrl+T";
+			this.onTopButton.ToolTipText = "Always on top | Ctrl+T";
 			this.onTopButton.Click += new System.EventHandler(this.onTopButton_Click);
 			// 
 			// miniViewButton
@@ -744,8 +756,8 @@
 			this.miniViewButton.Margin = new System.Windows.Forms.Padding(0);
 			this.miniViewButton.Name = "miniViewButton";
 			this.miniViewButton.Size = new System.Drawing.Size(24, 25);
-			this.miniViewButton.Text = "Picture in picture | Ctrl + Shift + P";
-			this.miniViewButton.ToolTipText = "Picture in picture | Ctrl + Shift + P";
+			this.miniViewButton.Text = "Picture in picture | Ctrl+Shift+P";
+			this.miniViewButton.ToolTipText = "Picture in picture | Ctrl+Shift+P";
 			this.miniViewButton.Click += new System.EventHandler(this.miniViewButton_Click);
 			// 
 			// toolStripSeparator6

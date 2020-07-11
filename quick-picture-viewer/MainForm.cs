@@ -176,7 +176,7 @@ namespace quick_picture_viewer
 
 				if (show)
 				{
-					typeOpsButton.Text = String.Format("{0} options", type);
+					typeOpsButton.Text = String.Format(" {0} options", type);
 					typeOpsButton.Focus();
 				}
 			}));
@@ -1201,7 +1201,7 @@ namespace quick_picture_viewer
 
 		private string[] getCurrentFiles()
 		{
-			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", "dds", ".tga" };
+			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", ".dds", ".tga" };
 			List<string> arlist = new List<string>();
 
 			string[] allFiles = Directory.GetFiles(currentFolder);
@@ -1535,8 +1535,6 @@ namespace quick_picture_viewer
 		{
 			zoomOutTimer.Start();
 		}
-
-		
 
 		private void MainForm_Resize(object sender, EventArgs e)
 		{
