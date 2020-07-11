@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	public partial class MainForm : Form
+	public partial class MainForm : QlibSizableForm
 	{
 		private string openPath;
 		private int zoomFactor = 100;
@@ -52,6 +52,8 @@ namespace quick_picture_viewer
 			this.openPath = openPath;
 
 			InitializeComponent();
+
+			SetDraggableControls(new List<Control>() { titlePanel, toolStrip1 });
 
 			settingsButton.ShortcutKeyDisplayString = "Ctrl+Comma";
 
@@ -368,17 +370,6 @@ namespace quick_picture_viewer
 				currentFile = null;
 				directoryLabel.Text = " Folder: Not exists";
 				sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px";
-
-				nextButton.Enabled = false;
-				prevButton.Enabled = false;
-				slideshowButton.Enabled = false;
-				deleteButton.Enabled = false;
-				externalButton.Enabled = false;
-				showFileButton.Enabled = false;
-				reloadButton.Enabled = false;
-
-				dateCreatedLabel.Visible = false;
-				dateModifiedLabel.Visible = false;
 			}
 			else
 			{
@@ -389,19 +380,20 @@ namespace quick_picture_viewer
 				directoryLabel.Text = " Folder: " + directoryName;
 				sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
-				nextButton.Enabled = true;
-				prevButton.Enabled = true;
-				slideshowButton.Enabled = true;
-				deleteButton.Enabled = true;
-				externalButton.Enabled = true;
-				showFileButton.Enabled = true;
-				reloadButton.Enabled = true;
-
 				dateCreatedLabel.Text = " Created: " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
-				dateCreatedLabel.Visible = true;
 				dateModifiedLabel.Text = " Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
-				dateModifiedLabel.Visible = true;
 			}
+
+			nextButton.Enabled = directoryName != null;
+			prevButton.Enabled = directoryName != null;
+			slideshowButton.Enabled = directoryName != null;
+			deleteButton.Enabled = directoryName != null;
+			externalButton.Enabled = directoryName != null;
+			showFileButton.Enabled = directoryName != null;
+			copyFileBtn.Enabled = directoryName != null;
+			reloadButton.Enabled = directoryName != null;
+			dateCreatedLabel.Visible = directoryName != null;
+			dateModifiedLabel.Visible = directoryName != null;
 
 			this.Invoke((MethodInvoker)(() => this.Text = fileName + " - Quick Picture Viewer"));
 
@@ -413,7 +405,7 @@ namespace quick_picture_viewer
 			rotateRightButton.Enabled = true;
 			rotate180Button.Enabled = true;
 			saveAsButton.Enabled = true;
-			copyButton.Enabled = true;
+			copyImageButton.Enabled = true;
 			autoZoomButton.Enabled = true;
 			setAsDesktopButton.Enabled = true;
 			infoButton.Enabled = true;
@@ -422,7 +414,7 @@ namespace quick_picture_viewer
 
 			zoomComboBox.Enabled = true;
 
-			pleaseOpenLabel.Visible = false;
+			pleaseOpenLabel.Invoke((MethodInvoker)(() => pleaseOpenLabel.Visible = false));
 
 			setZoomText("Auto");
 		}
@@ -472,7 +464,7 @@ namespace quick_picture_viewer
 
 		private void zoomToFit()
 		{
-			double zoomFactorX = picturePanel.Width / (double) originalImage.Width;
+			double zoomFactorX = picturePanel.Width / (double)originalImage.Width;
 			double zoomFactorY = picturePanel.Height / (double)originalImage.Height;
 
 			if (zoomFactorX > zoomFactorY)
@@ -595,7 +587,7 @@ namespace quick_picture_viewer
 			this.TopMost = b;
 			onTopButton.Checked = b;
 
-			if(b)
+			if (b)
 			{
 				setFullscreen(false);
 			}
@@ -670,6 +662,10 @@ namespace quick_picture_viewer
 		private void saveAsButton_Click(object sender, EventArgs e)
 		{
 			setSlideshow(false);
+
+			if (currentFile != null) saveFileDialog1.FileName = currentFile;
+			if (currentFolder != null) saveFileDialog1.InitialDirectory = currentFolder;
+
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				FileStream fs = (FileStream) saveFileDialog1.OpenFile();
@@ -712,7 +708,7 @@ namespace quick_picture_viewer
 		private void copyButton_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetImage(originalImage);
-			showSuggestion("Image is copied to clipboard");
+			showSuggestion("Image copied to clipboard");
 		}
 
 		private void pasteButton_Click(object sender, EventArgs e)
@@ -795,15 +791,18 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
 		{
-			if(Control.ModifierKeys == Keys.Control || Properties.Settings.Default.NoCtrlZoom)
+			if (originalImage != null)
 			{
-				if (e.Delta > 0)
+				if (Control.ModifierKeys == Keys.Control || Properties.Settings.Default.NoCtrlZoom)
 				{
-					zoomIn();
-				}
-				else if(e.Delta < 0)
-				{
-					zoomOut();
+					if (e.Delta > 0)
+					{
+						zoomIn();
+					}
+					else if (e.Delta < 0)
+					{
+						zoomOut();
+					}
 				}
 			}
 		}
@@ -831,7 +830,6 @@ namespace quick_picture_viewer
 					picturePanel.Cursor = new Cursor(ptr);
 				}
 
-				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = FormWindowState.Maximized;
 
 				picturePanel.Top = 0;
@@ -842,8 +840,6 @@ namespace quick_picture_viewer
 
 				setAlwaysOnTop(false, true);
 
-				suggestionLabel.Location = new Point(9, 9);
-
 				pleaseOpenLabel.ForeColor = Color.White;
 
 				showSuggestion("Press Esc to exit fullscreen mode");
@@ -852,15 +848,11 @@ namespace quick_picture_viewer
 			{
 				picturePanel.Cursor = Cursors.Default;
 
-				this.FormBorderStyle = FormBorderStyle.Sizable;
-
-				picturePanel.Top = toolStrip1.Height;
-				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
+				picturePanel.Top = titlePanel.Height;
+				picturePanel.Height = this.ClientSize.Height - titlePanel.Height - statusStrip1.Height;
 				picturePanel.BackColor = Color.Transparent;
 
 				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 27;
-
-				suggestionLabel.Location = new Point(9, 43);
 
 				pleaseOpenLabel.ForeColor = this.ForeColor;
 			}
@@ -914,10 +906,6 @@ namespace quick_picture_viewer
 					{
 						showFileButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.C)
-					{
-						checkboardButton.PerformClick();
-					}
 					else if (e.KeyCode == Keys.S)
 					{
 						slideshowButton.PerformClick();
@@ -933,6 +921,10 @@ namespace quick_picture_viewer
 					{
 						openButton.PerformClick();
 					}
+					else if (e.KeyCode == Keys.B)
+					{
+						checkboardButton.PerformClick();
+					}
 					else if (e.KeyCode == Keys.S)
 					{
 						saveAsButton.PerformClick();
@@ -940,10 +932,6 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.A)
 					{
 						autoZoomButton.PerformClick();
-					}
-					else if (e.KeyCode == Keys.C)
-					{
-						copyButton.PerformClick();
 					}
 					else if (e.KeyCode == Keys.V)
 					{
@@ -968,10 +956,6 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.E)
 					{
 						externalButton.PerformClick();
-					}
-					else if (e.KeyCode == Keys.P)
-					{
-						printButton.PerformClick();
 					}
 				}
 			}
@@ -1293,7 +1277,8 @@ namespace quick_picture_viewer
 			rotate180Button.Enabled = false;
 			flipHorizontalButton.Enabled = false;
 			flipVerticalButton.Enabled = false;
-			copyButton.Enabled = false;
+			copyImageButton.Enabled = false;
+			copyFileBtn.Enabled = false;
 			setAsDesktopButton.Enabled = false;
 			reloadButton.Enabled = false;
 			infoButton.Enabled = false;
@@ -1353,6 +1338,10 @@ namespace quick_picture_viewer
 				this.ForeColor = Color.White;
 				this.BackColor = ThemeManager.DarkBackColor;
 				statusStrip1.BackColor = ThemeManager.DarkSecondColor;
+				titlePanel.BackColor = ThemeManager.DarkMainColor;
+				minimizeBtn.Image = Properties.Resources.white_line;
+				maximizeBtn.Image = Properties.Resources.white_square;
+				closeBtn.Image = Properties.Resources.white_close;
 
 				openButton.Image = Properties.Resources.white_open;
 				saveAsButton.Image = Properties.Resources.white_saveas;
@@ -1383,6 +1372,10 @@ namespace quick_picture_viewer
 				screenshotButton.Image = Properties.Resources.white_screenshot;
 				infoButton.Image = Properties.Resources.white_info;
 				copyButton.Image = Properties.Resources.white_copy;
+				copyButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
+				copyButton.DropDown.ForeColor = Color.White;
+				copyImageButton.Image = Properties.Resources.white_image;
+				copyFileBtn.Image = Properties.Resources.white_imgfile;
 				pasteButton.Image = Properties.Resources.white_paste;
 
 				checkboardButton.Image = Properties.Resources.white_grid;
@@ -1414,6 +1407,7 @@ namespace quick_picture_viewer
 
 			toolStrip1.SetDarkMode(dark, true);
 			zoomComboBox.SetDarkMode(dark);
+			closeBtn.SetDarkMode(dark);
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
@@ -1577,7 +1571,9 @@ namespace quick_picture_viewer
 		private void typeOpsButton_Click(object sender, EventArgs e)
 		{
 			Button b = sender as Button;
-			string type = b.Text.Substring(0, b.Text.IndexOf(' ')).ToLower();
+			string text = b.Text.Substring(1, b.Text.Length - 1);
+			string type = text.Substring(0, text.IndexOf(' ')).ToLower();
+			Console.WriteLine(type);
 
 			if (type == "svg")
 			{
@@ -1692,6 +1688,43 @@ namespace quick_picture_viewer
 			{
 				Console.WriteLine(ex);
 			}
+		}
+
+		private void copyFileBtn_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
+				Clipboard.Clear();
+				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
+				showSuggestion("File copied to clipboard");
+			}
+			catch
+			{
+				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void closeBtn_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void maximizeBtn_Click(object sender, EventArgs e)
+		{
+			if (this.WindowState == FormWindowState.Maximized)
+			{
+				this.WindowState = FormWindowState.Normal;
+			}
+			else
+			{
+				this.WindowState = FormWindowState.Maximized;
+			}
+		}
+
+		private void minimizeBtn_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
 		}
 	}
 }

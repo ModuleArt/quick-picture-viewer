@@ -280,19 +280,19 @@ namespace quick_picture_viewer
 			{
 				if (e.Shift)
 				{
-					if (e.KeyCode == Keys.C)
-					{
-						(this.Owner as MainForm).setCheckboardBackground(!checkboardBackground, true);
-						setCheckboardBackground(!checkboardBackground);
-					}
-					else if (e.KeyCode == Keys.P)
+					if (e.KeyCode == Keys.P)
 					{
 						this.Close();
 					}
 				}
 				else
 				{
-					if (e.KeyCode == Keys.OemMinus)
+					if (e.KeyCode == Keys.B)
+					{
+						(this.Owner as MainForm).setCheckboardBackground(!checkboardBackground, true);
+						setCheckboardBackground(!checkboardBackground);
+					}
+					else if (e.KeyCode == Keys.OemMinus)
 					{
 						zoomOut();
 					}

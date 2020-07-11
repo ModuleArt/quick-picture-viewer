@@ -73,8 +73,8 @@
 
 <h2 align="center">Special thanks to</h2>
 <p align="center">
-  JosePineiro for <a href="https://github.com/JosePineiro/WebP-wrapper/">WebPWrapper</a> (WebP support)<br>
+  JosePineiro for <a href="https://github.com/JosePineiro/WebP-wrapper/">WebPWrapper</a> (.webp support)<br>
+  darkfall for <a href="https://gist.github.com/darkfall/1656050/">PngIconConverter</a> (.ico support)<br>
   nickbabcock for <a href="https://github.com/nickbabcock/Pfim/">Pfim</a> (.dds/.tga support)<br>
-  darkfall for <a href="https://gist.github.com/darkfall/1656050/">PngIconConverter</a> (Ico support)<br>
-  vvvv for <a href="https://github.com/vvvv/SVG/">SVG</a> (SVG support)
+  vvvv for <a href="https://github.com/vvvv/SVG/">SVG</a> (.svg support)
 </p>

@@ -182,7 +182,7 @@
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(200, 200);
+			this.MinimumSize = new System.Drawing.Size(207, 207);
 			this.Name = "MiniViewForm";
 			this.Padding = new System.Windows.Forms.Padding(27);
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;

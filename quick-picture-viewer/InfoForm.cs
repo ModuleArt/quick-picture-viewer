@@ -13,6 +13,7 @@ namespace quick_picture_viewer
 
 		public InfoForm(Bitmap bitmap, string directoryName, string fileName, bool darkMode)
 		{
+
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
