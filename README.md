@@ -24,7 +24,7 @@
 <p align="center">
   Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5</a> (2.5 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a><br>
   Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.4">v1.12.4</a> (2.5 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.4/QuickPictureViewer-Setup.msi">Download</a><br><br>
-  Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
+  Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">.Net 4.8</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
 
@@ -67,7 +67,7 @@
 
 <h2 align="center">Inspirers</h2>
 <p align="center">
-  <a href="https://www.irfanview.com/">IrfanView</a> v4.53 by Irfan Skiljan<br>
+  <a href="https://www.irfanview.com/">IrfanView</a> by Irfan Skiljan<br>
   <a href="https://imageglass.org/">ImageGlass</a> by Dương Diệu Pháp
 </p>
 

@@ -49,13 +49,12 @@ namespace quick_picture_viewer
 
 				okButton.BackColor = ThemeManager.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_size;
-
-				closeBtn.Image = Properties.Resources.white_close;
 			}
 
 			widthNumeric.SetDarkMode(dark);
 			heightNumeric.SetDarkMode(dark);
 			aspectRatioCheckbox.SetDarkMode(dark);
+			closeBtn.SetDarkMode(dark);
 		}
 
 		private void okButton_Click(object sender, System.EventArgs e)

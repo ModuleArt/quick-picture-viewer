@@ -1,12 +1,13 @@
 ﻿using QuickLibrary;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	partial class InfoForm : Form
+	partial class InfoForm : QlibFixedForm
 	{
 		private string fullPath = null;
 		private bool darkMode;
@@ -22,6 +23,8 @@ namespace quick_picture_viewer
 			this.darkMode = darkMode;
 
 			InitializeComponent();
+
+			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
 
 			copyTooltip.SetToolTip(copyNameButton, "Copy value");
 			copyTooltip.SetToolTip(copyFolderButton, "Copy value");
@@ -138,6 +141,7 @@ namespace quick_picture_viewer
 			sizeGroup.SetDarkMode(dark);
 			dateGroup.SetDarkMode(dark);
 			okButton.SetDarkMode(dark);
+			closeBtn.SetDarkMode(dark);
 		}
 
 		private int GCD(int a, int b)
@@ -238,6 +242,11 @@ namespace quick_picture_viewer
 		private void copyPathButton_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetText(fullPathTextBox.Text);
+		}
+
+		private void closeBtn_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }

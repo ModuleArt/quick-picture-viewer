@@ -37,11 +37,10 @@ namespace quick_picture_viewer
 
 				okButton.BackColor = ThemeManager.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_desktop;
-
-				closeBtn.Image = Properties.Resources.white_close;
 			}
 
 			fitComboBox.SetDarkMode(dark);
+			closeBtn.SetDarkMode(dark);
 		}
 
 		private void okButton_Click(object sender, EventArgs e)

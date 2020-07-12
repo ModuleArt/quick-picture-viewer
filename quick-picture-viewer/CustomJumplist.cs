@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.WindowsAPICodePack.Taskbar;
-using System.Reflection;
+﻿using System.Reflection;
+using System.Windows.Shell;
 
 namespace quick_picture_viewer
 {
@@ -8,25 +7,18 @@ namespace quick_picture_viewer
     {
         private JumpList list;
 
-        public CustomJumplist(IntPtr windowHandle)
+        public CustomJumplist()
         {
-            //list = JumpList.CreateJumpListForIndividualWindow(TaskbarManager.Instance.ApplicationId, windowHandle);
-            list = JumpList.CreateJumpList();
-            list.KnownCategoryToDisplay = JumpListKnownCategoryType.Recent;
-            BuildList();
-        }
+            JumpItem[] jumpItems = { new JumpTask() { 
+                Title = "New window",
+                Description = "Create new QuickPictureViewer window",
+                ApplicationPath = Assembly.GetEntryAssembly().Location,
+                Arguments = "-1",
+                IconResourcePath = "quick-picture-viewer.exe"
+            } };
 
-        private void BuildList()
-        {
-            JumpListCustomCategory tasksCategory = new JumpListCustomCategory("Tasks");
-
-            JumpListLink newWindowTask = new JumpListLink(Assembly.GetEntryAssembly().Location, "New window");
-            newWindowTask.Arguments = "-1";
-
-            tasksCategory.AddJumpListItems(newWindowTask);
-            list.AddCustomCategories(tasksCategory);
-
-            list.Refresh();
+            list = new JumpList(jumpItems, true, true);
+            list.Apply();
         }
     }
 }

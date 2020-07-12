@@ -43,7 +43,7 @@
 			this.githubLabel = new System.Windows.Forms.Label();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.closeBtn = new System.Windows.Forms.Button();
+			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -205,9 +205,11 @@
 			// 
 			// closeBtn
 			// 
+			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(268, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
@@ -303,7 +305,7 @@
 		private System.Windows.Forms.Label githubLabel;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
-		private System.Windows.Forms.Button closeBtn;
+		private QuickLibrary.QlibCloseButton closeBtn;
 		private System.Windows.Forms.PictureBox logoPictureBox;
 	}
 }

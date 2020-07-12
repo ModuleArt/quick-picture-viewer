@@ -66,9 +66,13 @@
 			this.createdTextBox = new System.Windows.Forms.TextBox();
 			this.propertiesButton = new System.Windows.Forms.Button();
 			this.copyTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.titlePanel = new System.Windows.Forms.Panel();
+			this.titleLabel = new System.Windows.Forms.Label();
+			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			this.fileGroup.SuspendLayout();
 			this.sizeGroup.SuspendLayout();
 			this.dateGroup.SuspendLayout();
+			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// fileNameLabel
@@ -77,7 +81,7 @@
 			this.fileNameLabel.Location = new System.Drawing.Point(47, 29);
 			this.fileNameLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.fileNameLabel.Name = "fileNameLabel";
-			this.fileNameLabel.Size = new System.Drawing.Size(42, 15);
+			this.fileNameLabel.Size = new System.Drawing.Size(48, 19);
 			this.fileNameLabel.TabIndex = 27;
 			this.fileNameLabel.Text = "Name:";
 			// 
@@ -87,7 +91,7 @@
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.okButton.Location = new System.Drawing.Point(545, 287);
+			this.okButton.Location = new System.Drawing.Point(523, 435);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(130, 23);
@@ -110,7 +114,7 @@
 			this.fileGroup.Controls.Add(this.fileNameTextBox);
 			this.fileGroup.Controls.Add(this.folderLabel);
 			this.fileGroup.Controls.Add(this.fileNameLabel);
-			this.fileGroup.Location = new System.Drawing.Point(9, 9);
+			this.fileGroup.Location = new System.Drawing.Point(9, 169);
 			this.fileGroup.Margin = new System.Windows.Forms.Padding(0);
 			this.fileGroup.Name = "fileGroup";
 			this.fileGroup.Padding = new System.Windows.Forms.Padding(0);
@@ -127,7 +131,7 @@
 			this.extensionTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.extensionTextBox.Name = "extensionTextBox";
 			this.extensionTextBox.ReadOnly = true;
-			this.extensionTextBox.Size = new System.Drawing.Size(60, 23);
+			this.extensionTextBox.Size = new System.Drawing.Size(60, 25);
 			this.extensionTextBox.TabIndex = 8;
 			this.extensionTextBox.Text = "Unknown";
 			// 
@@ -137,7 +141,7 @@
 			this.extensionLabel.Location = new System.Drawing.Point(185, 123);
 			this.extensionLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.extensionLabel.Name = "extensionLabel";
-			this.extensionLabel.Size = new System.Drawing.Size(61, 15);
+			this.extensionLabel.Size = new System.Drawing.Size(70, 19);
 			this.extensionLabel.TabIndex = 51;
 			this.extensionLabel.Text = "Extension:";
 			// 
@@ -197,7 +201,7 @@
 			this.compressionTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.compressionTextBox.Name = "compressionTextBox";
 			this.compressionTextBox.ReadOnly = true;
-			this.compressionTextBox.Size = new System.Drawing.Size(60, 23);
+			this.compressionTextBox.Size = new System.Drawing.Size(60, 25);
 			this.compressionTextBox.TabIndex = 7;
 			// 
 			// compressionLabel
@@ -206,7 +210,7 @@
 			this.compressionLabel.Location = new System.Drawing.Point(9, 123);
 			this.compressionLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
 			this.compressionLabel.Name = "compressionLabel";
-			this.compressionLabel.Size = new System.Drawing.Size(80, 15);
+			this.compressionLabel.Size = new System.Drawing.Size(92, 19);
 			this.compressionLabel.TabIndex = 33;
 			this.compressionLabel.Text = "Compression:";
 			// 
@@ -218,7 +222,7 @@
 			this.fullPathTextBox.Margin = new System.Windows.Forms.Padding(9);
 			this.fullPathTextBox.Name = "fullPathTextBox";
 			this.fullPathTextBox.ReadOnly = true;
-			this.fullPathTextBox.Size = new System.Drawing.Size(217, 23);
+			this.fullPathTextBox.Size = new System.Drawing.Size(217, 25);
 			this.fullPathTextBox.TabIndex = 5;
 			this.fullPathTextBox.Text = "Unknown";
 			this.fullPathTextBox.WordWrap = false;
@@ -229,7 +233,7 @@
 			this.fullPathLabel.Location = new System.Drawing.Point(33, 91);
 			this.fullPathLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.fullPathLabel.Name = "fullPathLabel";
-			this.fullPathLabel.Size = new System.Drawing.Size(56, 15);
+			this.fullPathLabel.Size = new System.Drawing.Size(65, 19);
 			this.fullPathLabel.TabIndex = 31;
 			this.fullPathLabel.Text = "Full path:";
 			// 
@@ -241,7 +245,7 @@
 			this.folderTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.folderTextBox.Name = "folderTextBox";
 			this.folderTextBox.ReadOnly = true;
-			this.folderTextBox.Size = new System.Drawing.Size(217, 23);
+			this.folderTextBox.Size = new System.Drawing.Size(217, 25);
 			this.folderTextBox.TabIndex = 3;
 			this.folderTextBox.Text = "Not exists";
 			// 
@@ -253,7 +257,7 @@
 			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(9);
 			this.fileNameTextBox.Name = "fileNameTextBox";
 			this.fileNameTextBox.ReadOnly = true;
-			this.fileNameTextBox.Size = new System.Drawing.Size(217, 23);
+			this.fileNameTextBox.Size = new System.Drawing.Size(217, 25);
 			this.fileNameTextBox.TabIndex = 1;
 			this.fileNameTextBox.Text = "None";
 			// 
@@ -263,7 +267,7 @@
 			this.folderLabel.Location = new System.Drawing.Point(46, 59);
 			this.folderLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.folderLabel.Name = "folderLabel";
-			this.folderLabel.Size = new System.Drawing.Size(43, 15);
+			this.folderLabel.Size = new System.Drawing.Size(50, 19);
 			this.folderLabel.TabIndex = 28;
 			this.folderLabel.Text = "Folder:";
 			// 
@@ -275,7 +279,7 @@
 			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.sizeTextBox.Name = "sizeTextBox";
 			this.sizeTextBox.ReadOnly = true;
-			this.sizeTextBox.Size = new System.Drawing.Size(189, 23);
+			this.sizeTextBox.Size = new System.Drawing.Size(189, 25);
 			this.sizeTextBox.TabIndex = 13;
 			// 
 			// sizeLabel
@@ -284,7 +288,7 @@
 			this.sizeLabel.Location = new System.Drawing.Point(40, 27);
 			this.sizeLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
 			this.sizeLabel.Name = "sizeLabel";
-			this.sizeLabel.Size = new System.Drawing.Size(54, 15);
+			this.sizeLabel.Size = new System.Drawing.Size(61, 19);
 			this.sizeLabel.TabIndex = 35;
 			this.sizeLabel.Text = "Size (px):";
 			// 
@@ -296,7 +300,7 @@
 			this.megapixelsTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
 			this.megapixelsTextBox.ReadOnly = true;
-			this.megapixelsTextBox.Size = new System.Drawing.Size(189, 23);
+			this.megapixelsTextBox.Size = new System.Drawing.Size(189, 25);
 			this.megapixelsTextBox.TabIndex = 14;
 			// 
 			// megapixelsLabel
@@ -305,7 +309,7 @@
 			this.megapixelsLabel.Location = new System.Drawing.Point(35, 59);
 			this.megapixelsLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.megapixelsLabel.Name = "megapixelsLabel";
-			this.megapixelsLabel.Size = new System.Drawing.Size(59, 15);
+			this.megapixelsLabel.Size = new System.Drawing.Size(67, 19);
 			this.megapixelsLabel.TabIndex = 37;
 			this.megapixelsLabel.Text = "Size (mp):";
 			// 
@@ -317,7 +321,7 @@
 			this.resolutionTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.resolutionTextBox.Name = "resolutionTextBox";
 			this.resolutionTextBox.ReadOnly = true;
-			this.resolutionTextBox.Size = new System.Drawing.Size(189, 23);
+			this.resolutionTextBox.Size = new System.Drawing.Size(189, 25);
 			this.resolutionTextBox.TabIndex = 15;
 			// 
 			// resolutionLabel
@@ -326,7 +330,7 @@
 			this.resolutionLabel.Location = new System.Drawing.Point(28, 91);
 			this.resolutionLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.resolutionLabel.Name = "resolutionLabel";
-			this.resolutionLabel.Size = new System.Drawing.Size(66, 15);
+			this.resolutionLabel.Size = new System.Drawing.Size(76, 19);
 			this.resolutionLabel.TabIndex = 39;
 			this.resolutionLabel.Text = "Resolution:";
 			// 
@@ -338,7 +342,7 @@
 			this.inchesTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.inchesTextBox.Name = "inchesTextBox";
 			this.inchesTextBox.ReadOnly = true;
-			this.inchesTextBox.Size = new System.Drawing.Size(189, 23);
+			this.inchesTextBox.Size = new System.Drawing.Size(189, 25);
 			this.inchesTextBox.TabIndex = 16;
 			// 
 			// inchesLabel
@@ -347,7 +351,7 @@
 			this.inchesLabel.Location = new System.Drawing.Point(16, 123);
 			this.inchesLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.inchesLabel.Name = "inchesLabel";
-			this.inchesLabel.Size = new System.Drawing.Size(78, 15);
+			this.inchesLabel.Size = new System.Drawing.Size(90, 19);
 			this.inchesLabel.TabIndex = 41;
 			this.inchesLabel.Text = "Print size (in):";
 			// 
@@ -359,7 +363,7 @@
 			this.cmTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.cmTextBox.Name = "cmTextBox";
 			this.cmTextBox.ReadOnly = true;
-			this.cmTextBox.Size = new System.Drawing.Size(189, 23);
+			this.cmTextBox.Size = new System.Drawing.Size(189, 25);
 			this.cmTextBox.TabIndex = 17;
 			// 
 			// cmLabel
@@ -368,7 +372,7 @@
 			this.cmLabel.Location = new System.Drawing.Point(9, 155);
 			this.cmLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
 			this.cmLabel.Name = "cmLabel";
-			this.cmLabel.Size = new System.Drawing.Size(85, 15);
+			this.cmLabel.Size = new System.Drawing.Size(97, 19);
 			this.cmLabel.TabIndex = 43;
 			this.cmLabel.Text = "Print size (cm):";
 			// 
@@ -388,7 +392,7 @@
 			this.sizeGroup.Controls.Add(this.megapixelsLabel);
 			this.sizeGroup.Controls.Add(this.resolutionTextBox);
 			this.sizeGroup.Controls.Add(this.resolutionLabel);
-			this.sizeGroup.Location = new System.Drawing.Point(374, 9);
+			this.sizeGroup.Location = new System.Drawing.Point(373, 157);
 			this.sizeGroup.Margin = new System.Windows.Forms.Padding(0);
 			this.sizeGroup.Name = "sizeGroup";
 			this.sizeGroup.Padding = new System.Windows.Forms.Padding(0);
@@ -403,7 +407,7 @@
 			this.ratioLabel.Location = new System.Drawing.Point(21, 219);
 			this.ratioLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.ratioLabel.Name = "ratioLabel";
-			this.ratioLabel.Size = new System.Drawing.Size(73, 15);
+			this.ratioLabel.Size = new System.Drawing.Size(85, 19);
 			this.ratioLabel.TabIndex = 48;
 			this.ratioLabel.Text = "Aspect ratio:";
 			// 
@@ -415,7 +419,7 @@
 			this.ratioTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.ratioTextBox.Name = "ratioTextBox";
 			this.ratioTextBox.ReadOnly = true;
-			this.ratioTextBox.Size = new System.Drawing.Size(189, 23);
+			this.ratioTextBox.Size = new System.Drawing.Size(189, 25);
 			this.ratioTextBox.TabIndex = 19;
 			// 
 			// diskSizeTextBox
@@ -426,7 +430,7 @@
 			this.diskSizeTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
 			this.diskSizeTextBox.ReadOnly = true;
-			this.diskSizeTextBox.Size = new System.Drawing.Size(189, 23);
+			this.diskSizeTextBox.Size = new System.Drawing.Size(189, 25);
 			this.diskSizeTextBox.TabIndex = 18;
 			this.diskSizeTextBox.Text = "Unknown";
 			// 
@@ -436,7 +440,7 @@
 			this.diskSizeLabel.Location = new System.Drawing.Point(40, 187);
 			this.diskSizeLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.diskSizeLabel.Name = "diskSizeLabel";
-			this.diskSizeLabel.Size = new System.Drawing.Size(54, 15);
+			this.diskSizeLabel.Size = new System.Drawing.Size(64, 19);
 			this.diskSizeLabel.TabIndex = 45;
 			this.diskSizeLabel.Text = "Disk size:";
 			// 
@@ -446,7 +450,7 @@
 			this.dateGroup.Controls.Add(this.modifiedTextBox);
 			this.dateGroup.Controls.Add(this.createdLabel);
 			this.dateGroup.Controls.Add(this.createdTextBox);
-			this.dateGroup.Location = new System.Drawing.Point(9, 180);
+			this.dateGroup.Location = new System.Drawing.Point(9, 328);
 			this.dateGroup.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.dateGroup.Name = "dateGroup";
 			this.dateGroup.Padding = new System.Windows.Forms.Padding(0);
@@ -461,7 +465,7 @@
 			this.modifiedLabel.Location = new System.Drawing.Point(31, 59);
 			this.modifiedLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.modifiedLabel.Name = "modifiedLabel";
-			this.modifiedLabel.Size = new System.Drawing.Size(58, 15);
+			this.modifiedLabel.Size = new System.Drawing.Size(66, 19);
 			this.modifiedLabel.TabIndex = 39;
 			this.modifiedLabel.Text = "Modified:";
 			// 
@@ -473,7 +477,7 @@
 			this.modifiedTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.modifiedTextBox.Name = "modifiedTextBox";
 			this.modifiedTextBox.ReadOnly = true;
-			this.modifiedTextBox.Size = new System.Drawing.Size(249, 23);
+			this.modifiedTextBox.Size = new System.Drawing.Size(249, 25);
 			this.modifiedTextBox.TabIndex = 11;
 			this.modifiedTextBox.Text = "Unknown";
 			// 
@@ -483,7 +487,7 @@
 			this.createdLabel.Location = new System.Drawing.Point(38, 27);
 			this.createdLabel.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
 			this.createdLabel.Name = "createdLabel";
-			this.createdLabel.Size = new System.Drawing.Size(51, 15);
+			this.createdLabel.Size = new System.Drawing.Size(60, 19);
 			this.createdLabel.TabIndex = 37;
 			this.createdLabel.Text = "Created:";
 			// 
@@ -495,7 +499,7 @@
 			this.createdTextBox.Margin = new System.Windows.Forms.Padding(0, 9, 9, 0);
 			this.createdTextBox.Name = "createdTextBox";
 			this.createdTextBox.ReadOnly = true;
-			this.createdTextBox.Size = new System.Drawing.Size(249, 23);
+			this.createdTextBox.Size = new System.Drawing.Size(249, 25);
 			this.createdTextBox.TabIndex = 10;
 			this.createdTextBox.Text = "Unknown";
 			// 
@@ -506,7 +510,7 @@
 			this.propertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));
-			this.propertiesButton.Location = new System.Drawing.Point(9, 287);
+			this.propertiesButton.Location = new System.Drawing.Point(14, 435);
 			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
 			this.propertiesButton.Name = "propertiesButton";
 			this.propertiesButton.Size = new System.Drawing.Size(130, 23);
@@ -518,24 +522,57 @@
 			this.propertiesButton.Click += new System.EventHandler(this.propertiesButton_Click);
 			this.propertiesButton.Paint += new System.Windows.Forms.PaintEventHandler(this.propertiesButton_Paint);
 			// 
+			// titlePanel
+			// 
+			this.titlePanel.Controls.Add(this.titleLabel);
+			this.titlePanel.Controls.Add(this.closeBtn);
+			this.titlePanel.Location = new System.Drawing.Point(0, 0);
+			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
+			this.titlePanel.Name = "titlePanel";
+			this.titlePanel.Size = new System.Drawing.Size(600, 32);
+			this.titlePanel.TabIndex = 22;
+			// 
+			// titleLabel
+			// 
+			this.titleLabel.AutoSize = true;
+			this.titleLabel.Location = new System.Drawing.Point(10, 7);
+			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(47, 19);
+			this.titleLabel.TabIndex = 16;
+			this.titleLabel.Text = "About";
+			// 
+			// closeBtn
+			// 
+			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.Location = new System.Drawing.Point(568, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 1;
+			this.closeBtn.UseVisualStyleBackColor = true;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
 			// InfoForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(684, 319);
+			this.ClientSize = new System.Drawing.Size(600, 550);
+			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.propertiesButton);
 			this.Controls.Add(this.dateGroup);
 			this.Controls.Add(this.sizeGroup);
 			this.Controls.Add(this.fileGroup);
 			this.Controls.Add(this.okButton);
-			this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "InfoForm";
-			this.Padding = new System.Windows.Forms.Padding(9);
+			this.Padding = new System.Windows.Forms.Padding(10);
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -547,6 +584,8 @@
 			this.sizeGroup.PerformLayout();
 			this.dateGroup.ResumeLayout(false);
 			this.dateGroup.PerformLayout();
+			this.titlePanel.ResumeLayout(false);
+			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -589,5 +628,8 @@
 		private System.Windows.Forms.TextBox extensionTextBox;
 		private System.Windows.Forms.Label extensionLabel;
 		private System.Windows.Forms.ToolTip copyTooltip;
+		private System.Windows.Forms.Panel titlePanel;
+		private System.Windows.Forms.Label titleLabel;
+		private QuickLibrary.QlibCloseButton closeBtn;
 	}
 }

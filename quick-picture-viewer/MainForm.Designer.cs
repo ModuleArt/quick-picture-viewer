@@ -118,7 +118,7 @@
 			// 
 			// saveFileDialog1
 			// 
-			this.saveFileDialog1.FileName = "image";
+			this.saveFileDialog1.FileName = "Image";
 			this.saveFileDialog1.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*" +
     ".gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff|ICO (*.ico)|*.i" +
     "co|WEBP (*.webp)|*.webp";
@@ -254,7 +254,7 @@
 			this.closeBtn.DarkImage = ((System.Drawing.Image)(resources.GetObject("closeBtn.DarkImage")));
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(781, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -923,7 +923,7 @@
 			this.picturePanel.Location = new System.Drawing.Point(0, 38);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(813, 429);
+			this.picturePanel.Size = new System.Drawing.Size(813, 432);
 			this.picturePanel.TabIndex = 2;
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
@@ -948,14 +948,12 @@
 			// 
 			// pleaseOpenLabel
 			// 
-			this.pleaseOpenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pleaseOpenLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pleaseOpenLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
 			this.pleaseOpenLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
-			this.pleaseOpenLabel.Size = new System.Drawing.Size(813, 429);
+			this.pleaseOpenLabel.Size = new System.Drawing.Size(813, 432);
 			this.pleaseOpenLabel.TabIndex = 5;
 			this.pleaseOpenLabel.Text = "Please open an image to view or edit";
 			this.pleaseOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -969,7 +967,7 @@
 			this.pictureBox.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(813, 429);
+			this.pictureBox.Size = new System.Drawing.Size(813, 432);
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
@@ -995,6 +993,8 @@
 			this.MinimumSize = new System.Drawing.Size(300, 300);
 			this.Name = "MainForm";
 			this.Text = "Quick Picture Viewer";
+			this.Activated += new System.EventHandler(this.MainForm_Activated);
+			this.Deactivate += new System.EventHandler(this.MainForm_Deactivate);
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);

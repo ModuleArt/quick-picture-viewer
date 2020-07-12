@@ -56,9 +56,9 @@ namespace quick_picture_viewer
 			{
 				this.BackColor = ThemeManager.DarkBackColor;
 				this.ForeColor = Color.White;
-
-				closeBtn.Image = Properties.Resources.white_close;
 			}
+
+			closeBtn.SetDarkMode(dark);
 		}
 
 		private void developerLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

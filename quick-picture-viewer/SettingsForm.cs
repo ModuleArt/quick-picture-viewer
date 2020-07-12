@@ -52,8 +52,6 @@ namespace quick_picture_viewer
 				settingsTabs.HeaderColor = ThemeManager.DarkSecondColor;
 				settingsTabs.TextColor = Color.White;
 				settingsTabs.HorizontalLineColor = Color.Transparent;
-
-				closeBtn.Image = Properties.Resources.white_close;
 			}
 
 			updatesCheckBox.SetDarkMode(dark);
@@ -62,6 +60,7 @@ namespace quick_picture_viewer
 			lightThemeRadio.SetDarkMode(dark);
 			systemThemeRadio.SetDarkMode(dark);
 			zoomWheelCheckBox.SetDarkMode(dark);
+			closeBtn.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)

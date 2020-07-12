@@ -28,7 +28,6 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
 			this.settingsTabs = new QuickLibrary.QlibTabControl();
 			this.themePage = new System.Windows.Forms.TabPage();
 			this.restartLabel1 = new System.Windows.Forms.Label();
@@ -42,8 +41,8 @@
 			this.fullscrCursorCheckBox = new QuickLibrary.QlibCheckBox();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
-			this.closeBtn = new System.Windows.Forms.Button();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
 			this.updatesPage.SuspendLayout();
@@ -197,8 +196,8 @@
 			// 
 			// titlePanel
 			// 
-			this.titlePanel.Controls.Add(this.titleLabel);
 			this.titlePanel.Controls.Add(this.closeBtn);
+			this.titlePanel.Controls.Add(this.titleLabel);
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.titlePanel.Name = "titlePanel";
@@ -217,14 +216,16 @@
 			// 
 			// closeBtn
 			// 
+			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(268, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
+			this.closeBtn.TabIndex = 17;
 			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
@@ -269,8 +270,8 @@
 		private System.Windows.Forms.TabPage mousePage;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
-		private System.Windows.Forms.Button closeBtn;
 		private System.Windows.Forms.ToolTip aboutTooltip;
 		private QuickLibrary.QlibCheckBox zoomWheelCheckBox;
+		private QuickLibrary.QlibCloseButton closeBtn;
 	}
 }

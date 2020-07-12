@@ -100,7 +100,14 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				if (!string.IsNullOrEmpty(openPath))
+				if (string.IsNullOrEmpty(openPath))
+				{
+					if (Clipboard.ContainsImage() || Clipboard.ContainsFileDropList())
+					{
+						pasteButton.PerformClick();
+					} 
+				}
+				else
 				{
 					if (File.GetAttributes(openPath).HasFlag(FileAttributes.Directory))
 					{
@@ -727,14 +734,29 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseDown(object sender, MouseEventArgs e)
 		{
-			if (e.Button == MouseButtons.Left && !autoZoom)
+			if (e.Button == MouseButtons.Left)
 			{
-				Cursor.Current = Cursors.SizeAll;
+				if (autoZoom)
+				{
+					if (currentFolder != null)
+					{
+						string[] paths = { Path.Combine(currentFolder, currentFile) };
+						this.DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
+					}
+					else
+					{
+						this.DoDragDrop(originalImage, DragDropEffects.Copy);
+					}
+				}
+				else
+				{
+					Cursor.Current = Cursors.SizeAll;
 
-				panelMouseDownLocation = new Point(
-					this.PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
-					this.PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
-				);
+					panelMouseDownLocation = new Point(
+						this.PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
+						this.PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
+					);
+				}
 			}
 		}
 
@@ -1341,7 +1363,6 @@ namespace quick_picture_viewer
 				titlePanel.BackColor = ThemeManager.DarkMainColor;
 				minimizeBtn.Image = Properties.Resources.white_line;
 				maximizeBtn.Image = Properties.Resources.white_square;
-				closeBtn.Image = Properties.Resources.white_close;
 
 				openButton.Image = Properties.Resources.white_open;
 				saveAsButton.Image = Properties.Resources.white_saveas;
@@ -1682,7 +1703,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				CustomJumplist jumplist = new CustomJumplist(this.Handle);
+				CustomJumplist jumplist = new CustomJumplist();
 			}
 			catch (Exception ex)
 			{
@@ -1725,6 +1746,24 @@ namespace quick_picture_viewer
 		private void minimizeBtn_Click(object sender, EventArgs e)
 		{
 			this.WindowState = FormWindowState.Minimized;
+		}
+
+		private void MainForm_Activated(object sender, EventArgs e)
+		{
+			if (darkMode)
+			{
+				titlePanel.BackColor = ThemeManager.DarkMainColor;
+				toolStrip1.BackColor = ThemeManager.DarkMainColor;
+			}
+		}
+
+		private void MainForm_Deactivate(object sender, EventArgs e)
+		{
+			if (darkMode)
+			{
+				titlePanel.BackColor = ThemeManager.DarkTitlebarUnfocus;
+				toolStrip1.BackColor = ThemeManager.DarkTitlebarUnfocus;
+			}
 		}
 	}
 }
