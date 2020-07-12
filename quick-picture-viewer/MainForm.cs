@@ -67,7 +67,9 @@ namespace quick_picture_viewer
 			slideshowTimer.Interval += 5000;
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
-			zoomComboBox.ComboBox.MouseWheel += new MouseEventHandler(zoomComboBox_MouseWheel);
+
+			zoomTextBox.TextBox.AutoSize = false;
+			zoomTextBox.Height = 21;
 
 			applyDarkTheme(darkMode);
 		}
@@ -102,7 +104,7 @@ namespace quick_picture_viewer
 			{
 				if (string.IsNullOrEmpty(openPath))
 				{
-					if (Clipboard.ContainsImage() || Clipboard.ContainsFileDropList())
+					if (Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
 					} 
@@ -318,126 +320,134 @@ namespace quick_picture_viewer
 
 		private void openImage(Bitmap bitmap, string directoryName, string fileName)
 		{
-			if (imageChanged)
+			if (bitmap != originalImage)
 			{
-				DialogResult window = MessageBox.Show(
-					"All unsaved data will be lost.\nAre you sure you want to open new image?",
-					"Warning",
-					MessageBoxButtons.YesNo,
-					MessageBoxIcon.Question
-				);
-
-				if (window == DialogResult.No)
+				if (imageChanged)
 				{
-					return;
+					DialogResult window = MessageBox.Show(
+						"All unsaved data will be lost.\nAre you sure you want to open new image?",
+						"Warning",
+						MessageBoxButtons.YesNo,
+						MessageBoxIcon.Question
+					);
+
+					if (window == DialogResult.No)
+					{
+						return;
+					}
 				}
+
+				setImageChanged(false);
+
+				if (originalImage != null)
+				{
+					originalImage.Dispose();
+					originalImage = null;
+					pictureBox.Image.Dispose();
+					pictureBox.Image = null;
+				}
+
+				const int exifOrientationID = 0x112; //274
+				if (bitmap.PropertyIdList.Contains(exifOrientationID))
+				{
+					var prop = bitmap.GetPropertyItem(exifOrientationID);
+					int val = BitConverter.ToUInt16(prop.Value, 0);
+					var rot = RotateFlipType.RotateNoneFlipNone;
+
+					if (val == 3 || val == 4)
+						rot = RotateFlipType.Rotate180FlipNone;
+					else if (val == 5 || val == 6)
+						rot = RotateFlipType.Rotate90FlipNone;
+					else if (val == 7 || val == 8)
+						rot = RotateFlipType.Rotate270FlipNone;
+
+					if (val == 2 || val == 4 || val == 5 || val == 7)
+						rot |= RotateFlipType.RotateNoneFlipX;
+
+					if (rot != RotateFlipType.RotateNoneFlipNone)
+						bitmap.RotateFlip(rot);
+				}
+
+				originalImage = bitmap;
+				pictureBox.Image = originalImage;
+
+				width = pictureBox.Image.Size.Width;
+				height = pictureBox.Image.Size.Height;
+				fileLabel.Text = " File: " + fileName;
+
+				if (directoryName == null)
+				{
+					currentFolder = null;
+					currentFile = null;
+					directoryLabel.Text = " Folder: Not exists";
+					sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px";
+				}
+				else
+				{
+					string path = Path.Combine(directoryName, fileName);
+
+					currentFolder = directoryName;
+					currentFile = fileName;
+					directoryLabel.Text = " Folder: " + directoryName;
+					sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
+
+					dateCreatedLabel.Text = " Created: " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
+					dateModifiedLabel.Text = " Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
+				}
+
+				nextButton.Enabled = directoryName != null;
+				prevButton.Enabled = directoryName != null;
+				slideshowButton.Enabled = directoryName != null;
+				deleteButton.Enabled = directoryName != null;
+				externalButton.Enabled = directoryName != null;
+				showFileButton.Enabled = directoryName != null;
+				copyFileBtn.Enabled = directoryName != null;
+				reloadButton.Enabled = directoryName != null;
+				dateCreatedLabel.Visible = directoryName != null;
+				dateModifiedLabel.Visible = directoryName != null;
+
+				this.Invoke((MethodInvoker)(() => this.Text = fileName + " - Quick Picture Viewer"));
+
+				zoomInButton.Enabled = true;
+				zoomOutButton.Enabled = true;
+				flipVerticalButton.Enabled = true;
+				flipHorizontalButton.Enabled = true;
+				rotateLeftButton.Enabled = true;
+				rotateRightButton.Enabled = true;
+				rotate180Button.Enabled = true;
+				saveAsButton.Enabled = true;
+				copyImageButton.Enabled = true;
+				autoZoomButton.Enabled = true;
+				setAsDesktopButton.Enabled = true;
+				infoButton.Enabled = true;
+				printButton.Enabled = true;
+				miniViewButton.Enabled = true;
+
+				zoomTextBox.Enabled = true;
+
+				pleaseOpenLabel.Invoke((MethodInvoker)(() => pleaseOpenLabel.Visible = false));
+
+				setZoomText("Auto");
 			}
-
-			setImageChanged(false);
-
-			if (originalImage != null)
-			{
-				originalImage.Dispose();
-				originalImage = null;
-				pictureBox.Image.Dispose();
-				pictureBox.Image = null;
-			}
-
-			const int exifOrientationID = 0x112; //274
-			if (bitmap.PropertyIdList.Contains(exifOrientationID))
-			{
-				var prop = bitmap.GetPropertyItem(exifOrientationID);
-				int val = BitConverter.ToUInt16(prop.Value, 0);
-				var rot = RotateFlipType.RotateNoneFlipNone;
-
-				if (val == 3 || val == 4)
-					rot = RotateFlipType.Rotate180FlipNone;
-				else if (val == 5 || val == 6)
-					rot = RotateFlipType.Rotate90FlipNone;
-				else if (val == 7 || val == 8)
-					rot = RotateFlipType.Rotate270FlipNone;
-
-				if (val == 2 || val == 4 || val == 5 || val == 7)
-					rot |= RotateFlipType.RotateNoneFlipX;
-
-				if (rot != RotateFlipType.RotateNoneFlipNone)
-					bitmap.RotateFlip(rot);
-			}
-
-			originalImage = bitmap;
-			pictureBox.Image = originalImage;
-
-			width = pictureBox.Image.Size.Width;
-			height = pictureBox.Image.Size.Height;
-			fileLabel.Text = " File: " + fileName;
-
-			if(directoryName == null)
-			{
-				currentFolder = null;
-				currentFile = null;
-				directoryLabel.Text = " Folder: Not exists";
-				sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px";
-			}
-			else
-			{
-				string path = Path.Combine(directoryName, fileName);
-
-				currentFolder = directoryName;
-				currentFile = fileName;
-				directoryLabel.Text = " Folder: " + directoryName;
-				sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
-
-				dateCreatedLabel.Text = " Created: " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
-				dateModifiedLabel.Text = " Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
-			}
-
-			nextButton.Enabled = directoryName != null;
-			prevButton.Enabled = directoryName != null;
-			slideshowButton.Enabled = directoryName != null;
-			deleteButton.Enabled = directoryName != null;
-			externalButton.Enabled = directoryName != null;
-			showFileButton.Enabled = directoryName != null;
-			copyFileBtn.Enabled = directoryName != null;
-			reloadButton.Enabled = directoryName != null;
-			dateCreatedLabel.Visible = directoryName != null;
-			dateModifiedLabel.Visible = directoryName != null;
-
-			this.Invoke((MethodInvoker)(() => this.Text = fileName + " - Quick Picture Viewer"));
-
-			zoomInButton.Enabled = true;
-			zoomOutButton.Enabled = true;
-			flipVerticalButton.Enabled = true;
-			flipHorizontalButton.Enabled = true;
-			rotateLeftButton.Enabled = true;
-			rotateRightButton.Enabled = true;
-			rotate180Button.Enabled = true;
-			saveAsButton.Enabled = true;
-			copyImageButton.Enabled = true;
-			autoZoomButton.Enabled = true;
-			setAsDesktopButton.Enabled = true;
-			infoButton.Enabled = true;
-			printButton.Enabled = true;
-			miniViewButton.Enabled = true;
-
-			zoomComboBox.Enabled = true;
-
-			pleaseOpenLabel.Invoke((MethodInvoker)(() => pleaseOpenLabel.Visible = false));
-
-			setZoomText("Auto");
 		}
 
-		private void setImageChanged(bool b)
+		private void setImageChanged(bool b, string fakeName = "")
 		{
 			imageChanged = b;
 			hasChangesLabel.Visible = b;
 
-			if (b)
+			if (string.IsNullOrEmpty(fakeName))
 			{
-				this.Text = "* " + currentFile + " - Quick Picture Viewer";
+				this.Text = currentFile + " - Quick Picture Viewer";
 			}
 			else
 			{
-				this.Text = currentFile + " - Quick Picture Viewer";
+				this.Text = fakeName + " - Quick Picture Viewer";
+			}
+
+			if (b)
+			{
+				this.Text = "* " + this.Text;
 			}
 		}
 
@@ -528,7 +538,7 @@ namespace quick_picture_viewer
 
 		private void setZoomText(string text)
 		{
-			zoomComboBox.ComboBox.Invoke((MethodInvoker)(() => zoomComboBox.Text = text));
+			zoomTextBox.TextBox.Invoke((MethodInvoker)(() => zoomTextBox.Text = text));
 		}
 
 		private void setAutoZoom(bool b)
@@ -551,7 +561,7 @@ namespace quick_picture_viewer
 
 		private void autoZoomButton_Click(object sender, EventArgs e)
 		{
-			if (zoomComboBox.Text == "Auto")
+			if (zoomTextBox.Text == "Auto")
 			{
 				zoomToFit();
 				setZoomText(zoomFactor + "%");
@@ -723,7 +733,7 @@ namespace quick_picture_viewer
 			if (Clipboard.ContainsImage())
 			{
 				openImage(new Bitmap(Clipboard.GetImage()), null, "From clipboard");
-				setImageChanged(true);
+				setImageChanged(true, "From clipboard");
 			}
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
@@ -738,12 +748,12 @@ namespace quick_picture_viewer
 			{
 				if (autoZoom)
 				{
-					if (currentFolder != null)
+					if (currentFile != null)
 					{
 						string[] paths = { Path.Combine(currentFolder, currentFile) };
 						this.DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
 					}
-					else
+					else if (originalImage != null)
 					{
 						this.DoDragDrop(originalImage, DragDropEffects.Copy);
 					}
@@ -804,11 +814,6 @@ namespace quick_picture_viewer
 					picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
 				}
 			}
-		}
-
-		private void zoomComboBox_MouseWheel(object sender, MouseEventArgs e)
-		{
-			((HandledMouseEventArgs)e).Handled = true;
 		}
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
@@ -884,13 +889,13 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				if (zoomComboBox.Text == "Auto")
+				if (zoomTextBox.Text == "Auto")
 				{
 					setAutoZoom(true);
 				}
 				else
 				{
-					string substr = zoomComboBox.Text.Replace("%", "");
+					string substr = zoomTextBox.Text.Replace("%", "");
 					int zoom = int.Parse(substr);
 
 					if (zoom < 1)
@@ -920,159 +925,163 @@ namespace quick_picture_viewer
 
 		private void MainForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.Control)
+			if (!zoomTextBox.Focused)
 			{
-				if (e.Shift)
+				if (e.Control)
 				{
-					if (e.KeyCode == Keys.E)
+					if (e.Shift)
 					{
-						showFileButton.PerformClick();
+						if (e.KeyCode == Keys.E)
+						{
+							showFileButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.S)
+						{
+							slideshowButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.P)
+						{
+							miniViewButton.PerformClick();
+						}
 					}
-					else if (e.KeyCode == Keys.S)
+					else
 					{
-						slideshowButton.PerformClick();
+						if (e.KeyCode == Keys.O)
+						{
+							openButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.B)
+						{
+							checkboardButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.S)
+						{
+							saveAsButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.A)
+						{
+							autoZoomButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.V)
+						{
+							pasteButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.Oemplus)
+						{
+							zoomInButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.OemMinus)
+						{
+							zoomOutButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.T)
+						{
+							onTopButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.I)
+						{
+							infoButton.PerformClick();
+						}
+						else if (e.KeyCode == Keys.E)
+						{
+							externalButton.PerformClick();
+						}
 					}
-					else if (e.KeyCode == Keys.P)
+				}
+				else if (e.Alt)
+				{
+					if (e.KeyCode == Keys.Enter)
 					{
-						miniViewButton.PerformClick();
+						fullscreenButton.PerformClick();
+					}
+					else if (e.KeyCode == Keys.Down)
+					{
+						int newVerticalValue = picturePanel.VerticalScroll.Value + picturePanel.VerticalScroll.LargeChange;
+
+						if (newVerticalValue >= picturePanel.VerticalScroll.Maximum)
+						{
+							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
+						}
+						else
+						{
+							picturePanel.VerticalScroll.Value = newVerticalValue;
+						}
+					}
+					else if (e.KeyCode == Keys.Up)
+					{
+						int newVerticalValue = picturePanel.VerticalScroll.Value - picturePanel.VerticalScroll.LargeChange;
+
+						if (newVerticalValue <= picturePanel.VerticalScroll.Minimum)
+						{
+							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
+						}
+						else
+						{
+							picturePanel.VerticalScroll.Value = newVerticalValue;
+						}
+					}
+					else if (e.KeyCode == Keys.Left)
+					{
+						int newHorizontalValue = picturePanel.HorizontalScroll.Value - picturePanel.HorizontalScroll.LargeChange;
+
+						if (newHorizontalValue <= picturePanel.HorizontalScroll.Minimum)
+						{
+							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
+						}
+						else
+						{
+							picturePanel.HorizontalScroll.Value = newHorizontalValue;
+						}
+					}
+					else if (e.KeyCode == Keys.Right)
+					{
+						int newHorizontalValue = picturePanel.HorizontalScroll.Value + picturePanel.HorizontalScroll.LargeChange;
+
+						if (newHorizontalValue >= picturePanel.HorizontalScroll.Maximum)
+						{
+							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
+						}
+						else
+						{
+							picturePanel.HorizontalScroll.Value = newHorizontalValue;
+						}
 					}
 				}
 				else
 				{
-					if (e.KeyCode == Keys.O)
+					if (e.KeyCode == Keys.F || e.KeyCode == Keys.F11)
 					{
-						openButton.PerformClick();
+						fullscreenButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.B)
+					else if (e.KeyCode == Keys.F12)
 					{
-						checkboardButton.PerformClick();
+						screenshotButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.S)
+					else if (e.KeyCode == Keys.Delete)
 					{
-						saveAsButton.PerformClick();
+						deleteButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.A)
+					else if (e.KeyCode == Keys.Left)
 					{
-						autoZoomButton.PerformClick();
+						prevButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.V)
+					else if (e.KeyCode == Keys.Right)
 					{
-						pasteButton.PerformClick();
+						Console.WriteLine('r');
+						nextButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.Oemplus)
+					else if (e.KeyCode == Keys.Escape)
 					{
-						zoomInButton.PerformClick();
+						setFullscreen(false);
 					}
-					else if (e.KeyCode == Keys.OemMinus)
+					else if (e.KeyCode == Keys.Down)
 					{
-						zoomOutButton.PerformClick();
+						zoomOut();
 					}
-					else if (e.KeyCode == Keys.T)
+					else if (e.KeyCode == Keys.Up)
 					{
-						onTopButton.PerformClick();
+						zoomIn();
 					}
-					else if (e.KeyCode == Keys.I)
-					{
-						infoButton.PerformClick();
-					}
-					else if (e.KeyCode == Keys.E)
-					{
-						externalButton.PerformClick();
-					}
-				}
-			}
-			else if (e.Alt)
-			{
-				if (e.KeyCode == Keys.Enter)
-				{
-					fullscreenButton.PerformClick();
-				}
-				else if (e.KeyCode == Keys.Down)
-				{
-					int newVerticalValue = picturePanel.VerticalScroll.Value + picturePanel.VerticalScroll.LargeChange;
-					
-					if (newVerticalValue >= picturePanel.VerticalScroll.Maximum)
-					{
-						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
-					}
-					else
-					{
-						picturePanel.VerticalScroll.Value = newVerticalValue;
-					}
-				}
-				else if (e.KeyCode == Keys.Up)
-				{
-					int newVerticalValue = picturePanel.VerticalScroll.Value - picturePanel.VerticalScroll.LargeChange;
-
-					if (newVerticalValue <= picturePanel.VerticalScroll.Minimum)
-					{
-						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
-					}
-					else
-					{
-						picturePanel.VerticalScroll.Value = newVerticalValue;
-					}
-				}
-				else if (e.KeyCode == Keys.Left)
-				{
-					int newHorizontalValue = picturePanel.HorizontalScroll.Value - picturePanel.HorizontalScroll.LargeChange;
-
-					if (newHorizontalValue <= picturePanel.HorizontalScroll.Minimum)
-					{
-						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
-					}
-					else
-					{
-						picturePanel.HorizontalScroll.Value = newHorizontalValue;
-					}
-				}
-				else if (e.KeyCode == Keys.Right)
-				{
-					int newHorizontalValue = picturePanel.HorizontalScroll.Value + picturePanel.HorizontalScroll.LargeChange;
-
-					if (newHorizontalValue >= picturePanel.HorizontalScroll.Maximum)
-					{
-						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
-					}
-					else
-					{
-						picturePanel.HorizontalScroll.Value = newHorizontalValue;
-					}
-				}
-			}
-			else
-			{
-				if (e.KeyCode == Keys.F || e.KeyCode == Keys.F11)
-				{
-					fullscreenButton.PerformClick();
-				}
-				else if (e.KeyCode == Keys.F12)
-				{
-					screenshotButton.PerformClick();
-				}
-				else if (e.KeyCode == Keys.Delete)
-				{
-					deleteButton.PerformClick();
-				}
-				else if (e.KeyCode == Keys.Left)
-				{
-					prevButton.PerformClick();
-				}
-				else if (e.KeyCode == Keys.Right)
-				{
-					nextButton.PerformClick();
-				}
-				else if (e.KeyCode == Keys.Escape)
-				{
-					setFullscreen(false);
-				}
-				else if (e.KeyCode == Keys.Down)
-				{
-					zoomOut();
-				}
-				else if (e.KeyCode == Keys.Up)
-				{
-					zoomIn();
 				}
 			}
 		}
@@ -1085,7 +1094,7 @@ namespace quick_picture_viewer
 			if (bitmap != null)
 			{
 				openImage(bitmap, null, "Dragged image");
-				setImageChanged(true);
+				setImageChanged(true, "Dragged image");
 			}
 			else if (files.Length > 0)
 			{
@@ -1123,7 +1132,7 @@ namespace quick_picture_viewer
 				g.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size);
 
 				openImage(bmp, null, "Captured screen");
-				setImageChanged(true);
+				setImageChanged(true, "Captured screen");
 			}
 
 			this.Show();
@@ -1309,7 +1318,7 @@ namespace quick_picture_viewer
 			showFileButton.Enabled = false;
 			miniViewButton.Enabled = false;
 
-			zoomComboBox.Enabled = false;
+			zoomTextBox.Enabled = false;
 
 			pleaseOpenLabel.Visible = true;
 
@@ -1424,10 +1433,12 @@ namespace quick_picture_viewer
 				typeOpsButton.Image = Properties.Resources.white_options;
 				typeOpsButton.BackColor = ThemeManager.DarkSecondColor;
 				typeOpsButton.ForeColor = Color.White;
+
+				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
+				zoomTextBox.ForeColor = Color.White;
 			}
 
 			toolStrip1.SetDarkMode(dark, true);
-			zoomComboBox.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 		}
 
@@ -1594,7 +1605,6 @@ namespace quick_picture_viewer
 			Button b = sender as Button;
 			string text = b.Text.Substring(1, b.Text.Length - 1);
 			string type = text.Substring(0, text.IndexOf(' ')).ToLower();
-			Console.WriteLine(type);
 
 			if (type == "svg")
 			{
@@ -1754,6 +1764,7 @@ namespace quick_picture_viewer
 			{
 				titlePanel.BackColor = ThemeManager.DarkMainColor;
 				toolStrip1.BackColor = ThemeManager.DarkMainColor;
+				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
 			}
 		}
 
@@ -1763,6 +1774,7 @@ namespace quick_picture_viewer
 			{
 				titlePanel.BackColor = ThemeManager.DarkTitlebarUnfocus;
 				toolStrip1.BackColor = ThemeManager.DarkTitlebarUnfocus;
+				zoomTextBox.BackColor = ThemeManager.DarkTitlebarUnfocus;
 			}
 		}
 	}

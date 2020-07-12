@@ -282,13 +282,15 @@
     <None Include="resources\imgs\light\white-slideshow.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="picture.ico" />
     <None Include="resources\imgs\dark\black-close.png" />
     <None Include="resources\imgs\light\white-square.png" />
     <None Include="resources\imgs\light\white-restore.png" />
     <None Include="resources\imgs\light\white-line.png" />
     <None Include="resources\imgs\light\white-image.png" />
     <None Include="resources\imgs\light\white-move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="picture.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

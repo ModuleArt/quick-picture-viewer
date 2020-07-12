@@ -32,11 +32,11 @@
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.okButton = new System.Windows.Forms.Button();
 			this.titlePanel = new System.Windows.Forms.Panel();
+			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.fitLabel = new System.Windows.Forms.Label();
 			this.fitComboBox = new QuickLibrary.QlibComboBox();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
@@ -80,6 +80,22 @@
 			this.titlePanel.Size = new System.Drawing.Size(256, 32);
 			this.titlePanel.TabIndex = 0;
 			// 
+			// closeBtn
+			// 
+			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.Location = new System.Drawing.Point(224, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 17;
+			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
+			this.closeBtn.UseVisualStyleBackColor = true;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
 			// titleLabel
 			// 
 			this.titleLabel.AutoSize = true;
@@ -118,22 +134,6 @@
 			this.fitComboBox.Name = "fitComboBox";
 			this.fitComboBox.Size = new System.Drawing.Size(236, 32);
 			this.fitComboBox.TabIndex = 2;
-			// 
-			// closeBtn
-			// 
-			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(224, 0);
-			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.closeBtn.Name = "closeBtn";
-			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 17;
-			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
-			this.closeBtn.UseVisualStyleBackColor = true;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// WallpaperForm
 			// 

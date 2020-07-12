@@ -43,11 +43,11 @@
 			this.size1024Button = new System.Windows.Forms.Button();
 			this.size512Button = new System.Windows.Forms.Button();
 			this.titlePanel = new System.Windows.Forms.Panel();
+			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.size32Button = new System.Windows.Forms.Button();
 			this.size16Button = new System.Windows.Forms.Button();
-			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).BeginInit();
 			this.titlePanel.SuspendLayout();
@@ -260,6 +260,21 @@
 			this.titlePanel.Size = new System.Drawing.Size(256, 32);
 			this.titlePanel.TabIndex = 0;
 			// 
+			// closeBtn
+			// 
+			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.Location = new System.Drawing.Point(224, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 17;
+			this.closeBtn.UseVisualStyleBackColor = true;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
 			// titleLabel
 			// 
 			this.titleLabel.AutoSize = true;
@@ -308,21 +323,6 @@
 			this.size16Button.Text = "16 px";
 			this.size16Button.UseVisualStyleBackColor = false;
 			this.size16Button.Click += new System.EventHandler(this.size16Button_Click);
-			// 
-			// closeBtn
-			// 
-			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(224, 0);
-			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.closeBtn.Name = "closeBtn";
-			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 17;
-			this.closeBtn.UseVisualStyleBackColor = true;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// SvgOpsForm
 			// 
