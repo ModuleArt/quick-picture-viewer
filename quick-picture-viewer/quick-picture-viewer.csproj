@@ -291,6 +291,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-paint.png" />
+    <None Include="resources\imgs\dark\black-paint.png" />
+    <None Include="resources\imgs\dark\black-square.png" />
+    <None Include="resources\imgs\dark\black-line.png" />
+    <None Include="resources\imgs\light\white-exe.png" />
+    <None Include="resources\imgs\light\white-list.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

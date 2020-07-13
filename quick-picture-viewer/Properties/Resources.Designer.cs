@@ -73,6 +73,36 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_line {
+            get {
+                object obj = ResourceManager.GetObject("black-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_paint {
+            get {
+                object obj = ResourceManager.GetObject("black-paint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_square {
+            get {
+                object obj = ResourceManager.GetObject("black-square", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checkboard_dark {
             get {
                 object obj = ResourceManager.GetObject("checkboard_dark", resourceCulture);
@@ -203,6 +233,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap white_exe {
+            get {
+                object obj = ResourceManager.GetObject("white_exe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white_fliph {
             get {
                 object obj = ResourceManager.GetObject("white-fliph", resourceCulture);
@@ -293,6 +333,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap white_list {
+            get {
+                object obj = ResourceManager.GetObject("white_list", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white_miniview {
             get {
                 object obj = ResourceManager.GetObject("white_miniview", resourceCulture);
@@ -366,6 +416,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_options {
             get {
                 object obj = ResourceManager.GetObject("white_options", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_paint {
+            get {
+                object obj = ResourceManager.GetObject("white-paint", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

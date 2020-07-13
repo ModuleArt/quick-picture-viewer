@@ -72,6 +72,14 @@ namespace quick_picture_viewer
 			zoomTextBox.Height = 21;
 
 			applyDarkTheme(darkMode);
+
+			if (!ThemeManager.isWindows10())
+			{
+				minimizeBtn.Top += 3;
+				maximizeBtn.Top += 3;
+				closeBtn.Top += 3;
+				toolStrip1.Top += 3;
+			}
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -104,7 +112,7 @@ namespace quick_picture_viewer
 			{
 				if (string.IsNullOrEmpty(openPath))
 				{
-					if (Clipboard.ContainsImage())
+					if (Properties.Settings.Default.StartupAction == 1  && Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
 					} 
@@ -399,7 +407,9 @@ namespace quick_picture_viewer
 				prevButton.Enabled = directoryName != null;
 				slideshowButton.Enabled = directoryName != null;
 				deleteButton.Enabled = directoryName != null;
-				externalButton.Enabled = directoryName != null;
+				externalRunBtn.Enabled = directoryName != null;
+				externalChooseBtn.Enabled = directoryName != null;
+				externalFavoriteBtn.Enabled = directoryName != null;
 				showFileButton.Enabled = directoryName != null;
 				copyFileBtn.Enabled = directoryName != null;
 				reloadButton.Enabled = directoryName != null;
@@ -931,7 +941,7 @@ namespace quick_picture_viewer
 				{
 					if (e.Shift)
 					{
-						if (e.KeyCode == Keys.E)
+						if (e.KeyCode == Keys.L)
 						{
 							showFileButton.PerformClick();
 						}
@@ -981,10 +991,6 @@ namespace quick_picture_viewer
 						else if (e.KeyCode == Keys.I)
 						{
 							infoButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.E)
-						{
-							externalButton.PerformClick();
 						}
 					}
 				}
@@ -1313,7 +1319,9 @@ namespace quick_picture_viewer
 			setAsDesktopButton.Enabled = false;
 			reloadButton.Enabled = false;
 			infoButton.Enabled = false;
-			externalButton.Enabled = false;
+			externalRunBtn.Enabled = false;
+			externalChooseBtn.Enabled = false;
+			externalFavoriteBtn.Enabled = false;
 			printButton.Enabled = false;
 			showFileButton.Enabled = false;
 			miniViewButton.Enabled = false;
@@ -1370,14 +1378,18 @@ namespace quick_picture_viewer
 				this.BackColor = ThemeManager.DarkBackColor;
 				statusStrip1.BackColor = ThemeManager.DarkSecondColor;
 				titlePanel.BackColor = ThemeManager.DarkMainColor;
-				minimizeBtn.Image = Properties.Resources.white_line;
-				maximizeBtn.Image = Properties.Resources.white_square;
 
 				openButton.Image = Properties.Resources.white_open;
 				saveAsButton.Image = Properties.Resources.white_saveas;
 				printButton.Image = Properties.Resources.white_print;
 				deleteButton.Image = Properties.Resources.white_trash;
-				externalButton.Image = Properties.Resources.white_popup;
+
+				externalBtn.Image = Properties.Resources.white_popup;
+				externalBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
+				externalBtn.DropDown.ForeColor = Color.White;
+				externalRunBtn.Image = Properties.Resources.white_exe;
+				externalChooseBtn.Image = Properties.Resources.white_list;
+				externalFavoriteBtn.Image = Properties.Resources.white_paint;
 
 				prevButton.Image = Properties.Resources.white_prev;
 				showFileButton.Image = Properties.Resources.white_picfolder;
@@ -1439,6 +1451,8 @@ namespace quick_picture_viewer
 			}
 
 			toolStrip1.SetDarkMode(dark, true);
+			minimizeBtn.SetDarkMode(dark);
+			maximizeBtn.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 		}
 
@@ -1775,6 +1789,42 @@ namespace quick_picture_viewer
 				titlePanel.BackColor = ThemeManager.DarkTitlebarUnfocus;
 				toolStrip1.BackColor = ThemeManager.DarkTitlebarUnfocus;
 				zoomTextBox.BackColor = ThemeManager.DarkTitlebarUnfocus;
+			}
+		}
+
+		private void externalRunBtn_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string assoc;
+				string ext = "bmp";
+				if (currentFile != null)
+				{
+					ext = Path.GetExtension(currentFile).Substring(1, Path.GetExtension(currentFile).Length - 1);
+				}
+
+				assoc = FileAssociation.GetExecCommandAssociatedToExtension(ext);
+
+				string tmp = assoc.Substring(1, assoc.Length - 1);
+				string exePath = tmp.Substring(0, tmp.IndexOf('"'));
+
+				Process.Start(exePath, Path.Combine(currentFolder, currentFile));
+			}
+			catch
+			{
+				MessageBox.Show("Unable to run default external app", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void externalFavoriteBtn_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				Process.Start(Properties.Settings.Default.FavoriteExternalApp, Path.Combine(currentFolder, currentFile));
+			}
+			catch
+			{
+				MessageBox.Show("Unable to run favorite external app", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}

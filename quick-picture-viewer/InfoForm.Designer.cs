@@ -68,7 +68,7 @@
 			this.copyTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
-			this.closeBtn = new QuickLibrary.QlibCloseButton();
+			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.fileGroup.SuspendLayout();
 			this.sizeGroup.SuspendLayout();
 			this.dateGroup.SuspendLayout();
@@ -546,8 +546,8 @@
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(568, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -630,6 +630,6 @@
 		private System.Windows.Forms.ToolTip copyTooltip;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
-		private QuickLibrary.QlibCloseButton closeBtn;
+		private QuickLibrary.QlibTitlebarButton closeBtn;
 	}
 }

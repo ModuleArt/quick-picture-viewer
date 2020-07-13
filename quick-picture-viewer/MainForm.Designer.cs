@@ -42,15 +42,18 @@
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-			this.minimizeBtn = new System.Windows.Forms.Button();
-			this.maximizeBtn = new System.Windows.Forms.Button();
-			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			this.titlePanel = new System.Windows.Forms.Panel();
+			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.maximizeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.minimizeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.toolStrip1 = new QuickLibrary.QlibToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.deleteButton = new System.Windows.Forms.ToolStripButton();
-			this.externalButton = new System.Windows.Forms.ToolStripButton();
+			this.externalBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.externalFavoriteBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.externalChooseBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
@@ -220,53 +223,6 @@
 			this.printDocument1.OriginAtMargins = true;
 			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
 			// 
-			// minimizeBtn
-			// 
-			this.minimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.minimizeBtn.FlatAppearance.BorderSize = 0;
-			this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.minimizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("minimizeBtn.Image")));
-			this.minimizeBtn.Location = new System.Drawing.Point(717, 0);
-			this.minimizeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.minimizeBtn.Name = "minimizeBtn";
-			this.minimizeBtn.Size = new System.Drawing.Size(32, 32);
-			this.minimizeBtn.TabIndex = 19;
-			this.minimizeBtn.TabStop = false;
-			this.minimizeBtn.UseVisualStyleBackColor = false;
-			this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
-			// 
-			// maximizeBtn
-			// 
-			this.maximizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.maximizeBtn.FlatAppearance.BorderSize = 0;
-			this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.maximizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("maximizeBtn.Image")));
-			this.maximizeBtn.Location = new System.Drawing.Point(749, 0);
-			this.maximizeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.maximizeBtn.Name = "maximizeBtn";
-			this.maximizeBtn.Size = new System.Drawing.Size(32, 32);
-			this.maximizeBtn.TabIndex = 18;
-			this.maximizeBtn.TabStop = false;
-			this.maximizeBtn.UseVisualStyleBackColor = false;
-			this.maximizeBtn.Click += new System.EventHandler(this.maximizeBtn_Click);
-			// 
-			// closeBtn
-			// 
-			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.closeBtn.DarkImage = ((System.Drawing.Image)(resources.GetObject("closeBtn.DarkImage")));
-			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(781, 0);
-			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.closeBtn.Name = "closeBtn";
-			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 2;
-			this.closeBtn.TabStop = false;
-			this.closeBtn.UseVisualStyleBackColor = false;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-			// 
 			// titlePanel
 			// 
 			this.titlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -280,6 +236,57 @@
 			this.titlePanel.Name = "titlePanel";
 			this.titlePanel.Size = new System.Drawing.Size(813, 38);
 			this.titlePanel.TabIndex = 6;
+			// 
+			// closeBtn
+			// 
+			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.IsRed = true;
+			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.Location = new System.Drawing.Point(781, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 20;
+			this.closeBtn.TabStop = false;
+			this.closeBtn.UseVisualStyleBackColor = false;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
+			// maximizeBtn
+			// 
+			this.maximizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.maximizeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_square;
+			this.maximizeBtn.FlatAppearance.BorderSize = 0;
+			this.maximizeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_square;
+			this.maximizeBtn.IsRed = false;
+			this.maximizeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_square;
+			this.maximizeBtn.Location = new System.Drawing.Point(749, 0);
+			this.maximizeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.maximizeBtn.Name = "maximizeBtn";
+			this.maximizeBtn.Size = new System.Drawing.Size(32, 32);
+			this.maximizeBtn.TabIndex = 18;
+			this.maximizeBtn.TabStop = false;
+			this.maximizeBtn.UseVisualStyleBackColor = false;
+			this.maximizeBtn.Click += new System.EventHandler(this.maximizeBtn_Click);
+			// 
+			// minimizeBtn
+			// 
+			this.minimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.minimizeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_line;
+			this.minimizeBtn.FlatAppearance.BorderSize = 0;
+			this.minimizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("minimizeBtn.Image")));
+			this.minimizeBtn.IsRed = false;
+			this.minimizeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_line;
+			this.minimizeBtn.Location = new System.Drawing.Point(717, 0);
+			this.minimizeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.minimizeBtn.Name = "minimizeBtn";
+			this.minimizeBtn.Size = new System.Drawing.Size(32, 32);
+			this.minimizeBtn.TabIndex = 19;
+			this.minimizeBtn.TabStop = false;
+			this.minimizeBtn.UseVisualStyleBackColor = false;
+			this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
 			// 
 			// toolStrip1
 			// 
@@ -295,7 +302,7 @@
             this.openButton,
             this.saveAsButton,
             this.deleteButton,
-            this.externalButton,
+            this.externalBtn,
             this.toolStripSeparator4,
             this.infoButton,
             this.prevButton,
@@ -368,19 +375,53 @@
 			this.deleteButton.Text = "Move file to trash | Delete";
 			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
-			// externalButton
+			// externalBtn
 			// 
-			this.externalButton.AutoSize = false;
-			this.externalButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.externalButton.Enabled = false;
-			this.externalButton.Image = ((System.Drawing.Image)(resources.GetObject("externalButton.Image")));
-			this.externalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.externalButton.Margin = new System.Windows.Forms.Padding(0);
-			this.externalButton.Name = "externalButton";
-			this.externalButton.Size = new System.Drawing.Size(24, 25);
-			this.externalButton.Text = "Open file with external app | Ctrl+E";
-			this.externalButton.ToolTipText = "Open file with external app | Ctrl+E";
-			this.externalButton.Click += new System.EventHandler(this.externalButton_Click);
+			this.externalBtn.AutoSize = false;
+			this.externalBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.externalBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.externalRunBtn,
+            this.externalFavoriteBtn,
+            this.externalChooseBtn});
+			this.externalBtn.Image = ((System.Drawing.Image)(resources.GetObject("externalBtn.Image")));
+			this.externalBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+			this.externalBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.externalBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.externalBtn.Name = "externalBtn";
+			this.externalBtn.Size = new System.Drawing.Size(30, 25);
+			this.externalBtn.Text = "Open file with external app";
+			// 
+			// externalRunBtn
+			// 
+			this.externalRunBtn.Enabled = false;
+			this.externalRunBtn.Image = ((System.Drawing.Image)(resources.GetObject("externalRunBtn.Image")));
+			this.externalRunBtn.Name = "externalRunBtn";
+			this.externalRunBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+			this.externalRunBtn.Size = new System.Drawing.Size(303, 24);
+			this.externalRunBtn.Text = "Open with default app";
+			this.externalRunBtn.Click += new System.EventHandler(this.externalRunBtn_Click);
+			// 
+			// externalFavoriteBtn
+			// 
+			this.externalFavoriteBtn.Enabled = false;
+			this.externalFavoriteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_paint;
+			this.externalFavoriteBtn.Name = "externalFavoriteBtn";
+			this.externalFavoriteBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.O)));
+			this.externalFavoriteBtn.Size = new System.Drawing.Size(307, 24);
+			this.externalFavoriteBtn.Text = "Open with custom app";
+			this.externalFavoriteBtn.Click += new System.EventHandler(this.externalFavoriteBtn_Click);
+			// 
+			// externalChooseBtn
+			// 
+			this.externalChooseBtn.Enabled = false;
+			this.externalChooseBtn.Image = ((System.Drawing.Image)(resources.GetObject("externalChooseBtn.Image")));
+			this.externalChooseBtn.Name = "externalChooseBtn";
+			this.externalChooseBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
+			this.externalChooseBtn.Size = new System.Drawing.Size(303, 24);
+			this.externalChooseBtn.Text = "Choose app to open";
+			this.externalChooseBtn.Click += new System.EventHandler(this.externalButton_Click);
 			// 
 			// toolStripSeparator4
 			// 
@@ -426,8 +467,8 @@
 			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
 			this.showFileButton.Name = "showFileButton";
 			this.showFileButton.Size = new System.Drawing.Size(24, 25);
-			this.showFileButton.Text = "Show file in explorer | Ctrl+Shift+E";
-			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl+Shift+E";
+			this.showFileButton.Text = "Show file in explorer | Ctrl+Shift+L";
+			this.showFileButton.ToolTipText = "Show file in explorer | Ctrl+Shift+L";
 			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// nextButton
@@ -1020,7 +1061,6 @@
 		private System.Windows.Forms.ToolStripStatusLabel dateCreatedLabel;
 		private System.Windows.Forms.ToolStripStatusLabel dateModifiedLabel;
 		private System.Windows.Forms.ToolStripButton infoButton;
-		private System.Windows.Forms.ToolStripButton externalButton;
 		private CustomPanel picturePanel;
 		private System.Windows.Forms.PrintDialog printDialog1;
 		private System.Drawing.Printing.PrintDocument printDocument1;
@@ -1055,13 +1095,17 @@
 		private System.Windows.Forms.ToolStripDropDownButton copyButton;
 		private System.Windows.Forms.ToolStripMenuItem copyImageButton;
 		private System.Windows.Forms.ToolStripMenuItem copyFileBtn;
-		private QuickLibrary.QlibCloseButton closeBtn;
-		private System.Windows.Forms.Button minimizeBtn;
-		private System.Windows.Forms.Button maximizeBtn;
+		private QuickLibrary.QlibTitlebarButton minimizeBtn;
+		private QuickLibrary.QlibTitlebarButton maximizeBtn;
 		private System.Windows.Forms.ToolStripMenuItem printButton;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.ToolStripMenuItem onTopButton;
 		private System.Windows.Forms.ToolStripTextBox zoomTextBox;
+		private System.Windows.Forms.ToolStripDropDownButton externalBtn;
+		private System.Windows.Forms.ToolStripMenuItem externalRunBtn;
+		private System.Windows.Forms.ToolStripMenuItem externalChooseBtn;
+		private QuickLibrary.QlibTitlebarButton closeBtn;
+		private System.Windows.Forms.ToolStripMenuItem externalFavoriteBtn;
 	}
 }
 

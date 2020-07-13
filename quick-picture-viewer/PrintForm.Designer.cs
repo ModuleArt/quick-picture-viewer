@@ -47,9 +47,9 @@
 			this.marginsCheckBox = new QuickLibrary.QlibCheckBox();
 			this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
 			this.titlePanel = new System.Windows.Forms.Panel();
+			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.closeBtn = new QuickLibrary.QlibCloseButton();
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -257,22 +257,12 @@
 			this.titlePanel.Size = new System.Drawing.Size(458, 32);
 			this.titlePanel.TabIndex = 0;
 			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(9, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(89, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "Print preview";
-			// 
 			// closeBtn
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(426, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -282,6 +272,16 @@
 			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
+			// titleLabel
+			// 
+			this.titleLabel.AutoSize = true;
+			this.titleLabel.Location = new System.Drawing.Point(9, 7);
+			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(89, 19);
+			this.titleLabel.TabIndex = 16;
+			this.titleLabel.Text = "Print preview";
 			// 
 			// PrintForm
 			// 
@@ -346,6 +346,6 @@
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip aboutTooltip;
-		private QuickLibrary.QlibCloseButton closeBtn;
+		private QuickLibrary.QlibTitlebarButton closeBtn;
 	}
 }

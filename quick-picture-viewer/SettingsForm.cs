@@ -38,6 +38,18 @@ namespace quick_picture_viewer
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
 			zoomWheelCheckBox.Checked = Properties.Settings.Default.NoCtrlZoom;
+
+			int startupAction = Properties.Settings.Default.StartupAction;
+			if (startupAction == 0)
+			{
+				startupNothingRadio.Checked = true;
+			}
+			else if (startupAction == 1)
+			{
+				startupPasteRadio.Checked = true;
+			}
+
+			favExtTextBox.Text = Properties.Settings.Default.FavoriteExternalApp;
 		}
 
 		private void applyDarkMode(bool dark)
@@ -52,6 +64,9 @@ namespace quick_picture_viewer
 				settingsTabs.HeaderColor = ThemeManager.DarkSecondColor;
 				settingsTabs.TextColor = Color.White;
 				settingsTabs.HorizontalLineColor = Color.Transparent;
+
+				favExtTextBox.BackColor = ThemeManager.DarkSecondColor;
+				favExtTextBox.ForeColor = Color.White;
 			}
 
 			updatesCheckBox.SetDarkMode(dark);
@@ -61,6 +76,8 @@ namespace quick_picture_viewer
 			systemThemeRadio.SetDarkMode(dark);
 			zoomWheelCheckBox.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
+			startupNothingRadio.SetDarkMode(dark);
+			startupPasteRadio.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -118,6 +135,24 @@ namespace quick_picture_viewer
 		private void zoomWheelCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
 			Properties.Settings.Default.NoCtrlZoom = zoomWheelCheckBox.Checked;
+			Properties.Settings.Default.Save();
+		}
+
+		private void startupNothingRadio_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.StartupAction = 0;
+			Properties.Settings.Default.Save();
+		}
+
+		private void startupPasteRadio_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.StartupAction = 1;
+			Properties.Settings.Default.Save();
+		}
+
+		private void favExtTextBox_TextChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.FavoriteExternalApp = favExtTextBox.Text;
 			Properties.Settings.Default.Save();
 		}
 	}

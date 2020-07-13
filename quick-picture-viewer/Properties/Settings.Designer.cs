@@ -94,5 +94,29 @@ namespace quick_picture_viewer.Properties {
                 this["NoCtrlZoom"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int StartupAction {
+            get {
+                return ((int)(this["StartupAction"]));
+            }
+            set {
+                this["StartupAction"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Windows\\System32\\mspaint.exe")]
+        public string FavoriteExternalApp {
+            get {
+                return ((string)(this["FavoriteExternalApp"]));
+            }
+            set {
+                this["FavoriteExternalApp"] = value;
+            }
+        }
     }
 }
