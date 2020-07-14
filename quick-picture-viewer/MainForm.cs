@@ -75,10 +75,10 @@ namespace quick_picture_viewer
 
 			if (!ThemeManager.isWindows10())
 			{
-				minimizeBtn.Top += 3;
-				maximizeBtn.Top += 3;
-				closeBtn.Top += 3;
-				toolStrip1.Top += 3;
+				minimizeBtn.Height += 6;
+				maximizeBtn.Height += 6;
+				closeBtn.Height += 6;
+				toolStrip1.Height += 6;
 			}
 		}
 
@@ -235,8 +235,11 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
-					showTypeOpsButton(false, null);
+					using (Image img = Image.FromFile(path))
+					{
+						openImage(new Bitmap(img), Path.GetDirectoryName(path), Path.GetFileName(path));
+						showTypeOpsButton(false, null);
+					}
 				}
 			}
 			catch (Exception ex)
@@ -695,23 +698,23 @@ namespace quick_picture_viewer
 
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
-				FileStream fs = (FileStream) saveFileDialog1.OpenFile();
+				FileStream fs = (FileStream)saveFileDialog1.OpenFile();
 				switch (saveFileDialog1.FilterIndex)
 				{
 					case 1:
-						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Png);
+						originalImage.Save(fs, ImageFormat.Png);
 						break;
 					case 2:
-						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+						originalImage.Save(fs, ImageFormat.Jpeg);
 						break;
 					case 3:
-						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Gif);
+						originalImage.Save(fs, ImageFormat.Gif);
 						break;
 					case 4:
-						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Bmp);
+						originalImage.Save(fs, ImageFormat.Bmp);
 						break;
 					case 5:
-						originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Tiff);
+						originalImage.Save(fs, ImageFormat.Tiff);
 						break;
 					case 6:
 						//originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Tiff);
@@ -758,6 +761,7 @@ namespace quick_picture_viewer
 			{
 				if (autoZoom)
 				{
+					this.AllowDrop = false;
 					if (currentFile != null)
 					{
 						string[] paths = { Path.Combine(currentFolder, currentFile) };
@@ -782,6 +786,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
 		{
+			this.AllowDrop = true;
 			Cursor.Current = Cursors.Default;
 		}
 
@@ -1796,19 +1801,13 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				string assoc;
 				string ext = "bmp";
 				if (currentFile != null)
 				{
 					ext = Path.GetExtension(currentFile).Substring(1, Path.GetExtension(currentFile).Length - 1);
 				}
 
-				assoc = FileAssociation.GetExecCommandAssociatedToExtension(ext);
-
-				string tmp = assoc.Substring(1, assoc.Length - 1);
-				string exePath = tmp.Substring(0, tmp.IndexOf('"'));
-
-				Process.Start(exePath, Path.Combine(currentFolder, currentFile));
+				Process.Start(FileAssociation.GetExecFileAssociatedToExtension(ext), Path.Combine(currentFolder, currentFile));
 			}
 			catch
 			{
@@ -1826,6 +1825,28 @@ namespace quick_picture_viewer
 			{
 				MessageBox.Show("Unable to run favorite external app", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+		}
+
+		private void externalBtn_DropDownOpened(object sender, EventArgs e)
+		{
+			int lastSlashIndex = Properties.Settings.Default.FavoriteExternalApp.LastIndexOf('/');
+			if (lastSlashIndex == -1) 
+				lastSlashIndex = Properties.Settings.Default.FavoriteExternalApp.LastIndexOf('\\');
+
+			if (lastSlashIndex >= 0)
+			{
+				string appName = Properties.Settings.Default.FavoriteExternalApp.Substring(lastSlashIndex + 1, Properties.Settings.Default.FavoriteExternalApp.Length - lastSlashIndex - 1);
+				externalFavoriteBtn.Text = "Open with \"" + appName + "\"";
+			}
+			else
+			{
+				externalFavoriteBtn.Text = "Open with custom app";
+			}
+		}
+
+		private void picturePanel_MouseEnter(object sender, EventArgs e)
+		{
+			this.AllowDrop = true;
 		}
 	}
 }

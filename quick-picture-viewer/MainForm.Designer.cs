@@ -242,6 +242,7 @@
 			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
@@ -259,6 +260,7 @@
 			this.maximizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.maximizeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_square;
 			this.maximizeBtn.FlatAppearance.BorderSize = 0;
+			this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.maximizeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_square;
 			this.maximizeBtn.IsRed = false;
 			this.maximizeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_square;
@@ -276,6 +278,7 @@
 			this.minimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.minimizeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_line;
 			this.minimizeBtn.FlatAppearance.BorderSize = 0;
+			this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.minimizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("minimizeBtn.Image")));
 			this.minimizeBtn.IsRed = false;
 			this.minimizeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_line;
@@ -390,6 +393,7 @@
 			this.externalBtn.Name = "externalBtn";
 			this.externalBtn.Size = new System.Drawing.Size(30, 25);
 			this.externalBtn.Text = "Open file with external app";
+			this.externalBtn.DropDownOpened += new System.EventHandler(this.externalBtn_DropDownOpened);
 			// 
 			// externalRunBtn
 			// 
@@ -397,7 +401,7 @@
 			this.externalRunBtn.Image = ((System.Drawing.Image)(resources.GetObject("externalRunBtn.Image")));
 			this.externalRunBtn.Name = "externalRunBtn";
 			this.externalRunBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-			this.externalRunBtn.Size = new System.Drawing.Size(303, 24);
+			this.externalRunBtn.Size = new System.Drawing.Size(307, 24);
 			this.externalRunBtn.Text = "Open with default app";
 			this.externalRunBtn.Click += new System.EventHandler(this.externalRunBtn_Click);
 			// 
@@ -419,7 +423,7 @@
 			this.externalChooseBtn.Name = "externalChooseBtn";
 			this.externalChooseBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.E)));
-			this.externalChooseBtn.Size = new System.Drawing.Size(303, 24);
+			this.externalChooseBtn.Size = new System.Drawing.Size(307, 24);
 			this.externalChooseBtn.Text = "Choose app to open";
 			this.externalChooseBtn.Click += new System.EventHandler(this.externalButton_Click);
 			// 
@@ -919,6 +923,7 @@
 			this.picturePanel.TabIndex = 2;
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
@@ -990,6 +995,7 @@
 			this.pictureBox.TabStop = false;
 			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
