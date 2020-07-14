@@ -115,6 +115,7 @@ namespace quick_picture_viewer
 					if (Properties.Settings.Default.StartupAction == 1  && Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
+						showSuggestion("Image pasted from clipboard");
 					} 
 				}
 				else
@@ -142,6 +143,11 @@ namespace quick_picture_viewer
 
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
 			setCheckboardBackground(Properties.Settings.Default.CheckboardBackground, false);
+
+			if (Properties.Settings.Default.BackColor.Length > 0)
+			{
+				pictureBox.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
+			}
 		}
 
 		public async void checkForUpdates(bool showUpToDateDialog)
@@ -1438,6 +1444,9 @@ namespace quick_picture_viewer
 				reloadButton.Image = Properties.Resources.white_sync;
 				newWindowButton.Image = Properties.Resources.white_newwindow;
 				settingsButton.Image = Properties.Resources.white_settings;
+				backColorBtn.Image = Properties.Resources.white_palette;
+				backColorBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
+				backColorBtn.DropDown.ForeColor = Color.White;
 
 				directoryLabel.Image = Properties.Resources.white_picfolder;
 				fileLabel.Image = Properties.Resources.white_imgfile;
@@ -1847,6 +1856,23 @@ namespace quick_picture_viewer
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
 			this.AllowDrop = true;
+		}
+
+		private void backClearBtn_Click(object sender, EventArgs e)
+		{
+			pictureBox.BackColor = Color.Transparent;
+			Properties.Settings.Default.BackColor = "";
+			Properties.Settings.Default.Save();
+		}
+
+		private void backCustomBtn_Click(object sender, EventArgs e)
+		{
+			if (colorDialog1.ShowDialog() == DialogResult.OK)
+			{
+				pictureBox.BackColor = colorDialog1.Color;
+				Properties.Settings.Default.BackColor = colorDialog1.Color.ToArgb().ToString();
+				Properties.Settings.Default.Save();
+			}
 		}
 	}
 }

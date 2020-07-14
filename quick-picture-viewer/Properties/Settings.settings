@@ -26,5 +26,8 @@
     <Setting Name="FavoriteExternalApp" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Windows\System32\mspaint.exe</Value>
     </Setting>
+    <Setting Name="BackColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

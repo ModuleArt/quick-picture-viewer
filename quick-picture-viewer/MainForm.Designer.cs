@@ -91,6 +91,10 @@
 			this.printButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator9 = new QuickLibrary.QlibMenuSeparator();
+			this.backColorBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.backClearBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibMenuSeparator1 = new QuickLibrary.QlibMenuSeparator();
+			this.backCustomBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.onTopButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator10 = new QuickLibrary.QlibMenuSeparator();
@@ -101,6 +105,7 @@
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.titlePanel.SuspendLayout();
@@ -810,6 +815,7 @@
             this.printButton,
             this.setAsDesktopButton,
             this.toolStripSeparator9,
+            this.backColorBtn,
             this.onTopButton,
             this.newWindowButton,
             this.toolStripSeparator10,
@@ -859,6 +865,37 @@
 			this.toolStripSeparator9.Margin = new System.Windows.Forms.Padding(4);
 			this.toolStripSeparator9.Name = "toolStripSeparator9";
 			this.toolStripSeparator9.Size = new System.Drawing.Size(327, 6);
+			// 
+			// backColorBtn
+			// 
+			this.backColorBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backClearBtn,
+            this.qlibMenuSeparator1,
+            this.backCustomBtn});
+			this.backColorBtn.Image = ((System.Drawing.Image)(resources.GetObject("backColorBtn.Image")));
+			this.backColorBtn.Name = "backColorBtn";
+			this.backColorBtn.Size = new System.Drawing.Size(330, 24);
+			this.backColorBtn.Text = "Background color";
+			// 
+			// backClearBtn
+			// 
+			this.backClearBtn.Name = "backClearBtn";
+			this.backClearBtn.Size = new System.Drawing.Size(180, 24);
+			this.backClearBtn.Text = "Clear";
+			this.backClearBtn.Click += new System.EventHandler(this.backClearBtn_Click);
+			// 
+			// qlibMenuSeparator1
+			// 
+			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibMenuSeparator1.Name = "qlibMenuSeparator1";
+			this.qlibMenuSeparator1.Size = new System.Drawing.Size(177, 6);
+			// 
+			// backCustomBtn
+			// 
+			this.backCustomBtn.Name = "backCustomBtn";
+			this.backCustomBtn.Size = new System.Drawing.Size(180, 24);
+			this.backCustomBtn.Text = "Choose color";
+			this.backCustomBtn.Click += new System.EventHandler(this.backCustomBtn_Click);
 			// 
 			// onTopButton
 			// 
@@ -999,6 +1036,10 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
+			// colorDialog1
+			// 
+			this.colorDialog1.Color = System.Drawing.Color.Blue;
+			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -1112,6 +1153,11 @@
 		private System.Windows.Forms.ToolStripMenuItem externalChooseBtn;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.ToolStripMenuItem externalFavoriteBtn;
+		private System.Windows.Forms.ToolStripMenuItem backColorBtn;
+		private System.Windows.Forms.ToolStripMenuItem backClearBtn;
+		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem backCustomBtn;
+		private System.Windows.Forms.ColorDialog colorDialog1;
 	}
 }
 

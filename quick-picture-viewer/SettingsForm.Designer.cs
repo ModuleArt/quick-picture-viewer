@@ -28,6 +28,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
 			this.settingsTabs = new QuickLibrary.QlibTabControl();
 			this.themePage = new System.Windows.Forms.TabPage();
 			this.restartLabel1 = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.browseBtn = new System.Windows.Forms.Button();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
 			this.updatesPage.SuspendLayout();
@@ -261,6 +264,7 @@
 			// externalPage
 			// 
 			this.externalPage.BackColor = System.Drawing.Color.White;
+			this.externalPage.Controls.Add(this.browseBtn);
 			this.externalPage.Controls.Add(this.favExtTextBox);
 			this.externalPage.Controls.Add(this.favExtLabel);
 			this.externalPage.Location = new System.Drawing.Point(4, 20);
@@ -305,6 +309,7 @@
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
@@ -326,6 +331,32 @@
 			this.titleLabel.Size = new System.Drawing.Size(58, 19);
 			this.titleLabel.TabIndex = 16;
 			this.titleLabel.Text = "Settings";
+			// 
+			// browseBtn
+			// 
+			this.browseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.browseBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.browseBtn.FlatAppearance.BorderSize = 0;
+			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.browseBtn.Image = ((System.Drawing.Image)(resources.GetObject("browseBtn.Image")));
+			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.browseBtn.Location = new System.Drawing.Point(172, 74);
+			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.browseBtn.Name = "browseBtn";
+			this.browseBtn.Size = new System.Drawing.Size(120, 32);
+			this.browseBtn.TabIndex = 2;
+			this.browseBtn.TabStop = false;
+			this.browseBtn.Text = " Browse app";
+			this.browseBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.browseBtn.UseVisualStyleBackColor = false;
+			this.browseBtn.Click += new System.EventHandler(this.browseBtn_Click);
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.FileName = "openFileDialog1";
+			this.openFileDialog1.Filter = "App executable|*.exe";
 			// 
 			// SettingsForm
 			// 
@@ -381,5 +412,7 @@
 		private System.Windows.Forms.TabPage externalPage;
 		private System.Windows.Forms.Label favExtLabel;
 		private QuickLibrary.QlibTextBox favExtTextBox;
+		private System.Windows.Forms.Button browseBtn;
+		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 	}
 }

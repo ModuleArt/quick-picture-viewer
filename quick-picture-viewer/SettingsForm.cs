@@ -67,6 +67,10 @@ namespace quick_picture_viewer
 
 				favExtTextBox.BackColor = ThemeManager.DarkSecondColor;
 				favExtTextBox.ForeColor = Color.White;
+
+				browseBtn.Image = Properties.Resources.white_options;
+				browseBtn.BackColor = ThemeManager.DarkSecondColor;
+				browseBtn.ForeColor = Color.White;
 			}
 
 			updatesCheckBox.SetDarkMode(dark);
@@ -154,6 +158,14 @@ namespace quick_picture_viewer
 		{
 			Properties.Settings.Default.FavoriteExternalApp = favExtTextBox.Text;
 			Properties.Settings.Default.Save();
+		}
+
+		private void browseBtn_Click(object sender, EventArgs e)
+		{
+			if (openFileDialog1.ShowDialog() == DialogResult.OK)
+			{
+				favExtTextBox.Text = openFileDialog1.FileName;
+			}
 		}
 	}
 }

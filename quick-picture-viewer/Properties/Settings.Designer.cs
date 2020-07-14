@@ -118,5 +118,17 @@ namespace quick_picture_viewer.Properties {
                 this["FavoriteExternalApp"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BackColor {
+            get {
+                return ((string)(this["BackColor"]));
+            }
+            set {
+                this["BackColor"] = value;
+            }
+        }
     }
 }

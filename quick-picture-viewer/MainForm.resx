@@ -408,6 +408,16 @@
         a0EAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="backColorBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAADvSURBVDhPxdM7igJBEMbxhlUWA1+pgoHHWFy9gOdQj+A1THzFwiJ4BGUV7+FjWUwEQzEQ8V/d
+        09oO004kfvBjqoahp6Zt1StSwwR7HIKr9FU8TRJ9bNFAEfng2sIfepDnIjPEFFndKfWLmSl1cpB+oLtQ
+        ZOwV0rozWWJhyttiGWzwjYeMIWOH32rjLiaf82PKe3aQb3Uf9KWEf1Pec8aHKb2x033iJDfcyIoVU3pj
+        p4ucoA65ecQcZfgSuQc2KbThbqS7sfIrrPGlO0/C32hHl3Mg56SD2Lh7UkATchK7SCA2dk8ukIMzQux/
+        4R1R6gpgizTxrxHvvAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="onTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -4301,5 +4311,8 @@
   </metadata>
   <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>953, 17</value>
+  </metadata>
+  <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1094, 17</value>
   </metadata>
 </root>
