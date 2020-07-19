@@ -12,7 +12,6 @@ C:\Users\volyn\Desktop\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.exe.config
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.exe
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.pdb
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.WallpaperForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.AboutForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.MainForm.resources
@@ -34,3 +33,4 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_pic
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Pfim.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache

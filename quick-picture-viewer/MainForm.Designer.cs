@@ -100,12 +100,12 @@
 			this.toolStripSeparator10 = new QuickLibrary.QlibMenuSeparator();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.titlePanel.SuspendLayout();
@@ -380,7 +380,7 @@
 			this.deleteButton.Margin = new System.Windows.Forms.Padding(0);
 			this.deleteButton.Name = "deleteButton";
 			this.deleteButton.Size = new System.Drawing.Size(24, 25);
-			this.deleteButton.Text = "Move file to trash | Delete";
+			this.deleteButton.Text = "Move file to the Recycle Bin | Delete";
 			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
 			// externalBtn
@@ -880,7 +880,7 @@
 			// backClearBtn
 			// 
 			this.backClearBtn.Name = "backClearBtn";
-			this.backClearBtn.Size = new System.Drawing.Size(180, 24);
+			this.backClearBtn.Size = new System.Drawing.Size(158, 24);
 			this.backClearBtn.Text = "Clear";
 			this.backClearBtn.Click += new System.EventHandler(this.backClearBtn_Click);
 			// 
@@ -888,12 +888,12 @@
 			// 
 			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator1.Name = "qlibMenuSeparator1";
-			this.qlibMenuSeparator1.Size = new System.Drawing.Size(177, 6);
+			this.qlibMenuSeparator1.Size = new System.Drawing.Size(155, 6);
 			// 
 			// backCustomBtn
 			// 
 			this.backCustomBtn.Name = "backCustomBtn";
-			this.backCustomBtn.Size = new System.Drawing.Size(180, 24);
+			this.backCustomBtn.Size = new System.Drawing.Size(158, 24);
 			this.backCustomBtn.Text = "Choose color";
 			this.backCustomBtn.Click += new System.EventHandler(this.backCustomBtn_Click);
 			// 
@@ -940,6 +940,10 @@
 			this.aboutButton.Size = new System.Drawing.Size(330, 24);
 			this.aboutButton.Text = "About";
 			this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+			// 
+			// colorDialog1
+			// 
+			this.colorDialog1.Color = System.Drawing.Color.Blue;
 			// 
 			// picturePanel
 			// 
@@ -1035,10 +1039,6 @@
 			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// colorDialog1
-			// 
-			this.colorDialog1.Color = System.Drawing.Color.Blue;
 			// 
 			// MainForm
 			// 

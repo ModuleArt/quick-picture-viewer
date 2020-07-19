@@ -173,7 +173,7 @@ namespace quick_picture_viewer
 					DialogResult result = updateDialog.ShowDialog();
 					if (result == DialogResult.Yes)
 					{
-						DownloadForm downloadBox = new DownloadForm(checker.GetAssetUrl("QuickPictureViewer-Setup.msi"), darkMode);
+						DownloadForm downloadBox = new DownloadForm(checker.GetAssetUrl("QuickPictureViewer-Setup.exe"), darkMode);
 						downloadBox.Owner = this;
 						downloadBox.TopMost = alwaysOnTop;
 						downloadBox.ShowDialog();
