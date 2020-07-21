@@ -137,10 +137,6 @@ namespace quick_picture_viewer
 				modifiedTextBox.ForeColor = Color.White;
 			}
 
-			fileGroup.SetDarkMode(dark);
-			sizeGroup.SetDarkMode(dark);
-			dateGroup.SetDarkMode(dark);
-			okButton.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 		}
 

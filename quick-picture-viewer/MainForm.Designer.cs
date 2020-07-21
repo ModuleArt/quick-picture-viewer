@@ -49,7 +49,6 @@
 			this.toolStrip1 = new QuickLibrary.QlibToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
-			this.deleteButton = new System.Windows.Forms.ToolStripButton();
 			this.externalBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalFavoriteBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,6 +87,7 @@
 			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.printButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator9 = new QuickLibrary.QlibMenuSeparator();
@@ -309,7 +309,6 @@
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openButton,
             this.saveAsButton,
-            this.deleteButton,
             this.externalBtn,
             this.toolStripSeparator4,
             this.infoButton,
@@ -369,19 +368,6 @@
 			this.saveAsButton.Text = "Save as | Ctrl+S";
 			this.saveAsButton.ToolTipText = "Save as | Ctrl+S";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
-			// 
-			// deleteButton
-			// 
-			this.deleteButton.AutoSize = false;
-			this.deleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.deleteButton.Enabled = false;
-			this.deleteButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.Image")));
-			this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.deleteButton.Margin = new System.Windows.Forms.Padding(0);
-			this.deleteButton.Name = "deleteButton";
-			this.deleteButton.Size = new System.Drawing.Size(24, 25);
-			this.deleteButton.Text = "Move file to the Recycle Bin | Delete";
-			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
 			// externalBtn
 			// 
@@ -812,6 +798,7 @@
 			this.moreButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.moreButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reloadButton,
+            this.deleteBtn,
             this.printButton,
             this.setAsDesktopButton,
             this.toolStripSeparator9,
@@ -838,6 +825,16 @@
 			this.reloadButton.Size = new System.Drawing.Size(330, 24);
 			this.reloadButton.Text = "Reload file";
 			this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+			// 
+			// deleteBtn
+			// 
+			this.deleteBtn.Enabled = false;
+			this.deleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.Image")));
+			this.deleteBtn.Name = "deleteBtn";
+			this.deleteBtn.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+			this.deleteBtn.Size = new System.Drawing.Size(330, 24);
+			this.deleteBtn.Text = "Move file to the Recycle Bin";
+			this.deleteBtn.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
 			// printButton
 			// 
@@ -872,15 +869,16 @@
             this.backClearBtn,
             this.qlibMenuSeparator1,
             this.backCustomBtn});
-			this.backColorBtn.Image = ((System.Drawing.Image)(resources.GetObject("backColorBtn.Image")));
+			this.backColorBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
 			this.backColorBtn.Name = "backColorBtn";
 			this.backColorBtn.Size = new System.Drawing.Size(330, 24);
 			this.backColorBtn.Text = "Background color";
 			// 
 			// backClearBtn
 			// 
+			this.backClearBtn.Image = ((System.Drawing.Image)(resources.GetObject("backClearBtn.Image")));
 			this.backClearBtn.Name = "backClearBtn";
-			this.backClearBtn.Size = new System.Drawing.Size(158, 24);
+			this.backClearBtn.Size = new System.Drawing.Size(180, 24);
 			this.backClearBtn.Text = "Clear";
 			this.backClearBtn.Click += new System.EventHandler(this.backClearBtn_Click);
 			// 
@@ -888,12 +886,13 @@
 			// 
 			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator1.Name = "qlibMenuSeparator1";
-			this.qlibMenuSeparator1.Size = new System.Drawing.Size(155, 6);
+			this.qlibMenuSeparator1.Size = new System.Drawing.Size(177, 6);
 			// 
 			// backCustomBtn
 			// 
+			this.backCustomBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
 			this.backCustomBtn.Name = "backCustomBtn";
-			this.backCustomBtn.Size = new System.Drawing.Size(158, 24);
+			this.backCustomBtn.Size = new System.Drawing.Size(180, 24);
 			this.backCustomBtn.Text = "Choose color";
 			this.backCustomBtn.Click += new System.EventHandler(this.backCustomBtn_Click);
 			// 
@@ -1104,7 +1103,6 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripButton prevButton;
-		private System.Windows.Forms.ToolStripButton deleteButton;
 		private System.Windows.Forms.ToolStripStatusLabel dateCreatedLabel;
 		private System.Windows.Forms.ToolStripStatusLabel dateModifiedLabel;
 		private System.Windows.Forms.ToolStripButton infoButton;
@@ -1158,6 +1156,7 @@
 		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator1;
 		private System.Windows.Forms.ToolStripMenuItem backCustomBtn;
 		private System.Windows.Forms.ColorDialog colorDialog1;
+		private System.Windows.Forms.ToolStripMenuItem deleteBtn;
 	}
 }
 

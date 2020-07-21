@@ -294,6 +294,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-palette.png" />
     <None Include="resources\imgs\light\white-palette.png" />
     <None Include="resources\imgs\light\white-paint.png" />
     <None Include="resources\imgs\dark\black-paint.png" />

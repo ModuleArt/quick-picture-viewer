@@ -415,7 +415,7 @@ namespace quick_picture_viewer
 				nextButton.Enabled = directoryName != null;
 				prevButton.Enabled = directoryName != null;
 				slideshowButton.Enabled = directoryName != null;
-				deleteButton.Enabled = directoryName != null;
+				deleteBtn.Enabled = directoryName != null;
 				externalRunBtn.Enabled = directoryName != null;
 				externalChooseBtn.Enabled = directoryName != null;
 				externalFavoriteBtn.Enabled = directoryName != null;
@@ -1074,10 +1074,6 @@ namespace quick_picture_viewer
 					{
 						screenshotButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.Delete)
-					{
-						deleteButton.PerformClick();
-					}
 					else if (e.KeyCode == Keys.Left)
 					{
 						prevButton.PerformClick();
@@ -1313,7 +1309,7 @@ namespace quick_picture_viewer
 			pictureBox.Image = null;
 
 			saveAsButton.Enabled = false;
-			deleteButton.Enabled = false;
+			deleteBtn.Enabled = false;
 			prevButton.Enabled = false;
 			nextButton.Enabled = false;
 			slideshowButton.Enabled = false;
@@ -1393,7 +1389,7 @@ namespace quick_picture_viewer
 				openButton.Image = Properties.Resources.white_open;
 				saveAsButton.Image = Properties.Resources.white_saveas;
 				printButton.Image = Properties.Resources.white_print;
-				deleteButton.Image = Properties.Resources.white_trash;
+				deleteBtn.Image = Properties.Resources.white_trash;
 
 				externalBtn.Image = Properties.Resources.white_popup;
 				externalBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
@@ -1447,6 +1443,8 @@ namespace quick_picture_viewer
 				backColorBtn.Image = Properties.Resources.white_palette;
 				backColorBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
 				backColorBtn.DropDown.ForeColor = Color.White;
+				backClearBtn.Image = Properties.Resources.white_erase;
+				backCustomBtn.Image = Properties.Resources.white_palette;
 
 				directoryLabel.Image = Properties.Resources.white_picfolder;
 				fileLabel.Image = Properties.Resources.white_imgfile;
