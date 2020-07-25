@@ -90,6 +90,8 @@
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.printButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibMenuSeparator2 = new QuickLibrary.QlibMenuSeparator();
+			this.actualSizeBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator9 = new QuickLibrary.QlibMenuSeparator();
 			this.backColorBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.backClearBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,7 +101,7 @@
 			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator10 = new QuickLibrary.QlibMenuSeparator();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionLabel = new System.Windows.Forms.Label();
@@ -801,13 +803,15 @@
             this.deleteBtn,
             this.printButton,
             this.setAsDesktopButton,
+            this.qlibMenuSeparator2,
+            this.actualSizeBtn,
             this.toolStripSeparator9,
             this.backColorBtn,
             this.onTopButton,
             this.newWindowButton,
             this.toolStripSeparator10,
             this.settingsButton,
-            this.aboutButton});
+            this.aboutBtn});
 			this.moreButton.Image = ((System.Drawing.Image)(resources.GetObject("moreButton.Image")));
 			this.moreButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.moreButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -856,6 +860,23 @@
 			this.setAsDesktopButton.Size = new System.Drawing.Size(330, 24);
 			this.setAsDesktopButton.Text = "Set as desktop background";
 			this.setAsDesktopButton.Click += new System.EventHandler(this.setAsDesktopButton_Click);
+			// 
+			// qlibMenuSeparator2
+			// 
+			this.qlibMenuSeparator2.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
+			this.qlibMenuSeparator2.Size = new System.Drawing.Size(327, 6);
+			// 
+			// actualSizeBtn
+			// 
+			this.actualSizeBtn.BackColor = System.Drawing.Color.Black;
+			this.actualSizeBtn.Enabled = false;
+			this.actualSizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("actualSizeBtn.Image")));
+			this.actualSizeBtn.Name = "actualSizeBtn";
+			this.actualSizeBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D0)));
+			this.actualSizeBtn.Size = new System.Drawing.Size(330, 24);
+			this.actualSizeBtn.Text = "Zoom to actual size";
+			this.actualSizeBtn.Click += new System.EventHandler(this.actualSizeBtn_Click);
 			// 
 			// toolStripSeparator9
 			// 
@@ -930,15 +951,15 @@
 			this.settingsButton.Text = "Settings";
 			this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
 			// 
-			// aboutButton
+			// aboutBtn
 			// 
-			this.aboutButton.BackColor = System.Drawing.Color.Black;
-			this.aboutButton.Image = ((System.Drawing.Image)(resources.GetObject("aboutButton.Image")));
-			this.aboutButton.Name = "aboutButton";
-			this.aboutButton.ShortcutKeys = System.Windows.Forms.Keys.F1;
-			this.aboutButton.Size = new System.Drawing.Size(330, 24);
-			this.aboutButton.Text = "About";
-			this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+			this.aboutBtn.BackColor = System.Drawing.Color.Black;
+			this.aboutBtn.Image = ((System.Drawing.Image)(resources.GetObject("aboutBtn.Image")));
+			this.aboutBtn.Name = "aboutBtn";
+			this.aboutBtn.ShortcutKeys = System.Windows.Forms.Keys.F1;
+			this.aboutBtn.Size = new System.Drawing.Size(330, 24);
+			this.aboutBtn.Text = "About";
+			this.aboutBtn.Click += new System.EventHandler(this.aboutButton_Click);
 			// 
 			// colorDialog1
 			// 
@@ -1118,7 +1139,7 @@
 		private System.Windows.Forms.ToolStripButton slideshowButton;
 		private System.Windows.Forms.ToolStripDropDownButton moreButton;
 		private System.Windows.Forms.ToolStripMenuItem setAsDesktopButton;
-		private System.Windows.Forms.ToolStripMenuItem aboutButton;
+		private System.Windows.Forms.ToolStripMenuItem actualSizeBtn;
 		private System.Windows.Forms.Button typeOpsButton;
 		private System.Windows.Forms.ToolStripMenuItem reloadButton;
 		private System.Windows.Forms.ToolStripDropDownButton editButton;
@@ -1157,6 +1178,8 @@
 		private System.Windows.Forms.ToolStripMenuItem backCustomBtn;
 		private System.Windows.Forms.ColorDialog colorDialog1;
 		private System.Windows.Forms.ToolStripMenuItem deleteBtn;
+		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator2;
+		private System.Windows.Forms.ToolStripMenuItem aboutBtn;
 	}
 }
 

@@ -130,5 +130,29 @@ namespace quick_picture_viewer.Properties {
                 this["BackColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int SlideshowTime {
+            get {
+                return ((int)(this["SlideshowTime"]));
+            }
+            set {
+                this["SlideshowTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SlideshowCounter {
+            get {
+                return ((bool)(this["SlideshowCounter"]));
+            }
+            set {
+                this["SlideshowCounter"] = value;
+            }
+        }
     }
 }

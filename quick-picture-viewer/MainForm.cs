@@ -31,6 +31,7 @@ namespace quick_picture_viewer
 		private bool darkMode = false;
 		private bool checkboardBackground = false;
 		private bool slideshow = false;
+		private int slideshowCounter = 0;
 		private GCHandle tmpGcHandle;
 
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
@@ -64,7 +65,7 @@ namespace quick_picture_viewer
 			zoomOutTimer.Interval = 100;
 
 			slideshowTimer.Elapsed += new ElapsedEventHandler(slideshowTimer_Event);
-			slideshowTimer.Interval += 5000;
+			slideshowTimer.Interval += 1000;
 
 			picturePanel.MouseWheel += picturePanel_MouseWheel;
 
@@ -95,7 +96,24 @@ namespace quick_picture_viewer
 
 		private void slideshowTimer_Event(Object source, ElapsedEventArgs e)
 		{
-			nextFile();
+			slideshowCounter++;
+			if (slideshowCounter >= Properties.Settings.Default.SlideshowTime)
+			{
+				slideshowCounter = 0;
+				nextFile();
+			}
+
+			if (Properties.Settings.Default.SlideshowCounter)
+			{
+				if ((Properties.Settings.Default.SlideshowTime - slideshowCounter) <= 1)
+				{
+					showSuggestion("Next image in 1 second");
+				}
+				else
+				{
+					showSuggestion("Next image in " + (Properties.Settings.Default.SlideshowTime - slideshowCounter) + " seconds");
+				}
+			}
 		}
 
 		private void openButton_Click_1(object sender, EventArgs e)
@@ -197,7 +215,7 @@ namespace quick_picture_viewer
 
 		private void showTypeOpsButton(bool show, string type)
 		{
-			this.Invoke((MethodInvoker)(() => {
+			typeOpsButton.Invoke((MethodInvoker)(() => {
 				typeOpsButton.Visible = show;
 
 				if (show)
@@ -430,6 +448,7 @@ namespace quick_picture_viewer
 
 				zoomInButton.Enabled = true;
 				zoomOutButton.Enabled = true;
+				actualSizeBtn.Enabled = true;
 				flipVerticalButton.Enabled = true;
 				flipHorizontalButton.Enabled = true;
 				rotateLeftButton.Enabled = true;
@@ -544,9 +563,11 @@ namespace quick_picture_viewer
 
 			Size newSize = new Size(newWidth, newHeight);
 
-			pictureBox.Size = newSize;
-
-			updatePictureBoxLocation();
+			pictureBox.Invoke((MethodInvoker)(() =>
+			{
+				pictureBox.Size = newSize;
+				updatePictureBoxLocation();
+			}));
 		}
 						
 		private void updatePictureBoxLocation()
@@ -934,6 +955,8 @@ namespace quick_picture_viewer
 
 				pleaseOpenLabel.ForeColor = this.ForeColor;
 			}
+
+			setZoomText("Auto");
 		}
 
 		private void zoomComboBox_TextChanged(object sender, EventArgs e)
@@ -1346,6 +1369,7 @@ namespace quick_picture_viewer
 			autoZoomButton.Enabled = false;
 			zoomInButton.Enabled = false;
 			zoomOutButton.Enabled = false;
+			actualSizeBtn.Enabled = false;
 			rotateLeftButton.Enabled = false;
 			rotateRightButton.Enabled = false;
 			rotate180Button.Enabled = false;
@@ -1436,6 +1460,7 @@ namespace quick_picture_viewer
 				autoZoomButton.Image = Properties.Resources.white_autozoom;
 				zoomInButton.Image = Properties.Resources.white_zoomin;
 				zoomOutButton.Image = Properties.Resources.white_zoomout;
+				actualSizeBtn.Image = Properties.Resources.white_actualsize;
 
 				editButton.Image = Properties.Resources.white_edit;
 				editButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
@@ -1466,7 +1491,7 @@ namespace quick_picture_viewer
 				moreButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
 				moreButton.DropDown.ForeColor = Color.White;
 				setAsDesktopButton.Image = Properties.Resources.white_desktop;
-				aboutButton.Image = Properties.Resources.white_about;
+				aboutBtn.Image = Properties.Resources.white_about;
 				reloadButton.Image = Properties.Resources.white_sync;
 				newWindowButton.Image = Properties.Resources.white_newwindow;
 				settingsButton.Image = Properties.Resources.white_settings;
@@ -1620,8 +1645,10 @@ namespace quick_picture_viewer
 
 		private void showSuggestion(string text)
 		{
-			suggestionLabel.Text = text;
-			suggestionLabel.Visible = true;
+			suggestionLabel.Invoke((MethodInvoker)(() => {
+				suggestionLabel.Text = text;
+				suggestionLabel.Visible = true;
+			}));
 
 			if (suggestionTimer != null)
 			{
@@ -1906,6 +1933,11 @@ namespace quick_picture_viewer
 			{
 				updatePictureBoxLocation();
 			}
+		}
+
+		private void actualSizeBtn_Click(object sender, EventArgs e)
+		{
+			setZoomText("100%");
 		}
 	}
 }

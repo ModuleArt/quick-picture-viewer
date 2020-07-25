@@ -143,6 +143,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap white_actualsize {
+            get {
+                object obj = ResourceManager.GetObject("white_actualsize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white_autozoom {
             get {
                 object obj = ResourceManager.GetObject("white-autozoom", resourceCulture);

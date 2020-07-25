@@ -50,6 +50,9 @@ namespace quick_picture_viewer
 			}
 
 			favExtTextBox.Text = Properties.Settings.Default.FavoriteExternalApp;
+
+			slideshowTimeNumeric.Value = Properties.Settings.Default.SlideshowTime;
+			slideshowCounterCheckBox.Checked = Properties.Settings.Default.SlideshowCounter;
 		}
 
 		private void applyDarkMode(bool dark)
@@ -82,6 +85,8 @@ namespace quick_picture_viewer
 			closeBtn.SetDarkMode(dark);
 			startupNothingRadio.SetDarkMode(dark);
 			startupPasteRadio.SetDarkMode(dark);
+			slideshowTimeNumeric.SetDarkMode(dark);
+			slideshowCounterCheckBox.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -166,6 +171,18 @@ namespace quick_picture_viewer
 			{
 				favExtTextBox.Text = openFileDialog1.FileName;
 			}
+		}
+
+		private void slideshowCounterCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.SlideshowCounter = slideshowCounterCheckBox.Checked;
+			Properties.Settings.Default.Save();
+		}
+
+		private void slideshowTimeNumeric_ValueChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.SlideshowTime = (int)slideshowTimeNumeric.Value;
+			Properties.Settings.Default.Save();
 		}
 	}
 }

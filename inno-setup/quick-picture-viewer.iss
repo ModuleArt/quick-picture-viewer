@@ -23,7 +23,7 @@ DisableProgramGroupPage=yes
 LicenseFile=D:\Projects\DotNet\quick-picture-viewer\LICENSE.md
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=D:\Projects\DotNet\quick-picture-viewer\InnoSetup
+OutputDir=D:\Projects\DotNet\quick-picture-viewer\inno-setup
 OutputBaseFilename=QuickPictureViewer-Setup
 SetupIconFile=D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico
 Compression=lzma
@@ -62,11 +62,15 @@ Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\bmp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dds.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dib.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\ico.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpeg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\png.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\rle.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\svg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tga.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\webp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
