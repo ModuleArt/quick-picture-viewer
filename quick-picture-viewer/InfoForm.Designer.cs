@@ -82,7 +82,7 @@
 			// 
 			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.extensionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.extensionTextBox.Location = new System.Drawing.Point(269, 147);
+			this.extensionTextBox.Location = new System.Drawing.Point(294, 147);
 			this.extensionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.extensionTextBox.Name = "extensionTextBox";
 			this.extensionTextBox.ReadOnly = true;
@@ -93,7 +93,7 @@
 			// extensionLabel
 			// 
 			this.extensionLabel.AutoSize = true;
-			this.extensionLabel.Location = new System.Drawing.Point(189, 149);
+			this.extensionLabel.Location = new System.Drawing.Point(214, 149);
 			this.extensionLabel.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.extensionLabel.Name = "extensionLabel";
 			this.extensionLabel.Size = new System.Drawing.Size(70, 19);
@@ -392,7 +392,7 @@
 			this.modifiedTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.modifiedTextBox.Name = "modifiedTextBox";
 			this.modifiedTextBox.ReadOnly = true;
-			this.modifiedTextBox.Size = new System.Drawing.Size(217, 25);
+			this.modifiedTextBox.Size = new System.Drawing.Size(242, 25);
 			this.modifiedTextBox.TabIndex = 11;
 			this.modifiedTextBox.Text = "Unknown";
 			// 
@@ -414,7 +414,7 @@
 			this.createdTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.createdTextBox.Name = "createdTextBox";
 			this.createdTextBox.ReadOnly = true;
-			this.createdTextBox.Size = new System.Drawing.Size(217, 25);
+			this.createdTextBox.Size = new System.Drawing.Size(242, 25);
 			this.createdTextBox.TabIndex = 10;
 			this.createdTextBox.Text = "Unknown";
 			// 

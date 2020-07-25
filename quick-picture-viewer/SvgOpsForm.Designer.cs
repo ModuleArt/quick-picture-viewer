@@ -40,7 +40,6 @@
 			this.defaultSizeButton = new System.Windows.Forms.Button();
 			this.size256Button = new System.Windows.Forms.Button();
 			this.presetsLabel = new System.Windows.Forms.Label();
-			this.size1024Button = new System.Windows.Forms.Button();
 			this.size512Button = new System.Windows.Forms.Button();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
@@ -48,6 +47,7 @@
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.size32Button = new System.Windows.Forms.Button();
 			this.size16Button = new System.Windows.Forms.Button();
+			this.autoSizeBtn = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).BeginInit();
 			this.titlePanel.SuspendLayout();
@@ -161,7 +161,7 @@
 			this.size128Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size128Button.FlatAppearance.BorderSize = 0;
 			this.size128Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size128Button.Location = new System.Drawing.Point(174, 213);
+			this.size128Button.Location = new System.Drawing.Point(10, 255);
 			this.size128Button.Margin = new System.Windows.Forms.Padding(0);
 			this.size128Button.Name = "size128Button";
 			this.size128Button.Size = new System.Drawing.Size(72, 32);
@@ -175,7 +175,7 @@
 			this.size64Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size64Button.FlatAppearance.BorderSize = 0;
 			this.size64Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size64Button.Location = new System.Drawing.Point(92, 213);
+			this.size64Button.Location = new System.Drawing.Point(174, 213);
 			this.size64Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size64Button.Name = "size64Button";
 			this.size64Button.Size = new System.Drawing.Size(72, 32);
@@ -192,9 +192,9 @@
 			this.defaultSizeButton.Location = new System.Drawing.Point(10, 171);
 			this.defaultSizeButton.Margin = new System.Windows.Forms.Padding(0);
 			this.defaultSizeButton.Name = "defaultSizeButton";
-			this.defaultSizeButton.Size = new System.Drawing.Size(154, 32);
+			this.defaultSizeButton.Size = new System.Drawing.Size(113, 32);
 			this.defaultSizeButton.TabIndex = 2;
-			this.defaultSizeButton.Text = "Default size";
+			this.defaultSizeButton.Text = "Original size";
 			this.defaultSizeButton.UseVisualStyleBackColor = false;
 			this.defaultSizeButton.Click += new System.EventHandler(this.defaultSizeButton_Click);
 			// 
@@ -203,7 +203,7 @@
 			this.size256Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size256Button.FlatAppearance.BorderSize = 0;
 			this.size256Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size256Button.Location = new System.Drawing.Point(10, 255);
+			this.size256Button.Location = new System.Drawing.Point(92, 255);
 			this.size256Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size256Button.Name = "size256Button";
 			this.size256Button.Size = new System.Drawing.Size(72, 32);
@@ -222,26 +222,12 @@
 			this.presetsLabel.TabIndex = 35;
 			this.presetsLabel.Text = "Presets:";
 			// 
-			// size1024Button
-			// 
-			this.size1024Button.BackColor = System.Drawing.SystemColors.Control;
-			this.size1024Button.FlatAppearance.BorderSize = 0;
-			this.size1024Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size1024Button.Location = new System.Drawing.Point(174, 255);
-			this.size1024Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.size1024Button.Name = "size1024Button";
-			this.size1024Button.Size = new System.Drawing.Size(72, 32);
-			this.size1024Button.TabIndex = 9;
-			this.size1024Button.Text = "1024 px";
-			this.size1024Button.UseVisualStyleBackColor = false;
-			this.size1024Button.Click += new System.EventHandler(this.size1024Button_Click);
-			// 
 			// size512Button
 			// 
 			this.size512Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size512Button.FlatAppearance.BorderSize = 0;
 			this.size512Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size512Button.Location = new System.Drawing.Point(92, 255);
+			this.size512Button.Location = new System.Drawing.Point(174, 255);
 			this.size512Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size512Button.Name = "size512Button";
 			this.size512Button.Size = new System.Drawing.Size(72, 32);
@@ -264,6 +250,7 @@
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
@@ -301,7 +288,7 @@
 			this.size32Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size32Button.FlatAppearance.BorderSize = 0;
 			this.size32Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size32Button.Location = new System.Drawing.Point(10, 213);
+			this.size32Button.Location = new System.Drawing.Point(92, 213);
 			this.size32Button.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.size32Button.Name = "size32Button";
 			this.size32Button.Size = new System.Drawing.Size(72, 32);
@@ -315,7 +302,7 @@
 			this.size16Button.BackColor = System.Drawing.SystemColors.Control;
 			this.size16Button.FlatAppearance.BorderSize = 0;
 			this.size16Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.size16Button.Location = new System.Drawing.Point(174, 171);
+			this.size16Button.Location = new System.Drawing.Point(10, 213);
 			this.size16Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size16Button.Name = "size16Button";
 			this.size16Button.Size = new System.Drawing.Size(72, 32);
@@ -324,12 +311,27 @@
 			this.size16Button.UseVisualStyleBackColor = false;
 			this.size16Button.Click += new System.EventHandler(this.size16Button_Click);
 			// 
+			// autoSizeBtn
+			// 
+			this.autoSizeBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.autoSizeBtn.FlatAppearance.BorderSize = 0;
+			this.autoSizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.autoSizeBtn.Location = new System.Drawing.Point(133, 171);
+			this.autoSizeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.autoSizeBtn.Name = "autoSizeBtn";
+			this.autoSizeBtn.Size = new System.Drawing.Size(113, 32);
+			this.autoSizeBtn.TabIndex = 38;
+			this.autoSizeBtn.Text = "Auto size";
+			this.autoSizeBtn.UseVisualStyleBackColor = false;
+			this.autoSizeBtn.Click += new System.EventHandler(this.autoSizeBtn_Click);
+			// 
 			// SvgOpsForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(256, 436);
+			this.Controls.Add(this.autoSizeBtn);
 			this.Controls.Add(this.size16Button);
 			this.Controls.Add(this.heightNumeric);
 			this.Controls.Add(this.widthLabel);
@@ -337,7 +339,6 @@
 			this.Controls.Add(this.aspectRatioCheckbox);
 			this.Controls.Add(this.widthNumeric);
 			this.Controls.Add(this.size32Button);
-			this.Controls.Add(this.size1024Button);
 			this.Controls.Add(this.size256Button);
 			this.Controls.Add(this.size512Button);
 			this.Controls.Add(this.size128Button);
@@ -374,7 +375,6 @@
 		private QuickLibrary.QlibNumericBox heightNumeric;
 		private QuickLibrary.QlibCheckBox aspectRatioCheckbox;
 		private System.Windows.Forms.Button size512Button;
-		private System.Windows.Forms.Button size1024Button;
 		private System.Windows.Forms.Label presetsLabel;
 		private System.Windows.Forms.Button size256Button;
 		private System.Windows.Forms.Button defaultSizeButton;
@@ -386,5 +386,6 @@
 		private System.Windows.Forms.Button size32Button;
 		private System.Windows.Forms.Button size16Button;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
+		private System.Windows.Forms.Button autoSizeBtn;
 	}
 }

@@ -66,10 +66,11 @@ namespace quick_picture_viewer
 			slideshowTimer.Elapsed += new ElapsedEventHandler(slideshowTimer_Event);
 			slideshowTimer.Interval += 5000;
 
-			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
+			picturePanel.MouseWheel += picturePanel_MouseWheel;
 
 			zoomTextBox.TextBox.AutoSize = false;
 			zoomTextBox.Height = 21;
+			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
 
 			applyDarkTheme(darkMode);
 
@@ -446,7 +447,21 @@ namespace quick_picture_viewer
 
 				pleaseOpenLabel.Invoke((MethodInvoker)(() => pleaseOpenLabel.Visible = false));
 
-				setZoomText("Auto");
+				if ((originalImage.Width < picturePanel.Width - 32) && (originalImage.Height < picturePanel.Height - 32))
+				{
+					if (zoomTextBox.Text == "100%")
+					{
+						setZoomFactor(100);
+					}
+					else
+					{
+						setZoomText("100%");
+					}
+				}
+				else
+				{
+					setZoomText("Auto");
+				}
 			}
 		}
 
@@ -524,8 +539,8 @@ namespace quick_picture_viewer
 			int newWidth = Convert.ToInt32(width * zoomFactor / 100);
 			int newHeight = Convert.ToInt32(height * zoomFactor / 100);
 
-			int newScrollH = Convert.ToInt32(picturePanel.HorizontalScroll.Value * zoomFactor / 100);
-			int newScrollV = Convert.ToInt32(picturePanel.VerticalScroll.Value * zoomFactor / 100);
+			//int newScrollH = Convert.ToInt32(picturePanel.HorizontalScroll.Value * zoomFactor / 100);
+			//int newScrollV = Convert.ToInt32(picturePanel.VerticalScroll.Value * zoomFactor / 100);
 
 			Size newSize = new Size(newWidth, newHeight);
 
@@ -851,6 +866,21 @@ namespace quick_picture_viewer
 					{
 						zoomOut();
 					}
+				}
+			}
+		}
+
+		private void TextBox_MouseWheel(object sender, MouseEventArgs e)
+		{
+			if (originalImage != null)
+			{
+				if (e.Delta > 0)
+				{
+					zoomIn();
+				}
+				else if (e.Delta < 0)
+				{
+					zoomOut();
 				}
 			}
 		}
@@ -1588,14 +1618,6 @@ namespace quick_picture_viewer
 			zoomOutTimer.Start();
 		}
 
-		private void MainForm_Resize(object sender, EventArgs e)
-		{
-			if (!autoZoom)
-			{
-				updatePictureBoxLocation();
-			}
-		}
-
 		private void showSuggestion(string text)
 		{
 			suggestionLabel.Text = text;
@@ -1634,7 +1656,12 @@ namespace quick_picture_viewer
 
 			if (type == "svg")
 			{
-				SvgOpsForm sof = new SvgOpsForm(Path.Combine(currentFolder, currentFile), pictureBox.Image.Width, pictureBox.Image.Height, darkMode);
+				SvgOpsForm sof = new SvgOpsForm(Path.Combine(currentFolder, currentFile), 
+					pictureBox.Image.Width, 
+					pictureBox.Image.Height,
+					picturePanel.Width - 32,
+					picturePanel.Height - 32,
+					darkMode);
 				sof.Owner = this;
 				sof.ShowDialog();
 			}
@@ -1870,6 +1897,14 @@ namespace quick_picture_viewer
 				pictureBox.BackColor = colorDialog1.Color;
 				Properties.Settings.Default.BackColor = colorDialog1.Color.ToArgb().ToString();
 				Properties.Settings.Default.Save();
+			}
+		}
+
+		private void MainForm_ResizeEnd(object sender, EventArgs e)
+		{
+			if (!autoZoom)
+			{
+				updatePictureBoxLocation();
 			}
 		}
 	}

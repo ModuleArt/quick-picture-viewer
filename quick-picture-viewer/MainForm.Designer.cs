@@ -103,9 +103,9 @@
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionLabel = new System.Windows.Forms.Label();
-			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.typeOpsButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.titlePanel.SuspendLayout();
@@ -541,7 +541,7 @@
 			this.zoomTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.zoomTextBox.Margin = new System.Windows.Forms.Padding(7, -1, 7, -1);
 			this.zoomTextBox.Name = "zoomTextBox";
-			this.zoomTextBox.Size = new System.Drawing.Size(50, 24);
+			this.zoomTextBox.Size = new System.Drawing.Size(44, 24);
 			this.zoomTextBox.ToolTipText = "Zoom";
 			this.zoomTextBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
@@ -878,7 +878,7 @@
 			// 
 			this.backClearBtn.Image = ((System.Drawing.Image)(resources.GetObject("backClearBtn.Image")));
 			this.backClearBtn.Name = "backClearBtn";
-			this.backClearBtn.Size = new System.Drawing.Size(180, 24);
+			this.backClearBtn.Size = new System.Drawing.Size(158, 24);
 			this.backClearBtn.Text = "Clear";
 			this.backClearBtn.Click += new System.EventHandler(this.backClearBtn_Click);
 			// 
@@ -886,13 +886,13 @@
 			// 
 			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator1.Name = "qlibMenuSeparator1";
-			this.qlibMenuSeparator1.Size = new System.Drawing.Size(177, 6);
+			this.qlibMenuSeparator1.Size = new System.Drawing.Size(155, 6);
 			// 
 			// backCustomBtn
 			// 
 			this.backCustomBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
 			this.backCustomBtn.Name = "backCustomBtn";
-			this.backCustomBtn.Size = new System.Drawing.Size(180, 24);
+			this.backCustomBtn.Size = new System.Drawing.Size(158, 24);
 			this.backCustomBtn.Text = "Choose color";
 			this.backCustomBtn.Click += new System.EventHandler(this.backCustomBtn_Click);
 			// 
@@ -953,7 +953,6 @@
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
 			this.picturePanel.Controls.Add(this.suggestionLabel);
-			this.picturePanel.Controls.Add(this.typeOpsButton);
 			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 38);
@@ -982,31 +981,6 @@
 			this.suggestionLabel.Text = "Suggestion";
 			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.suggestionLabel.Visible = false;
-			// 
-			// typeOpsButton
-			// 
-			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.typeOpsButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
-			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(673, 405);
-			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(27);
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
-			this.typeOpsButton.TabIndex = 0;
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.Text = " TYPE options";
-			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.Visible = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
 			// 
 			// pleaseOpenLabel
 			// 
@@ -1039,12 +1013,38 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
+			// typeOpsButton
+			// 
+			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.typeOpsButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
+			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.typeOpsButton.Location = new System.Drawing.Point(673, 443);
+			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(27);
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
+			this.typeOpsButton.TabIndex = 0;
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.Text = " TYPE options";
+			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.Visible = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
+			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(813, 531);
+			this.Controls.Add(this.typeOpsButton);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.picturePanel);
 			this.Controls.Add(this.statusStrip1);
@@ -1060,10 +1060,10 @@
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
+			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-			this.Resize += new System.EventHandler(this.MainForm_Resize);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();

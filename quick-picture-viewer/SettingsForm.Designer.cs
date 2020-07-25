@@ -45,13 +45,13 @@
 			this.startupNothingRadio = new QuickLibrary.QlibRadioButton();
 			this.startupPasteRadio = new QuickLibrary.QlibRadioButton();
 			this.externalPage = new System.Windows.Forms.TabPage();
+			this.browseBtn = new System.Windows.Forms.Button();
 			this.favExtTextBox = new QuickLibrary.QlibTextBox();
 			this.favExtLabel = new System.Windows.Forms.Label();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.browseBtn = new System.Windows.Forms.Button();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
@@ -275,6 +275,27 @@
 			this.externalPage.TabIndex = 4;
 			this.externalPage.Text = "External";
 			// 
+			// browseBtn
+			// 
+			this.browseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.browseBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.browseBtn.FlatAppearance.BorderSize = 0;
+			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.browseBtn.Image = ((System.Drawing.Image)(resources.GetObject("browseBtn.Image")));
+			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.browseBtn.Location = new System.Drawing.Point(172, 74);
+			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.browseBtn.Name = "browseBtn";
+			this.browseBtn.Size = new System.Drawing.Size(120, 32);
+			this.browseBtn.TabIndex = 2;
+			this.browseBtn.TabStop = false;
+			this.browseBtn.Text = " Browse app";
+			this.browseBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.browseBtn.UseVisualStyleBackColor = false;
+			this.browseBtn.Click += new System.EventHandler(this.browseBtn_Click);
+			// 
 			// favExtTextBox
 			// 
 			this.favExtTextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -331,27 +352,6 @@
 			this.titleLabel.Size = new System.Drawing.Size(58, 19);
 			this.titleLabel.TabIndex = 16;
 			this.titleLabel.Text = "Settings";
-			// 
-			// browseBtn
-			// 
-			this.browseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.browseBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.browseBtn.FlatAppearance.BorderSize = 0;
-			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.browseBtn.Image = ((System.Drawing.Image)(resources.GetObject("browseBtn.Image")));
-			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.browseBtn.Location = new System.Drawing.Point(172, 74);
-			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.browseBtn.Name = "browseBtn";
-			this.browseBtn.Size = new System.Drawing.Size(120, 32);
-			this.browseBtn.TabIndex = 2;
-			this.browseBtn.TabStop = false;
-			this.browseBtn.Text = " Browse app";
-			this.browseBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.browseBtn.UseVisualStyleBackColor = false;
-			this.browseBtn.Click += new System.EventHandler(this.browseBtn_Click);
 			// 
 			// openFileDialog1
 			// 

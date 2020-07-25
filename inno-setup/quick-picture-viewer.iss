@@ -62,8 +62,12 @@ Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\bmp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dib.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpeg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\png.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\rle.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\webp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

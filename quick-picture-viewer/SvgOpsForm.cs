@@ -8,10 +8,12 @@ namespace quick_picture_viewer
 {
 	public partial class SvgOpsForm : QlibFixedForm
 	{
-		string path;
-		float aspectRatio;
+		private string path;
+		private float aspectRatio;
+		private int panelWidth;
+		private int panelHeight;
 
-		public SvgOpsForm(string path, int width, int height, bool darkMode)
+		public SvgOpsForm(string path, int imageWidth, int imageHeight, int panelWidth, int panelHeight, bool darkMode)
 		{
 			if (darkMode)
 			{
@@ -19,7 +21,9 @@ namespace quick_picture_viewer
 			}
 
 			this.path = path;
-			this.aspectRatio = width / (float)height;
+			this.aspectRatio = imageWidth / (float)imageHeight;
+			this.panelWidth = panelWidth;
+			this.panelHeight = panelHeight;
 
 			InitializeComponent();
 
@@ -27,8 +31,8 @@ namespace quick_picture_viewer
 
 			applyDarkMode(darkMode);
 
-			widthNumeric.Value = width;
-			heightNumeric.Value = height;
+			widthNumeric.Value = imageWidth;
+			heightNumeric.Value = imageHeight;
 		}
 
 		private void applyDarkMode(bool dark)
@@ -39,13 +43,13 @@ namespace quick_picture_viewer
 				this.ForeColor = Color.White;
 
 				defaultSizeButton.BackColor = ThemeManager.DarkSecondColor;
+				autoSizeBtn.BackColor = ThemeManager.DarkSecondColor;
 				size16Button.BackColor = ThemeManager.DarkSecondColor;
 				size32Button.BackColor = ThemeManager.DarkSecondColor;
 				size64Button.BackColor = ThemeManager.DarkSecondColor;
 				size128Button.BackColor = ThemeManager.DarkSecondColor;
 				size256Button.BackColor = ThemeManager.DarkSecondColor;
 				size512Button.BackColor = ThemeManager.DarkSecondColor;
-				size1024Button.BackColor = ThemeManager.DarkSecondColor;
 
 				okButton.BackColor = ThemeManager.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_size;
@@ -93,11 +97,6 @@ namespace quick_picture_viewer
 		private void size512Button_Click(object sender, EventArgs e)
 		{
 			setPreset(512);
-		}
-
-		private void size1024Button_Click(object sender, EventArgs e)
-		{
-			setPreset(1024);
 		}
 
 		private void setPreset(int size)
@@ -164,6 +163,25 @@ namespace quick_picture_viewer
 		private void size16Button_Click(object sender, EventArgs e)
 		{
 			setPreset(16);
+		}
+
+		private void autoSizeBtn_Click(object sender, EventArgs e)
+		{
+			double f;
+			if (panelWidth < panelHeight)
+			{
+				f = panelWidth;
+			}
+			else
+			{
+				f = panelHeight;
+			}
+			Console.WriteLine(f);
+
+			int k = (int)(8 * (Math.Round(f / 8.0)));
+			Console.WriteLine(k);
+
+			setPreset(k);
 		}
 	}
 }
