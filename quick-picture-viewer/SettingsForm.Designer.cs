@@ -83,6 +83,7 @@
 			this.settingsTabs.Controls.Add(this.slideshowPage);
 			this.settingsTabs.Controls.Add(this.startupPage);
 			this.settingsTabs.Controls.Add(this.externalPage);
+			this.settingsTabs.EnableDragDrop = false;
 			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.ControlLight;
 			this.settingsTabs.HorizontalLineColor = System.Drawing.Color.Transparent;
 			this.settingsTabs.ItemSize = new System.Drawing.Size(240, 16);
