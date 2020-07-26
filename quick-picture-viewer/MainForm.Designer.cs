@@ -103,11 +103,11 @@
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.typeOpsButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.titlePanel.SuspendLayout();
@@ -545,6 +545,7 @@
 			this.zoomTextBox.Name = "zoomTextBox";
 			this.zoomTextBox.Size = new System.Drawing.Size(44, 24);
 			this.zoomTextBox.ToolTipText = "Zoom";
+			this.zoomTextBox.MouseEnter += new System.EventHandler(this.zoomTextBox_MouseEnter);
 			this.zoomTextBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
 			// zoomInButton
@@ -965,6 +966,31 @@
 			// 
 			this.colorDialog1.Color = System.Drawing.Color.Blue;
 			// 
+			// typeOpsButton
+			// 
+			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.typeOpsButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
+			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.typeOpsButton.Location = new System.Drawing.Point(673, 443);
+			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(27);
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
+			this.typeOpsButton.TabIndex = 0;
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.Text = " TYPE options";
+			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.Visible = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
+			// 
 			// picturePanel
 			// 
 			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1033,31 +1059,6 @@
 			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// typeOpsButton
-			// 
-			this.typeOpsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.typeOpsButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
-			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(673, 443);
-			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(27);
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
-			this.typeOpsButton.TabIndex = 0;
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.Text = " TYPE options";
-			this.typeOpsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.Visible = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
 			// 
 			// MainForm
 			// 

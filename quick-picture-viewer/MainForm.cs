@@ -1907,6 +1907,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
+			picturePanel.Focus();
 			this.AllowDrop = true;
 		}
 
@@ -1938,6 +1939,11 @@ namespace quick_picture_viewer
 		private void actualSizeBtn_Click(object sender, EventArgs e)
 		{
 			setZoomText("100%");
+		}
+
+		private void zoomTextBox_MouseEnter(object sender, EventArgs e)
+		{
+			zoomTextBox.Focus();
 		}
 	}
 }
