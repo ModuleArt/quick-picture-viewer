@@ -24,7 +24,7 @@
 <p align="center">
   Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.0.0">v2.0.0 "Modernity"</a> (3.3 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.0.0/QuickPictureViewer-Setup.exe">Download</a><br>
   Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5 "Classic"</a> (2.5 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a><br><br>
-  Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">.Net 4.8</a><br><br>
+  Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">.Net 4.8</a> / <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
 
