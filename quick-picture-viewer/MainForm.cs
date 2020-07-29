@@ -260,11 +260,19 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					using (Image img = Image.FromFile(path))
+					if (ext == ".gif")
 					{
-						openImage(new Bitmap(img), Path.GetDirectoryName(path), Path.GetFileName(path));
-						showTypeOpsButton(false, null);
+						openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
+					else
+					{
+						using (Image img = Image.FromFile(path))
+						{
+							openImage(new Bitmap(img), Path.GetDirectoryName(path), Path.GetFileName(path));
+						}
+					}
+					
+					showTypeOpsButton(false, null);
 				}
 			}
 			catch (Exception ex)
@@ -1840,22 +1848,22 @@ namespace quick_picture_viewer
 
 		private void MainForm_Activated(object sender, EventArgs e)
 		{
-			if (darkMode)
-			{
-				titlePanel.BackColor = ThemeManager.DarkMainColor;
-				toolStrip1.BackColor = ThemeManager.DarkMainColor;
-				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
-			}
+			//if (darkMode)
+			//{
+			//	titlePanel.BackColor = ThemeManager.DarkMainColor;
+			//	toolStrip1.BackColor = ThemeManager.DarkMainColor;
+			//	zoomTextBox.BackColor = ThemeManager.DarkMainColor;
+			//}
 		}
 
 		private void MainForm_Deactivate(object sender, EventArgs e)
 		{
-			if (darkMode)
-			{
-				titlePanel.BackColor = ThemeManager.DarkTitlebarUnfocus;
-				toolStrip1.BackColor = ThemeManager.DarkTitlebarUnfocus;
-				zoomTextBox.BackColor = ThemeManager.DarkTitlebarUnfocus;
-			}
+			//if (darkMode)
+			//{
+			//	titlePanel.BackColor = ThemeManager.DarkTitlebarUnfocus;
+			//	toolStrip1.BackColor = ThemeManager.DarkTitlebarUnfocus;
+			//	zoomTextBox.BackColor = ThemeManager.DarkTitlebarUnfocus;
+			//}
 		}
 
 		private void externalRunBtn_Click(object sender, EventArgs e)
