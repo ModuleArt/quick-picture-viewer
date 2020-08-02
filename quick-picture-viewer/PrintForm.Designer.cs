@@ -243,7 +243,7 @@
 			this.printPreviewControl1.Location = new System.Drawing.Point(224, 32);
 			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.printPreviewControl1.Name = "printPreviewControl1";
-			this.printPreviewControl1.Size = new System.Drawing.Size(234, 244);
+			this.printPreviewControl1.Size = new System.Drawing.Size(233, 244);
 			this.printPreviewControl1.TabIndex = 0;
 			this.printPreviewControl1.TabStop = false;
 			// 
@@ -261,6 +261,7 @@
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;

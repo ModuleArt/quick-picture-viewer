@@ -23,7 +23,7 @@ namespace quick_picture_viewer
 			this.darkMode = darkMode;
 
 			InitializeComponent();
-
+			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
 
 			copyTooltip.SetToolTip(copyNameButton, "Copy value");

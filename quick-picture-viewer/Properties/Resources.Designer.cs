@@ -283,6 +283,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap white_frame {
+            get {
+                object obj = ResourceManager.GetObject("white_frame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white_fullscreen {
             get {
                 object obj = ResourceManager.GetObject("white-fullscreen", resourceCulture);

@@ -42,10 +42,6 @@
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-			this.titlePanel = new System.Windows.Forms.Panel();
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.maximizeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.minimizeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.toolStrip1 = new QuickLibrary.QlibToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
@@ -80,11 +76,11 @@
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
 			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,6 +94,7 @@
 			this.qlibMenuSeparator1 = new QuickLibrary.QlibMenuSeparator();
 			this.backCustomBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.onTopButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.framelessBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator10 = new QuickLibrary.QlibMenuSeparator();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,7 +107,6 @@
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
-			this.titlePanel.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -146,10 +142,10 @@
             this.dateCreatedLabel,
             this.dateModifiedLabel});
 			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.statusStrip1.Location = new System.Drawing.Point(0, 502);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 417);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.ShowItemToolTips = true;
-			this.statusStrip1.Size = new System.Drawing.Size(813, 29);
+			this.statusStrip1.Size = new System.Drawing.Size(684, 29);
 			this.statusStrip1.TabIndex = 4;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -230,82 +226,11 @@
 			this.printDocument1.OriginAtMargins = true;
 			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
 			// 
-			// titlePanel
-			// 
-			this.titlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.titlePanel.BackColor = System.Drawing.Color.White;
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Controls.Add(this.maximizeBtn);
-			this.titlePanel.Controls.Add(this.minimizeBtn);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(813, 38);
-			this.titlePanel.TabIndex = 6;
-			// 
-			// closeBtn
-			// 
-			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.IsRed = true;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(781, 0);
-			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.closeBtn.Name = "closeBtn";
-			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 20;
-			this.closeBtn.TabStop = false;
-			this.closeBtn.UseVisualStyleBackColor = false;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-			// 
-			// maximizeBtn
-			// 
-			this.maximizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.maximizeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_square;
-			this.maximizeBtn.FlatAppearance.BorderSize = 0;
-			this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.maximizeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_square;
-			this.maximizeBtn.IsRed = false;
-			this.maximizeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_square;
-			this.maximizeBtn.Location = new System.Drawing.Point(749, 0);
-			this.maximizeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.maximizeBtn.Name = "maximizeBtn";
-			this.maximizeBtn.Size = new System.Drawing.Size(32, 32);
-			this.maximizeBtn.TabIndex = 18;
-			this.maximizeBtn.TabStop = false;
-			this.maximizeBtn.UseVisualStyleBackColor = false;
-			this.maximizeBtn.Click += new System.EventHandler(this.maximizeBtn_Click);
-			// 
-			// minimizeBtn
-			// 
-			this.minimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.minimizeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_line;
-			this.minimizeBtn.FlatAppearance.BorderSize = 0;
-			this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.minimizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("minimizeBtn.Image")));
-			this.minimizeBtn.IsRed = false;
-			this.minimizeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_line;
-			this.minimizeBtn.Location = new System.Drawing.Point(717, 0);
-			this.minimizeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.minimizeBtn.Name = "minimizeBtn";
-			this.minimizeBtn.Size = new System.Drawing.Size(32, 32);
-			this.minimizeBtn.TabIndex = 19;
-			this.minimizeBtn.TabStop = false;
-			this.minimizeBtn.UseVisualStyleBackColor = false;
-			this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
-			// 
 			// toolStrip1
 			// 
-			this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.toolStrip1.AutoSize = false;
 			this.toolStrip1.BackColor = System.Drawing.Color.White;
 			this.toolStrip1.CanOverflow = false;
-			this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
 			this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -328,18 +253,18 @@
             this.copyButton,
             this.pasteButton,
             this.screenshotButton,
-            this.toolStripSeparator5,
+            this.toolStripSeparator3,
             this.checkboardButton,
             this.fullscreenButton,
             this.miniViewButton,
-            this.toolStripSeparator6,
+            this.toolStripSeparator5,
             this.moreButton});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+			this.toolStrip1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-			this.toolStrip1.Size = new System.Drawing.Size(717, 32);
+			this.toolStrip1.Size = new System.Drawing.Size(684, 32);
 			this.toolStrip1.TabIndex = 1;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -544,7 +469,9 @@
 			this.zoomTextBox.Margin = new System.Windows.Forms.Padding(7, -1, 7, -1);
 			this.zoomTextBox.Name = "zoomTextBox";
 			this.zoomTextBox.Size = new System.Drawing.Size(44, 24);
+			this.zoomTextBox.Text = "Auto";
 			this.zoomTextBox.ToolTipText = "Zoom";
+			this.zoomTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zoomTextBox_KeyPress);
 			this.zoomTextBox.MouseEnter += new System.EventHandler(this.zoomTextBox_MouseEnter);
 			this.zoomTextBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
@@ -742,12 +669,12 @@
 			this.screenshotButton.ToolTipText = "Capture screen | F12";
 			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
 			// 
-			// toolStripSeparator5
+			// toolStripSeparator3
 			// 
-			this.toolStripSeparator5.AutoSize = false;
-			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			this.toolStripSeparator5.Size = new System.Drawing.Size(2, 16);
+			this.toolStripSeparator3.AutoSize = false;
+			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new System.Drawing.Size(2, 16);
 			// 
 			// checkboardButton
 			// 
@@ -788,12 +715,12 @@
 			this.miniViewButton.ToolTipText = "Picture in picture | Ctrl+Shift+P";
 			this.miniViewButton.Click += new System.EventHandler(this.miniViewButton_Click);
 			// 
-			// toolStripSeparator6
+			// toolStripSeparator5
 			// 
-			this.toolStripSeparator6.AutoSize = false;
-			this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-			this.toolStripSeparator6.Name = "toolStripSeparator6";
-			this.toolStripSeparator6.Size = new System.Drawing.Size(2, 16);
+			this.toolStripSeparator5.AutoSize = false;
+			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(2, 16);
 			// 
 			// moreButton
 			// 
@@ -809,6 +736,7 @@
             this.toolStripSeparator9,
             this.backColorBtn,
             this.onTopButton,
+            this.framelessBtn,
             this.newWindowButton,
             this.toolStripSeparator10,
             this.settingsButton,
@@ -927,13 +855,22 @@
 			this.onTopButton.Text = "Always on top";
 			this.onTopButton.Click += new System.EventHandler(this.onTopButton_Click);
 			// 
+			// framelessBtn
+			// 
+			this.framelessBtn.Image = ((System.Drawing.Image)(resources.GetObject("framelessBtn.Image")));
+			this.framelessBtn.Name = "framelessBtn";
+			this.framelessBtn.ShortcutKeys = System.Windows.Forms.Keys.F10;
+			this.framelessBtn.Size = new System.Drawing.Size(330, 24);
+			this.framelessBtn.Text = "Frameless mode";
+			this.framelessBtn.Click += new System.EventHandler(this.framelessBtn_Click);
+			// 
 			// newWindowButton
 			// 
 			this.newWindowButton.Image = ((System.Drawing.Image)(resources.GetObject("newWindowButton.Image")));
 			this.newWindowButton.Name = "newWindowButton";
 			this.newWindowButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
 			this.newWindowButton.Size = new System.Drawing.Size(330, 24);
-			this.newWindowButton.Text = "New window";
+			this.newWindowButton.Text = "Always on top";
 			this.newWindowButton.Click += new System.EventHandler(this.newWindowButton_Click);
 			// 
 			// toolStripSeparator10
@@ -977,7 +914,7 @@
 			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.typeOpsButton.Image = ((System.Drawing.Image)(resources.GetObject("typeOpsButton.Image")));
 			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.typeOpsButton.Location = new System.Drawing.Point(673, 443);
+			this.typeOpsButton.Location = new System.Drawing.Point(544, 358);
 			this.typeOpsButton.Margin = new System.Windows.Forms.Padding(27);
 			this.typeOpsButton.Name = "typeOpsButton";
 			this.typeOpsButton.Size = new System.Drawing.Size(113, 32);
@@ -1002,10 +939,10 @@
 			this.picturePanel.Controls.Add(this.suggestionLabel);
 			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
-			this.picturePanel.Location = new System.Drawing.Point(0, 38);
+			this.picturePanel.Location = new System.Drawing.Point(0, 32);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(813, 464);
+			this.picturePanel.Size = new System.Drawing.Size(684, 385);
 			this.picturePanel.TabIndex = 2;
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
@@ -1036,7 +973,7 @@
 			this.pleaseOpenLabel.Location = new System.Drawing.Point(0, 0);
 			this.pleaseOpenLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
-			this.pleaseOpenLabel.Size = new System.Drawing.Size(813, 464);
+			this.pleaseOpenLabel.Size = new System.Drawing.Size(684, 385);
 			this.pleaseOpenLabel.TabIndex = 5;
 			this.pleaseOpenLabel.Text = "Please open an image to view or edit";
 			this.pleaseOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1050,7 +987,7 @@
 			this.pictureBox.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(813, 464);
+			this.pictureBox.Size = new System.Drawing.Size(684, 385);
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
@@ -1063,15 +1000,12 @@
 			// MainForm
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.ClientSize = new System.Drawing.Size(813, 531);
+			this.ClientSize = new System.Drawing.Size(684, 446);
 			this.Controls.Add(this.typeOpsButton);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.picturePanel);
 			this.Controls.Add(this.statusStrip1);
-			this.Controls.Add(this.titlePanel);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.MinimumSize = new System.Drawing.Size(300, 300);
@@ -1089,7 +1023,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
-			this.titlePanel.ResumeLayout(false);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.picturePanel.ResumeLayout(false);
@@ -1131,7 +1064,6 @@
 		private CustomPanel picturePanel;
 		private System.Windows.Forms.PrintDialog printDialog1;
 		private System.Drawing.Printing.PrintDocument printDocument1;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripStatusLabel hasChangesLabel;
 		private System.Windows.Forms.ToolStripButton showFileButton;
 		private System.Windows.Forms.ToolStripButton checkboardButton;
@@ -1162,16 +1094,12 @@
 		private System.Windows.Forms.ToolStripDropDownButton copyButton;
 		private System.Windows.Forms.ToolStripMenuItem copyImageButton;
 		private System.Windows.Forms.ToolStripMenuItem copyFileBtn;
-		private QuickLibrary.QlibTitlebarButton minimizeBtn;
-		private QuickLibrary.QlibTitlebarButton maximizeBtn;
 		private System.Windows.Forms.ToolStripMenuItem printButton;
-		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.ToolStripMenuItem onTopButton;
 		private System.Windows.Forms.ToolStripTextBox zoomTextBox;
 		private System.Windows.Forms.ToolStripDropDownButton externalBtn;
 		private System.Windows.Forms.ToolStripMenuItem externalRunBtn;
 		private System.Windows.Forms.ToolStripMenuItem externalChooseBtn;
-		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.ToolStripMenuItem externalFavoriteBtn;
 		private System.Windows.Forms.ToolStripMenuItem backColorBtn;
 		private System.Windows.Forms.ToolStripMenuItem backClearBtn;
@@ -1181,6 +1109,8 @@
 		private System.Windows.Forms.ToolStripMenuItem deleteBtn;
 		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator2;
 		private System.Windows.Forms.ToolStripMenuItem aboutBtn;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+		private System.Windows.Forms.ToolStripMenuItem framelessBtn;
 	}
 }
 

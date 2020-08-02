@@ -20,7 +20,7 @@ namespace quick_picture_viewer
 			this.bmp = bmp;
 
 			InitializeComponent();
-
+			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
 
 			applyDarkMode(darkMode);

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	public partial class MainForm : QlibSizableForm
+	public partial class MainForm : Form
 	{
 		private string openPath;
 		private int zoomFactor = 100;
@@ -33,6 +33,7 @@ namespace quick_picture_viewer
 		private bool slideshow = false;
 		private int slideshowCounter = 0;
 		private GCHandle tmpGcHandle;
+		private bool dragImage = false;
 
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
@@ -54,8 +55,6 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 
-			SetDraggableControls(new List<Control>() { titlePanel, toolStrip1 });
-
 			settingsButton.ShortcutKeyDisplayString = "Ctrl+Comma";
 
 			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
@@ -74,14 +73,6 @@ namespace quick_picture_viewer
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
 
 			applyDarkTheme(darkMode);
-
-			if (!ThemeManager.isWindows10())
-			{
-				minimizeBtn.Height += 6;
-				maximizeBtn.Height += 6;
-				closeBtn.Height += 6;
-				toolStrip1.Height += 6;
-			}
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -187,6 +178,7 @@ namespace quick_picture_viewer
 				else
 				{
 					UpdateForm updateDialog = new UpdateForm(checker, "Quick Picture Viewer", darkMode);
+					updateDialog.Owner = this;
 					updateDialog.TopMost = alwaysOnTop;
 
 					DialogResult result = updateDialog.ShowDialog();
@@ -639,10 +631,7 @@ namespace quick_picture_viewer
 		{
 			AboutForm aboutBox = new AboutForm(darkMode);
 			aboutBox.Owner = this;
-			if (alwaysOnTop)
-			{
-				aboutBox.TopMost = true;
-			}
+			aboutBox.TopMost = alwaysOnTop;
 			aboutBox.ShowDialog();
 		}
 
@@ -743,8 +732,43 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
-			if (currentFile != null) saveFileDialog1.FileName = currentFile;
-			if (currentFolder != null) saveFileDialog1.InitialDirectory = currentFolder;
+			if (currentFile != null)
+			{
+				saveFileDialog1.FileName = currentFile;
+				saveFileDialog1.InitialDirectory = currentFolder;
+
+				switch (Path.GetExtension(currentFile))
+				{
+					case ".png":
+						saveFileDialog1.FilterIndex = 1;
+						break;
+					case ".jpg":
+					case ".jpeg":
+					case ".jpe":
+					case ".jfif":
+					case ".exif":
+						saveFileDialog1.FilterIndex = 2;
+						break;
+					case ".gif":
+						saveFileDialog1.FilterIndex = 3;
+						break;
+					case ".bmp":
+					case ".dib":
+					case ".rle":
+						saveFileDialog1.FilterIndex = 4;
+						break;
+					case ".tiff":
+					case ".tif":
+						saveFileDialog1.FilterIndex = 5;
+						break;
+					case ".ico":
+						saveFileDialog1.FilterIndex = 6;
+						break;
+					case ".webp":
+						saveFileDialog1.FilterIndex = 7;
+						break;
+				}
+			}
 
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
@@ -812,14 +836,9 @@ namespace quick_picture_viewer
 				if (autoZoom)
 				{
 					this.AllowDrop = false;
-					if (currentFile != null)
+					if (currentFile != null || originalImage != null)
 					{
-						string[] paths = { Path.Combine(currentFolder, currentFile) };
-						this.DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
-					}
-					else if (originalImage != null)
-					{
-						this.DoDragDrop(originalImage, DragDropEffects.Copy);
+						dragImage = true;
 					}
 				}
 				else
@@ -842,41 +861,60 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseMove(object sender, MouseEventArgs e)
 		{
-			if (e.Button == MouseButtons.Left && !autoZoom)
+			if (e.Button == MouseButtons.Left)
 			{
-				int newX = panelMouseDownLocation.X - this.PointToClient(Cursor.Position).X;
-				int newY = panelMouseDownLocation.Y - this.PointToClient(Cursor.Position).Y;
-
-				if (newX > picturePanel.HorizontalScroll.Minimum)
+				if (autoZoom)
 				{
-					if (newX < picturePanel.HorizontalScroll.Maximum)
+					if (dragImage)
 					{
-						picturePanel.HorizontalScroll.Value = newX;
-					}
-					else
-					{
-						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
-					}
-				}
-				else
-				{
-					picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
-				}
-
-				if (newY > picturePanel.VerticalScroll.Minimum)
-				{
-					if (newY < picturePanel.VerticalScroll.Maximum)
-					{
-						picturePanel.VerticalScroll.Value = newY;
-					}
-					else
-					{
-						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
+						if (currentFile != null)
+						{
+							string[] paths = { Path.Combine(currentFolder, currentFile) };
+							this.DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
+						}
+						else if (originalImage != null)
+						{
+							this.DoDragDrop(originalImage, DragDropEffects.Copy);
+						}
+						dragImage = false;
 					}
 				}
 				else
 				{
-					picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
+					int newX = panelMouseDownLocation.X - this.PointToClient(Cursor.Position).X;
+					int newY = panelMouseDownLocation.Y - this.PointToClient(Cursor.Position).Y;
+
+					if (newX > picturePanel.HorizontalScroll.Minimum)
+					{
+						if (newX < picturePanel.HorizontalScroll.Maximum)
+						{
+							picturePanel.HorizontalScroll.Value = newX;
+						}
+						else
+						{
+							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
+						}
+					}
+					else
+					{
+						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
+					}
+
+					if (newY > picturePanel.VerticalScroll.Minimum)
+					{
+						if (newY < picturePanel.VerticalScroll.Maximum)
+						{
+							picturePanel.VerticalScroll.Value = newY;
+						}
+						else
+						{
+							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
+						}
+					}
+					else
+					{
+						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
+					}
 				}
 			}
 		}
@@ -937,6 +975,7 @@ namespace quick_picture_viewer
 					picturePanel.Cursor = new Cursor(ptr);
 				}
 
+				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = FormWindowState.Maximized;
 
 				picturePanel.Top = 0;
@@ -955,8 +994,10 @@ namespace quick_picture_viewer
 			{
 				picturePanel.Cursor = Cursors.Default;
 
-				picturePanel.Top = titlePanel.Height;
-				picturePanel.Height = this.ClientSize.Height - titlePanel.Height - statusStrip1.Height;
+				this.FormBorderStyle = FormBorderStyle.Sizable;
+
+				picturePanel.Top = toolStrip1.Height;
+				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
 				picturePanel.BackColor = Color.Transparent;
 
 				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 27;
@@ -1323,10 +1364,7 @@ namespace quick_picture_viewer
 		private void setAsDesktopButton_Click(object sender, EventArgs e)
 		{
 			WallpaperForm wallpaperForm = new WallpaperForm(originalImage, darkMode);
-			if (alwaysOnTop)
-			{
-				wallpaperForm.TopMost = true;
-			}
+			wallpaperForm.TopMost = alwaysOnTop;
 			wallpaperForm.ShowDialog();
 		}
 
@@ -1413,10 +1451,7 @@ namespace quick_picture_viewer
 		private void infoButton_Click(object sender, EventArgs e)
 		{
 			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile, darkMode);
-			if (alwaysOnTop)
-			{
-				infoForm.TopMost = true;
-			}
+			infoForm.TopMost = alwaysOnTop;
 			infoForm.ShowDialog();
 		}
 
@@ -1446,7 +1481,6 @@ namespace quick_picture_viewer
 				this.ForeColor = Color.White;
 				this.BackColor = ThemeManager.DarkBackColor;
 				statusStrip1.BackColor = ThemeManager.DarkSecondColor;
-				titlePanel.BackColor = ThemeManager.DarkMainColor;
 
 				openButton.Image = Properties.Resources.white_open;
 				saveAsButton.Image = Properties.Resources.white_saveas;
@@ -1508,6 +1542,7 @@ namespace quick_picture_viewer
 				backColorBtn.DropDown.ForeColor = Color.White;
 				backClearBtn.Image = Properties.Resources.white_erase;
 				backCustomBtn.Image = Properties.Resources.white_palette;
+				framelessBtn.Image = Properties.Resources.white_frame;
 
 				directoryLabel.Image = Properties.Resources.white_picfolder;
 				fileLabel.Image = Properties.Resources.white_imgfile;
@@ -1526,9 +1561,6 @@ namespace quick_picture_viewer
 			}
 
 			toolStrip1.SetDarkMode(dark, true);
-			minimizeBtn.SetDarkMode(dark);
-			maximizeBtn.SetDarkMode(dark);
-			closeBtn.SetDarkMode(dark);
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
@@ -1536,10 +1568,8 @@ namespace quick_picture_viewer
 			setSlideshow(false);
 			PrintForm pf = new PrintForm(printDocument1, darkMode);
 			pf.Owner = this;
-			if (alwaysOnTop)
-			{
-				pf.TopMost = true;
-			}
+			pf.TopMost = alwaysOnTop;
+
 			if (pf.ShowDialog() == DialogResult.OK)
 			{
 				if (printDialog1.ShowDialog() == DialogResult.OK)
@@ -1739,10 +1769,7 @@ namespace quick_picture_viewer
 		{
 			SettingsForm settingsBox = new SettingsForm(darkMode);
 			settingsBox.Owner = this;
-			if (alwaysOnTop)
-			{
-				settingsBox.TopMost = true;
-			}
+			settingsBox.TopMost = alwaysOnTop;
 			settingsBox.ShowDialog();
 		}
 
@@ -1952,6 +1979,31 @@ namespace quick_picture_viewer
 		private void zoomTextBox_MouseEnter(object sender, EventArgs e)
 		{
 			zoomTextBox.Focus();
+		}
+
+		private void zoomTextBox_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == '\r')
+			{
+				if (!autoZoom) setZoomText(zoomFactor + "%");
+				e.Handled = true;
+			}
+		}
+
+		private void framelessBtn_Click(object sender, EventArgs e)
+		{
+			if (this.FormBorderStyle == FormBorderStyle.None)
+			{
+				this.FormBorderStyle = FormBorderStyle.Sizable;
+				statusStrip1.SizingGrip = true;
+				framelessBtn.Checked = false;
+			}
+			else
+			{
+				this.FormBorderStyle = FormBorderStyle.None;
+				statusStrip1.SizingGrip = false;
+				framelessBtn.Checked = true;
+			}
 		}
 	}
 }

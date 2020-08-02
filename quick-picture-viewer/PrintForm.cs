@@ -21,7 +21,7 @@ namespace quick_picture_viewer
 			this.darkMode = darkMode;
 
 			InitializeComponent();
-
+			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel, printPreviewControl1 });
 
 			applyDarkMode(darkMode);

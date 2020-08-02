@@ -19,18 +19,23 @@ namespace quick_picture_viewer
 		private int width = 0;
 		private int height = 0;
 
-		System.Timers.Timer resizeTimer = new System.Timers.Timer();
-
 		Point panelMouseDownLocation;
+
+		System.Timers.Timer resizeTimer = new System.Timers.Timer();
 
 		public MiniViewForm(Image image, string title, bool checkboardBackground)
 		{
+			if (ThemeManager.isWindows10())
+			{
+				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+			}
+
 			this.Text = title;
 			this.checkboardBackground = checkboardBackground;
 
 			InitializeComponent();
-
-			SetDraggableControls(new List<Control>() { moveButton });
+			SetDraggableControls(new List<Control>() { zoomLabel });
+			(new DropShadow()).ApplyShadows(this);
 
 			this.MaximumSize = new Size(
 				Convert.ToInt32(Screen.FromHandle(this.Handle).WorkingArea.Width / 1.25f),
@@ -61,15 +66,18 @@ namespace quick_picture_viewer
 
 			setCheckboardBackground(checkboardBackground);
 
-			resizeTimer.Elapsed += new ElapsedEventHandler(resizeTimer_Elapsed);
-			resizeTimer.Interval = 50;
-
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
+			closeBtn.SetDarkMode(true);
+			autoZoomBtn.SetDarkMode(true);
+			resizeBtn.SetDarkMode(true);
 			if (ThemeManager.isWindows10())
 			{
 				ThemeManager.setDarkModeToControl(picturePanel.Handle);
 			}
+
+			resizeTimer.Elapsed += new ElapsedEventHandler(resizeTimer_Elapsed);
+			resizeTimer.Interval = 25;
 		}
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
@@ -165,15 +173,21 @@ namespace quick_picture_viewer
 
 		private void resizeTimer_Elapsed(object sender, ElapsedEventArgs e)
 		{
-			this.Invoke((MethodInvoker)(() => {
-				Point curPos = this.PointToClient(Cursor.Position);
+			try
+			{
+				this.Invoke((MethodInvoker)(() => {
+					Point curPos = this.PointToClient(Cursor.Position);
 
-				int newWidth = curSize.Width + curPos.X - startPos.X;
-				//int newHeight = Convert.ToInt32((float)newWidth / ratio);
-				int newHeight = curSize.Height + curPos.Y - startPos.Y;
+					int newWidth = curSize.Width + curPos.X - startPos.X;
+					int newHeight = Convert.ToInt32((float)newWidth / ratio);
 
-				this.Size = new Size(newWidth, newHeight);
-			}));
+					this.Size = new Size(newWidth, newHeight);
+				}));
+			}
+			catch
+			{
+
+			}
 		}
 
 		private void MiniViewForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -183,75 +197,31 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_MouseEnter(object sender, EventArgs e)
 		{
-			updateUIVisibility(true);
+			showUI(true);
 		}
 
 		private void MiniViewForm_MouseLeave(object sender, EventArgs e)
 		{
-			updateUIVisibility(false);
-		}
-
-		private void updateUIVisibility(bool b)
-		{
-			var relativePoint = this.PointToClient(Cursor.Position);
-			if (relativePoint.X > 27 && relativePoint.X < this.Width - 27)
+			Point relativePoint = this.PointToClient(Cursor.Position);
+			if (relativePoint.Y > 32)
 			{
-				if (relativePoint.Y > 27 && relativePoint.Y < this.Height - 27)
+				if (!(relativePoint.Y > ClientSize.Height - 32 && relativePoint.X > ClientSize.Width - 32))
 				{
-					b = true;
+					showUI(false);
 				}
 			}
-
-			showUI(b);
 		}
 
 		private void showUI(bool b)
 		{
-			if (moveButton.Visible != b)
+			if (zoomLabel.Visible != b)
 			{
-				moveButton.Visible = b;
 				closeBtn.Visible = b;
 				zoomLabel.Visible = b;
-				autoZoomButton.Visible = b;
-				gripButton.Visible = b;
+				autoZoomBtn.Visible = b;
+				resizeBtn.Visible = b;
 			}
 		}
-
-		//private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-		//{
-		//	if (e.Button == MouseButtons.Left)
-		//	{
-		//		Point downPos = this.PointToClient(Cursor.Position);
-		//		if (downPos.X > gripButton.Location.X && downPos.X < gripButton.Location.X + gripButton.Width &&
-		//			downPos.Y > gripButton.Location.Y && downPos.Y < gripButton.Location.Y + gripButton.Height)
-		//		{
-		//			Cursor.Current = Cursors.SizeNWSE;
-		//			startPos = downPos;
-		//			curSize = this.Size;
-		//			resizeTimer.Start();
-		//		}
-		//		else
-		//		{
-		//			Cursor.Current = Cursors.SizeAll;
-		//			ReleaseCapture();
-		//			SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-		//		}
-		//	}
-		//	else if (e.Button == MouseButtons.Right)
-		//	{
-		//		closing = true;
-		//	}
-		//}
-
-		//private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
-		//{
-		//	resizeTimer.Stop();
-		//	Cursor.Current = Cursors.Default;
-		//	if (closing)
-		//	{
-		//		this.Close();
-		//	}
-		//}
 
 		private void MiniViewForm_Load(object sender, EventArgs e)
 		{
@@ -302,7 +272,7 @@ namespace quick_picture_viewer
 					}
 					else if (e.KeyCode == Keys.A)
 					{
-						autoZoomButton.PerformClick();
+						autoZoomBtn.PerformClick();
 					}
 				}
 			}
@@ -341,33 +311,6 @@ namespace quick_picture_viewer
 			this.Close();
 		}
 
-		private void gripButton_MouseDown(object sender, MouseEventArgs e)
-		{
-			Point downPos = this.PointToClient(Cursor.Position);
-			if (downPos.X > gripButton.Location.X && downPos.X < gripButton.Location.X + gripButton.Width &&
-				downPos.Y > gripButton.Location.Y && downPos.Y < gripButton.Location.Y + gripButton.Height)
-			{
-				Cursor.Current = Cursors.SizeNWSE;
-				startPos = downPos;
-				curSize = this.Size;
-				resizeTimer.Start();
-			}
-		}
-
-		private void gripButton_MouseUp(object sender, MouseEventArgs e)
-		{
-			resizeTimer.Stop();
-			Cursor.Current = Cursors.Default;
-		}
-
-		private void MiniViewForm_Resize(object sender, EventArgs e)
-		{
-			if (!autoZoom)
-			{
-				updatePictureBoxLocation();
-			}
-		}
-
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
@@ -395,12 +338,13 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
 		{
+			resizeTimer.Stop();
 			Cursor.Current = Cursors.Default;
 		}
 
 		private void picturePanel_MouseMove(object sender, MouseEventArgs e)
 		{
-			updateUIVisibility(false);
+			showUI(true);
 
 			if (e.Button == MouseButtons.Left && !autoZoom)
 			{
@@ -439,6 +383,27 @@ namespace quick_picture_viewer
 					picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
 				}
 			}
+		}
+
+		private void MiniViewForm_ResizeEnd(object sender, EventArgs e)
+		{
+			if (!autoZoom)
+			{
+				updatePictureBoxLocation();
+			}
+		}
+
+		private void MiniViewForm_Deactivate(object sender, EventArgs e)
+		{
+			showUI(false);
+		}
+
+		private void resizeBtn_MouseDown(object sender, MouseEventArgs e)
+		{
+			Cursor.Current = Cursors.SizeNWSE;
+			startPos = this.PointToClient(Cursor.Position);
+			curSize = this.Size;
+			resizeTimer.Start();
 		}
 	}
 }

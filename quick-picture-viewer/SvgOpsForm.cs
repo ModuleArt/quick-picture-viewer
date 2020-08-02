@@ -26,7 +26,7 @@ namespace quick_picture_viewer
 			this.panelHeight = panelHeight;
 
 			InitializeComponent();
-
+			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
 
 			applyDarkMode(darkMode);
