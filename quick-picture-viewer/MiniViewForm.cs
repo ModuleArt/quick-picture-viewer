@@ -193,6 +193,7 @@ namespace quick_picture_viewer
 		private void MiniViewForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			this.Owner.Show();
+			this.Owner.Refresh();
 		}
 
 		private void MiniViewForm_MouseEnter(object sender, EventArgs e)

@@ -8,6 +8,8 @@ namespace quick_picture_viewer
 {
 	partial class SettingsForm : QlibFixedForm
 	{
+		private string[] languages = { "en", "ru" };
+
 		public SettingsForm(bool darkMode)
 		{
 			if (darkMode)
@@ -53,6 +55,15 @@ namespace quick_picture_viewer
 
 			slideshowTimeNumeric.Value = Properties.Settings.Default.SlideshowTime;
 			slideshowCounterCheckBox.Checked = Properties.Settings.Default.SlideshowCounter;
+
+			for (int i = 0; i < languages.Length; i++)
+			{
+				if (Properties.Settings.Default.Language == languages[i])
+				{
+					langComboBox.SelectedIndex = i;
+					break;
+				}
+			}
 		}
 
 		private void applyDarkMode(bool dark)
@@ -87,6 +98,7 @@ namespace quick_picture_viewer
 			startupPasteRadio.SetDarkMode(dark);
 			slideshowTimeNumeric.SetDarkMode(dark);
 			slideshowCounterCheckBox.SetDarkMode(dark);
+			langComboBox.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -182,6 +194,12 @@ namespace quick_picture_viewer
 		private void slideshowTimeNumeric_ValueChanged(object sender, EventArgs e)
 		{
 			Properties.Settings.Default.SlideshowTime = (int)slideshowTimeNumeric.Value;
+			Properties.Settings.Default.Save();
+		}
+
+		private void langComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.Language = languages[langComboBox.SelectedIndex];
 			Properties.Settings.Default.Save();
 		}
 	}

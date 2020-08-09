@@ -11,6 +11,9 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Timers;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Resources;
+using System.Reflection;
 
 namespace quick_picture_viewer
 {
@@ -34,14 +37,13 @@ namespace quick_picture_viewer
 		private int slideshowCounter = 0;
 		private GCHandle tmpGcHandle;
 		private bool dragImage = false;
-
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
 		private System.Timers.Timer slideshowTimer = new System.Timers.Timer();
-
 		private System.Threading.Timer suggestionTimer;
 
 		public bool printCenterImage = true;
+		public ResourceManager resMan;
 
 		public MainForm(string openPath, bool darkMode)
 		{
@@ -54,8 +56,6 @@ namespace quick_picture_viewer
 			this.openPath = openPath;
 
 			InitializeComponent();
-
-			settingsButton.ShortcutKeyDisplayString = "Ctrl+Comma";
 
 			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
 			zoomInTimer.Interval = 100;
@@ -72,7 +72,73 @@ namespace quick_picture_viewer
 			zoomTextBox.Height = 21;
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
 
-			applyDarkTheme(darkMode);
+			ApplyDarkTheme(darkMode);
+			InitLanguage();
+
+			closeFile();
+		}
+
+		private void InitLanguage()
+		{
+			if (string.IsNullOrEmpty(Properties.Settings.Default.Language))
+			{
+				resMan = new ResourceManager("quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
+				Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+				Properties.Settings.Default.Save();
+			}
+			else
+			{
+				resMan = new ResourceManager("quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language, Assembly.GetExecutingAssembly());
+			}
+
+			pleaseOpenLabel.Text = resMan.GetString("please-open-image");
+
+			moreButton.Text = resMan.GetString("more-options");
+			aboutBtn.Text = resMan.GetString("about");
+			settingsButton.Text = resMan.GetString("settings");
+			settingsButton.ShortcutKeyDisplayString = "Ctrl+" + resMan.GetString("comma");
+			newWindowButton.Text = resMan.GetString("new-window");
+			framelessBtn.Text = resMan.GetString("frameless-mode");
+			onTopButton.Text = resMan.GetString("always-on-top");
+			backColorBtn.Text = resMan.GetString("background-color");
+			backClearBtn.Text = resMan.GetString("clear");
+			backCustomBtn.Text = resMan.GetString("choose-color");
+			actualSizeBtn.Text = resMan.GetString("zoom-to-actual-size") + " (100%)";
+			setAsDesktopButton.Text = resMan.GetString("set-as-desktop-background");
+			printButton.Text = resMan.GetString("print");
+			deleteBtn.Text = resMan.GetString("move-to-trash");
+			reloadButton.Text = resMan.GetString("reload-file");
+
+			editButton.Text = resMan.GetString("edit-image");
+			flipHorizontalButton.Text = resMan.GetString("flip-horizontal");
+			flipVerticalButton.Text = resMan.GetString("flip-vertical");
+			rotateRightButton.Text = resMan.GetString("rotate-right");
+			rotateLeftButton.Text = resMan.GetString("rotate-left");
+			rotate180Button.Text = resMan.GetString("rotate-180");
+
+			copyButton.Text = resMan.GetString("copy");
+			copyImageButton.Text = resMan.GetString("copy-image");
+			copyFileBtn.Text = resMan.GetString("copy-file");
+
+			externalBtn.Text = resMan.GetString("open-external");
+			externalRunBtn.Text = resMan.GetString("open-with-default");
+			externalChooseBtn.Text = resMan.GetString("open-with-choose");
+
+			openButton.Text = resMan.GetString("open-file") + " | Ctrl+O";
+			saveAsButton.Text = resMan.GetString("save-as") + " | Ctrl+S";
+			pasteButton.Text = resMan.GetString("paste-image") + " | Ctrl+V";
+			screenshotButton.Text = resMan.GetString("capture-screen") + " | F12";
+			checkboardButton.Text = resMan.GetString("checkboard-background") + " | Ctrl+Shift+C";
+			fullscreenButton.Text = resMan.GetString("fullscreen") + " | F";
+			miniViewButton.Text = resMan.GetString("picture-in-picture") + " | Ctrl+Shift+P";
+			autoZoomButton.Text = resMan.GetString("auto-zoom") + " | Ctrl+A";
+			zoomInButton.Text = resMan.GetString("zoom-in") + " | Ctrl+" + resMan.GetString("plus");
+			zoomOutButton.Text = resMan.GetString("zoom-out") + " | Ctrl+" + resMan.GetString("minus");
+			infoButton.Text = resMan.GetString("image-info") + " | Ctrl+I";
+			slideshowButton.Text = resMan.GetString("slideshow") + " | Ctrl+Shift+S";
+			showFileButton.Text = resMan.GetString("show-file-explorer") + " | Ctrl+Shift+L";
+			prevButton.Text = resMan.GetString("prev-image") + " | " + resMan.GetString("left-arrow");
+			nextButton.Text = resMan.GetString("next-image") + " | " + resMan.GetString("right-arrow");
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -98,11 +164,11 @@ namespace quick_picture_viewer
 			{
 				if ((Properties.Settings.Default.SlideshowTime - slideshowCounter) <= 1)
 				{
-					showSuggestion("Next image in 1 second");
+					showSuggestion(resMan.GetString("next-image-in-1-second"));
 				}
 				else
 				{
-					showSuggestion("Next image in " + (Properties.Settings.Default.SlideshowTime - slideshowCounter) + " seconds");
+					showSuggestion(string.Format(resMan.GetString("next-image-in-x-seconds"), (Properties.Settings.Default.SlideshowTime - slideshowCounter)));
 				}
 			}
 		}
@@ -125,7 +191,7 @@ namespace quick_picture_viewer
 					if (Properties.Settings.Default.StartupAction == 1  && Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
-						showSuggestion("Image pasted from clipboard");
+						showSuggestion(resMan.GetString("image-pasted-from-clipboard"));
 					} 
 				}
 				else
@@ -143,7 +209,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				MessageBox.Show("Unable to open this file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("unable-to-open-file"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 			if (Properties.Settings.Default.CheckForUpdates)
@@ -172,7 +238,7 @@ namespace quick_picture_viewer
 				{
 					if (showUpToDateDialog)
 					{
-						MessageBox.Show("Application is up to date", "Updator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						MessageBox.Show(resMan.GetString("app-is-up-to-date"), resMan.GetString("updator"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
 				}
 				else
@@ -199,7 +265,7 @@ namespace quick_picture_viewer
 			{
 				if (showUpToDateDialog)
 				{
-					MessageBox.Show("Connection error", "Updator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(resMan.GetString("update-failed"), resMan.GetString("updator"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 					Console.WriteLine(ex);
 				}
 			}
@@ -212,7 +278,7 @@ namespace quick_picture_viewer
 
 				if (show)
 				{
-					typeOpsButton.Text = String.Format(" {0} options", type);
+					typeOpsButton.Text = " " + type + " " + resMan.GetString("type-options");
 					typeOpsButton.Focus();
 				}
 			}));
@@ -269,7 +335,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Unable to open this file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("unable-to-open-file"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Console.WriteLine(ex);
 			}
 		}
@@ -314,14 +380,14 @@ namespace quick_picture_viewer
 					}
 					catch (Exception ex)
 					{
-						MessageBox.Show("DDS/TGA memory error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						MessageBox.Show(resMan.GetString("dds-memory-error"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 						Console.WriteLine(ex);
 					}
 				}
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Unable to open DDS or TGA file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("unable-open-dds"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Console.WriteLine(ex);
 			}
 		}
@@ -349,7 +415,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Unable to open SVG file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("unable-open-svg"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Console.WriteLine(ex);
 			}
 		}
@@ -409,14 +475,14 @@ namespace quick_picture_viewer
 
 				width = pictureBox.Image.Size.Width;
 				height = pictureBox.Image.Size.Height;
-				fileLabel.Text = " File: " + fileName;
+				fileLabel.Text = " " + resMan.GetString("file") + ": " + fileName;
 
 				if (directoryName == null)
 				{
 					currentFolder = null;
 					currentFile = null;
-					directoryLabel.Text = " Folder: Not exists";
-					sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px";
+					directoryLabel.Text = " " + resMan.GetString("folder") + ": Not exists";
+					sizeLabel.Text = " " + resMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
 				}
 				else
 				{
@@ -424,11 +490,11 @@ namespace quick_picture_viewer
 
 					currentFolder = directoryName;
 					currentFile = fileName;
-					directoryLabel.Text = " Folder: " + directoryName;
-					sizeLabel.Text = " Size: " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
+					directoryLabel.Text = " " + resMan.GetString("folder") + ": " + directoryName;
+					sizeLabel.Text = " " + resMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
-					dateCreatedLabel.Text = " Created: " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
-					dateModifiedLabel.Text = " Modified: " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
+					dateCreatedLabel.Text = " " + resMan.GetString("created") + ": " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
+					dateModifiedLabel.Text = " " + resMan.GetString("modified") + ": " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
 				}
 
 				nextButton.Enabled = directoryName != null;
@@ -479,7 +545,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					setZoomText("Auto");
+					setZoomText(resMan.GetString("auto"));
 				}
 			}
 		}
@@ -551,7 +617,7 @@ namespace quick_picture_viewer
 		{
 			zoomFactor = newZoomFactor;
 
-			zoomLabel.Text = " Zoom: " + zoomFactor.ToString() + "%";
+			zoomLabel.Text = " " + resMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
 
 			setAutoZoom(false);
 
@@ -606,7 +672,7 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.Fill;
 
-				zoomLabel.Text = " Zoom: Auto";
+				zoomLabel.Text = " " + resMan.GetString("zoom") + ": " + resMan.GetString("auto");
 			}
 			else
 			{
@@ -616,14 +682,14 @@ namespace quick_picture_viewer
 
 		private void autoZoomButton_Click(object sender, EventArgs e)
 		{
-			if (zoomTextBox.Text == "Auto")
+			if (zoomTextBox.Text == resMan.GetString("auto"))
 			{
 				zoomToFit();
 				setZoomText(zoomFactor + "%");
 			}
 			else
 			{
-				setZoomText("Auto");
+				setZoomText(resMan.GetString("auto"));
 			}
 		}
 
@@ -700,7 +766,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
 			pictureBox.Image = originalImage;
-			setZoomText("Auto");
+			setZoomText(resMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -708,7 +774,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
 			pictureBox.Image = originalImage;
-			setZoomText("Auto");
+			setZoomText(resMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -716,7 +782,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText("Auto");
+			setZoomText(resMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -724,7 +790,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText("Auto");
+			setZoomText(resMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -1005,14 +1071,14 @@ namespace quick_picture_viewer
 				pleaseOpenLabel.ForeColor = this.ForeColor;
 			}
 
-			setZoomText("Auto");
+			setZoomText(resMan.GetString("auto"));
 		}
 
 		private void zoomComboBox_TextChanged(object sender, EventArgs e)
 		{
 			try
 			{
-				if (zoomTextBox.Text == "Auto")
+				if (zoomTextBox.Text == resMan.GetString("auto"))
 				{
 					setAutoZoom(true);
 				}
@@ -1270,7 +1336,7 @@ namespace quick_picture_viewer
 			if (currentIndex == -1)
 			{
 				setSlideshow(false);
-				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return 0;
 			}
 			else
@@ -1309,7 +1375,7 @@ namespace quick_picture_viewer
 
 			if (currentIndex == -1)
 			{
-				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			else
 			{
@@ -1402,10 +1468,17 @@ namespace quick_picture_viewer
 
 		private void closeFile()
 		{
-			originalImage.Dispose();
-			originalImage = null;
-			pictureBox.Image.Dispose();
-			pictureBox.Image = null;
+			if (originalImage != null)
+			{
+				originalImage.Dispose();
+				originalImage = null;
+			}
+			
+			if (pictureBox.Image != null)
+			{
+				pictureBox.Image.Dispose();
+				pictureBox.Image = null;
+			}
 
 			saveAsButton.Enabled = false;
 			deleteBtn.Enabled = false;
@@ -1437,13 +1510,13 @@ namespace quick_picture_viewer
 
 			pleaseOpenLabel.Visible = true;
 
-			directoryLabel.Text = " Folder: Empty";
-			fileLabel.Text = " File: Empty";
-			sizeLabel.Text = " Size: 0 x 0 px";
+			directoryLabel.Text = " " + resMan.GetString("no-folder");
+			fileLabel.Text = " " + resMan.GetString("no-file");
+			sizeLabel.Text = " " + resMan.GetString("size") + ": 0 x 0 px";
 			dateCreatedLabel.Visible = false;
 			dateModifiedLabel.Visible = false;
 
-			setZoomText("Auto");
+			setZoomText(resMan.GetString("auto"));
 			setSlideshow(false);
 			setFullscreen(false);
 		}
@@ -1472,7 +1545,7 @@ namespace quick_picture_viewer
 			showOpenWithDialog(Path.Combine(currentFolder, currentFile));
 		}
 
-		private void applyDarkTheme(bool dark)
+		private void ApplyDarkTheme(bool dark)
 		{
 			if (dark)
 			{
@@ -1512,8 +1585,9 @@ namespace quick_picture_viewer
 				flipHorizontalButton.Image = Properties.Resources.white_fliph;
 				flipVerticalButton.Image = Properties.Resources.white_flipv;
 				rotate180Button.Image = Properties.Resources.white_degree;
-				resizeButton.Image = Properties.Resources.white_size;
-				cropButton.Image = Properties.Resources.white_crop;
+				customAngleBtn.Image = Properties.Resources.white_angle;
+				resizeBtn.Image = Properties.Resources.white_size;
+				cropBtn.Image = Properties.Resources.white_crop;
 
 				screenshotButton.Image = Properties.Resources.white_screenshot;
 				infoButton.Image = Properties.Resources.white_info;
@@ -1752,7 +1826,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText("Auto");
+			setZoomText(resMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -1932,11 +2006,11 @@ namespace quick_picture_viewer
 			if (lastSlashIndex >= 0)
 			{
 				string appName = Properties.Settings.Default.FavoriteExternalApp.Substring(lastSlashIndex + 1, Properties.Settings.Default.FavoriteExternalApp.Length - lastSlashIndex - 1);
-				externalFavoriteBtn.Text = "Open with \"" + appName + "\"";
+				externalFavoriteBtn.Text = resMan.GetString("open-with") + " \"" + appName + "\"";
 			}
 			else
 			{
-				externalFavoriteBtn.Text = "Open with custom app";
+				externalFavoriteBtn.Text = resMan.GetString("open-with-custom");
 			}
 		}
 

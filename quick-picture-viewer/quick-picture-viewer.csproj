@@ -127,6 +127,16 @@
     <Compile Include="InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="languages\lang_ru.Designer.cs">
+      <DependentUpon>lang_ru.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="languages\lang_en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang_en.resx</DependentUpon>
+    </Compile>
     <Compile Include="MiniViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +186,14 @@
     <Compile Include="WebPWrapper.cs" />
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="languages\lang_ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="languages\lang_en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MiniViewForm.resx">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
@@ -294,6 +312,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-angle.png" />
+    <None Include="resources\imgs\dark\black-angle.png" />
     <None Include="resources\imgs\light\white-frame.png" />
     <None Include="resources\imgs\light\white-actualsize.png" />
     <None Include="resources\imgs\dark\black-palette.png" />
@@ -305,5 +325,6 @@
     <None Include="resources\imgs\light\white-exe.png" />
     <None Include="resources\imgs\light\white-list.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

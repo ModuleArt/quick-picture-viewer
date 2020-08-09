@@ -37,9 +37,9 @@
 - Picture in picture mode<br>
 - Copy, paste to clipboard<br>
 - Checkboard background<br>
-- Window can be always on top or fullscreen<br>
+- Window can be always on top, borderless and fullscreen<br>
 - Set image as desktop background<br>
-- Print image<br>
+- Print image or export to PDF<br>
 - View image details<br>
 - Slideshow<br>
 - Dark mode
