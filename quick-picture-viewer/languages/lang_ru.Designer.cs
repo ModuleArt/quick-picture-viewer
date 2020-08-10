@@ -214,6 +214,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Удалить файл.
+        /// </summary>
+        internal static string delete_file {
+            get {
+                return ResourceManager.GetString("delete-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Перетащенное изображение.
+        /// </summary>
+        internal static string dragged_image {
+            get {
+                return ResourceManager.GetString("dragged-image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Редактировать.
         /// </summary>
         internal static string edit_image {
@@ -237,6 +255,24 @@ namespace quick_picture_viewer.languages {
         internal static string file {
             get {
                 return ResourceManager.GetString("file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Файл скопирован в буфер обмена.
+        /// </summary>
+        internal static string file_copied_to_clipboard {
+            get {
+                return ResourceManager.GetString("file-copied-to-clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Файл переоткрыт.
+        /// </summary>
+        internal static string file_reloaded {
+            get {
+                return ResourceManager.GetString("file-reloaded", resourceCulture);
             }
         }
         
@@ -277,11 +313,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to С буфера обмена.
+        /// </summary>
+        internal static string from_clipboard {
+            get {
+                return ResourceManager.GetString("from-clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to На весь экран.
         /// </summary>
         internal static string fullscreen {
             get {
                 return ResourceManager.GetString("fullscreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Изображение скопировано в буфер обмена.
+        /// </summary>
+        internal static string image_copied_to_clipboard {
+            get {
+                return ResourceManager.GetString("image-copied-to-clipboard", resourceCulture);
             }
         }
         
@@ -394,11 +448,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Нет файлов для открытия.
+        /// </summary>
+        internal static string no_files_to_open {
+            get {
+                return ResourceManager.GetString("no-files-to-open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Нет папки.
         /// </summary>
         internal static string no_folder {
             get {
                 return ResourceManager.GetString("no-folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не сохранено.
+        /// </summary>
+        internal static string not_saved {
+            get {
+                return ResourceManager.GetString("not-saved", resourceCulture);
             }
         }
         
@@ -493,6 +565,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Нажмите {0}, чтобы выйти из полноэкранного режима.
+        /// </summary>
+        internal static string press_to_exit_fullscreen {
+            get {
+                return ResourceManager.GetString("press-to-exit-fullscreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Предыдущий файл в папке.
         /// </summary>
         internal static string prev_image {
@@ -565,6 +646,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Скриншот.
+        /// </summary>
+        internal static string screenshot {
+            get {
+                return ResourceManager.GetString("screenshot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Установить как фон рабочего стола.
         /// </summary>
         internal static string set_as_desktop_background {
@@ -610,6 +700,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?.
+        /// </summary>
+        internal static string sure_close_app {
+            get {
+                return ResourceManager.GetString("sure-close-app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы уверены, что хотите переместить файл в Корзину?.
+        /// </summary>
+        internal static string sure_move_to_trash {
+            get {
+                return ResourceManager.GetString("sure-move-to-trash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to опции.
         /// </summary>
         internal static string type_options {
@@ -646,6 +754,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Не удалось запустить внешнее приложение.
+        /// </summary>
+        internal static string unable_to_run_external_app {
+            get {
+                return ResourceManager.GetString("unable-to-run-external-app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Все несохраненные изменения будут утеряны. Вы уверены, что хотите открыть новое изображение?.
+        /// </summary>
+        internal static string unsaved_data_lost {
+            get {
+                return ResourceManager.GetString("unsaved-data-lost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Обновление невозможно.
         /// </summary>
         internal static string update_failed {
@@ -660,6 +786,15 @@ namespace quick_picture_viewer.languages {
         internal static string updator {
             get {
                 return ResourceManager.GetString("updator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание.
+        /// </summary>
+        internal static string warning {
+            get {
+                return ResourceManager.GetString("warning", resourceCulture);
             }
         }
         

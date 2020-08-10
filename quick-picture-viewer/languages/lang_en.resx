@@ -185,6 +185,14 @@
     <value>DDS/TGA memory error</value>
     <comment>Message box</comment>
   </data>
+  <data name="delete-file" xml:space="preserve">
+    <value>Delete file</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="dragged-image" xml:space="preserve">
+    <value>Dragged image</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="edit-image" xml:space="preserve">
     <value>Edit image</value>
     <comment>Menu</comment>
@@ -196,6 +204,14 @@
   <data name="file" xml:space="preserve">
     <value>File</value>
     <comment>Status bar</comment>
+  </data>
+  <data name="file-copied-to-clipboard" xml:space="preserve">
+    <value>File copied to clipboard</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="file-reloaded" xml:space="preserve">
+    <value>File reloaded</value>
+    <comment>Suggestion</comment>
   </data>
   <data name="flip-horizontal" xml:space="preserve">
     <value>Flip horizontal</value>
@@ -213,9 +229,17 @@
     <value>Frameless mode</value>
     <comment>Menu</comment>
   </data>
+  <data name="from-clipboard" xml:space="preserve">
+    <value>From clipboard</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="fullscreen" xml:space="preserve">
     <value>Fullscreen</value>
     <comment>Menu</comment>
+  </data>
+  <data name="image-copied-to-clipboard" xml:space="preserve">
+    <value>Image copied to clipboard</value>
+    <comment>Suggestion</comment>
   </data>
   <data name="image-info" xml:space="preserve">
     <value>Image info</value>
@@ -265,8 +289,16 @@
     <value>No file</value>
     <comment>Status bar</comment>
   </data>
+  <data name="no-files-to-open" xml:space="preserve">
+    <value>No files to open</value>
+    <comment>Message box</comment>
+  </data>
   <data name="no-folder" xml:space="preserve">
     <value>No folder</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="not-saved" xml:space="preserve">
+    <value>Not saved</value>
     <comment>Status bar</comment>
   </data>
   <data name="open-external" xml:space="preserve">
@@ -309,6 +341,10 @@
     <value>Plus</value>
     <comment>Menu</comment>
   </data>
+  <data name="press-to-exit-fullscreen" xml:space="preserve">
+    <value>Press {0} to exit fullscreen mode</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="prev-image" xml:space="preserve">
     <value>Previous image in folder</value>
     <comment>Menu</comment>
@@ -341,6 +377,10 @@
     <value>Save as</value>
     <comment>Menu</comment>
   </data>
+  <data name="screenshot" xml:space="preserve">
+    <value>Screenshot</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="set-as-desktop-background" xml:space="preserve">
     <value>Set as desktop background</value>
     <comment>Menu</comment>
@@ -361,6 +401,14 @@
     <value>Slideshow</value>
     <comment>Menu</comment>
   </data>
+  <data name="sure-close-app" xml:space="preserve">
+    <value>All unsaved data will be lost. Are you sure you want to close the application?</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="sure-move-to-trash" xml:space="preserve">
+    <value>Are you sure you want to move this file to the Recyble Bin?</value>
+    <comment>Message box</comment>
+  </data>
   <data name="type-options" xml:space="preserve">
     <value>options</value>
     <comment>Picture panel</comment>
@@ -377,12 +425,24 @@
     <value>Unable to open this file</value>
     <comment>Message box</comment>
   </data>
+  <data name="unable-to-run-external-app" xml:space="preserve">
+    <value>Unable to run external app</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unsaved-data-lost" xml:space="preserve">
+    <value>All unsaved data will be lost. Are you sure you want to open new image?</value>
+    <comment>Message box</comment>
+  </data>
   <data name="update-failed" xml:space="preserve">
     <value>Update failed</value>
     <comment>Message box</comment>
   </data>
   <data name="updator" xml:space="preserve">
     <value>Update manager</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Warning</value>
     <comment>Message box</comment>
   </data>
   <data name="zoom" xml:space="preserve">

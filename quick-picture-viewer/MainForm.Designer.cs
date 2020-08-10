@@ -739,8 +739,6 @@
 			this.Controls.Add(this.statusStrip1);
 			this.KeyPreview = true;
 			this.Name = "MainForm";
-			this.Activated += new System.EventHandler(this.MainForm_Activated);
-			this.Deactivate += new System.EventHandler(this.MainForm_Deactivate);
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);

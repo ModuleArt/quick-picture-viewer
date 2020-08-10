@@ -82,8 +82,19 @@ namespace quick_picture_viewer
 		{
 			if (string.IsNullOrEmpty(Properties.Settings.Default.Language))
 			{
-				resMan = new ResourceManager("quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
-				Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+				switch(CultureInfo.CurrentCulture.TwoLetterISOLanguageName)
+				{
+					case "en":
+					case "ru":
+						resMan = new ResourceManager("quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
+						Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+						break;
+					default:
+						resMan = new ResourceManager("quick_picture_viewer.languages.lang_en", Assembly.GetExecutingAssembly());
+						Properties.Settings.Default.Language = "en";
+						break;
+				}
+
 				Properties.Settings.Default.Save();
 			}
 			else
@@ -139,6 +150,8 @@ namespace quick_picture_viewer
 			showFileButton.Text = resMan.GetString("show-file-explorer") + " | Ctrl+Shift+L";
 			prevButton.Text = resMan.GetString("prev-image") + " | " + resMan.GetString("left-arrow");
 			nextButton.Text = resMan.GetString("next-image") + " | " + resMan.GetString("right-arrow");
+
+			hasChangesLabel.Text = resMan.GetString("not-saved");
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -427,8 +440,8 @@ namespace quick_picture_viewer
 				if (imageChanged)
 				{
 					DialogResult window = MessageBox.Show(
-						"All unsaved data will be lost.\nAre you sure you want to open new image?",
-						"Warning",
+						resMan.GetString("unsaved-data-lost"),
+						resMan.GetString("warning"),
 						MessageBoxButtons.YesNo,
 						MessageBoxIcon.Question
 					);
@@ -481,7 +494,7 @@ namespace quick_picture_viewer
 				{
 					currentFolder = null;
 					currentFile = null;
-					directoryLabel.Text = " " + resMan.GetString("folder") + ": Not exists";
+					directoryLabel.Text = " " + resMan.GetString("no-folder");
 					sizeLabel.Text = " " + resMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
 				}
 				else
@@ -878,15 +891,15 @@ namespace quick_picture_viewer
 		private void copyButton_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetImage(originalImage);
-			showSuggestion("Image copied to clipboard");
+			showSuggestion(resMan.GetString("image-copied-to-clipboard"));
 		}
 
 		private void pasteButton_Click(object sender, EventArgs e)
 		{
 			if (Clipboard.ContainsImage())
 			{
-				openImage(new Bitmap(Clipboard.GetImage()), null, "From clipboard");
-				setImageChanged(true, "From clipboard");
+				openImage(new Bitmap(Clipboard.GetImage()), null, resMan.GetString("from-clipboard"));
+				setImageChanged(true, resMan.GetString("from-clipboard"));
 			}
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
@@ -1054,7 +1067,7 @@ namespace quick_picture_viewer
 
 				pleaseOpenLabel.ForeColor = Color.White;
 
-				showSuggestion("Press Esc to exit fullscreen mode");
+				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"));
 			}
 			else
 			{
@@ -1274,8 +1287,8 @@ namespace quick_picture_viewer
 
 			if (bitmap != null)
 			{
-				openImage(bitmap, null, "Dragged image");
-				setImageChanged(true, "Dragged image");
+				openImage(bitmap, null, resMan.GetString("dragged-image"));
+				setImageChanged(true, resMan.GetString("dragged-image"));
 			}
 			else if (files.Length > 0)
 			{
@@ -1312,8 +1325,8 @@ namespace quick_picture_viewer
 			{
 				g.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size);
 
-				openImage(bmp, null, "Captured screen");
-				setImageChanged(true, "Captured screen");
+				openImage(bmp, null, resMan.GetString("screenshot"));
+				setImageChanged(true, resMan.GetString("screenshot"));
 			}
 
 			this.Show();
@@ -1423,7 +1436,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				MessageBox.Show("Directory is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("no-files-to-open"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -1437,8 +1450,8 @@ namespace quick_picture_viewer
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
 			DialogResult d = MessageBox.Show(
-				"Are you sure you want to move this file to the Recyble Bin?",
-				"Delete file",
+				resMan.GetString("sure-move-to-trash"),
+				resMan.GetString("delete-file"),
 				MessageBoxButtons.YesNo,
 				MessageBoxIcon.Question
 			);
@@ -1461,7 +1474,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					MessageBox.Show("File not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 		}
@@ -1716,8 +1729,8 @@ namespace quick_picture_viewer
 			if(imageChanged)
 			{
 				DialogResult window = MessageBox.Show(
-					"All unsaved data will be lost.\nAre you sure you want to close the application?",
-					"Warning",
+					resMan.GetString("sure-close-app"),
+					resMan.GetString("warning"),
 					MessageBoxButtons.YesNo, 
 					MessageBoxIcon.Question
 				);
@@ -1736,7 +1749,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -1809,7 +1822,7 @@ namespace quick_picture_viewer
 		private void reloadButton_Click(object sender, EventArgs e)
 		{
 			openFile(Path.Combine(currentFolder, currentFile));
-			showSuggestion("File reloaded");
+			showSuggestion(resMan.GetString("file-reloaded"));
 		}
 
 		private void newWindowButton_Click(object sender, EventArgs e)
@@ -1917,11 +1930,11 @@ namespace quick_picture_viewer
 				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
 				Clipboard.Clear();
 				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
-				showSuggestion("File copied to clipboard");
+				showSuggestion("");
 			}
 			catch
 			{
-				MessageBox.Show("Current file could not be found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -1947,26 +1960,6 @@ namespace quick_picture_viewer
 			this.WindowState = FormWindowState.Minimized;
 		}
 
-		private void MainForm_Activated(object sender, EventArgs e)
-		{
-			//if (darkMode)
-			//{
-			//	titlePanel.BackColor = ThemeManager.DarkMainColor;
-			//	toolStrip1.BackColor = ThemeManager.DarkMainColor;
-			//	zoomTextBox.BackColor = ThemeManager.DarkMainColor;
-			//}
-		}
-
-		private void MainForm_Deactivate(object sender, EventArgs e)
-		{
-			//if (darkMode)
-			//{
-			//	titlePanel.BackColor = ThemeManager.DarkTitlebarUnfocus;
-			//	toolStrip1.BackColor = ThemeManager.DarkTitlebarUnfocus;
-			//	zoomTextBox.BackColor = ThemeManager.DarkTitlebarUnfocus;
-			//}
-		}
-
 		private void externalRunBtn_Click(object sender, EventArgs e)
 		{
 			try
@@ -1981,7 +1974,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				MessageBox.Show("Unable to run default external app", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("unable-to-run-external-app"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -1993,7 +1986,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				MessageBox.Show("Unable to run favorite external app", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(resMan.GetString("unable-to-run-external-app"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

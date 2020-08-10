@@ -214,6 +214,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete file.
+        /// </summary>
+        internal static string delete_file {
+            get {
+                return ResourceManager.GetString("delete-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dragged image.
+        /// </summary>
+        internal static string dragged_image {
+            get {
+                return ResourceManager.GetString("dragged-image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit image.
         /// </summary>
         internal static string edit_image {
@@ -237,6 +255,24 @@ namespace quick_picture_viewer.languages {
         internal static string file {
             get {
                 return ResourceManager.GetString("file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File copied to clipboard.
+        /// </summary>
+        internal static string file_copied_to_clipboard {
+            get {
+                return ResourceManager.GetString("file-copied-to-clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File reloaded.
+        /// </summary>
+        internal static string file_reloaded {
+            get {
+                return ResourceManager.GetString("file-reloaded", resourceCulture);
             }
         }
         
@@ -277,11 +313,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to From clipboard.
+        /// </summary>
+        internal static string from_clipboard {
+            get {
+                return ResourceManager.GetString("from-clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fullscreen.
         /// </summary>
         internal static string fullscreen {
             get {
                 return ResourceManager.GetString("fullscreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image copied to clipboard.
+        /// </summary>
+        internal static string image_copied_to_clipboard {
+            get {
+                return ResourceManager.GetString("image-copied-to-clipboard", resourceCulture);
             }
         }
         
@@ -394,11 +448,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No files to open.
+        /// </summary>
+        internal static string no_files_to_open {
+            get {
+                return ResourceManager.GetString("no-files-to-open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No folder.
         /// </summary>
         internal static string no_folder {
             get {
                 return ResourceManager.GetString("no-folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not saved.
+        /// </summary>
+        internal static string not_saved {
+            get {
+                return ResourceManager.GetString("not-saved", resourceCulture);
             }
         }
         
@@ -493,6 +565,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press {0} to exit fullscreen mode.
+        /// </summary>
+        internal static string press_to_exit_fullscreen {
+            get {
+                return ResourceManager.GetString("press-to-exit-fullscreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Previous image in folder.
         /// </summary>
         internal static string prev_image {
@@ -565,6 +646,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Screenshot.
+        /// </summary>
+        internal static string screenshot {
+            get {
+                return ResourceManager.GetString("screenshot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Set as desktop background.
         /// </summary>
         internal static string set_as_desktop_background {
@@ -610,6 +700,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All unsaved data will be lost. Are you sure you want to close the application?.
+        /// </summary>
+        internal static string sure_close_app {
+            get {
+                return ResourceManager.GetString("sure-close-app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to move this file to the Recyble Bin?.
+        /// </summary>
+        internal static string sure_move_to_trash {
+            get {
+                return ResourceManager.GetString("sure-move-to-trash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to options.
         /// </summary>
         internal static string type_options {
@@ -646,6 +754,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unable to run external app.
+        /// </summary>
+        internal static string unable_to_run_external_app {
+            get {
+                return ResourceManager.GetString("unable-to-run-external-app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All unsaved data will be lost. Are you sure you want to open new image?.
+        /// </summary>
+        internal static string unsaved_data_lost {
+            get {
+                return ResourceManager.GetString("unsaved-data-lost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update failed.
         /// </summary>
         internal static string update_failed {
@@ -660,6 +786,15 @@ namespace quick_picture_viewer.languages {
         internal static string updator {
             get {
                 return ResourceManager.GetString("updator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        internal static string warning {
+            get {
+                return ResourceManager.GetString("warning", resourceCulture);
             }
         }
         

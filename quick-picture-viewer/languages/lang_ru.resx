@@ -185,6 +185,14 @@
     <value>Ошибка памяти при чтении DDS/TGA</value>
     <comment>Message box</comment>
   </data>
+  <data name="delete-file" xml:space="preserve">
+    <value>Удалить файл</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="dragged-image" xml:space="preserve">
+    <value>Перетащенное изображение</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="edit-image" xml:space="preserve">
     <value>Редактировать</value>
     <comment>Menu</comment>
@@ -196,6 +204,14 @@
   <data name="file" xml:space="preserve">
     <value>Файл</value>
     <comment>Status bar</comment>
+  </data>
+  <data name="file-copied-to-clipboard" xml:space="preserve">
+    <value>Файл скопирован в буфер обмена</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="file-reloaded" xml:space="preserve">
+    <value>Файл переоткрыт</value>
+    <comment>Suggestion</comment>
   </data>
   <data name="flip-horizontal" xml:space="preserve">
     <value>Отразить по горизонтали</value>
@@ -213,9 +229,17 @@
     <value>Безрамочный режим</value>
     <comment>Menu</comment>
   </data>
+  <data name="from-clipboard" xml:space="preserve">
+    <value>С буфера обмена</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="fullscreen" xml:space="preserve">
     <value>На весь экран</value>
     <comment>Menu</comment>
+  </data>
+  <data name="image-copied-to-clipboard" xml:space="preserve">
+    <value>Изображение скопировано в буфер обмена</value>
+    <comment>Suggestion</comment>
   </data>
   <data name="image-info" xml:space="preserve">
     <value>Информация об изображении</value>
@@ -265,8 +289,16 @@
     <value>Нет файла</value>
     <comment>Status bar</comment>
   </data>
+  <data name="no-files-to-open" xml:space="preserve">
+    <value>Нет файлов для открытия</value>
+    <comment>Message box</comment>
+  </data>
   <data name="no-folder" xml:space="preserve">
     <value>Нет папки</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="not-saved" xml:space="preserve">
+    <value>Не сохранено</value>
     <comment>Status bar</comment>
   </data>
   <data name="open-external" xml:space="preserve">
@@ -309,6 +341,10 @@
     <value>Плюс</value>
     <comment>Menu</comment>
   </data>
+  <data name="press-to-exit-fullscreen" xml:space="preserve">
+    <value>Нажмите {0}, чтобы выйти из полноэкранного режима</value>
+    <comment>Suggestion</comment>
+  </data>
   <data name="prev-image" xml:space="preserve">
     <value>Предыдущий файл в папке</value>
     <comment>Menu</comment>
@@ -341,6 +377,10 @@
     <value>Сохранить как</value>
     <comment>Menu</comment>
   </data>
+  <data name="screenshot" xml:space="preserve">
+    <value>Скриншот</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="set-as-desktop-background" xml:space="preserve">
     <value>Установить как фон рабочего стола</value>
     <comment>Menu</comment>
@@ -361,6 +401,14 @@
     <value>Слайдшоу</value>
     <comment>Menu</comment>
   </data>
+  <data name="sure-close-app" xml:space="preserve">
+    <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="sure-move-to-trash" xml:space="preserve">
+    <value>Вы уверены, что хотите переместить файл в Корзину?</value>
+    <comment>Message box</comment>
+  </data>
   <data name="type-options" xml:space="preserve">
     <value>опции</value>
     <comment>Picture panel</comment>
@@ -377,12 +425,24 @@
     <value>Невозможно открыть этот файл</value>
     <comment>Message box</comment>
   </data>
+  <data name="unable-to-run-external-app" xml:space="preserve">
+    <value>Не удалось запустить внешнее приложение</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unsaved-data-lost" xml:space="preserve">
+    <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите открыть новое изображение?</value>
+    <comment>Message box</comment>
+  </data>
   <data name="update-failed" xml:space="preserve">
     <value>Обновление невозможно</value>
     <comment>Message box</comment>
   </data>
   <data name="updator" xml:space="preserve">
     <value>Менеджер обновлений</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Внимание</value>
     <comment>Message box</comment>
   </data>
   <data name="zoom" xml:space="preserve">
