@@ -15,11 +15,11 @@
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF">
   </a>
-  <a alt="Buy ma a coffee" href="https://www.patreon.com/moduleart">
+  <a alt="Patreon page" href="https://www.patreon.com/moduleart">
     <img alt="Patreon" src="https://img.shields.io/badge/donate-patreon-%23E85B46">
   </a>
-  <a alt="Buy ma a coffee" href="https://www.buymeacoffee.com/ModuleArt">
-    <img alt="Buy me a coffe" src="https://img.shields.io/badge/Buy%20me%20a-cofee-%23FF813F">
+  <a alt="Buy me a coffee" href="https://www.buymeacoffee.com/ModuleArt">
+    <img alt="Buy me a coffee" src="https://img.shields.io/badge/Buy%20me-a%20coffee-%23FF813F">
   </a>
 </p>
 
