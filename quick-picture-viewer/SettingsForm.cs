@@ -1,6 +1,7 @@
 ﻿using QuickLibrary;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,7 +9,29 @@ namespace quick_picture_viewer
 {
 	partial class SettingsForm : QlibFixedForm
 	{
-		private string[] languages = { "en", "ru" };
+		struct Language
+		{
+			public string Code;
+			public string AuthorName;
+			public string AuthorLink;
+		}
+
+		private Language[] languages = {
+			new Language
+			{
+				Code = "en",
+				AuthorName = "Beelink",
+				AuthorLink = "https://github.com/Beelink"
+			},
+			new Language
+			{
+				Code = "ru",
+				AuthorName = "Beelink",
+				AuthorLink = "https://github.com/Beelink"
+			}
+		};
+
+		private MainForm owner;
 
 		public SettingsForm(bool darkMode)
 		{
@@ -20,8 +43,6 @@ namespace quick_picture_viewer
 			InitializeComponent();
 			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
-
-			applyDarkMode(darkMode);
 
 			int theme = Properties.Settings.Default.Theme;
 			if (theme == 0)
@@ -58,15 +79,38 @@ namespace quick_picture_viewer
 
 			for (int i = 0; i < languages.Length; i++)
 			{
-				if (Properties.Settings.Default.Language == languages[i])
+				if (Properties.Settings.Default.Language == languages[i].Code)
 				{
 					langComboBox.SelectedIndex = i;
 					break;
 				}
 			}
+
+			translatedByLink.LinkColor = ThemeManager.AccentColor;
+
+			SetDarkMode(darkMode);
 		}
 
-		private void applyDarkMode(bool dark)
+		private void InitLanguage()
+		{
+			this.Text = owner.resMan.GetString("settings");
+			titleLabel.Text = owner.resMan.GetString("settings");
+			langPage.Text = owner.resMan.GetString("localization");
+			startupPage.Text = owner.resMan.GetString("startup");
+			restartLabel1.Text = "* " + owner.resMan.GetString("restart-required");
+			restartLabel2.Text = "* " + owner.resMan.GetString("restart-required");
+			systemThemeRadio.Text = owner.resMan.GetString("use-system-setting");
+			lightThemeRadio.Text = owner.resMan.GetString("light");
+			darkThemeRadio.Text = owner.resMan.GetString("dark");
+			themePage.Text = owner.resMan.GetString("theme");
+			startupLabel.Text = owner.resMan.GetString("app-startup-action") + ":";
+			startupNothingRadio.Text = owner.resMan.GetString("do-nothing");
+			startupPasteRadio.Text = owner.resMan.GetString("paste-from-clipboard");
+			updatesPage.Text = owner.resMan.GetString("updates");
+			updatesCheckBox.Text = owner.resMan.GetString("check-for-updates-on-startup");
+		}
+
+		private void SetDarkMode(bool dark)
 		{
 			if (dark)
 			{
@@ -199,8 +243,25 @@ namespace quick_picture_viewer
 
 		private void langComboBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.Language = languages[langComboBox.SelectedIndex];
+			Properties.Settings.Default.Language = languages[langComboBox.SelectedIndex].Code;
 			Properties.Settings.Default.Save();
+
+			if (owner != null)
+			{
+				translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].AuthorName;
+			}
+		}
+
+		private void SettingsForm_Load(object sender, EventArgs e)
+		{
+			owner = this.Owner as MainForm;
+			InitLanguage();
+			translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].AuthorName;
+		}
+
+		private void translatedByLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(languages[langComboBox.SelectedIndex].AuthorLink);
 		}
 	}
 }

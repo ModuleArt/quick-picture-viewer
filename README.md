@@ -18,6 +18,9 @@
   <a alt="Buy ma a coffee" href="https://www.patreon.com/moduleart">
     <img alt="Patreon" src="https://img.shields.io/badge/donate-patreon-%23E85B46">
   </a>
+  <a alt="Buy ma a coffee" href="https://www.buymeacoffee.com/ModuleArt">
+    <img alt="Buy me a coffe" src="https://img.shields.io/badge/Buy%20me%20a-cofee-%23FF813F">
+  </a>
 </p>
 
 <h2 align="center">Install</h2>

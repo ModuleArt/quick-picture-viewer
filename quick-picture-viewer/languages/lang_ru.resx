@@ -129,6 +129,10 @@
     <value>Приложение использует актуальную версию</value>
     <comment>Message box</comment>
   </data>
+  <data name="app-startup-action" xml:space="preserve">
+    <value>Действие при запуске приложения</value>
+    <comment>Settings</comment>
+  </data>
   <data name="auto" xml:space="preserve">
     <value>Авто</value>
     <comment>Status bar, zoom text field</comment>
@@ -144,6 +148,10 @@
   <data name="capture-screen" xml:space="preserve">
     <value>Сделать скриншот</value>
     <comment>Menu</comment>
+  </data>
+  <data name="check-for-updates-on-startup" xml:space="preserve">
+    <value>Проверять наличие обновлений</value>
+    <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
     <value>Фон шахматной доски</value>
@@ -181,6 +189,10 @@
     <value>Текущий файл не найден</value>
     <comment>Message box</comment>
   </data>
+  <data name="dark" xml:space="preserve">
+    <value>Тёмная</value>
+    <comment>Settings</comment>
+  </data>
   <data name="dds-memory-error" xml:space="preserve">
     <value>Ошибка памяти при чтении DDS/TGA</value>
     <comment>Message box</comment>
@@ -188,6 +200,10 @@
   <data name="delete-file" xml:space="preserve">
     <value>Удалить файл</value>
     <comment>Message box</comment>
+  </data>
+  <data name="do-nothing" xml:space="preserve">
+    <value>Ничего не делать</value>
+    <comment>Settings</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Перетащенное изображение</value>
@@ -252,6 +268,14 @@
   <data name="left-arrow" xml:space="preserve">
     <value>Стрелка влево</value>
     <comment>Menu</comment>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Светлая</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="localization" xml:space="preserve">
+    <value>Локализация</value>
+    <comment>Settings</comment>
   </data>
   <data name="minus" xml:space="preserve">
     <value>Минус</value>
@@ -325,6 +349,10 @@
     <value>Открыть сторонним приложением по-умолчанию</value>
     <comment>Menu</comment>
   </data>
+  <data name="paste-from-clipboard" xml:space="preserve">
+    <value>Вставить с буфера обмена</value>
+    <comment>Settings</comment>
+  </data>
   <data name="paste-image" xml:space="preserve">
     <value>Вставить</value>
     <comment>Menu</comment>
@@ -357,6 +385,10 @@
     <value>Переоткрыть файл</value>
     <comment>Menu</comment>
   </data>
+  <data name="restart-required" xml:space="preserve">
+    <value>Требуется перезапуск приложения</value>
+    <comment>Settings</comment>
+  </data>
   <data name="right-arrow" xml:space="preserve">
     <value>Стрелка вправо</value>
     <comment>Menu</comment>
@@ -387,7 +419,7 @@
   </data>
   <data name="settings" xml:space="preserve">
     <value>Настройки</value>
-    <comment>Menu</comment>
+    <comment>Menu, Settings</comment>
   </data>
   <data name="show-file-explorer" xml:space="preserve">
     <value>Показать файл в папке</value>
@@ -401,6 +433,10 @@
     <value>Слайдшоу</value>
     <comment>Menu</comment>
   </data>
+  <data name="startup" xml:space="preserve">
+    <value>Запуск</value>
+    <comment>Settings</comment>
+  </data>
   <data name="sure-close-app" xml:space="preserve">
     <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?</value>
     <comment>Message box</comment>
@@ -408,6 +444,14 @@
   <data name="sure-move-to-trash" xml:space="preserve">
     <value>Вы уверены, что хотите переместить файл в Корзину?</value>
     <comment>Message box</comment>
+  </data>
+  <data name="theme" xml:space="preserve">
+    <value>Тема</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="translated-by" xml:space="preserve">
+    <value>Автор перевода</value>
+    <comment>Settings</comment>
   </data>
   <data name="type-options" xml:space="preserve">
     <value>опции</value>
@@ -437,9 +481,17 @@
     <value>Обновление невозможно</value>
     <comment>Message box</comment>
   </data>
+  <data name="updates" xml:space="preserve">
+    <value>Обновления</value>
+    <comment>Settings</comment>
+  </data>
   <data name="updator" xml:space="preserve">
     <value>Менеджер обновлений</value>
     <comment>Message box</comment>
+  </data>
+  <data name="use-system-setting" xml:space="preserve">
+    <value>Использовать системную настройку</value>
+    <comment>Settings</comment>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Внимание</value>

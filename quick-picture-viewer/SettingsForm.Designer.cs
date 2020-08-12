@@ -54,13 +54,14 @@
 			this.favExtTextBox = new QuickLibrary.QlibTextBox();
 			this.favExtLabel = new System.Windows.Forms.Label();
 			this.langPage = new System.Windows.Forms.TabPage();
+			this.translatedByLink = new System.Windows.Forms.LinkLabel();
+			this.restartLabel2 = new System.Windows.Forms.Label();
 			this.langComboBox = new QuickLibrary.QlibComboBox();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.label1 = new System.Windows.Forms.Label();
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
 			this.updatesPage.SuspendLayout();
@@ -118,7 +119,7 @@
 			this.themePage.Padding = new System.Windows.Forms.Padding(10);
 			this.themePage.Size = new System.Drawing.Size(292, 152);
 			this.themePage.TabIndex = 0;
-			this.themePage.Text = "Theme";
+			this.themePage.Text = "theme";
 			this.themePage.ToolTipText = "App theming";
 			// 
 			// restartLabel1
@@ -127,9 +128,9 @@
 			this.restartLabel1.Location = new System.Drawing.Point(10, 116);
 			this.restartLabel1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.restartLabel1.Name = "restartLabel1";
-			this.restartLabel1.Size = new System.Drawing.Size(143, 19);
+			this.restartLabel1.Size = new System.Drawing.Size(114, 19);
 			this.restartLabel1.TabIndex = 38;
-			this.restartLabel1.Text = "* App restart required";
+			this.restartLabel1.Text = "* restart required";
 			// 
 			// systemThemeRadio
 			// 
@@ -140,7 +141,7 @@
 			this.systemThemeRadio.Size = new System.Drawing.Size(272, 32);
 			this.systemThemeRadio.TabIndex = 0;
 			this.systemThemeRadio.TabStop = true;
-			this.systemThemeRadio.Text = "Use system setting";
+			this.systemThemeRadio.Text = "system";
 			this.systemThemeRadio.UseVisualStyleBackColor = true;
 			this.systemThemeRadio.CheckedChanged += new System.EventHandler(this.systemThemeRadio_CheckedChanged);
 			// 
@@ -151,7 +152,7 @@
 			this.darkThemeRadio.Name = "darkThemeRadio";
 			this.darkThemeRadio.Size = new System.Drawing.Size(272, 32);
 			this.darkThemeRadio.TabIndex = 2;
-			this.darkThemeRadio.Text = "Dark";
+			this.darkThemeRadio.Text = "dark";
 			this.darkThemeRadio.UseVisualStyleBackColor = true;
 			this.darkThemeRadio.CheckedChanged += new System.EventHandler(this.darkThemeRadio_CheckedChanged);
 			// 
@@ -162,7 +163,7 @@
 			this.lightThemeRadio.Name = "lightThemeRadio";
 			this.lightThemeRadio.Size = new System.Drawing.Size(272, 32);
 			this.lightThemeRadio.TabIndex = 1;
-			this.lightThemeRadio.Text = "Light";
+			this.lightThemeRadio.Text = "light";
 			this.lightThemeRadio.UseVisualStyleBackColor = true;
 			this.lightThemeRadio.CheckedChanged += new System.EventHandler(this.lightThemeRadio_CheckedChanged);
 			// 
@@ -176,7 +177,7 @@
 			this.updatesPage.Padding = new System.Windows.Forms.Padding(10);
 			this.updatesPage.Size = new System.Drawing.Size(292, 152);
 			this.updatesPage.TabIndex = 1;
-			this.updatesPage.Text = "Updates";
+			this.updatesPage.Text = "updates";
 			this.updatesPage.ToolTipText = "Update checker";
 			// 
 			// updatesCheckBox
@@ -186,7 +187,7 @@
 			this.updatesCheckBox.Name = "updatesCheckBox";
 			this.updatesCheckBox.Size = new System.Drawing.Size(272, 32);
 			this.updatesCheckBox.TabIndex = 0;
-			this.updatesCheckBox.Text = "Check for updates on app startup";
+			this.updatesCheckBox.Text = "check for updates on startup";
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
 			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
 			// 
@@ -310,7 +311,7 @@
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
 			this.startupPage.Size = new System.Drawing.Size(292, 152);
 			this.startupPage.TabIndex = 3;
-			this.startupPage.Text = "Startup";
+			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
 			// 
 			// startupLabel
@@ -319,9 +320,9 @@
 			this.startupLabel.Location = new System.Drawing.Point(10, 10);
 			this.startupLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.startupLabel.Name = "startupLabel";
-			this.startupLabel.Size = new System.Drawing.Size(126, 19);
+			this.startupLabel.Size = new System.Drawing.Size(97, 19);
 			this.startupLabel.TabIndex = 42;
-			this.startupLabel.Text = "App startup action:";
+			this.startupLabel.Text = "startup action:";
 			// 
 			// startupNothingRadio
 			// 
@@ -332,7 +333,7 @@
 			this.startupNothingRadio.Size = new System.Drawing.Size(272, 32);
 			this.startupNothingRadio.TabIndex = 39;
 			this.startupNothingRadio.TabStop = true;
-			this.startupNothingRadio.Text = "Do nothing";
+			this.startupNothingRadio.Text = "nothing";
 			this.startupNothingRadio.UseVisualStyleBackColor = true;
 			this.startupNothingRadio.CheckedChanged += new System.EventHandler(this.startupNothingRadio_CheckedChanged);
 			// 
@@ -343,7 +344,7 @@
 			this.startupPasteRadio.Name = "startupPasteRadio";
 			this.startupPasteRadio.Size = new System.Drawing.Size(272, 32);
 			this.startupPasteRadio.TabIndex = 40;
-			this.startupPasteRadio.Text = "Paste from clipboard";
+			this.startupPasteRadio.Text = "paste";
 			this.startupPasteRadio.UseVisualStyleBackColor = true;
 			this.startupPasteRadio.CheckedChanged += new System.EventHandler(this.startupPasteRadio_CheckedChanged);
 			// 
@@ -406,7 +407,8 @@
 			// langPage
 			// 
 			this.langPage.BackColor = System.Drawing.Color.White;
-			this.langPage.Controls.Add(this.label1);
+			this.langPage.Controls.Add(this.translatedByLink);
+			this.langPage.Controls.Add(this.restartLabel2);
 			this.langPage.Controls.Add(this.langComboBox);
 			this.langPage.Location = new System.Drawing.Point(4, 52);
 			this.langPage.Margin = new System.Windows.Forms.Padding(0);
@@ -414,7 +416,29 @@
 			this.langPage.Padding = new System.Windows.Forms.Padding(10);
 			this.langPage.Size = new System.Drawing.Size(292, 152);
 			this.langPage.TabIndex = 6;
-			this.langPage.Text = "Language";
+			this.langPage.Text = "language";
+			// 
+			// translatedByLink
+			// 
+			this.translatedByLink.AutoSize = true;
+			this.translatedByLink.Location = new System.Drawing.Point(10, 52);
+			this.translatedByLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.translatedByLink.Name = "translatedByLink";
+			this.translatedByLink.Size = new System.Drawing.Size(89, 19);
+			this.translatedByLink.TabIndex = 40;
+			this.translatedByLink.TabStop = true;
+			this.translatedByLink.Text = "translated by";
+			this.translatedByLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.translatedByLink_LinkClicked);
+			// 
+			// restartLabel2
+			// 
+			this.restartLabel2.AutoSize = true;
+			this.restartLabel2.Location = new System.Drawing.Point(10, 81);
+			this.restartLabel2.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.restartLabel2.Name = "restartLabel2";
+			this.restartLabel2.Size = new System.Drawing.Size(114, 19);
+			this.restartLabel2.TabIndex = 39;
+			this.restartLabel2.Text = "* restart required";
 			// 
 			// langComboBox
 			// 
@@ -465,24 +489,14 @@
 			this.titleLabel.Location = new System.Drawing.Point(9, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(58, 19);
+			this.titleLabel.Size = new System.Drawing.Size(57, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "Settings";
+			this.titleLabel.Text = "settings";
 			// 
 			// openFileDialog1
 			// 
 			this.openFileDialog1.FileName = "openFileDialog1";
 			this.openFileDialog1.Filter = "App executable|*.exe";
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(10, 52);
-			this.label1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(143, 19);
-			this.label1.TabIndex = 39;
-			this.label1.Text = "* App restart required";
 			// 
 			// SettingsForm
 			// 
@@ -499,6 +513,7 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Settings";
+			this.Load += new System.EventHandler(this.SettingsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SettingsForm_KeyDown);
 			this.settingsTabs.ResumeLayout(false);
 			this.themePage.ResumeLayout(false);
@@ -552,6 +567,7 @@
 		private System.Windows.Forms.Label slideshowSecondsLabel;
 		private System.Windows.Forms.TabPage langPage;
 		private QuickLibrary.QlibComboBox langComboBox;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label restartLabel2;
+		private System.Windows.Forms.LinkLabel translatedByLink;
 	}
 }

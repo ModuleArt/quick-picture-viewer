@@ -88,6 +88,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Действие при запуске приложения.
+        /// </summary>
+        internal static string app_startup_action {
+            get {
+                return ResourceManager.GetString("app-startup-action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Авто.
         /// </summary>
         internal static string auto {
@@ -120,6 +129,15 @@ namespace quick_picture_viewer.languages {
         internal static string capture_screen {
             get {
                 return ResourceManager.GetString("capture-screen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Проверять наличие обновлений.
+        /// </summary>
+        internal static string check_for_updates_on_startup {
+            get {
+                return ResourceManager.GetString("check-for-updates-on-startup", resourceCulture);
             }
         }
         
@@ -205,6 +223,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Тёмная.
+        /// </summary>
+        internal static string dark {
+            get {
+                return ResourceManager.GetString("dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ошибка памяти при чтении DDS/TGA.
         /// </summary>
         internal static string dds_memory_error {
@@ -219,6 +246,15 @@ namespace quick_picture_viewer.languages {
         internal static string delete_file {
             get {
                 return ResourceManager.GetString("delete-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ничего не делать.
+        /// </summary>
+        internal static string do_nothing {
+            get {
+                return ResourceManager.GetString("do-nothing", resourceCulture);
             }
         }
         
@@ -363,6 +399,24 @@ namespace quick_picture_viewer.languages {
         internal static string left_arrow {
             get {
                 return ResourceManager.GetString("left-arrow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Светлая.
+        /// </summary>
+        internal static string light {
+            get {
+                return ResourceManager.GetString("light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Локализация.
+        /// </summary>
+        internal static string localization {
+            get {
+                return ResourceManager.GetString("localization", resourceCulture);
             }
         }
         
@@ -529,6 +583,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Вставить с буфера обмена.
+        /// </summary>
+        internal static string paste_from_clipboard {
+            get {
+                return ResourceManager.GetString("paste-from-clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Вставить.
         /// </summary>
         internal static string paste_image {
@@ -597,6 +660,15 @@ namespace quick_picture_viewer.languages {
         internal static string reload_file {
             get {
                 return ResourceManager.GetString("reload-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Требуется перезапуск приложения.
+        /// </summary>
+        internal static string restart_required {
+            get {
+                return ResourceManager.GetString("restart-required", resourceCulture);
             }
         }
         
@@ -700,6 +772,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Запуск.
+        /// </summary>
+        internal static string startup {
+            get {
+                return ResourceManager.GetString("startup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?.
         /// </summary>
         internal static string sure_close_app {
@@ -714,6 +795,24 @@ namespace quick_picture_viewer.languages {
         internal static string sure_move_to_trash {
             get {
                 return ResourceManager.GetString("sure-move-to-trash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тема.
+        /// </summary>
+        internal static string theme {
+            get {
+                return ResourceManager.GetString("theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Автор перевода.
+        /// </summary>
+        internal static string translated_by {
+            get {
+                return ResourceManager.GetString("translated-by", resourceCulture);
             }
         }
         
@@ -781,11 +880,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Обновления.
+        /// </summary>
+        internal static string updates {
+            get {
+                return ResourceManager.GetString("updates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Менеджер обновлений.
         /// </summary>
         internal static string updator {
             get {
                 return ResourceManager.GetString("updator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Использовать системную настройку.
+        /// </summary>
+        internal static string use_system_setting {
+            get {
+                return ResourceManager.GetString("use-system-setting", resourceCulture);
             }
         }
         

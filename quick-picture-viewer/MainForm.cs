@@ -72,10 +72,22 @@ namespace quick_picture_viewer
 			zoomTextBox.Height = 21;
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
 
-			ApplyDarkTheme(darkMode);
+			SetDarkMode(darkMode);
 			InitLanguage();
 
 			closeFile();
+		}
+
+		protected override void WndProc(ref Message m)
+		{
+			base.WndProc(ref m);
+			if (m.Msg == NativeMethodsManager.WM_SYSCOMMAND)
+			{
+				if (m.WParam == (IntPtr)NativeMethodsManager.SC_MAXIMIZE)
+				{
+					this.OnResizeEnd(EventArgs.Empty);
+				}
+			}
 		}
 
 		private void InitLanguage()
@@ -1558,7 +1570,7 @@ namespace quick_picture_viewer
 			showOpenWithDialog(Path.Combine(currentFolder, currentFile));
 		}
 
-		private void ApplyDarkTheme(bool dark)
+		private void SetDarkMode(bool dark)
 		{
 			if (dark)
 			{
