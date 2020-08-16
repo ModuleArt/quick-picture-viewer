@@ -36,7 +36,7 @@
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.fitLabel = new System.Windows.Forms.Label();
 			this.fitComboBox = new QuickLibrary.QlibComboBox();
-			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
@@ -47,7 +47,7 @@
 			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(256, 100);
+			this.logoPictureBox.Size = new System.Drawing.Size(320, 100);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 12;
 			this.logoPictureBox.TabStop = false;
@@ -62,9 +62,9 @@
 			this.okButton.Location = new System.Drawing.Point(10, 211);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(236, 32);
+			this.okButton.Size = new System.Drawing.Size(300, 32);
 			this.okButton.TabIndex = 3;
-			this.okButton.Text = " Set background";
+			this.okButton.Text = " set background";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.okButton.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(256, 32);
+			this.titlePanel.Size = new System.Drawing.Size(320, 32);
 			this.titlePanel.TabIndex = 0;
 			// 
 			// closeBtn
@@ -88,12 +88,11 @@
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(224, 0);
+			this.closeBtn.Location = new System.Drawing.Point(288, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
 			this.closeBtn.TabIndex = 1;
-			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
@@ -103,9 +102,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(10, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(175, 19);
+			this.titleLabel.Size = new System.Drawing.Size(174, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "Set as desktop background";
+			this.titleLabel.Text = "set as desktop background";
 			// 
 			// fitLabel
 			// 
@@ -113,9 +112,9 @@
 			this.fitLabel.Location = new System.Drawing.Point(10, 141);
 			this.fitLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.fitLabel.Name = "fitLabel";
-			this.fitLabel.Size = new System.Drawing.Size(85, 19);
+			this.fitLabel.Size = new System.Drawing.Size(82, 19);
 			this.fitLabel.TabIndex = 15;
-			this.fitLabel.Text = "Choose a fit:";
+			this.fitLabel.Text = "choose a fit:";
 			// 
 			// fitComboBox
 			// 
@@ -124,28 +123,29 @@
 			this.fitComboBox.FormattingEnabled = true;
 			this.fitComboBox.ItemHeight = 26;
 			this.fitComboBox.Items.AddRange(new object[] {
-            "Fill",
-            "Fit",
-            "Stretch",
-            "Tile",
-            "Center",
-            "Span"});
+            "fill",
+            "fit",
+            "stretch",
+            "tile",
+            "center",
+            "span"});
 			this.fitComboBox.Location = new System.Drawing.Point(10, 169);
 			this.fitComboBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fitComboBox.Name = "fitComboBox";
-			this.fitComboBox.Size = new System.Drawing.Size(236, 32);
+			this.fitComboBox.Size = new System.Drawing.Size(300, 32);
 			this.fitComboBox.TabIndex = 2;
 			// 
 			// WallpaperForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(256, 253);
+			this.ClientSize = new System.Drawing.Size(320, 253);
 			this.Controls.Add(this.fitLabel);
 			this.Controls.Add(this.fitComboBox);
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);
+			this.Draggable = true;
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -155,6 +155,8 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Set as desktop background";
+			this.TitleLabel = this.titleLabel;
+			this.Load += new System.EventHandler(this.WallpaperForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WallpaperForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
 			this.titlePanel.ResumeLayout(false);
@@ -172,7 +174,7 @@
 		private QuickLibrary.QlibComboBox fitComboBox;
 		private System.Windows.Forms.Label fitLabel;
 		private System.Windows.Forms.Label titleLabel;
-		private System.Windows.Forms.ToolTip aboutTooltip;
+		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 	}
 }

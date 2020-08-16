@@ -8,7 +8,8 @@ namespace quick_picture_viewer
 {
 	partial class WallpaperForm : QlibFixedForm
 	{
-		Bitmap bmp;
+		private Bitmap bmp;
+		private MainForm owner;
 
 		public WallpaperForm(Bitmap bmp, bool darkMode)
 		{
@@ -21,7 +22,7 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			(new DropShadow()).ApplyShadows(this);
-			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
+			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel, fitLabel });
 
 			applyDarkMode(darkMode);
 
@@ -45,29 +46,26 @@ namespace quick_picture_viewer
 
 		private void okButton_Click(object sender, EventArgs e)
 		{
-			if (fitComboBox.Text == "Stretch")
+			switch (fitComboBox.SelectedIndex)
 			{
-				WallpaperManager.Set(bmp, WallpaperManager.Style.Stretch);
-			}
-			else if (fitComboBox.Text == "Tile")
-			{
-				WallpaperManager.Set(bmp, WallpaperManager.Style.Tile);
-			}
-			else if (fitComboBox.Text == "Center")
-			{
-				WallpaperManager.Set(bmp, WallpaperManager.Style.Center);
-			}
-			else if (fitComboBox.Text == "Fill")
-			{
-				WallpaperManager.Set(bmp, WallpaperManager.Style.Fill);
-			}
-			else if (fitComboBox.Text == "Fit")
-			{
-				WallpaperManager.Set(bmp, WallpaperManager.Style.Fit);
-			}
-			else if (fitComboBox.Text == "Span")
-			{
-				WallpaperManager.Set(bmp, WallpaperManager.Style.Span);
+				case 2:
+					WallpaperManager.Set(bmp, WallpaperManager.Style.Stretch);
+					break;
+				case 3:
+					WallpaperManager.Set(bmp, WallpaperManager.Style.Tile);
+					break;
+				case 4:
+					WallpaperManager.Set(bmp, WallpaperManager.Style.Center);
+					break;
+				case 0:
+					WallpaperManager.Set(bmp, WallpaperManager.Style.Fill);
+					break;
+				case 1:
+					WallpaperManager.Set(bmp, WallpaperManager.Style.Fit);
+					break;
+				case 5:
+					WallpaperManager.Set(bmp, WallpaperManager.Style.Span);
+					break;
 			}
 		}
 
@@ -82,6 +80,26 @@ namespace quick_picture_viewer
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void WallpaperForm_Load(object sender, EventArgs e)
+		{
+			owner = this.Owner as MainForm;
+			InitLanguage();
+		}
+
+		private void InitLanguage()
+		{
+			this.Text = owner.resMan.GetString("set-as-desktop-background");
+			fitLabel.Text = owner.resMan.GetString("choose-fit") + ":";
+			okButton.Text = " " + owner.resMan.GetString("set-background");
+			fitComboBox.Items[0] = owner.resMan.GetString("fill");
+			fitComboBox.Items[1] = owner.resMan.GetString("fit");
+			fitComboBox.Items[2] = owner.resMan.GetString("stretch");
+			fitComboBox.Items[3] = owner.resMan.GetString("tile");
+			fitComboBox.Items[4] = owner.resMan.GetString("center");
+			fitComboBox.Items[5] = owner.resMan.GetString("span");
+			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 		}
 	}
 }

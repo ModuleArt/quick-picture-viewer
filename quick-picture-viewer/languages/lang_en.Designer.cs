@@ -115,6 +115,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auto size.
+        /// </summary>
+        internal static string auto_size {
+            get {
+                return ResourceManager.GetString("auto-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto zoom.
         /// </summary>
         internal static string auto_zoom {
@@ -151,6 +160,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Center.
+        /// </summary>
+        internal static string center {
+            get {
+                return ResourceManager.GetString("center", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to centimeters.
         /// </summary>
         internal static string centimeters {
@@ -183,6 +201,15 @@ namespace quick_picture_viewer.languages {
         internal static string choose_color {
             get {
                 return ResourceManager.GetString("choose-color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a fit.
+        /// </summary>
+        internal static string choose_fit {
+            get {
+                return ResourceManager.GetString("choose-fit", resourceCulture);
             }
         }
         
@@ -403,6 +430,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fill.
+        /// </summary>
+        internal static string fill {
+            get {
+                return ResourceManager.GetString("fill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fit.
+        /// </summary>
+        internal static string fit {
+            get {
+                return ResourceManager.GetString("fit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flip horizontal.
         /// </summary>
         internal static string flip_horizontal {
@@ -475,6 +520,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Height.
+        /// </summary>
+        internal static string height {
+            get {
+                return ResourceManager.GetString("height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image copied to clipboard.
         /// </summary>
         internal static string image_copied_to_clipboard {
@@ -543,6 +597,15 @@ namespace quick_picture_viewer.languages {
         internal static string localization {
             get {
                 return ResourceManager.GetString("localization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maintain aspect ratio.
+        /// </summary>
+        internal static string maintain_aspect_ratio {
+            get {
+                return ResourceManager.GetString("maintain-aspect-ratio", resourceCulture);
             }
         }
         
@@ -727,6 +790,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Original size.
+        /// </summary>
+        internal static string original_size {
+            get {
+                return ResourceManager.GetString("original-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Paste from clipboard.
         /// </summary>
         internal static string paste_from_clipboard {
@@ -790,6 +862,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Presets.
+        /// </summary>
+        internal static string presets {
+            get {
+                return ResourceManager.GetString("presets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press {0} to exit fullscreen mode.
         /// </summary>
         internal static string press_to_exit_fullscreen {
@@ -831,6 +912,15 @@ namespace quick_picture_viewer.languages {
         internal static string reload_file {
             get {
                 return ResourceManager.GetString("reload-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resize SVG.
+        /// </summary>
+        internal static string resize_svg {
+            get {
+                return ResourceManager.GetString("resize-svg", resourceCulture);
             }
         }
         
@@ -925,6 +1015,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set background.
+        /// </summary>
+        internal static string set_background {
+            get {
+                return ResourceManager.GetString("set-background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string settings {
@@ -970,6 +1069,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Span.
+        /// </summary>
+        internal static string span {
+            get {
+                return ResourceManager.GetString("span", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Square.
         /// </summary>
         internal static string square {
@@ -984,6 +1092,15 @@ namespace quick_picture_viewer.languages {
         internal static string startup {
             get {
                 return ResourceManager.GetString("startup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stretch.
+        /// </summary>
+        internal static string stretch {
+            get {
+                return ResourceManager.GetString("stretch", resourceCulture);
             }
         }
         
@@ -1020,6 +1137,15 @@ namespace quick_picture_viewer.languages {
         internal static string theme {
             get {
                 return ResourceManager.GetString("theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tile.
+        /// </summary>
+        internal static string tile {
+            get {
+                return ResourceManager.GetString("tile", resourceCulture);
             }
         }
         
@@ -1146,6 +1272,15 @@ namespace quick_picture_viewer.languages {
         internal static string wheel_to_zoom {
             get {
                 return ResourceManager.GetString("wheel-to-zoom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Width.
+        /// </summary>
+        internal static string width {
+            get {
+                return ResourceManager.GetString("width", resourceCulture);
             }
         }
         

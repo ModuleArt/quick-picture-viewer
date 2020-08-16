@@ -12,6 +12,7 @@ namespace quick_picture_viewer
 		private float aspectRatio;
 		private int panelWidth;
 		private int panelHeight;
+		private MainForm owner;
 
 		public SvgOpsForm(string path, int imageWidth, int imageHeight, int panelWidth, int panelHeight, bool darkMode)
 		{
@@ -27,7 +28,7 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			(new DropShadow()).ApplyShadows(this);
-			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
+			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel, presetsLabel, widthLabel, heightLabel });
 
 			applyDarkMode(darkMode);
 
@@ -182,6 +183,25 @@ namespace quick_picture_viewer
 			Console.WriteLine(k);
 
 			setPreset(k);
+		}
+
+		private void SvgOpsForm_Load(object sender, EventArgs e)
+		{
+			owner = this.Owner as MainForm;
+			InitLanguage();
+		}
+
+		private void InitLanguage()
+		{
+			this.Text = "SVG " + owner.resMan.GetString("type-options");
+			presetsLabel.Text = owner.resMan.GetString("presets") + ":";
+			widthLabel.Text = owner.resMan.GetString("width") + ":";
+			heightLabel.Text = owner.resMan.GetString("height") + ":";
+			defaultSizeButton.Text = owner.resMan.GetString("original-size");
+			autoSizeBtn.Text = owner.resMan.GetString("auto-size");
+			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			okButton.Text = " " + owner.resMan.GetString("resize-svg");
+			aspectRatioCheckbox.Text = owner.resMan.GetString("maintain-aspect-ratio");
 		}
 	}
 }

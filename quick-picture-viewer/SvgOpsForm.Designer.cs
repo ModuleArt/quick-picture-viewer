@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SvgOpsForm));
 			this.okButton = new System.Windows.Forms.Button();
 			this.widthLabel = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
 			this.size32Button = new System.Windows.Forms.Button();
 			this.size16Button = new System.Windows.Forms.Button();
 			this.autoSizeBtn = new System.Windows.Forms.Button();
+			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).BeginInit();
 			this.titlePanel.SuspendLayout();
@@ -65,7 +67,7 @@
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(236, 32);
 			this.okButton.TabIndex = 13;
-			this.okButton.Text = " Resize SVG";
+			this.okButton.Text = " resize svg";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.okButton.UseVisualStyleBackColor = false;
@@ -77,9 +79,9 @@
 			this.widthLabel.Location = new System.Drawing.Point(10, 330);
 			this.widthLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.widthLabel.Name = "widthLabel";
-			this.widthLabel.Size = new System.Drawing.Size(49, 19);
+			this.widthLabel.Size = new System.Drawing.Size(46, 19);
 			this.widthLabel.TabIndex = 3;
-			this.widthLabel.Text = "Width:";
+			this.widthLabel.Text = "width:";
 			// 
 			// heightLabel
 			// 
@@ -87,9 +89,9 @@
 			this.heightLabel.Location = new System.Drawing.Point(129, 330);
 			this.heightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.heightLabel.Name = "heightLabel";
-			this.heightLabel.Size = new System.Drawing.Size(53, 19);
+			this.heightLabel.Size = new System.Drawing.Size(51, 19);
 			this.heightLabel.TabIndex = 4;
-			this.heightLabel.Text = "Height:";
+			this.heightLabel.Text = "height:";
 			// 
 			// widthNumeric
 			// 
@@ -152,7 +154,7 @@
 			this.aspectRatioCheckbox.Name = "aspectRatioCheckbox";
 			this.aspectRatioCheckbox.Size = new System.Drawing.Size(236, 23);
 			this.aspectRatioCheckbox.TabIndex = 10;
-			this.aspectRatioCheckbox.Text = "Maintain aspect ratio";
+			this.aspectRatioCheckbox.Text = "maintain aspect ratio";
 			this.aspectRatioCheckbox.UseVisualStyleBackColor = true;
 			this.aspectRatioCheckbox.CheckedChanged += new System.EventHandler(this.aspectRatioCheckbox_CheckedChanged);
 			// 
@@ -194,7 +196,7 @@
 			this.defaultSizeButton.Name = "defaultSizeButton";
 			this.defaultSizeButton.Size = new System.Drawing.Size(113, 32);
 			this.defaultSizeButton.TabIndex = 2;
-			this.defaultSizeButton.Text = "Original size";
+			this.defaultSizeButton.Text = "original size";
 			this.defaultSizeButton.UseVisualStyleBackColor = false;
 			this.defaultSizeButton.Click += new System.EventHandler(this.defaultSizeButton_Click);
 			// 
@@ -220,7 +222,7 @@
 			this.presetsLabel.Name = "presetsLabel";
 			this.presetsLabel.Size = new System.Drawing.Size(56, 19);
 			this.presetsLabel.TabIndex = 35;
-			this.presetsLabel.Text = "Presets:";
+			this.presetsLabel.Text = "presets:";
 			// 
 			// size512Button
 			// 
@@ -268,9 +270,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(9, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(85, 19);
+			this.titleLabel.Size = new System.Drawing.Size(80, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "SVG options";
+			this.titleLabel.Text = "svg options";
 			// 
 			// logoPictureBox
 			// 
@@ -321,13 +323,12 @@
 			this.autoSizeBtn.Name = "autoSizeBtn";
 			this.autoSizeBtn.Size = new System.Drawing.Size(113, 32);
 			this.autoSizeBtn.TabIndex = 38;
-			this.autoSizeBtn.Text = "Auto size";
+			this.autoSizeBtn.Text = "auto size";
 			this.autoSizeBtn.UseVisualStyleBackColor = false;
 			this.autoSizeBtn.Click += new System.EventHandler(this.autoSizeBtn_Click);
 			// 
 			// SvgOpsForm
 			// 
-			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(256, 436);
@@ -348,6 +349,7 @@
 			this.Controls.Add(this.defaultSizeButton);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.presetsLabel);
+			this.Draggable = true;
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -356,6 +358,8 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "SVG options";
+			this.TitleLabel = this.titleLabel;
+			this.Load += new System.EventHandler(this.SvgOpsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SvgOpsForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).EndInit();
@@ -387,5 +391,6 @@
 		private System.Windows.Forms.Button size16Button;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.Button autoSizeBtn;
+		private System.Windows.Forms.ToolTip infoTooltip;
 	}
 }

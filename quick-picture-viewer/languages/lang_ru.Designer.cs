@@ -115,6 +115,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Авто.
+        /// </summary>
+        internal static string auto_size {
+            get {
+                return ResourceManager.GetString("auto-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Авто масштаб.
         /// </summary>
         internal static string auto_zoom {
@@ -151,6 +160,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Центрировать.
+        /// </summary>
+        internal static string center {
+            get {
+                return ResourceManager.GetString("center", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to сантиметров.
         /// </summary>
         internal static string centimeters {
@@ -183,6 +201,15 @@ namespace quick_picture_viewer.languages {
         internal static string choose_color {
             get {
                 return ResourceManager.GetString("choose-color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Режим размещения.
+        /// </summary>
+        internal static string choose_fit {
+            get {
+                return ResourceManager.GetString("choose-fit", resourceCulture);
             }
         }
         
@@ -403,6 +430,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Заполнить.
+        /// </summary>
+        internal static string fill {
+            get {
+                return ResourceManager.GetString("fill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подогнать.
+        /// </summary>
+        internal static string fit {
+            get {
+                return ResourceManager.GetString("fit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Отразить по горизонтали.
         /// </summary>
         internal static string flip_horizontal {
@@ -475,6 +520,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Высота.
+        /// </summary>
+        internal static string height {
+            get {
+                return ResourceManager.GetString("height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Изображение скопировано в буфер обмена.
         /// </summary>
         internal static string image_copied_to_clipboard {
@@ -543,6 +597,15 @@ namespace quick_picture_viewer.languages {
         internal static string localization {
             get {
                 return ResourceManager.GetString("localization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сохранять пропорции.
+        /// </summary>
+        internal static string maintain_aspect_ratio {
+            get {
+                return ResourceManager.GetString("maintain-aspect-ratio", resourceCulture);
             }
         }
         
@@ -727,6 +790,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Исходный.
+        /// </summary>
+        internal static string original_size {
+            get {
+                return ResourceManager.GetString("original-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Вставить с буфера обмена.
         /// </summary>
         internal static string paste_from_clipboard {
@@ -790,6 +862,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Пресеты.
+        /// </summary>
+        internal static string presets {
+            get {
+                return ResourceManager.GetString("presets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Нажмите {0}, чтобы выйти из полноэкранного режима.
         /// </summary>
         internal static string press_to_exit_fullscreen {
@@ -831,6 +912,15 @@ namespace quick_picture_viewer.languages {
         internal static string reload_file {
             get {
                 return ResourceManager.GetString("reload-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Изменить размер SVG.
+        /// </summary>
+        internal static string resize_svg {
+            get {
+                return ResourceManager.GetString("resize-svg", resourceCulture);
             }
         }
         
@@ -925,6 +1015,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Установить как обои.
+        /// </summary>
+        internal static string set_background {
+            get {
+                return ResourceManager.GetString("set-background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Настройки.
         /// </summary>
         internal static string settings {
@@ -970,6 +1069,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Перекрывать.
+        /// </summary>
+        internal static string span {
+            get {
+                return ResourceManager.GetString("span", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Квадрат.
         /// </summary>
         internal static string square {
@@ -984,6 +1092,15 @@ namespace quick_picture_viewer.languages {
         internal static string startup {
             get {
                 return ResourceManager.GetString("startup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Разтянуть.
+        /// </summary>
+        internal static string stretch {
+            get {
+                return ResourceManager.GetString("stretch", resourceCulture);
             }
         }
         
@@ -1020,6 +1137,15 @@ namespace quick_picture_viewer.languages {
         internal static string theme {
             get {
                 return ResourceManager.GetString("theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Плитка.
+        /// </summary>
+        internal static string tile {
+            get {
+                return ResourceManager.GetString("tile", resourceCulture);
             }
         }
         
@@ -1146,6 +1272,15 @@ namespace quick_picture_viewer.languages {
         internal static string wheel_to_zoom {
             get {
                 return ResourceManager.GetString("wheel-to-zoom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ширина.
+        /// </summary>
+        internal static string width {
+            get {
+                return ResourceManager.GetString("width", resourceCulture);
             }
         }
         
