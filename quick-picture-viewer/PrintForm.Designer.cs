@@ -60,7 +60,7 @@
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
-			this.okButton.Location = new System.Drawing.Point(234, 276);
+			this.okButton.Location = new System.Drawing.Point(234, 290);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(214, 32);
@@ -77,7 +77,7 @@
 			this.setMarginsButton.BackColor = System.Drawing.SystemColors.Control;
 			this.setMarginsButton.FlatAppearance.BorderSize = 0;
 			this.setMarginsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.setMarginsButton.Location = new System.Drawing.Point(10, 276);
+			this.setMarginsButton.Location = new System.Drawing.Point(10, 290);
 			this.setMarginsButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.setMarginsButton.Name = "setMarginsButton";
 			this.setMarginsButton.Size = new System.Drawing.Size(214, 32);
@@ -91,7 +91,7 @@
 			// bottomLabel
 			// 
 			this.bottomLabel.AutoSize = true;
-			this.bottomLabel.Location = new System.Drawing.Point(174, 212);
+			this.bottomLabel.Location = new System.Drawing.Point(174, 219);
 			this.bottomLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.bottomLabel.Name = "bottomLabel";
 			this.bottomLabel.Size = new System.Drawing.Size(33, 19);
@@ -101,7 +101,7 @@
 			// rightLabel
 			// 
 			this.rightLabel.AutoSize = true;
-			this.rightLabel.Location = new System.Drawing.Point(118, 212);
+			this.rightLabel.Location = new System.Drawing.Point(118, 219);
 			this.rightLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.rightLabel.Name = "rightLabel";
 			this.rightLabel.Size = new System.Drawing.Size(44, 19);
@@ -111,7 +111,7 @@
 			// topLabel
 			// 
 			this.topLabel.AutoSize = true;
-			this.topLabel.Location = new System.Drawing.Point(62, 212);
+			this.topLabel.Location = new System.Drawing.Point(62, 219);
 			this.topLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.topLabel.Name = "topLabel";
 			this.topLabel.Size = new System.Drawing.Size(34, 19);
@@ -122,7 +122,7 @@
 			// 
 			this.centerCheckbox.Checked = true;
 			this.centerCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.centerCheckbox.Location = new System.Drawing.Point(10, 109);
+			this.centerCheckbox.Location = new System.Drawing.Point(10, 116);
 			this.centerCheckbox.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
 			this.centerCheckbox.Name = "centerCheckbox";
 			this.centerCheckbox.Size = new System.Drawing.Size(214, 32);
@@ -134,7 +134,7 @@
 			// leftLabel
 			// 
 			this.leftLabel.AutoSize = true;
-			this.leftLabel.Location = new System.Drawing.Point(6, 212);
+			this.leftLabel.Location = new System.Drawing.Point(6, 219);
 			this.leftLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.leftLabel.Name = "leftLabel";
 			this.leftLabel.Size = new System.Drawing.Size(35, 19);
@@ -144,37 +144,40 @@
 			// bottomMarginTextBox
 			// 
 			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
-			this.bottomMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.bottomMarginTextBox.Location = new System.Drawing.Point(178, 241);
+			this.bottomMarginTextBox.Location = new System.Drawing.Point(178, 248);
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.bottomMarginTextBox.Name = "bottomMarginTextBox";
-			this.bottomMarginTextBox.Size = new System.Drawing.Size(46, 25);
+			this.bottomMarginTextBox.ReadOnly = false;
+			this.bottomMarginTextBox.Size = new System.Drawing.Size(46, 32);
 			this.bottomMarginTextBox.TabIndex = 9;
+			this.bottomMarginTextBox.WordWrap = true;
 			// 
 			// rightMarginTextBox
 			// 
 			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
-			this.rightMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.rightMarginTextBox.Location = new System.Drawing.Point(122, 241);
+			this.rightMarginTextBox.Location = new System.Drawing.Point(122, 248);
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.rightMarginTextBox.Name = "rightMarginTextBox";
-			this.rightMarginTextBox.Size = new System.Drawing.Size(46, 25);
+			this.rightMarginTextBox.ReadOnly = false;
+			this.rightMarginTextBox.Size = new System.Drawing.Size(46, 32);
 			this.rightMarginTextBox.TabIndex = 8;
+			this.rightMarginTextBox.WordWrap = true;
 			// 
 			// topMarginTextBox
 			// 
 			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
-			this.topMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.topMarginTextBox.Location = new System.Drawing.Point(66, 241);
+			this.topMarginTextBox.Location = new System.Drawing.Point(66, 248);
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.topMarginTextBox.Name = "topMarginTextBox";
-			this.topMarginTextBox.Size = new System.Drawing.Size(46, 25);
+			this.topMarginTextBox.ReadOnly = false;
+			this.topMarginTextBox.Size = new System.Drawing.Size(46, 32);
 			this.topMarginTextBox.TabIndex = 7;
+			this.topMarginTextBox.WordWrap = true;
 			// 
 			// marginsLabel
 			// 
 			this.marginsLabel.AutoSize = true;
-			this.marginsLabel.Location = new System.Drawing.Point(6, 183);
+			this.marginsLabel.Location = new System.Drawing.Point(6, 190);
 			this.marginsLabel.Margin = new System.Windows.Forms.Padding(10);
 			this.marginsLabel.Name = "marginsLabel";
 			this.marginsLabel.Size = new System.Drawing.Size(62, 19);
@@ -184,17 +187,18 @@
 			// leftMarginTextBox
 			// 
 			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
-			this.leftMarginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.leftMarginTextBox.Location = new System.Drawing.Point(10, 241);
+			this.leftMarginTextBox.Location = new System.Drawing.Point(10, 248);
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.leftMarginTextBox.Name = "leftMarginTextBox";
-			this.leftMarginTextBox.Size = new System.Drawing.Size(46, 25);
+			this.leftMarginTextBox.ReadOnly = false;
+			this.leftMarginTextBox.Size = new System.Drawing.Size(46, 32);
 			this.leftMarginTextBox.TabIndex = 6;
+			this.leftMarginTextBox.WordWrap = true;
 			// 
 			// documentLabel
 			// 
 			this.documentLabel.AutoSize = true;
-			this.documentLabel.Location = new System.Drawing.Point(6, 44);
+			this.documentLabel.Location = new System.Drawing.Point(6, 49);
 			this.documentLabel.Margin = new System.Windows.Forms.Padding(10);
 			this.documentLabel.Name = "documentLabel";
 			this.documentLabel.Size = new System.Drawing.Size(37, 19);
@@ -204,18 +208,18 @@
 			// titleTextBox
 			// 
 			this.titleTextBox.BackColor = System.Drawing.SystemColors.Control;
-			this.titleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.titleTextBox.Location = new System.Drawing.Point(53, 42);
 			this.titleTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
 			this.titleTextBox.Name = "titleTextBox";
-			this.titleTextBox.Size = new System.Drawing.Size(171, 25);
+			this.titleTextBox.ReadOnly = false;
+			this.titleTextBox.Size = new System.Drawing.Size(171, 32);
 			this.titleTextBox.TabIndex = 2;
-			this.titleTextBox.Text = "Image";
+			this.titleTextBox.WordWrap = true;
 			// 
 			// horizontalCheckBox
 			// 
 			this.horizontalCheckBox.FlatAppearance.BorderSize = 0;
-			this.horizontalCheckBox.Location = new System.Drawing.Point(10, 77);
+			this.horizontalCheckBox.Location = new System.Drawing.Point(10, 84);
 			this.horizontalCheckBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.horizontalCheckBox.Name = "horizontalCheckBox";
 			this.horizontalCheckBox.Size = new System.Drawing.Size(214, 32);
@@ -228,7 +232,7 @@
 			// 
 			this.marginsCheckBox.Checked = true;
 			this.marginsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.marginsCheckBox.Location = new System.Drawing.Point(10, 141);
+			this.marginsCheckBox.Location = new System.Drawing.Point(10, 148);
 			this.marginsCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.marginsCheckBox.Name = "marginsCheckBox";
 			this.marginsCheckBox.Size = new System.Drawing.Size(214, 32);
@@ -243,7 +247,7 @@
 			this.printPreviewControl1.Location = new System.Drawing.Point(224, 32);
 			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.printPreviewControl1.Name = "printPreviewControl1";
-			this.printPreviewControl1.Size = new System.Drawing.Size(233, 244);
+			this.printPreviewControl1.Size = new System.Drawing.Size(233, 251);
 			this.printPreviewControl1.TabIndex = 0;
 			this.printPreviewControl1.TabStop = false;
 			// 
@@ -289,7 +293,7 @@
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(458, 318);
+			this.ClientSize = new System.Drawing.Size(458, 332);
 			this.Controls.Add(this.setMarginsButton);
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.bottomLabel);
@@ -308,6 +312,7 @@
 			this.Controls.Add(this.horizontalCheckBox);
 			this.Controls.Add(this.leftMarginTextBox);
 			this.Controls.Add(this.marginsCheckBox);
+			this.Draggable = true;
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;

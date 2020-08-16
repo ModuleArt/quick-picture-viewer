@@ -9,25 +9,27 @@ namespace quick_picture_viewer
 {
 	partial class SettingsForm : QlibFixedForm
 	{
-		struct Language
+		private struct Language
 		{
 			public string Code;
-			public string AuthorName;
-			public string AuthorLink;
+			public string Author;
 		}
 
 		private Language[] languages = {
 			new Language
 			{
 				Code = "en",
-				AuthorName = "Beelink",
-				AuthorLink = "https://github.com/Beelink"
+				Author = "Beelink"
 			},
 			new Language
 			{
 				Code = "ru",
-				AuthorName = "Beelink",
-				AuthorLink = "https://github.com/Beelink"
+				Author = "Beelink"
+			},
+			new Language
+			{
+				Code = "es",
+				Author = "IpsumRy"
 			}
 		};
 
@@ -94,7 +96,6 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			this.Text = owner.resMan.GetString("settings");
-			titleLabel.Text = owner.resMan.GetString("settings");
 			langPage.Text = owner.resMan.GetString("localization");
 			startupPage.Text = owner.resMan.GetString("startup");
 			restartLabel1.Text = "* " + owner.resMan.GetString("restart-required");
@@ -108,6 +109,18 @@ namespace quick_picture_viewer
 			startupPasteRadio.Text = owner.resMan.GetString("paste-from-clipboard");
 			updatesPage.Text = owner.resMan.GetString("updates");
 			updatesCheckBox.Text = owner.resMan.GetString("check-for-updates-on-startup");
+			favExtLabel.Text = owner.resMan.GetString("fav-external-app") + ":";
+			browseBtn.Text = " " + owner.resMan.GetString("browse");
+			externalPage.Text = owner.resMan.GetString("external");
+			slideshowPage.Text = owner.resMan.GetString("slideshow");
+			slideshowTimeLabel.Text = owner.resMan.GetString("switching-time") + ":";
+			mousePage.Text = owner.resMan.GetString("mouse");
+			slideshowSecondsLabel.Text = owner.resMan.GetString("seconds");
+			slideshowCounterCheckBox.Text = owner.resMan.GetString("show-slideshow-counter");
+			fullscrCursorCheckBox.Text = owner.resMan.GetString("fullscreen-cursor");
+			langLabel.Text = owner.resMan.GetString("ui-lang") + ":";
+			zoomWheelCheckBox.Text = string.Format(owner.resMan.GetString("wheel-to-zoom"), "Ctrl");
+			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 		}
 
 		private void SetDarkMode(bool dark)
@@ -123,10 +136,7 @@ namespace quick_picture_viewer
 				settingsTabs.TextColor = Color.White;
 				settingsTabs.HorizontalLineColor = Color.Transparent;
 
-				favExtTextBox.BackColor = ThemeManager.DarkSecondColor;
-				favExtTextBox.ForeColor = Color.White;
-
-				browseBtn.Image = Properties.Resources.white_options;
+				browseBtn.Image = Properties.Resources.white_open;
 				browseBtn.BackColor = ThemeManager.DarkSecondColor;
 				browseBtn.ForeColor = Color.White;
 			}
@@ -143,6 +153,7 @@ namespace quick_picture_viewer
 			slideshowTimeNumeric.SetDarkMode(dark);
 			slideshowCounterCheckBox.SetDarkMode(dark);
 			langComboBox.SetDarkMode(dark);
+			favExtTextBox.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -227,6 +238,7 @@ namespace quick_picture_viewer
 			{
 				favExtTextBox.Text = openFileDialog1.FileName;
 			}
+			openFileDialog1.Dispose();
 		}
 
 		private void slideshowCounterCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -248,7 +260,7 @@ namespace quick_picture_viewer
 
 			if (owner != null)
 			{
-				translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].AuthorName;
+				translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].Author;
 			}
 		}
 
@@ -256,12 +268,12 @@ namespace quick_picture_viewer
 		{
 			owner = this.Owner as MainForm;
 			InitLanguage();
-			translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].AuthorName;
+			translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].Author;
 		}
 
 		private void translatedByLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start(languages[langComboBox.SelectedIndex].AuthorLink);
+			Process.Start("https://github.com/" + languages[langComboBox.SelectedIndex].Author);
 		}
 	}
 }

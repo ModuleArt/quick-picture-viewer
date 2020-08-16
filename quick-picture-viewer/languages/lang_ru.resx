@@ -133,6 +133,10 @@
     <value>Действие при запуске приложения</value>
     <comment>Settings</comment>
   </data>
+  <data name="aspect-ratio" xml:space="preserve">
+    <value>Соотношение</value>
+    <comment>Image info</comment>
+  </data>
   <data name="auto" xml:space="preserve">
     <value>Авто</value>
     <comment>Status bar, zoom text field</comment>
@@ -145,12 +149,20 @@
     <value>Цвет фона</value>
     <comment>Menu</comment>
   </data>
+  <data name="browse" xml:space="preserve">
+    <value>Выбрать</value>
+    <comment>Settings</comment>
+  </data>
   <data name="capture-screen" xml:space="preserve">
     <value>Сделать скриншот</value>
     <comment>Menu</comment>
   </data>
+  <data name="centimeters" xml:space="preserve">
+    <value>сантиметров</value>
+    <comment>Image info</comment>
+  </data>
   <data name="check-for-updates-on-startup" xml:space="preserve">
-    <value>Проверять наличие обновлений</value>
+    <value>Проверять обновления при запуске</value>
     <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
@@ -165,9 +177,17 @@
     <value>Очистить</value>
     <comment>Menu</comment>
   </data>
+  <data name="close" xml:space="preserve">
+    <value>Закрыть</value>
+    <comment>Titlebar</comment>
+  </data>
   <data name="comma" xml:space="preserve">
     <value>Запятая</value>
     <comment>Menu</comment>
+  </data>
+  <data name="compression" xml:space="preserve">
+    <value>Сжатие</value>
+    <comment>Image info</comment>
   </data>
   <data name="copy" xml:space="preserve">
     <value>Копировать</value>
@@ -183,7 +203,7 @@
   </data>
   <data name="created" xml:space="preserve">
     <value>Создан</value>
-    <comment>Status bar</comment>
+    <comment>Status bar, image info</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Текущий файл не найден</value>
@@ -201,6 +221,10 @@
     <value>Удалить файл</value>
     <comment>Message box</comment>
   </data>
+  <data name="disk-size" xml:space="preserve">
+    <value>Размер на диске</value>
+    <comment>Image info</comment>
+  </data>
   <data name="do-nothing" xml:space="preserve">
     <value>Ничего не делать</value>
     <comment>Settings</comment>
@@ -217,13 +241,29 @@
     <value>Ошибка</value>
     <comment>Message box</comment>
   </data>
+  <data name="extension" xml:space="preserve">
+    <value>Расширение</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="external" xml:space="preserve">
+    <value>Сторонние</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="fav-external-app" xml:space="preserve">
+    <value>Любимое стороннее приложение</value>
+    <comment>Settings</comment>
+  </data>
   <data name="file" xml:space="preserve">
     <value>Файл</value>
-    <comment>Status bar</comment>
+    <comment>Status bar, image info</comment>
   </data>
   <data name="file-copied-to-clipboard" xml:space="preserve">
     <value>Файл скопирован в буфер обмена</value>
     <comment>Suggestion</comment>
+  </data>
+  <data name="file-properties" xml:space="preserve">
+    <value>Свойства файла</value>
+    <comment>Image info</comment>
   </data>
   <data name="file-reloaded" xml:space="preserve">
     <value>Файл переоткрыт</value>
@@ -239,7 +279,7 @@
   </data>
   <data name="folder" xml:space="preserve">
     <value>Папка</value>
-    <comment>Status bar</comment>
+    <comment>Status bar, image info</comment>
   </data>
   <data name="frameless-mode" xml:space="preserve">
     <value>Безрамочный режим</value>
@@ -249,9 +289,17 @@
     <value>С буфера обмена</value>
     <comment>Status bar</comment>
   </data>
+  <data name="full-path" xml:space="preserve">
+    <value>Полный путь</value>
+    <comment>Image info</comment>
+  </data>
   <data name="fullscreen" xml:space="preserve">
     <value>На весь экран</value>
     <comment>Menu</comment>
+  </data>
+  <data name="fullscreen-cursor" xml:space="preserve">
+    <value>Показать курсор в полноэкранном режиме</value>
+    <comment>Settings</comment>
   </data>
   <data name="image-copied-to-clipboard" xml:space="preserve">
     <value>Изображение скопировано в буфер обмена</value>
@@ -265,6 +313,14 @@
     <value>Изображение получено с буфера обмена</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="inches" xml:space="preserve">
+    <value>дюймов</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="landscape" xml:space="preserve">
+    <value>Пейзаж</value>
+    <comment>Image info</comment>
+  </data>
   <data name="left-arrow" xml:space="preserve">
     <value>Стрелка влево</value>
     <comment>Menu</comment>
@@ -277,17 +333,25 @@
     <value>Локализация</value>
     <comment>Settings</comment>
   </data>
+  <data name="megapixels" xml:space="preserve">
+    <value>мегапикселей</value>
+    <comment>Image info</comment>
+  </data>
   <data name="minus" xml:space="preserve">
     <value>Минус</value>
     <comment>Menu</comment>
   </data>
   <data name="modified" xml:space="preserve">
     <value>Изменен</value>
-    <comment>Status bar</comment>
+    <comment>Status bar, image info</comment>
   </data>
   <data name="more-options" xml:space="preserve">
     <value>Еще</value>
     <comment>Menu</comment>
+  </data>
+  <data name="mouse" xml:space="preserve">
+    <value>Мышь</value>
+    <comment>Settings</comment>
   </data>
   <data name="move-to-trash" xml:space="preserve">
     <value>Переместить файл в Корзину</value>
@@ -361,6 +425,10 @@
     <value>Картинка в картинке</value>
     <comment>Menu</comment>
   </data>
+  <data name="pixels" xml:space="preserve">
+    <value>пикселей</value>
+    <comment>Image info</comment>
+  </data>
   <data name="please-open-image" xml:space="preserve">
     <value>Откройте изображение для просмотра или редактирования</value>
     <comment>Picture panel</comment>
@@ -368,6 +436,10 @@
   <data name="plus" xml:space="preserve">
     <value>Плюс</value>
     <comment>Menu</comment>
+  </data>
+  <data name="portrait" xml:space="preserve">
+    <value>Портрет</value>
+    <comment>Image info</comment>
   </data>
   <data name="press-to-exit-fullscreen" xml:space="preserve">
     <value>Нажмите {0}, чтобы выйти из полноэкранного режима</value>
@@ -381,9 +453,17 @@
     <value>Печать / Экспорт в PDF</value>
     <comment>Menu</comment>
   </data>
+  <data name="print-size" xml:space="preserve">
+    <value>Размер печати</value>
+    <comment>Image info</comment>
+  </data>
   <data name="reload-file" xml:space="preserve">
     <value>Переоткрыть файл</value>
     <comment>Menu</comment>
+  </data>
+  <data name="resolution" xml:space="preserve">
+    <value>Разрешение</value>
+    <comment>Image info</comment>
   </data>
   <data name="restart-required" xml:space="preserve">
     <value>Требуется перезапуск приложения</value>
@@ -413,6 +493,10 @@
     <value>Скриншот</value>
     <comment>Status bar</comment>
   </data>
+  <data name="seconds" xml:space="preserve">
+    <value>секунд</value>
+    <comment>Settings</comment>
+  </data>
   <data name="set-as-desktop-background" xml:space="preserve">
     <value>Установить как фон рабочего стола</value>
     <comment>Menu</comment>
@@ -425,6 +509,10 @@
     <value>Показать файл в папке</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-slideshow-counter" xml:space="preserve">
+    <value>Показать счётчик слайдшоу</value>
+    <comment>Settings</comment>
+  </data>
   <data name="size" xml:space="preserve">
     <value>Размер</value>
     <comment>Status bar</comment>
@@ -432,6 +520,10 @@
   <data name="slideshow" xml:space="preserve">
     <value>Слайдшоу</value>
     <comment>Menu</comment>
+  </data>
+  <data name="square" xml:space="preserve">
+    <value>Квадрат</value>
+    <comment>Image info</comment>
   </data>
   <data name="startup" xml:space="preserve">
     <value>Запуск</value>
@@ -445,6 +537,10 @@
     <value>Вы уверены, что хотите переместить файл в Корзину?</value>
     <comment>Message box</comment>
   </data>
+  <data name="switching-time" xml:space="preserve">
+    <value>Время переключения</value>
+    <comment>Settings</comment>
+  </data>
   <data name="theme" xml:space="preserve">
     <value>Тема</value>
     <comment>Settings</comment>
@@ -456,6 +552,10 @@
   <data name="type-options" xml:space="preserve">
     <value>опции</value>
     <comment>Picture panel</comment>
+  </data>
+  <data name="ui-lang" xml:space="preserve">
+    <value>Язык интерфейса:</value>
+    <comment>Settings</comment>
   </data>
   <data name="unable-open-dds" xml:space="preserve">
     <value>Невозможно открыть DDS или TGA файл</value>
@@ -470,7 +570,7 @@
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">
-    <value>Не удалось запустить внешнее приложение</value>
+    <value>Не удалось запустить стороннее приложение</value>
     <comment>Message box</comment>
   </data>
   <data name="unsaved-data-lost" xml:space="preserve">
@@ -496,6 +596,10 @@
   <data name="warning" xml:space="preserve">
     <value>Внимание</value>
     <comment>Message box</comment>
+  </data>
+  <data name="wheel-to-zoom" xml:space="preserve">
+    <value>Масштабировать колёсиком мыши (Без {0})</value>
+    <comment>Settings</comment>
   </data>
   <data name="zoom" xml:space="preserve">
     <value>Масштаб</value>

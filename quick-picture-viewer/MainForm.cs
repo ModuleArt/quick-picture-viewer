@@ -97,6 +97,7 @@ namespace quick_picture_viewer
 				switch(CultureInfo.CurrentCulture.TwoLetterISOLanguageName)
 				{
 					case "en":
+					case "es":
 					case "ru":
 						resMan = new ResourceManager("quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
 						Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
@@ -205,6 +206,7 @@ namespace quick_picture_viewer
 			{
 				openFile(openFileDialog1.FileName);
 			}
+			openFileDialog1.Dispose();
 		}
 
 		private void MainForm_Load(object sender, EventArgs e)
@@ -898,6 +900,7 @@ namespace quick_picture_viewer
 				fs.Close();
 				openFile(saveFileDialog1.FileName);
 			}
+			saveFileDialog1.Dispose();
 		}
 
 		private void copyButton_Click(object sender, EventArgs e)
@@ -1455,6 +1458,7 @@ namespace quick_picture_viewer
 		private void setAsDesktopButton_Click(object sender, EventArgs e)
 		{
 			WallpaperForm wallpaperForm = new WallpaperForm(originalImage, darkMode);
+			wallpaperForm.Owner = this;
 			wallpaperForm.TopMost = alwaysOnTop;
 			wallpaperForm.ShowDialog();
 		}
@@ -1549,6 +1553,7 @@ namespace quick_picture_viewer
 		private void infoButton_Click(object sender, EventArgs e)
 		{
 			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile, darkMode);
+			infoForm.Owner = this;
 			infoForm.TopMost = alwaysOnTop;
 			infoForm.ShowDialog();
 		}

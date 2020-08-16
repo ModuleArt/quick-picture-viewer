@@ -22,7 +22,11 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			(new DropShadow()).ApplyShadows(this);
-			SetDraggableControls(new List<Control>() { titlePanel, titleLabel, printPreviewControl1 });
+			SetDraggableControls(new List<Control>() { 
+				titlePanel, titleLabel, 
+				printPreviewControl1, 
+				documentLabel, marginsLabel, leftLabel, rightLabel, topLabel, bottomLabel
+			});
 
 			applyDarkMode(darkMode);
 
@@ -68,6 +72,11 @@ namespace quick_picture_viewer
 			centerCheckbox.SetDarkMode(dark);
 			setMarginsButton.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
+			rightMarginTextBox.SetDarkMode(dark);
+			leftMarginTextBox.SetDarkMode(dark);
+			topMarginTextBox.SetDarkMode(dark);
+			bottomMarginTextBox.SetDarkMode(dark);
+			titleTextBox.SetDarkMode(dark);
 		}
 
 		private void marginsCheckBox_CheckedChanged(object sender, EventArgs e)

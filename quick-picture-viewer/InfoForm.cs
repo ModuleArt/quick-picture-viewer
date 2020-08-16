@@ -9,88 +9,36 @@ namespace quick_picture_viewer
 {
 	partial class InfoForm : QlibFixedForm
 	{
-		private string fullPath = null;
 		private bool darkMode;
+		private MainForm owner;
+		private Bitmap bitmap;
+		private string directoryName;
+		private string fileName;
 
 		public InfoForm(Bitmap bitmap, string directoryName, string fileName, bool darkMode)
 		{
-
 			if (darkMode)
 			{
 				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			this.darkMode = darkMode;
+			this.bitmap = bitmap;
+			this.fileName = fileName;
+			this.directoryName = directoryName;
 
 			InitializeComponent();
 			(new DropShadow()).ApplyShadows(this);
-			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
+			SetDraggableControls(new List<Control>() { 
+				titlePanel, titleLabel,
+				fileNameLabel, folderLabel, fullPathLabel, compressionLabel, extensionLabel, createdLabel, modifiedLabel,
+				sizeLabel, megapixelsLabel, resolutionLabel, inchesLabel, cmLabel, diskSizeLabel, ratioLabel
+			});
 
-			copyTooltip.SetToolTip(copyNameButton, "Copy value");
-			copyTooltip.SetToolTip(copyFolderButton, "Copy value");
-			copyTooltip.SetToolTip(copyPathButton, "Copy value");
-
-			applyDarkMode(darkMode);
-
-			if (directoryName != null)
-			{
-				string path = Path.Combine(directoryName, fileName);
-				fullPath = path;
-
-				fileNameTextBox.Text = fileName;
-				folderTextBox.Text = directoryName;
-				fullPathTextBox.Text = path;
-
-				diskSizeTextBox.Text = bytesToSize(path);
-				extensionTextBox.Text = Path.GetExtension(path).Substring(1, Path.GetExtension(path).Length - 1).ToLower();
-
-				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
-				modifiedTextBox.Text = File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
-
-				propertiesButton.Enabled = true;
-			} 
-			else
-			{
-				if (darkMode)
-				{
-					propertiesButton.Image = null;
-					propertiesButton.BackColor = ThemeManager.DarkBackColor;
-				}
-			}
-
-			double inchesWidth = bitmap.Width / bitmap.HorizontalResolution;
-			double inchesHeight = bitmap.Height / bitmap.VerticalResolution;
-			double cmWidth = inchesWidth * 2.54;
-			double cmHeight = inchesHeight * 2.54;
-
-			compressionTextBox.Text = getImageCompression(bitmap);
-
-			sizeTextBox.Text = bitmap.Width + " x " + bitmap.Height + " pixels";
-			megapixelsTextBox.Text = ((((float) bitmap.Height * bitmap.Width) / 1000000)).ToString("0.##") + " megapixels";
-			resolutionTextBox.Text = Math.Round(bitmap.HorizontalResolution) + " x " + Math.Round(bitmap.VerticalResolution) + " DPI";
-			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " inches";
-			cmTextBox.Text = cmWidth.ToString("0.##") + " x " + cmHeight.ToString("0.##") + " centimeters";
-
-			int firstRatio = bitmap.Width / GCD(bitmap.Width, bitmap.Height);
-			int secondRatio = bitmap.Height / GCD(bitmap.Width, bitmap.Height);
-			ratioTextBox.Text = string.Format("{0} : {1} (", firstRatio, secondRatio);
-			if (firstRatio == secondRatio)
-			{
-				ratioTextBox.Text += "Square)";
-			}
-			else if (firstRatio > secondRatio)
-			{
-				ratioTextBox.Text += "Landscape)";
-			}
-			else
-			{
-				ratioTextBox.Text += "Portrait)";
-			}
-
-			fileNameTextBox.Focus();
+			SetDarkMode(darkMode);
 		}
 
-		private void applyDarkMode(bool dark)
+		private void SetDarkMode(bool dark)
 		{
 			if (dark)
 			{
@@ -106,38 +54,23 @@ namespace quick_picture_viewer
 				copyFolderButton.BackColor = ThemeManager.DarkSecondColor;
 				copyPathButton.Image = Properties.Resources.white_copy;
 				copyPathButton.BackColor = ThemeManager.DarkSecondColor;
-
-				fileNameTextBox.BackColor = ThemeManager.DarkSecondColor;
-				fileNameTextBox.ForeColor = Color.White;
-				folderTextBox.BackColor = ThemeManager.DarkSecondColor;
-				folderTextBox.ForeColor = Color.White;
-				fullPathTextBox.BackColor = ThemeManager.DarkSecondColor;
-				fullPathTextBox.ForeColor = Color.White;
-				compressionTextBox.BackColor = ThemeManager.DarkSecondColor;
-				compressionTextBox.ForeColor = Color.White;
-				extensionTextBox.BackColor = ThemeManager.DarkSecondColor;
-				extensionTextBox.ForeColor = Color.White;
-				sizeTextBox.BackColor = ThemeManager.DarkSecondColor;
-				sizeTextBox.ForeColor = Color.White;
-				megapixelsTextBox.BackColor = ThemeManager.DarkSecondColor;
-				megapixelsTextBox.ForeColor = Color.White;
-				resolutionTextBox.BackColor = ThemeManager.DarkSecondColor;
-				resolutionTextBox.ForeColor = Color.White;
-				inchesTextBox.BackColor = ThemeManager.DarkSecondColor;
-				inchesTextBox.ForeColor = Color.White;
-				cmTextBox.BackColor = ThemeManager.DarkSecondColor;
-				cmTextBox.ForeColor = Color.White;
-				diskSizeTextBox.BackColor = ThemeManager.DarkSecondColor;
-				diskSizeTextBox.ForeColor = Color.White;
-				ratioTextBox.BackColor = ThemeManager.DarkSecondColor;
-				ratioTextBox.ForeColor = Color.White;
-				createdTextBox.BackColor = ThemeManager.DarkSecondColor;
-				createdTextBox.ForeColor = Color.White;
-				modifiedTextBox.BackColor = ThemeManager.DarkSecondColor;
-				modifiedTextBox.ForeColor = Color.White;
 			}
 
 			closeBtn.SetDarkMode(dark);
+			fileNameTextBox.SetDarkMode(dark);
+			folderTextBox.SetDarkMode(dark);
+			fullPathTextBox.SetDarkMode(dark);
+			compressionTextBox.SetDarkMode(dark);
+			extensionTextBox.SetDarkMode(dark);
+			sizeTextBox.SetDarkMode(dark);
+			megapixelsTextBox.SetDarkMode(dark);
+			resolutionTextBox.SetDarkMode(dark);
+			inchesTextBox.SetDarkMode(dark);
+			cmTextBox.SetDarkMode(dark);
+			diskSizeTextBox.SetDarkMode(dark);
+			ratioTextBox.SetDarkMode(dark);
+			createdTextBox.SetDarkMode(dark);
+			modifiedTextBox.SetDarkMode(dark);
 		}
 
 		private int GCD(int a, int b)
@@ -170,7 +103,7 @@ namespace quick_picture_viewer
 
 		private string getImageCompression(Bitmap bitmap)
 		{
-			string result = "Unknown";
+			string result = "N/A";
 
 			if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Png))
 			{
@@ -192,6 +125,14 @@ namespace quick_picture_viewer
 			{
 				result = "BMP";
 			}
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Tiff))
+			{
+				result = "TIFF";
+			}
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Icon))
+			{
+				result = "ICO";
+			}
 
 			return result;
 		}
@@ -206,23 +147,7 @@ namespace quick_picture_viewer
 
 		private void propertiesButton_Click(object sender, EventArgs e)
 		{
-			ShellManager.ShowFileProperties(fullPath);
-		}
-
-		private void propertiesButton_Paint(object sender, PaintEventArgs e)
-		{
-			if (darkMode)
-			{
-				Button btn = (Button)sender;
-
-				if (!btn.Enabled)
-				{
-					btn.Text = string.Empty;
-					TextFormatFlags flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
-
-					TextRenderer.DrawText(e.Graphics, "File properties", btn.Font, e.ClipRectangle, ThemeManager.DarkSecondColor, flags);
-				}
-			}
+			ShellManager.ShowFileProperties(Path.Combine(directoryName, fileName));
 		}
 
 		private void copyNameButton_Click(object sender, EventArgs e)
@@ -243,6 +168,85 @@ namespace quick_picture_viewer
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void InfoForm_Load(object sender, EventArgs e)
+		{
+			owner = this.Owner as MainForm;
+			InitLanguage();
+
+			if (directoryName != null)
+			{
+				string path = Path.Combine(directoryName, fileName);
+
+				fileNameTextBox.Text = fileName;
+				folderTextBox.Text = directoryName;
+				fullPathTextBox.Text = path;
+
+				diskSizeTextBox.Text = bytesToSize(path);
+				extensionTextBox.Text = Path.GetExtension(path).Substring(1, Path.GetExtension(path).Length - 1).ToUpper();
+
+				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
+				modifiedTextBox.Text = File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
+
+				propertiesButton.Visible = true;
+			}
+
+			double inchesWidth = bitmap.Width / bitmap.HorizontalResolution;
+			double inchesHeight = bitmap.Height / bitmap.VerticalResolution;
+			double cmWidth = inchesWidth * 2.54;
+			double cmHeight = inchesHeight * 2.54;
+
+			compressionTextBox.Text = getImageCompression(bitmap);
+
+			sizeTextBox.Text = bitmap.Width + " x " + bitmap.Height + " " + owner.resMan.GetString("pixels");
+			megapixelsTextBox.Text = ((((float)bitmap.Height * bitmap.Width) / 1000000)).ToString("0.##") + " " + owner.resMan.GetString("megapixels");
+			resolutionTextBox.Text = Math.Round(bitmap.HorizontalResolution) + " x " + Math.Round(bitmap.VerticalResolution) + " DPI";
+			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " " + owner.resMan.GetString("inches");
+			cmTextBox.Text = cmWidth.ToString("0.##") + " x " + cmHeight.ToString("0.##") + " " + owner.resMan.GetString("centimeters");
+
+			int firstRatio = bitmap.Width / GCD(bitmap.Width, bitmap.Height);
+			int secondRatio = bitmap.Height / GCD(bitmap.Width, bitmap.Height);
+			ratioTextBox.Text = string.Format("{0} : {1} (", firstRatio, secondRatio);
+			if (firstRatio == secondRatio)
+			{
+				ratioTextBox.Text += owner.resMan.GetString("square");
+			}
+			else if (firstRatio > secondRatio)
+			{
+				ratioTextBox.Text += owner.resMan.GetString("landscape");
+			}
+			else
+			{
+				ratioTextBox.Text += owner.resMan.GetString("portrait");
+			}
+			ratioTextBox.Text += ")";
+
+			fileNameTextBox.Focus();
+		}
+
+		private void InitLanguage()
+		{
+			this.Text = owner.resMan.GetString("image-info");
+			fileNameLabel.Text = owner.resMan.GetString("file") + ":";
+			folderLabel.Text = owner.resMan.GetString("folder") + ":";
+			fullPathLabel.Text = owner.resMan.GetString("full-path") + ":";
+			diskSizeLabel.Text = owner.resMan.GetString("disk-size") + ":";
+			ratioLabel.Text = owner.resMan.GetString("aspect-ratio") + ":";
+			resolutionLabel.Text = owner.resMan.GetString("resolution") + ":";
+			createdLabel.Text = owner.resMan.GetString("created") + ":";
+			modifiedLabel.Text = owner.resMan.GetString("modified") + ":";
+			infoTooltip.SetToolTip(copyNameButton, owner.resMan.GetString("copy"));
+			infoTooltip.SetToolTip(copyFolderButton, owner.resMan.GetString("copy"));
+			infoTooltip.SetToolTip(copyPathButton, owner.resMan.GetString("copy"));
+			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			extensionLabel.Text = owner.resMan.GetString("extension") + ":";
+			compressionLabel.Text = owner.resMan.GetString("compression") + ":";
+			propertiesButton.Text = " " + owner.resMan.GetString("file-properties");
+			sizeLabel.Text = owner.resMan.GetString("size") + " (px):";
+			megapixelsLabel.Text = owner.resMan.GetString("size") + " (mp):";
+			inchesLabel.Text = owner.resMan.GetString("print-size") + " (in):";
+			cmLabel.Text = owner.resMan.GetString("print-size") + " (cm):";
 		}
 	}
 }

@@ -127,6 +127,7 @@
     <Compile Include="InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="languages\lang_es.Designer.cs" />
     <Compile Include="languages\lang_ru.Designer.cs">
       <DependentUpon>lang_ru.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -187,6 +188,7 @@
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="languages\lang_es.resx" />
     <EmbeddedResource Include="languages\lang_ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_ru.Designer.cs</LastGenOutput>
