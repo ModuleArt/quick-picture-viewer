@@ -89,20 +89,20 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 
 [Registry]
 ; Register software
-Root: HKCU; Subkey: "Software\RegisteredApplications"; ValueType: string; ValueName: "QuickPictureViewer"; ValueData: "Software\Clients\StartMenuInternet\QuickPictureViewer\Capabilities"; Flags: uninsdeletevalue
+Root: HKCU; Subkey: "Software\RegisteredApplications"; ValueType: string; ValueName: "QuickPictureViewer"; ValueData: "Software\Clients\StartMenuInternet\QuickPictureViewer\Capabilities"; Flags: uninsdeletekey
 ; Open with QuickPictureViewer
-Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Open with QuickPictureViewer"; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "*\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Open with QuickPictureViewer"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: "*\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey
 ; Browse folder with QuickPictureViewer
-Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with QuickPictureViewer"; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with QuickPictureViewer"; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletevalue
+Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with QuickPictureViewer"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with QuickPictureViewer"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey
 ; BMP
-Root: HKCR; Subkey: ".bmp"; ValueType: string; ValueName: ""; ValueData: "BmpImg"; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".bmp"; ValueType: string; ValueName: ""; ValueData: "BmpImg"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "BmpImg"; ValueType: string; ValueName: ""; ValueData: "BMP image (Bitmap image file)"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "BmpImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\bmp.ico"
 Root: HKCR; Subkey: "BmpImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""

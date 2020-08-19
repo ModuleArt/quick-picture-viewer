@@ -93,7 +93,7 @@
 			this.settingsTabs.EnableDragDrop = false;
 			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.ControlLight;
 			this.settingsTabs.HorizontalLineColor = System.Drawing.Color.Transparent;
-			this.settingsTabs.ItemSize = new System.Drawing.Size(240, 24);
+			this.settingsTabs.ItemSize = new System.Drawing.Size(240, 28);
 			this.settingsTabs.Location = new System.Drawing.Point(10, 42);
 			this.settingsTabs.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.settingsTabs.Multiline = true;
@@ -103,7 +103,7 @@
 			this.settingsTabs.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.settingsTabs.ShowClosingButton = false;
 			this.settingsTabs.ShowClosingMessage = false;
-			this.settingsTabs.Size = new System.Drawing.Size(320, 208);
+			this.settingsTabs.Size = new System.Drawing.Size(320, 216);
 			this.settingsTabs.TabIndex = 1;
 			this.settingsTabs.TextColor = System.Drawing.Color.Black;
 			// 
@@ -114,7 +114,7 @@
 			this.themePage.Controls.Add(this.systemThemeRadio);
 			this.themePage.Controls.Add(this.darkThemeRadio);
 			this.themePage.Controls.Add(this.lightThemeRadio);
-			this.themePage.Location = new System.Drawing.Point(4, 52);
+			this.themePage.Location = new System.Drawing.Point(4, 60);
 			this.themePage.Margin = new System.Windows.Forms.Padding(0);
 			this.themePage.Name = "themePage";
 			this.themePage.Padding = new System.Windows.Forms.Padding(10);
@@ -514,7 +514,7 @@
 			// SettingsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(340, 260);
+			this.ClientSize = new System.Drawing.Size(340, 268);
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.settingsTabs);
 			this.KeyPreview = true;

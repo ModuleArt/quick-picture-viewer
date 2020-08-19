@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Resources;
 using System.Reflection;
+using System.Windows.Media.Imaging;
 
 namespace quick_picture_viewer
 {
@@ -351,12 +352,24 @@ namespace quick_picture_viewer
 					}
 					else
 					{
-						using (Image img = Image.FromFile(path))
+						using (Image img = Image.FromFile(path, true))
 						{
-							openImage(new Bitmap(img), Path.GetDirectoryName(path), Path.GetFileName(path));
+							openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 						}
+
+						//Stream imageStreamSource = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+						//JpegBitmapDecoder jpegDecoder = new JpegBitmapDecoder(imageStreamSource, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
+						//BitmapSource bitmapSource = jpegDecoder.Frames[0];
+
+						//using (MemoryStream outStream = new MemoryStream())
+						//{
+						//	BitmapEncoder enc = new BmpBitmapEncoder();
+						//	enc.Frames.Add(BitmapFrame.Create(bitmapSource));
+						//	enc.Save(outStream);
+						//	openImage(new Bitmap(outStream), Path.GetDirectoryName(path), Path.GetFileName(path));
+						//}
 					}
-					
+
 					showTypeOpsButton(false, null);
 				}
 			}
