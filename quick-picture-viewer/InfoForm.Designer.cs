@@ -107,7 +107,7 @@
 			this.copyPathButton.FlatAppearance.BorderSize = 0;
 			this.copyPathButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyPathButton.Image = ((System.Drawing.Image)(resources.GetObject("copyPathButton.Image")));
-			this.copyPathButton.Location = new System.Drawing.Point(342, 126);
+			this.copyPathButton.Location = new System.Drawing.Point(357, 126);
 			this.copyPathButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyPathButton.Name = "copyPathButton";
 			this.copyPathButton.Size = new System.Drawing.Size(32, 32);
@@ -123,7 +123,7 @@
 			this.copyFolderButton.FlatAppearance.BorderSize = 0;
 			this.copyFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("copyFolderButton.Image")));
-			this.copyFolderButton.Location = new System.Drawing.Point(342, 84);
+			this.copyFolderButton.Location = new System.Drawing.Point(357, 84);
 			this.copyFolderButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyFolderButton.Name = "copyFolderButton";
 			this.copyFolderButton.Size = new System.Drawing.Size(32, 32);
@@ -139,7 +139,7 @@
 			this.copyNameButton.FlatAppearance.BorderSize = 0;
 			this.copyNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyNameButton.Image = ((System.Drawing.Image)(resources.GetObject("copyNameButton.Image")));
-			this.copyNameButton.Location = new System.Drawing.Point(342, 42);
+			this.copyNameButton.Location = new System.Drawing.Point(357, 42);
 			this.copyNameButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyNameButton.Name = "copyNameButton";
 			this.copyNameButton.Size = new System.Drawing.Size(32, 32);
@@ -232,7 +232,7 @@
 			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.sizeTextBox.Name = "sizeTextBox";
 			this.sizeTextBox.ReadOnly = true;
-			this.sizeTextBox.Size = new System.Drawing.Size(184, 32);
+			this.sizeTextBox.Size = new System.Drawing.Size(199, 32);
 			this.sizeTextBox.TabIndex = 13;
 			this.sizeTextBox.WordWrap = true;
 			// 
@@ -253,7 +253,7 @@
 			this.megapixelsTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
 			this.megapixelsTextBox.ReadOnly = true;
-			this.megapixelsTextBox.Size = new System.Drawing.Size(184, 32);
+			this.megapixelsTextBox.Size = new System.Drawing.Size(199, 32);
 			this.megapixelsTextBox.TabIndex = 14;
 			this.megapixelsTextBox.WordWrap = true;
 			// 
@@ -274,7 +274,7 @@
 			this.resolutionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.resolutionTextBox.Name = "resolutionTextBox";
 			this.resolutionTextBox.ReadOnly = true;
-			this.resolutionTextBox.Size = new System.Drawing.Size(184, 32);
+			this.resolutionTextBox.Size = new System.Drawing.Size(199, 32);
 			this.resolutionTextBox.TabIndex = 15;
 			this.resolutionTextBox.WordWrap = true;
 			// 
@@ -295,7 +295,7 @@
 			this.inchesTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.inchesTextBox.Name = "inchesTextBox";
 			this.inchesTextBox.ReadOnly = true;
-			this.inchesTextBox.Size = new System.Drawing.Size(184, 32);
+			this.inchesTextBox.Size = new System.Drawing.Size(199, 32);
 			this.inchesTextBox.TabIndex = 16;
 			this.inchesTextBox.WordWrap = true;
 			// 
@@ -316,7 +316,7 @@
 			this.cmTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.cmTextBox.Name = "cmTextBox";
 			this.cmTextBox.ReadOnly = true;
-			this.cmTextBox.Size = new System.Drawing.Size(184, 32);
+			this.cmTextBox.Size = new System.Drawing.Size(199, 32);
 			this.cmTextBox.TabIndex = 17;
 			this.cmTextBox.WordWrap = true;
 			// 
@@ -347,7 +347,7 @@
 			this.ratioTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.ratioTextBox.Name = "ratioTextBox";
 			this.ratioTextBox.ReadOnly = true;
-			this.ratioTextBox.Size = new System.Drawing.Size(184, 32);
+			this.ratioTextBox.Size = new System.Drawing.Size(199, 32);
 			this.ratioTextBox.TabIndex = 19;
 			this.ratioTextBox.WordWrap = true;
 			// 
@@ -358,7 +358,7 @@
 			this.diskSizeTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
 			this.diskSizeTextBox.ReadOnly = true;
-			this.diskSizeTextBox.Size = new System.Drawing.Size(184, 32);
+			this.diskSizeTextBox.Size = new System.Drawing.Size(199, 32);
 			this.diskSizeTextBox.TabIndex = 18;
 			this.diskSizeTextBox.Text = "N/A";
 			this.diskSizeTextBox.WordWrap = true;
@@ -443,7 +443,7 @@
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(715, 32);
+			this.titlePanel.Size = new System.Drawing.Size(730, 32);
 			this.titlePanel.TabIndex = 22;
 			// 
 			// titleLabel
@@ -464,7 +464,7 @@
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(683, 0);
+			this.closeBtn.Location = new System.Drawing.Point(698, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
@@ -475,7 +475,7 @@
 			// InfoForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(715, 336);
+			this.ClientSize = new System.Drawing.Size(730, 336);
 			this.Controls.Add(this.modifiedLabel);
 			this.Controls.Add(this.copyPathButton);
 			this.Controls.Add(this.modifiedTextBox);

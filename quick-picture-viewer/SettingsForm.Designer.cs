@@ -172,7 +172,7 @@
 			// 
 			this.updatesPage.BackColor = System.Drawing.Color.White;
 			this.updatesPage.Controls.Add(this.updatesCheckBox);
-			this.updatesPage.Location = new System.Drawing.Point(4, 52);
+			this.updatesPage.Location = new System.Drawing.Point(4, 60);
 			this.updatesPage.Margin = new System.Windows.Forms.Padding(0);
 			this.updatesPage.Name = "updatesPage";
 			this.updatesPage.Padding = new System.Windows.Forms.Padding(10);
@@ -197,7 +197,7 @@
 			this.mousePage.BackColor = System.Drawing.Color.White;
 			this.mousePage.Controls.Add(this.zoomWheelCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
-			this.mousePage.Location = new System.Drawing.Point(4, 52);
+			this.mousePage.Location = new System.Drawing.Point(4, 60);
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
@@ -235,7 +235,7 @@
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
 			this.slideshowPage.Controls.Add(this.slideshowCounterCheckBox);
-			this.slideshowPage.Location = new System.Drawing.Point(4, 52);
+			this.slideshowPage.Location = new System.Drawing.Point(4, 60);
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
@@ -306,7 +306,7 @@
 			this.startupPage.Controls.Add(this.startupLabel);
 			this.startupPage.Controls.Add(this.startupNothingRadio);
 			this.startupPage.Controls.Add(this.startupPasteRadio);
-			this.startupPage.Location = new System.Drawing.Point(4, 52);
+			this.startupPage.Location = new System.Drawing.Point(4, 60);
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
@@ -355,7 +355,7 @@
 			this.externalPage.Controls.Add(this.browseBtn);
 			this.externalPage.Controls.Add(this.favExtTextBox);
 			this.externalPage.Controls.Add(this.favExtLabel);
-			this.externalPage.Location = new System.Drawing.Point(4, 52);
+			this.externalPage.Location = new System.Drawing.Point(4, 60);
 			this.externalPage.Margin = new System.Windows.Forms.Padding(0);
 			this.externalPage.Name = "externalPage";
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
@@ -413,7 +413,7 @@
 			this.langPage.Controls.Add(this.translatedByLink);
 			this.langPage.Controls.Add(this.restartLabel2);
 			this.langPage.Controls.Add(this.langComboBox);
-			this.langPage.Location = new System.Drawing.Point(4, 52);
+			this.langPage.Location = new System.Drawing.Point(4, 60);
 			this.langPage.Margin = new System.Windows.Forms.Padding(0);
 			this.langPage.Name = "langPage";
 			this.langPage.Padding = new System.Windows.Forms.Padding(10);
@@ -517,6 +517,7 @@
 			this.ClientSize = new System.Drawing.Size(340, 268);
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.settingsTabs);
+			this.Draggable = true;
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;

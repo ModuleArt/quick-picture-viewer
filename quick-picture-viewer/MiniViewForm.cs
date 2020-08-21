@@ -12,16 +12,14 @@ namespace quick_picture_viewer
 		private Point startPos;
 		private Size curSize;
 		private float ratio;
-
 		private bool checkboardBackground = false;
 		private bool autoZoom = true;
 		private int zoomFactor = 100;
 		private int width = 0;
 		private int height = 0;
-
-		Point panelMouseDownLocation;
-
-		System.Timers.Timer resizeTimer = new System.Timers.Timer();
+		private Point panelMouseDownLocation;
+		private MainForm owner;
+		private System.Timers.Timer resizeTimer = new System.Timers.Timer();
 
 		public MiniViewForm(Image image, string title, bool checkboardBackground)
 		{
@@ -122,7 +120,7 @@ namespace quick_picture_viewer
 			{
 				zoomFactor = newZoomFactor;
 
-				zoomLabel.Text = "Zoom: " + zoomFactor.ToString() + "%";
+				zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
 
 				setAutoZoom(false);
 
@@ -229,6 +227,18 @@ namespace quick_picture_viewer
 			Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
 			this.Left = workingArea.Left + workingArea.Width - this.Size.Width - 32;
 			this.Top = workingArea.Top + 32;
+
+			owner = this.Owner as MainForm;
+			InitLanguage();
+		}
+
+		private void InitLanguage()
+		{
+			this.Text = owner.resMan.GetString("picture-in-picture");
+			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
+			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
+			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
 		}
 
 		private void setCheckboardBackground(bool b)
@@ -299,7 +309,7 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.Fill;
 
-				zoomLabel.Text = "Zoom: Auto";
+				zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
 			}
 			else
 			{

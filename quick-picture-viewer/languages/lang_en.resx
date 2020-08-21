@@ -153,6 +153,10 @@
     <value>Background color</value>
     <comment>Menu</comment>
   </data>
+  <data name="bottom" xml:space="preserve">
+    <value>Bottom</value>
+    <comment>Print</comment>
+  </data>
   <data name="browse" xml:space="preserve">
     <value>Browse</value>
     <comment>Settings</comment>
@@ -164,6 +168,10 @@
   <data name="center" xml:space="preserve">
     <value>Center</value>
     <comment>Wallpaper</comment>
+  </data>
+  <data name="center-image" xml:space="preserve">
+    <value>Center image</value>
+    <comment>Print</comment>
   </data>
   <data name="centimeters" xml:space="preserve">
     <value>centimeters</value>
@@ -240,6 +248,10 @@
   <data name="do-nothing" xml:space="preserve">
     <value>Do nothing</value>
     <comment>Settings</comment>
+  </data>
+  <data name="drag-here-to-resize" xml:space="preserve">
+    <value>Drag here to resize window</value>
+    <comment>Picture in picture</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Dragged image</value>
@@ -345,6 +357,14 @@
     <value>Landscape</value>
     <comment>Image info</comment>
   </data>
+  <data name="landscape-orientation" xml:space="preserve">
+    <value>Landscape</value>
+    <comment>Print</comment>
+  </data>
+  <data name="left" xml:space="preserve">
+    <value>Left</value>
+    <comment>Print</comment>
+  </data>
   <data name="left-arrow" xml:space="preserve">
     <value>Left arrow</value>
     <comment>Menu</comment>
@@ -360,6 +380,14 @@
   <data name="maintain-aspect-ratio" xml:space="preserve">
     <value>Maintain aspect ratio</value>
     <comment>SVG options</comment>
+  </data>
+  <data name="margin-bounds" xml:space="preserve">
+    <value>Margin bounds</value>
+    <comment>Print</comment>
+  </data>
+  <data name="margins" xml:space="preserve">
+    <value>Margins</value>
+    <comment>Print</comment>
   </data>
   <data name="megapixels" xml:space="preserve">
     <value>megapixels</value>
@@ -489,6 +517,10 @@
     <value>Print / Export to PDF</value>
     <comment>Menu</comment>
   </data>
+  <data name="print-conf" xml:space="preserve">
+    <value>Print configuration</value>
+    <comment>Print</comment>
+  </data>
   <data name="print-size" xml:space="preserve">
     <value>Print size</value>
     <comment>Image info</comment>
@@ -508,6 +540,10 @@
   <data name="restart-required" xml:space="preserve">
     <value>App restart required</value>
     <comment>Settings</comment>
+  </data>
+  <data name="right" xml:space="preserve">
+    <value>Right</value>
+    <comment>Print</comment>
   </data>
   <data name="right-arrow" xml:space="preserve">
     <value>Right arrow</value>
@@ -544,6 +580,10 @@
   <data name="set-background" xml:space="preserve">
     <value>Set background</value>
     <comment>Wallpaper</comment>
+  </data>
+  <data name="set-margins" xml:space="preserve">
+    <value>Set margins</value>
+    <comment>Print</comment>
   </data>
   <data name="settings" xml:space="preserve">
     <value>Settings</value>
@@ -600,6 +640,14 @@
   <data name="tile" xml:space="preserve">
     <value>Tile</value>
     <comment>Wallpaper</comment>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Title</value>
+    <comment>Print</comment>
+  </data>
+  <data name="top" xml:space="preserve">
+    <value>Top</value>
+    <comment>Print</comment>
   </data>
   <data name="translated-by" xml:space="preserve">
     <value>Translated by</value>

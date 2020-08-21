@@ -10,6 +10,7 @@ namespace quick_picture_viewer
 	partial class PrintForm : QlibFixedForm
 	{
 		private bool darkMode;
+		private MainForm owner;
 
 		public PrintForm(PrintDocument pd, bool darkMode)
 		{
@@ -114,7 +115,7 @@ namespace quick_picture_viewer
 
 		private void centerCheckbox_CheckedChanged(object sender, EventArgs e)
 		{
-			(this.Owner as MainForm).printCenterImage = centerCheckbox.Checked;
+			owner.printCenterImage = centerCheckbox.Checked;
 			printPreviewControl1.InvalidatePreview();
 		}
 
@@ -173,9 +174,29 @@ namespace quick_picture_viewer
 
 		private void PrintForm_Load(object sender, EventArgs e)
 		{
-			centerCheckbox.Checked = (this.Owner as MainForm).printCenterImage;
+			owner = this.Owner as MainForm;
+			
+			centerCheckbox.Checked = owner.printCenterImage;
 			marginsCheckBox.Checked = printPreviewControl1.Document.OriginAtMargins;
 			horizontalCheckBox.Checked = printPreviewControl1.Document.DefaultPageSettings.Landscape;
+
+			InitLanguage();
+		}
+
+		private void InitLanguage()
+		{
+			this.Text = owner.resMan.GetString("print-conf");
+			setMarginsButton.Text = owner.resMan.GetString("set-margins");
+			okButton.Text = owner.resMan.GetString("print");
+			leftLabel.Text = owner.resMan.GetString("left") + ":";
+			rightLabel.Text = owner.resMan.GetString("right") + ":";
+			topLabel.Text = owner.resMan.GetString("top") + ":";
+			bottomLabel.Text = owner.resMan.GetString("bottom") + ":";
+			documentLabel.Text = owner.resMan.GetString("title") + ":";
+			centerCheckbox.Text = owner.resMan.GetString("center-image");
+			horizontalCheckBox.Text = owner.resMan.GetString("landscape-orientation");
+			marginsLabel.Text = owner.resMan.GetString("margins") + ":";
+			marginsCheckBox.Text = owner.resMan.GetString("margin-bounds");
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)
