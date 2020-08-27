@@ -48,11 +48,12 @@
 * Slideshow
 * Dark mode
 
-<h2 align="center">Other "Quick" apps</h2>
-<p align="center">
-  <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> - Lightweight desktop screen recorder for Windows<br>
-  <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows
-</p>
+<h2 align="center">Other great apps</h2>
+
+| App | URL | Description |
+| :---: | :---: | :---: |
+| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec32.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows |
+| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker32.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility for Windows |
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
@@ -75,12 +76,6 @@ Get-AppxPackage *photos* | Remove-AppxPackage
 
   ### Extension module for Windows Explorer to render SVG thumbnails:
   <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
-</p>
-
-<h2 align="center">Inspirers</h2>
-<p align="center">
-  <a href="https://www.irfanview.com/">IrfanView</a> by Irfan Skiljan<br>
-  <a href="https://imageglass.org/">ImageGlass</a> by Dương Diệu Pháp
 </p>
 
 <h2 align="center">Special thanks to</h2>
