@@ -26,7 +26,7 @@
 <h2 align="center">Install</h2>
 <p align="center">
   <b>Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.0.1">v2.0.1 "Modernity"</a> (3.3 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.0.1/QuickPictureViewer-Setup.exe">Download</a></b><br>
-  Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5 "Classic"</a> (2.5 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a><br><br>
+  <b>Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5 "Classic"</a> (2.5 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a></b><br><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">.Net 4.8</a> / <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
@@ -50,10 +50,10 @@
 
 <h2 align="center">Other great apps</h2>
 
-| App | URL | Description |
+|  | App | Description |
 | :---: | :---: | :---: |
-| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec32.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows |
-| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker32.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility for Windows |
+| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec48.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). |
+| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker48.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). |
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
@@ -61,6 +61,14 @@
   <img src="/docs/screenshots/info.png">
   <img src="/docs/screenshots/print.png">
   <img src="/docs/screenshots/about.png">
+</p>
+
+<h2 align="center">Special thanks to</h2>
+<p align="center">
+  JosePineiro for <a href="https://github.com/JosePineiro/WebP-wrapper/">WebPWrapper</a> (.webp support)<br>
+  darkfall for <a href="https://gist.github.com/darkfall/1656050/">PngIconConverter</a> (.ico support)<br>
+  nickbabcock for <a href="https://github.com/nickbabcock/Pfim/">Pfim</a> (.dds/.tga support)<br>
+  vvvv for <a href="https://github.com/vvvv/SVG/">SVG</a> (.svg support)
 </p>
 
 <h2 align="center">Additional</h2>
@@ -76,12 +84,4 @@ Get-AppxPackage *photos* | Remove-AppxPackage
 
   ### Extension module for Windows Explorer to render SVG thumbnails:
   <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
-</p>
-
-<h2 align="center">Special thanks to</h2>
-<p align="center">
-  JosePineiro for <a href="https://github.com/JosePineiro/WebP-wrapper/">WebPWrapper</a> (.webp support)<br>
-  darkfall for <a href="https://gist.github.com/darkfall/1656050/">PngIconConverter</a> (.ico support)<br>
-  nickbabcock for <a href="https://github.com/nickbabcock/Pfim/">Pfim</a> (.dds/.tga support)<br>
-  vvvv for <a href="https://github.com/vvvv/SVG/">SVG</a> (.svg support)
 </p>

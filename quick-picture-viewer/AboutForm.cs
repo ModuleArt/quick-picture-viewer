@@ -11,6 +11,8 @@ namespace quick_picture_viewer
 {
 	partial class AboutForm : QlibFixedForm
 	{
+		private MainForm owner;
+
 		public AboutForm(bool darkMode)
 		{
 			if (darkMode)
@@ -110,6 +112,18 @@ namespace quick_picture_viewer
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void AboutForm_Load(object sender, EventArgs e)
+		{
+			owner = this.Owner as MainForm;
+			InitLanguage();
+		}
+
+		private void InitLanguage()
+		{
+			this.Text = owner.resMan.GetString("about");
+			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 		}
 	}
 }

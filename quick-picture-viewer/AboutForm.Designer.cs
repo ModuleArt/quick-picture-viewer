@@ -33,7 +33,6 @@
 			this.versionLabel = new System.Windows.Forms.Label();
 			this.companyLabel = new System.Windows.Forms.Label();
 			this.authorLabel = new System.Windows.Forms.Label();
-			this.descriptionLabel = new System.Windows.Forms.Label();
 			this.websiteLink = new System.Windows.Forms.LinkLabel();
 			this.projectLink = new System.Windows.Forms.LinkLabel();
 			this.licenseLabel = new System.Windows.Forms.Label();
@@ -42,11 +41,12 @@
 			this.issuesLink = new System.Windows.Forms.LinkLabel();
 			this.githubLabel = new System.Windows.Forms.Label();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
-			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
@@ -69,9 +69,9 @@
 			this.versionLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.versionLabel.Name = "versionLabel";
 			this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.versionLabel.Size = new System.Drawing.Size(54, 19);
+			this.versionLabel.Size = new System.Drawing.Size(28, 19);
 			this.versionLabel.TabIndex = 28;
-			this.versionLabel.Text = "Version";
+			this.versionLabel.Text = "ver";
 			this.versionLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// companyLabel
@@ -95,16 +95,6 @@
 			this.authorLabel.TabIndex = 30;
 			this.authorLabel.Text = "(Eugene Volynko)";
 			// 
-			// descriptionLabel
-			// 
-			this.descriptionLabel.Location = new System.Drawing.Point(10, 200);
-			this.descriptionLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.descriptionLabel.Name = "descriptionLabel";
-			this.descriptionLabel.Size = new System.Drawing.Size(280, 76);
-			this.descriptionLabel.TabIndex = 31;
-			this.descriptionLabel.Text = "Lightweight, versatile desktop photo viewer for Windows, built on top of WinForms" +
-    " (C#). The best replacement for the default Windows image viewer.";
-			// 
 			// websiteLink
 			// 
 			this.websiteLink.AutoSize = true;
@@ -115,7 +105,7 @@
 			this.websiteLink.TabIndex = 4;
 			this.websiteLink.TabStop = true;
 			this.websiteLink.Text = "Module Art";
-			this.aboutTooltip.SetToolTip(this.websiteLink, "Open Module Art website");
+			this.infoTooltip.SetToolTip(this.websiteLink, "Open Module Art website");
 			this.websiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.developerLink_LinkClicked);
 			// 
 			// projectLink
@@ -128,7 +118,7 @@
 			this.projectLink.TabIndex = 6;
 			this.projectLink.TabStop = true;
 			this.projectLink.Text = "Project page";
-			this.aboutTooltip.SetToolTip(this.projectLink, "Open GitHub project page");
+			this.infoTooltip.SetToolTip(this.projectLink, "Open GitHub project page");
 			this.projectLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.projectLink_LinkClicked);
 			// 
 			// licenseLabel
@@ -151,7 +141,7 @@
 			this.makeDefaultLink.TabIndex = 3;
 			this.makeDefaultLink.TabStop = true;
 			this.makeDefaultLink.Text = "Set as default photo viewer";
-			this.aboutTooltip.SetToolTip(this.makeDefaultLink, "Open Windows settings");
+			this.infoTooltip.SetToolTip(this.makeDefaultLink, "Open Windows settings");
 			this.makeDefaultLink.Visible = false;
 			this.makeDefaultLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeDefaultLink_LinkClicked);
 			// 
@@ -177,7 +167,7 @@
 			this.issuesLink.TabIndex = 7;
 			this.issuesLink.TabStop = true;
 			this.issuesLink.Text = "Issues";
-			this.aboutTooltip.SetToolTip(this.issuesLink, "Open GitHub issues page");
+			this.infoTooltip.SetToolTip(this.issuesLink, "Open GitHub issues page");
 			this.issuesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.issuesLink_LinkClicked);
 			// 
 			// githubLabel
@@ -200,7 +190,7 @@
 			this.licenseLink.TabIndex = 5;
 			this.licenseLink.TabStop = true;
 			this.licenseLink.Text = "GPL-3.0";
-			this.aboutTooltip.SetToolTip(this.licenseLink, "Open GitHub license page");
+			this.infoTooltip.SetToolTip(this.licenseLink, "Open GitHub license page");
 			this.licenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.licenseLink_LinkClicked);
 			// 
 			// closeBtn
@@ -216,7 +206,7 @@
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
 			this.closeBtn.TabIndex = 1;
-			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
+			this.infoTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
@@ -236,9 +226,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(10, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(47, 19);
+			this.titleLabel.Size = new System.Drawing.Size(45, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "About";
+			this.titleLabel.Text = "about";
 			// 
 			// logoPictureBox
 			// 
@@ -251,10 +241,21 @@
 			this.logoPictureBox.TabIndex = 41;
 			this.logoPictureBox.TabStop = false;
 			// 
+			// textBox1
+			// 
+			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox1.Location = new System.Drawing.Point(10, 200);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.textBox1.Multiline = true;
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(280, 76);
+			this.textBox1.TabIndex = 42;
+			// 
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(300, 410);
+			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.githubLabel);
 			this.Controls.Add(this.issuesLink);
 			this.Controls.Add(this.projectLink);
@@ -267,9 +268,9 @@
 			this.Controls.Add(this.makeDefaultLink);
 			this.Controls.Add(this.logoPictureBox);
 			this.Controls.Add(this.updatesLink);
-			this.Controls.Add(this.descriptionLabel);
 			this.Controls.Add(this.versionLabel);
 			this.Controls.Add(this.productLabel);
+			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.MaximizeBox = false;
@@ -280,6 +281,8 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "About";
+			this.TitleLabel = this.titleLabel;
+			this.Load += new System.EventHandler(this.AboutForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AboutForm_KeyDown);
 			this.titlePanel.ResumeLayout(false);
 			this.titlePanel.PerformLayout();
@@ -294,7 +297,6 @@
 		private System.Windows.Forms.Label versionLabel;
 		private System.Windows.Forms.Label companyLabel;
 		private System.Windows.Forms.Label authorLabel;
-		private System.Windows.Forms.Label descriptionLabel;
 		private System.Windows.Forms.LinkLabel websiteLink;
 		private System.Windows.Forms.LinkLabel projectLink;
 		private System.Windows.Forms.LinkLabel issuesLink;
@@ -302,11 +304,12 @@
 		private System.Windows.Forms.LinkLabel makeDefaultLink;
 		private System.Windows.Forms.Label licenseLabel;
 		private System.Windows.Forms.LinkLabel licenseLink;
-		private System.Windows.Forms.ToolTip aboutTooltip;
+		private System.Windows.Forms.ToolTip infoTooltip;
 		private System.Windows.Forms.Label githubLabel;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.PictureBox logoPictureBox;
+		private System.Windows.Forms.TextBox textBox1;
 	}
 }

@@ -556,6 +556,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Image.
+        /// </summary>
+        internal static string image {
+            get {
+                return ResourceManager.GetString("image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image copied to clipboard.
         /// </summary>
         internal static string image_copied_to_clipboard {

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Quick Picture Viewer")]
-[assembly: AssemblyDescription("Lightweight, versatile desktop photo viewer for Windows")]
+[assembly: AssemblyDescription("Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Module Art")]
 [assembly: AssemblyProduct("Quick Picture Viewer")]

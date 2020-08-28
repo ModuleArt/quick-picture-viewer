@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "2.0.1"
+#define MyAppVersion "2.1.0"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io"
 #define MyAppExeName "quick-picture-viewer.exe"
@@ -24,7 +24,7 @@ LicenseFile=D:\Projects\DotNet\quick-picture-viewer\LICENSE.md
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=D:\Projects\DotNet\quick-picture-viewer\inno-setup
-OutputBaseFilename=QuickPictureViewer-Setup
+OutputBaseFilename=QuickPictureViewer-v{#MyAppVersion}-Setup
 SetupIconFile=D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico
 Compression=lzma
 SolidCompression=yes

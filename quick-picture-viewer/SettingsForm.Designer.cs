@@ -387,6 +387,7 @@
 			// favExtTextBox
 			// 
 			this.favExtTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.favExtTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.favExtTextBox.Location = new System.Drawing.Point(10, 39);
 			this.favExtTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.favExtTextBox.Name = "favExtTextBox";
@@ -462,7 +463,7 @@
 			this.langComboBox.Items.AddRange(new object[] {
             "English",
             "Russian (Русский)",
-            "Spanish (Española)"});
+            "[Beta] Spanish (Española)"});
 			this.langComboBox.Location = new System.Drawing.Point(10, 39);
 			this.langComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.langComboBox.Name = "langComboBox";

@@ -12,7 +12,7 @@ namespace quick_picture_viewer
 		private bool darkMode;
 		private MainForm owner;
 
-		public PrintForm(PrintDocument pd, bool darkMode)
+		public PrintForm(PrintDocument pd, bool darkMode, string docTitle)
 		{
 			if (darkMode)
 			{
@@ -37,6 +37,8 @@ namespace quick_picture_viewer
 			bottomMarginTextBox.Text = pd.DefaultPageSettings.Margins.Bottom.ToString();
 
 			printPreviewControl1.Document = pd;
+
+			titleTextBox.Text = docTitle;
 		}
 
 		private void applyDarkMode(bool dark)
@@ -197,6 +199,7 @@ namespace quick_picture_viewer
 			horizontalCheckBox.Text = owner.resMan.GetString("landscape-orientation");
 			marginsLabel.Text = owner.resMan.GetString("margins") + ":";
 			marginsCheckBox.Text = owner.resMan.GetString("margin-bounds");
+			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)

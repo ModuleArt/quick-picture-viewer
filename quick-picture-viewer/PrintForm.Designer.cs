@@ -49,7 +49,7 @@
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
-			this.aboutTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -68,7 +68,7 @@
 			this.okButton.Text = "print";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.aboutTooltip.SetToolTip(this.okButton, "Choose print method");
+			this.infoTooltip.SetToolTip(this.okButton, "Choose print method");
 			this.okButton.UseVisualStyleBackColor = false;
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
 			// 
@@ -144,6 +144,7 @@
 			// bottomMarginTextBox
 			// 
 			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.bottomMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.bottomMarginTextBox.Location = new System.Drawing.Point(208, 248);
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.bottomMarginTextBox.Name = "bottomMarginTextBox";
@@ -155,6 +156,7 @@
 			// rightMarginTextBox
 			// 
 			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.rightMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.rightMarginTextBox.Location = new System.Drawing.Point(142, 248);
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.rightMarginTextBox.Name = "rightMarginTextBox";
@@ -166,6 +168,7 @@
 			// topMarginTextBox
 			// 
 			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.topMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.topMarginTextBox.Location = new System.Drawing.Point(76, 248);
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.topMarginTextBox.Name = "topMarginTextBox";
@@ -187,6 +190,7 @@
 			// leftMarginTextBox
 			// 
 			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.leftMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.leftMarginTextBox.Location = new System.Drawing.Point(10, 248);
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.leftMarginTextBox.Name = "leftMarginTextBox";
@@ -208,6 +212,7 @@
 			// titleTextBox
 			// 
 			this.titleTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.titleTextBox.Location = new System.Drawing.Point(104, 42);
 			this.titleTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
 			this.titleTextBox.Name = "titleTextBox";
@@ -274,7 +279,6 @@
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
 			this.closeBtn.TabIndex = 17;
-			this.aboutTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
@@ -351,7 +355,7 @@
 		private QuickLibrary.QlibTextButton setMarginsButton;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
-		private System.Windows.Forms.ToolTip aboutTooltip;
+		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 	}
 }

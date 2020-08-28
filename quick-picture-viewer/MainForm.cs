@@ -14,7 +14,6 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Resources;
 using System.Reflection;
-using System.Windows.Media.Imaging;
 
 namespace quick_picture_viewer
 {
@@ -1683,7 +1682,14 @@ namespace quick_picture_viewer
 		private void printButton_Click(object sender, EventArgs e)
 		{
 			setSlideshow(false);
-			PrintForm pf = new PrintForm(printDocument1, darkMode);
+
+			string docTitle = resMan.GetString("image") + " 1";
+			if (currentFile != null)
+			{
+				docTitle = currentFile;
+			}
+
+			PrintForm pf = new PrintForm(printDocument1, darkMode, docTitle);
 			pf.Owner = this;
 			pf.TopMost = alwaysOnTop;
 

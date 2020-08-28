@@ -337,6 +337,10 @@
     <value>Height</value>
     <comment>SVG options</comment>
   </data>
+  <data name="image" xml:space="preserve">
+    <value>Image</value>
+    <comment>Print</comment>
+  </data>
   <data name="image-copied-to-clipboard" xml:space="preserve">
     <value>Image copied to clipboard</value>
     <comment>Suggestion</comment>

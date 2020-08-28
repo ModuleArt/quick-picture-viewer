@@ -337,6 +337,10 @@
     <value>Высота</value>
     <comment>SVG options</comment>
   </data>
+  <data name="image" xml:space="preserve">
+    <value>Изображение</value>
+    <comment>Print</comment>
+  </data>
   <data name="image-copied-to-clipboard" xml:space="preserve">
     <value>Изображение скопировано в буфер обмена</value>
     <comment>Suggestion</comment>
