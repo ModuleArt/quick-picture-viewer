@@ -33,3 +33,11 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Pfim.dl
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.csprojAssemblyReference.cache
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\languages\lang_es.resx
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\languages\lang_ru.resx
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\languages\lang_en.resx
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\languages\lang_es.Designer.cs
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit.xml
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.languages.lang_es.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.languages.lang_ru.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.languages.lang_en.resources

@@ -25,8 +25,6 @@ namespace quick_picture_viewer
 			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel, fitLabel });
 
 			applyDarkMode(darkMode);
-
-			fitComboBox.SelectedIndex = 0;
 		}
 
 		private void applyDarkMode(bool dark)
@@ -86,6 +84,7 @@ namespace quick_picture_viewer
 		{
 			owner = this.Owner as MainForm;
 			InitLanguage();
+			fitComboBox.SelectedIndex = 0;
 		}
 
 		private void InitLanguage()
@@ -93,12 +92,12 @@ namespace quick_picture_viewer
 			this.Text = owner.resMan.GetString("set-as-desktop-background");
 			fitLabel.Text = owner.resMan.GetString("choose-fit") + ":";
 			okButton.Text = " " + owner.resMan.GetString("set-background");
-			fitComboBox.Items[0] = owner.resMan.GetString("fill");
-			fitComboBox.Items[1] = owner.resMan.GetString("fit");
-			fitComboBox.Items[2] = owner.resMan.GetString("stretch");
-			fitComboBox.Items[3] = owner.resMan.GetString("tile");
-			fitComboBox.Items[4] = owner.resMan.GetString("center");
-			fitComboBox.Items[5] = owner.resMan.GetString("span");
+			fitComboBox.Items.Add(owner.resMan.GetString("fill"));
+			fitComboBox.Items.Add(owner.resMan.GetString("fit"));
+			fitComboBox.Items.Add(owner.resMan.GetString("stretch"));
+			fitComboBox.Items.Add(owner.resMan.GetString("tile"));
+			fitComboBox.Items.Add(owner.resMan.GetString("center"));
+			fitComboBox.Items.Add(owner.resMan.GetString("span"));
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 		}
 	}

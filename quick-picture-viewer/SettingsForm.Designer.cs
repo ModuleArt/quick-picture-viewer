@@ -503,9 +503,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(9, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(57, 19);
+			this.titleLabel.Size = new System.Drawing.Size(90, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "settings";
+			this.titleLabel.Text = "SettingsForm";
 			// 
 			// openFileDialog1
 			// 
@@ -527,7 +527,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Settings";
+			this.Text = "SettingsForm";
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.SettingsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SettingsForm_KeyDown);

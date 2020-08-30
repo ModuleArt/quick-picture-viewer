@@ -118,639 +118,399 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about" xml:space="preserve">
-    <value>О приложении</value>
+    <value>Acerca de</value>
     <comment>Menu</comment>
   </data>
   <data name="always-on-top" xml:space="preserve">
-    <value>Поверх всех окон</value>
+    <value>Siempre sobre ventana</value>
     <comment>Menu</comment>
   </data>
-  <data name="app-description" xml:space="preserve">
-    <value>Легкая и универсальная программа для просмотра изображений для компьютеров на Windows, построенная на базе WinForms (C#). Лучшая замена стандартной программе просмотра фотографий Windows.</value>
-    <comment>About</comment>
-  </data>
   <data name="app-is-up-to-date" xml:space="preserve">
-    <value>Приложение использует актуальную версию</value>
+    <value>La aplicación está actualizada</value>
     <comment>Message box</comment>
   </data>
   <data name="app-startup-action" xml:space="preserve">
-    <value>Действие при запуске приложения</value>
+    <value>Acción de inicio de la aplicación</value>
     <comment>Settings</comment>
   </data>
-  <data name="aspect-ratio" xml:space="preserve">
-    <value>Соотношение</value>
-    <comment>Image info</comment>
-  </data>
   <data name="auto" xml:space="preserve">
-    <value>Авто</value>
+    <value>Automático</value>
     <comment>Status bar, zoom text field</comment>
   </data>
-  <data name="auto-size" xml:space="preserve">
-    <value>Авто</value>
-    <comment>SVG options</comment>
-  </data>
   <data name="auto-zoom" xml:space="preserve">
-    <value>Авто масштаб</value>
+    <value>Zoom automático</value>
     <comment>Menu</comment>
   </data>
   <data name="background-color" xml:space="preserve">
-    <value>Цвет фона</value>
+    <value>Color de fondo</value>
     <comment>Menu</comment>
-  </data>
-  <data name="bottom" xml:space="preserve">
-    <value>Снизу</value>
-    <comment>Print</comment>
-  </data>
-  <data name="browse" xml:space="preserve">
-    <value>Выбрать</value>
-    <comment>Settings</comment>
   </data>
   <data name="capture-screen" xml:space="preserve">
-    <value>Сделать скриншот</value>
+    <value>Captura de pantalla</value>
     <comment>Menu</comment>
   </data>
-  <data name="center" xml:space="preserve">
-    <value>Центрировать</value>
-    <comment>Wallpaper</comment>
-  </data>
-  <data name="center-image" xml:space="preserve">
-    <value>Центрировать изображение</value>
-    <comment>Print</comment>
-  </data>
-  <data name="centimeters" xml:space="preserve">
-    <value>сантиметров</value>
-    <comment>Image info</comment>
-  </data>
-  <data name="check-for-updates" xml:space="preserve">
-    <value>Проверить обновления</value>
-    <comment>About</comment>
-  </data>
   <data name="check-for-updates-on-startup" xml:space="preserve">
-    <value>Проверять обновления при запуске</value>
+    <value>Buscar actualizaciones al iniciar aplicación</value>
     <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
-    <value>Фон шахматной доски</value>
+    <value>Fondo de tablero de ajedrez</value>
     <comment>Menu</comment>
   </data>
   <data name="choose-color" xml:space="preserve">
-    <value>Выбрать цвет</value>
+    <value>Escoger color</value>
     <comment>Menu</comment>
-  </data>
-  <data name="choose-fit" xml:space="preserve">
-    <value>Режим размещения</value>
-    <comment>Wallpaper</comment>
   </data>
   <data name="clear" xml:space="preserve">
-    <value>Очистить</value>
+    <value>Limpiar</value>
     <comment>Menu</comment>
-  </data>
-  <data name="close" xml:space="preserve">
-    <value>Закрыть</value>
-    <comment>Titlebar</comment>
   </data>
   <data name="comma" xml:space="preserve">
-    <value>Запятая</value>
+    <value>Coma</value>
     <comment>Menu</comment>
   </data>
-  <data name="compression" xml:space="preserve">
-    <value>Сжатие</value>
-    <comment>Image info</comment>
-  </data>
   <data name="copy" xml:space="preserve">
-    <value>Копировать</value>
+    <value>Copiar</value>
     <comment>Menu</comment>
   </data>
   <data name="copy-file" xml:space="preserve">
-    <value>Копировать открытый файл</value>
+    <value>Copiar archivo orignal</value>
     <comment>Menu</comment>
   </data>
   <data name="copy-image" xml:space="preserve">
-    <value>Копировать изображение</value>
+    <value>Copiar esta imagen</value>
     <comment>Menu</comment>
   </data>
   <data name="created" xml:space="preserve">
-    <value>Создан</value>
-    <comment>Status bar, image info</comment>
-  </data>
-  <data name="created-by" xml:space="preserve">
-    <value>Разработчик:</value>
-    <comment>About</comment>
+    <value>Creado</value>
+    <comment>Status bar</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
-    <value>Текущий файл не найден</value>
+    <value>El archivo actual no fue encontrado</value>
     <comment>Message box</comment>
   </data>
   <data name="dark" xml:space="preserve">
-    <value>Тёмная</value>
+    <value>Oscuro</value>
     <comment>Settings</comment>
   </data>
   <data name="dds-memory-error" xml:space="preserve">
-    <value>Ошибка памяти при чтении DDS/TGA</value>
+    <value>Error de memoria DDS / TGA</value>
     <comment>Message box</comment>
   </data>
   <data name="delete-file" xml:space="preserve">
-    <value>Удалить файл</value>
+    <value>Eliminar archivo</value>
     <comment>Message box</comment>
   </data>
-  <data name="disk-size" xml:space="preserve">
-    <value>Размер на диске</value>
-    <comment>Image info</comment>
-  </data>
   <data name="do-nothing" xml:space="preserve">
-    <value>Ничего не делать</value>
+    <value>Hacer nada</value>
     <comment>Settings</comment>
   </data>
-  <data name="drag-here-to-resize" xml:space="preserve">
-    <value>Потяните чтобы изменить размер окна</value>
-    <comment>Picture in picture</comment>
-  </data>
   <data name="dragged-image" xml:space="preserve">
-    <value>Перетащенное изображение</value>
+    <value>Imagen arrastrada</value>
     <comment>Status bar</comment>
   </data>
   <data name="edit-image" xml:space="preserve">
-    <value>Редактировать</value>
+    <value>Editar imagen</value>
     <comment>Menu</comment>
   </data>
   <data name="error" xml:space="preserve">
-    <value>Ошибка</value>
+    <value>Error</value>
     <comment>Message box</comment>
   </data>
-  <data name="extension" xml:space="preserve">
-    <value>Расширение</value>
-    <comment>Image info</comment>
-  </data>
-  <data name="external" xml:space="preserve">
-    <value>Сторонние</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="fav-external-app" xml:space="preserve">
-    <value>Любимое стороннее приложение</value>
-    <comment>Settings</comment>
-  </data>
   <data name="file" xml:space="preserve">
-    <value>Файл</value>
-    <comment>Status bar, image info</comment>
+    <value>Archivo</value>
+    <comment>Status bar</comment>
   </data>
   <data name="file-copied-to-clipboard" xml:space="preserve">
-    <value>Файл скопирован в буфер обмена</value>
+    <value>Archivo copiado al portapapeles</value>
     <comment>Suggestion</comment>
-  </data>
-  <data name="file-properties" xml:space="preserve">
-    <value>Свойства файла</value>
-    <comment>Image info</comment>
   </data>
   <data name="file-reloaded" xml:space="preserve">
-    <value>Файл переоткрыт</value>
+    <value>Archivo recargado</value>
     <comment>Suggestion</comment>
   </data>
-  <data name="fill" xml:space="preserve">
-    <value>Заполнить</value>
-    <comment>Wallpaper</comment>
-  </data>
-  <data name="fit" xml:space="preserve">
-    <value>Подогнать</value>
-    <comment>Wallpaper</comment>
-  </data>
   <data name="flip-horizontal" xml:space="preserve">
-    <value>Отразить по горизонтали</value>
+    <value>Rotar horizontal</value>
     <comment>Menu</comment>
   </data>
   <data name="flip-vertical" xml:space="preserve">
-    <value>Отразить по вертикали</value>
+    <value>Rotar vertical</value>
     <comment>Menu</comment>
   </data>
   <data name="folder" xml:space="preserve">
-    <value>Папка</value>
-    <comment>Status bar, image info</comment>
+    <value>Carpeta</value>
+    <comment>Status bar</comment>
   </data>
   <data name="frameless-mode" xml:space="preserve">
-    <value>Безрамочный режим</value>
+    <value>Modo sin marco</value>
     <comment>Menu</comment>
   </data>
   <data name="from-clipboard" xml:space="preserve">
-    <value>С буфера обмена</value>
+    <value>Del portapapeles</value>
     <comment>Status bar</comment>
   </data>
-  <data name="full-path" xml:space="preserve">
-    <value>Полный путь</value>
-    <comment>Image info</comment>
-  </data>
   <data name="fullscreen" xml:space="preserve">
-    <value>На весь экран</value>
+    <value>Pantalla completa</value>
     <comment>Menu</comment>
   </data>
-  <data name="fullscreen-cursor" xml:space="preserve">
-    <value>Показать курсор в полноэкранном режиме</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="height" xml:space="preserve">
-    <value>Высота</value>
-    <comment>SVG options</comment>
-  </data>
-  <data name="image" xml:space="preserve">
-    <value>Изображение</value>
-    <comment>Print</comment>
-  </data>
   <data name="image-copied-to-clipboard" xml:space="preserve">
-    <value>Изображение скопировано в буфер обмена</value>
+    <value>Imagen copiada al portapapeles</value>
     <comment>Suggestion</comment>
   </data>
   <data name="image-info" xml:space="preserve">
-    <value>Информация об изображении</value>
+    <value>Información de la imagen</value>
     <comment>Menu</comment>
   </data>
   <data name="image-pasted-from-clipboard" xml:space="preserve">
-    <value>Изображение получено с буфера обмена</value>
+    <value>Imagen copiada del portapapeles</value>
     <comment>Suggestion</comment>
   </data>
-  <data name="inches" xml:space="preserve">
-    <value>дюймов</value>
-    <comment>Image info</comment>
-  </data>
-  <data name="landscape" xml:space="preserve">
-    <value>Альбомная</value>
-    <comment>Image info</comment>
-  </data>
-  <data name="landscape-orientation" xml:space="preserve">
-    <value>Альбомная ориентация</value>
-    <comment>Print</comment>
-  </data>
-  <data name="left" xml:space="preserve">
-    <value>Слева</value>
-    <comment>Print</comment>
-  </data>
   <data name="left-arrow" xml:space="preserve">
-    <value>Стрелка влево</value>
+    <value>Flecha izquierda</value>
     <comment>Menu</comment>
   </data>
-  <data name="license" xml:space="preserve">
-    <value>Лицензия</value>
-    <comment>About</comment>
-  </data>
   <data name="light" xml:space="preserve">
-    <value>Светлая</value>
+    <value>Luz</value>
     <comment>Settings</comment>
   </data>
   <data name="localization" xml:space="preserve">
-    <value>Локализация</value>
+    <value>localización</value>
     <comment>Settings</comment>
   </data>
-  <data name="maintain-aspect-ratio" xml:space="preserve">
-    <value>Сохранять пропорции</value>
-    <comment>SVG options</comment>
-  </data>
-  <data name="margin-bounds" xml:space="preserve">
-    <value>Отсупить от краев</value>
-    <comment>Print</comment>
-  </data>
-  <data name="margins" xml:space="preserve">
-    <value>Отступы</value>
-    <comment>Print</comment>
-  </data>
-  <data name="megapixels" xml:space="preserve">
-    <value>мегапикселей</value>
-    <comment>Image info</comment>
-  </data>
   <data name="minus" xml:space="preserve">
-    <value>Минус</value>
+    <value>Menos</value>
     <comment>Menu</comment>
   </data>
   <data name="modified" xml:space="preserve">
-    <value>Изменен</value>
-    <comment>Status bar, image info</comment>
+    <value>Modificado</value>
+    <comment>Status bar</comment>
   </data>
   <data name="more-options" xml:space="preserve">
-    <value>Еще</value>
+    <value>Más opciones</value>
     <comment>Menu</comment>
   </data>
-  <data name="mouse" xml:space="preserve">
-    <value>Мышь</value>
-    <comment>Settings</comment>
-  </data>
   <data name="move-to-trash" xml:space="preserve">
-    <value>Переместить файл в Корзину</value>
+    <value>Mover archivo a Papelera de Reciclaje</value>
     <comment>Menu</comment>
   </data>
   <data name="new-window" xml:space="preserve">
-    <value>Новое окно</value>
+    <value>Nueva ventana</value>
     <comment>Menu</comment>
   </data>
   <data name="next-image" xml:space="preserve">
-    <value>Следующий файл в папке</value>
+    <value>Sig. imagen en la carpeta</value>
     <comment>Menu</comment>
   </data>
   <data name="next-image-in-1-second" xml:space="preserve">
-    <value>Следующее изображение через 1 секунду</value>
+    <value>Sig. imagen en 1 segundo</value>
     <comment>Suggestion</comment>
   </data>
   <data name="next-image-in-x-seconds" xml:space="preserve">
-    <value>Следующее изображение через {0} секунд</value>
+    <value>Sig. imagen en {0} segundos</value>
     <comment>Suggestion</comment>
   </data>
   <data name="no-file" xml:space="preserve">
-    <value>Нет файла</value>
+    <value>Sin archivo</value>
     <comment>Status bar</comment>
   </data>
   <data name="no-files-to-open" xml:space="preserve">
-    <value>Нет файлов для открытия</value>
+    <value>No más archivos para abrir</value>
     <comment>Message box</comment>
   </data>
   <data name="no-folder" xml:space="preserve">
-    <value>Нет папки</value>
+    <value>Sin carpeta</value>
     <comment>Status bar</comment>
   </data>
   <data name="not-saved" xml:space="preserve">
-    <value>Не сохранено</value>
+    <value>Sin salvar</value>
     <comment>Status bar</comment>
   </data>
   <data name="open-external" xml:space="preserve">
-    <value>Открыть файл с помощью стороннего приложения</value>
+    <value>Abrir archivo con app. externa</value>
     <comment>Menu</comment>
   </data>
   <data name="open-file" xml:space="preserve">
-    <value>Открыть файл</value>
+    <value>Abrir archivo</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Открыть параметры Windows</value>
-    <comment>About</comment>
-  </data>
   <data name="open-with" xml:space="preserve">
-    <value>Открыть с помощью</value>
+    <value>Abrir con</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-choose" xml:space="preserve">
-    <value>Выбрать приложение</value>
+    <value>Elegir app. para abrir</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-custom" xml:space="preserve">
-    <value>Открыть приложением пользователя</value>
+    <value>Abrir con app. custom</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-default" xml:space="preserve">
-    <value>Открыть сторонним приложением по-умолчанию</value>
+    <value>Abrir con app. defualt</value>
     <comment>Menu</comment>
   </data>
-  <data name="original-size" xml:space="preserve">
-    <value>Исходный</value>
-    <comment>SVG options</comment>
-  </data>
   <data name="paste-from-clipboard" xml:space="preserve">
-    <value>Вставить с буфера обмена</value>
+    <value>Pegar del portapapeles</value>
     <comment>Settings</comment>
   </data>
   <data name="paste-image" xml:space="preserve">
-    <value>Вставить</value>
+    <value>Pegar imagen</value>
     <comment>Menu</comment>
   </data>
   <data name="picture-in-picture" xml:space="preserve">
-    <value>Картинка в картинке</value>
+    <value>Imagen en imagen</value>
     <comment>Menu</comment>
   </data>
-  <data name="pixels" xml:space="preserve">
-    <value>пикселей</value>
-    <comment>Image info</comment>
-  </data>
   <data name="please-open-image" xml:space="preserve">
-    <value>Откройте изображение для просмотра или редактирования</value>
+    <value>Abra una imagen para ver o editar</value>
     <comment>Picture panel</comment>
   </data>
   <data name="plus" xml:space="preserve">
-    <value>Плюс</value>
+    <value>Más</value>
     <comment>Menu</comment>
   </data>
-  <data name="portrait" xml:space="preserve">
-    <value>Портретная</value>
-    <comment>Image info</comment>
-  </data>
-  <data name="presets" xml:space="preserve">
-    <value>Пресеты</value>
-    <comment>SVG options</comment>
-  </data>
   <data name="press-to-exit-fullscreen" xml:space="preserve">
-    <value>Нажмите {0}, чтобы выйти из полноэкранного режима</value>
+    <value>Presione {0} para salir de pantalla completa</value>
     <comment>Suggestion</comment>
   </data>
   <data name="prev-image" xml:space="preserve">
-    <value>Предыдущий файл в папке</value>
+    <value>Imagen anterior de la carpeta</value>
     <comment>Menu</comment>
   </data>
   <data name="print" xml:space="preserve">
-    <value>Печать / Экспорт в PDF</value>
+    <value>Imprimir / Exportar a PDF</value>
     <comment>Menu</comment>
-  </data>
-  <data name="print-conf" xml:space="preserve">
-    <value>Параметры печати</value>
-    <comment>Print</comment>
-  </data>
-  <data name="print-size" xml:space="preserve">
-    <value>Размер печати</value>
-    <comment>Image info</comment>
   </data>
   <data name="reload-file" xml:space="preserve">
-    <value>Переоткрыть файл</value>
+    <value>Recargar archivo</value>
     <comment>Menu</comment>
   </data>
-  <data name="resize-svg" xml:space="preserve">
-    <value>Изменить размер SVG</value>
-    <comment>SVG options</comment>
-  </data>
-  <data name="resolution" xml:space="preserve">
-    <value>Разрешение</value>
-    <comment>Image info</comment>
-  </data>
   <data name="restart-required" xml:space="preserve">
-    <value>Требуется перезапуск приложения</value>
+    <value>Reincio de la app requerido</value>
     <comment>Settings</comment>
   </data>
-  <data name="right" xml:space="preserve">
-    <value>Справа</value>
-    <comment>Print</comment>
-  </data>
   <data name="right-arrow" xml:space="preserve">
-    <value>Стрелка вправо</value>
+    <value>Flecha derecha</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-180" xml:space="preserve">
-    <value>Повернуть на 180°</value>
+    <value>Rotar 180°</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-left" xml:space="preserve">
-    <value>Повернуть против часовой стрелки</value>
+    <value>Rotar en sentido contra-reloj</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-right" xml:space="preserve">
-    <value>Повернуть по часовой стрелке</value>
+    <value>Rotar en sentido reloj</value>
     <comment>Menu</comment>
   </data>
   <data name="save-as" xml:space="preserve">
-    <value>Сохранить как</value>
+    <value>Guardar como</value>
     <comment>Menu</comment>
   </data>
   <data name="screenshot" xml:space="preserve">
-    <value>Скриншот</value>
+    <value>Captura de pantalla</value>
     <comment>Status bar</comment>
   </data>
-  <data name="seconds" xml:space="preserve">
-    <value>секунд</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="set-as-default-image-viewer" xml:space="preserve">
-    <value>Сделать приложением по умолчанию</value>
-    <comment>About</comment>
-  </data>
   <data name="set-as-desktop-background" xml:space="preserve">
-    <value>Установить как фон рабочего стола</value>
+    <value>Establecer como fondo de pantalla</value>
     <comment>Menu</comment>
   </data>
-  <data name="set-background" xml:space="preserve">
-    <value>Установить как обои</value>
-    <comment>Wallpaper</comment>
-  </data>
-  <data name="set-margins-btn" xml:space="preserve">
-    <value>Установить отступы</value>
-    <comment>Print</comment>
-  </data>
   <data name="settings" xml:space="preserve">
-    <value>Настройки</value>
+    <value>Configuración</value>
     <comment>Menu, Settings</comment>
   </data>
   <data name="show-file-explorer" xml:space="preserve">
-    <value>Показать файл в папке</value>
+    <value>Mostrar archivo en explorador</value>
     <comment>Menu</comment>
   </data>
-  <data name="show-slideshow-counter" xml:space="preserve">
-    <value>Показать счётчик слайдшоу</value>
-    <comment>Settings</comment>
-  </data>
   <data name="size" xml:space="preserve">
-    <value>Размер</value>
+    <value>Tamaño</value>
     <comment>Status bar</comment>
   </data>
   <data name="slideshow" xml:space="preserve">
-    <value>Слайдшоу</value>
+    <value>Presentación</value>
     <comment>Menu</comment>
   </data>
-  <data name="span" xml:space="preserve">
-    <value>Перекрывать</value>
-    <comment>Wallpaper</comment>
-  </data>
-  <data name="square" xml:space="preserve">
-    <value>Квадрат</value>
-    <comment>Image info</comment>
-  </data>
   <data name="startup" xml:space="preserve">
-    <value>Запуск</value>
+    <value>Inicio</value>
     <comment>Settings</comment>
   </data>
-  <data name="stretch" xml:space="preserve">
-    <value>Разтянуть</value>
-    <comment>Wallpaper</comment>
-  </data>
   <data name="sure-close-app" xml:space="preserve">
-    <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?</value>
+    <value>Se perderán todos los datos no guardados. ¿Estás seguro de que quieres cerrar la aplicación?</value>
     <comment>Message box</comment>
   </data>
   <data name="sure-move-to-trash" xml:space="preserve">
-    <value>Вы уверены, что хотите переместить файл в Корзину?</value>
+    <value>¿Está seguro de que desea mover este archivo a la Papelera de reciclaje?</value>
     <comment>Message box</comment>
   </data>
-  <data name="switching-time" xml:space="preserve">
-    <value>Время переключения</value>
-    <comment>Settings</comment>
-  </data>
   <data name="theme" xml:space="preserve">
-    <value>Тема</value>
+    <value>Tema</value>
     <comment>Settings</comment>
-  </data>
-  <data name="tile" xml:space="preserve">
-    <value>Плитка</value>
-    <comment>Wallpaper</comment>
-  </data>
-  <data name="title" xml:space="preserve">
-    <value>Заголовок</value>
-    <comment>Print</comment>
-  </data>
-  <data name="top" xml:space="preserve">
-    <value>Сверху</value>
-    <comment>Print</comment>
   </data>
   <data name="translated-by" xml:space="preserve">
-    <value>Автор перевода</value>
+    <value>Traducido por</value>
     <comment>Settings</comment>
   </data>
   <data name="type-options" xml:space="preserve">
-    <value>опции</value>
-    <comment>Picture panel, SVG options</comment>
-  </data>
-  <data name="ui-lang" xml:space="preserve">
-    <value>Язык интерфейса:</value>
-    <comment>Settings</comment>
+    <value>opciones</value>
+    <comment>Picture panel</comment>
   </data>
   <data name="unable-open-dds" xml:space="preserve">
-    <value>Невозможно открыть DDS или TGA файл</value>
+    <value>No se puede abrir el archivo DDS o TGA</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-open-svg" xml:space="preserve">
-    <value>Невозможно открыть SVG файл</value>
+    <value>No se puede abrir el archivo SVG</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-open-file" xml:space="preserve">
-    <value>Невозможно открыть этот файл</value>
+    <value>No se puede abrir este archivo</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">
-    <value>Не удалось запустить стороннее приложение</value>
+    <value>No se puede ejecutar la aplicación externa</value>
     <comment>Message box</comment>
   </data>
   <data name="unsaved-data-lost" xml:space="preserve">
-    <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите открыть новое изображение?</value>
+    <value>Se perderán todos los datos no guardados. ¿Estás seguro de que quieres abrir una nueva imagen?</value>
     <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
-    <value>Обновление невозможно</value>
+    <value>Actualización fallida</value>
     <comment>Message box</comment>
   </data>
   <data name="updates" xml:space="preserve">
-    <value>Обновления</value>
+    <value>Actualizaciones</value>
     <comment>Settings</comment>
   </data>
   <data name="updator" xml:space="preserve">
-    <value>Менеджер обновлений</value>
+    <value>Gestor de actualizaciones</value>
     <comment>Message box</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
-    <value>Использовать системную настройку</value>
+    <value>Usar configuración del sistema</value>
     <comment>Settings</comment>
   </data>
   <data name="warning" xml:space="preserve">
-    <value>Внимание</value>
+    <value>Advertencia</value>
     <comment>Message box</comment>
   </data>
-  <data name="wheel-to-zoom" xml:space="preserve">
-    <value>Масштабировать колёсиком мыши (Без {0})</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="width" xml:space="preserve">
-    <value>Ширина</value>
-    <comment>SVG options</comment>
-  </data>
   <data name="zoom" xml:space="preserve">
-    <value>Масштаб</value>
+    <value>Zoom</value>
     <comment>Status bar</comment>
   </data>
   <data name="zoom-in" xml:space="preserve">
-    <value>Увеличить масштаб</value>
+    <value>Enfocar Zoom</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-out" xml:space="preserve">
-    <value>Уменьшить масштаб</value>
+    <value>Desnfocar Zoom</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-to-actual-size" xml:space="preserve">
-    <value>Фактический масштаб</value>
+    <value>Zoom al tamaño real</value>
     <comment>Menu</comment>
   </data>
 </root>

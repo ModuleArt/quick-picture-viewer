@@ -270,9 +270,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(9, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(80, 19);
+			this.titleLabel.Size = new System.Drawing.Size(88, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "svg options";
+			this.titleLabel.Text = "SvgOpsForm";
 			// 
 			// logoPictureBox
 			// 
@@ -357,7 +357,7 @@
 			this.Padding = new System.Windows.Forms.Padding(10);
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "SVG options";
+			this.Text = "SvgOpsForm";
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.SvgOpsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SvgOpsForm_KeyDown);

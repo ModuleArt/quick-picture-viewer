@@ -466,9 +466,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(10, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(73, 19);
+			this.titleLabel.Size = new System.Drawing.Size(65, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "image info";
+			this.titleLabel.Text = "InfoForm";
 			// 
 			// closeBtn
 			// 
@@ -532,7 +532,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Image info";
+			this.Text = "InfoForm";
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.InfoForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InfoForm_KeyDown);

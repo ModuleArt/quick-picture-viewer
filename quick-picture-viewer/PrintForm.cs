@@ -188,7 +188,7 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			this.Text = owner.resMan.GetString("print-conf");
-			setMarginsButton.Text = owner.resMan.GetString("set-margins");
+			setMarginsButton.Text = owner.resMan.GetString("set-margins-btn");
 			okButton.Text = owner.resMan.GetString("print");
 			leftLabel.Text = owner.resMan.GetString("left") + ":";
 			rightLabel.Text = owner.resMan.GetString("right") + ":";

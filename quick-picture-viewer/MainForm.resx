@@ -506,6 +506,9 @@
   <data name="zoomTextBox.Text" xml:space="preserve">
     <value>Auto</value>
   </data>
+  <data name="zoomTextBox.TextBoxTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="zoomTextBox.ToolTipText" xml:space="preserve">
     <value>Zoom</value>
   </data>

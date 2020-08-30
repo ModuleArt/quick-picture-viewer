@@ -22,9 +22,9 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			(new DropShadow()).ApplyShadows(this);
-			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel });
+			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel, productLabel, versionLabel });
 
-			applyDarkMode(darkMode);
+			SetDarkMode(darkMode);
 
 			string fullVer = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			int lastDotIndex = fullVer.LastIndexOf('.');
@@ -46,18 +46,19 @@ namespace quick_picture_viewer
 
 			updatesLink.LinkColor = ThemeManager.AccentColor;
 			websiteLink.LinkColor = ThemeManager.AccentColor;
-			projectLink.LinkColor = ThemeManager.AccentColor;
-			issuesLink.LinkColor = ThemeManager.AccentColor;
+			githubLink.LinkColor = ThemeManager.AccentColor;
 			makeDefaultLink.LinkColor = ThemeManager.AccentColor;
 			licenseLink.LinkColor = ThemeManager.AccentColor;
 		}
 
-		private void applyDarkMode(bool dark)
+		private void SetDarkMode(bool dark)
 		{
 			if (dark)
 			{
 				this.BackColor = ThemeManager.DarkBackColor;
 				this.ForeColor = Color.White;
+				descTextBox.BackColor = ThemeManager.DarkBackColor;
+				descTextBox.ForeColor = Color.White;
 			}
 
 			closeBtn.SetDarkMode(dark);
@@ -68,14 +69,9 @@ namespace quick_picture_viewer
 			Process.Start("https://moduleart.github.io");
 		}
 
-		private void projectLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/");
-		}
-
 		private void issuesLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/issues/");
+			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/");
 		}
 
 		private void updatesLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -103,12 +99,6 @@ namespace quick_picture_viewer
 			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/blob/master/LICENSE.md/");
 		}
 
-		[DllImport("User32.dll", CharSet = CharSet.Auto)]
-		public static extern int ReleaseDC(IntPtr hWnd, IntPtr hDC);
-
-		[DllImport("User32.dll")]
-		private static extern IntPtr GetWindowDC(IntPtr hWnd);
-
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
@@ -124,6 +114,12 @@ namespace quick_picture_viewer
 		{
 			this.Text = owner.resMan.GetString("about");
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			updatesLink.Text = owner.resMan.GetString("check-for-updates");
+			descTextBox.Text = owner.resMan.GetString("app-description");
+			makeDefaultLink.Text = owner.resMan.GetString("set-as-default-image-viewer");
+			infoTooltip.SetToolTip(makeDefaultLink, owner.resMan.GetString("open-windows-settings"));
+			licenseLabel.Text = owner.resMan.GetString("license") + ":";
+			companyLabel.Text = owner.resMan.GetString("created-by");
 		}
 	}
 }

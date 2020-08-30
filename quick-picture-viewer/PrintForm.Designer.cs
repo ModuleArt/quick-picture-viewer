@@ -288,9 +288,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(9, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(123, 19);
+			this.titleLabel.Size = new System.Drawing.Size(70, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "print configuration";
+			this.titleLabel.Text = "PrintForm";
 			// 
 			// PrintForm
 			// 
@@ -324,7 +324,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Print preview";
+			this.Text = "PrintForm";
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.PrintForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrintForm_KeyDown);

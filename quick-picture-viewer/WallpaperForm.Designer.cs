@@ -102,9 +102,9 @@
 			this.titleLabel.Location = new System.Drawing.Point(10, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(174, 19);
+			this.titleLabel.Size = new System.Drawing.Size(101, 19);
 			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "set as desktop background";
+			this.titleLabel.Text = "WallpaperForm";
 			// 
 			// fitLabel
 			// 
@@ -122,13 +122,6 @@
 			this.fitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.fitComboBox.FormattingEnabled = true;
 			this.fitComboBox.ItemHeight = 26;
-			this.fitComboBox.Items.AddRange(new object[] {
-            "fill",
-            "fit",
-            "stretch",
-            "tile",
-            "center",
-            "span"});
 			this.fitComboBox.Location = new System.Drawing.Point(10, 169);
 			this.fitComboBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fitComboBox.Name = "fitComboBox";
@@ -154,7 +147,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Set as desktop background";
+			this.Text = "WallpaperForm";
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.WallpaperForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WallpaperForm_KeyDown);
