@@ -54,10 +54,10 @@
 
 <h2 align="center">Other great apps</h2>
 
-|  | App | Description |
-| :---: | :---: | :---: |
-| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). |
-| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). |
+|  | App | Description | Last commit |
+| :---: | :---: | :---: | :---: |
+| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-screen-recorder?label=%20) |
+| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker?label=%20) |
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
