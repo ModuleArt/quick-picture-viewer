@@ -27,8 +27,8 @@
 
 | Windows | Version | Codename | Release date | Size | Downloads | Link |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.0">v2.1.0</a> | Modernity | Aug 30, 2020 | 3.5 MB | ![GitHub Releases (by Asset)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.1.0/QuickPictureViewer-Setup.exe) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.0/QuickPictureViewer-Setup.exe">Download</a> |
-| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5</a> | Classic | May 6, 2020 | 2.5 MB | ![GitHub Releases (by Asset)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v1.12.5/QuickPictureViewer-Setup.msi) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a> |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.0">v2.1.0</a> | Modernity | Aug 30, 2020 | 3.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.1.0/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.0/QuickPictureViewer-Setup.exe">Download</a> |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5</a> | Classic | May 6, 2020 | 2.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v1.12.5/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a> |
 
 <p align="center">
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">.Net 4.8</a> / <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
