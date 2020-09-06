@@ -152,7 +152,7 @@ namespace quick_picture_viewer
 			saveAsButton.Text = resMan.GetString("save-as") + " | Ctrl+S";
 			pasteButton.Text = resMan.GetString("paste-image") + " | Ctrl+V";
 			screenshotButton.Text = resMan.GetString("capture-screen") + " | F12";
-			checkboardButton.Text = resMan.GetString("checkboard-background") + " | Ctrl+Shift+C";
+			checkboardButton.Text = resMan.GetString("checkboard-background") + " | Ctrl+B";
 			fullscreenButton.Text = resMan.GetString("fullscreen") + " | F";
 			miniViewButton.Text = resMan.GetString("picture-in-picture") + " | Ctrl+Shift+P";
 			autoZoomButton.Text = resMan.GetString("auto-zoom") + " | Ctrl+A";
@@ -165,6 +165,7 @@ namespace quick_picture_viewer
 			nextButton.Text = resMan.GetString("next-image") + " | " + resMan.GetString("right-arrow");
 
 			hasChangesLabel.Text = resMan.GetString("not-saved");
+			zoomLabel.Text = resMan.GetString("zoom") + ": " + resMan.GetString("auto");
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -249,7 +250,7 @@ namespace quick_picture_viewer
 
 			if (Properties.Settings.Default.BackColor.Length > 0)
 			{
-				pictureBox.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
+				picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
 			}
 		}
 
@@ -1104,7 +1105,15 @@ namespace quick_picture_viewer
 
 				picturePanel.Top = toolStrip1.Height;
 				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
-				picturePanel.BackColor = Color.Transparent;
+
+				if (Properties.Settings.Default.BackColor.Length > 0)
+				{
+					picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
+				}
+				else
+				{
+					picturePanel.BackColor = Color.Transparent;
+				}
 
 				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 27;
 
@@ -1966,7 +1975,7 @@ namespace quick_picture_viewer
 				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
 				Clipboard.Clear();
 				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
-				showSuggestion("");
+				showSuggestion(resMan.GetString("file-copied-to-clipboard"));
 			}
 			catch
 			{
@@ -2051,7 +2060,7 @@ namespace quick_picture_viewer
 
 		private void backClearBtn_Click(object sender, EventArgs e)
 		{
-			pictureBox.BackColor = Color.Transparent;
+			picturePanel.BackColor = Color.Transparent;
 			Properties.Settings.Default.BackColor = "";
 			Properties.Settings.Default.Save();
 		}
@@ -2060,7 +2069,7 @@ namespace quick_picture_viewer
 		{
 			if (colorDialog1.ShowDialog() == DialogResult.OK)
 			{
-				pictureBox.BackColor = colorDialog1.Color;
+				picturePanel.BackColor = colorDialog1.Color;
 				Properties.Settings.Default.BackColor = colorDialog1.Color.ToArgb().ToString();
 				Properties.Settings.Default.Save();
 			}

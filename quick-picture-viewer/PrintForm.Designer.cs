@@ -30,7 +30,7 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintForm));
 			this.okButton = new System.Windows.Forms.Button();
-			this.setMarginsButton = new QuickLibrary.QlibTextButton();
+			this.setMarginsButton = new System.Windows.Forms.Button();
 			this.bottomLabel = new System.Windows.Forms.Label();
 			this.rightLabel = new System.Windows.Forms.Label();
 			this.topLabel = new System.Windows.Forms.Label();
@@ -352,7 +352,7 @@
 		private System.Windows.Forms.Label bottomLabel;
 		private System.Windows.Forms.Label rightLabel;
 		private System.Windows.Forms.Label topLabel;
-		private QuickLibrary.QlibTextButton setMarginsButton;
+		private System.Windows.Forms.Button setMarginsButton;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;

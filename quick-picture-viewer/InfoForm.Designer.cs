@@ -80,7 +80,7 @@
 			// 
 			// extensionTextBox
 			// 
-			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.extensionTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.extensionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.extensionTextBox.Location = new System.Drawing.Point(304, 168);
 			this.extensionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -104,7 +104,7 @@
 			// copyPathButton
 			// 
 			this.copyPathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyPathButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyPathButton.BackColor = System.Drawing.SystemColors.Control;
 			this.copyPathButton.FlatAppearance.BorderSize = 0;
 			this.copyPathButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyPathButton.Image = ((System.Drawing.Image)(resources.GetObject("copyPathButton.Image")));
@@ -120,7 +120,7 @@
 			// copyFolderButton
 			// 
 			this.copyFolderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyFolderButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyFolderButton.BackColor = System.Drawing.SystemColors.Control;
 			this.copyFolderButton.FlatAppearance.BorderSize = 0;
 			this.copyFolderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("copyFolderButton.Image")));
@@ -136,7 +136,7 @@
 			// copyNameButton
 			// 
 			this.copyNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyNameButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyNameButton.BackColor = System.Drawing.SystemColors.Control;
 			this.copyNameButton.FlatAppearance.BorderSize = 0;
 			this.copyNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.copyNameButton.Image = ((System.Drawing.Image)(resources.GetObject("copyNameButton.Image")));
@@ -151,7 +151,7 @@
 			// 
 			// compressionTextBox
 			// 
-			this.compressionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.compressionTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.compressionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.compressionTextBox.Location = new System.Drawing.Point(122, 168);
 			this.compressionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -173,7 +173,7 @@
 			// 
 			// fullPathTextBox
 			// 
-			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.fullPathTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fullPathTextBox.Location = new System.Drawing.Point(122, 126);
 			this.fullPathTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -196,7 +196,7 @@
 			// 
 			// folderTextBox
 			// 
-			this.folderTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.folderTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.folderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.folderTextBox.Location = new System.Drawing.Point(122, 84);
 			this.folderTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -209,7 +209,7 @@
 			// 
 			// fileNameTextBox
 			// 
-			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.fileNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fileNameTextBox.Location = new System.Drawing.Point(122, 42);
 			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -232,7 +232,7 @@
 			// 
 			// sizeTextBox
 			// 
-			this.sizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.sizeTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.sizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.sizeTextBox.Location = new System.Drawing.Point(521, 42);
 			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -254,7 +254,7 @@
 			// 
 			// megapixelsTextBox
 			// 
-			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.megapixelsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.megapixelsTextBox.Location = new System.Drawing.Point(521, 84);
 			this.megapixelsTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -276,7 +276,7 @@
 			// 
 			// resolutionTextBox
 			// 
-			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.resolutionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.resolutionTextBox.Location = new System.Drawing.Point(521, 126);
 			this.resolutionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -298,7 +298,7 @@
 			// 
 			// inchesTextBox
 			// 
-			this.inchesTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.inchesTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.inchesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.inchesTextBox.Location = new System.Drawing.Point(521, 168);
 			this.inchesTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -320,7 +320,7 @@
 			// 
 			// cmTextBox
 			// 
-			this.cmTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cmTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.cmTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.cmTextBox.Location = new System.Drawing.Point(521, 210);
 			this.cmTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -352,7 +352,7 @@
 			// 
 			// ratioTextBox
 			// 
-			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.ratioTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.ratioTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.ratioTextBox.Location = new System.Drawing.Point(521, 294);
 			this.ratioTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -364,7 +364,7 @@
 			// 
 			// diskSizeTextBox
 			// 
-			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.diskSizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.diskSizeTextBox.Location = new System.Drawing.Point(521, 252);
 			this.diskSizeTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -397,7 +397,7 @@
 			// 
 			// modifiedTextBox
 			// 
-			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.modifiedTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.modifiedTextBox.Location = new System.Drawing.Point(122, 252);
 			this.modifiedTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
@@ -420,7 +420,7 @@
 			// 
 			// createdTextBox
 			// 
-			this.createdTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.createdTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.createdTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.createdTextBox.Location = new System.Drawing.Point(122, 210);
 			this.createdTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -433,7 +433,7 @@
 			// 
 			// propertiesButton
 			// 
-			this.propertiesButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.propertiesButton.BackColor = System.Drawing.SystemColors.Control;
 			this.propertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.propertiesButton.FlatAppearance.BorderSize = 0;
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -489,6 +489,7 @@
 			// InfoForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(730, 336);
 			this.Controls.Add(this.modifiedLabel);
 			this.Controls.Add(this.copyPathButton);

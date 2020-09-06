@@ -202,7 +202,7 @@
 			// 
 			// descTextBox
 			// 
-			this.descTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.descTextBox.BackColor = System.Drawing.Color.White;
 			this.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.descTextBox.Location = new System.Drawing.Point(10, 229);
 			this.descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -215,6 +215,7 @@
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(320, 460);
 			this.Controls.Add(this.descTextBox);
 			this.Controls.Add(this.githubLink);

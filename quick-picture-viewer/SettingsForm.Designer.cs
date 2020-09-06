@@ -80,7 +80,6 @@
 			this.settingsTabs.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
 			this.settingsTabs.AllowDrop = true;
 			this.settingsTabs.BackTabColor = System.Drawing.Color.White;
-			this.settingsTabs.BorderColor = System.Drawing.SystemColors.ControlLight;
 			this.settingsTabs.ClosingButtonColor = System.Drawing.Color.WhiteSmoke;
 			this.settingsTabs.ClosingMessage = null;
 			this.settingsTabs.Controls.Add(this.themePage);
@@ -91,7 +90,7 @@
 			this.settingsTabs.Controls.Add(this.externalPage);
 			this.settingsTabs.Controls.Add(this.langPage);
 			this.settingsTabs.EnableDragDrop = false;
-			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.ControlLight;
+			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.Control;
 			this.settingsTabs.HorizontalLineColor = System.Drawing.Color.Transparent;
 			this.settingsTabs.ItemSize = new System.Drawing.Size(240, 28);
 			this.settingsTabs.Location = new System.Drawing.Point(10, 42);
@@ -100,10 +99,9 @@
 			this.settingsTabs.Name = "settingsTabs";
 			this.settingsTabs.Padding = new System.Drawing.Point(0, 0);
 			this.settingsTabs.SelectedIndex = 0;
-			this.settingsTabs.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.settingsTabs.ShowClosingButton = false;
 			this.settingsTabs.ShowClosingMessage = false;
-			this.settingsTabs.Size = new System.Drawing.Size(320, 216);
+			this.settingsTabs.Size = new System.Drawing.Size(340, 216);
 			this.settingsTabs.TabIndex = 1;
 			this.settingsTabs.TextColor = System.Drawing.Color.Black;
 			// 
@@ -118,7 +116,7 @@
 			this.themePage.Margin = new System.Windows.Forms.Padding(0);
 			this.themePage.Name = "themePage";
 			this.themePage.Padding = new System.Windows.Forms.Padding(10);
-			this.themePage.Size = new System.Drawing.Size(312, 152);
+			this.themePage.Size = new System.Drawing.Size(332, 152);
 			this.themePage.TabIndex = 0;
 			this.themePage.Text = "theme";
 			this.themePage.ToolTipText = "App theming";
@@ -139,7 +137,7 @@
 			this.systemThemeRadio.Location = new System.Drawing.Point(10, 10);
 			this.systemThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.systemThemeRadio.Name = "systemThemeRadio";
-			this.systemThemeRadio.Size = new System.Drawing.Size(292, 32);
+			this.systemThemeRadio.Size = new System.Drawing.Size(312, 32);
 			this.systemThemeRadio.TabIndex = 0;
 			this.systemThemeRadio.TabStop = true;
 			this.systemThemeRadio.Text = "system";
@@ -151,7 +149,7 @@
 			this.darkThemeRadio.Location = new System.Drawing.Point(10, 74);
 			this.darkThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.darkThemeRadio.Name = "darkThemeRadio";
-			this.darkThemeRadio.Size = new System.Drawing.Size(292, 32);
+			this.darkThemeRadio.Size = new System.Drawing.Size(312, 32);
 			this.darkThemeRadio.TabIndex = 2;
 			this.darkThemeRadio.Text = "dark";
 			this.darkThemeRadio.UseVisualStyleBackColor = true;
@@ -162,7 +160,7 @@
 			this.lightThemeRadio.Location = new System.Drawing.Point(10, 42);
 			this.lightThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.lightThemeRadio.Name = "lightThemeRadio";
-			this.lightThemeRadio.Size = new System.Drawing.Size(292, 32);
+			this.lightThemeRadio.Size = new System.Drawing.Size(312, 32);
 			this.lightThemeRadio.TabIndex = 1;
 			this.lightThemeRadio.Text = "light";
 			this.lightThemeRadio.UseVisualStyleBackColor = true;
@@ -176,7 +174,7 @@
 			this.updatesPage.Margin = new System.Windows.Forms.Padding(0);
 			this.updatesPage.Name = "updatesPage";
 			this.updatesPage.Padding = new System.Windows.Forms.Padding(10);
-			this.updatesPage.Size = new System.Drawing.Size(312, 152);
+			this.updatesPage.Size = new System.Drawing.Size(332, 152);
 			this.updatesPage.TabIndex = 1;
 			this.updatesPage.Text = "updates";
 			this.updatesPage.ToolTipText = "Update checker";
@@ -186,7 +184,7 @@
 			this.updatesCheckBox.Location = new System.Drawing.Point(10, 10);
 			this.updatesCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.updatesCheckBox.Name = "updatesCheckBox";
-			this.updatesCheckBox.Size = new System.Drawing.Size(292, 32);
+			this.updatesCheckBox.Size = new System.Drawing.Size(312, 32);
 			this.updatesCheckBox.TabIndex = 0;
 			this.updatesCheckBox.Text = "check for updates on startup";
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
@@ -201,7 +199,7 @@
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
-			this.mousePage.Size = new System.Drawing.Size(312, 152);
+			this.mousePage.Size = new System.Drawing.Size(332, 152);
 			this.mousePage.TabIndex = 2;
 			this.mousePage.Text = "mouse";
 			this.mousePage.ToolTipText = "Cursor options";
@@ -211,7 +209,7 @@
 			this.zoomWheelCheckBox.Location = new System.Drawing.Point(10, 42);
 			this.zoomWheelCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.zoomWheelCheckBox.Name = "zoomWheelCheckBox";
-			this.zoomWheelCheckBox.Size = new System.Drawing.Size(292, 32);
+			this.zoomWheelCheckBox.Size = new System.Drawing.Size(312, 32);
 			this.zoomWheelCheckBox.TabIndex = 2;
 			this.zoomWheelCheckBox.Text = "mouse wheel to zoom";
 			this.zoomWheelCheckBox.UseVisualStyleBackColor = true;
@@ -222,7 +220,7 @@
 			this.fullscrCursorCheckBox.Location = new System.Drawing.Point(10, 10);
 			this.fullscrCursorCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fullscrCursorCheckBox.Name = "fullscrCursorCheckBox";
-			this.fullscrCursorCheckBox.Size = new System.Drawing.Size(292, 32);
+			this.fullscrCursorCheckBox.Size = new System.Drawing.Size(312, 32);
 			this.fullscrCursorCheckBox.TabIndex = 1;
 			this.fullscrCursorCheckBox.Text = "show cursor in fullscreen";
 			this.fullscrCursorCheckBox.UseVisualStyleBackColor = true;
@@ -239,7 +237,7 @@
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
-			this.slideshowPage.Size = new System.Drawing.Size(312, 152);
+			this.slideshowPage.Size = new System.Drawing.Size(332, 152);
 			this.slideshowPage.TabIndex = 5;
 			this.slideshowPage.Text = "slideshow";
 			// 
@@ -294,7 +292,7 @@
 			this.slideshowCounterCheckBox.Location = new System.Drawing.Point(10, 74);
 			this.slideshowCounterCheckBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.slideshowCounterCheckBox.Name = "slideshowCounterCheckBox";
-			this.slideshowCounterCheckBox.Size = new System.Drawing.Size(292, 32);
+			this.slideshowCounterCheckBox.Size = new System.Drawing.Size(312, 32);
 			this.slideshowCounterCheckBox.TabIndex = 1;
 			this.slideshowCounterCheckBox.Text = "show slideshow counter";
 			this.slideshowCounterCheckBox.UseVisualStyleBackColor = true;
@@ -310,7 +308,7 @@
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
-			this.startupPage.Size = new System.Drawing.Size(312, 152);
+			this.startupPage.Size = new System.Drawing.Size(332, 152);
 			this.startupPage.TabIndex = 3;
 			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
@@ -331,7 +329,7 @@
 			this.startupNothingRadio.Location = new System.Drawing.Point(10, 39);
 			this.startupNothingRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.startupNothingRadio.Name = "startupNothingRadio";
-			this.startupNothingRadio.Size = new System.Drawing.Size(292, 32);
+			this.startupNothingRadio.Size = new System.Drawing.Size(312, 32);
 			this.startupNothingRadio.TabIndex = 39;
 			this.startupNothingRadio.TabStop = true;
 			this.startupNothingRadio.Text = "nothing";
@@ -343,7 +341,7 @@
 			this.startupPasteRadio.Location = new System.Drawing.Point(10, 71);
 			this.startupPasteRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPasteRadio.Name = "startupPasteRadio";
-			this.startupPasteRadio.Size = new System.Drawing.Size(292, 32);
+			this.startupPasteRadio.Size = new System.Drawing.Size(312, 32);
 			this.startupPasteRadio.TabIndex = 40;
 			this.startupPasteRadio.Text = "paste";
 			this.startupPasteRadio.UseVisualStyleBackColor = true;
@@ -359,7 +357,7 @@
 			this.externalPage.Margin = new System.Windows.Forms.Padding(0);
 			this.externalPage.Name = "externalPage";
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
-			this.externalPage.Size = new System.Drawing.Size(312, 152);
+			this.externalPage.Size = new System.Drawing.Size(332, 152);
 			this.externalPage.TabIndex = 4;
 			this.externalPage.Text = "external";
 			// 
@@ -373,7 +371,7 @@
 			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.browseBtn.Image = ((System.Drawing.Image)(resources.GetObject("browseBtn.Image")));
 			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.browseBtn.Location = new System.Drawing.Point(182, 81);
+			this.browseBtn.Location = new System.Drawing.Point(202, 81);
 			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.browseBtn.Name = "browseBtn";
 			this.browseBtn.Size = new System.Drawing.Size(120, 32);
@@ -392,7 +390,7 @@
 			this.favExtTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.favExtTextBox.Name = "favExtTextBox";
 			this.favExtTextBox.ReadOnly = false;
-			this.favExtTextBox.Size = new System.Drawing.Size(292, 32);
+			this.favExtTextBox.Size = new System.Drawing.Size(312, 32);
 			this.favExtTextBox.TabIndex = 1;
 			this.favExtTextBox.WordWrap = true;
 			this.favExtTextBox.TextChanged += new System.EventHandler(this.favExtTextBox_TextChanged);
@@ -418,7 +416,7 @@
 			this.langPage.Margin = new System.Windows.Forms.Padding(0);
 			this.langPage.Name = "langPage";
 			this.langPage.Padding = new System.Windows.Forms.Padding(10);
-			this.langPage.Size = new System.Drawing.Size(312, 152);
+			this.langPage.Size = new System.Drawing.Size(332, 152);
 			this.langPage.TabIndex = 6;
 			this.langPage.Text = "localization";
 			// 
@@ -467,7 +465,7 @@
 			this.langComboBox.Location = new System.Drawing.Point(10, 39);
 			this.langComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.langComboBox.Name = "langComboBox";
-			this.langComboBox.Size = new System.Drawing.Size(292, 32);
+			this.langComboBox.Size = new System.Drawing.Size(312, 32);
 			this.langComboBox.TabIndex = 0;
 			this.langComboBox.SelectedIndexChanged += new System.EventHandler(this.langComboBox_SelectedIndexChanged);
 			// 
@@ -478,7 +476,7 @@
 			this.titlePanel.Location = new System.Drawing.Point(0, 0);
 			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(340, 32);
+			this.titlePanel.Size = new System.Drawing.Size(360, 32);
 			this.titlePanel.TabIndex = 0;
 			// 
 			// closeBtn
@@ -489,7 +487,7 @@
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(308, 0);
+			this.closeBtn.Location = new System.Drawing.Point(328, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
@@ -515,7 +513,8 @@
 			// SettingsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(340, 268);
+			this.BackColor = System.Drawing.Color.White;
+			this.ClientSize = new System.Drawing.Size(360, 268);
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.settingsTabs);
 			this.Draggable = true;

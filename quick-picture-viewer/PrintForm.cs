@@ -68,12 +68,13 @@ namespace quick_picture_viewer
 
 				okButton.BackColor = ThemeManager.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_print;
+
+				setMarginsButton.BackColor = ThemeManager.DarkSecondColor;
 			}
 
 			marginsCheckBox.SetDarkMode(dark);
 			horizontalCheckBox.SetDarkMode(dark);
 			centerCheckbox.SetDarkMode(dark);
-			setMarginsButton.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 			rightMarginTextBox.SetDarkMode(dark);
 			leftMarginTextBox.SetDarkMode(dark);

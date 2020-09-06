@@ -131,7 +131,6 @@ namespace quick_picture_viewer
 				this.ForeColor = Color.White;
 
 				settingsTabs.BackTabColor = ThemeManager.DarkBackColor;
-				settingsTabs.BorderColor = ThemeManager.DarkSecondColor;
 				settingsTabs.HeaderColor = ThemeManager.DarkSecondColor;
 				settingsTabs.TextColor = Color.White;
 				settingsTabs.HorizontalLineColor = Color.Transparent;
