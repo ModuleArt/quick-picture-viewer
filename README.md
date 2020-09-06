@@ -24,9 +24,13 @@
 </p>
 
 <h2 align="center">Install</h2>
+
+| Windows | Version | Codename | Release date | Size | Downloads | Link |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.0">v2.1.0</a> | Modernity | Aug 30, 2020 | 3.5 MB | ![GitHub Releases (by Asset)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.1.0/QuickPictureViewer-Setup.exe) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.0/QuickPictureViewer-Setup.exe">Download</a> |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5</a> | Classic | May 6, 2020 | 2.5 MB | ![GitHub Releases (by Asset)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v1.12.5/QuickPictureViewer-Setup.msi) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a> |
+
 <p align="center">
-  <b>Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.0">v2.1.0 "Modernity"</a> (3.5 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.0/QuickPictureViewer-Setup.exe">Download</a></b><br>
-  <b>Windows 7, 8.1, 10  | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5 "Classic"</a> (2.5 MB) |  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download</a></b><br><br>
   Uses <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">.Net 4.8</a> / <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">.Net 4.7.2</a><br><br>
   <img src="/docs/screenshots/main.png">
 </p>
@@ -52,8 +56,8 @@
 
 |  | App | Description |
 | :---: | :---: | :---: |
-| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec48.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). |
-| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker48.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). |
+| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). |
+| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). |
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
