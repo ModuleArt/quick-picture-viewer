@@ -308,9 +308,9 @@
 			// 
 			// toolStripSeparator4
 			// 
-			resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
-			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
 			// 
 			// infoButton
 			// 
@@ -354,9 +354,9 @@
 			// 
 			// toolStripSeparator1
 			// 
-			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
 			// 
 			// autoZoomButton
 			// 
@@ -403,9 +403,9 @@
 			// 
 			// toolStripSeparator2
 			// 
-			resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
 			// 
 			// editButton
 			// 
@@ -523,9 +523,9 @@
 			// 
 			// toolStripSeparator3
 			// 
-			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
 			// 
 			// checkboardButton
 			// 
@@ -553,9 +553,9 @@
 			// 
 			// toolStripSeparator5
 			// 
-			resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
-			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
 			// 
 			// moreButton
 			// 
@@ -581,24 +581,28 @@
 			// 
 			// reloadButton
 			// 
+			this.reloadButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.reloadButton, "reloadButton");
 			this.reloadButton.Name = "reloadButton";
 			this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
 			// 
 			// deleteBtn
 			// 
+			this.deleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.deleteBtn, "deleteBtn");
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
 			// printButton
 			// 
+			this.printButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.printButton, "printButton");
 			this.printButton.Name = "printButton";
 			this.printButton.Click += new System.EventHandler(this.printButton_Click);
 			// 
 			// setAsDesktopButton
 			// 
+			this.setAsDesktopButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.setAsDesktopButton, "setAsDesktopButton");
 			this.setAsDesktopButton.Name = "setAsDesktopButton";
 			this.setAsDesktopButton.Click += new System.EventHandler(this.setAsDesktopButton_Click);

@@ -1,0 +1,59 @@
+{
+    "name": "resizer",
+    "version": "1.0.0",
+    "title": "Resizer",
+    "description": {
+        "en": "Resize or crop image",
+        "ru": "Изменить размер или обрезать изображение"
+    },
+    "link": "https://github.com/ModuleArt/quick-picture-viewer/tree/master/plugins",
+    "author": {
+        "name": "Beelink",
+        "link": "https://github.com/Beelink"
+    },
+    "targets": [
+        {
+            "name": "quick-picture-viewer",
+            "min-version": "2.2.0",
+            "max-version": "2.2.0"
+        }
+    ],
+    "functions": [
+        {
+            "function": "resize",
+            "title": {
+                "en": "Resize...",
+                "ru": "Изменить размер..."
+            },
+            "hotkey": {
+                "ctrl": true,
+                "shift": false,
+                "key": "R"
+            },
+            "args": {
+                "show-dialog": true,
+                "image-required": true,
+                "return-image": true
+            },
+            "menu": "edit"
+        },
+        {
+            "function": "crop",
+            "title": {
+                "en": "Crop / Canvas size...",
+                "ru": "Обрезать / Размер холста..."
+            },
+            "hotkey": {
+                "ctrl": true,
+                "shift": true,
+                "key": "R"
+            },
+            "args": {
+                "show-dialog": true,
+                "image-required": true,
+                "return-image": true
+            },
+            "menu": "edit"
+        }
+    ]
+}

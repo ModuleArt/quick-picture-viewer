@@ -27,7 +27,7 @@
 
 | Windows | Version | Codename | Release date | .Net | Size | Downloads | Link |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.0">v2.1.0</a> | Modernity | Aug 30, 2020 | <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">4.7.2</a> | 3.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.1.0/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.0/QuickPictureViewer-Setup.exe"><b>DOWNLOAD (.EXE)</b></a> |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.0">v2.1.0</a> | Modernity | Aug 30, 2020 | <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">4.7.2</a> | 3.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.1.0/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.0/QuickPictureViewer-Setup.exe"><b>DOWNLOAD (.exe)</b></a> |
 | 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v1.12.5">v1.12.5</a> | Classic | May 6, 2020 | <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">4.8</a> | 2.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v1.12.5/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v1.12.5/QuickPictureViewer-Setup.msi">Download (.msi)</a> |
 
 <p align="center">	
@@ -53,7 +53,7 @@
 
 <h2 align="center">Other great apps</h2>
 
-|  | App | Description | Last commit |
+| Icon | App name | Description | Last commit |
 | :---: | :---: | :---: | :---: |
 | <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-screen-recorder?label=%20) |
 | <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker?label=%20) |

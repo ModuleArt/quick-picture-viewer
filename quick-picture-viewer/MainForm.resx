@@ -248,6 +248,56 @@
   <data name="externalBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="externalRunBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="externalRunBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIlJREFUOE/N
+        jkEOQDAURHsCe9ewZekMVtYcxtUkrJxAXEEkEmZKE361Eha85KV+55tU/Y4KjnARTjCGt3Ax2D5PsGSA
+        iZ48cPEK3kewhykvXPgKjHylE1fBEe/O64LXsN1IWpjBRk92biGDEnaw0JPnR4NsD+G8n0TmFjJ8/AKz
+        WMN8P4nMP0epFfbUMm24gJlIAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="externalRunBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+E</value>
+  </data>
+  <data name="externalRunBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 24</value>
+  </data>
+  <data name="externalRunBtn.Text" xml:space="preserve">
+    <value>open with default</value>
+  </data>
+  <data name="externalFavoriteBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="externalFavoriteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+O</value>
+  </data>
+  <data name="externalFavoriteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 24</value>
+  </data>
+  <data name="externalFavoriteBtn.Text" xml:space="preserve">
+    <value>open with custom</value>
+  </data>
+  <data name="externalChooseBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="externalChooseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACpJREFUOE9j
+        GFTgHRD/h9JkAZBmZBoEQGxcGANQ7AKKwWgYjIbBQAEGBgCbfCwIqrtvVwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="externalChooseBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+E</value>
+  </data>
+  <data name="externalChooseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 24</value>
+  </data>
+  <data name="externalChooseBtn.Text" xml:space="preserve">
+    <value>choose app</value>
+  </data>
   <data name="externalBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -269,11 +319,8 @@
   <data name="externalBtn.Text" xml:space="preserve">
     <value>open with</value>
   </data>
-  <data name="toolStripSeparator4.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 16</value>
+    <value>6, 22</value>
   </data>
   <data name="infoButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -391,11 +438,8 @@
   <data name="slideshowButton.Text" xml:space="preserve">
     <value>slideshow</value>
   </data>
-  <data name="toolStripSeparator1.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 16</value>
+    <value>6, 22</value>
   </data>
   <data name="autoZoomButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -486,13 +530,183 @@
   <data name="zoomInButton.Text" xml:space="preserve">
     <value>zoom in</value>
   </data>
-  <data name="toolStripSeparator2.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 16</value>
+    <value>6, 22</value>
   </data>
   <data name="editButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="flipHorizontalButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="flipHorizontalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAHNJREFUOE/NzzEOQEAURdGJhiUplBorsAzLU2gVeq2ClXCF1wzDjEi4yUk0/8F8
+        UYp6ewwrR4t555196D3gOhRnd4dyyPdQ3q9Ah7O3nXGmoR4lIthdDqgMDUZUiKG8BpSGJqxDCYIGlH5t
+        wKMBpS/6RcYsknw8utUbuVkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="flipHorizontalButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+H</value>
+  </data>
+  <data name="flipHorizontalButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="flipHorizontalButton.Text" xml:space="preserve">
+    <value>flip horizontal</value>
+  </data>
+  <data name="flipVerticalButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="flipVerticalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAIhJREFUOE/NktEJhDAQRAOWpaB1iFiqlqFnM3fzjILEzel+CA48dhWZmQTDk6q2
+        WW7TrTGZLjXiG9d18uwSqUcDVwvOvIijAdy+C9JakRrcalGLSRQiNYDLuxhEF1fT4G8L0mdBOrIMINuC
+        9D6uq3IGZgvSP2JPRzkDOLUg3foQWe9d/8WrFcIP3xE8L2HmKDkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="flipVerticalButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+H</value>
+  </data>
+  <data name="flipVerticalButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="flipVerticalButton.Text" xml:space="preserve">
+    <value>flip vertical</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="rotateRightButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rotateRightButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAL1JREFUOE/N0r8KglAYh2GX/hENrUXQVbQVQfcSQUPU0GV0I9HQ0NTkFFQEXUGN
+        TQ3R0Fbvz3MG7aiIky88eERQj35eIStjghOeeMDHGCWorj06tXHBGn00rRH20LUebnCq4opZcBbfCl/L
+        aQ49OakO7ki8gfas187dG3WzzFfWGzTwMstoR2TZwhAHs4w2xdYsU9tBc+JUgX7jIjiLbwnNgoYttv9B
+        0mzUMMAGZ7SQWniUP5a+T3iUC5Pn/QDwaSQM+jLsTgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="rotateRightButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+G</value>
+  </data>
+  <data name="rotateRightButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="rotateRightButton.Text" xml:space="preserve">
+    <value>rotate right</value>
+  </data>
+  <data name="rotateLeftButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rotateLeftButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAMRJREFUOE/N0j8OAUEUgPFt/IsotETiFDoicReRKITCMVxEFAqVaisJInECSpVC
+        FDq+N2+mWJmdbLbhS37xhmSzYyb6q9r2s4AhYtxwxwEjFJHaBR2csMUAdauLJeS3Jry9rYVZ+ZvgjLJZ
+        feUecEVLvkhJ3mSqY75kO/Kf5K6Kp47JHqjpGCz1ATv0dQwmW9jrmEzOeaNjsDXGOiaTSyLnPDcrfzPI
+        MZbMylMDR6zQQwVy5pkukstdZdnny8p0lX9RFH0APGwkDDvDBD0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="rotateLeftButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+G</value>
+  </data>
+  <data name="rotateLeftButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="rotateLeftButton.Text" xml:space="preserve">
+    <value>rotate left</value>
+  </data>
+  <data name="rotate180Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rotate180Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAALVJREFUOE/N0jsKwkAYReE0PsDKVtei6xGsxN4VaaO7UBFsfC3CJgqCgp5jUqgz
+        JJa58MEkc4eE5E8qmQaGWOKSW2OEJgrTxRYL9NDK9TGHe3aiqWODyfsqnjHs2A0ywCxbFmYKu0FW8LXL
+        YsdukBtKPxJp45wtv3PH809XBNkjVo45IIgfJkXswCfnwjkJUsMRD8QOyj07dqPp4ASf8nvYe+7ZKYxD
+        4ivu4J+Ra0fZMa9UkuQFGxtJRcKBXbcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="rotate180Button.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+J</value>
+  </data>
+  <data name="rotate180Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="rotate180Button.Text" xml:space="preserve">
+    <value>rotate 180</value>
+  </data>
+  <data name="customAngleBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="customAngleBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+J</value>
+  </data>
+  <data name="customAngleBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="customAngleBtn.Text" xml:space="preserve">
+    <value>custom angle</value>
+  </data>
+  <data name="customAngleBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="toolStripSeparator8.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resizeBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resizeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAGZJREFUOE/VjzEKgDAQBO9bKtio//+FmvgI3REECRa5KwIOTJFiJ5y14vwwRC9X
+        GQpMcpOddAcY75IxuALlGKoDs2TM7W7ajt83jTJLbq/mCfBzksP9ckBgkaExEDgkkRAESn+B2QXamyDY
+        CyfAWwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="resizeBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+R</value>
+  </data>
+  <data name="resizeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="resizeBtn.Text" xml:space="preserve">
+    <value>resize</value>
+  </data>
+  <data name="resizeBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cropBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cropBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAHdJREFUOE+t
+        jcENgCAQBGlFW/ClT+NP+69AP1qE7hJQQg49kEkmlwu3i6nN6eYbrZsiXwUjPGBjtwAGvSTcYweYhAcS
+        C+TPqfcb6cCHe5hdMMMdMkyyCuIwURdMcIOd3R5UBakwURWsUAqrYIHWIoqDnt8FtTHmAmhIMNeG87+9
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="cropBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+R</value>
+  </data>
+  <data name="cropBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="cropBtn.Text" xml:space="preserve">
+    <value>crop</value>
+  </data>
+  <data name="cropBtn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="editButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -519,6 +733,48 @@
   </data>
   <data name="copyButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="copyImageButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="copyImageButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAANZJREFUOE/N
+        0ksLQUEYxvEjisj99gV8UEtSloQFO8VCkoWFJJFsLJQPYoMo/u+MS6c5Mjue+tU7pzlPc07j/E3KOOJm
+        SfaW8MoZUT1aJY6THnWk9VtmmOpRxfWOTcECcz2qfCwIo4OsWn2OZ0EAI+ywRRKSNIbIqZWOZ0ELY0hR
+        FWvkscSzNAGJUVDEBhF5QHxo4IAu/KhBymSPUbBHSq3ekZIm5O+HHus6VjAKCno0Ip8zQB9yCtGDq0Au
+        UkyPngligjbkFBm4LlIFV0irjQtcV/lXcZw75iZGahwH6/4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="copyImageButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="copyImageButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 24</value>
+  </data>
+  <data name="copyImageButton.Text" xml:space="preserve">
+    <value>copy image</value>
+  </data>
+  <data name="copyFileBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="copyFileBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAKVJREFUOE/Nkj0KAjEUBl9rqwiCl7ATxNJLeAqPIXgZrbyLXkAsxUJFUOfbRFhD
+        8mK5A0N+md0i1jk2eMN34gVnWOWBwzD9QZETzpuVgy7m0L7+4IwLbZTwAl+v2ihRCrRx73iH2zj+FRjj
+        Po4p1cAID7jDI06xHasGerhsVmYrfKFiiipeDaRM4qio4m5AD6kfplkGeA/TPHrKT9RXcupsjZ3B7AP8
+        ljJY5GqjGgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="copyFileBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+C</value>
+  </data>
+  <data name="copyFileBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 24</value>
+  </data>
+  <data name="copyFileBtn.Text" xml:space="preserve">
+    <value>copy file</value>
   </data>
   <data name="copyButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -582,11 +838,8 @@
   <data name="screenshotButton.Text" xml:space="preserve">
     <value>capture screen</value>
   </data>
-  <data name="toolStripSeparator3.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 16</value>
+    <value>6, 22</value>
   </data>
   <data name="checkboardButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -650,14 +903,246 @@
   <data name="miniViewButton.Text" xml:space="preserve">
     <value>picture in picture</value>
   </data>
-  <data name="toolStripSeparator5.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 16</value>
+    <value>6, 22</value>
   </data>
   <data name="moreButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="reloadButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="reloadButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAOJJREFUOE+l
+        kktqAkEURXtiUIJKprqWRBFciw7iQJ34WUFciyMRXYLgD3UhopJBZnpuPyX2ryLmwKFu0d1FVfX1HqBz
+        HZ/mjF8WH+MF67jAPWoBWcI/KeIah/iOb6iPWyg+sWAxShq32PZnv9zfQR83mPJnIZo4suhkgtpJhCV+
+        WHRSxZnFIN/4atFJHg8WgxwxZ9FJFk8Wg2hbFYtOyhh7hAaOLTrRJaonEVSgHfb8mdG9jjf0TD3Ru7Go
+        JNqJGKBKlEH9nSmuMLFI9+ictwr/4BxrGFugJFRfLfAvwncQwvMuvNonXS1zg0cAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="reloadButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F5</value>
+  </data>
+  <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="reloadButton.Text" xml:space="preserve">
+    <value>reload file</value>
+  </data>
+  <data name="deleteBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="deleteBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAFdJREFUOE9joBXoAuLvQPwfSrcDMUngJxCLQphg+geEiR+AbCMW4wR4JYGAkDxc
+        ASEaJxg1YDAYAEqBQhAmBhAGYoIpEpQHfgMxyCZ0DBInOU/QGjAwAAAB90ACnOYq3wAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="deleteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Del</value>
+  </data>
+  <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="deleteBtn.Text" xml:space="preserve">
+    <value>move to trash</value>
+  </data>
+  <data name="printButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="printButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAHRJREFUOE/NkdEKgCAMRf2Gon456Gf6vIoe6s61cAPdXgIPHLyyOUFTl9yOLq2m
+        /wascIfUEJF6F/hxwoljiBkeHBmaSmzvGkHOZNQmSHUA5ZZCmfMbDBx1wSC1Eao3oF+4oL3FInXqVb9Q
+        4g1wkVtqdkVKD1tyPrQ4GpemAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="printButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+P</value>
+  </data>
+  <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="printButton.Text" xml:space="preserve">
+    <value>print</value>
+  </data>
+  <data name="setAsDesktopButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="setAsDesktopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAGRJREFUOE9jGDSgC4i/A/F/IjFIbTsQw8FPIBaFMIkCYkD8A8KEAJCpMBrGJgRQ
+        1FHNAFIAVgNANLGG0cYAUgCGAeRgOAClAyEIkyggDMQo6QCUEn8DMTZbsGGQWpSUOGQBAwMANztAA2Yw
+        a0EAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="setAsDesktopButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+B</value>
+  </data>
+  <data name="setAsDesktopButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="setAsDesktopButton.Text" xml:space="preserve">
+    <value>set as desktop background</value>
+  </data>
+  <data name="qlibMenuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 6</value>
+  </data>
+  <data name="actualSizeBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="actualSizeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAALxJREFUOE/V0r8OAUEQx/Et/InSWwiF0FG4gkTheYRK4U1UEpUoUJ94CURLFGoK
+        4Tu7tpBjLojCL/lkZ3KZ7GV3zS+TQAdrHLFCDxnERoYXmKKE7H0dYgn5rqaLsSsjmaDtytfZIoer7R7X
+        PDa2U3JGCn7QR/o0TrZTIjsU8OwPipCDVdPHyJWRzBB7Bi3Ibv4WkihjjhDqLQQ4oAn/Di6QdyA7q8MN
+        7FG13Zv5ariOHSq2+yAD1Fz5XzHmBoGEJ8a7fZeNAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="actualSizeBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+0</value>
+  </data>
+  <data name="actualSizeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="actualSizeBtn.Text" xml:space="preserve">
+    <value>zoom to actual size</value>
+  </data>
+  <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 6</value>
+  </data>
+  <data name="backClearBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
+        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
+        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
+        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
+        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="backClearBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+F6</value>
+  </data>
+  <data name="backClearBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="backClearBtn.Text" xml:space="preserve">
+    <value>clear</value>
+  </data>
+  <data name="qlibMenuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 6</value>
+  </data>
+  <data name="backCustomBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F6</value>
+  </data>
+  <data name="backCustomBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="backCustomBtn.Text" xml:space="preserve">
+    <value>choose color</value>
+  </data>
+  <data name="backColorBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="backColorBtn.Text" xml:space="preserve">
+    <value>background color</value>
+  </data>
+  <data name="onTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAGFJREFUOE9joDXgg9JkAT8g/gylSQbOQPwKiP8D8Wson2jgC8QgTZZADDIARIP4
+        IHGCQBGIQYodwDyIASDgCMQgcZA8QYCsCGYACBClGR0gG0AWGAYG0B+AnEwIDyrAwAAA9usapRF2XZYA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="onTopButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+T</value>
+  </data>
+  <data name="onTopButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="onTopButton.Text" xml:space="preserve">
+    <value>always on top</value>
+  </data>
+  <data name="framelessBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAF1JREFUOE9jGDSgE4i/A/F/IjFIbQcQw8FPIOaFMIkC/ED8A8KEAJCpMJoYDAIw
+        GgywCuIAowbQwwBiMAjAaDAAJSQ+CJMogJGQuoH4DxCj24QL/wZilKQ8UICBAQC3Yk3h8YvbWgAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="framelessBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F10</value>
+  </data>
+  <data name="framelessBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="framelessBtn.Text" xml:space="preserve">
+    <value>frameless mode</value>
+  </data>
+  <data name="newWindowButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAFVJREFUOE9j
+        GDRgPhD/BuL/RGCQunlAjAJAgrxADFIAAjAaG+AHYpB6FIBsA7EYBWAIEABEG0C0ONUNAPHRMTJA52MK
+        QAHR4jQzABfAagCpeHgABgYAzflBCpN5dhwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="newWindowButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+N</value>
+  </data>
+  <data name="newWindowButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="newWindowButton.Text" xml:space="preserve">
+    <value>new window</value>
+  </data>
+  <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 6</value>
+  </data>
+  <data name="settingsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAPRJREFUOE+100FOwkAUxvGBiDcQDWiIHEO8AnID3OoN2GJA2MMNPAIgK93AOYCF
+        qFE8A/y/ea2ZIiZE5Et+yZu2086btm6faWIZaejAtsngGlOUcYUJqtC5X3OLGsZ4giYeRCp4xgi65gaJ
+        5LHAA+pIYT1p3EHXfEJzvtPFo5U+h2hhFlEdLn+IjpUW3e0dJT9yro0ezlHEAPdQLvGGnB8F0bKOrXRz
+        nFrpU8CLle4EH1Ym84UjK/0Twh7P8Gqly0L7lUjcwoUfWQt9aJk6F7agNn+0sGkTdRMtVbbaxJ1eo7LT
+        hxTmz5/yetR3/DPFG/jfcW4F4T49LMAX13oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="settingsButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Oemcomma</value>
+  </data>
+  <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="settingsButton.Text" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="aboutBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAKtJREFUOE/F0jsKwkAURuHZgQa0sTCle9DKSgtXIlgHxTWIrkBQsZYsRxRRSILP
+        wspOzy8WdrkRJAc+JglkuBPi/lUVM0R4YAkfpmpI0EMZBfRxgGmTFYZo4ghN0YI2WSC1O6ZYo4429qgg
+        RmpdBJ9VdbBDCWc9sOYhxAYNDDCHOZ13DI0+go6ka3M3aIotJigiU1c8cXnf5dEJmkD/wk/p5e81c/l/
+        A0POvQA9DCYiD7QYpAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="aboutBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F1</value>
+  </data>
+  <data name="aboutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 24</value>
+  </data>
+  <data name="aboutBtn.Text" xml:space="preserve">
+    <value>about</value>
   </data>
   <data name="moreButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -714,6 +1199,39 @@
   <data name="picturePanel.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="suggestionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="suggestionLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="suggestionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="suggestionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="suggestionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>27, 27, 27, 27</value>
+  </data>
+  <data name="suggestionLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="suggestionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 23</value>
+  </data>
+  <data name="suggestionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="suggestionLabel.Text" xml:space="preserve">
+    <value>Suggestion</value>
+  </data>
+  <data name="suggestionLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="suggestionLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;suggestionLabel.Name" xml:space="preserve">
     <value>suggestionLabel</value>
   </data>
@@ -726,6 +1244,33 @@
   <data name="&gt;&gt;suggestionLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="pleaseOpenLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pleaseOpenLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="pleaseOpenLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pleaseOpenLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pleaseOpenLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pleaseOpenLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 385</value>
+  </data>
+  <data name="pleaseOpenLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="pleaseOpenLabel.Text" xml:space="preserve">
+    <value>please open image</value>
+  </data>
+  <data name="pleaseOpenLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
   <data name="&gt;&gt;pleaseOpenLabel.Name" xml:space="preserve">
     <value>pleaseOpenLabel</value>
   </data>
@@ -737,6 +1282,30 @@
   </data>
   <data name="&gt;&gt;pleaseOpenLabel.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="pictureBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="pictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 385</value>
+  </data>
+  <data name="pictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;pictureBox.Name" xml:space="preserve">
     <value>pictureBox</value>
@@ -766,7 +1335,7 @@
     <value>picturePanel</value>
   </data>
   <data name="&gt;&gt;picturePanel.Type" xml:space="preserve">
-    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.1.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;picturePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -779,6 +1348,122 @@
   </metadata>
   <data name="statusStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="directoryLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAALJJREFUOE/Nks0JAjEQRnPwLihahgpeRQ/amj9YhAcbsABr0DbUClxR0PftBDES
+        ltmTPnhkZtl8E0jC37DGKz7xgXtsopsbdqwMDdzivOycaHIdddolvtHHOnSxsNLwBuziKpI9n00PD3Gt
+        IhswwjOu8IRjFEM8Yr/sjGzABqdWhgkqTLdxwUXsNURkA74ZoCbrBGKGGiJcAVUke/SQWla6aGNyjXrK
+        d1SqR/2bPKRfEcILB30+ElJnYjsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="directoryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="directoryLabel.Text" xml:space="preserve">
+    <value> folder</value>
+  </data>
+  <data name="fileLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAKVJREFUOE/Nkj0KAjEUBl9rqwiCl7ATxNJLeAqPIXgZrbyLXkAsxUJFUOfbRFhD
+        8mK5A0N+md0i1jk2eMN34gVnWOWBwzD9QZETzpuVgy7m0L7+4IwLbZTwAl+v2ihRCrRx73iH2zj+FRjj
+        Po4p1cAID7jDI06xHasGerhsVmYrfKFiiipeDaRM4qio4m5AD6kfplkGeA/TPHrKT9RXcupsjZ3B7AP8
+        ljJY5GqjGgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="fileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="fileLabel.Text" xml:space="preserve">
+    <value> file</value>
+  </data>
+  <data name="sizeLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAGZJREFUOE/VjzEKgDAQBO9bKtio//+FmvgI3REECRa5KwIOTJFiJ5y14vwwRC9X
+        GQpMcpOddAcY75IxuALlGKoDs2TM7W7ajt83jTJLbq/mCfBzksP9ckBgkaExEDgkkRAESn+B2QXamyDY
+        CyfAWwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="sizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="sizeLabel.Text" xml:space="preserve">
+    <value> size</value>
+  </data>
+  <data name="zoomLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAALVJREFUOE/V0r8OwVAUgPE7+rt6EBGC6ILRw5hsJJ7EK5DgEcTWxCLETAxWEgPf
+        6bGd9LaVGHzJLz0d2t721v26AiY44oYDxsgjsSK2WKGNyue4xgZyc29TzHU0LSAr8XZCVUdTDfJa3u4o
+        6Wgq46FjfDvUdTQ1sNcxvhGWOprkQyZ+gz5ekF2QleQgT061Cx1cMcAQIZ5I9R/0cIHseea6kItb0VnG
+        5OIzmtHZF80Q6Pg/OfcGzhogaYnUQccAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="zoomLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="zoomLabel.Text" xml:space="preserve">
+    <value> zoom</value>
+  </data>
+  <data name="hasChangesLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
+        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
+        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
+        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
+        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="hasChangesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="hasChangesLabel.Text" xml:space="preserve">
+    <value> not-saved</value>
+  </data>
+  <data name="hasChangesLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dateCreatedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAANpJREFUOE/F08EKAUEAh/E9kAPClfIeijwN8TZKilxR4gWEB6EIyUU5cxDff3a3
+        1TQ4yVe/ZqY0zc4u7xdVMcUZl2CcoIKPxdHDCjUUkAvGOtboIAZnfcyQNCu/RzCqFBbompWVjr1F2qyi
+        XjdQGexRNquXxtAx7ewNVBMjfxp1gp7VzrVBEUd/GnWDLtFOG4TCErj606h3J3DlPMG7O3DlvAPd6gb2
+        W7DTW9ihZFZWbcyhH7nKYomWWTkKv0S9Zz1OHkpjAwd8/BLD9FENoaPeg3GAr/+Ff+R5T5lgLGc/X8aO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="dateCreatedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="dateCreatedLabel.Text" xml:space="preserve">
+    <value> created</value>
+  </data>
+  <data name="dateCreatedLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dateModifiedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAOZJREFUOE/F08+qAVEAx/EpVzaEnai7sOAZ1I2nId5GKbFHySOg+x63bv6EjbK2
+        IL6/Y6ZmxplrFup+69PMGdNp5pzhvKuqe1QNjLHCCUfMUEdke1TQxxZNFJBHCS38QL9/4KkbzvhGRhfc
+        dN0rjQUGZhRKN8oOZV1w80+gstjgy4xiFJ5AdTB5nL7ONsEn9KSBLkg8TgN5r+afKAWtV6ADtNpxsj7B
+        FNqqOFnXQKv6C/8W2tIurFEzo1A9zKGbbOWwRNeMLCUxhPZZr1OE0rENfaGRX6I/77+gR726xxH+/C/8
+        V45zBz6DLrd6wgPCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="dateModifiedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="dateModifiedLabel.Text" xml:space="preserve">
+    <value> modified</value>
+  </data>
+  <data name="dateModifiedLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 417</value>
@@ -5005,122 +5690,6 @@
   <data name="saveFileDialog1.Filter" xml:space="preserve">
     <value>PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp</value>
   </data>
-  <data name="directoryLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALJJREFUOE/Nks0JAjEQRnPwLihahgpeRQ/amj9YhAcbsABr0DbUClxR0PftBDES
-        ltmTPnhkZtl8E0jC37DGKz7xgXtsopsbdqwMDdzivOycaHIdddolvtHHOnSxsNLwBuziKpI9n00PD3Gt
-        IhswwjOu8IRjFEM8Yr/sjGzABqdWhgkqTLdxwUXsNURkA74ZoCbrBGKGGiJcAVUke/SQWla6aGNyjXrK
-        d1SqR/2bPKRfEcILB30+ElJnYjsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="directoryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
-  </data>
-  <data name="directoryLabel.Text" xml:space="preserve">
-    <value> folder</value>
-  </data>
-  <data name="fileLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAKVJREFUOE/Nkj0KAjEUBl9rqwiCl7ATxNJLeAqPIXgZrbyLXkAsxUJFUOfbRFhD
-        8mK5A0N+md0i1jk2eMN34gVnWOWBwzD9QZETzpuVgy7m0L7+4IwLbZTwAl+v2ihRCrRx73iH2zj+FRjj
-        Po4p1cAID7jDI06xHasGerhsVmYrfKFiiipeDaRM4qio4m5AD6kfplkGeA/TPHrKT9RXcupsjZ3B7AP8
-        ljJY5GqjGgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="fileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="fileLabel.Text" xml:space="preserve">
-    <value> file</value>
-  </data>
-  <data name="sizeLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAGZJREFUOE/VjzEKgDAQBO9bKtio//+FmvgI3REECRa5KwIOTJFiJ5y14vwwRC9X
-        GQpMcpOddAcY75IxuALlGKoDs2TM7W7ajt83jTJLbq/mCfBzksP9ckBgkaExEDgkkRAESn+B2QXamyDY
-        CyfAWwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="sizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="sizeLabel.Text" xml:space="preserve">
-    <value> size</value>
-  </data>
-  <data name="zoomLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALVJREFUOE/V0r8OwVAUgPE7+rt6EBGC6ILRw5hsJJ7EK5DgEcTWxCLETAxWEgPf
-        6bGd9LaVGHzJLz0d2t721v26AiY44oYDxsgjsSK2WKGNyue4xgZyc29TzHU0LSAr8XZCVUdTDfJa3u4o
-        6Wgq46FjfDvUdTQ1sNcxvhGWOprkQyZ+gz5ekF2QleQgT061Cx1cMcAQIZ5I9R/0cIHseea6kItb0VnG
-        5OIzmtHZF80Q6Pg/OfcGzhogaYnUQccAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="zoomLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
-  </data>
-  <data name="zoomLabel.Text" xml:space="preserve">
-    <value> zoom</value>
-  </data>
-  <data name="hasChangesLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
-        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
-        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
-        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
-        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="hasChangesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="hasChangesLabel.Text" xml:space="preserve">
-    <value> not-saved</value>
-  </data>
-  <data name="hasChangesLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateCreatedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAANpJREFUOE/F08EKAUEAh/E9kAPClfIeijwN8TZKilxR4gWEB6EIyUU5cxDff3a3
-        1TQ4yVe/ZqY0zc4u7xdVMcUZl2CcoIKPxdHDCjUUkAvGOtboIAZnfcyQNCu/RzCqFBbompWVjr1F2qyi
-        XjdQGexRNquXxtAx7ewNVBMjfxp1gp7VzrVBEUd/GnWDLtFOG4TCErj606h3J3DlPMG7O3DlvAPd6gb2
-        W7DTW9ihZFZWbcyhH7nKYomWWTkKv0S9Zz1OHkpjAwd8/BLD9FENoaPeg3GAr/+Ff+R5T5lgLGc/X8aO
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="dateCreatedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
-  </data>
-  <data name="dateCreatedLabel.Text" xml:space="preserve">
-    <value> created</value>
-  </data>
-  <data name="dateCreatedLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateModifiedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAOZJREFUOE/F08+qAVEAx/EpVzaEnai7sOAZ1I2nId5GKbFHySOg+x63bv6EjbK2
-        IL6/Y6ZmxplrFup+69PMGdNp5pzhvKuqe1QNjLHCCUfMUEdke1TQxxZNFJBHCS38QL9/4KkbzvhGRhfc
-        dN0rjQUGZhRKN8oOZV1w80+gstjgy4xiFJ5AdTB5nL7ONsEn9KSBLkg8TgN5r+afKAWtV6ADtNpxsj7B
-        FNqqOFnXQKv6C/8W2tIurFEzo1A9zKGbbOWwRNeMLCUxhPZZr1OE0rENfaGRX6I/77+gR726xxH+/C/8
-        V45zBz6DLrd6wgPCAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="dateModifiedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
-  </data>
-  <data name="dateModifiedLabel.Text" xml:space="preserve">
-    <value> modified</value>
-  </data>
-  <data name="dateModifiedLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>834, 17</value>
   </metadata>
@@ -5130,624 +5699,4 @@
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1094, 17</value>
   </metadata>
-  <data name="externalRunBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="externalRunBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIlJREFUOE/N
-        jkEOQDAURHsCe9ewZekMVtYcxtUkrJxAXEEkEmZKE361Eha85KV+55tU/Y4KjnARTjCGt3Ax2D5PsGSA
-        iZ48cPEK3kewhykvXPgKjHylE1fBEe/O64LXsN1IWpjBRk92biGDEnaw0JPnR4NsD+G8n0TmFjJ8/AKz
-        WMN8P4nMP0epFfbUMm24gJlIAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="externalRunBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+E</value>
-  </data>
-  <data name="externalRunBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 24</value>
-  </data>
-  <data name="externalRunBtn.Text" xml:space="preserve">
-    <value>open with default</value>
-  </data>
-  <data name="externalFavoriteBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="externalFavoriteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+O</value>
-  </data>
-  <data name="externalFavoriteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 24</value>
-  </data>
-  <data name="externalFavoriteBtn.Text" xml:space="preserve">
-    <value>open with custom</value>
-  </data>
-  <data name="externalChooseBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="externalChooseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACpJREFUOE9j
-        GFTgHRD/h9JkAZBmZBoEQGxcGANQ7AKKwWgYjIbBQAEGBgCbfCwIqrtvVwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="externalChooseBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+E</value>
-  </data>
-  <data name="externalChooseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 24</value>
-  </data>
-  <data name="externalChooseBtn.Text" xml:space="preserve">
-    <value>choose app</value>
-  </data>
-  <data name="flipHorizontalButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="flipHorizontalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAHNJREFUOE/NzzEOQEAURdGJhiUplBorsAzLU2gVeq2ClXCF1wzDjEi4yUk0/8F8
-        UYp6ewwrR4t555196D3gOhRnd4dyyPdQ3q9Ah7O3nXGmoR4lIthdDqgMDUZUiKG8BpSGJqxDCYIGlH5t
-        wKMBpS/6RcYsknw8utUbuVkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="flipHorizontalButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+H</value>
-  </data>
-  <data name="flipHorizontalButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="flipHorizontalButton.Text" xml:space="preserve">
-    <value>flip horizontal</value>
-  </data>
-  <data name="flipVerticalButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="flipVerticalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAIhJREFUOE/NktEJhDAQRAOWpaB1iFiqlqFnM3fzjILEzel+CA48dhWZmQTDk6q2
-        WW7TrTGZLjXiG9d18uwSqUcDVwvOvIijAdy+C9JakRrcalGLSRQiNYDLuxhEF1fT4G8L0mdBOrIMINuC
-        9D6uq3IGZgvSP2JPRzkDOLUg3foQWe9d/8WrFcIP3xE8L2HmKDkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="flipVerticalButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+H</value>
-  </data>
-  <data name="flipVerticalButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="flipVerticalButton.Text" xml:space="preserve">
-    <value>flip vertical</value>
-  </data>
-  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 6</value>
-  </data>
-  <data name="rotateRightButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="rotateRightButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAL1JREFUOE/N0r8KglAYh2GX/hENrUXQVbQVQfcSQUPU0GV0I9HQ0NTkFFQEXUGN
-        TQ3R0Fbvz3MG7aiIky88eERQj35eIStjghOeeMDHGCWorj06tXHBGn00rRH20LUebnCq4opZcBbfCl/L
-        aQ49OakO7ki8gfas187dG3WzzFfWGzTwMstoR2TZwhAHs4w2xdYsU9tBc+JUgX7jIjiLbwnNgoYttv9B
-        0mzUMMAGZ7SQWniUP5a+T3iUC5Pn/QDwaSQM+jLsTgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="rotateRightButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+G</value>
-  </data>
-  <data name="rotateRightButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="rotateRightButton.Text" xml:space="preserve">
-    <value>rotate right</value>
-  </data>
-  <data name="rotateLeftButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="rotateLeftButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAMRJREFUOE/N0j8OAUEUgPFt/IsotETiFDoicReRKITCMVxEFAqVaisJInECSpVC
-        FDq+N2+mWJmdbLbhS37xhmSzYyb6q9r2s4AhYtxwxwEjFJHaBR2csMUAdauLJeS3Jry9rYVZ+ZvgjLJZ
-        feUecEVLvkhJ3mSqY75kO/Kf5K6Kp47JHqjpGCz1ATv0dQwmW9jrmEzOeaNjsDXGOiaTSyLnPDcrfzPI
-        MZbMylMDR6zQQwVy5pkukstdZdnny8p0lX9RFH0APGwkDDvDBD0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="rotateLeftButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+G</value>
-  </data>
-  <data name="rotateLeftButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="rotateLeftButton.Text" xml:space="preserve">
-    <value>rotate left</value>
-  </data>
-  <data name="rotate180Button.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="rotate180Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALVJREFUOE/N0jsKwkAYReE0PsDKVtei6xGsxN4VaaO7UBFsfC3CJgqCgp5jUqgz
-        JJa58MEkc4eE5E8qmQaGWOKSW2OEJgrTxRYL9NDK9TGHe3aiqWODyfsqnjHs2A0ywCxbFmYKu0FW8LXL
-        YsdukBtKPxJp45wtv3PH809XBNkjVo45IIgfJkXswCfnwjkJUsMRD8QOyj07dqPp4ASf8nvYe+7ZKYxD
-        4ivu4J+Ra0fZMa9UkuQFGxtJRcKBXbcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="rotate180Button.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+J</value>
-  </data>
-  <data name="rotate180Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="rotate180Button.Text" xml:space="preserve">
-    <value>rotate 180</value>
-  </data>
-  <data name="customAngleBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="customAngleBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+J</value>
-  </data>
-  <data name="customAngleBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="customAngleBtn.Text" xml:space="preserve">
-    <value>custom angle</value>
-  </data>
-  <data name="customAngleBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 6</value>
-  </data>
-  <data name="toolStripSeparator8.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resizeBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resizeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAGZJREFUOE/VjzEKgDAQBO9bKtio//+FmvgI3REECRa5KwIOTJFiJ5y14vwwRC9X
-        GQpMcpOddAcY75IxuALlGKoDs2TM7W7ajt83jTJLbq/mCfBzksP9ckBgkaExEDgkkRAESn+B2QXamyDY
-        CyfAWwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="resizeBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+R</value>
-  </data>
-  <data name="resizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="resizeBtn.Text" xml:space="preserve">
-    <value>resize</value>
-  </data>
-  <data name="resizeBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cropBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cropBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAHdJREFUOE+t
-        jcENgCAQBGlFW/ClT+NP+69AP1qE7hJQQg49kEkmlwu3i6nN6eYbrZsiXwUjPGBjtwAGvSTcYweYhAcS
-        C+TPqfcb6cCHe5hdMMMdMkyyCuIwURdMcIOd3R5UBakwURWsUAqrYIHWIoqDnt8FtTHmAmhIMNeG87+9
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="cropBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+R</value>
-  </data>
-  <data name="cropBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="cropBtn.Text" xml:space="preserve">
-    <value>crop</value>
-  </data>
-  <data name="cropBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="copyImageButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="copyImageButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAANZJREFUOE/N
-        0ksLQUEYxvEjisj99gV8UEtSloQFO8VCkoWFJJFsLJQPYoMo/u+MS6c5Mjue+tU7pzlPc07j/E3KOOJm
-        SfaW8MoZUT1aJY6THnWk9VtmmOpRxfWOTcECcz2qfCwIo4OsWn2OZ0EAI+ywRRKSNIbIqZWOZ0ELY0hR
-        FWvkscSzNAGJUVDEBhF5QHxo4IAu/KhBymSPUbBHSq3ekZIm5O+HHus6VjAKCno0Ip8zQB9yCtGDq0Au
-        UkyPngligjbkFBm4LlIFV0irjQtcV/lXcZw75iZGahwH6/4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="copyImageButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+C</value>
-  </data>
-  <data name="copyImageButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
-  </data>
-  <data name="copyImageButton.Text" xml:space="preserve">
-    <value>copy image</value>
-  </data>
-  <data name="copyFileBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="copyFileBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAKVJREFUOE/Nkj0KAjEUBl9rqwiCl7ATxNJLeAqPIXgZrbyLXkAsxUJFUOfbRFhD
-        8mK5A0N+md0i1jk2eMN34gVnWOWBwzD9QZETzpuVgy7m0L7+4IwLbZTwAl+v2ihRCrRx73iH2zj+FRjj
-        Po4p1cAID7jDI06xHasGerhsVmYrfKFiiipeDaRM4qio4m5AD6kfplkGeA/TPHrKT9RXcupsjZ3B7AP8
-        ljJY5GqjGgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="copyFileBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+C</value>
-  </data>
-  <data name="copyFileBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
-  </data>
-  <data name="copyFileBtn.Text" xml:space="preserve">
-    <value>copy file</value>
-  </data>
-  <data name="reloadButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="reloadButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAOJJREFUOE+l
-        kktqAkEURXtiUIJKprqWRBFciw7iQJ34WUFciyMRXYLgD3UhopJBZnpuPyX2ryLmwKFu0d1FVfX1HqBz
-        HZ/mjF8WH+MF67jAPWoBWcI/KeIah/iOb6iPWyg+sWAxShq32PZnv9zfQR83mPJnIZo4suhkgtpJhCV+
-        WHRSxZnFIN/4atFJHg8WgxwxZ9FJFk8Wg2hbFYtOyhh7hAaOLTrRJaonEVSgHfb8mdG9jjf0TD3Ru7Go
-        JNqJGKBKlEH9nSmuMLFI9+ictwr/4BxrGFugJFRfLfAvwncQwvMuvNonXS1zg0cAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="reloadButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F5</value>
-  </data>
-  <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="reloadButton.Text" xml:space="preserve">
-    <value>reload file</value>
-  </data>
-  <data name="deleteBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="deleteBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAFdJREFUOE9joBXoAuLvQPwfSrcDMUngJxCLQphg+geEiR+AbCMW4wR4JYGAkDxc
-        ASEaJxg1YDAYAEqBQhAmBhAGYoIpEpQHfgMxyCZ0DBInOU/QGjAwAAAB90ACnOYq3wAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="deleteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Del</value>
-  </data>
-  <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="deleteBtn.Text" xml:space="preserve">
-    <value>move to trash</value>
-  </data>
-  <data name="printButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="printButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAHRJREFUOE/NkdEKgCAMRf2Gon456Gf6vIoe6s61cAPdXgIPHLyyOUFTl9yOLq2m
-        /wascIfUEJF6F/hxwoljiBkeHBmaSmzvGkHOZNQmSHUA5ZZCmfMbDBx1wSC1Eao3oF+4oL3FInXqVb9Q
-        4g1wkVtqdkVKD1tyPrQ4GpemAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="printButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+P</value>
-  </data>
-  <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="printButton.Text" xml:space="preserve">
-    <value>print</value>
-  </data>
-  <data name="setAsDesktopButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="setAsDesktopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAGRJREFUOE9jGDSgC4i/A/F/IjFIbTsQw8FPIBaFMIkCYkD8A8KEAJCpMBrGJgRQ
-        1FHNAFIAVgNANLGG0cYAUgCGAeRgOAClAyEIkyggDMQo6QCUEn8DMTZbsGGQWpSUOGQBAwMANztAA2Yw
-        a0EAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="setAsDesktopButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+B</value>
-  </data>
-  <data name="setAsDesktopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="setAsDesktopButton.Text" xml:space="preserve">
-    <value>set as desktop background</value>
-  </data>
-  <data name="qlibMenuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 6</value>
-  </data>
-  <data name="actualSizeBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="actualSizeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALxJREFUOE/V0r8OAUEQx/Et/InSWwiF0FG4gkTheYRK4U1UEpUoUJ94CURLFGoK
-        4Tu7tpBjLojCL/lkZ3KZ7GV3zS+TQAdrHLFCDxnERoYXmKKE7H0dYgn5rqaLsSsjmaDtytfZIoer7R7X
-        PDa2U3JGCn7QR/o0TrZTIjsU8OwPipCDVdPHyJWRzBB7Bi3Ibv4WkihjjhDqLQQ4oAn/Di6QdyA7q8MN
-        7FG13Zv5ariOHSq2+yAD1Fz5XzHmBoGEJ8a7fZeNAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="actualSizeBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+0</value>
-  </data>
-  <data name="actualSizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="actualSizeBtn.Text" xml:space="preserve">
-    <value>zoom to actual size</value>
-  </data>
-  <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 6</value>
-  </data>
-  <data name="backColorBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="backColorBtn.Text" xml:space="preserve">
-    <value>background color</value>
-  </data>
-  <data name="backClearBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
-        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
-        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
-        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
-        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="backClearBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+F6</value>
-  </data>
-  <data name="backClearBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 24</value>
-  </data>
-  <data name="backClearBtn.Text" xml:space="preserve">
-    <value>clear</value>
-  </data>
-  <data name="qlibMenuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 6</value>
-  </data>
-  <data name="backCustomBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F6</value>
-  </data>
-  <data name="backCustomBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 24</value>
-  </data>
-  <data name="backCustomBtn.Text" xml:space="preserve">
-    <value>choose color</value>
-  </data>
-  <data name="onTopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAGFJREFUOE9joDXgg9JkAT8g/gylSQbOQPwKiP8D8Wson2jgC8QgTZZADDIARIP4
-        IHGCQBGIQYodwDyIASDgCMQgcZA8QYCsCGYACBClGR0gG0AWGAYG0B+AnEwIDyrAwAAA9usapRF2XZYA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="onTopButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+T</value>
-  </data>
-  <data name="onTopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="onTopButton.Text" xml:space="preserve">
-    <value>always on top</value>
-  </data>
-  <data name="framelessBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAF1JREFUOE9jGDSgE4i/A/F/IjFIbQcQw8FPIOaFMIkC/ED8A8KEAJCpMJoYDAIw
-        GgywCuIAowbQwwBiMAjAaDAAJSQ+CJMogJGQuoH4DxCj24QL/wZilKQ8UICBAQC3Yk3h8YvbWgAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="framelessBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F10</value>
-  </data>
-  <data name="framelessBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="framelessBtn.Text" xml:space="preserve">
-    <value>frameless mode</value>
-  </data>
-  <data name="newWindowButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAFVJREFUOE9j
-        GDRgPhD/BuL/RGCQunlAjAJAgrxADFIAAjAaG+AHYpB6FIBsA7EYBWAIEABEG0C0ONUNAPHRMTJA52MK
-        QAHR4jQzABfAagCpeHgABgYAzflBCpN5dhwAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="newWindowButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+N</value>
-  </data>
-  <data name="newWindowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="newWindowButton.Text" xml:space="preserve">
-    <value>new window</value>
-  </data>
-  <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 6</value>
-  </data>
-  <data name="settingsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAPRJREFUOE+100FOwkAUxvGBiDcQDWiIHEO8AnID3OoN2GJA2MMNPAIgK93AOYCF
-        qFE8A/y/ea2ZIiZE5Et+yZu2086btm6faWIZaejAtsngGlOUcYUJqtC5X3OLGsZ4giYeRCp4xgi65gaJ
-        5LHAA+pIYT1p3EHXfEJzvtPFo5U+h2hhFlEdLn+IjpUW3e0dJT9yro0ezlHEAPdQLvGGnB8F0bKOrXRz
-        nFrpU8CLle4EH1Ym84UjK/0Twh7P8Gqly0L7lUjcwoUfWQt9aJk6F7agNn+0sGkTdRMtVbbaxJ1eo7LT
-        hxTmz5/yetR3/DPFG/jfcW4F4T49LMAX13oAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="settingsButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Oemcomma</value>
-  </data>
-  <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="settingsButton.Text" xml:space="preserve">
-    <value>settings</value>
-  </data>
-  <data name="aboutBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAKtJREFUOE/F0jsKwkAURuHZgQa0sTCle9DKSgtXIlgHxTWIrkBQsZYsRxRRSILP
-        wspOzy8WdrkRJAc+JglkuBPi/lUVM0R4YAkfpmpI0EMZBfRxgGmTFYZo4ghN0YI2WSC1O6ZYo4429qgg
-        RmpdBJ9VdbBDCWc9sOYhxAYNDDCHOZ13DI0+go6ka3M3aIotJigiU1c8cXnf5dEJmkD/wk/p5e81c/l/
-        A0POvQA9DCYiD7QYpAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="aboutBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F1</value>
-  </data>
-  <data name="aboutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
-  </data>
-  <data name="aboutBtn.Text" xml:space="preserve">
-    <value>about</value>
-  </data>
-  <data name="suggestionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="suggestionLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="suggestionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="suggestionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 27</value>
-  </data>
-  <data name="suggestionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>27, 27, 27, 27</value>
-  </data>
-  <data name="suggestionLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="suggestionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 23</value>
-  </data>
-  <data name="suggestionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="suggestionLabel.Text" xml:space="preserve">
-    <value>Suggestion</value>
-  </data>
-  <data name="suggestionLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="suggestionLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;suggestionLabel.Name" xml:space="preserve">
-    <value>suggestionLabel</value>
-  </data>
-  <data name="&gt;&gt;suggestionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;suggestionLabel.Parent" xml:space="preserve">
-    <value>picturePanel</value>
-  </data>
-  <data name="&gt;&gt;suggestionLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pleaseOpenLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="pleaseOpenLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="pleaseOpenLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pleaseOpenLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pleaseOpenLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="pleaseOpenLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 385</value>
-  </data>
-  <data name="pleaseOpenLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="pleaseOpenLabel.Text" xml:space="preserve">
-    <value>please open image</value>
-  </data>
-  <data name="pleaseOpenLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;pleaseOpenLabel.Name" xml:space="preserve">
-    <value>pleaseOpenLabel</value>
-  </data>
-  <data name="&gt;&gt;pleaseOpenLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pleaseOpenLabel.Parent" xml:space="preserve">
-    <value>picturePanel</value>
-  </data>
-  <data name="&gt;&gt;pleaseOpenLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pictureBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="pictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="pictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="pictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 385</value>
-  </data>
-  <data name="pictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox.Name" xml:space="preserve">
-    <value>pictureBox</value>
-  </data>
-  <data name="&gt;&gt;pictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox.Parent" xml:space="preserve">
-    <value>picturePanel</value>
-  </data>
-  <data name="&gt;&gt;pictureBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
 </root>
