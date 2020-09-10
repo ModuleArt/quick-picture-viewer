@@ -319,8 +319,11 @@
   <data name="externalBtn.Text" xml:space="preserve">
     <value>open with</value>
   </data>
+  <data name="toolStripSeparator4.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 22</value>
+    <value>1, 24</value>
   </data>
   <data name="infoButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -438,8 +441,11 @@
   <data name="slideshowButton.Text" xml:space="preserve">
     <value>slideshow</value>
   </data>
+  <data name="toolStripSeparator1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 22</value>
+    <value>1, 24</value>
   </data>
   <data name="autoZoomButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -530,8 +536,11 @@
   <data name="zoomInButton.Text" xml:space="preserve">
     <value>zoom in</value>
   </data>
+  <data name="toolStripSeparator2.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 22</value>
+    <value>1, 24</value>
   </data>
   <data name="editButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -838,8 +847,11 @@
   <data name="screenshotButton.Text" xml:space="preserve">
     <value>capture screen</value>
   </data>
+  <data name="toolStripSeparator3.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 22</value>
+    <value>1, 24</value>
   </data>
   <data name="checkboardButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -903,8 +915,11 @@
   <data name="miniViewButton.Text" xml:space="preserve">
     <value>picture in picture</value>
   </data>
+  <data name="toolStripSeparator5.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 22</value>
+    <value>1, 24</value>
   </data>
   <data name="moreButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1031,19 +1046,19 @@
     <value>Ctrl+F6</value>
   </data>
   <data name="backClearBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>179, 24</value>
   </data>
   <data name="backClearBtn.Text" xml:space="preserve">
     <value>clear</value>
   </data>
   <data name="qlibMenuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>176, 6</value>
   </data>
   <data name="backCustomBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F6</value>
   </data>
   <data name="backCustomBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>179, 24</value>
   </data>
   <data name="backCustomBtn.Text" xml:space="preserve">
     <value>choose color</value>
@@ -1182,7 +1197,7 @@
     <value>toolStrip1</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolStrip, QuickLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolStrip, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -5442,7 +5457,7 @@
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;editButton.Name" xml:space="preserve">
     <value>editButton</value>
@@ -5466,7 +5481,7 @@
     <value>toolStripSeparator7</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rotateRightButton.Name" xml:space="preserve">
     <value>rotateRightButton</value>
@@ -5496,7 +5511,7 @@
     <value>toolStripSeparator8</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator8.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;resizeBtn.Name" xml:space="preserve">
     <value>resizeBtn</value>
@@ -5568,7 +5583,7 @@
     <value>toolStripSeparator5</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;moreButton.Name" xml:space="preserve">
     <value>moreButton</value>
@@ -5604,7 +5619,7 @@
     <value>qlibMenuSeparator2</value>
   </data>
   <data name="&gt;&gt;qlibMenuSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;actualSizeBtn.Name" xml:space="preserve">
     <value>actualSizeBtn</value>
@@ -5616,7 +5631,7 @@
     <value>toolStripSeparator9</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backColorBtn.Name" xml:space="preserve">
     <value>backColorBtn</value>
@@ -5634,7 +5649,7 @@
     <value>qlibMenuSeparator1</value>
   </data>
   <data name="&gt;&gt;qlibMenuSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backCustomBtn.Name" xml:space="preserve">
     <value>backCustomBtn</value>
@@ -5664,7 +5679,7 @@
     <value>toolStripSeparator10</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator10.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
     <value>settingsButton</value>

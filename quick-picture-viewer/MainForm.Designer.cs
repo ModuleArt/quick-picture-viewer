@@ -51,18 +51,18 @@
 			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalFavoriteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalChooseBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator4 = new QuickLibrary.QlibToolStripSeparator();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
 			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.nextButton = new System.Windows.Forms.ToolStripButton();
 			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator1 = new QuickLibrary.QlibToolStripSeparator();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomTextBox = new System.Windows.Forms.ToolStripTextBox();
 			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator2 = new QuickLibrary.QlibToolStripSeparator();
 			this.editButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.flipHorizontalButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.flipVerticalButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +83,7 @@
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator5 = new QuickLibrary.QlibToolStripSeparator();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -308,9 +308,10 @@
 			// 
 			// toolStripSeparator4
 			// 
+			resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+			this.toolStripSeparator4.BackColor = System.Drawing.Color.Black;
 			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator4.Name = "toolStripSeparator4";
-			resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
 			// 
 			// infoButton
 			// 
@@ -354,9 +355,10 @@
 			// 
 			// toolStripSeparator1
 			// 
+			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+			this.toolStripSeparator1.BackColor = System.Drawing.Color.Black;
 			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
 			// 
 			// autoZoomButton
 			// 
@@ -403,9 +405,10 @@
 			// 
 			// toolStripSeparator2
 			// 
+			resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+			this.toolStripSeparator2.BackColor = System.Drawing.Color.Black;
 			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
 			// 
 			// editButton
 			// 
@@ -523,9 +526,10 @@
 			// 
 			// toolStripSeparator3
 			// 
+			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+			this.toolStripSeparator3.BackColor = System.Drawing.Color.Black;
 			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
 			// 
 			// checkboardButton
 			// 
@@ -553,9 +557,10 @@
 			// 
 			// toolStripSeparator5
 			// 
+			resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+			this.toolStripSeparator5.BackColor = System.Drawing.Color.Black;
 			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
 			// 
 			// moreButton
 			// 
@@ -770,11 +775,11 @@
 		private System.IO.FileSystemWatcher fileSystemWatcher1;
 		private QuickLibrary.QlibToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton openButton;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private QuickLibrary.QlibToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton zoomInButton;
 		private System.Windows.Forms.ToolStripButton zoomOutButton;
 		private System.Windows.Forms.ToolStripButton autoZoomButton;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private QuickLibrary.QlibToolStripSeparator toolStripSeparator2;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.ToolStripButton pasteButton;
 		private System.Windows.Forms.ToolStripButton fullscreenButton;
@@ -785,8 +790,8 @@
 		private System.Windows.Forms.ToolStripStatusLabel zoomLabel;
 		private System.Windows.Forms.ToolStripButton screenshotButton;
 		private System.Windows.Forms.ToolStripButton nextButton;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+		private QuickLibrary.QlibToolStripSeparator toolStripSeparator4;
+		private QuickLibrary.QlibToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripButton prevButton;
 		private System.Windows.Forms.ToolStripStatusLabel dateCreatedLabel;
 		private System.Windows.Forms.ToolStripStatusLabel dateModifiedLabel;
@@ -839,9 +844,9 @@
 		private System.Windows.Forms.ToolStripMenuItem deleteBtn;
 		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator2;
 		private System.Windows.Forms.ToolStripMenuItem aboutBtn;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripMenuItem framelessBtn;
 		private System.Windows.Forms.ToolStripMenuItem customAngleBtn;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 	}
 }
 

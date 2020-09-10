@@ -40,3 +40,4 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_ru.resx
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_en.resx
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_es.Designer.cs
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.pdb

@@ -781,13 +781,20 @@ namespace quick_picture_viewer
 
 			if (b)
 			{
-				if (darkMode)
+				if (!fullscreen)
 				{
-					picturePanel.BackgroundImage = Properties.Resources.checkboard_dark;
-				}
-				else
-				{
-					picturePanel.BackgroundImage = Properties.Resources.checkboard_light;
+					picturePanel.BackColor = Color.Transparent;
+					Properties.Settings.Default.BackColor = "";
+					Properties.Settings.Default.Save();
+
+					if (darkMode)
+					{
+						picturePanel.BackgroundImage = Properties.Resources.checkboard_dark;
+					}
+					else
+					{
+						picturePanel.BackgroundImage = Properties.Resources.checkboard_light;
+					}
 				}
 			}
 			else
@@ -1082,18 +1089,17 @@ namespace quick_picture_viewer
 					picturePanel.Cursor = new Cursor(ptr);
 				}
 
-				this.FormBorderStyle = FormBorderStyle.None;
-				this.WindowState = FormWindowState.Maximized;
-
 				picturePanel.Top = 0;
 				picturePanel.Height = this.ClientSize.Height;
 				picturePanel.BackColor = Color.Black;
 
 				typeOpsButton.Left = this.ClientRectangle.Width + 27;
+				pleaseOpenLabel.ForeColor = Color.White;
+
+				this.FormBorderStyle = FormBorderStyle.None;
+				this.WindowState = FormWindowState.Maximized;
 
 				setAlwaysOnTop(false, true);
-
-				pleaseOpenLabel.ForeColor = Color.White;
 
 				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"));
 			}
@@ -1101,23 +1107,30 @@ namespace quick_picture_viewer
 			{
 				picturePanel.Cursor = Cursors.Default;
 
-				this.FormBorderStyle = FormBorderStyle.Sizable;
-
 				picturePanel.Top = toolStrip1.Height;
 				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
 
-				if (Properties.Settings.Default.BackColor.Length > 0)
+				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 27;
+				pleaseOpenLabel.ForeColor = this.ForeColor;
+
+				this.FormBorderStyle = FormBorderStyle.Sizable;
+
+				if (checkboardBackground)
 				{
-					picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
+					picturePanel.BackColor = Color.Transparent;
+					setCheckboardBackground(true, true);
 				}
 				else
 				{
-					picturePanel.BackColor = Color.Transparent;
+					if (Properties.Settings.Default.BackColor.Length > 0)
+					{
+						picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
+					}
+					else
+					{
+						picturePanel.BackColor = Color.Transparent;
+					}
 				}
-
-				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 27;
-
-				pleaseOpenLabel.ForeColor = this.ForeColor;
 			}
 
 			setZoomText(resMan.GetString("auto"));
@@ -2069,6 +2082,7 @@ namespace quick_picture_viewer
 		{
 			if (colorDialog1.ShowDialog() == DialogResult.OK)
 			{
+				setCheckboardBackground(false, true);
 				picturePanel.BackColor = colorDialog1.Color;
 				Properties.Settings.Default.BackColor = colorDialog1.Color.ToArgb().ToString();
 				Properties.Settings.Default.Save();
