@@ -118,19 +118,19 @@ namespace quick_picture_viewer
 			pleaseOpenLabel.Text = resMan.GetString("please-open-image");
 
 			moreButton.Text = resMan.GetString("more-options");
-			aboutBtn.Text = resMan.GetString("about");
-			settingsButton.Text = resMan.GetString("settings");
+			aboutBtn.Text = resMan.GetString("about") + " ...";
+			settingsButton.Text = resMan.GetString("settings") + " ...";
 			settingsButton.ShortcutKeyDisplayString = "Ctrl+" + resMan.GetString("comma");
 			newWindowButton.Text = resMan.GetString("new-window");
 			framelessBtn.Text = resMan.GetString("frameless-mode");
 			onTopButton.Text = resMan.GetString("always-on-top");
 			backColorBtn.Text = resMan.GetString("background-color");
 			backClearBtn.Text = resMan.GetString("clear");
-			backCustomBtn.Text = resMan.GetString("choose-color");
+			backCustomBtn.Text = resMan.GetString("choose-color") + " ...";
 			actualSizeBtn.Text = resMan.GetString("zoom-to-actual-size") + " (100%)";
-			setAsDesktopButton.Text = resMan.GetString("set-as-desktop-background");
-			printButton.Text = resMan.GetString("print");
-			deleteBtn.Text = resMan.GetString("move-to-trash");
+			setAsDesktopButton.Text = resMan.GetString("set-as-desktop-background") + " ...";
+			printButton.Text = resMan.GetString("print") + " ...";
+			deleteBtn.Text = resMan.GetString("move-to-trash") + " ...";
 			reloadButton.Text = resMan.GetString("reload-file");
 
 			editButton.Text = resMan.GetString("edit-image");
@@ -146,7 +146,7 @@ namespace quick_picture_viewer
 
 			externalBtn.Text = resMan.GetString("open-external");
 			externalRunBtn.Text = resMan.GetString("open-with-default");
-			externalChooseBtn.Text = resMan.GetString("open-with-choose");
+			externalChooseBtn.Text = resMan.GetString("open-with-choose") + " ...";
 
 			openButton.Text = resMan.GetString("open-file") + " | Ctrl+O";
 			saveAsButton.Text = resMan.GetString("save-as") + " | Ctrl+S";

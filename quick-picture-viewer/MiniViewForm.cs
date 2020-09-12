@@ -247,11 +247,11 @@ namespace quick_picture_viewer
 
 			if (b)
 			{
-				pictureBox.BackgroundImage = Properties.Resources.checkboard_dark;
+				picturePanel.BackgroundImage = Properties.Resources.checkboard_dark;
 			}
 			else
 			{
-				pictureBox.BackgroundImage = null;
+				picturePanel.BackgroundImage = null;
 			}
 		}
 
@@ -315,11 +315,6 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.None;
 			}
-		}
-
-		private void picturePanel_DoubleClick(object sender, EventArgs e)
-		{
-			this.Close();
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)

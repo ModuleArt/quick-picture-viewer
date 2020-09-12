@@ -157,6 +157,10 @@
     <value>Цвет фона</value>
     <comment>Menu</comment>
   </data>
+  <data name="beta-lang-warning" xml:space="preserve">
+    <value>Этот язык все еще находится в стадии бета-тестирования. Приложение может вылетать или не запускаться.</value>
+    <comment>Settings</comment>
+  </data>
   <data name="bottom" xml:space="preserve">
     <value>Снизу</value>
     <comment>Print</comment>
@@ -678,7 +682,7 @@
     <comment>Print</comment>
   </data>
   <data name="translated-by" xml:space="preserve">
-    <value>Автор перевода</value>
+    <value>Авторы перевода</value>
     <comment>Settings</comment>
   </data>
   <data name="type-options" xml:space="preserve">
@@ -686,7 +690,7 @@
     <comment>Picture panel, SVG options</comment>
   </data>
   <data name="ui-lang" xml:space="preserve">
-    <value>Язык интерфейса:</value>
+    <value>Язык интерфейса</value>
     <comment>Settings</comment>
   </data>
   <data name="unable-open-dds" xml:space="preserve">

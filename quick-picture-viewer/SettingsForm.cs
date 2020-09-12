@@ -12,24 +12,28 @@ namespace quick_picture_viewer
 		private struct Language
 		{
 			public string Code;
-			public string Author;
+			public string[] Authors;
+			public bool Beta;
 		}
 
 		private Language[] languages = {
 			new Language
 			{
 				Code = "en",
-				Author = "Beelink"
+				Authors = new string[] { "Beelink" },
+				Beta = false
 			},
 			new Language
 			{
 				Code = "ru",
-				Author = "Beelink"
+				Authors = new string[] { "Beelink" },
+				Beta = false
 			},
 			new Language
 			{
 				Code = "es",
-				Author = "IpsumRy"
+				Authors = new string[] { "IpsumRy" },
+				Beta = true
 			}
 		};
 
@@ -88,8 +92,6 @@ namespace quick_picture_viewer
 				}
 			}
 
-			translatedByLink.LinkColor = ThemeManager.AccentColor;
-
 			SetDarkMode(darkMode);
 		}
 
@@ -121,6 +123,7 @@ namespace quick_picture_viewer
 			langLabel.Text = owner.resMan.GetString("ui-lang") + ":";
 			zoomWheelCheckBox.Text = string.Format(owner.resMan.GetString("wheel-to-zoom"), "Ctrl");
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			translatedByLabel.Text = owner.resMan.GetString("translated-by") + ": ";
 		}
 
 		private void SetDarkMode(bool dark)
@@ -257,22 +260,47 @@ namespace quick_picture_viewer
 			Properties.Settings.Default.Language = languages[langComboBox.SelectedIndex].Code;
 			Properties.Settings.Default.Save();
 
+			if (languages[langComboBox.SelectedIndex].Beta)
+			{
+				MessageBox.Show(
+					owner.resMan.GetString("beta-lang-warning"),
+					owner.resMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Warning
+				);
+			}
+
 			if (owner != null)
 			{
-				translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].Author;
+				translateAuthorsPanel.Controls.Clear();
+				translateAuthorsPanel.Left = translatedByLabel.Location.X + translatedByLabel.Width;
+
+				int curX = 0;
+				for (int i = 0; i < languages[langComboBox.SelectedIndex].Authors.Length; i++)
+				{
+					LinkLabel ll = new LinkLabel();
+					ll.AutoSize = true;
+					ll.Text = languages[langComboBox.SelectedIndex].Authors[i];
+					ll.LinkColor = ThemeManager.AccentColor;
+					ll.Margin = new Padding(0, 0, 0, 0);
+					ll.Click += Ll_Click;
+					translateAuthorsPanel.Controls.Add(ll);
+					ll.Left = curX;
+					curX += ll.Width;
+				}
 			}
+		}
+
+		private void Ll_Click(object sender, EventArgs e)
+		{
+			Process.Start("https://github.com/" + (sender as LinkLabel).Text);
 		}
 
 		private void SettingsForm_Load(object sender, EventArgs e)
 		{
 			owner = this.Owner as MainForm;
 			InitLanguage();
-			translatedByLink.Text = owner.resMan.GetString("translated-by") + ": " + languages[langComboBox.SelectedIndex].Author;
-		}
-
-		private void translatedByLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start("https://github.com/" + languages[langComboBox.SelectedIndex].Author);
+			langComboBox_SelectedIndexChanged(null, null);
 		}
 	}
 }

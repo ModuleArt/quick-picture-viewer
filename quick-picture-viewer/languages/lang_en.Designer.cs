@@ -151,6 +151,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This language is still in beta. The application may crash or not launch..
+        /// </summary>
+        public static string beta_lang_warning {
+            get {
+                return ResourceManager.GetString("beta-lang-warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bottom.
         /// </summary>
         public static string bottom {
@@ -1339,7 +1348,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User interface language:.
+        ///   Looks up a localized string similar to User interface language.
         /// </summary>
         public static string ui_lang {
             get {

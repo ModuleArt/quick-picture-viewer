@@ -54,8 +54,9 @@
 			this.favExtTextBox = new QuickLibrary.QlibTextBox();
 			this.favExtLabel = new System.Windows.Forms.Label();
 			this.langPage = new System.Windows.Forms.TabPage();
+			this.translateAuthorsPanel = new System.Windows.Forms.Panel();
+			this.translatedByLabel = new System.Windows.Forms.Label();
 			this.langLabel = new System.Windows.Forms.Label();
-			this.translatedByLink = new System.Windows.Forms.LinkLabel();
 			this.restartLabel2 = new System.Windows.Forms.Label();
 			this.langComboBox = new QuickLibrary.QlibComboBox();
 			this.titlePanel = new System.Windows.Forms.Panel();
@@ -408,8 +409,9 @@
 			// langPage
 			// 
 			this.langPage.BackColor = System.Drawing.Color.White;
+			this.langPage.Controls.Add(this.translateAuthorsPanel);
+			this.langPage.Controls.Add(this.translatedByLabel);
 			this.langPage.Controls.Add(this.langLabel);
-			this.langPage.Controls.Add(this.translatedByLink);
 			this.langPage.Controls.Add(this.restartLabel2);
 			this.langPage.Controls.Add(this.langComboBox);
 			this.langPage.Location = new System.Drawing.Point(4, 60);
@@ -420,6 +422,24 @@
 			this.langPage.TabIndex = 6;
 			this.langPage.Text = "localization";
 			// 
+			// translateAuthorsPanel
+			// 
+			this.translateAuthorsPanel.Location = new System.Drawing.Point(102, 81);
+			this.translateAuthorsPanel.Margin = new System.Windows.Forms.Padding(0);
+			this.translateAuthorsPanel.Name = "translateAuthorsPanel";
+			this.translateAuthorsPanel.Size = new System.Drawing.Size(220, 19);
+			this.translateAuthorsPanel.TabIndex = 43;
+			// 
+			// translatedByLabel
+			// 
+			this.translatedByLabel.AutoSize = true;
+			this.translatedByLabel.Location = new System.Drawing.Point(10, 81);
+			this.translatedByLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.translatedByLabel.Name = "translatedByLabel";
+			this.translatedByLabel.Size = new System.Drawing.Size(92, 19);
+			this.translatedByLabel.TabIndex = 42;
+			this.translatedByLabel.Text = "translated by:";
+			// 
 			// langLabel
 			// 
 			this.langLabel.AutoSize = true;
@@ -429,18 +449,6 @@
 			this.langLabel.Size = new System.Drawing.Size(68, 19);
 			this.langLabel.TabIndex = 41;
 			this.langLabel.Text = "language:";
-			// 
-			// translatedByLink
-			// 
-			this.translatedByLink.AutoSize = true;
-			this.translatedByLink.Location = new System.Drawing.Point(10, 81);
-			this.translatedByLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.translatedByLink.Name = "translatedByLink";
-			this.translatedByLink.Size = new System.Drawing.Size(89, 19);
-			this.translatedByLink.TabIndex = 40;
-			this.translatedByLink.TabStop = true;
-			this.translatedByLink.Text = "translated by";
-			this.translatedByLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.translatedByLink_LinkClicked);
 			// 
 			// restartLabel2
 			// 
@@ -583,7 +591,8 @@
 		private System.Windows.Forms.TabPage langPage;
 		private QuickLibrary.QlibComboBox langComboBox;
 		private System.Windows.Forms.Label restartLabel2;
-		private System.Windows.Forms.LinkLabel translatedByLink;
 		private System.Windows.Forms.Label langLabel;
+		private System.Windows.Forms.Label translatedByLabel;
+		private System.Windows.Forms.Panel translateAuthorsPanel;
 	}
 }

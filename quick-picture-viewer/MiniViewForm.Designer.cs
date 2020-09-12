@@ -111,7 +111,6 @@
 			this.picturePanel.Name = "picturePanel";
 			this.picturePanel.Size = new System.Drawing.Size(400, 400);
 			this.picturePanel.TabIndex = 5;
-			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.picturePanel.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
 			this.picturePanel.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
@@ -129,7 +128,6 @@
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
-			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.pictureBox.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
 			this.pictureBox.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);

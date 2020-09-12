@@ -42,7 +42,7 @@
 * Open image with external app or show in file explorer
 * Picture in picture mode
 * Copy, paste to clipboard
-* Checkboard background
+* Checkerboard background
 * Window can be always on top, borderless and fullscreen
 * Set image as desktop background
 * Print image or export to PDF
