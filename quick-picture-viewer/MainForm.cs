@@ -166,6 +166,9 @@ namespace quick_picture_viewer
 
 			hasChangesLabel.Text = resMan.GetString("not-saved");
 			zoomLabel.Text = resMan.GetString("zoom") + ": " + resMan.GetString("auto");
+
+			pluginsBtn.Text = resMan.GetString("plugins");
+			pluginManBtn.Text = resMan.GetString("plugin-manager");
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -1650,8 +1653,6 @@ namespace quick_picture_viewer
 				flipVerticalButton.Image = Properties.Resources.white_flipv;
 				rotate180Button.Image = Properties.Resources.white_degree;
 				customAngleBtn.Image = Properties.Resources.white_angle;
-				resizeBtn.Image = Properties.Resources.white_size;
-				cropBtn.Image = Properties.Resources.white_crop;
 
 				screenshotButton.Image = Properties.Resources.white_screenshot;
 				infoButton.Image = Properties.Resources.white_info;
@@ -1693,6 +1694,11 @@ namespace quick_picture_viewer
 				typeOpsButton.Image = Properties.Resources.white_options;
 				typeOpsButton.BackColor = ThemeManager.DarkSecondColor;
 				typeOpsButton.ForeColor = Color.White;
+
+				pluginsBtn.Image = Properties.Resources.white_plugin;
+				pluginsBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
+				pluginsBtn.DropDown.ForeColor = Color.White;
+				pluginManBtn.Image = Properties.Resources.white_plugin;
 
 				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
 				zoomTextBox.ForeColor = Color.White;
@@ -2129,6 +2135,48 @@ namespace quick_picture_viewer
 				this.FormBorderStyle = FormBorderStyle.None;
 				statusStrip1.SizingGrip = false;
 				framelessBtn.Checked = true;
+			}
+		}
+
+		private void pluginsBtn_DropDownClosed(object sender, EventArgs e)
+		{
+			for (int i = pluginsBtn.DropDownItems.Count - 1; i > 0; i--)
+			{
+				pluginsBtn.DropDownItems.Remove(pluginsBtn.DropDownItems[i]);
+			}
+		}
+
+		private string GetPropertyValue(object t, string propertyName)
+		{
+			object val = t.GetType().GetProperties().Single(pi => pi.Name == propertyName).GetValue(t, null);
+			return (string)val;
+		}
+
+		private void pluginsBtn_DropDownOpening(object sender, EventArgs eventArgs)
+		{
+			PluginInfo[] plugins = PluginManager.GetPlugins();
+			for (int i = 0; i < plugins.Length; i++)
+			{
+				QlibMenuSeparator separator = new QlibMenuSeparator();
+				pluginsBtn.DropDownItems.Add(separator);
+				for (int j = 0; j < plugins[i].functions.Length; j++)
+				{
+					string title = plugins[i].functions[j].title.Get(Properties.Settings.Default.Language);
+					if (plugins[i].functions[j].ops.showDialog)
+					{
+						title += " ...";
+					}
+
+					PluginMenuItem tsmi = new PluginMenuItem(title, plugins[i].name, plugins[i].functions[j].name, originalImage != null, darkMode);
+					tsmi.Click += (s, e) =>
+					{
+						IntPtr pluginPtr = PluginManager.LoadLibrary(tsmi.dllPath);
+						IntPtr funcPtr = PluginManager.GetProcAddressOrdinal(pluginPtr, tsmi.funcName);
+						var callback = Marshal.GetDelegateForFunctionPointer<PluginManager.RunFunction>(funcPtr);
+						callback(originalImage, Path.Combine(currentFolder, currentFile), darkMode, Properties.Settings.Default.Language);
+					};
+					pluginsBtn.DropDownItems.Add(tsmi);
+				}
 			}
 		}
 	}

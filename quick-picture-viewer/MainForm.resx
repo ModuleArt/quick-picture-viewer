@@ -666,58 +666,6 @@
   <data name="customAngleBtn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 6</value>
-  </data>
-  <data name="toolStripSeparator8.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resizeBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resizeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAGZJREFUOE/VjzEKgDAQBO9bKtio//+FmvgI3REECRa5KwIOTJFiJ5y14vwwRC9X
-        GQpMcpOddAcY75IxuALlGKoDs2TM7W7ajt83jTJLbq/mCfBzksP9ckBgkaExEDgkkRAESn+B2QXamyDY
-        CyfAWwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="resizeBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+R</value>
-  </data>
-  <data name="resizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="resizeBtn.Text" xml:space="preserve">
-    <value>resize</value>
-  </data>
-  <data name="resizeBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cropBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cropBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAHdJREFUOE+t
-        jcENgCAQBGlFW/ClT+NP+69AP1qE7hJQQg49kEkmlwu3i6nN6eYbrZsiXwUjPGBjtwAGvSTcYweYhAcS
-        C+TPqfcb6cCHe5hdMMMdMkyyCuIwURdMcIOd3R5UBakwURWsUAqrYIHWIoqDnt8FtTHmAmhIMNeG87+9
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="cropBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+R</value>
-  </data>
-  <data name="cropBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 24</value>
-  </data>
-  <data name="cropBtn.Text" xml:space="preserve">
-    <value>crop</value>
-  </data>
-  <data name="cropBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="editButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -920,6 +868,30 @@
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 24</value>
+  </data>
+  <data name="pluginsBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pluginManBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F2</value>
+  </data>
+  <data name="pluginManBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 24</value>
+  </data>
+  <data name="pluginManBtn.Text" xml:space="preserve">
+    <value>plugin manager</value>
+  </data>
+  <data name="pluginsBtn.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pluginsBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="pluginsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 25</value>
+  </data>
+  <data name="pluginsBtn.Text" xml:space="preserve">
+    <value>plugins</value>
   </data>
   <data name="moreButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1350,7 +1322,7 @@
     <value>picturePanel</value>
   </data>
   <data name="&gt;&gt;picturePanel.Type" xml:space="preserve">
-    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.1.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;picturePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -5267,6 +5239,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAwAMAAA==
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 300</value>
   </data>
@@ -5507,24 +5482,6 @@
   <data name="&gt;&gt;customAngleBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator8.Name" xml:space="preserve">
-    <value>toolStripSeparator8</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator8.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;resizeBtn.Name" xml:space="preserve">
-    <value>resizeBtn</value>
-  </data>
-  <data name="&gt;&gt;resizeBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cropBtn.Name" xml:space="preserve">
-    <value>cropBtn</value>
-  </data>
-  <data name="&gt;&gt;cropBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;copyButton.Name" xml:space="preserve">
     <value>copyButton</value>
   </data>
@@ -5584,6 +5541,18 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
     <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pluginsBtn.Name" xml:space="preserve">
+    <value>pluginsBtn</value>
+  </data>
+  <data name="&gt;&gt;pluginsBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pluginManBtn.Name" xml:space="preserve">
+    <value>pluginManBtn</value>
+  </data>
+  <data name="&gt;&gt;pluginManBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;moreButton.Name" xml:space="preserve">
     <value>moreButton</value>

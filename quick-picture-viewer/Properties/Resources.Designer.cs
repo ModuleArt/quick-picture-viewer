@@ -113,6 +113,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_plugin {
+            get {
+                object obj = ResourceManager.GetObject("black_plugin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_square {
             get {
                 object obj = ResourceManager.GetObject("black-square", resourceCulture);
@@ -506,6 +516,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_picfolder {
             get {
                 object obj = ResourceManager.GetObject("white-picfolder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_plugin {
+            get {
+                object obj = ResourceManager.GetObject("white_plugin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

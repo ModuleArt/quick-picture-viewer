@@ -43,7 +43,6 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.toolStrip1 = new QuickLibrary.QlibToolStrip();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
@@ -71,9 +70,6 @@
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.rotate180Button = new System.Windows.Forms.ToolStripMenuItem();
 			this.customAngleBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator8 = new QuickLibrary.QlibMenuSeparator();
-			this.resizeBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.cropBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.copyImageButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,6 +80,8 @@
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator5 = new QuickLibrary.QlibToolStripSeparator();
+			this.pluginsBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.pluginManBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,6 +100,7 @@
 			this.toolStripSeparator10 = new QuickLibrary.QlibMenuSeparator();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
@@ -208,20 +207,6 @@
 			// 
 			this.colorDialog1.Color = System.Drawing.Color.Blue;
 			// 
-			// typeOpsButton
-			// 
-			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
-			// 
 			// toolStrip1
 			// 
 			resources.ApplyResources(this.toolStrip1, "toolStrip1");
@@ -253,6 +238,7 @@
             this.fullscreenButton,
             this.miniViewButton,
             this.toolStripSeparator5,
+            this.pluginsBtn,
             this.moreButton});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Name = "toolStrip1";
@@ -421,10 +407,7 @@
             this.rotateRightButton,
             this.rotateLeftButton,
             this.rotate180Button,
-            this.customAngleBtn,
-            this.toolStripSeparator8,
-            this.resizeBtn,
-            this.cropBtn});
+            this.customAngleBtn});
 			this.editButton.Margin = new System.Windows.Forms.Padding(0);
 			this.editButton.Name = "editButton";
 			// 
@@ -442,7 +425,6 @@
 			// 
 			// toolStripSeparator7
 			// 
-			this.toolStripSeparator7.Margin = new System.Windows.Forms.Padding(4);
 			this.toolStripSeparator7.Name = "toolStripSeparator7";
 			resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
 			// 
@@ -469,22 +451,6 @@
 			resources.ApplyResources(this.customAngleBtn, "customAngleBtn");
 			this.customAngleBtn.Image = global::quick_picture_viewer.Properties.Resources.black_angle;
 			this.customAngleBtn.Name = "customAngleBtn";
-			// 
-			// toolStripSeparator8
-			// 
-			this.toolStripSeparator8.Margin = new System.Windows.Forms.Padding(4);
-			this.toolStripSeparator8.Name = "toolStripSeparator8";
-			resources.ApplyResources(this.toolStripSeparator8, "toolStripSeparator8");
-			// 
-			// resizeBtn
-			// 
-			resources.ApplyResources(this.resizeBtn, "resizeBtn");
-			this.resizeBtn.Name = "resizeBtn";
-			// 
-			// cropBtn
-			// 
-			resources.ApplyResources(this.cropBtn, "cropBtn");
-			this.cropBtn.Name = "cropBtn";
 			// 
 			// copyButton
 			// 
@@ -562,6 +528,24 @@
 			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
 			// 
+			// pluginsBtn
+			// 
+			resources.ApplyResources(this.pluginsBtn, "pluginsBtn");
+			this.pluginsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.pluginsBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pluginManBtn});
+			this.pluginsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
+			this.pluginsBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.pluginsBtn.Name = "pluginsBtn";
+			this.pluginsBtn.DropDownClosed += new System.EventHandler(this.pluginsBtn_DropDownClosed);
+			this.pluginsBtn.DropDownOpening += new System.EventHandler(this.pluginsBtn_DropDownOpening);
+			// 
+			// pluginManBtn
+			// 
+			this.pluginManBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
+			this.pluginManBtn.Name = "pluginManBtn";
+			resources.ApplyResources(this.pluginManBtn, "pluginManBtn");
+			// 
 			// moreButton
 			// 
 			resources.ApplyResources(this.moreButton, "moreButton");
@@ -614,7 +598,6 @@
 			// 
 			// qlibMenuSeparator2
 			// 
-			this.qlibMenuSeparator2.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
 			resources.ApplyResources(this.qlibMenuSeparator2, "qlibMenuSeparator2");
 			// 
@@ -627,7 +610,6 @@
 			// 
 			// toolStripSeparator9
 			// 
-			this.toolStripSeparator9.Margin = new System.Windows.Forms.Padding(4);
 			this.toolStripSeparator9.Name = "toolStripSeparator9";
 			resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
 			// 
@@ -649,7 +631,6 @@
 			// 
 			// qlibMenuSeparator1
 			// 
-			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator1.Name = "qlibMenuSeparator1";
 			resources.ApplyResources(this.qlibMenuSeparator1, "qlibMenuSeparator1");
 			// 
@@ -680,7 +661,6 @@
 			// 
 			// toolStripSeparator10
 			// 
-			this.toolStripSeparator10.Margin = new System.Windows.Forms.Padding(4);
 			this.toolStripSeparator10.Name = "toolStripSeparator10";
 			resources.ApplyResources(this.toolStripSeparator10, "toolStripSeparator10");
 			// 
@@ -697,6 +677,20 @@
 			resources.ApplyResources(this.aboutBtn, "aboutBtn");
 			this.aboutBtn.Name = "aboutBtn";
 			this.aboutBtn.Click += new System.EventHandler(this.aboutButton_Click);
+			// 
+			// typeOpsButton
+			// 
+			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
 			// 
 			// picturePanel
 			// 
@@ -816,14 +810,11 @@
 		private System.Windows.Forms.ToolStripMenuItem flipHorizontalButton;
 		private System.Windows.Forms.ToolStripMenuItem flipVerticalButton;
 		private System.Windows.Forms.ToolStripMenuItem newWindowButton;
-		private System.Windows.Forms.ToolStripMenuItem resizeBtn;
 		private System.Windows.Forms.ToolStripMenuItem rotate180Button;
-		private System.Windows.Forms.ToolStripMenuItem cropBtn;
 		private System.Windows.Forms.ToolStripButton miniViewButton;
 		private System.Windows.Forms.ToolStripMenuItem settingsButton;
 		private System.Windows.Forms.Label pleaseOpenLabel;
 		private QuickLibrary.QlibMenuSeparator toolStripSeparator7;
-		private QuickLibrary.QlibMenuSeparator toolStripSeparator8;
 		private QuickLibrary.QlibMenuSeparator toolStripSeparator9;
 		private QuickLibrary.QlibMenuSeparator toolStripSeparator10;
 		private System.Windows.Forms.ToolStripDropDownButton copyButton;
@@ -847,6 +838,8 @@
 		private System.Windows.Forms.ToolStripMenuItem framelessBtn;
 		private System.Windows.Forms.ToolStripMenuItem customAngleBtn;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+		private System.Windows.Forms.ToolStripDropDownButton pluginsBtn;
+		private System.Windows.Forms.ToolStripMenuItem pluginManBtn;
 	}
 }
 

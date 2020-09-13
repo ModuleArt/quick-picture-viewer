@@ -521,6 +521,14 @@
     <value>Откройте изображение для просмотра или редактирования</value>
     <comment>Picture panel</comment>
   </data>
+  <data name="plugin-manager" xml:space="preserve">
+    <value>Менеджер плагинов</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="plugins" xml:space="preserve">
+    <value>Плагины</value>
+    <comment>Menu</comment>
+  </data>
   <data name="plus" xml:space="preserve">
     <value>Плюс</value>
     <comment>Menu</comment>

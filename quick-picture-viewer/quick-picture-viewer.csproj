@@ -83,6 +83,9 @@
       <HintPath>..\packages\Fizzler.1.2.0\lib\netstandard2.0\Fizzler.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Octokit, Version=0.48.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Octokit.0.48.0\lib\net46\Octokit.dll</HintPath>
     </Reference>
@@ -148,6 +151,11 @@
     </Compile>
     <Compile Include="MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginInfo.cs" />
+    <Compile Include="PluginManager.cs" />
+    <Compile Include="PluginMenuItem.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
@@ -240,6 +248,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <EmbeddedResource Include="plugins\resizer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -325,6 +336,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <EmbeddedResource Include="plugins\resizer\crop.dark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plugins\resizer\crop.light.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plugins\resizer\resize.dark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plugins\resizer\resize.light.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plugins\resizer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="resources\imgs\dark\black-plugin.png" />
+    <None Include="resources\imgs\light\white-plugin.png" />
     <None Include="resources\imgs\light\white-angle.png" />
     <None Include="resources\imgs\dark\black-angle.png" />
     <None Include="resources\imgs\light\white-frame.png" />

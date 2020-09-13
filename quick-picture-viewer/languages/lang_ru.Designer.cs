@@ -970,6 +970,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Менеджер плагинов.
+        /// </summary>
+        public static string plugin_manager {
+            get {
+                return ResourceManager.GetString("plugin-manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Плагины.
+        /// </summary>
+        public static string plugins {
+            get {
+                return ResourceManager.GetString("plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Плюс.
         /// </summary>
         public static string plus {

@@ -521,6 +521,14 @@
     <value>Please open an image to view or edit</value>
     <comment>Picture panel</comment>
   </data>
+  <data name="plugin-manager" xml:space="preserve">
+    <value>Plugin manager</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="plugins" xml:space="preserve">
+    <value>Plugins</value>
+    <comment>Menu</comment>
+  </data>
   <data name="plus" xml:space="preserve">
     <value>Plus</value>
     <comment>Menu</comment>
