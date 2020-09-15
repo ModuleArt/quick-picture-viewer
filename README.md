@@ -12,6 +12,9 @@
     <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/moduleart/quick-picture-viewer?include_prereleases">
     <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/total">
   </a>
+  <a href="https://moduleart.github.io">
+    <img alt="Module Art website" src="https://img.shields.io/badge/www-moduleart-%2300BCD4">
+  </a>
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF">
   </a>

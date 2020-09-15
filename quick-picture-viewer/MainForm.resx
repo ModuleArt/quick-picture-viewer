@@ -1322,7 +1322,7 @@
     <value>picturePanel</value>
   </data>
   <data name="&gt;&gt;picturePanel.Type" xml:space="preserve">
-    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;picturePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -5238,9 +5238,6 @@
         AAAAAwAAAAMAAAADAAAAAwAAAAMAAAACAAAAAgAAAAAAAAAAwAMAAIABAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAwAMAAA==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 300</value>

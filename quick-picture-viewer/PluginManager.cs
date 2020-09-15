@@ -22,7 +22,7 @@ namespace quick_picture_viewer
 			string language = "en"
 		);
 
-		public static PluginInfo[] GetPlugins()
+		public static PluginInfo[] GetPlugins(bool onlyAvailable)
 		{
 			List<PluginInfo> plugins = new List<PluginInfo>();
 			DirectoryInfo di = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "plugins"));
@@ -37,9 +37,23 @@ namespace quick_picture_viewer
 
 					PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, dlls[i].Name)));
 
-					if (pi.targets[0])
-
-					plugins.Add();
+					if (onlyAvailable)
+					{
+						for (int j = 0; j < pi.targets.Length; j++)
+						{
+							if (pi.targets[j].name == "quick-picture-viewer" &&
+								ver.CompareTo(pi.targets[j].minVersion) >= 0 &&
+								ver.CompareTo(pi.targets[j].maxVersion) <= 0)
+							{
+								plugins.Add(pi);
+								break;
+							}
+						}
+					}
+					else
+					{
+						plugins.Add(pi);
+					}
 				}
 			}
 			return plugins.ToArray();

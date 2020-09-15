@@ -28,13 +28,11 @@ namespace quick_picture_viewer
 			this.directoryName = directoryName;
 
 			InitializeComponent();
-			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { 
 				titlePanel, titleLabel,
 				fileNameLabel, folderLabel, fullPathLabel, compressionLabel, extensionLabel, createdLabel, modifiedLabel,
 				sizeLabel, megapixelsLabel, resolutionLabel, inchesLabel, cmLabel, diskSizeLabel, ratioLabel
 			});
-
 			SetDarkMode(darkMode);
 		}
 

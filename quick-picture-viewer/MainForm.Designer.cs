@@ -376,6 +376,7 @@
 			this.zoomTextBox.Name = "zoomTextBox";
 			this.zoomTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zoomTextBox_KeyPress);
 			this.zoomTextBox.MouseEnter += new System.EventHandler(this.zoomTextBox_MouseEnter);
+			this.zoomTextBox.MouseLeave += new System.EventHandler(this.zoomTextBox_MouseLeave);
 			this.zoomTextBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
 			// 
 			// zoomInButton

@@ -34,9 +34,9 @@
 			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.zoomLabel = new System.Windows.Forms.Label();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.zoomLabel = new System.Windows.Forms.Label();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
@@ -54,7 +54,7 @@
 			this.resizeBtn.Location = new System.Drawing.Point(368, 368);
 			this.resizeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.resizeBtn.Name = "resizeBtn";
-			this.resizeBtn.Size = new System.Drawing.Size(32, 32);
+			this.resizeBtn.Size = new System.Drawing.Size(31, 31);
 			this.resizeBtn.TabIndex = 5;
 			this.resizeBtn.UseVisualStyleBackColor = false;
 			this.resizeBtn.Visible = false;
@@ -97,6 +97,23 @@
 			this.closeBtn.Visible = false;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
+			// zoomLabel
+			// 
+			this.zoomLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.zoomLabel.BackColor = System.Drawing.Color.Black;
+			this.zoomLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.zoomLabel.ForeColor = System.Drawing.Color.White;
+			this.zoomLabel.Location = new System.Drawing.Point(32, 0);
+			this.zoomLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.zoomLabel.Name = "zoomLabel";
+			this.zoomLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.zoomLabel.Size = new System.Drawing.Size(336, 32);
+			this.zoomLabel.TabIndex = 4;
+			this.zoomLabel.Text = "Zoom: Auto";
+			this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.zoomLabel.Visible = false;
+			// 
 			// picturePanel
 			// 
 			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -134,32 +151,15 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
-			// zoomLabel
-			// 
-			this.zoomLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.zoomLabel.BackColor = System.Drawing.Color.Black;
-			this.zoomLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.zoomLabel.ForeColor = System.Drawing.Color.White;
-			this.zoomLabel.Location = new System.Drawing.Point(32, 0);
-			this.zoomLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.zoomLabel.Name = "zoomLabel";
-			this.zoomLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.zoomLabel.Size = new System.Drawing.Size(336, 32);
-			this.zoomLabel.TabIndex = 4;
-			this.zoomLabel.Text = "Zoom: Auto";
-			this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.zoomLabel.Visible = false;
-			// 
 			// MiniViewForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(400, 400);
-			this.Controls.Add(this.resizeBtn);
 			this.Controls.Add(this.zoomLabel);
 			this.Controls.Add(this.autoZoomBtn);
 			this.Controls.Add(this.closeBtn);
+			this.Controls.Add(this.resizeBtn);
 			this.Controls.Add(this.picturePanel);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;

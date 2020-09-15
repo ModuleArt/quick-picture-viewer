@@ -34,7 +34,6 @@
 			this.companyLabel = new System.Windows.Forms.Label();
 			this.websiteLink = new System.Windows.Forms.LinkLabel();
 			this.licenseLabel = new System.Windows.Forms.Label();
-			this.makeDefaultLink = new System.Windows.Forms.LinkLabel();
 			this.updatesLink = new System.Windows.Forms.LinkLabel();
 			this.githubLink = new System.Windows.Forms.LinkLabel();
 			this.licenseLink = new System.Windows.Forms.LinkLabel();
@@ -44,6 +43,7 @@
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.descTextBox = new System.Windows.Forms.TextBox();
+			this.makeDefaultBtn = new System.Windows.Forms.Button();
 			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
@@ -73,7 +73,7 @@
 			// 
 			// companyLabel
 			// 
-			this.companyLabel.Location = new System.Drawing.Point(10, 364);
+			this.companyLabel.Location = new System.Drawing.Point(10, 335);
 			this.companyLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.companyLabel.Name = "companyLabel";
 			this.companyLabel.Size = new System.Drawing.Size(150, 19);
@@ -84,8 +84,8 @@
 			// websiteLink
 			// 
 			this.websiteLink.AutoSize = true;
-			this.websiteLink.Location = new System.Drawing.Point(160, 364);
-			this.websiteLink.Margin = new System.Windows.Forms.Padding(0);
+			this.websiteLink.Location = new System.Drawing.Point(160, 335);
+			this.websiteLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.websiteLink.Name = "websiteLink";
 			this.websiteLink.Size = new System.Drawing.Size(79, 19);
 			this.websiteLink.TabIndex = 4;
@@ -95,26 +95,13 @@
 			// 
 			// licenseLabel
 			// 
-			this.licenseLabel.Location = new System.Drawing.Point(10, 393);
+			this.licenseLabel.Location = new System.Drawing.Point(10, 364);
 			this.licenseLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.licenseLabel.Name = "licenseLabel";
 			this.licenseLabel.Size = new System.Drawing.Size(150, 19);
 			this.licenseLabel.TabIndex = 37;
 			this.licenseLabel.Text = "license:";
 			this.licenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// makeDefaultLink
-			// 
-			this.makeDefaultLink.Location = new System.Drawing.Point(10, 335);
-			this.makeDefaultLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-			this.makeDefaultLink.Name = "makeDefaultLink";
-			this.makeDefaultLink.Size = new System.Drawing.Size(300, 19);
-			this.makeDefaultLink.TabIndex = 3;
-			this.makeDefaultLink.TabStop = true;
-			this.makeDefaultLink.Text = "set as default photo viewer";
-			this.makeDefaultLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.makeDefaultLink.Visible = false;
-			this.makeDefaultLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeDefaultLink_LinkClicked);
 			// 
 			// updatesLink
 			// 
@@ -130,7 +117,7 @@
 			// 
 			// githubLink
 			// 
-			this.githubLink.Location = new System.Drawing.Point(10, 422);
+			this.githubLink.Location = new System.Drawing.Point(10, 393);
 			this.githubLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.githubLink.Name = "githubLink";
 			this.githubLink.Size = new System.Drawing.Size(300, 19);
@@ -143,7 +130,7 @@
 			// licenseLink
 			// 
 			this.licenseLink.AutoSize = true;
-			this.licenseLink.Location = new System.Drawing.Point(160, 393);
+			this.licenseLink.Location = new System.Drawing.Point(160, 364);
 			this.licenseLink.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.licenseLink.Name = "licenseLink";
 			this.licenseLink.Size = new System.Drawing.Size(59, 19);
@@ -212,11 +199,27 @@
 			this.descTextBox.TabIndex = 42;
 			this.descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
+			// makeDefaultBtn
+			// 
+			this.makeDefaultBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.makeDefaultBtn.FlatAppearance.BorderSize = 0;
+			this.makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.makeDefaultBtn.Location = new System.Drawing.Point(10, 422);
+			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.makeDefaultBtn.Name = "makeDefaultBtn";
+			this.makeDefaultBtn.Size = new System.Drawing.Size(300, 32);
+			this.makeDefaultBtn.TabIndex = 43;
+			this.makeDefaultBtn.Text = "set as default photo viewer";
+			this.makeDefaultBtn.UseVisualStyleBackColor = false;
+			this.makeDefaultBtn.Visible = false;
+			this.makeDefaultBtn.Click += new System.EventHandler(this.makeDefaultBtn_Click);
+			// 
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(320, 460);
+			this.ClientSize = new System.Drawing.Size(320, 464);
+			this.Controls.Add(this.makeDefaultBtn);
 			this.Controls.Add(this.descTextBox);
 			this.Controls.Add(this.githubLink);
 			this.Controls.Add(this.licenseLabel);
@@ -224,7 +227,6 @@
 			this.Controls.Add(this.websiteLink);
 			this.Controls.Add(this.licenseLink);
 			this.Controls.Add(this.companyLabel);
-			this.Controls.Add(this.makeDefaultLink);
 			this.Controls.Add(this.logoPictureBox);
 			this.Controls.Add(this.updatesLink);
 			this.Controls.Add(this.versionLabel);
@@ -258,7 +260,6 @@
 		private System.Windows.Forms.LinkLabel websiteLink;
 		private System.Windows.Forms.LinkLabel githubLink;
 		private System.Windows.Forms.LinkLabel updatesLink;
-		private System.Windows.Forms.LinkLabel makeDefaultLink;
 		private System.Windows.Forms.Label licenseLabel;
 		private System.Windows.Forms.LinkLabel licenseLink;
 		private System.Windows.Forms.ToolTip infoTooltip;
@@ -267,5 +268,6 @@
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.PictureBox logoPictureBox;
 		private System.Windows.Forms.TextBox descTextBox;
+		private System.Windows.Forms.Button makeDefaultBtn;
 	}
 }

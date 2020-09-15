@@ -27,16 +27,14 @@ namespace quick_picture_viewer
 			this.panelHeight = panelHeight;
 
 			InitializeComponent();
-			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel, presetsLabel, widthLabel, heightLabel });
-
-			applyDarkMode(darkMode);
+			SetDarkMode(darkMode);
 
 			widthNumeric.Value = imageWidth;
 			heightNumeric.Value = imageHeight;
 		}
 
-		private void applyDarkMode(bool dark)
+		private void SetDarkMode(bool dark)
 		{
 			if (dark)
 			{

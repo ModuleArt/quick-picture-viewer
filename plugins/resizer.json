@@ -16,8 +16,8 @@
     "targets": [
         {
             "name": "quick-picture-viewer",
-            "minVersion": "2.1.2",
-            "maxVersion": "2.1.2"
+            "minVersion": "2.2.0",
+            "maxVersion": "2.2.0"
         }
     ],
     "functions": [
@@ -28,9 +28,8 @@
                 "ru": "Изменить размер"
             },
             "hotkey": {
-                "ctrl": true,
                 "shift": false,
-                "key": "R"
+                "key": 82
             },
             "ops": {
                 "image": true,
@@ -45,9 +44,8 @@
                 "ru": "Обрезать / Размер холста"
             },
             "hotkey": {
-                "ctrl": true,
                 "shift": true,
-                "key": "R"
+                "key": 82
             },
             "ops": {
                 "image": true,

@@ -24,7 +24,7 @@ namespace quick_picture_viewer
 		{
 			public bool ctrl;
 			public bool shift;
-			public char key;
+			public int key;
 		}
 
 		public struct MultilangString

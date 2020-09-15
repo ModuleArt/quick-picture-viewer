@@ -248,9 +248,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <EmbeddedResource Include="plugins\resizer.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -336,21 +333,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
-    <EmbeddedResource Include="plugins\resizer\crop.dark.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="plugins\resizer\crop.light.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="plugins\resizer\resize.dark.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="plugins\resizer\resize.light.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="plugins\resizer.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <None Include="resources\imgs\dark\black-plugin.png" />
     <None Include="resources\imgs\light\white-plugin.png" />
     <None Include="resources\imgs\light\white-angle.png" />

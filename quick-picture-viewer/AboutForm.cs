@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -21,9 +20,7 @@ namespace quick_picture_viewer
 			}
 
 			InitializeComponent();
-			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel, productLabel, versionLabel });
-
 			SetDarkMode(darkMode);
 
 			string fullVer = Assembly.GetExecutingAssembly().GetName().Version.ToString();
@@ -41,13 +38,12 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isWindows10())
 			{
-				makeDefaultLink.Visible = true;
+				makeDefaultBtn.Visible = true;
 			}
 
 			updatesLink.LinkColor = ThemeManager.AccentColor;
 			websiteLink.LinkColor = ThemeManager.AccentColor;
 			githubLink.LinkColor = ThemeManager.AccentColor;
-			makeDefaultLink.LinkColor = ThemeManager.AccentColor;
 			licenseLink.LinkColor = ThemeManager.AccentColor;
 		}
 
@@ -59,6 +55,7 @@ namespace quick_picture_viewer
 				this.ForeColor = Color.White;
 				descTextBox.BackColor = ThemeManager.DarkBackColor;
 				descTextBox.ForeColor = Color.White;
+				makeDefaultBtn.BackColor = ThemeManager.DarkSecondColor;
 			}
 
 			closeBtn.SetDarkMode(dark);
@@ -79,11 +76,6 @@ namespace quick_picture_viewer
 			MainForm parent = (MainForm) this.Owner;
 			parent.checkForUpdates(true);
 			this.Close();
-		}
-
-		private void makeDefaultLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start("ms-settings:defaultapps");
 		}
 
 		private void AboutForm_KeyDown(object sender, KeyEventArgs e)
@@ -116,10 +108,15 @@ namespace quick_picture_viewer
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			updatesLink.Text = owner.resMan.GetString("check-for-updates");
 			descTextBox.Text = owner.resMan.GetString("app-description");
-			makeDefaultLink.Text = owner.resMan.GetString("set-as-default-image-viewer");
-			infoTooltip.SetToolTip(makeDefaultLink, owner.resMan.GetString("open-windows-settings"));
+			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
+			infoTooltip.SetToolTip(makeDefaultBtn, owner.resMan.GetString("open-windows-settings"));
 			licenseLabel.Text = owner.resMan.GetString("license") + ":";
 			companyLabel.Text = owner.resMan.GetString("created-by");
+		}
+
+		private void makeDefaultBtn_Click(object sender, EventArgs e)
+		{
+			Process.Start("ms-settings:defaultapps");
 		}
 	}
 }

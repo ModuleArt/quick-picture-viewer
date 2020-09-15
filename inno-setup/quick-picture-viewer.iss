@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "2.1.1"
+#define MyAppVersion "2.2.0"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io"
 #define MyAppExeName "quick-picture-viewer.exe"

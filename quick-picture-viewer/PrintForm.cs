@@ -22,14 +22,12 @@ namespace quick_picture_viewer
 			this.darkMode = darkMode;
 
 			InitializeComponent();
-			(new DropShadow()).ApplyShadows(this);
 			SetDraggableControls(new List<Control>() { 
 				titlePanel, titleLabel, 
 				printPreviewControl1, 
 				documentLabel, marginsLabel, leftLabel, rightLabel, topLabel, bottomLabel
 			});
-
-			applyDarkMode(darkMode);
+			SetDarkMode(darkMode);
 
 			leftMarginTextBox.Text = pd.DefaultPageSettings.Margins.Left.ToString();
 			topMarginTextBox.Text = pd.DefaultPageSettings.Margins.Top.ToString();
@@ -41,7 +39,7 @@ namespace quick_picture_viewer
 			titleTextBox.Text = docTitle;
 		}
 
-		private void applyDarkMode(bool dark)
+		private void SetDarkMode(bool dark)
 		{
 			if (dark)
 			{

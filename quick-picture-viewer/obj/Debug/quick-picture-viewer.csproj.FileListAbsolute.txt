@@ -1,5 +1,3 @@
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\resizer.json
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\resizer.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_es.resx
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_ru.resx
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_en.resx
@@ -34,7 +32,3 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-pic
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.exe
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\resizer\crop.dark.png
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\resizer\crop.light.png
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\resizer\resize.dark.png
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\resizer\resize.light.png

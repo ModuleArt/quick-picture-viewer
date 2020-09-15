@@ -1628,8 +1628,6 @@ namespace quick_picture_viewer
 				deleteBtn.Image = Properties.Resources.white_trash;
 
 				externalBtn.Image = Properties.Resources.white_popup;
-				externalBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
-				externalBtn.DropDown.ForeColor = Color.White;
 				externalRunBtn.Image = Properties.Resources.white_exe;
 				externalChooseBtn.Image = Properties.Resources.white_list;
 				externalFavoriteBtn.Image = Properties.Resources.white_paint;
@@ -1645,8 +1643,6 @@ namespace quick_picture_viewer
 				actualSizeBtn.Image = Properties.Resources.white_actualsize;
 
 				editButton.Image = Properties.Resources.white_edit;
-				editButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
-				editButton.DropDown.ForeColor = Color.White;
 				rotateLeftButton.Image = Properties.Resources.white_rotatel;
 				rotateRightButton.Image = Properties.Resources.white_rotater;
 				flipHorizontalButton.Image = Properties.Resources.white_fliph;
@@ -1657,8 +1653,6 @@ namespace quick_picture_viewer
 				screenshotButton.Image = Properties.Resources.white_screenshot;
 				infoButton.Image = Properties.Resources.white_info;
 				copyButton.Image = Properties.Resources.white_copy;
-				copyButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
-				copyButton.DropDown.ForeColor = Color.White;
 				copyImageButton.Image = Properties.Resources.white_image;
 				copyFileBtn.Image = Properties.Resources.white_imgfile;
 				pasteButton.Image = Properties.Resources.white_paste;
@@ -1669,16 +1663,12 @@ namespace quick_picture_viewer
 				miniViewButton.Image = Properties.Resources.white_miniview;
 
 				moreButton.Image = Properties.Resources.white_more;
-				moreButton.DropDown.BackColor = ThemeManager.DarkSecondColor;
-				moreButton.DropDown.ForeColor = Color.White;
 				setAsDesktopButton.Image = Properties.Resources.white_desktop;
 				aboutBtn.Image = Properties.Resources.white_about;
 				reloadButton.Image = Properties.Resources.white_sync;
 				newWindowButton.Image = Properties.Resources.white_newwindow;
 				settingsButton.Image = Properties.Resources.white_settings;
 				backColorBtn.Image = Properties.Resources.white_palette;
-				backColorBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
-				backColorBtn.DropDown.ForeColor = Color.White;
 				backClearBtn.Image = Properties.Resources.white_erase;
 				backCustomBtn.Image = Properties.Resources.white_palette;
 				framelessBtn.Image = Properties.Resources.white_frame;
@@ -1696,8 +1686,6 @@ namespace quick_picture_viewer
 				typeOpsButton.ForeColor = Color.White;
 
 				pluginsBtn.Image = Properties.Resources.white_plugin;
-				pluginsBtn.DropDown.BackColor = ThemeManager.DarkSecondColor;
-				pluginsBtn.DropDown.ForeColor = Color.White;
 				pluginManBtn.Image = Properties.Resources.white_plugin;
 
 				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
@@ -2111,6 +2099,7 @@ namespace quick_picture_viewer
 		private void zoomTextBox_MouseEnter(object sender, EventArgs e)
 		{
 			zoomTextBox.Focus();
+			zoomTextBox.TextBox.SelectAll();
 		}
 
 		private void zoomTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -2146,15 +2135,9 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private string GetPropertyValue(object t, string propertyName)
-		{
-			object val = t.GetType().GetProperties().Single(pi => pi.Name == propertyName).GetValue(t, null);
-			return (string)val;
-		}
-
 		private void pluginsBtn_DropDownOpening(object sender, EventArgs eventArgs)
 		{
-			PluginInfo[] plugins = PluginManager.GetPlugins();
+			PluginInfo[] plugins = PluginManager.GetPlugins(true);
 			for (int i = 0; i < plugins.Length; i++)
 			{
 				QlibMenuSeparator separator = new QlibMenuSeparator();
@@ -2168,6 +2151,12 @@ namespace quick_picture_viewer
 					}
 
 					PluginMenuItem tsmi = new PluginMenuItem(title, plugins[i].name, plugins[i].functions[j].name, originalImage != null, darkMode);
+
+					//tsmi.ShortcutKeys = (Keys)plugins[i].functions[j].hotkey.key | Keys.Control;
+					//if (plugins[i].functions[j].hotkey.shift)
+					//{
+					//	tsmi.ShortcutKeys |= Keys.Shift;
+					//}
 					tsmi.Click += (s, e) =>
 					{
 						IntPtr pluginPtr = PluginManager.LoadLibrary(tsmi.dllPath);
@@ -2178,6 +2167,11 @@ namespace quick_picture_viewer
 					pluginsBtn.DropDownItems.Add(tsmi);
 				}
 			}
+		}
+
+		private void zoomTextBox_MouseLeave(object sender, EventArgs e)
+		{
+			picturePanel.Focus();
 		}
 	}
 }

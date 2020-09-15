@@ -33,7 +33,6 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { zoomLabel });
-			(new DropShadow()).ApplyShadows(this);
 
 			this.MaximumSize = new Size(
 				Convert.ToInt32(Screen.FromHandle(this.Handle).WorkingArea.Width / 1.25f),
