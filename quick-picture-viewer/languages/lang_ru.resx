@@ -373,6 +373,10 @@
     <value>дюймов</value>
     <comment>Image info</comment>
   </data>
+  <data name="input" xml:space="preserve">
+    <value>Ввод</value>
+    <comment>Settings</comment>
+  </data>
   <data name="landscape" xml:space="preserve">
     <value>Альбомная</value>
     <comment>Image info</comment>
@@ -428,10 +432,6 @@
   <data name="more-options" xml:space="preserve">
     <value>Еще</value>
     <comment>Menu</comment>
-  </data>
-  <data name="mouse" xml:space="preserve">
-    <value>Мышь</value>
-    <comment>Settings</comment>
   </data>
   <data name="move-to-trash" xml:space="preserve">
     <value>Переместить файл в Корзину</value>

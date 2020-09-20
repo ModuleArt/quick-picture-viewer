@@ -54,7 +54,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.BackColor = System.Drawing.SystemColors.Control;
+			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -131,7 +131,7 @@
 			// WallpaperForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(320, 253);
 			this.Controls.Add(this.fitLabel);
 			this.Controls.Add(this.fitComboBox);

@@ -637,6 +637,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Input.
+        /// </summary>
+        public static string input {
+            get {
+                return ResourceManager.GetString("input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Landscape.
         /// </summary>
         public static string landscape {
@@ -759,15 +768,6 @@ namespace quick_picture_viewer.languages {
         public static string more_options {
             get {
                 return ResourceManager.GetString("more-options", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mouse.
-        /// </summary>
-        public static string mouse {
-            get {
-                return ResourceManager.GetString("mouse", resourceCulture);
             }
         }
         

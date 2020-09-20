@@ -94,7 +94,7 @@ namespace quick_picture_viewer
 		{
 			if (string.IsNullOrEmpty(Properties.Settings.Default.Language))
 			{
-				switch(CultureInfo.CurrentCulture.TwoLetterISOLanguageName)
+				switch (CultureInfo.CurrentCulture.TwoLetterISOLanguageName)
 				{
 					case "en":
 					case "es":
@@ -219,11 +219,11 @@ namespace quick_picture_viewer
 			{
 				if (string.IsNullOrEmpty(openPath))
 				{
-					if (Properties.Settings.Default.StartupAction == 1  && Clipboard.ContainsImage())
+					if (Properties.Settings.Default.StartupAction == 1 && Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
 						showSuggestion(resMan.GetString("image-pasted-from-clipboard"));
-					} 
+					}
 				}
 				else
 				{
@@ -332,8 +332,8 @@ namespace quick_picture_viewer
 					}
 
 					showTypeOpsButton(false, null);
-				} 
-				else if (ext == ".ico") 
+				}
+				else if (ext == ".ico")
 				{
 					Bitmap bmp = new Icon(path, 128, 128).ToBitmap();
 					openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
@@ -678,7 +678,7 @@ namespace quick_picture_viewer
 				updatePictureBoxLocation();
 			}));
 		}
-						
+
 		private void updatePictureBoxLocation()
 		{
 			if (pictureBox.Width < picturePanel.Width)
@@ -941,7 +941,7 @@ namespace quick_picture_viewer
 			}
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
-				string path = ((string[]) Clipboard.GetData(DataFormats.FileDrop))[0];
+				string path = ((string[])Clipboard.GetData(DataFormats.FileDrop))[0];
 				openFile(path);
 			}
 		}
@@ -1169,7 +1169,7 @@ namespace quick_picture_viewer
 							setZoomFactor(zoom);
 						}
 					}
-				}				
+				}
 			}
 			catch
 			{
@@ -1466,7 +1466,7 @@ namespace quick_picture_viewer
 			List<string> arlist = new List<string>();
 
 			string[] allFiles = Directory.GetFiles(currentFolder);
-			for(int i = 0; i < allFiles.Length; i++)
+			for (int i = 0; i < allFiles.Length; i++)
 			{
 				string ext = Path.GetExtension(allFiles[i]).ToLower();
 				if (exts.Contains(ext))
@@ -1482,7 +1482,7 @@ namespace quick_picture_viewer
 		{
 			string[] filePaths = getCurrentFiles();
 
-			if(filePaths.Length > 0)
+			if (filePaths.Length > 0)
 			{
 				openFile(filePaths[0]);
 			}
@@ -1539,7 +1539,7 @@ namespace quick_picture_viewer
 				originalImage.Dispose();
 				originalImage = null;
 			}
-			
+
 			if (pictureBox.Image != null)
 			{
 				pictureBox.Image.Dispose();
@@ -1745,11 +1745,11 @@ namespace quick_picture_viewer
 					y = (availableHeight - originalImage.Height) / 2;
 				}
 				e.Graphics.DrawImage(originalImage, x, y, originalImage.Width, originalImage.Height);
-			} 
+			}
 			else
 			{
-				double scaleW = availableWidth / (double) originalImage.Width;
-				double scaleH = availableHeight / (double) originalImage.Height;
+				double scaleW = availableWidth / (double)originalImage.Width;
+				double scaleH = availableHeight / (double)originalImage.Height;
 
 				if (scaleW < scaleH)
 				{
@@ -1778,12 +1778,12 @@ namespace quick_picture_viewer
 
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if(imageChanged)
+			if (imageChanged)
 			{
 				DialogResult window = MessageBox.Show(
 					resMan.GetString("sure-close-app"),
 					resMan.GetString("warning"),
-					MessageBoxButtons.YesNo, 
+					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Question
 				);
 
@@ -1834,7 +1834,7 @@ namespace quick_picture_viewer
 			suggestionTimer = new System.Threading.Timer((obj) =>
 			{
 				hideSuggestion();
-				
+
 			}, null, 3000, System.Threading.Timeout.Infinite);
 		}
 
@@ -1860,8 +1860,8 @@ namespace quick_picture_viewer
 
 			if (type == "svg")
 			{
-				SvgOpsForm sof = new SvgOpsForm(Path.Combine(currentFolder, currentFile), 
-					pictureBox.Image.Width, 
+				SvgOpsForm sof = new SvgOpsForm(Path.Combine(currentFolder, currentFile),
+					pictureBox.Image.Width,
 					pictureBox.Image.Height,
 					picturePanel.Width - 32,
 					picturePanel.Height - 32,
@@ -2045,7 +2045,7 @@ namespace quick_picture_viewer
 		private void externalBtn_DropDownOpened(object sender, EventArgs e)
 		{
 			int lastSlashIndex = Properties.Settings.Default.FavoriteExternalApp.LastIndexOf('/');
-			if (lastSlashIndex == -1) 
+			if (lastSlashIndex == -1)
 				lastSlashIndex = Properties.Settings.Default.FavoriteExternalApp.LastIndexOf('\\');
 
 			if (lastSlashIndex >= 0)
@@ -2144,29 +2144,34 @@ namespace quick_picture_viewer
 				pluginsBtn.DropDownItems.Add(separator);
 				for (int j = 0; j < plugins[i].functions.Length; j++)
 				{
-					string title = plugins[i].functions[j].title.Get(Properties.Settings.Default.Language);
-					if (plugins[i].functions[j].ops.showDialog)
+					string path = null;
+					if (currentFile != null && currentFolder != null)
 					{
-						title += " ...";
+						path = Path.Combine(currentFolder, currentFile);
 					}
-
-					PluginMenuItem tsmi = new PluginMenuItem(title, plugins[i].name, plugins[i].functions[j].name, originalImage != null, darkMode);
+					PluginMenuItem tsmi = new PluginMenuItem(
+						originalImage,
+						path,
+						darkMode,
+						plugins[i],
+						plugins[i].functions[j]
+					);
+					tsmi.Output += Tsmi_Output;
 
 					//tsmi.ShortcutKeys = (Keys)plugins[i].functions[j].hotkey.key | Keys.Control;
 					//if (plugins[i].functions[j].hotkey.shift)
 					//{
 					//	tsmi.ShortcutKeys |= Keys.Shift;
 					//}
-					tsmi.Click += (s, e) =>
-					{
-						IntPtr pluginPtr = PluginManager.LoadLibrary(tsmi.dllPath);
-						IntPtr funcPtr = PluginManager.GetProcAddressOrdinal(pluginPtr, tsmi.funcName);
-						var callback = Marshal.GetDelegateForFunctionPointer<PluginManager.RunFunction>(funcPtr);
-						callback(originalImage, Path.Combine(currentFolder, currentFile), darkMode, Properties.Settings.Default.Language);
-					};
+					
 					pluginsBtn.DropDownItems.Add(tsmi);
 				}
 			}
+		}
+
+		private void Tsmi_Output(object sender, OutputEventArgs e)
+		{
+			openImage(e.Bitmap, currentFolder, currentFile);
 		}
 
 		private void zoomTextBox_MouseLeave(object sender, EventArgs e)

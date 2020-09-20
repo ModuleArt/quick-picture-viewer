@@ -373,6 +373,10 @@
     <value>inches</value>
     <comment>Image info</comment>
   </data>
+  <data name="input" xml:space="preserve">
+    <value>Input</value>
+    <comment>Settings</comment>
+  </data>
   <data name="landscape" xml:space="preserve">
     <value>Landscape</value>
     <comment>Image info</comment>
@@ -428,10 +432,6 @@
   <data name="more-options" xml:space="preserve">
     <value>More options</value>
     <comment>Menu</comment>
-  </data>
-  <data name="mouse" xml:space="preserve">
-    <value>Mouse</value>
-    <comment>Settings</comment>
   </data>
   <data name="move-to-trash" xml:space="preserve">
     <value>Move file to the Recycle Bin</value>

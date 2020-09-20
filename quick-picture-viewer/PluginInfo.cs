@@ -48,10 +48,10 @@ namespace quick_picture_viewer
 			} 
 		}
 
-		public struct Ops
+		public struct Props
 		{
-			public bool image;
-			public bool showDialog;
+			public bool imageRequired;
+			public bool configurable;
 			public bool returnImage;
 		}
 
@@ -60,7 +60,7 @@ namespace quick_picture_viewer
 			public string name;
 			public MultilangString title;
 			public Hotkey hotkey;
-			public Ops ops;
+			public Props props;
 		}
 
 		// VARIABLES
@@ -72,6 +72,7 @@ namespace quick_picture_viewer
 		public Author[] authors;
 		public Target[] targets;
 		public Function[] functions;
+		public string dllType;
 
 		// CONSTRUCTOR
 

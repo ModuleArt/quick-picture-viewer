@@ -15,38 +15,54 @@ namespace quick_picture_viewer
 		[DllImport("kernel32", SetLastError = true, EntryPoint = "GetProcAddress")]
 		public static extern IntPtr GetProcAddressOrdinal(IntPtr hModule, string procName);
 
-		public delegate void RunFunction(
-			Bitmap bmp = null, 
-			string path = null, 
-			bool darkMode = false, 
+		public delegate Bitmap RunFunction(
+			Bitmap bmp = null,
+			string path = null,
+			string[] args = null
+		);
+
+		public delegate string[] ConfFunction(
+			Bitmap bmp = null,
+			string path = null,
+			bool darkMode = false,
 			string language = "en"
 		);
+
+		public delegate void PluginOutput(object sender, OutputEventArgs oea);
 
 		public static PluginInfo[] GetPlugins(bool onlyAvailable)
 		{
 			List<PluginInfo> plugins = new List<PluginInfo>();
 			DirectoryInfo di = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "plugins"));
-			FileInfo[] dlls = di.GetFiles();
-			for (int i = 0; i < dlls.Length; i++)
+
+			List<FileInfo> files = new List<FileInfo>();
+			DirectoryInfo[] dirs = di.GetDirectories();
+			for (int i = 0; i < dirs.Length; i++)
 			{
-				if (Path.GetExtension(dlls[i].Name) == ".json")
+				files.AddRange(dirs[i].GetFiles());
+			}
+
+			for (int i = 0; i < files.Count; i++)
+			{
+				if (Path.GetExtension(files[i].Name) == ".json")
 				{
 					string ver = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 					int lastDotIndex = ver.LastIndexOf('.');
 					ver = ver.Substring(0, lastDotIndex);
 
-					PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, dlls[i].Name)));
+					PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].DirectoryName, files[i].Name)));
 
 					if (onlyAvailable)
 					{
 						for (int j = 0; j < pi.targets.Length; j++)
 						{
-							if (pi.targets[j].name == "quick-picture-viewer" &&
-								ver.CompareTo(pi.targets[j].minVersion) >= 0 &&
-								ver.CompareTo(pi.targets[j].maxVersion) <= 0)
+							if (pi.targets[j].name == "quick-picture-viewer" && ver.CompareTo(pi.targets[j].minVersion) >= 0)
 							{
-								plugins.Add(pi);
-								break;
+								if (pi.targets[j].maxVersion == null || pi.targets[j].maxVersion == "" || ver.CompareTo(pi.targets[j].maxVersion) <= 0)
+								{
+									plugins.Add(pi);
+									break;
+								}
 							}
 						}
 					}

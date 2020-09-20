@@ -61,8 +61,6 @@ namespace quick_picture_viewer
 			width = image.Width;
 			height = image.Height;
 
-			setCheckboardBackground(checkboardBackground);
-
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
 			closeBtn.SetDarkMode(true);
@@ -229,6 +227,8 @@ namespace quick_picture_viewer
 
 			owner = this.Owner as MainForm;
 			InitLanguage();
+
+			setCheckboardBackground(checkboardBackground);
 		}
 
 		private void InitLanguage()
@@ -238,11 +238,13 @@ namespace quick_picture_viewer
 			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
 			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
 			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
+			checkboardBtn.Text = owner.resMan.GetString("checkboard-background");
 		}
 
 		private void setCheckboardBackground(bool b)
 		{
 			checkboardBackground = b;
+			checkboardBtn.Checked = b;
 
 			if (b)
 			{
@@ -269,7 +271,7 @@ namespace quick_picture_viewer
 				{
 					if (e.KeyCode == Keys.B)
 					{
-						(this.Owner as MainForm).setCheckboardBackground(!checkboardBackground, true);
+						owner.setCheckboardBackground(!checkboardBackground, true);
 						setCheckboardBackground(!checkboardBackground);
 					}
 					else if (e.KeyCode == Keys.OemMinus)
@@ -409,6 +411,12 @@ namespace quick_picture_viewer
 			startPos = this.PointToClient(Cursor.Position);
 			curSize = this.Size;
 			resizeTimer.Start();
+		}
+
+		private void checkerboardBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			owner.setCheckboardBackground(!checkboardBackground, true);
+			setCheckboardBackground(!checkboardBackground);
 		}
 	}
 }

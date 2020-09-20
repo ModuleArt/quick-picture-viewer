@@ -55,7 +55,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.BackColor = System.Drawing.SystemColors.Control;
+			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -74,7 +74,7 @@
 			// 
 			// setMarginsButton
 			// 
-			this.setMarginsButton.BackColor = System.Drawing.SystemColors.Control;
+			this.setMarginsButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.setMarginsButton.FlatAppearance.BorderSize = 0;
 			this.setMarginsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.setMarginsButton.Location = new System.Drawing.Point(10, 290);
@@ -143,7 +143,7 @@
 			// 
 			// bottomMarginTextBox
 			// 
-			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.bottomMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.bottomMarginTextBox.Location = new System.Drawing.Point(208, 248);
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -155,7 +155,7 @@
 			// 
 			// rightMarginTextBox
 			// 
-			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.rightMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.rightMarginTextBox.Location = new System.Drawing.Point(142, 248);
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -167,7 +167,7 @@
 			// 
 			// topMarginTextBox
 			// 
-			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.topMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.topMarginTextBox.Location = new System.Drawing.Point(76, 248);
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -189,7 +189,7 @@
 			// 
 			// leftMarginTextBox
 			// 
-			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.leftMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.leftMarginTextBox.Location = new System.Drawing.Point(10, 248);
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -211,7 +211,7 @@
 			// 
 			// titleTextBox
 			// 
-			this.titleTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.titleTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.titleTextBox.Location = new System.Drawing.Point(104, 42);
 			this.titleTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
@@ -248,7 +248,7 @@
 			// 
 			// printPreviewControl1
 			// 
-			this.printPreviewControl1.BackColor = System.Drawing.Color.White;
+			this.printPreviewControl1.BackColor = System.Drawing.SystemColors.Control;
 			this.printPreviewControl1.Location = new System.Drawing.Point(268, 36);
 			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.printPreviewControl1.Name = "printPreviewControl1";
@@ -295,7 +295,7 @@
 			// PrintForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(538, 332);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.setMarginsButton);

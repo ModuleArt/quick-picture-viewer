@@ -1,0 +1,44 @@
+{
+    "name": "qpv-blur",
+    "version": "1.0.0",
+    "title": "[Beta] Blur",
+    "description": {
+        "en": "Blur region",
+        "ru": "Размыть регион",
+        "es": "Región de desenfoque"
+    },
+    "link": "https://github.com/ModuleArt/qpv-blur",
+    "authors": [
+        {
+            "name": "Beelink",
+            "link": "https://github.com/Beelink"
+        }
+    ],
+    "targets": [
+        {
+            "name": "quick-picture-viewer",
+            "minVersion": "2.2.0",
+            "maxVersion": "2.2.0"
+        }
+    ],
+    "functions": [
+        {
+            "name": "blur",
+            "title": {
+                "en": "[Beta] Blur",
+                "ru": "[Beta] Размытие",
+                "es": "[Beta] Difuminar"
+            },
+            "hotkey": {
+                "shift": true,
+                "key": 66
+            },
+            "props": {
+                "imageRequired": true,
+                "configurable": true,
+                "returnImage": true
+            }
+        }
+    ],
+    "dlltype": "cs"
+}

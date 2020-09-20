@@ -189,7 +189,7 @@
 			// 
 			// descTextBox
 			// 
-			this.descTextBox.BackColor = System.Drawing.Color.White;
+			this.descTextBox.BackColor = System.Drawing.SystemColors.Control;
 			this.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.descTextBox.Location = new System.Drawing.Point(10, 229);
 			this.descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -201,7 +201,7 @@
 			// 
 			// makeDefaultBtn
 			// 
-			this.makeDefaultBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.makeDefaultBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.makeDefaultBtn.FlatAppearance.BorderSize = 0;
 			this.makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.makeDefaultBtn.Location = new System.Drawing.Point(10, 422);
@@ -217,7 +217,7 @@
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(320, 464);
 			this.Controls.Add(this.makeDefaultBtn);
 			this.Controls.Add(this.descTextBox);

@@ -58,7 +58,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.BackColor = System.Drawing.SystemColors.Control;
+			this.okButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
@@ -95,7 +95,7 @@
 			// 
 			// widthNumeric
 			// 
-			this.widthNumeric.BackColor = System.Drawing.SystemColors.Control;
+			this.widthNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.widthNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.widthNumeric.Location = new System.Drawing.Point(10, 359);
 			this.widthNumeric.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -121,7 +121,7 @@
 			// 
 			// heightNumeric
 			// 
-			this.heightNumeric.BackColor = System.Drawing.SystemColors.Control;
+			this.heightNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.heightNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.heightNumeric.Location = new System.Drawing.Point(133, 359);
 			this.heightNumeric.Margin = new System.Windows.Forms.Padding(0);
@@ -160,7 +160,7 @@
 			// 
 			// size128Button
 			// 
-			this.size128Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size128Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size128Button.FlatAppearance.BorderSize = 0;
 			this.size128Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size128Button.Location = new System.Drawing.Point(10, 255);
@@ -174,7 +174,7 @@
 			// 
 			// size64Button
 			// 
-			this.size64Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size64Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size64Button.FlatAppearance.BorderSize = 0;
 			this.size64Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size64Button.Location = new System.Drawing.Point(174, 213);
@@ -188,7 +188,7 @@
 			// 
 			// defaultSizeButton
 			// 
-			this.defaultSizeButton.BackColor = System.Drawing.SystemColors.Control;
+			this.defaultSizeButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.defaultSizeButton.FlatAppearance.BorderSize = 0;
 			this.defaultSizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.defaultSizeButton.Location = new System.Drawing.Point(10, 171);
@@ -202,7 +202,7 @@
 			// 
 			// size256Button
 			// 
-			this.size256Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size256Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size256Button.FlatAppearance.BorderSize = 0;
 			this.size256Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size256Button.Location = new System.Drawing.Point(92, 255);
@@ -226,7 +226,7 @@
 			// 
 			// size512Button
 			// 
-			this.size512Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size512Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size512Button.FlatAppearance.BorderSize = 0;
 			this.size512Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size512Button.Location = new System.Drawing.Point(174, 255);
@@ -287,7 +287,7 @@
 			// 
 			// size32Button
 			// 
-			this.size32Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size32Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size32Button.FlatAppearance.BorderSize = 0;
 			this.size32Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size32Button.Location = new System.Drawing.Point(92, 213);
@@ -301,7 +301,7 @@
 			// 
 			// size16Button
 			// 
-			this.size16Button.BackColor = System.Drawing.SystemColors.Control;
+			this.size16Button.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.size16Button.FlatAppearance.BorderSize = 0;
 			this.size16Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.size16Button.Location = new System.Drawing.Point(10, 213);
@@ -315,7 +315,7 @@
 			// 
 			// autoSizeBtn
 			// 
-			this.autoSizeBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.autoSizeBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.autoSizeBtn.FlatAppearance.BorderSize = 0;
 			this.autoSizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.autoSizeBtn.Location = new System.Drawing.Point(133, 171);
@@ -330,7 +330,7 @@
 			// SvgOpsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(256, 436);
 			this.Controls.Add(this.autoSizeBtn);
 			this.Controls.Add(this.size16Button);

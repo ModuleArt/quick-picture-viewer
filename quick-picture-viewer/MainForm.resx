@@ -912,7 +912,7 @@
     <value>F5</value>
   </data>
   <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="reloadButton.Text" xml:space="preserve">
     <value>reload file</value>
@@ -932,7 +932,7 @@
     <value>Del</value>
   </data>
   <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="deleteBtn.Text" xml:space="preserve">
     <value>move to trash</value>
@@ -952,7 +952,7 @@
     <value>Ctrl+P</value>
   </data>
   <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="printButton.Text" xml:space="preserve">
     <value>print</value>
@@ -969,16 +969,16 @@
 </value>
   </data>
   <data name="setAsDesktopButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+B</value>
+    <value>Ctrl+Shift+W</value>
   </data>
   <data name="setAsDesktopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="setAsDesktopButton.Text" xml:space="preserve">
     <value>set as desktop background</value>
   </data>
   <data name="qlibMenuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 6</value>
+    <value>331, 6</value>
   </data>
   <data name="actualSizeBtn.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -996,13 +996,13 @@
     <value>Ctrl+0</value>
   </data>
   <data name="actualSizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="actualSizeBtn.Text" xml:space="preserve">
     <value>zoom to actual size</value>
   </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 6</value>
+    <value>331, 6</value>
   </data>
   <data name="backClearBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1036,7 +1036,7 @@
     <value>choose color</value>
   </data>
   <data name="backColorBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="backColorBtn.Text" xml:space="preserve">
     <value>background color</value>
@@ -1053,7 +1053,7 @@
     <value>Ctrl+T</value>
   </data>
   <data name="onTopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="onTopButton.Text" xml:space="preserve">
     <value>always on top</value>
@@ -1070,7 +1070,7 @@
     <value>F10</value>
   </data>
   <data name="framelessBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="framelessBtn.Text" xml:space="preserve">
     <value>frameless mode</value>
@@ -1086,13 +1086,13 @@
     <value>Ctrl+N</value>
   </data>
   <data name="newWindowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="newWindowButton.Text" xml:space="preserve">
     <value>new window</value>
   </data>
   <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 6</value>
+    <value>331, 6</value>
   </data>
   <data name="settingsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1108,7 +1108,7 @@
     <value>Ctrl+Oemcomma</value>
   </data>
   <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="settingsButton.Text" xml:space="preserve">
     <value>settings</value>
@@ -1126,7 +1126,7 @@
     <value>F1</value>
   </data>
   <data name="aboutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 24</value>
+    <value>334, 24</value>
   </data>
   <data name="aboutBtn.Text" xml:space="preserve">
     <value>about</value>

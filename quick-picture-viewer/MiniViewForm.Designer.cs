@@ -36,8 +36,11 @@
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.zoomLabel = new System.Windows.Forms.Label();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.picturePanel.SuspendLayout();
+			this.contextMenuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -122,6 +125,7 @@
 			this.picturePanel.AutoScroll = true;
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.picturePanel.ContextMenuStrip = this.contextMenuStrip1;
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 0);
 			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
@@ -133,6 +137,21 @@
 			this.picturePanel.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkboardBtn});
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 48);
+			// 
+			// checkboardBtn
+			// 
+			this.checkboardBtn.Name = "checkboardBtn";
+			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+			this.checkboardBtn.Size = new System.Drawing.Size(244, 22);
+			this.checkboardBtn.Text = "checkboard background";
+			this.checkboardBtn.Click += new System.EventHandler(this.checkerboardBackgroundToolStripMenuItem_Click);
 			// 
 			// pictureBox
 			// 
@@ -178,6 +197,7 @@
 			this.SizeChanged += new System.EventHandler(this.MiniViewForm_ResizeEnd);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiniViewForm_KeyDown);
 			this.picturePanel.ResumeLayout(false);
+			this.contextMenuStrip1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 
@@ -192,5 +212,7 @@
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private QuickLibrary.QlibTitlebarButton autoZoomBtn;
 		private QuickLibrary.QlibTitlebarButton resizeBtn;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem checkboardBtn;
 	}
 }

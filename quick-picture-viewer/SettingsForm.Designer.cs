@@ -80,7 +80,7 @@
 			// 
 			this.settingsTabs.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
 			this.settingsTabs.AllowDrop = true;
-			this.settingsTabs.BackTabColor = System.Drawing.Color.White;
+			this.settingsTabs.BackTabColor = System.Drawing.SystemColors.Control;
 			this.settingsTabs.ClosingButtonColor = System.Drawing.Color.WhiteSmoke;
 			this.settingsTabs.ClosingMessage = null;
 			this.settingsTabs.Controls.Add(this.themePage);
@@ -91,7 +91,7 @@
 			this.settingsTabs.Controls.Add(this.externalPage);
 			this.settingsTabs.Controls.Add(this.langPage);
 			this.settingsTabs.EnableDragDrop = false;
-			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.Control;
+			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.ControlLight;
 			this.settingsTabs.HorizontalLineColor = System.Drawing.Color.Transparent;
 			this.settingsTabs.ItemSize = new System.Drawing.Size(240, 28);
 			this.settingsTabs.Location = new System.Drawing.Point(10, 42);
@@ -108,7 +108,7 @@
 			// 
 			// themePage
 			// 
-			this.themePage.BackColor = System.Drawing.Color.White;
+			this.themePage.BackColor = System.Drawing.SystemColors.Control;
 			this.themePage.Controls.Add(this.restartLabel1);
 			this.themePage.Controls.Add(this.systemThemeRadio);
 			this.themePage.Controls.Add(this.darkThemeRadio);
@@ -264,7 +264,7 @@
 			// 
 			// slideshowTimeNumeric
 			// 
-			this.slideshowTimeNumeric.BackColor = System.Drawing.SystemColors.Control;
+			this.slideshowTimeNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.slideshowTimeNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.slideshowTimeNumeric.Location = new System.Drawing.Point(10, 39);
 			this.slideshowTimeNumeric.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -385,7 +385,7 @@
 			// 
 			// favExtTextBox
 			// 
-			this.favExtTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.favExtTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.favExtTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.favExtTextBox.Location = new System.Drawing.Point(10, 39);
 			this.favExtTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);

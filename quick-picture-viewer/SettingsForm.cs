@@ -115,7 +115,7 @@ namespace quick_picture_viewer
 			externalPage.Text = owner.resMan.GetString("external");
 			slideshowPage.Text = owner.resMan.GetString("slideshow");
 			slideshowTimeLabel.Text = owner.resMan.GetString("switching-time") + ":";
-			mousePage.Text = owner.resMan.GetString("mouse");
+			mousePage.Text = owner.resMan.GetString("input");
 			slideshowSecondsLabel.Text = owner.resMan.GetString("seconds");
 			slideshowCounterCheckBox.Text = owner.resMan.GetString("show-slideshow-counter");
 			fullscrCursorCheckBox.Text = owner.resMan.GetString("fullscreen-cursor");
