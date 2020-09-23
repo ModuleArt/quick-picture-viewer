@@ -74,5 +74,41 @@ namespace quick_picture_viewer
 			}
 			return plugins.ToArray();
 		}
+
+		public static Image GetPluginIcon(string pluginName, string funcName, bool darkMode)
+		{
+			if (darkMode)
+			{
+				string path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".dark.png");
+				if (File.Exists(path))
+				{
+					return Bitmap.FromFile(path);
+				}
+
+				path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".png");
+				if (File.Exists(path))
+				{
+					return Bitmap.FromFile(path);
+				}
+
+				return null;
+			}
+			else
+			{
+				string path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".light.png");
+				if (File.Exists(path))
+				{
+					return Bitmap.FromFile(path);
+				}
+
+				path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".png");
+				if (File.Exists(path))
+				{
+					return Bitmap.FromFile(path);
+				}
+
+				return null;
+			}
+		}
 	}
 }

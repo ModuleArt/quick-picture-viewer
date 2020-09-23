@@ -154,6 +154,12 @@
     </Compile>
     <Compile Include="PluginInfo.cs" />
     <Compile Include="PluginManager.cs" />
+    <Compile Include="PluginManForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginManForm.Designer.cs">
+      <DependentUpon>PluginManForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PluginMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MiniViewForm.resx">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginManForm.resx">
+      <DependentUpon>PluginManForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
@@ -333,6 +342,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-check.png" />
+    <None Include="resources\imgs\dark\black-check.png" />
+    <None Include="resources\imgs\dark\black-options.png" />
     <None Include="resources\imgs\dark\black-plugin.png" />
     <None Include="resources\imgs\light\white-plugin.png" />
     <None Include="resources\imgs\light\white-angle.png" />

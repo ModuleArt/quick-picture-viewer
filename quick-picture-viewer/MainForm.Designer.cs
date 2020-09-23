@@ -546,6 +546,7 @@
 			this.pluginManBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
 			this.pluginManBtn.Name = "pluginManBtn";
 			resources.ApplyResources(this.pluginManBtn, "pluginManBtn");
+			this.pluginManBtn.Click += new System.EventHandler(this.pluginManBtn_Click);
 			// 
 			// moreButton
 			// 

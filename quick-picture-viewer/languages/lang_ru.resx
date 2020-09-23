@@ -137,6 +137,10 @@
     <value>Действие при запуске приложения</value>
     <comment>Settings</comment>
   </data>
+  <data name="apply" xml:space="preserve">
+    <value>Применить</value>
+    <comment>Menu</comment>
+  </data>
   <data name="aspect-ratio" xml:space="preserve">
     <value>Соотношение</value>
     <comment>Image info</comment>
@@ -220,6 +224,10 @@
   <data name="compression" xml:space="preserve">
     <value>Сжатие</value>
     <comment>Image info</comment>
+  </data>
+  <data name="configure" xml:space="preserve">
+    <value>Настроить</value>
+    <comment>Menu</comment>
   </data>
   <data name="copy" xml:space="preserve">
     <value>Копировать</value>

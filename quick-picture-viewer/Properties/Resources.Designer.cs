@@ -73,6 +73,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_check {
+            get {
+                object obj = ResourceManager.GetObject("black_check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_close {
             get {
                 object obj = ResourceManager.GetObject("black-close", resourceCulture);
@@ -86,6 +96,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap black_line {
             get {
                 object obj = ResourceManager.GetObject("black-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_options {
+            get {
+                object obj = ResourceManager.GetObject("black_options", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_autozoom {
             get {
                 object obj = ResourceManager.GetObject("white-autozoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_check {
+            get {
+                object obj = ResourceManager.GetObject("white_check", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -106,6 +106,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Применить.
+        /// </summary>
+        public static string apply {
+            get {
+                return ResourceManager.GetString("apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Соотношение.
         /// </summary>
         public static string aspect_ratio {
@@ -291,6 +300,15 @@ namespace quick_picture_viewer.languages {
         public static string compression {
             get {
                 return ResourceManager.GetString("compression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Настроить.
+        /// </summary>
+        public static string configure {
+            get {
+                return ResourceManager.GetString("configure", resourceCulture);
             }
         }
         

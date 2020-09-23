@@ -2154,7 +2154,9 @@ namespace quick_picture_viewer
 						path,
 						darkMode,
 						plugins[i],
-						plugins[i].functions[j]
+						plugins[i].functions[j],
+						resMan.GetString("apply"),
+						resMan.GetString("configure")
 					);
 					tsmi.Output += Tsmi_Output;
 
@@ -2172,11 +2174,20 @@ namespace quick_picture_viewer
 		private void Tsmi_Output(object sender, OutputEventArgs e)
 		{
 			openImage(e.Bitmap, currentFolder, currentFile);
+			setImageChanged(true);
 		}
 
 		private void zoomTextBox_MouseLeave(object sender, EventArgs e)
 		{
 			picturePanel.Focus();
+		}
+
+		private void pluginManBtn_Click(object sender, EventArgs e)
+		{
+			PluginManForm pmf = new PluginManForm();
+			pmf.Owner = this;
+			pmf.TopMost = alwaysOnTop;
+			pmf.ShowDialog();
 		}
 	}
 }
