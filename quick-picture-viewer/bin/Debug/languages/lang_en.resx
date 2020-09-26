@@ -173,6 +173,10 @@
     <value>Browse</value>
     <comment>Settings</comment>
   </data>
+  <data name="browse-for-plugins" xml:space="preserve">
+    <value>Browse for plugins</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="capture-screen" xml:space="preserve">
     <value>Capture screen</value>
     <comment>Menu</comment>
@@ -247,7 +251,7 @@
   </data>
   <data name="created-by" xml:space="preserve">
     <value>Created by</value>
-    <comment>About</comment>
+    <comment>About, Plugin manager</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Current file could not be found</value>
@@ -264,6 +268,18 @@
   <data name="delete-file" xml:space="preserve">
     <value>Delete file</value>
     <comment>Message box</comment>
+  </data>
+  <data name="delete-plugin" xml:space="preserve">
+    <value>Delete plugin</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="delete-plugin-warning" xml:space="preserve">
+    <value>Are you sure you want to remove the plugin?</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="desc" xml:space="preserve">
+    <value>Description</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="disk-size" xml:space="preserve">
     <value>Disk size</value>
@@ -529,9 +545,17 @@
     <value>Please open an image to view or edit</value>
     <comment>Picture panel</comment>
   </data>
+  <data name="plugin" xml:space="preserve">
+    <value>Plugin</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="plugin-manager" xml:space="preserve">
     <value>Plugin manager</value>
-    <comment>Menu</comment>
+    <comment>Menu, Plugin manager</comment>
+  </data>
+  <data name="plugin-not-found" xml:space="preserve">
+    <value>Plugin directory not found</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="plugins" xml:space="preserve">
     <value>Plugins</value>
@@ -744,6 +768,10 @@
   <data name="use-system-setting" xml:space="preserve">
     <value>Use system setting</value>
     <comment>Settings</comment>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Warning</value>

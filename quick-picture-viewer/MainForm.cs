@@ -2184,7 +2184,7 @@ namespace quick_picture_viewer
 
 		private void pluginManBtn_Click(object sender, EventArgs e)
 		{
-			PluginManForm pmf = new PluginManForm();
+			PluginManForm pmf = new PluginManForm(darkMode);
 			pmf.Owner = this;
 			pmf.TopMost = alwaysOnTop;
 			pmf.ShowDialog();

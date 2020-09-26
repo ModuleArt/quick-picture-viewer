@@ -202,15 +202,6 @@
   <data name="openButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="openButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAChSURBVDhPzZJBCsIwEEWzEHciInXlzSp6GhF6it6gCG6k
-        eChXKgr6fkKKoYVMV/rgwfxpOy3puL+hwhu+8YUtztHMA4tQugnWuPfJiN78zRrjFw2pawfsUHMMK7yH
-        MjB2gEieiWGKDT5RvZwdMWzwjDrIHIMDTliGMktvwAKvOFPDQG/AFo8+2UgGaJEuuPMpzxKT36hVtp68
-        1L3JIv0K5z7B3zwUuwbJSgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="openButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -804,14 +795,6 @@
   <data name="checkboardButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="checkboardButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVDhPY6AW6ALi70D8nwgMUtcOxCjgJxCLQphgAFKI
-        DJD5YkD8A8JEAHwaQIAQnzoGkIpRALoAqfxBYgCpGAWgC5DKp9wAUEoUgjDBAJ8GYSDGSImgvPAbiEEK
-        CWGQOoy8MFCAgQEApblV7bShEWUAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="checkboardButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -919,14 +902,6 @@
   </data>
   <data name="deleteBtn.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="deleteBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAFdJREFUOE9joBXoAuLvQPwfSrcDMUngJxCLQphg+geEiR+AbCMW4wR4JYGAkDxc
-        ASEaJxg1YDAYAEqBQhAmBhAGYoIpEpQHfgMxyCZ0DBInOU/QGjAwAAAB90ACnOYq3wAAAABJRU5ErkJg
-        gg==
-</value>
   </data>
   <data name="deleteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Del</value>
@@ -5238,9 +5213,6 @@
         AAAAAwAAAAMAAAADAAAAAwAAAAMAAAACAAAAAgAAAAAAAAAAwAMAAIABAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAwAMAAA==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 300</value>

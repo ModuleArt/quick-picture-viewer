@@ -173,6 +173,10 @@
     <value>Выбрать</value>
     <comment>Settings</comment>
   </data>
+  <data name="browse-for-plugins" xml:space="preserve">
+    <value>Найти плагины</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="capture-screen" xml:space="preserve">
     <value>Сделать скриншот</value>
     <comment>Menu</comment>
@@ -246,8 +250,8 @@
     <comment>Status bar, image info</comment>
   </data>
   <data name="created-by" xml:space="preserve">
-    <value>Разработчик:</value>
-    <comment>About</comment>
+    <value>Разработчик</value>
+    <comment>About, Plugin manager</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Текущий файл не найден</value>
@@ -264,6 +268,18 @@
   <data name="delete-file" xml:space="preserve">
     <value>Удалить файл</value>
     <comment>Message box</comment>
+  </data>
+  <data name="delete-plugin" xml:space="preserve">
+    <value>Удалить плагин</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="delete-plugin-warning" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить плагин?</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="desc" xml:space="preserve">
+    <value>Описание</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="disk-size" xml:space="preserve">
     <value>Размер на диске</value>
@@ -529,9 +545,17 @@
     <value>Откройте изображение для просмотра или редактирования</value>
     <comment>Picture panel</comment>
   </data>
+  <data name="plugin" xml:space="preserve">
+    <value>Плагин</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="plugin-manager" xml:space="preserve">
     <value>Менеджер плагинов</value>
-    <comment>Menu</comment>
+    <comment>Menu, Plugin manager</comment>
+  </data>
+  <data name="plugin-not-found" xml:space="preserve">
+    <value>Директория плагина не найдена</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="plugins" xml:space="preserve">
     <value>Плагины</value>
@@ -744,6 +768,10 @@
   <data name="use-system-setting" xml:space="preserve">
     <value>Использовать системную настройку</value>
     <comment>Settings</comment>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Версия</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Внимание</value>

@@ -9,8 +9,8 @@ namespace quick_picture_viewer
 
 		public struct Author
 		{
-			private string name;
-			private string link;
+			public string name;
+			public string link;
 		}
 
 		public struct Target

@@ -66,6 +66,7 @@ namespace quick_picture_viewer
 			closeBtn.SetDarkMode(true);
 			autoZoomBtn.SetDarkMode(true);
 			resizeBtn.SetDarkMode(true);
+			contextMenuStrip1.SetDarkMode(true);
 			if (ThemeManager.isWindows10())
 			{
 				ThemeManager.setDarkModeToControl(picturePanel.Handle);

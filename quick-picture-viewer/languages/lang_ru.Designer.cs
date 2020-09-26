@@ -187,6 +187,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Найти плагины.
+        /// </summary>
+        public static string browse_for_plugins {
+            get {
+                return ResourceManager.GetString("browse-for-plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Сделать скриншот.
         /// </summary>
         public static string capture_screen {
@@ -349,7 +358,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Разработчик:.
+        ///   Looks up a localized string similar to Разработчик.
         /// </summary>
         public static string created_by {
             get {
@@ -390,6 +399,33 @@ namespace quick_picture_viewer.languages {
         public static string delete_file {
             get {
                 return ResourceManager.GetString("delete-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Удалить плагин.
+        /// </summary>
+        public static string delete_plugin {
+            get {
+                return ResourceManager.GetString("delete-plugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы уверены, что хотите удалить плагин?.
+        /// </summary>
+        public static string delete_plugin_warning {
+            get {
+                return ResourceManager.GetString("delete-plugin-warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Описание.
+        /// </summary>
+        public static string desc {
+            get {
+                return ResourceManager.GetString("desc", resourceCulture);
             }
         }
         
@@ -988,11 +1024,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Плагин.
+        /// </summary>
+        public static string plugin {
+            get {
+                return ResourceManager.GetString("plugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Менеджер плагинов.
         /// </summary>
         public static string plugin_manager {
             get {
                 return ResourceManager.GetString("plugin-manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Директория плагина не найдена.
+        /// </summary>
+        public static string plugin_not_found {
+            get {
+                return ResourceManager.GetString("plugin-not-found", resourceCulture);
             }
         }
         
@@ -1470,6 +1524,15 @@ namespace quick_picture_viewer.languages {
         public static string use_system_setting {
             get {
                 return ResourceManager.GetString("use-system-setting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Версия.
+        /// </summary>
+        public static string version {
+            get {
+                return ResourceManager.GetString("version", resourceCulture);
             }
         }
         

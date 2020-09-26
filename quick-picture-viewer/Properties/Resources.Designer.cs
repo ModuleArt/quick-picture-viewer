@@ -93,9 +93,29 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_grid {
+            get {
+                object obj = ResourceManager.GetObject("black-grid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_line {
             get {
                 object obj = ResourceManager.GetObject("black-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_open {
+            get {
+                object obj = ResourceManager.GetObject("black-open", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap black_square {
             get {
                 object obj = ResourceManager.GetObject("black-square", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_trash {
+            get {
+                object obj = ResourceManager.GetObject("black-trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

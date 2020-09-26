@@ -36,7 +36,7 @@
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.zoomLabel = new System.Windows.Forms.Label();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
-			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
 			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.picturePanel.SuspendLayout();
@@ -143,13 +143,15 @@
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkboardBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 48);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 50);
 			// 
 			// checkboardBtn
 			// 
+			this.checkboardBtn.Image = global::quick_picture_viewer.Properties.Resources.white_grid;
 			this.checkboardBtn.Name = "checkboardBtn";
+			this.checkboardBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-			this.checkboardBtn.Size = new System.Drawing.Size(244, 22);
+			this.checkboardBtn.Size = new System.Drawing.Size(244, 24);
 			this.checkboardBtn.Text = "checkboard background";
 			this.checkboardBtn.Click += new System.EventHandler(this.checkerboardBackgroundToolStripMenuItem_Click);
 			// 
@@ -212,7 +214,7 @@
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private QuickLibrary.QlibTitlebarButton autoZoomBtn;
 		private QuickLibrary.QlibTitlebarButton resizeBtn;
-		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private QuickLibrary.QlibContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem checkboardBtn;
 	}
 }

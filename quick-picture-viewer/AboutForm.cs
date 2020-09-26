@@ -111,7 +111,7 @@ namespace quick_picture_viewer
 			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
 			infoTooltip.SetToolTip(makeDefaultBtn, owner.resMan.GetString("open-windows-settings"));
 			licenseLabel.Text = owner.resMan.GetString("license") + ":";
-			companyLabel.Text = owner.resMan.GetString("created-by");
+			companyLabel.Text = owner.resMan.GetString("created-by") + ":";
 		}
 
 		private void makeDefaultBtn_Click(object sender, EventArgs e)

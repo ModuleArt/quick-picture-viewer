@@ -9,6 +9,8 @@ namespace quick_picture_viewer
 {
 	class PluginManager
 	{
+		public static string pluginsFolder = Path.Combine(Directory.GetCurrentDirectory(), "plugins");
+
 		[DllImport("kernel32", SetLastError = true, CharSet = CharSet.Ansi)]
 		public static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)]string lpFileName);
 
@@ -33,13 +35,14 @@ namespace quick_picture_viewer
 		public static PluginInfo[] GetPlugins(bool onlyAvailable)
 		{
 			List<PluginInfo> plugins = new List<PluginInfo>();
-			DirectoryInfo di = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "plugins"));
+			DirectoryInfo di = new DirectoryInfo(pluginsFolder);
 
 			List<FileInfo> files = new List<FileInfo>();
 			DirectoryInfo[] dirs = di.GetDirectories();
 			for (int i = 0; i < dirs.Length; i++)
 			{
 				files.AddRange(dirs[i].GetFiles());
+				dirs[i] = null;
 			}
 
 			for (int i = 0; i < files.Count; i++)
@@ -71,6 +74,7 @@ namespace quick_picture_viewer
 						plugins.Add(pi);
 					}
 				}
+				files[i] = null;
 			}
 			return plugins.ToArray();
 		}
@@ -79,13 +83,13 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				string path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".dark.png");
+				string path = Path.Combine(pluginsFolder, pluginName, funcName + ".dark.png");
 				if (File.Exists(path))
 				{
 					return Bitmap.FromFile(path);
 				}
 
-				path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".png");
+				path = Path.Combine(pluginsFolder, pluginName, funcName + ".png");
 				if (File.Exists(path))
 				{
 					return Bitmap.FromFile(path);
@@ -95,13 +99,13 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				string path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".light.png");
+				string path = Path.Combine(pluginsFolder, pluginName, funcName + ".light.png");
 				if (File.Exists(path))
 				{
 					return Bitmap.FromFile(path);
 				}
 
-				path = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pluginName, funcName + ".png");
+				path = Path.Combine(pluginsFolder, pluginName, funcName + ".png");
 				if (File.Exists(path))
 				{
 					return Bitmap.FromFile(path);

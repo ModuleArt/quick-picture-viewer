@@ -116,6 +116,7 @@
 			// 
 			this.openFileDialog1.FileName = "image";
 			resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
+			this.openFileDialog1.RestoreDirectory = true;
 			// 
 			// fileSystemWatcher1
 			// 
@@ -248,6 +249,7 @@
 			// 
 			resources.ApplyResources(this.openButton, "openButton");
 			this.openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.openButton.Image = global::quick_picture_viewer.Properties.Resources.black_open;
 			this.openButton.Margin = new System.Windows.Forms.Padding(0);
 			this.openButton.Name = "openButton";
 			this.openButton.Click += new System.EventHandler(this.openButton_Click_1);
@@ -502,6 +504,7 @@
 			// 
 			resources.ApplyResources(this.checkboardButton, "checkboardButton");
 			this.checkboardButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.checkboardButton.Image = global::quick_picture_viewer.Properties.Resources.black_grid;
 			this.checkboardButton.Margin = new System.Windows.Forms.Padding(0);
 			this.checkboardButton.Name = "checkboardButton";
 			this.checkboardButton.Click += new System.EventHandler(this.checkboardButton_Click);
@@ -581,6 +584,7 @@
 			// 
 			this.deleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.deleteBtn, "deleteBtn");
+			this.deleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
