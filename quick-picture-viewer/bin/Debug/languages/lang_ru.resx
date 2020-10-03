@@ -305,6 +305,10 @@
     <value>Ошибка</value>
     <comment>Message box</comment>
   </data>
+  <data name="esc-to-exit" xml:space="preserve">
+    <value>Нажмите {0}, чтобы выйти из приложения</value>
+    <comment>Main window</comment>
+  </data>
   <data name="extension" xml:space="preserve">
     <value>Расширение</value>
     <comment>Image info</comment>
@@ -398,7 +402,7 @@
     <comment>Image info</comment>
   </data>
   <data name="input" xml:space="preserve">
-    <value>Ввод</value>
+    <value>Клавиатура и мышь</value>
     <comment>Settings</comment>
   </data>
   <data name="landscape" xml:space="preserve">

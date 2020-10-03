@@ -206,6 +206,9 @@ namespace quick_picture_viewer
 		private void openButton_Click_1(object sender, EventArgs e)
 		{
 			setSlideshow(false);
+
+			openFileDialog1.Title = resMan.GetString("open-file");
+
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				openFile(openFileDialog1.FileName);
@@ -1303,6 +1306,13 @@ namespace quick_picture_viewer
 					{
 						fullscreenButton.PerformClick();
 					}
+					else if (e.KeyCode == Keys.Escape)
+					{
+						if (Properties.Settings.Default.EscToExit)
+						{
+							this.Close();
+						}
+					}
 					else if (e.KeyCode == Keys.F12)
 					{
 						screenshotButton.PerformClick();
@@ -2131,6 +2141,10 @@ namespace quick_picture_viewer
 		{
 			for (int i = pluginsBtn.DropDownItems.Count - 1; i > 0; i--)
 			{
+				if (pluginsBtn.DropDownItems[i].Image != null)
+				{
+					pluginsBtn.DropDownItems[i].Image.Dispose();
+				}
 				pluginsBtn.DropDownItems.Remove(pluginsBtn.DropDownItems[i]);
 			}
 		}

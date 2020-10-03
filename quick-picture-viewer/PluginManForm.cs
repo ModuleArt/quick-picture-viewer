@@ -39,6 +39,7 @@ namespace quick_picture_viewer
 
 			closeBtn.SetDarkMode(dark);
 			contextMenuStrip1.SetDarkMode(dark);
+			listView1.SetDarkMode(dark);
 		}
 
 		private void PluginManForm_Load(object sender, EventArgs e)
@@ -51,7 +52,14 @@ namespace quick_picture_viewer
 
 		private void RefreshPluginsList()
 		{
-			listView1.Items.Clear();
+			if (listView1.Items != null && listView1.Items.Count > 0)
+			{
+				listView1.Items.Clear();
+			}
+			if (imageList1.Images != null && imageList1.Images.Count > 0)
+			{
+				imageList1.Images.Clear();
+			}
 
 			PluginInfo[] plugins = PluginManager.GetPlugins(true);
 			codenames = new string[plugins.Length];
@@ -71,7 +79,7 @@ namespace quick_picture_viewer
 				}
 
 				var listViewItem = new ListViewItem(new string[] {
-					plugins[i].title,
+					plugins[i].title + " (" + plugins[i].name + ")",
 					plugins[i].description.Get(Properties.Settings.Default.Language),
 					authors,
 					"v" + plugins[i].version
@@ -82,6 +90,7 @@ namespace quick_picture_viewer
 				{
 					imageList1.Images.Add(imageList1.Images.Count.ToString(), img);
 					listViewItem.ImageKey = (imageList1.Images.Count - 1).ToString();
+					img.Dispose();
 				}
 
 				listView1.Items.Add(listViewItem);
@@ -98,6 +107,7 @@ namespace quick_picture_viewer
 			listView1.Columns[3].Text = owner.resMan.GetString("version");
 			addPluginBtn.Text = " " + owner.resMan.GetString("browse-for-plugins");
 			deleteBtn.Text = owner.resMan.GetString("delete-plugin");
+			openFileDialog1.Title = owner.resMan.GetString("browse-for-plugins");
 		}
 
 		private void PluginManForm_KeyDown(object sender, KeyEventArgs e)
@@ -142,6 +152,9 @@ namespace quick_picture_viewer
 
 			if (window == DialogResult.Yes)
 			{
+				listView1.Items[numberInList].Remove();
+				imageList1.Images[numberInList].Dispose();
+				
 				string pluginFolder = Path.Combine(PluginManager.pluginsFolder, codenames[numberInList]);
 				if (FileSystem.DirectoryExists(pluginFolder))
 				{

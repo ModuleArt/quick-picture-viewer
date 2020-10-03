@@ -30,7 +30,7 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PluginManForm));
-			this.listView1 = new System.Windows.Forms.ListView();
+			this.listView1 = new QuickLibrary.QlibListView();
 			this.pluginNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.descColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.authorsColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,8 +50,8 @@
 			// 
 			// listView1
 			// 
-			this.listView1.BackColor = System.Drawing.Color.White;
-			this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.listView1.BackColor = System.Drawing.SystemColors.Control;
+			this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.pluginNameColumn,
             this.descColumn,
@@ -74,7 +74,7 @@
 			// pluginNameColumn
 			// 
 			this.pluginNameColumn.Text = "plugin";
-			this.pluginNameColumn.Width = 140;
+			this.pluginNameColumn.Width = 150;
 			// 
 			// descColumn
 			// 
@@ -84,7 +84,7 @@
 			// authorsColumn
 			// 
 			this.authorsColumn.Text = "authors";
-			this.authorsColumn.Width = 160;
+			this.authorsColumn.Width = 150;
 			// 
 			// versionColumn
 			// 
@@ -96,7 +96,7 @@
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(181, 50);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(168, 28);
 			// 
 			// deleteBtn
 			// 
@@ -104,7 +104,7 @@
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.deleteBtn.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-			this.deleteBtn.Size = new System.Drawing.Size(180, 24);
+			this.deleteBtn.Size = new System.Drawing.Size(167, 24);
 			this.deleteBtn.Text = "delete plugin";
 			this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
 			// 
@@ -201,7 +201,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.ListView listView1;
+		private QuickLibrary.QlibListView listView1;
 		private System.Windows.Forms.ImageList imageList1;
 		private System.Windows.Forms.ColumnHeader pluginNameColumn;
 		private System.Windows.Forms.ColumnHeader descColumn;

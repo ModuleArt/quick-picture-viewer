@@ -166,5 +166,17 @@ namespace quick_picture_viewer.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EscToExit {
+            get {
+                return ((bool)(this["EscToExit"]));
+            }
+            set {
+                this["EscToExit"] = value;
+            }
+        }
     }
 }

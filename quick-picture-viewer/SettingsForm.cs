@@ -66,6 +66,7 @@ namespace quick_picture_viewer
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
 			zoomWheelCheckBox.Checked = Properties.Settings.Default.NoCtrlZoom;
+			escToExitCheckBox.Checked = Properties.Settings.Default.EscToExit;
 
 			int startupAction = Properties.Settings.Default.StartupAction;
 			if (startupAction == 0)
@@ -123,13 +124,14 @@ namespace quick_picture_viewer
 			zoomWheelCheckBox.Text = string.Format(owner.resMan.GetString("wheel-to-zoom"), "Ctrl");
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			translatedByLabel.Text = owner.resMan.GetString("translated-by") + ": ";
+			escToExitCheckBox.Text = string.Format(owner.resMan.GetString("esc-to-exit"), "Esc");
 		}
 
 		private void SetDarkMode(bool dark)
 		{
 			if (dark)
 			{
-				this.BackColor = ThemeManager.DarkBackColor;
+				this.BackColor = ThemeManager.DarkMainColor;
 				this.ForeColor = Color.White;
 
 				settingsTabs.BackTabColor = ThemeManager.DarkBackColor;
@@ -155,6 +157,7 @@ namespace quick_picture_viewer
 			slideshowCounterCheckBox.SetDarkMode(dark);
 			langComboBox.SetDarkMode(dark);
 			favExtTextBox.SetDarkMode(dark);
+			escToExitCheckBox.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -300,6 +303,12 @@ namespace quick_picture_viewer
 			owner = this.Owner as MainForm;
 			InitLanguage();
 			langComboBox_SelectedIndexChanged(null, null);
+		}
+
+		private void escToExitCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.EscToExit = escToExitCheckBox.Checked;
+			Properties.Settings.Default.Save();
 		}
 	}
 }

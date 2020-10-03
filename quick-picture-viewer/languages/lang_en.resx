@@ -305,6 +305,10 @@
     <value>Error</value>
     <comment>Message box</comment>
   </data>
+  <data name="esc-to-exit" xml:space="preserve">
+    <value>Press {0} to exit app</value>
+    <comment>Main window</comment>
+  </data>
   <data name="extension" xml:space="preserve">
     <value>Extension</value>
     <comment>Image info</comment>
@@ -398,7 +402,7 @@
     <comment>Image info</comment>
   </data>
   <data name="input" xml:space="preserve">
-    <value>Input</value>
+    <value>Mouse and keyboard</value>
     <comment>Settings</comment>
   </data>
   <data name="landscape" xml:space="preserve">

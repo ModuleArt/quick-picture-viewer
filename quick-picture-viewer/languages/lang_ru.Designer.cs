@@ -484,6 +484,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Нажмите {0}, чтобы выйти из приложения.
+        /// </summary>
+        public static string esc_to_exit {
+            get {
+                return ResourceManager.GetString("esc-to-exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Расширение.
         /// </summary>
         public static string extension {
@@ -691,7 +700,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ввод.
+        ///   Looks up a localized string similar to Клавиатура и мышь.
         /// </summary>
         public static string input {
             get {

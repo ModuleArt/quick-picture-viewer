@@ -37,6 +37,7 @@
 			this.updatesPage = new System.Windows.Forms.TabPage();
 			this.updatesCheckBox = new QuickLibrary.QlibCheckBox();
 			this.mousePage = new System.Windows.Forms.TabPage();
+			this.escToExitCheckBox = new QuickLibrary.QlibCheckBox();
 			this.zoomWheelCheckBox = new QuickLibrary.QlibCheckBox();
 			this.fullscrCursorCheckBox = new QuickLibrary.QlibCheckBox();
 			this.slideshowPage = new System.Windows.Forms.TabPage();
@@ -49,6 +50,7 @@
 			this.startupNothingRadio = new QuickLibrary.QlibRadioButton();
 			this.startupPasteRadio = new QuickLibrary.QlibRadioButton();
 			this.externalPage = new System.Windows.Forms.TabPage();
+			this.browseBtn = new System.Windows.Forms.Button();
 			this.favExtTextBox = new QuickLibrary.QlibTextBox();
 			this.favExtLabel = new System.Windows.Forms.Label();
 			this.langPage = new System.Windows.Forms.TabPage();
@@ -58,17 +60,15 @@
 			this.restartLabel2 = new System.Windows.Forms.Label();
 			this.langComboBox = new QuickLibrary.QlibComboBox();
 			this.titlePanel = new System.Windows.Forms.Panel();
+			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.browseBtn = new System.Windows.Forms.Button();
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
 			this.updatesPage.SuspendLayout();
 			this.mousePage.SuspendLayout();
 			this.slideshowPage.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.slideshowTimeNumeric)).BeginInit();
 			this.startupPage.SuspendLayout();
 			this.externalPage.SuspendLayout();
 			this.langPage.SuspendLayout();
@@ -192,7 +192,8 @@
 			// 
 			// mousePage
 			// 
-			this.mousePage.BackColor = System.Drawing.Color.White;
+			this.mousePage.BackColor = System.Drawing.SystemColors.Control;
+			this.mousePage.Controls.Add(this.escToExitCheckBox);
 			this.mousePage.Controls.Add(this.zoomWheelCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
 			this.mousePage.Location = new System.Drawing.Point(4, 60);
@@ -201,8 +202,19 @@
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
 			this.mousePage.Size = new System.Drawing.Size(332, 152);
 			this.mousePage.TabIndex = 2;
-			this.mousePage.Text = "mouse";
+			this.mousePage.Text = "mouse & keyboard";
 			this.mousePage.ToolTipText = "Cursor options";
+			// 
+			// escToExitCheckBox
+			// 
+			this.escToExitCheckBox.Location = new System.Drawing.Point(10, 74);
+			this.escToExitCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.escToExitCheckBox.Name = "escToExitCheckBox";
+			this.escToExitCheckBox.Size = new System.Drawing.Size(312, 32);
+			this.escToExitCheckBox.TabIndex = 3;
+			this.escToExitCheckBox.Text = "press esc to exit";
+			this.escToExitCheckBox.UseVisualStyleBackColor = true;
+			this.escToExitCheckBox.CheckedChanged += new System.EventHandler(this.escToExitCheckBox_CheckedChanged);
 			// 
 			// zoomWheelCheckBox
 			// 
@@ -228,7 +240,7 @@
 			// 
 			// slideshowPage
 			// 
-			this.slideshowPage.BackColor = System.Drawing.Color.White;
+			this.slideshowPage.BackColor = System.Drawing.SystemColors.Control;
 			this.slideshowPage.Controls.Add(this.slideshowSecondsLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
@@ -244,7 +256,7 @@
 			// slideshowSecondsLabel
 			// 
 			this.slideshowSecondsLabel.AutoSize = true;
-			this.slideshowSecondsLabel.Location = new System.Drawing.Point(80, 41);
+			this.slideshowSecondsLabel.Location = new System.Drawing.Point(100, 45);
 			this.slideshowSecondsLabel.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.slideshowSecondsLabel.Name = "slideshowSecondsLabel";
 			this.slideshowSecondsLabel.Size = new System.Drawing.Size(58, 19);
@@ -263,8 +275,6 @@
 			// 
 			// slideshowTimeNumeric
 			// 
-			this.slideshowTimeNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.slideshowTimeNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.slideshowTimeNumeric.Location = new System.Drawing.Point(10, 39);
 			this.slideshowTimeNumeric.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.slideshowTimeNumeric.Maximum = new decimal(new int[] {
@@ -278,7 +288,7 @@
             0,
             0});
 			this.slideshowTimeNumeric.Name = "slideshowTimeNumeric";
-			this.slideshowTimeNumeric.Size = new System.Drawing.Size(60, 25);
+			this.slideshowTimeNumeric.Size = new System.Drawing.Size(80, 32);
 			this.slideshowTimeNumeric.TabIndex = 2;
 			this.slideshowTimeNumeric.Value = new decimal(new int[] {
             1,
@@ -289,7 +299,7 @@
 			// 
 			// slideshowCounterCheckBox
 			// 
-			this.slideshowCounterCheckBox.Location = new System.Drawing.Point(10, 74);
+			this.slideshowCounterCheckBox.Location = new System.Drawing.Point(10, 81);
 			this.slideshowCounterCheckBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.slideshowCounterCheckBox.Name = "slideshowCounterCheckBox";
 			this.slideshowCounterCheckBox.Size = new System.Drawing.Size(312, 32);
@@ -361,10 +371,29 @@
 			this.externalPage.TabIndex = 4;
 			this.externalPage.Text = "external";
 			// 
+			// browseBtn
+			// 
+			this.browseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.browseBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.browseBtn.FlatAppearance.BorderSize = 0;
+			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.browseBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
+			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.browseBtn.Location = new System.Drawing.Point(202, 81);
+			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.browseBtn.Name = "browseBtn";
+			this.browseBtn.Size = new System.Drawing.Size(120, 32);
+			this.browseBtn.TabIndex = 2;
+			this.browseBtn.TabStop = false;
+			this.browseBtn.Text = " browse";
+			this.browseBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.browseBtn.UseVisualStyleBackColor = false;
+			this.browseBtn.Click += new System.EventHandler(this.browseBtn_Click);
+			// 
 			// favExtTextBox
 			// 
-			this.favExtTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.favExtTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.favExtTextBox.Location = new System.Drawing.Point(10, 39);
 			this.favExtTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.favExtTextBox.Name = "favExtTextBox";
@@ -465,21 +494,6 @@
 			this.titlePanel.Size = new System.Drawing.Size(360, 32);
 			this.titlePanel.TabIndex = 0;
 			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(9, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(90, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "SettingsForm";
-			// 
-			// openFileDialog1
-			// 
-			this.openFileDialog1.FileName = "openFileDialog1";
-			this.openFileDialog1.Filter = "App executable|*.exe";
-			// 
 			// closeBtn
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
@@ -496,26 +510,20 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// browseBtn
+			// titleLabel
 			// 
-			this.browseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.browseBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.browseBtn.FlatAppearance.BorderSize = 0;
-			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.browseBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
-			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.browseBtn.Location = new System.Drawing.Point(202, 81);
-			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.browseBtn.Name = "browseBtn";
-			this.browseBtn.Size = new System.Drawing.Size(120, 32);
-			this.browseBtn.TabIndex = 2;
-			this.browseBtn.TabStop = false;
-			this.browseBtn.Text = " browse";
-			this.browseBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.browseBtn.UseVisualStyleBackColor = false;
-			this.browseBtn.Click += new System.EventHandler(this.browseBtn_Click);
+			this.titleLabel.AutoSize = true;
+			this.titleLabel.Location = new System.Drawing.Point(9, 7);
+			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(90, 19);
+			this.titleLabel.TabIndex = 16;
+			this.titleLabel.Text = "SettingsForm";
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.FileName = "openFileDialog1";
+			this.openFileDialog1.Filter = "App executable|*.exe";
 			// 
 			// SettingsForm
 			// 
@@ -544,7 +552,6 @@
 			this.mousePage.ResumeLayout(false);
 			this.slideshowPage.ResumeLayout(false);
 			this.slideshowPage.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.slideshowTimeNumeric)).EndInit();
 			this.startupPage.ResumeLayout(false);
 			this.startupPage.PerformLayout();
 			this.externalPage.ResumeLayout(false);
@@ -593,5 +600,6 @@
 		private System.Windows.Forms.Label langLabel;
 		private System.Windows.Forms.Label translatedByLabel;
 		private System.Windows.Forms.Panel translateAuthorsPanel;
+		private QuickLibrary.QlibCheckBox escToExitCheckBox;
 	}
 }

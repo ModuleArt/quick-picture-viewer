@@ -484,6 +484,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press {0} to exit app.
+        /// </summary>
+        public static string esc_to_exit {
+            get {
+                return ResourceManager.GetString("esc-to-exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Extension.
         /// </summary>
         public static string extension {
@@ -691,7 +700,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Input.
+        ///   Looks up a localized string similar to Mouse and keyboard.
         /// </summary>
         public static string input {
             get {

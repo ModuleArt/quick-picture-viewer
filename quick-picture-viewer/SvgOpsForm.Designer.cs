@@ -50,8 +50,6 @@
 			this.size16Button = new System.Windows.Forms.Button();
 			this.autoSizeBtn = new System.Windows.Forms.Button();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).BeginInit();
 			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
@@ -62,7 +60,7 @@
 			this.okButton.FlatAppearance.BorderSize = 0;
 			this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
-			this.okButton.Location = new System.Drawing.Point(10, 394);
+			this.okButton.Location = new System.Drawing.Point(10, 401);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(236, 32);
@@ -95,8 +93,6 @@
 			// 
 			// widthNumeric
 			// 
-			this.widthNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.widthNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.widthNumeric.Location = new System.Drawing.Point(10, 359);
 			this.widthNumeric.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.widthNumeric.Maximum = new decimal(new int[] {
@@ -110,7 +106,7 @@
             0,
             0});
 			this.widthNumeric.Name = "widthNumeric";
-			this.widthNumeric.Size = new System.Drawing.Size(113, 25);
+			this.widthNumeric.Size = new System.Drawing.Size(113, 32);
 			this.widthNumeric.TabIndex = 11;
 			this.widthNumeric.Value = new decimal(new int[] {
             1,
@@ -121,8 +117,6 @@
 			// 
 			// heightNumeric
 			// 
-			this.heightNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.heightNumeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.heightNumeric.Location = new System.Drawing.Point(133, 359);
 			this.heightNumeric.Margin = new System.Windows.Forms.Padding(0);
 			this.heightNumeric.Maximum = new decimal(new int[] {
@@ -136,7 +130,7 @@
             0,
             0});
 			this.heightNumeric.Name = "heightNumeric";
-			this.heightNumeric.Size = new System.Drawing.Size(113, 25);
+			this.heightNumeric.Size = new System.Drawing.Size(113, 32);
 			this.heightNumeric.TabIndex = 12;
 			this.heightNumeric.Value = new decimal(new int[] {
             1,
@@ -331,7 +325,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.ClientSize = new System.Drawing.Size(256, 436);
+			this.ClientSize = new System.Drawing.Size(256, 443);
 			this.Controls.Add(this.autoSizeBtn);
 			this.Controls.Add(this.size16Button);
 			this.Controls.Add(this.heightNumeric);
@@ -361,8 +355,6 @@
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.SvgOpsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SvgOpsForm_KeyDown);
-			((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.heightNumeric)).EndInit();
 			this.titlePanel.ResumeLayout(false);
 			this.titlePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();

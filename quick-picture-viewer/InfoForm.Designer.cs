@@ -80,8 +80,6 @@
 			// 
 			// extensionTextBox
 			// 
-			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.extensionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.extensionTextBox.Location = new System.Drawing.Point(304, 168);
 			this.extensionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.extensionTextBox.Name = "extensionTextBox";
@@ -151,8 +149,6 @@
 			// 
 			// compressionTextBox
 			// 
-			this.compressionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.compressionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.compressionTextBox.Location = new System.Drawing.Point(122, 168);
 			this.compressionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.compressionTextBox.Name = "compressionTextBox";
@@ -173,8 +169,6 @@
 			// 
 			// fullPathTextBox
 			// 
-			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.fullPathTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fullPathTextBox.Location = new System.Drawing.Point(122, 126);
 			this.fullPathTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.fullPathTextBox.Name = "fullPathTextBox";
@@ -196,8 +190,6 @@
 			// 
 			// folderTextBox
 			// 
-			this.folderTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.folderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.folderTextBox.Location = new System.Drawing.Point(122, 84);
 			this.folderTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.folderTextBox.Name = "folderTextBox";
@@ -209,8 +201,6 @@
 			// 
 			// fileNameTextBox
 			// 
-			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.fileNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fileNameTextBox.Location = new System.Drawing.Point(122, 42);
 			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.fileNameTextBox.Name = "fileNameTextBox";
@@ -232,8 +222,6 @@
 			// 
 			// sizeTextBox
 			// 
-			this.sizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.sizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.sizeTextBox.Location = new System.Drawing.Point(521, 42);
 			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.sizeTextBox.Name = "sizeTextBox";
@@ -254,8 +242,6 @@
 			// 
 			// megapixelsTextBox
 			// 
-			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.megapixelsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.megapixelsTextBox.Location = new System.Drawing.Point(521, 84);
 			this.megapixelsTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
@@ -276,8 +262,6 @@
 			// 
 			// resolutionTextBox
 			// 
-			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.resolutionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.resolutionTextBox.Location = new System.Drawing.Point(521, 126);
 			this.resolutionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.resolutionTextBox.Name = "resolutionTextBox";
@@ -298,8 +282,6 @@
 			// 
 			// inchesTextBox
 			// 
-			this.inchesTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.inchesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.inchesTextBox.Location = new System.Drawing.Point(521, 168);
 			this.inchesTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.inchesTextBox.Name = "inchesTextBox";
@@ -320,8 +302,6 @@
 			// 
 			// cmTextBox
 			// 
-			this.cmTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.cmTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.cmTextBox.Location = new System.Drawing.Point(521, 210);
 			this.cmTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.cmTextBox.Name = "cmTextBox";
@@ -352,8 +332,6 @@
 			// 
 			// ratioTextBox
 			// 
-			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.ratioTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.ratioTextBox.Location = new System.Drawing.Point(521, 294);
 			this.ratioTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.ratioTextBox.Name = "ratioTextBox";
@@ -364,8 +342,6 @@
 			// 
 			// diskSizeTextBox
 			// 
-			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.diskSizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.diskSizeTextBox.Location = new System.Drawing.Point(521, 252);
 			this.diskSizeTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
@@ -397,8 +373,6 @@
 			// 
 			// modifiedTextBox
 			// 
-			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.modifiedTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.modifiedTextBox.Location = new System.Drawing.Point(122, 252);
 			this.modifiedTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
 			this.modifiedTextBox.Name = "modifiedTextBox";
@@ -420,8 +394,6 @@
 			// 
 			// createdTextBox
 			// 
-			this.createdTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.createdTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.createdTextBox.Location = new System.Drawing.Point(122, 210);
 			this.createdTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.createdTextBox.Name = "createdTextBox";

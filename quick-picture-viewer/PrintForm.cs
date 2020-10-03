@@ -53,17 +53,6 @@ namespace quick_picture_viewer
 
 				printPreviewControl1.BackColor = ThemeManager.DarkBackColor;
 
-				titleTextBox.BackColor = ThemeManager.DarkSecondColor;
-				titleTextBox.ForeColor = Color.White;
-				leftMarginTextBox.BackColor = ThemeManager.DarkSecondColor;
-				leftMarginTextBox.ForeColor = Color.White;
-				rightMarginTextBox.BackColor = ThemeManager.DarkSecondColor;
-				rightMarginTextBox.ForeColor = Color.White;
-				topMarginTextBox.BackColor = ThemeManager.DarkSecondColor;
-				topMarginTextBox.ForeColor = Color.White;
-				bottomMarginTextBox.BackColor = ThemeManager.DarkSecondColor;
-				bottomMarginTextBox.ForeColor = Color.White;
-
 				okButton.BackColor = ThemeManager.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_print;
 
