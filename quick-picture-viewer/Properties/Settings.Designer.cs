@@ -85,18 +85,6 @@ namespace quick_picture_viewer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool NoCtrlZoom {
-            get {
-                return ((bool)(this["NoCtrlZoom"]));
-            }
-            set {
-                this["NoCtrlZoom"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int StartupAction {
             get {
@@ -176,6 +164,18 @@ namespace quick_picture_viewer.Properties {
             }
             set {
                 this["EscToExit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MouseWheelScrollAction {
+            get {
+                return ((int)(this["MouseWheelScrollAction"]));
+            }
+            set {
+                this["MouseWheelScrollAction"] = value;
             }
         }
     }

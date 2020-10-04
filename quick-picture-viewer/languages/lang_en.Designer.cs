@@ -835,6 +835,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mouse wheel scroll action.
+        /// </summary>
+        public static string mouse_wheel_action {
+            get {
+                return ResourceManager.GetString("mouse-wheel-action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Move file to the Recycle Bin.
         /// </summary>
         public static string move_to_trash {
@@ -876,6 +885,15 @@ namespace quick_picture_viewer.languages {
         public static string next_image_in_x_seconds {
             get {
                 return ResourceManager.GetString("next-image-in-x-seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next / previous image in folder.
+        /// </summary>
+        public static string next_prev_image {
+            get {
+                return ResourceManager.GetString("next-prev-image", resourceCulture);
             }
         }
         
@@ -1240,6 +1258,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scroll up / down.
+        /// </summary>
+        public static string scroll_up_down {
+            get {
+                return ResourceManager.GetString("scroll-up-down", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to seconds.
         /// </summary>
         public static string seconds {
@@ -1555,15 +1582,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mouse wheel to zoom (No {0}).
-        /// </summary>
-        public static string wheel_to_zoom {
-            get {
-                return ResourceManager.GetString("wheel-to-zoom", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Width.
         /// </summary>
         public static string width {
@@ -1587,6 +1605,15 @@ namespace quick_picture_viewer.languages {
         public static string zoom_in {
             get {
                 return ResourceManager.GetString("zoom-in", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zoom in / out.
+        /// </summary>
+        public static string zoom_in_out {
+            get {
+                return ResourceManager.GetString("zoom-in-out", resourceCulture);
             }
         }
         

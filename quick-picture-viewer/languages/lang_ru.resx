@@ -461,6 +461,10 @@
     <value>Еще</value>
     <comment>Menu</comment>
   </data>
+  <data name="mouse-wheel-action" xml:space="preserve">
+    <value>Действие на колёсико мыши</value>
+    <comment>Settings</comment>
+  </data>
   <data name="move-to-trash" xml:space="preserve">
     <value>Переместить файл в Корзину</value>
     <comment>Menu</comment>
@@ -480,6 +484,10 @@
   <data name="next-image-in-x-seconds" xml:space="preserve">
     <value>Следующее изображение через {0} секунд</value>
     <comment>Suggestion</comment>
+  </data>
+  <data name="next-prev-image" xml:space="preserve">
+    <value>Следующий / предыдущий файл в папке</value>
+    <comment>Settings</comment>
   </data>
   <data name="no-file" xml:space="preserve">
     <value>Нет файла</value>
@@ -641,6 +649,10 @@
     <value>Скриншот</value>
     <comment>Status bar</comment>
   </data>
+  <data name="scroll-up-down" xml:space="preserve">
+    <value>Прокрутка вверх / вниз</value>
+    <comment>Settings</comment>
+  </data>
   <data name="seconds" xml:space="preserve">
     <value>секунд</value>
     <comment>Settings</comment>
@@ -781,10 +793,6 @@
     <value>Внимание</value>
     <comment>Message box</comment>
   </data>
-  <data name="wheel-to-zoom" xml:space="preserve">
-    <value>Масштабировать колёсиком мыши (Без {0})</value>
-    <comment>Settings</comment>
-  </data>
   <data name="width" xml:space="preserve">
     <value>Ширина</value>
     <comment>SVG options</comment>
@@ -796,6 +804,10 @@
   <data name="zoom-in" xml:space="preserve">
     <value>Увеличить масштаб</value>
     <comment>Menu</comment>
+  </data>
+  <data name="zoom-in-out" xml:space="preserve">
+    <value>Увеличить / уменьшить масштаб</value>
+    <comment>Settings</comment>
   </data>
   <data name="zoom-out" xml:space="preserve">
     <value>Уменьшить масштаб</value>

@@ -69,13 +69,11 @@
   <img src="/docs/screenshots/about.png">
 </p>
 
-<h2 align="center">Special thanks to</h2>
-<p align="center">
-  JosePineiro for <a href="https://github.com/JosePineiro/WebP-wrapper/">WebPWrapper</a> (.webp support)<br>
-  darkfall for <a href="https://gist.github.com/darkfall/1656050/">PngIconConverter</a> (.ico support)<br>
-  nickbabcock for <a href="https://github.com/nickbabcock/Pfim/">Pfim</a> (.dds/.tga support)<br>
-  vvvv for <a href="https://github.com/vvvv/SVG/">SVG</a> (.svg support)
-</p>
+<h2 align="center">Plugins</h2>
+
+| Plugin | Codename | Type | Last commit |
+| :---: | :---: | :---: | :---: |
+| <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/qpv-blur?label=%20) |
 
 <h2 align="center">Additional</h2>
 <p align="center">

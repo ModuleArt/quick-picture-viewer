@@ -86,7 +86,6 @@
 			this.setMarginsButton.UseVisualStyleBackColor = false;
 			this.setMarginsButton.EnabledChanged += new System.EventHandler(this.setMarginsButton_EnabledChanged);
 			this.setMarginsButton.Click += new System.EventHandler(this.setMarginsButton_Click);
-			this.setMarginsButton.Paint += new System.Windows.Forms.PaintEventHandler(this.setMarginsButton_Paint);
 			// 
 			// bottomLabel
 			// 
@@ -143,7 +142,6 @@
 			// 
 			// bottomMarginTextBox
 			// 
-			this.bottomMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.bottomMarginTextBox.Location = new System.Drawing.Point(238, 248);
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.bottomMarginTextBox.Maximum = new decimal(new int[] {
@@ -167,7 +165,6 @@
 			// 
 			// rightMarginTextBox
 			// 
-			this.rightMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.rightMarginTextBox.Location = new System.Drawing.Point(162, 248);
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.rightMarginTextBox.Maximum = new decimal(new int[] {
@@ -191,7 +188,6 @@
 			// 
 			// topMarginTextBox
 			// 
-			this.topMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.topMarginTextBox.Location = new System.Drawing.Point(86, 248);
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.topMarginTextBox.Maximum = new decimal(new int[] {
@@ -225,7 +221,6 @@
 			// 
 			// leftMarginTextBox
 			// 
-			this.leftMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.leftMarginTextBox.Location = new System.Drawing.Point(10, 248);
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.leftMarginTextBox.Maximum = new decimal(new int[] {
@@ -259,7 +254,6 @@
 			// 
 			// titleTextBox
 			// 
-			this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.titleTextBox.Location = new System.Drawing.Point(104, 42);
 			this.titleTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 10);
 			this.titleTextBox.Name = "titleTextBox";

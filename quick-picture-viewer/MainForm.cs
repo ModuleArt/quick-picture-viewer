@@ -1043,7 +1043,7 @@ namespace quick_picture_viewer
 		{
 			if (originalImage != null)
 			{
-				if (Control.ModifierKeys == Keys.Control || Properties.Settings.Default.NoCtrlZoom)
+				if (Control.ModifierKeys == Keys.Control || Properties.Settings.Default.MouseWheelScrollAction == 1)
 				{
 					if (e.Delta > 0)
 					{
@@ -1052,6 +1052,17 @@ namespace quick_picture_viewer
 					else if (e.Delta < 0)
 					{
 						zoomOut();
+					}
+				}
+				else if (Properties.Settings.Default.MouseWheelScrollAction == 2)
+				{
+					if (e.Delta > 0)
+					{
+						prevFile();
+					}
+					else if (e.Delta < 0)
+					{
+						nextFile();
 					}
 				}
 			}
@@ -1714,6 +1725,9 @@ namespace quick_picture_viewer
 			{
 				docTitle = currentFile;
 			}
+
+			printDocument1.DocumentName = docTitle;
+			printDocument1.PrinterSettings.PrintFileName = docTitle;
 
 			PrintForm pf = new PrintForm(printDocument1, darkMode, docTitle);
 			pf.Owner = this;

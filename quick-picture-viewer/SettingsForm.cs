@@ -65,8 +65,21 @@ namespace quick_picture_viewer
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
-			zoomWheelCheckBox.Checked = Properties.Settings.Default.NoCtrlZoom;
 			escToExitCheckBox.Checked = Properties.Settings.Default.EscToExit;
+
+			int mouseWheelAction = Properties.Settings.Default.MouseWheelScrollAction;
+			if (mouseWheelAction == 0)
+			{
+				mouseWheelActionRadio1.Checked = true;
+			}
+			else if (mouseWheelAction == 1)
+			{
+				mouseWheelActionRadio2.Checked = true;
+			}
+			else if (mouseWheelAction == 2)
+			{
+				mouseWheelActionRadio3.Checked = true;
+			}
 
 			int startupAction = Properties.Settings.Default.StartupAction;
 			if (startupAction == 0)
@@ -121,10 +134,13 @@ namespace quick_picture_viewer
 			slideshowCounterCheckBox.Text = owner.resMan.GetString("show-slideshow-counter");
 			fullscrCursorCheckBox.Text = owner.resMan.GetString("fullscreen-cursor");
 			langLabel.Text = owner.resMan.GetString("ui-lang") + ":";
-			zoomWheelCheckBox.Text = string.Format(owner.resMan.GetString("wheel-to-zoom"), "Ctrl");
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			translatedByLabel.Text = owner.resMan.GetString("translated-by") + ": ";
 			escToExitCheckBox.Text = string.Format(owner.resMan.GetString("esc-to-exit"), "Esc");
+			mouseWheelActionLabel.Text = owner.resMan.GetString("mouse-wheel-action") + ":";
+			mouseWheelActionRadio1.Text = owner.resMan.GetString("scroll-up-down");
+			mouseWheelActionRadio2.Text = owner.resMan.GetString("zoom-in-out");
+			mouseWheelActionRadio3.Text = owner.resMan.GetString("next-prev-image");
 		}
 
 		private void SetDarkMode(bool dark)
@@ -149,7 +165,6 @@ namespace quick_picture_viewer
 			darkThemeRadio.SetDarkMode(dark);
 			lightThemeRadio.SetDarkMode(dark);
 			systemThemeRadio.SetDarkMode(dark);
-			zoomWheelCheckBox.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 			startupNothingRadio.SetDarkMode(dark);
 			startupPasteRadio.SetDarkMode(dark);
@@ -158,6 +173,9 @@ namespace quick_picture_viewer
 			langComboBox.SetDarkMode(dark);
 			favExtTextBox.SetDarkMode(dark);
 			escToExitCheckBox.SetDarkMode(dark);
+			mouseWheelActionRadio1.SetDarkMode(dark);
+			mouseWheelActionRadio2.SetDarkMode(dark);
+			mouseWheelActionRadio3.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -210,12 +228,6 @@ namespace quick_picture_viewer
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
-		}
-
-		private void zoomWheelCheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			Properties.Settings.Default.NoCtrlZoom = zoomWheelCheckBox.Checked;
-			Properties.Settings.Default.Save();
 		}
 
 		private void startupNothingRadio_CheckedChanged(object sender, EventArgs e)
@@ -308,6 +320,24 @@ namespace quick_picture_viewer
 		private void escToExitCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
 			Properties.Settings.Default.EscToExit = escToExitCheckBox.Checked;
+			Properties.Settings.Default.Save();
+		}
+
+		private void mouseWheelActionRadio1_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.MouseWheelScrollAction = 0;
+			Properties.Settings.Default.Save();
+		}
+
+		private void mouseWheelActionRadio2_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.MouseWheelScrollAction = 1;
+			Properties.Settings.Default.Save();
+		}
+
+		private void mouseWheelActionRadio3_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.MouseWheelScrollAction = 2;
 			Properties.Settings.Default.Save();
 		}
 	}

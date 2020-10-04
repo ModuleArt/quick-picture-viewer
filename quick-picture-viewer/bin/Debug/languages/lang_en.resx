@@ -461,6 +461,10 @@
     <value>More options</value>
     <comment>Menu</comment>
   </data>
+  <data name="mouse-wheel-action" xml:space="preserve">
+    <value>Mouse wheel scroll action</value>
+    <comment>Settings</comment>
+  </data>
   <data name="move-to-trash" xml:space="preserve">
     <value>Move file to the Recycle Bin</value>
     <comment>Menu</comment>
@@ -480,6 +484,10 @@
   <data name="next-image-in-x-seconds" xml:space="preserve">
     <value>Next image in {0} seconds</value>
     <comment>Suggestion</comment>
+  </data>
+  <data name="next-prev-image" xml:space="preserve">
+    <value>Next / previous image in folder</value>
+    <comment>Settings</comment>
   </data>
   <data name="no-file" xml:space="preserve">
     <value>No file</value>
@@ -641,6 +649,10 @@
     <value>Screenshot</value>
     <comment>Status bar</comment>
   </data>
+  <data name="scroll-up-down" xml:space="preserve">
+    <value>Scroll up / down</value>
+    <comment>Settings</comment>
+  </data>
   <data name="seconds" xml:space="preserve">
     <value>seconds</value>
     <comment>Settings</comment>
@@ -781,10 +793,6 @@
     <value>Warning</value>
     <comment>Message box</comment>
   </data>
-  <data name="wheel-to-zoom" xml:space="preserve">
-    <value>Mouse wheel to zoom (No {0})</value>
-    <comment>Settings</comment>
-  </data>
   <data name="width" xml:space="preserve">
     <value>Width</value>
     <comment>SVG options</comment>
@@ -796,6 +804,10 @@
   <data name="zoom-in" xml:space="preserve">
     <value>Zoom in</value>
     <comment>Menu</comment>
+  </data>
+  <data name="zoom-in-out" xml:space="preserve">
+    <value>Zoom in / out</value>
+    <comment>Settings</comment>
   </data>
   <data name="zoom-out" xml:space="preserve">
     <value>Zoom out</value>

@@ -80,7 +80,7 @@ namespace quick_picture_viewer
 			rightMarginTextBox.Enabled = marginsCheckBox.Checked;
 			bottomMarginTextBox.Enabled = marginsCheckBox.Checked;
 
-			setMarginsButton.Enabled = marginsCheckBox.Checked;
+			setMarginsButton.Visible = marginsCheckBox.Checked;
 		}
 
 		private void horizontalCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -92,6 +92,7 @@ namespace quick_picture_viewer
 		private void okButton_Click(object sender, EventArgs e)
 		{
 			printPreviewControl1.Document.DocumentName = titleTextBox.Text;
+			printPreviewControl1.Document.PrinterSettings.PrintFileName = titleTextBox.Text;
 			this.DialogResult = DialogResult.OK;
 		}
 
@@ -122,26 +123,6 @@ namespace quick_picture_viewer
 			catch
 			{
 				MessageBox.Show("Unable to parse document margins", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
-
-		private void setMarginsButton_Paint(object sender, PaintEventArgs e)
-		{
-			if (darkMode)
-			{
-				Button btn = (Button)sender;
-
-				btn.Text = string.Empty;
-				TextFormatFlags flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
-
-				if (btn.Enabled)
-				{
-					TextRenderer.DrawText(e.Graphics, "Set margins", btn.Font, e.ClipRectangle, Color.White, flags);
-				}
-				else
-				{
-					TextRenderer.DrawText(e.Graphics, "Set margins", btn.Font, e.ClipRectangle, ThemeManager.DarkSecondColor, flags);
-				}
 			}
 		}
 

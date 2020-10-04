@@ -78,7 +78,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
 		{
-			if (Control.ModifierKeys == Keys.Control || Properties.Settings.Default.NoCtrlZoom)
+			if (Control.ModifierKeys == Keys.Control || Properties.Settings.Default.MouseWheelScrollAction == 1)
 			{
 				if (e.Delta > 0)
 				{
