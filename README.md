@@ -71,9 +71,9 @@
 
 <h2 align="center">Plugins</h2>
 
-| Plugin | Codename | Type | Last commit |
-| :---: | :---: | :---: | :---: |
-| <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/qpv-blur?label=%20) |
+| Plugin | Codename | Type | Last commit date | Last release date |
+| :---: | :---: | :---: | :---: | :---: |
+| <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-blur) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-blur) |
 
 <h2 align="center">Additional</h2>
 <p align="center">
