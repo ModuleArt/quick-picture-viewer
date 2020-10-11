@@ -18,7 +18,7 @@
         {
             "name": "quick-picture-viewer",
             "minVersion": "2.2.0",
-            "maxVersion": "2.2.0"
+            "maxVersion": "2.2.1"
         }
     ],
     "functions": [

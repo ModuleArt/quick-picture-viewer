@@ -130,7 +130,7 @@
 			// restartLabel1
 			// 
 			this.restartLabel1.AutoSize = true;
-			this.restartLabel1.Location = new System.Drawing.Point(10, 116);
+			this.restartLabel1.Location = new System.Drawing.Point(10, 187);
 			this.restartLabel1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.restartLabel1.Name = "restartLabel1";
 			this.restartLabel1.Size = new System.Drawing.Size(114, 19);
@@ -174,7 +174,7 @@
 			// 
 			// themeRestart
 			// 
-			this.themeRestart.Location = new System.Drawing.Point(10, 116);
+			this.themeRestart.Location = new System.Drawing.Point(10, 187);
 			this.themeRestart.Margin = new System.Windows.Forms.Padding(0);
 			this.themeRestart.Name = "themeRestart";
 			this.themeRestart.Size = new System.Drawing.Size(342, 19);
@@ -516,7 +516,7 @@
 			// restartLabel2
 			// 
 			this.restartLabel2.AutoSize = true;
-			this.restartLabel2.Location = new System.Drawing.Point(10, 110);
+			this.restartLabel2.Location = new System.Drawing.Point(10, 187);
 			this.restartLabel2.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.restartLabel2.Name = "restartLabel2";
 			this.restartLabel2.Size = new System.Drawing.Size(114, 19);
@@ -542,7 +542,7 @@
 			// 
 			// localizationRestart
 			// 
-			this.localizationRestart.Location = new System.Drawing.Point(10, 110);
+			this.localizationRestart.Location = new System.Drawing.Point(10, 187);
 			this.localizationRestart.Margin = new System.Windows.Forms.Padding(0);
 			this.localizationRestart.Name = "localizationRestart";
 			this.localizationRestart.Size = new System.Drawing.Size(342, 19);

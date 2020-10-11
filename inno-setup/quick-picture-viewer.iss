@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "2.2.0"
+#define MyAppVersion "2.2.1"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io"
 #define MyAppExeName "quick-picture-viewer.exe"
@@ -47,9 +47,11 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Newtonsoft.Json.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Pfim.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.dll"; DestDir: "{app}"; Flags: ignoreversion
@@ -60,6 +62,8 @@ Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Releas
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\quick-picture-viewer.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
+
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\*"; DestDir: "{app}\plugins"; Flags: ignoreversion recursesubdirs
 
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\bmp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dds.ico"; DestDir: "{app}\icons"; Flags: ignoreversion

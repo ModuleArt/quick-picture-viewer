@@ -36,45 +36,47 @@ namespace quick_picture_viewer
 		{
 			List<PluginInfo> plugins = new List<PluginInfo>();
 			DirectoryInfo di = new DirectoryInfo(pluginsFolder);
-
-			List<FileInfo> files = new List<FileInfo>();
-			DirectoryInfo[] dirs = di.GetDirectories();
-			for (int i = 0; i < dirs.Length; i++)
+			if (di.Exists)
 			{
-				files.AddRange(dirs[i].GetFiles());
-				dirs[i] = null;
-			}
-
-			for (int i = 0; i < files.Count; i++)
-			{
-				if (Path.GetExtension(files[i].Name) == ".json")
+				List<FileInfo> files = new List<FileInfo>();
+				DirectoryInfo[] dirs = di.GetDirectories();
+				for (int i = 0; i < dirs.Length; i++)
 				{
-					string ver = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-					int lastDotIndex = ver.LastIndexOf('.');
-					ver = ver.Substring(0, lastDotIndex);
-
-					PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].DirectoryName, files[i].Name)));
-
-					if (onlyAvailable)
+					files.AddRange(dirs[i].GetFiles());
+					dirs[i] = null;
+				}
+				for (int i = 0; i < files.Count; i++)
+				{
+					if (Path.GetExtension(files[i].Name) == ".json")
 					{
-						for (int j = 0; j < pi.targets.Length; j++)
+						string ver = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+						int lastDotIndex = ver.LastIndexOf('.');
+						ver = ver.Substring(0, lastDotIndex);
+
+						PluginInfo pi = PluginInfo.FromJson(File.ReadAllText(Path.Combine(di.FullName, files[i].DirectoryName, files[i].Name)));
+
+						if (onlyAvailable)
 						{
-							if (pi.targets[j].name == "quick-picture-viewer" && ver.CompareTo(pi.targets[j].minVersion) >= 0)
+							for (int j = 0; j < pi.targets.Length; j++)
 							{
-								if (pi.targets[j].maxVersion == null || pi.targets[j].maxVersion == "" || ver.CompareTo(pi.targets[j].maxVersion) <= 0)
+								if (pi.targets[j].name == "quick-picture-viewer" && ver.CompareTo(pi.targets[j].minVersion) >= 0)
 								{
-									plugins.Add(pi);
-									break;
+									Console.WriteLine(pi.targets[j].maxVersion);
+									if (pi.targets[j].maxVersion == null || pi.targets[j].maxVersion == "" || ver.CompareTo(pi.targets[j].maxVersion) <= 0)
+									{
+										plugins.Add(pi);
+										break;
+									}
 								}
 							}
 						}
+						else
+						{
+							plugins.Add(pi);
+						}
 					}
-					else
-					{
-						plugins.Add(pi);
-					}
+					files[i] = null;
 				}
-				files[i] = null;
 			}
 			return plugins.ToArray();
 		}
