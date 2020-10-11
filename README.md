@@ -56,10 +56,10 @@
 
 <h2 align="center">Other great apps</h2>
 
-| Icon | App name | Description | Last commit |
-| :---: | :---: | :---: | :---: |
-| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-screen-recorder?label=%20) |
-| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker?label=%20) |
+| Icon | App name | Description | Last commit date | Last release date |
+| :---: | :---: | :---: | :---: | :---: |
+| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-screen-recorder) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-screen-recorder) |
+| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows, built on top of WinForms (C#). | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-color-picker) |
 
 <h2 align="center">More screenshots</h2>
 <p align="center">
@@ -69,14 +69,11 @@
   <img src="/docs/screenshots/about.png">
 </p>
 
-<h2 align="center">Plugins</h2>
+### Plugins:
 
 | Plugin | Codename | Type | Last commit date | Last release date |
 | :---: | :---: | :---: | :---: | :---: |
 | <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-blur) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-blur) |
-
-<h2 align="center">Additional</h2>
-<p align="center">
 
   ### How to uninstall built-in photos app in Windows 10:
   <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>
