@@ -31,74 +31,20 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiniViewForm));
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.zoomLabel = new System.Windows.Forms.Label();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.qlibMenuSeparator2 = new QuickLibrary.QlibMenuSeparator();
+			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
+			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.newWindowBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.picturePanel.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// resizeBtn
-			// 
-			this.resizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.resizeBtn.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-			this.resizeBtn.DarkImage = null;
-			this.resizeBtn.FlatAppearance.BorderSize = 0;
-			this.resizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.resizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("resizeBtn.Image")));
-			this.resizeBtn.IsRed = false;
-			this.resizeBtn.LightImage = ((System.Drawing.Image)(resources.GetObject("resizeBtn.LightImage")));
-			this.resizeBtn.Location = new System.Drawing.Point(368, 368);
-			this.resizeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.resizeBtn.Name = "resizeBtn";
-			this.resizeBtn.Size = new System.Drawing.Size(31, 31);
-			this.resizeBtn.TabIndex = 5;
-			this.resizeBtn.UseVisualStyleBackColor = false;
-			this.resizeBtn.Visible = false;
-			this.resizeBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseDown);
-			this.resizeBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// autoZoomBtn
-			// 
-			this.autoZoomBtn.Cursor = System.Windows.Forms.Cursors.Default;
-			this.autoZoomBtn.DarkImage = null;
-			this.autoZoomBtn.FlatAppearance.BorderSize = 0;
-			this.autoZoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.autoZoomBtn.Image = global::quick_picture_viewer.Properties.Resources.white_autozoom;
-			this.autoZoomBtn.IsRed = false;
-			this.autoZoomBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_autozoom;
-			this.autoZoomBtn.Location = new System.Drawing.Point(0, 0);
-			this.autoZoomBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.autoZoomBtn.Name = "autoZoomBtn";
-			this.autoZoomBtn.Size = new System.Drawing.Size(32, 32);
-			this.autoZoomBtn.TabIndex = 4;
-			this.autoZoomBtn.UseVisualStyleBackColor = false;
-			this.autoZoomBtn.Visible = false;
-			this.autoZoomBtn.Click += new System.EventHandler(this.autoZoomButton_Click);
-			// 
-			// closeBtn
-			// 
-			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.closeBtn.DarkImage = null;
-			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.IsRed = true;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(368, 0);
-			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.closeBtn.Name = "closeBtn";
-			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 2;
-			this.closeBtn.UseVisualStyleBackColor = false;
-			this.closeBtn.Visible = false;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// zoomLabel
 			// 
@@ -141,9 +87,82 @@
 			// contextMenuStrip1
 			// 
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkboardBtn});
+            this.checkboardBtn,
+            this.qlibMenuSeparator2,
+            this.newWindowBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 50);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 88);
+			// 
+			// qlibMenuSeparator2
+			// 
+			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
+			this.qlibMenuSeparator2.Size = new System.Drawing.Size(241, 6);
+			// 
+			// autoZoomBtn
+			// 
+			this.autoZoomBtn.Cursor = System.Windows.Forms.Cursors.Default;
+			this.autoZoomBtn.DarkImage = null;
+			this.autoZoomBtn.FlatAppearance.BorderSize = 0;
+			this.autoZoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.autoZoomBtn.Image = global::quick_picture_viewer.Properties.Resources.white_autozoom;
+			this.autoZoomBtn.IsRed = false;
+			this.autoZoomBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_autozoom;
+			this.autoZoomBtn.Location = new System.Drawing.Point(0, 0);
+			this.autoZoomBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.autoZoomBtn.Name = "autoZoomBtn";
+			this.autoZoomBtn.Size = new System.Drawing.Size(32, 32);
+			this.autoZoomBtn.TabIndex = 4;
+			this.autoZoomBtn.UseVisualStyleBackColor = false;
+			this.autoZoomBtn.Visible = false;
+			this.autoZoomBtn.Click += new System.EventHandler(this.autoZoomButton_Click);
+			// 
+			// closeBtn
+			// 
+			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.closeBtn.DarkImage = null;
+			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.IsRed = true;
+			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.Location = new System.Drawing.Point(368, 0);
+			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.closeBtn.Name = "closeBtn";
+			this.closeBtn.Size = new System.Drawing.Size(32, 32);
+			this.closeBtn.TabIndex = 2;
+			this.closeBtn.UseVisualStyleBackColor = false;
+			this.closeBtn.Visible = false;
+			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
+			// resizeBtn
+			// 
+			this.resizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.resizeBtn.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+			this.resizeBtn.DarkImage = null;
+			this.resizeBtn.FlatAppearance.BorderSize = 0;
+			this.resizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.resizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("resizeBtn.Image")));
+			this.resizeBtn.IsRed = false;
+			this.resizeBtn.LightImage = ((System.Drawing.Image)(resources.GetObject("resizeBtn.LightImage")));
+			this.resizeBtn.Location = new System.Drawing.Point(368, 368);
+			this.resizeBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.resizeBtn.Name = "resizeBtn";
+			this.resizeBtn.Size = new System.Drawing.Size(31, 31);
+			this.resizeBtn.TabIndex = 5;
+			this.resizeBtn.UseVisualStyleBackColor = false;
+			this.resizeBtn.Visible = false;
+			this.resizeBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseDown);
+			this.resizeBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// newWindowBtn
+			// 
+			this.newWindowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_newwindow;
+			this.newWindowBtn.Name = "newWindowBtn";
+			this.newWindowBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+			this.newWindowBtn.Size = new System.Drawing.Size(244, 24);
+			this.newWindowBtn.Text = "new window";
+			this.newWindowBtn.Click += new System.EventHandler(this.newWindowBtn_Click);
 			// 
 			// checkboardBtn
 			// 
@@ -216,5 +235,7 @@
 		private QuickLibrary.QlibTitlebarButton resizeBtn;
 		private QuickLibrary.QlibContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem checkboardBtn;
+		private System.Windows.Forms.ToolStripMenuItem newWindowBtn;
+		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator2;
 	}
 }

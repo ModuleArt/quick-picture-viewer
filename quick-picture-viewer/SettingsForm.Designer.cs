@@ -34,6 +34,7 @@
 			this.systemThemeRadio = new QuickLibrary.QlibRadioButton();
 			this.darkThemeRadio = new QuickLibrary.QlibRadioButton();
 			this.lightThemeRadio = new QuickLibrary.QlibRadioButton();
+			this.themeRestart = new System.Windows.Forms.LinkLabel();
 			this.updatesPage = new System.Windows.Forms.TabPage();
 			this.updatesCheckBox = new QuickLibrary.QlibCheckBox();
 			this.mousePage = new System.Windows.Forms.TabPage();
@@ -62,6 +63,7 @@
 			this.langLabel = new System.Windows.Forms.Label();
 			this.restartLabel2 = new System.Windows.Forms.Label();
 			this.langComboBox = new QuickLibrary.QlibComboBox();
+			this.localizationRestart = new System.Windows.Forms.LinkLabel();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
@@ -115,6 +117,7 @@
 			this.themePage.Controls.Add(this.systemThemeRadio);
 			this.themePage.Controls.Add(this.darkThemeRadio);
 			this.themePage.Controls.Add(this.lightThemeRadio);
+			this.themePage.Controls.Add(this.themeRestart);
 			this.themePage.Location = new System.Drawing.Point(4, 60);
 			this.themePage.Margin = new System.Windows.Forms.Padding(0);
 			this.themePage.Name = "themePage";
@@ -168,6 +171,18 @@
 			this.lightThemeRadio.Text = "light";
 			this.lightThemeRadio.UseVisualStyleBackColor = true;
 			this.lightThemeRadio.CheckedChanged += new System.EventHandler(this.lightThemeRadio_CheckedChanged);
+			// 
+			// themeRestart
+			// 
+			this.themeRestart.Location = new System.Drawing.Point(10, 116);
+			this.themeRestart.Margin = new System.Windows.Forms.Padding(0);
+			this.themeRestart.Name = "themeRestart";
+			this.themeRestart.Size = new System.Drawing.Size(342, 19);
+			this.themeRestart.TabIndex = 39;
+			this.themeRestart.TabStop = true;
+			this.themeRestart.Text = "restart";
+			this.themeRestart.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			this.themeRestart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.restartLink_LinkClicked);
 			// 
 			// updatesPage
 			// 
@@ -461,6 +476,7 @@
 			this.langPage.Controls.Add(this.langLabel);
 			this.langPage.Controls.Add(this.restartLabel2);
 			this.langPage.Controls.Add(this.langComboBox);
+			this.langPage.Controls.Add(this.localizationRestart);
 			this.langPage.Location = new System.Drawing.Point(4, 60);
 			this.langPage.Margin = new System.Windows.Forms.Padding(0);
 			this.langPage.Name = "langPage";
@@ -523,6 +539,18 @@
 			this.langComboBox.Size = new System.Drawing.Size(342, 32);
 			this.langComboBox.TabIndex = 0;
 			this.langComboBox.SelectedIndexChanged += new System.EventHandler(this.langComboBox_SelectedIndexChanged);
+			// 
+			// localizationRestart
+			// 
+			this.localizationRestart.Location = new System.Drawing.Point(10, 110);
+			this.localizationRestart.Margin = new System.Windows.Forms.Padding(0);
+			this.localizationRestart.Name = "localizationRestart";
+			this.localizationRestart.Size = new System.Drawing.Size(342, 19);
+			this.localizationRestart.TabIndex = 44;
+			this.localizationRestart.TabStop = true;
+			this.localizationRestart.Text = "restart";
+			this.localizationRestart.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			this.localizationRestart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.restartLink_LinkClicked);
 			// 
 			// titlePanel
 			// 
@@ -645,5 +673,7 @@
 		private QuickLibrary.QlibRadioButton mouseWheelActionRadio1;
 		private QuickLibrary.QlibRadioButton mouseWheelActionRadio2;
 		private QuickLibrary.QlibRadioButton mouseWheelActionRadio3;
+		private System.Windows.Forms.LinkLabel themeRestart;
+		private System.Windows.Forms.LinkLabel localizationRestart;
 	}
 }

@@ -105,6 +105,9 @@ namespace quick_picture_viewer
 				}
 			}
 
+			themeRestart.LinkColor = ThemeManager.AccentColor;
+			localizationRestart.LinkColor = ThemeManager.AccentColor;
+
 			SetDarkMode(darkMode);
 		}
 
@@ -141,6 +144,8 @@ namespace quick_picture_viewer
 			mouseWheelActionRadio1.Text = owner.resMan.GetString("scroll-up-down");
 			mouseWheelActionRadio2.Text = owner.resMan.GetString("zoom-in-out");
 			mouseWheelActionRadio3.Text = owner.resMan.GetString("next-prev-image");
+			themeRestart.Text = owner.resMan.GetString("restart");
+			localizationRestart.Text = owner.resMan.GetString("restart");
 		}
 
 		private void SetDarkMode(bool dark)
@@ -339,6 +344,11 @@ namespace quick_picture_viewer
 		{
 			Properties.Settings.Default.MouseWheelScrollAction = 2;
 			Properties.Settings.Default.Save();
+		}
+
+		private void restartLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			owner.RestartApp();
 		}
 	}
 }

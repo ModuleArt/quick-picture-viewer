@@ -661,8 +661,9 @@
 			// 
 			// newWindowButton
 			// 
-			resources.ApplyResources(this.newWindowButton, "newWindowButton");
+			this.newWindowButton.Image = global::quick_picture_viewer.Properties.Resources.black_newwindow;
 			this.newWindowButton.Name = "newWindowButton";
+			resources.ApplyResources(this.newWindowButton, "newWindowButton");
 			this.newWindowButton.Click += new System.EventHandler(this.newWindowButton_Click);
 			// 
 			// toolStripSeparator10
@@ -749,6 +750,7 @@
 			this.KeyPreview = true;
 			this.Name = "MainForm";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);

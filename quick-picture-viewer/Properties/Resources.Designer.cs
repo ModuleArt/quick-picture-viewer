@@ -113,6 +113,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_newwindow {
+            get {
+                object obj = ResourceManager.GetObject("black-newwindow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_open {
             get {
                 object obj = ResourceManager.GetObject("black-open", resourceCulture);

@@ -1050,13 +1050,6 @@
   <data name="framelessBtn.Text" xml:space="preserve">
     <value>frameless mode</value>
   </data>
-  <data name="newWindowButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAFVJREFUOE9j
-        GDRgPhD/BuL/RGCQunlAjAJAgrxADFIAAjAaG+AHYpB6FIBsA7EYBWAIEABEG0C0ONUNAPHRMTJA52MK
-        QAHR4jQzABfAagCpeHgABgYAzflBCpN5dhwAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="newWindowButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+N</value>
   </data>

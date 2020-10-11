@@ -44,6 +44,7 @@ namespace quick_picture_viewer
 
 		public bool printCenterImage = true;
 		public ResourceManager resMan;
+		public bool restartApp = false;
 
 		public MainForm(string openPath, bool darkMode)
 		{
@@ -1906,7 +1907,13 @@ namespace quick_picture_viewer
 			NewWindow();
 		}
 
-		private void NewWindow()
+		public void RestartApp()
+		{
+			restartApp = true;
+			this.Close();
+		}
+
+		public void NewWindow()
 		{
 			Process.Start(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "quick-picture-viewer.exe"));
 		}
@@ -2216,6 +2223,14 @@ namespace quick_picture_viewer
 			pmf.Owner = this;
 			pmf.TopMost = alwaysOnTop;
 			pmf.ShowDialog();
+		}
+
+		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			if (restartApp)
+			{
+				NewWindow();
+			}
 		}
 	}
 }

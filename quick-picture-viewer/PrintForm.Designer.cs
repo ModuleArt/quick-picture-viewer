@@ -145,7 +145,7 @@
 			this.bottomMarginTextBox.Location = new System.Drawing.Point(238, 248);
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.bottomMarginTextBox.Maximum = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -168,7 +168,7 @@
 			this.rightMarginTextBox.Location = new System.Drawing.Point(162, 248);
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.rightMarginTextBox.Maximum = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -191,7 +191,7 @@
 			this.topMarginTextBox.Location = new System.Drawing.Point(86, 248);
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.topMarginTextBox.Maximum = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -224,7 +224,7 @@
 			this.leftMarginTextBox.Location = new System.Drawing.Point(10, 248);
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.leftMarginTextBox.Maximum = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});

@@ -29,10 +29,10 @@ namespace quick_picture_viewer
 			});
 			SetDarkMode(darkMode);
 
-			leftMarginTextBox.Text = pd.DefaultPageSettings.Margins.Left.ToString();
-			topMarginTextBox.Text = pd.DefaultPageSettings.Margins.Top.ToString();
-			rightMarginTextBox.Text = pd.DefaultPageSettings.Margins.Right.ToString();
-			bottomMarginTextBox.Text = pd.DefaultPageSettings.Margins.Bottom.ToString();
+			leftMarginTextBox.Value = pd.DefaultPageSettings.Margins.Left;
+			topMarginTextBox.Value = pd.DefaultPageSettings.Margins.Top;
+			rightMarginTextBox.Value = pd.DefaultPageSettings.Margins.Right;
+			bottomMarginTextBox.Value = pd.DefaultPageSettings.Margins.Bottom;
 
 			printPreviewControl1.Document = pd;
 
@@ -114,15 +114,15 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				printPreviewControl1.Document.DefaultPageSettings.Margins.Left = Convert.ToInt32(leftMarginTextBox.Text);
-				printPreviewControl1.Document.DefaultPageSettings.Margins.Top = Convert.ToInt32(topMarginTextBox.Text);
-				printPreviewControl1.Document.DefaultPageSettings.Margins.Right = Convert.ToInt32(rightMarginTextBox.Text);
-				printPreviewControl1.Document.DefaultPageSettings.Margins.Bottom = Convert.ToInt32(bottomMarginTextBox.Text);
+				printPreviewControl1.Document.DefaultPageSettings.Margins.Left = Convert.ToInt32(leftMarginTextBox.Value);
+				printPreviewControl1.Document.DefaultPageSettings.Margins.Top = Convert.ToInt32(topMarginTextBox.Value);
+				printPreviewControl1.Document.DefaultPageSettings.Margins.Right = Convert.ToInt32(rightMarginTextBox.Value);
+				printPreviewControl1.Document.DefaultPageSettings.Margins.Bottom = Convert.ToInt32(bottomMarginTextBox.Value);
 				printPreviewControl1.InvalidatePreview();
 			}
 			catch
 			{
-				MessageBox.Show("Unable to parse document margins", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(owner.resMan.GetString("print-margins-error"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

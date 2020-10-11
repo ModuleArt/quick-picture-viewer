@@ -1150,6 +1150,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Не удалось установить отступы документа.
+        /// </summary>
+        public static string print_margins_error {
+            get {
+                return ResourceManager.GetString("print-margins-error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Размер печати.
         /// </summary>
         public static string print_size {
@@ -1182,6 +1191,15 @@ namespace quick_picture_viewer.languages {
         public static string resolution {
             get {
                 return ResourceManager.GetString("resolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Перезапустить.
+        /// </summary>
+        public static string restart {
+            get {
+                return ResourceManager.GetString("restart", resourceCulture);
             }
         }
         

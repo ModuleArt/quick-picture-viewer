@@ -240,6 +240,7 @@ namespace quick_picture_viewer
 			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
 			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
 			checkboardBtn.Text = owner.resMan.GetString("checkboard-background");
+			newWindowBtn.Text = owner.resMan.GetString("new-window");
 		}
 
 		private void setCheckboardBackground(bool b)
@@ -418,6 +419,11 @@ namespace quick_picture_viewer
 		{
 			owner.setCheckboardBackground(!checkboardBackground, true);
 			setCheckboardBackground(!checkboardBackground);
+		}
+
+		private void newWindowBtn_Click(object sender, EventArgs e)
+		{
+			owner.NewWindow();
 		}
 	}
 }

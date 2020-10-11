@@ -601,6 +601,10 @@
     <value>Параметры печати</value>
     <comment>Print</comment>
   </data>
+  <data name="print-margins-error" xml:space="preserve">
+    <value>Не удалось установить отступы документа</value>
+    <comment>Print</comment>
+  </data>
   <data name="print-size" xml:space="preserve">
     <value>Размер печати</value>
     <comment>Image info</comment>
@@ -616,6 +620,10 @@
   <data name="resolution" xml:space="preserve">
     <value>Разрешение</value>
     <comment>Image info</comment>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>Перезапустить</value>
+    <comment>Settings</comment>
   </data>
   <data name="restart-required" xml:space="preserve">
     <value>Требуется перезапуск приложения</value>

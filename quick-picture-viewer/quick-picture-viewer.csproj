@@ -348,6 +348,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-newwindow.png" />
     <None Include="resources\imgs\dark\black-trash.png" />
     <None Include="resources\imgs\dark\black-grid.png" />
     <None Include="resources\imgs\dark\black-open.png" />
