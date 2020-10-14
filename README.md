@@ -26,16 +26,16 @@
   </a>
 </p>
 
+<p align="center">	
+  <img src="/docs/screenshots/main.png">	
+</p>
+
 <h2 align="center">Install</h2>
 
 | Windows | Version | Codename | Branch | Release date | Size | Downloads | Link |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.1">v2.2.1</a> | Community | Stable | Oct 11, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.2.1/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 | 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.1">v2.1.1</a> | Modernity | Stable | Sep 12, 2020 | 3.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.1.1/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
-
-<p align="center">	
-  <img src="/docs/screenshots/main.png">	
-</p>
 
 <h2 align="center">Features</h2>
 
