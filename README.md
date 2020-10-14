@@ -34,7 +34,7 @@
 
 | Windows | Version | Codename | Branch | Release date | Size | Downloads | Link |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.1">v2.2.1</a> | Community | Stable | Oct 11, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.2.1/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.1">v2.2.1</a> | Community | Stable | Oct 11, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.1/total?label=latest-release%40v2.2.1) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 | 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.1">v2.1.1</a> | Modernity | Stable | Sep 12, 2020 | 3.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.1.1/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 
 <h2 align="center">Features</h2>
@@ -56,11 +56,11 @@
 
 <h2 align="center">Other great apps</h2>
 
-| Icon | App name | Description | Last commit date | Last release date |
+| Icon | App name | Last commit date | Last release date | Description |
 | :---: | :---: | :---: | :---: | :---: |
-| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | Lightweight desktop screen recorder for Windows. | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-screen-recorder) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-screen-recorder) |
-| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | Lightweight desktop color picker and color editor utility to get and save colors code quickly for Windows. | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-color-picker) |
-
+| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-screen-recorder) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-screen-recorder) | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). |
+| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-color-picker) | Lightweight desktop color picker and color editor utility for Windows, built on top of WinForms (C#). |
+ 
 <h2 align="center">More screenshots</h2>
 <p align="center">
   <img src="/docs/screenshots/svg.png">
