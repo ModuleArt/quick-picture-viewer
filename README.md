@@ -64,9 +64,8 @@
 <h2 align="center">More screenshots</h2>
 <p align="center">
   <img src="/docs/screenshots/svg.png">
+  <img src="/docs/screenshots/checkerboard.png">
   <img src="/docs/screenshots/info.png">
-  <img src="/docs/screenshots/print.png">
-  <img src="/docs/screenshots/about.png">
 </p>
 
 ### Plugins:
@@ -75,14 +74,13 @@
 | :---: | :---: | :---: | :---: | :---: |
 | <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-blur) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-blur) |
 
-  ### How to uninstall built-in photos app in Windows 10:
-  <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>
-  Powershell (Admin):
+### How to uninstall built-in photos app in Windows 10:
+<a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>
+Powershell (Admin):
 
 ```powershell
 Get-AppxPackage *photos* | Remove-AppxPackage
 ```
 
-  ### Extension module for Windows Explorer to render SVG thumbnails:
-  <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
-</p>
+### Extension module for Windows Explorer to render SVG thumbnails:
+<a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
