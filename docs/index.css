@@ -1,0 +1,289 @@
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/inter-bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/inter-regular.ttf");
+}
+
+body {
+    margin: 0;
+    background: #f1f1f1;
+}
+
+/* HEADER */
+
+header {
+    position: absolute;
+    padding: 32px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header .logo {
+    transition: 0.25s transform;
+}
+
+header .logo:hover {
+    transform: translateY(-8px)
+}
+
+header .logo img {
+    vertical-align: middle;
+    width: 32px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.25s filter;
+}
+
+header .logo:hover img {
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+}
+
+header .logo span {
+    vertical-align: middle;
+    padding: 0 4px 0 16px;
+    font: bold 20px "Inter";
+}
+
+header .navbar .link {
+    font: 16px "Inter";
+    border: 2px solid transparent;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.25s border-color, 0.25s transform;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+header .navbar .link:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-8px)
+}
+
+/* HERO */
+
+.hero svg {
+    vertical-align: top;
+}
+
+.hero {
+    background-color: #7a36b1;
+    background-image: linear-gradient(to right bottom, #4c158a, #ad65d6);
+    padding: 128px 0 0 0;
+    text-align: center;
+}
+
+.hero .icon {
+    width: 128px;
+    transform: rotate(-5deg);
+    filter: drop-shadow(0 12px 24px rgba(255, 255, 255, 0.25));
+}
+
+.hero h1 {
+    font: bold 48px "Inter"; 
+    color: #fff;
+    margin: 16px 0;
+}
+
+.hero h3 {
+    font: 20px "Inter"; 
+    color: #fff;
+}
+
+.hero .buttons {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+}
+
+.hero .button {
+    padding: 12px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    margin: 0 8px;
+    transition: 0.25s transform, 0.25s filter;;
+}
+
+.hero .button.dark {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    background: #333;
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.hero .button:hover {
+    transform: translateY(-8px);
+}
+
+.hero .button.dark:hover {
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+}
+
+.hero .button span {
+    font: 16px "Inter";
+    vertical-align: middle;
+    margin: 0 6px;
+}
+
+.hero .button img {
+    vertical-align: middle;
+}
+
+.hero a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero span.version {
+    opacity: 0.5;
+    margin-left: 0;
+}
+
+/* MAIN */
+
+main {
+    text-align: center;
+}
+
+main .screenshot {
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+    border-radius: 8px;
+    margin-top: -20vw;
+    background: #333;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+main h2 {
+    font: bold 28px "Inter";
+    margin-top: 96px;
+}
+
+main .whats-new {
+    font: 16px "Inter";
+}
+
+main .whats-new .release-title {
+    font: bold 20px "Inter";
+    vertical-align: middle;
+    text-decoration: none;
+    color: #000;
+}
+
+main .whats-new .release-title:hover {
+    text-decoration: underline;
+}
+
+main .whats-new .release-date {
+    font: 16px "Inter";
+    vertical-align: middle;
+}
+
+main .whats-new .release-markdown {
+    margin-top: 16px;
+}
+
+main .content {
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    text-align: left;
+    padding: 32px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    background: #fff;
+    width: 480px;
+    font: 16px "Inter";
+    text-align: left;
+}
+
+main .content table {
+    width: 100%;
+}
+
+main .content th, main .content td {
+    padding: 8px 0;
+    text-align: center;
+}
+
+main .content a {
+    color: #ad65d6;
+    text-decoration: none;
+}
+
+main .content a:hover {
+    text-decoration: underline;
+}
+
+main .donate {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+main .donate img,
+main .donate span {
+    vertical-align: middle;
+    color: #000;
+}
+
+main .donate span {
+    margin: 0 6px;
+}
+
+main .donate a:hover {
+    text-decoration: none;
+}
+
+main .donate a:hover span {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 32px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 128px;
+}
+
+footer span,
+footer a {
+    opacity: 0.5;
+    font: 14px "Inter";
+    color: #000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #7D3DB0;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #642497;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #4B0B7E;
+}
