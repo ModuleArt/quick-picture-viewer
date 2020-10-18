@@ -18,14 +18,8 @@
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF">
   </a>
-  <a alt="Patreon page" href="https://www.patreon.com/moduleart">
-    <img alt="Patreon" src="https://img.shields.io/badge/donate-patreon-%23E85B46">
-  </a>
-  <a alt="Buy me a coffee" href="https://www.buymeacoffee.com/ModuleArt">
-    <img alt="Buy me a coffee" src="https://img.shields.io/badge/buy%20me-a%20coffee-%23FF813F">
-  </a>
-  <a alt="PayPal" href="http://paypal.me/moduleart">
-    <img alt="PayPal" src="https://img.shields.io/badge/donate-paypal-%23003087">
+  <a alt="Donate" href="#donate">
+    <img src="https://img.shields.io/badge/↓-donate-%23E85B46"
   </a>
 </p>
 
@@ -91,3 +85,17 @@ Get-AppxPackage *photos* | Remove-AppxPackage
 
 ### Extension module for Windows Explorer to render SVG thumbnails:
 <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
+
+### Donate:
+
+<a alt="Patreon page" href="https://www.patreon.com/moduleart">
+  <img alt="Patreon" src="https://img.shields.io/badge/donate-patreon-%23E85B46">
+</a>
+<a alt="Buy me a coffee" href="https://www.buymeacoffee.com/ModuleArt">
+  <img alt="Buy me a coffee" src="https://img.shields.io/badge/buy%20me-a%20coffee-%23FF813F">
+</a>
+<a alt="PayPal" href="http://paypal.me/moduleart">
+  <img alt="PayPal" src="https://img.shields.io/badge/donate-paypal-%23003087">
+</a>
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R72G0NO)
