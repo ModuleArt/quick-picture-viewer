@@ -24,6 +24,9 @@
   <a alt="Buy me a coffee" href="https://www.buymeacoffee.com/ModuleArt">
     <img alt="Buy me a coffee" src="https://img.shields.io/badge/buy%20me-a%20coffee-%23FF813F">
   </a>
+  <a alt="PayPal" href="http://paypal.me/moduleart">
+    <img alt="PayPal" src="https://img.shields.io/badge/donate-paypal-%23003087">
+  </a>
 </p>
 
 <p align="center">	
