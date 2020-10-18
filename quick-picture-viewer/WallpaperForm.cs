@@ -29,13 +29,11 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				this.BackColor = ThemeManager.DarkBackColor;
-				this.ForeColor = Color.White;
-
 				okButton.BackColor = ThemeManager.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_desktop;
 			}
 
+			DarkMode = dark;
 			fitComboBox.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 		}

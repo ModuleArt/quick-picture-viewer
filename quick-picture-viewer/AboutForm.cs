@@ -51,13 +51,12 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				this.BackColor = ThemeManager.DarkBackColor;
-				this.ForeColor = Color.White;
 				descTextBox.BackColor = ThemeManager.DarkBackColor;
 				descTextBox.ForeColor = Color.White;
 				makeDefaultBtn.BackColor = ThemeManager.DarkSecondColor;
 			}
 
+			DarkMode = dark;
 			closeBtn.SetDarkMode(dark);
 		}
 

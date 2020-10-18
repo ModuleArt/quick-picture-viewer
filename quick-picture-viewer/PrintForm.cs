@@ -45,9 +45,6 @@ namespace quick_picture_viewer
 			{
 				ThemeManager.setDarkModeToControl(printPreviewControl1.Handle);
 
-				this.BackColor = ThemeManager.DarkBackColor;
-				this.ForeColor = Color.White;
-
 				okButton.BackColor = ThemeManager.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_print;
 
@@ -59,15 +56,16 @@ namespace quick_picture_viewer
 				setMarginsButton.BackColor = ThemeManager.DarkSecondColor;
 			}
 
+			DarkMode = dark;
 			marginsCheckBox.SetDarkMode(dark);
 			horizontalCheckBox.SetDarkMode(dark);
 			centerCheckbox.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
-			rightMarginTextBox.SetDarkMode(dark);
-			leftMarginTextBox.SetDarkMode(dark);
-			topMarginTextBox.SetDarkMode(dark);
-			bottomMarginTextBox.SetDarkMode(dark);
-			titleTextBox.SetDarkMode(dark);
+			rightMarginTextBox.DarkMode = dark;
+			leftMarginTextBox.DarkMode = dark;
+			topMarginTextBox.DarkMode = dark;
+			bottomMarginTextBox.DarkMode = dark;
+			titleTextBox.DarkMode = dark;
 		}
 
 		private void marginsCheckBox_CheckedChanged(object sender, EventArgs e)

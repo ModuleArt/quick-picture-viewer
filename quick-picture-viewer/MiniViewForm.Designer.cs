@@ -34,13 +34,13 @@
 			this.zoomLabel = new System.Windows.Forms.Label();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.qlibMenuSeparator2 = new QuickLibrary.QlibMenuSeparator();
+			this.newWindowBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.newWindowBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.picturePanel.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -91,12 +91,49 @@
             this.qlibMenuSeparator2,
             this.newWindowBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 88);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 66);
+			// 
+			// checkboardBtn
+			// 
+			this.checkboardBtn.Image = global::quick_picture_viewer.Properties.Resources.white_grid;
+			this.checkboardBtn.Name = "checkboardBtn";
+			this.checkboardBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+			this.checkboardBtn.Size = new System.Drawing.Size(244, 24);
+			this.checkboardBtn.Text = "checkboard background";
+			this.checkboardBtn.Click += new System.EventHandler(this.checkerboardBackgroundToolStripMenuItem_Click);
 			// 
 			// qlibMenuSeparator2
 			// 
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
 			this.qlibMenuSeparator2.Size = new System.Drawing.Size(241, 6);
+			// 
+			// newWindowBtn
+			// 
+			this.newWindowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_newwindow;
+			this.newWindowBtn.Name = "newWindowBtn";
+			this.newWindowBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+			this.newWindowBtn.Size = new System.Drawing.Size(244, 24);
+			this.newWindowBtn.Text = "new window";
+			this.newWindowBtn.Click += new System.EventHandler(this.newWindowBtn_Click);
+			// 
+			// pictureBox
+			// 
+			this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
+			this.pictureBox.Name = "pictureBox";
+			this.pictureBox.Size = new System.Drawing.Size(400, 400);
+			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox.TabIndex = 0;
+			this.pictureBox.TabStop = false;
+			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.pictureBox.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
+			this.pictureBox.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
+			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// autoZoomBtn
 			// 
@@ -154,53 +191,17 @@
 			this.resizeBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseDown);
 			this.resizeBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
-			// newWindowBtn
-			// 
-			this.newWindowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_newwindow;
-			this.newWindowBtn.Name = "newWindowBtn";
-			this.newWindowBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-			this.newWindowBtn.Size = new System.Drawing.Size(244, 24);
-			this.newWindowBtn.Text = "new window";
-			this.newWindowBtn.Click += new System.EventHandler(this.newWindowBtn_Click);
-			// 
-			// checkboardBtn
-			// 
-			this.checkboardBtn.Image = global::quick_picture_viewer.Properties.Resources.white_grid;
-			this.checkboardBtn.Name = "checkboardBtn";
-			this.checkboardBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-			this.checkboardBtn.Size = new System.Drawing.Size(244, 24);
-			this.checkboardBtn.Text = "checkboard background";
-			this.checkboardBtn.Click += new System.EventHandler(this.checkerboardBackgroundToolStripMenuItem_Click);
-			// 
-			// pictureBox
-			// 
-			this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
-			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(400, 400);
-			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox.TabIndex = 0;
-			this.pictureBox.TabStop = false;
-			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.pictureBox.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
-			this.pictureBox.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
-			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
 			// MiniViewForm
 			// 
+			this.AlternativeAppearance = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(400, 400);
 			this.Controls.Add(this.zoomLabel);
 			this.Controls.Add(this.autoZoomBtn);
 			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.resizeBtn);
 			this.Controls.Add(this.picturePanel);
+			this.DarkMode = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.MaximizeBox = false;

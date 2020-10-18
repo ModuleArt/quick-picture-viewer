@@ -1290,7 +1290,7 @@
     <value>picturePanel</value>
   </data>
   <data name="&gt;&gt;picturePanel.Type" xml:space="preserve">
-    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.2.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;picturePanel.Parent" xml:space="preserve">
     <value>$this</value>

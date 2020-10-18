@@ -324,7 +324,6 @@
 			// SvgOpsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(256, 443);
 			this.Controls.Add(this.autoSizeBtn);
 			this.Controls.Add(this.size16Button);

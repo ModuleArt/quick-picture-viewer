@@ -132,6 +132,7 @@
 			// 
 			this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.statusStrip1, "statusStrip1");
+			this.statusStrip1.GripMargin = new System.Windows.Forms.Padding(0);
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.directoryLabel,
             this.fileLabel,

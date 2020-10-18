@@ -40,9 +40,6 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				this.BackColor = ThemeManager.DarkBackColor;
-				this.ForeColor = Color.White;
-
 				propertiesButton.BackColor = ThemeManager.DarkSecondColor;
 				propertiesButton.Image = Properties.Resources.white_imgfile;
 
@@ -54,21 +51,22 @@ namespace quick_picture_viewer
 				copyPathButton.BackColor = ThemeManager.DarkSecondColor;
 			}
 
+			DarkMode = dark;
 			closeBtn.SetDarkMode(dark);
-			fileNameTextBox.SetDarkMode(dark);
-			folderTextBox.SetDarkMode(dark);
-			fullPathTextBox.SetDarkMode(dark);
-			compressionTextBox.SetDarkMode(dark);
-			extensionTextBox.SetDarkMode(dark);
-			sizeTextBox.SetDarkMode(dark);
-			megapixelsTextBox.SetDarkMode(dark);
-			resolutionTextBox.SetDarkMode(dark);
-			inchesTextBox.SetDarkMode(dark);
-			cmTextBox.SetDarkMode(dark);
-			diskSizeTextBox.SetDarkMode(dark);
-			ratioTextBox.SetDarkMode(dark);
-			createdTextBox.SetDarkMode(dark);
-			modifiedTextBox.SetDarkMode(dark);
+			fileNameTextBox.DarkMode = dark;
+			folderTextBox.DarkMode = dark;
+			fullPathTextBox.DarkMode = dark;
+			compressionTextBox.DarkMode = dark;
+			extensionTextBox.DarkMode = dark;
+			sizeTextBox.DarkMode = dark;
+			megapixelsTextBox.DarkMode = dark;
+			resolutionTextBox.DarkMode = dark;
+			inchesTextBox.DarkMode = dark;
+			cmTextBox.DarkMode = dark;
+			diskSizeTextBox.DarkMode = dark;
+			ratioTextBox.DarkMode = dark;
+			createdTextBox.DarkMode = dark;
+			modifiedTextBox.DarkMode = dark;
 		}
 
 		private int GCD(int a, int b)

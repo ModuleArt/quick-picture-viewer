@@ -18,11 +18,11 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			this.path = path;
-			this.aspectRatio = imageWidth / (float)imageHeight;
+			aspectRatio = imageWidth / (float)imageHeight;
 			this.panelWidth = panelWidth;
 			this.panelHeight = panelHeight;
 
@@ -38,9 +38,6 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				this.BackColor = ThemeManager.DarkBackColor;
-				this.ForeColor = Color.White;
-
 				defaultSizeButton.BackColor = ThemeManager.DarkSecondColor;
 				autoSizeBtn.BackColor = ThemeManager.DarkSecondColor;
 				size16Button.BackColor = ThemeManager.DarkSecondColor;
@@ -54,22 +51,23 @@ namespace quick_picture_viewer
 				okButton.Image = Properties.Resources.white_size;
 			}
 
-			widthNumeric.SetDarkMode(dark);
-			heightNumeric.SetDarkMode(dark);
+			DarkMode = dark;
+			widthNumeric.DarkMode = dark;
+			heightNumeric.DarkMode = dark;
 			aspectRatioCheckbox.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 		}
 
-		private void okButton_Click(object sender, System.EventArgs e)
+		private void okButton_Click(object sender, EventArgs e)
 		{
-			MainForm mf = this.Owner as MainForm;
+			MainForm mf = Owner as MainForm;
 
 			int width = (int)widthNumeric.Value;
 			int height = (int)heightNumeric.Value;
 
 			mf.openSvg(path, width, height);
 
-			this.Close();
+			Close();
 		}
 
 		private void widthNumeric_ValueChanged(object sender, EventArgs e)
@@ -112,7 +110,7 @@ namespace quick_picture_viewer
 		{
 			if (aspectRatioCheckbox.Checked)
 			{
-				this.aspectRatio = (float)widthNumeric.Value / (float)heightNumeric.Value;
+				aspectRatio = (float)widthNumeric.Value / (float)heightNumeric.Value;
 			}
 		}
 
@@ -120,7 +118,7 @@ namespace quick_picture_viewer
 		{
 			if (e.KeyCode == Keys.Escape)
 			{
-				this.Close();
+				Close();
 			}
 		}
 
@@ -156,7 +154,7 @@ namespace quick_picture_viewer
 
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void size16Button_Click(object sender, EventArgs e)
@@ -185,13 +183,13 @@ namespace quick_picture_viewer
 
 		private void SvgOpsForm_Load(object sender, EventArgs e)
 		{
-			owner = this.Owner as MainForm;
+			owner = Owner as MainForm;
 			InitLanguage();
 		}
 
 		private void InitLanguage()
 		{
-			this.Text = "SVG " + owner.resMan.GetString("type-options");
+			Text = "SVG " + owner.resMan.GetString("type-options");
 			presetsLabel.Text = owner.resMan.GetString("presets") + ":";
 			widthLabel.Text = owner.resMan.GetString("width") + ":";
 			heightLabel.Text = owner.resMan.GetString("height") + ":";

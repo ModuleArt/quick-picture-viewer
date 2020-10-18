@@ -61,7 +61,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Acerca de.
+        ///   Looks up a localized string similar to Acerca de .
         /// </summary>
         public static string about {
             get {
@@ -79,7 +79,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La aplicación está actualizada.
+        ///   Looks up a localized string similar to Ligero, visor de imagenes versátil para Windows, hecho con WinForms (C#). El mejor remplazo para el visor defualt de Windows..
+        /// </summary>
+        public static string app_description {
+            get {
+                return ResourceManager.GetString("app-description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La aplicación esta actulizada.
         /// </summary>
         public static string app_is_up_to_date {
             get {
@@ -97,11 +106,38 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automático.
+        ///   Looks up a localized string similar to Aplicar.
+        /// </summary>
+        public static string apply {
+            get {
+                return ResourceManager.GetString("apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ratio de Aspecto.
+        /// </summary>
+        public static string aspect_ratio {
+            get {
+                return ResourceManager.GetString("aspect-ratio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto.
         /// </summary>
         public static string auto {
             get {
                 return ResourceManager.GetString("auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tamaño automático.
+        /// </summary>
+        public static string auto_size {
+            get {
+                return ResourceManager.GetString("auto-size", resourceCulture);
             }
         }
         
@@ -115,11 +151,47 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Color de fondo.
+        ///   Looks up a localized string similar to Color de Fondo.
         /// </summary>
         public static string background_color {
             get {
                 return ResourceManager.GetString("background-color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Este lenguaje sigue en beta, La aplicación puede crashear o no abrir..
+        /// </summary>
+        public static string beta_lang_warning {
+            get {
+                return ResourceManager.GetString("beta-lang-warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inferioir.
+        /// </summary>
+        public static string bottom {
+            get {
+                return ResourceManager.GetString("bottom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navegar.
+        /// </summary>
+        public static string browse {
+            get {
+                return ResourceManager.GetString("browse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buscar complementos.
+        /// </summary>
+        public static string browse_for_plugins {
+            get {
+                return ResourceManager.GetString("browse-for-plugins", resourceCulture);
             }
         }
         
@@ -133,7 +205,43 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buscar actualizaciones al iniciar aplicación.
+        ///   Looks up a localized string similar to Centro.
+        /// </summary>
+        public static string center {
+            get {
+                return ResourceManager.GetString("center", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Centrar Imagen.
+        /// </summary>
+        public static string center_image {
+            get {
+                return ResourceManager.GetString("center-image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to centímetros.
+        /// </summary>
+        public static string centimeters {
+            get {
+                return ResourceManager.GetString("centimeters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buscar actualizaciones.
+        /// </summary>
+        public static string check_for_updates {
+            get {
+                return ResourceManager.GetString("check-for-updates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buscar actualizaciones al iniciar la app.
         /// </summary>
         public static string check_for_updates_on_startup {
             get {
@@ -160,11 +268,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Escoger un tamaño.
+        /// </summary>
+        public static string choose_fit {
+            get {
+                return ResourceManager.GetString("choose-fit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limpiar.
         /// </summary>
         public static string clear {
             get {
                 return ResourceManager.GetString("clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cerrar.
+        /// </summary>
+        public static string close {
+            get {
+                return ResourceManager.GetString("close", resourceCulture);
             }
         }
         
@@ -178,6 +304,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Compresión.
+        /// </summary>
+        public static string compression {
+            get {
+                return ResourceManager.GetString("compression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configurar.
+        /// </summary>
+        public static string configure {
+            get {
+                return ResourceManager.GetString("configure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copiar.
         /// </summary>
         public static string copy {
@@ -187,7 +331,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copiar archivo orignal.
+        ///   Looks up a localized string similar to Copiar archivo original.
         /// </summary>
         public static string copy_file {
             get {
@@ -214,7 +358,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to El archivo actual no fue encontrado.
+        ///   Looks up a localized string similar to Created by.
+        /// </summary>
+        public static string created_by {
+            get {
+                return ResourceManager.GetString("created-by", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No se pudo encontrar el archivo actual.
         /// </summary>
         public static string cur_file_not_found {
             get {
@@ -250,11 +403,56 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Eliminar plugin.
+        /// </summary>
+        public static string delete_plugin {
+            get {
+                return ResourceManager.GetString("delete-plugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ¿Estás seguro de que quieres eliminar el plugin?.
+        /// </summary>
+        public static string delete_plugin_warning {
+            get {
+                return ResourceManager.GetString("delete-plugin-warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Descripción.
+        /// </summary>
+        public static string desc {
+            get {
+                return ResourceManager.GetString("desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tamaño del disco.
+        /// </summary>
+        public static string disk_size {
+            get {
+                return ResourceManager.GetString("disk-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hacer nada.
         /// </summary>
         public static string do_nothing {
             get {
                 return ResourceManager.GetString("do-nothing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrastra aquí para cambiar el tamaño de la ventana.
+        /// </summary>
+        public static string drag_here_to_resize {
+            get {
+                return ResourceManager.GetString("drag-here-to-resize", resourceCulture);
             }
         }
         
@@ -286,6 +484,42 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Presione {0} para salir de la aplicación.
+        /// </summary>
+        public static string esc_to_exit {
+            get {
+                return ResourceManager.GetString("esc-to-exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extensión.
+        /// </summary>
+        public static string extension {
+            get {
+                return ResourceManager.GetString("extension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Externa.
+        /// </summary>
+        public static string external {
+            get {
+                return ResourceManager.GetString("external", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to App externa favorita.
+        /// </summary>
+        public static string fav_external_app {
+            get {
+                return ResourceManager.GetString("fav-external-app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Archivo.
         /// </summary>
         public static string file {
@@ -304,6 +538,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Propiedades de archivo.
+        /// </summary>
+        public static string file_properties {
+            get {
+                return ResourceManager.GetString("file-properties", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Archivo recargado.
         /// </summary>
         public static string file_reloaded {
@@ -313,7 +556,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotar horizontal.
+        ///   Looks up a localized string similar to Llenar.
+        /// </summary>
+        public static string fill {
+            get {
+                return ResourceManager.GetString("fill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ajustar.
+        /// </summary>
+        public static string fit {
+            get {
+                return ResourceManager.GetString("fit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flip horizontal.
         /// </summary>
         public static string flip_horizontal {
             get {
@@ -322,7 +583,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotar vertical.
+        ///   Looks up a localized string similar to Voltear vertical.
         /// </summary>
         public static string flip_vertical {
             get {
@@ -358,11 +619,47 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ruta completa.
+        /// </summary>
+        public static string full_path {
+            get {
+                return ResourceManager.GetString("full-path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pantalla completa.
         /// </summary>
         public static string fullscreen {
             get {
                 return ResourceManager.GetString("fullscreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mostrar cursor en pantalla completa.
+        /// </summary>
+        public static string fullscreen_cursor {
+            get {
+                return ResourceManager.GetString("fullscreen-cursor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Altura.
+        /// </summary>
+        public static string height {
+            get {
+                return ResourceManager.GetString("height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imagen.
+        /// </summary>
+        public static string image {
+            get {
+                return ResourceManager.GetString("image", resourceCulture);
             }
         }
         
@@ -385,11 +682,56 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen copiada del portapapeles.
+        ///   Looks up a localized string similar to Imagen pegada del portapapeles.
         /// </summary>
         public static string image_pasted_from_clipboard {
             get {
                 return ResourceManager.GetString("image-pasted-from-clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pulgadas.
+        /// </summary>
+        public static string inches {
+            get {
+                return ResourceManager.GetString("inches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ratón y teclado.
+        /// </summary>
+        public static string input {
+            get {
+                return ResourceManager.GetString("input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paisaje.
+        /// </summary>
+        public static string landscape {
+            get {
+                return ResourceManager.GetString("landscape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paisaje.
+        /// </summary>
+        public static string landscape_orientation {
+            get {
+                return ResourceManager.GetString("landscape-orientation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Izquierda.
+        /// </summary>
+        public static string left {
+            get {
+                return ResourceManager.GetString("left", resourceCulture);
             }
         }
         
@@ -403,6 +745,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Licencia.
+        /// </summary>
+        public static string license {
+            get {
+                return ResourceManager.GetString("license", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Luz.
         /// </summary>
         public static string light {
@@ -412,11 +763,47 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to localización.
+        ///   Looks up a localized string similar to Localización.
         /// </summary>
         public static string localization {
             get {
                 return ResourceManager.GetString("localization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mantener la relación de aspecto.
+        /// </summary>
+        public static string maintain_aspect_ratio {
+            get {
+                return ResourceManager.GetString("maintain-aspect-ratio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Límites de margen.
+        /// </summary>
+        public static string margin_bounds {
+            get {
+                return ResourceManager.GetString("margin-bounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Márgenes.
+        /// </summary>
+        public static string margins {
+            get {
+                return ResourceManager.GetString("margins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to megapíxeles.
+        /// </summary>
+        public static string megapixels {
+            get {
+                return ResourceManager.GetString("megapixels", resourceCulture);
             }
         }
         
@@ -439,7 +826,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Más opciones.
+        ///   Looks up a localized string similar to Mas opciones.
         /// </summary>
         public static string more_options {
             get {
@@ -448,7 +835,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mover archivo a Papelera de Reciclaje.
+        ///   Looks up a localized string similar to Mouse wheel scroll action.
+        /// </summary>
+        public static string mouse_wheel_action {
+            get {
+                return ResourceManager.GetString("mouse-wheel-action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mover archivo a la Papelera de reciclaje.
         /// </summary>
         public static string move_to_trash {
             get {
@@ -466,7 +862,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sig. imagen en la carpeta.
+        ///   Looks up a localized string similar to Siguiente imagen en carpeta.
         /// </summary>
         public static string next_image {
             get {
@@ -475,7 +871,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sig. imagen en 1 segundo.
+        ///   Looks up a localized string similar to Siguiente imagen en 1 segundo.
         /// </summary>
         public static string next_image_in_1_second {
             get {
@@ -484,7 +880,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sig. imagen en {0} segundos.
+        ///   Looks up a localized string similar to Siguiente imagen en {0} segundos.
         /// </summary>
         public static string next_image_in_x_seconds {
             get {
@@ -493,7 +889,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sin archivo.
+        ///   Looks up a localized string similar to Imagen siguiente / anterior en carpeta.
+        /// </summary>
+        public static string next_prev_image {
+            get {
+                return ResourceManager.GetString("next-prev-image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ningún archivo.
         /// </summary>
         public static string no_file {
             get {
@@ -502,7 +907,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No más archivos para abrir.
+        ///   Looks up a localized string similar to No hay archivos para abrir.
         /// </summary>
         public static string no_files_to_open {
             get {
@@ -520,7 +925,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sin salvar.
+        ///   Looks up a localized string similar to No guardado.
         /// </summary>
         public static string not_saved {
             get {
@@ -529,7 +934,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir archivo con app. externa.
+        ///   Looks up a localized string similar to Abrir archivo con app externa.
         /// </summary>
         public static string open_external {
             get {
@@ -538,11 +943,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir archivo.
+        ///   Looks up a localized string similar to Abrir documento.
         /// </summary>
         public static string open_file {
             get {
                 return ResourceManager.GetString("open-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abra la configuración de Windows.
+        /// </summary>
+        public static string open_windows_settings {
+            get {
+                return ResourceManager.GetString("open-windows-settings", resourceCulture);
             }
         }
         
@@ -556,7 +970,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Elegir app. para abrir.
+        ///   Looks up a localized string similar to Elija la app para abrir.
         /// </summary>
         public static string open_with_choose {
             get {
@@ -565,7 +979,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir con app. custom.
+        ///   Looks up a localized string similar to Abrir con app personalizada.
         /// </summary>
         public static string open_with_custom {
             get {
@@ -574,11 +988,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir con app. defualt.
+        ///   Looks up a localized string similar to Abrir con la app predeterminada.
         /// </summary>
         public static string open_with_default {
             get {
                 return ResourceManager.GetString("open-with-default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tamaño original.
+        /// </summary>
+        public static string original_size {
+            get {
+                return ResourceManager.GetString("original-size", resourceCulture);
             }
         }
         
@@ -610,7 +1033,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abra una imagen para ver o editar.
+        ///   Looks up a localized string similar to pixeles.
+        /// </summary>
+        public static string pixels {
+            get {
+                return ResourceManager.GetString("pixels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abra una imagen para verla o editarla..
         /// </summary>
         public static string please_open_image {
             get {
@@ -619,7 +1051,43 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Más.
+        ///   Looks up a localized string similar to Plugin.
+        /// </summary>
+        public static string plugin {
+            get {
+                return ResourceManager.GetString("plugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plugin manager.
+        /// </summary>
+        public static string plugin_manager {
+            get {
+                return ResourceManager.GetString("plugin-manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No se encontró el directorio de plugins.
+        /// </summary>
+        public static string plugin_not_found {
+            get {
+                return ResourceManager.GetString("plugin-not-found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plugins.
+        /// </summary>
+        public static string plugins {
+            get {
+                return ResourceManager.GetString("plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plus.
         /// </summary>
         public static string plus {
             get {
@@ -628,7 +1096,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Presione {0} para salir de pantalla completa.
+        ///   Looks up a localized string similar to Retrato.
+        /// </summary>
+        public static string portrait {
+            get {
+                return ResourceManager.GetString("portrait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preajustes.
+        /// </summary>
+        public static string presets {
+            get {
+                return ResourceManager.GetString("presets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Presiona {0} para salir del modo de pantalla completa.
         /// </summary>
         public static string press_to_exit_fullscreen {
             get {
@@ -637,7 +1123,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen anterior de la carpeta.
+        ///   Looks up a localized string similar to Imagen anterior en carpeta.
         /// </summary>
         public static string prev_image {
             get {
@@ -655,6 +1141,33 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Configuración de impresión.
+        /// </summary>
+        public static string print_conf {
+            get {
+                return ResourceManager.GetString("print-conf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No se pueden establecer los márgenes del documento.
+        /// </summary>
+        public static string print_margins_error {
+            get {
+                return ResourceManager.GetString("print-margins-error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tamaño de impresión.
+        /// </summary>
+        public static string print_size {
+            get {
+                return ResourceManager.GetString("print-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Recargar archivo.
         /// </summary>
         public static string reload_file {
@@ -664,11 +1177,47 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cambiar el tamaño de SVG.
+        /// </summary>
+        public static string resize_svg {
+            get {
+                return ResourceManager.GetString("resize-svg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resolución.
+        /// </summary>
+        public static string resolution {
+            get {
+                return ResourceManager.GetString("resolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reiniciar.
+        /// </summary>
+        public static string restart {
+            get {
+                return ResourceManager.GetString("restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reincio de la app requerido.
         /// </summary>
         public static string restart_required {
             get {
                 return ResourceManager.GetString("restart-required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Derecha.
+        /// </summary>
+        public static string right {
+            get {
+                return ResourceManager.GetString("right", resourceCulture);
             }
         }
         
@@ -727,11 +1276,56 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Desplazarse hacia arriba / abajo.
+        /// </summary>
+        public static string scroll_up_down {
+            get {
+                return ResourceManager.GetString("scroll-up-down", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to segundo.
+        /// </summary>
+        public static string seconds {
+            get {
+                return ResourceManager.GetString("seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Establecer como app default.
+        /// </summary>
+        public static string set_as_default_image_viewer {
+            get {
+                return ResourceManager.GetString("set-as-default-image-viewer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Establecer como fondo de pantalla.
         /// </summary>
         public static string set_as_desktop_background {
             get {
                 return ResourceManager.GetString("set-as-desktop-background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Establecer fondo.
+        /// </summary>
+        public static string set_background {
+            get {
+                return ResourceManager.GetString("set-background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Establecer margenes.
+        /// </summary>
+        public static string set_margins_btn {
+            get {
+                return ResourceManager.GetString("set-margins-btn", resourceCulture);
             }
         }
         
@@ -754,6 +1348,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mostrar contador de diapositivas.
+        /// </summary>
+        public static string show_slideshow_counter {
+            get {
+                return ResourceManager.GetString("show-slideshow-counter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tamaño.
         /// </summary>
         public static string size {
@@ -772,11 +1375,38 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duración.
+        /// </summary>
+        public static string span {
+            get {
+                return ResourceManager.GetString("span", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cuadrado.
+        /// </summary>
+        public static string square {
+            get {
+                return ResourceManager.GetString("square", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inicio.
         /// </summary>
         public static string startup {
             get {
                 return ResourceManager.GetString("startup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Estirar.
+        /// </summary>
+        public static string stretch {
+            get {
+                return ResourceManager.GetString("stretch", resourceCulture);
             }
         }
         
@@ -799,6 +1429,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cambiar tiempo.
+        /// </summary>
+        public static string switching_time {
+            get {
+                return ResourceManager.GetString("switching-time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tema.
         /// </summary>
         public static string theme {
@@ -808,7 +1447,34 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Traducido por.
+        ///   Looks up a localized string similar to Loseta.
+        /// </summary>
+        public static string tile {
+            get {
+                return ResourceManager.GetString("tile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Título.
+        /// </summary>
+        public static string title {
+            get {
+                return ResourceManager.GetString("title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Superioir.
+        /// </summary>
+        public static string top {
+            get {
+                return ResourceManager.GetString("top", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traducido por:.
         /// </summary>
         public static string translated_by {
             get {
@@ -822,6 +1488,15 @@ namespace quick_picture_viewer.languages {
         public static string type_options {
             get {
                 return ResourceManager.GetString("type-options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Idioma de interfaz de usuario.
+        /// </summary>
+        public static string ui_lang {
+            get {
+                return ResourceManager.GetString("ui-lang", resourceCulture);
             }
         }
         
@@ -862,7 +1537,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se perderán todos los datos no guardados. ¿Estás seguro de que quieres abrir una nueva imagen?.
+        ///   Looks up a localized string similar to Todo los datos no guardado serán perdido. ¿ Estas seguro de abrir una nueva imágen?.
         /// </summary>
         public static string unsaved_data_lost {
             get {
@@ -889,7 +1564,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gestor de actualizaciones.
+        ///   Looks up a localized string similar to Administrador de actualización.
         /// </summary>
         public static string updator {
             get {
@@ -907,11 +1582,29 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Versión.
+        /// </summary>
+        public static string version {
+            get {
+                return ResourceManager.GetString("version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Advertencia.
         /// </summary>
         public static string warning {
             get {
                 return ResourceManager.GetString("warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ancho.
+        /// </summary>
+        public static string width {
+            get {
+                return ResourceManager.GetString("width", resourceCulture);
             }
         }
         
@@ -934,7 +1627,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Desnfocar Zoom.
+        ///   Looks up a localized string similar to Zoom + / +.
+        /// </summary>
+        public static string zoom_in_out {
+            get {
+                return ResourceManager.GetString("zoom-in-out", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desenfocar Zoom.
         /// </summary>
         public static string zoom_out {
             get {

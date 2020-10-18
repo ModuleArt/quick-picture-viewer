@@ -330,6 +330,7 @@
 			// 
 			// slideshowTimeNumeric
 			// 
+			this.slideshowTimeNumeric.DarkMode = false;
 			this.slideshowTimeNumeric.Location = new System.Drawing.Point(10, 39);
 			this.slideshowTimeNumeric.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.slideshowTimeNumeric.Maximum = new decimal(new int[] {
@@ -449,6 +450,7 @@
 			// 
 			// favExtTextBox
 			// 
+			this.favExtTextBox.DarkMode = false;
 			this.favExtTextBox.Location = new System.Drawing.Point(10, 39);
 			this.favExtTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.favExtTextBox.Name = "favExtTextBox";
@@ -595,8 +597,8 @@
 			// 
 			// SettingsForm
 			// 
+			this.AlternativeAppearance = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(390, 332);
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.settingsTabs);

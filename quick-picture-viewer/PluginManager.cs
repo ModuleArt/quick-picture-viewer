@@ -9,7 +9,7 @@ namespace quick_picture_viewer
 {
 	class PluginManager
 	{
-		public static string pluginsFolder = Path.Combine(Directory.GetCurrentDirectory(), "plugins");
+		public static string pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 
 		[DllImport("kernel32", SetLastError = true, CharSet = CharSet.Ansi)]
 		public static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)]string lpFileName);

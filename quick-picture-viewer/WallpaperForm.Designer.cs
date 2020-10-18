@@ -131,7 +131,6 @@
 			// WallpaperForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(320, 253);
 			this.Controls.Add(this.fitLabel);
 			this.Controls.Add(this.fitComboBox);

@@ -30,13 +30,12 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				this.BackColor = ThemeManager.DarkBackColor;
-				this.ForeColor = Color.White;
 				addPluginBtn.BackColor = ThemeManager.DarkSecondColor;
 				addPluginBtn.Image = Properties.Resources.white_open;
 				deleteBtn.Image = Properties.Resources.white_trash;
 			}
 
+			DarkMode = dark;
 			closeBtn.SetDarkMode(dark);
 			contextMenuStrip1.SetDarkMode(dark);
 			listView1.SetDarkMode(dark);

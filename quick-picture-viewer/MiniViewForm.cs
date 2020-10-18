@@ -25,36 +25,36 @@ namespace quick_picture_viewer
 		{
 			if (ThemeManager.isWindows10())
 			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
-			this.Text = title;
+			Text = title;
 			this.checkboardBackground = checkboardBackground;
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { zoomLabel });
 
-			this.MaximumSize = new Size(
-				Convert.ToInt32(Screen.FromHandle(this.Handle).WorkingArea.Width / 1.25f),
-				Convert.ToInt32(Screen.FromHandle(this.Handle).WorkingArea.Height / 1.25f)
+			MaximumSize = new Size(
+				Convert.ToInt32(Screen.FromHandle(Handle).WorkingArea.Width / 1.25f),
+				Convert.ToInt32(Screen.FromHandle(Handle).WorkingArea.Height / 1.25f)
 			);
 
-			ratio = (float)image.Width / (float)image.Height;
+			ratio = image.Width / image.Height;
 
 			if (image.Width > image.Height)
 			{
-				this.Width = 400;
-				this.Height = Convert.ToInt32(400 / ratio);
+				Width = 400;
+				Height = Convert.ToInt32(400 / ratio);
 			}
 			else
 			{
-				this.Width = Convert.ToInt32(400 * ratio);
-				this.Height = 400;
+				Width = Convert.ToInt32(400 * ratio);
+				Height = 400;
 			}
 
-			if (this.Width <= 200)
+			if (Width <= 200)
 			{
-				this.Height = Convert.ToInt32(this.Width / ratio);
+				Height = Convert.ToInt32(Width / ratio);
 			}
 
 			pictureBox.Image = image;
@@ -78,7 +78,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
 		{
-			if (Control.ModifierKeys == Keys.Control || Properties.Settings.Default.MouseWheelScrollAction == 1)
+			if (ModifierKeys == Keys.Control || Properties.Settings.Default.MouseWheelScrollAction == 1)
 			{
 				if (e.Delta > 0)
 				{
@@ -171,13 +171,13 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				this.Invoke((MethodInvoker)(() => {
-					Point curPos = this.PointToClient(Cursor.Position);
+				Invoke((MethodInvoker)(() => {
+					Point curPos = PointToClient(Cursor.Position);
 
 					int newWidth = curSize.Width + curPos.X - startPos.X;
-					int newHeight = Convert.ToInt32((float)newWidth / ratio);
+					int newHeight = Convert.ToInt32(newWidth / ratio);
 
-					this.Size = new Size(newWidth, newHeight);
+					Size = new Size(newWidth, newHeight);
 				}));
 			}
 			catch
@@ -188,8 +188,8 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			this.Owner.Show();
-			this.Owner.Refresh();
+			Owner.Show();
+			Owner.Refresh();
 		}
 
 		private void MiniViewForm_MouseEnter(object sender, EventArgs e)
@@ -199,7 +199,7 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_MouseLeave(object sender, EventArgs e)
 		{
-			Point relativePoint = this.PointToClient(Cursor.Position);
+			Point relativePoint = PointToClient(Cursor.Position);
 			if (relativePoint.Y > 32)
 			{
 				if (!(relativePoint.Y > ClientSize.Height - 32 && relativePoint.X > ClientSize.Width - 32))
@@ -223,10 +223,10 @@ namespace quick_picture_viewer
 		private void MiniViewForm_Load(object sender, EventArgs e)
 		{
 			Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
-			this.Left = workingArea.Left + workingArea.Width - this.Size.Width - 32;
-			this.Top = workingArea.Top + 32;
+			Left = workingArea.Left + workingArea.Width - Size.Width - 32;
+			Top = workingArea.Top + 32;
 
-			owner = this.Owner as MainForm;
+			owner = Owner as MainForm;
 			InitLanguage();
 
 			setCheckboardBackground(checkboardBackground);
@@ -234,7 +234,7 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			this.Text = owner.resMan.GetString("picture-in-picture");
+			Text = owner.resMan.GetString("picture-in-picture");
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
 			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
@@ -266,7 +266,7 @@ namespace quick_picture_viewer
 				{
 					if (e.KeyCode == Keys.P)
 					{
-						this.Close();
+						Close();
 					}
 				}
 				else
@@ -294,7 +294,7 @@ namespace quick_picture_viewer
 			{
 				if (e.KeyCode == Keys.Escape)
 				{
-					this.Close();
+					Close();
 				}
 			}
 		}
@@ -322,7 +322,7 @@ namespace quick_picture_viewer
 
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void picturePanel_MouseDown(object sender, MouseEventArgs e)
@@ -338,8 +338,8 @@ namespace quick_picture_viewer
 				else
 				{
 					panelMouseDownLocation = new Point(
-						this.PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
-						this.PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
+						PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
+						PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
 					);
 				}
 			}
@@ -357,8 +357,8 @@ namespace quick_picture_viewer
 
 			if (e.Button == MouseButtons.Left && !autoZoom)
 			{
-				int newX = panelMouseDownLocation.X - this.PointToClient(Cursor.Position).X;
-				int newY = panelMouseDownLocation.Y - this.PointToClient(Cursor.Position).Y;
+				int newX = panelMouseDownLocation.X - PointToClient(Cursor.Position).X;
+				int newY = panelMouseDownLocation.Y - PointToClient(Cursor.Position).Y;
 
 				if (newX > picturePanel.HorizontalScroll.Minimum)
 				{
@@ -410,8 +410,8 @@ namespace quick_picture_viewer
 		private void resizeBtn_MouseDown(object sender, MouseEventArgs e)
 		{
 			Cursor.Current = Cursors.SizeNWSE;
-			startPos = this.PointToClient(Cursor.Position);
-			curSize = this.Size;
+			startPos = PointToClient(Cursor.Position);
+			curSize = Size;
 			resizeTimer.Start();
 		}
 

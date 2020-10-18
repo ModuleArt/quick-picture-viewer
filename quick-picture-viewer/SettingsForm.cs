@@ -37,6 +37,7 @@ namespace quick_picture_viewer
 			}
 		};
 
+		private bool betaLangWarning = false;
 		private MainForm owner;
 
 		public SettingsForm(bool darkMode)
@@ -152,9 +153,6 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				this.BackColor = ThemeManager.DarkMainColor;
-				this.ForeColor = Color.White;
-
 				settingsTabs.BackTabColor = ThemeManager.DarkBackColor;
 				settingsTabs.HeaderColor = ThemeManager.DarkSecondColor;
 				settingsTabs.TextColor = Color.White;
@@ -165,6 +163,7 @@ namespace quick_picture_viewer
 				browseBtn.ForeColor = Color.White;
 			}
 
+			DarkMode = dark;
 			updatesCheckBox.SetDarkMode(dark);
 			fullscrCursorCheckBox.SetDarkMode(dark);
 			darkThemeRadio.SetDarkMode(dark);
@@ -173,10 +172,10 @@ namespace quick_picture_viewer
 			closeBtn.SetDarkMode(dark);
 			startupNothingRadio.SetDarkMode(dark);
 			startupPasteRadio.SetDarkMode(dark);
-			slideshowTimeNumeric.SetDarkMode(dark);
+			slideshowTimeNumeric.DarkMode = dark;
 			slideshowCounterCheckBox.SetDarkMode(dark);
 			langComboBox.SetDarkMode(dark);
-			favExtTextBox.SetDarkMode(dark);
+			favExtTextBox.DarkMode = dark;
 			escToExitCheckBox.SetDarkMode(dark);
 			mouseWheelActionRadio1.SetDarkMode(dark);
 			mouseWheelActionRadio2.SetDarkMode(dark);
@@ -279,18 +278,18 @@ namespace quick_picture_viewer
 			Properties.Settings.Default.Language = languages[langComboBox.SelectedIndex].Code;
 			Properties.Settings.Default.Save();
 
-			if (languages[langComboBox.SelectedIndex].Beta)
-			{
-				MessageBox.Show(
-					owner.resMan.GetString("beta-lang-warning"),
-					owner.resMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
-					MessageBoxButtons.OK,
-					MessageBoxIcon.Warning
-				);
-			}
-
 			if (owner != null)
 			{
+				if (languages[langComboBox.SelectedIndex].Beta && betaLangWarning)
+				{
+					MessageBox.Show(
+						owner.resMan.GetString("beta-lang-warning"),
+						owner.resMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
+						MessageBoxButtons.OK,
+						MessageBoxIcon.Warning
+					);
+				}
+
 				translateAuthorsPanel.Controls.Clear();
 				translateAuthorsPanel.Left = translatedByLabel.Location.X + translatedByLabel.Width;
 
@@ -320,6 +319,7 @@ namespace quick_picture_viewer
 			owner = this.Owner as MainForm;
 			InitLanguage();
 			langComboBox_SelectedIndexChanged(null, null);
+			betaLangWarning = true;
 		}
 
 		private void escToExitCheckBox_CheckedChanged(object sender, EventArgs e)
