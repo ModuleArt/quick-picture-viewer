@@ -18,11 +18,8 @@
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF">
   </a>
-  <a alt="Patreon page" href="https://www.patreon.com/moduleart">
-    <img alt="Patreon" src="https://img.shields.io/badge/donate-patreon-%23E85B46">
-  </a>
-  <a alt="Buy me a coffee" href="https://www.buymeacoffee.com/ModuleArt">
-    <img alt="Buy me a coffee" src="https://img.shields.io/badge/buy%20me-a%20coffee-%23FF813F">
+  <a alt="Donate" href="#donate">
+    <img src="https://img.shields.io/badge/↓-donate-%23E85B46"
   </a>
 </p>
 
@@ -34,8 +31,8 @@
 
 | Windows | Version | Codename | Branch | Release date | Size | Downloads | Link |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.1">v2.2.1</a> | Community | Stable | Oct 11, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.1/total?label=latest-release%40v2.2.1) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
-| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.1">v2.1.1</a> | Modernity | Stable | Sep 12, 2020 | 3.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.1.1/total) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.2">v2.2.2</a> | Community | Stable | Oct 18, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.2/total?label=latest%40v2.2.2) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.2/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
+| 7, 8.1, 10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.1.1">v2.1.1</a> | Modernity | Stable | Sep 12, 2020 | 3.5 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/moduleart/quick-picture-viewer/v2.1.1/total?label=dwnlds%40v2.1.1) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.1.1/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 
 <h2 align="center">Features</h2>
 
@@ -88,3 +85,17 @@ Get-AppxPackage *photos* | Remove-AppxPackage
 
 ### Extension module for Windows Explorer to render SVG thumbnails:
 <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
+
+### Donate:
+
+<a alt="Patreon page" href="https://www.patreon.com/moduleart">
+  <img alt="Patreon" src="https://img.shields.io/badge/donate-patreon-%23E85B46">
+</a>
+<a alt="Buy me a coffee" href="https://www.buymeacoffee.com/ModuleArt">
+  <img alt="Buy me a coffee" src="https://img.shields.io/badge/buy%20me-a%20coffee-%23FF813F">
+</a>
+<a alt="PayPal" href="http://paypal.me/moduleart">
+  <img alt="PayPal" src="https://img.shields.io/badge/donate-paypal-%23003087">
+</a>
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R72G0NO)
