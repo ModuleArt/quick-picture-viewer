@@ -47,7 +47,7 @@
 			this.slideshowPage = new System.Windows.Forms.TabPage();
 			this.slideshowSecondsLabel = new System.Windows.Forms.Label();
 			this.slideshowTimeLabel = new System.Windows.Forms.Label();
-			this.slideshowTimeNumeric = new QuickLibrary.QlibNumericBox();
+			this.slideshowTimeNumeric = new QuickLibrary.QlibNumeric();
 			this.slideshowCounterCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupPage = new System.Windows.Forms.TabPage();
 			this.startupLabel = new System.Windows.Forms.Label();
@@ -661,7 +661,7 @@
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.TabPage slideshowPage;
 		private QuickLibrary.QlibCheckBox slideshowCounterCheckBox;
-		private QuickLibrary.QlibNumericBox slideshowTimeNumeric;
+		private QuickLibrary.QlibNumeric slideshowTimeNumeric;
 		private System.Windows.Forms.Label slideshowTimeLabel;
 		private System.Windows.Forms.Label slideshowSecondsLabel;
 		private System.Windows.Forms.TabPage langPage;

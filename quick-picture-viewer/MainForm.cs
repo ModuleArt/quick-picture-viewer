@@ -2232,5 +2232,15 @@ namespace quick_picture_viewer
 				NewWindow();
 			}
 		}
+
+		private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				Cursor.Current = Cursors.SizeAll;
+				NativeMethodsManager.ReleaseCapture();
+				NativeMethodsManager.SendMessage(Handle, 0xA1, 0x2, 0);
+			}
+		}
 	}
 }

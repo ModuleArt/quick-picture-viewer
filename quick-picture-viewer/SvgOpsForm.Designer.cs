@@ -33,8 +33,8 @@
 			this.okButton = new System.Windows.Forms.Button();
 			this.widthLabel = new System.Windows.Forms.Label();
 			this.heightLabel = new System.Windows.Forms.Label();
-			this.widthNumeric = new QuickLibrary.QlibNumericBox();
-			this.heightNumeric = new QuickLibrary.QlibNumericBox();
+			this.widthNumeric = new QuickLibrary.QlibNumeric();
+			this.heightNumeric = new QuickLibrary.QlibNumeric();
 			this.aspectRatioCheckbox = new QuickLibrary.QlibCheckBox();
 			this.size128Button = new System.Windows.Forms.Button();
 			this.size64Button = new System.Windows.Forms.Button();
@@ -366,8 +366,8 @@
 		private System.Windows.Forms.Button okButton;
 		private System.Windows.Forms.Label widthLabel;
 		private System.Windows.Forms.Label heightLabel;
-		private QuickLibrary.QlibNumericBox widthNumeric;
-		private QuickLibrary.QlibNumericBox heightNumeric;
+		private QuickLibrary.QlibNumeric widthNumeric;
+		private QuickLibrary.QlibNumeric heightNumeric;
 		private QuickLibrary.QlibCheckBox aspectRatioCheckbox;
 		private System.Windows.Forms.Button size512Button;
 		private System.Windows.Forms.Label presetsLabel;

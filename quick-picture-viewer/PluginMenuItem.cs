@@ -23,7 +23,7 @@ namespace quick_picture_viewer
 		)
 		{
 			this.Text = func.title.Get(Properties.Settings.Default.Language);
-			this.dllPath = Path.Combine(Directory.GetCurrentDirectory(), "plugins", pi.name, pi.name + ".dll");
+			this.dllPath = Path.Combine(PluginManager.pluginsFolder, pi.name, pi.name + ".dll");
 
 			if (func.props.imageRequired)
 			{
