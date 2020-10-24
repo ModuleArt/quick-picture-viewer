@@ -82,15 +82,8 @@ namespace quick_picture_viewer
 				mouseWheelActionRadio3.Checked = true;
 			}
 
-			int startupAction = Properties.Settings.Default.StartupAction;
-			if (startupAction == 0)
-			{
-				startupNothingRadio.Checked = true;
-			}
-			else if (startupAction == 1)
-			{
-				startupPasteRadio.Checked = true;
-			}
+			startupPasteCheckBox.Checked = Properties.Settings.Default.StartupPaste;
+			startupMaximizeCheckBox.Checked = Properties.Settings.Default.StartupMaximize;
 
 			favExtTextBox.Text = Properties.Settings.Default.FavoriteExternalApp;
 
@@ -123,11 +116,10 @@ namespace quick_picture_viewer
 			lightThemeRadio.Text = owner.resMan.GetString("light");
 			darkThemeRadio.Text = owner.resMan.GetString("dark");
 			themePage.Text = owner.resMan.GetString("theme");
-			startupLabel.Text = owner.resMan.GetString("app-startup-action") + ":";
-			startupNothingRadio.Text = owner.resMan.GetString("do-nothing");
-			startupPasteRadio.Text = owner.resMan.GetString("paste-from-clipboard");
-			updatesPage.Text = owner.resMan.GetString("updates");
-			updatesCheckBox.Text = owner.resMan.GetString("check-for-updates-on-startup");
+			startupLabel.Text = owner.resMan.GetString("app-startup-actions") + ":";
+			startupPasteCheckBox.Text = owner.resMan.GetString("paste-from-clipboard");
+			startupMaximizeCheckBox.Text = owner.resMan.GetString("maximize-window");
+			updatesCheckBox.Text = owner.resMan.GetString("check-for-app-updates");
 			favExtLabel.Text = owner.resMan.GetString("fav-external-app") + ":";
 			browseBtn.Text = " " + owner.resMan.GetString("browse");
 			externalPage.Text = owner.resMan.GetString("external");
@@ -170,8 +162,6 @@ namespace quick_picture_viewer
 			lightThemeRadio.SetDarkMode(dark);
 			systemThemeRadio.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
-			startupNothingRadio.SetDarkMode(dark);
-			startupPasteRadio.SetDarkMode(dark);
 			slideshowTimeNumeric.DarkMode = dark;
 			slideshowCounterCheckBox.SetDarkMode(dark);
 			langComboBox.SetDarkMode(dark);
@@ -180,6 +170,8 @@ namespace quick_picture_viewer
 			mouseWheelActionRadio1.SetDarkMode(dark);
 			mouseWheelActionRadio2.SetDarkMode(dark);
 			mouseWheelActionRadio3.SetDarkMode(dark);
+			startupMaximizeCheckBox.SetDarkMode(dark);
+			startupPasteCheckBox.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -232,18 +224,6 @@ namespace quick_picture_viewer
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			this.Close();
-		}
-
-		private void startupNothingRadio_CheckedChanged(object sender, EventArgs e)
-		{
-			Properties.Settings.Default.StartupAction = 0;
-			Properties.Settings.Default.Save();
-		}
-
-		private void startupPasteRadio_CheckedChanged(object sender, EventArgs e)
-		{
-			Properties.Settings.Default.StartupAction = 1;
-			Properties.Settings.Default.Save();
 		}
 
 		private void favExtTextBox_TextChanged(object sender, EventArgs e)
@@ -349,6 +329,18 @@ namespace quick_picture_viewer
 		private void restartLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			owner.RestartApp();
+		}
+
+		private void startupPasteCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.StartupPaste = startupPasteCheckBox.Checked;
+			Properties.Settings.Default.Save();
+		}
+
+		private void startupMaximizeCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.StartupMaximize = startupMaximizeCheckBox.Checked;
+			Properties.Settings.Default.Save();
 		}
 	}
 }

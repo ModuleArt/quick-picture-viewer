@@ -102,6 +102,7 @@
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -109,6 +110,7 @@
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -705,6 +707,7 @@
 			// 
 			resources.ApplyResources(this.picturePanel, "picturePanel");
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.Controls.Add(this.suggestionIcon);
 			this.picturePanel.Controls.Add(this.suggestionLabel);
 			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
@@ -714,6 +717,13 @@
 			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// suggestionIcon
+			// 
+			this.suggestionIcon.BackColor = System.Drawing.Color.Black;
+			resources.ApplyResources(this.suggestionIcon, "suggestionIcon");
+			this.suggestionIcon.Name = "suggestionIcon";
+			this.suggestionIcon.TabStop = false;
 			// 
 			// suggestionLabel
 			// 
@@ -766,6 +776,7 @@
 			this.toolStrip1.PerformLayout();
 			this.picturePanel.ResumeLayout(false);
 			this.picturePanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -850,6 +861,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripDropDownButton pluginsBtn;
 		private System.Windows.Forms.ToolStripMenuItem pluginManBtn;
+		private System.Windows.Forms.PictureBox suggestionIcon;
 	}
 }
 

@@ -85,13 +85,13 @@ namespace quick_picture_viewer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int StartupAction {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StartupPaste {
             get {
-                return ((int)(this["StartupAction"]));
+                return ((bool)(this["StartupPaste"]));
             }
             set {
-                this["StartupAction"] = value;
+                this["StartupPaste"] = value;
             }
         }
         
@@ -176,6 +176,18 @@ namespace quick_picture_viewer.Properties {
             }
             set {
                 this["MouseWheelScrollAction"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StartupMaximize {
+            get {
+                return ((bool)(this["StartupMaximize"]));
+            }
+            set {
+                this["StartupMaximize"] = value;
             }
         }
     }

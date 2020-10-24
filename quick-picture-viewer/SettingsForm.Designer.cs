@@ -35,8 +35,6 @@
 			this.darkThemeRadio = new QuickLibrary.QlibRadioButton();
 			this.lightThemeRadio = new QuickLibrary.QlibRadioButton();
 			this.themeRestart = new System.Windows.Forms.LinkLabel();
-			this.updatesPage = new System.Windows.Forms.TabPage();
-			this.updatesCheckBox = new QuickLibrary.QlibCheckBox();
 			this.mousePage = new System.Windows.Forms.TabPage();
 			this.mouseWheelActionRadio3 = new QuickLibrary.QlibRadioButton();
 			this.mouseWheelActionRadio2 = new QuickLibrary.QlibRadioButton();
@@ -50,9 +48,10 @@
 			this.slideshowTimeNumeric = new QuickLibrary.QlibNumeric();
 			this.slideshowCounterCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupPage = new System.Windows.Forms.TabPage();
+			this.updatesCheckBox = new QuickLibrary.QlibCheckBox();
+			this.startupMaximizeCheckBox = new QuickLibrary.QlibCheckBox();
+			this.startupPasteCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupLabel = new System.Windows.Forms.Label();
-			this.startupNothingRadio = new QuickLibrary.QlibRadioButton();
-			this.startupPasteRadio = new QuickLibrary.QlibRadioButton();
 			this.externalPage = new System.Windows.Forms.TabPage();
 			this.browseBtn = new System.Windows.Forms.Button();
 			this.favExtTextBox = new QuickLibrary.QlibTextBox();
@@ -71,7 +70,6 @@
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
-			this.updatesPage.SuspendLayout();
 			this.mousePage.SuspendLayout();
 			this.slideshowPage.SuspendLayout();
 			this.startupPage.SuspendLayout();
@@ -88,7 +86,6 @@
 			this.settingsTabs.ClosingButtonColor = System.Drawing.Color.WhiteSmoke;
 			this.settingsTabs.ClosingMessage = null;
 			this.settingsTabs.Controls.Add(this.themePage);
-			this.settingsTabs.Controls.Add(this.updatesPage);
 			this.settingsTabs.Controls.Add(this.mousePage);
 			this.settingsTabs.Controls.Add(this.slideshowPage);
 			this.settingsTabs.Controls.Add(this.startupPage);
@@ -184,30 +181,6 @@
 			this.themeRestart.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			this.themeRestart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.restartLink_LinkClicked);
 			// 
-			// updatesPage
-			// 
-			this.updatesPage.BackColor = System.Drawing.SystemColors.Control;
-			this.updatesPage.Controls.Add(this.updatesCheckBox);
-			this.updatesPage.Location = new System.Drawing.Point(4, 60);
-			this.updatesPage.Margin = new System.Windows.Forms.Padding(0);
-			this.updatesPage.Name = "updatesPage";
-			this.updatesPage.Padding = new System.Windows.Forms.Padding(10);
-			this.updatesPage.Size = new System.Drawing.Size(362, 216);
-			this.updatesPage.TabIndex = 1;
-			this.updatesPage.Text = "updates";
-			this.updatesPage.ToolTipText = "Update checker";
-			// 
-			// updatesCheckBox
-			// 
-			this.updatesCheckBox.Location = new System.Drawing.Point(10, 10);
-			this.updatesCheckBox.Margin = new System.Windows.Forms.Padding(0);
-			this.updatesCheckBox.Name = "updatesCheckBox";
-			this.updatesCheckBox.Size = new System.Drawing.Size(342, 32);
-			this.updatesCheckBox.TabIndex = 0;
-			this.updatesCheckBox.Text = "check for updates on startup";
-			this.updatesCheckBox.UseVisualStyleBackColor = true;
-			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
-			// 
 			// mousePage
 			// 
 			this.mousePage.BackColor = System.Drawing.SystemColors.Control;
@@ -217,11 +190,11 @@
 			this.mousePage.Controls.Add(this.mouseWheelActionLabel);
 			this.mousePage.Controls.Add(this.escToExitCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
-			this.mousePage.Location = new System.Drawing.Point(4, 60);
+			this.mousePage.Location = new System.Drawing.Point(4, 32);
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
-			this.mousePage.Size = new System.Drawing.Size(362, 216);
+			this.mousePage.Size = new System.Drawing.Size(362, 244);
 			this.mousePage.TabIndex = 2;
 			this.mousePage.Text = "mouse & keyboard";
 			this.mousePage.ToolTipText = "Cursor options";
@@ -300,11 +273,11 @@
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
 			this.slideshowPage.Controls.Add(this.slideshowCounterCheckBox);
-			this.slideshowPage.Location = new System.Drawing.Point(4, 60);
+			this.slideshowPage.Location = new System.Drawing.Point(4, 32);
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
-			this.slideshowPage.Size = new System.Drawing.Size(362, 216);
+			this.slideshowPage.Size = new System.Drawing.Size(362, 244);
 			this.slideshowPage.TabIndex = 5;
 			this.slideshowPage.Text = "slideshow";
 			// 
@@ -367,9 +340,10 @@
 			// startupPage
 			// 
 			this.startupPage.BackColor = System.Drawing.SystemColors.Control;
+			this.startupPage.Controls.Add(this.updatesCheckBox);
+			this.startupPage.Controls.Add(this.startupMaximizeCheckBox);
+			this.startupPage.Controls.Add(this.startupPasteCheckBox);
 			this.startupPage.Controls.Add(this.startupLabel);
-			this.startupPage.Controls.Add(this.startupNothingRadio);
-			this.startupPage.Controls.Add(this.startupPasteRadio);
 			this.startupPage.Location = new System.Drawing.Point(4, 60);
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
@@ -379,39 +353,47 @@
 			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
 			// 
+			// updatesCheckBox
+			// 
+			this.updatesCheckBox.Location = new System.Drawing.Point(10, 39);
+			this.updatesCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.updatesCheckBox.Name = "updatesCheckBox";
+			this.updatesCheckBox.Size = new System.Drawing.Size(342, 32);
+			this.updatesCheckBox.TabIndex = 45;
+			this.updatesCheckBox.Text = "check for app updates";
+			this.updatesCheckBox.UseVisualStyleBackColor = true;
+			// 
+			// startupMaximizeCheckBox
+			// 
+			this.startupMaximizeCheckBox.Location = new System.Drawing.Point(10, 71);
+			this.startupMaximizeCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.startupMaximizeCheckBox.Name = "startupMaximizeCheckBox";
+			this.startupMaximizeCheckBox.Size = new System.Drawing.Size(342, 32);
+			this.startupMaximizeCheckBox.TabIndex = 44;
+			this.startupMaximizeCheckBox.Text = "maximize";
+			this.startupMaximizeCheckBox.UseVisualStyleBackColor = true;
+			this.startupMaximizeCheckBox.CheckedChanged += new System.EventHandler(this.startupMaximizeCheckBox_CheckedChanged);
+			// 
+			// startupPasteCheckBox
+			// 
+			this.startupPasteCheckBox.Location = new System.Drawing.Point(10, 103);
+			this.startupPasteCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.startupPasteCheckBox.Name = "startupPasteCheckBox";
+			this.startupPasteCheckBox.Size = new System.Drawing.Size(342, 32);
+			this.startupPasteCheckBox.TabIndex = 43;
+			this.startupPasteCheckBox.Text = "paste";
+			this.startupPasteCheckBox.UseVisualStyleBackColor = true;
+			this.startupPasteCheckBox.CheckedChanged += new System.EventHandler(this.startupPasteCheckBox_CheckedChanged);
+			// 
 			// startupLabel
 			// 
 			this.startupLabel.AutoSize = true;
 			this.startupLabel.Location = new System.Drawing.Point(10, 10);
 			this.startupLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.startupLabel.Name = "startupLabel";
-			this.startupLabel.Size = new System.Drawing.Size(97, 19);
+			this.startupLabel.Size = new System.Drawing.Size(103, 19);
 			this.startupLabel.TabIndex = 42;
-			this.startupLabel.Text = "startup action:";
-			// 
-			// startupNothingRadio
-			// 
-			this.startupNothingRadio.Checked = true;
-			this.startupNothingRadio.Location = new System.Drawing.Point(10, 39);
-			this.startupNothingRadio.Margin = new System.Windows.Forms.Padding(0);
-			this.startupNothingRadio.Name = "startupNothingRadio";
-			this.startupNothingRadio.Size = new System.Drawing.Size(342, 32);
-			this.startupNothingRadio.TabIndex = 39;
-			this.startupNothingRadio.TabStop = true;
-			this.startupNothingRadio.Text = "nothing";
-			this.startupNothingRadio.UseVisualStyleBackColor = true;
-			this.startupNothingRadio.CheckedChanged += new System.EventHandler(this.startupNothingRadio_CheckedChanged);
-			// 
-			// startupPasteRadio
-			// 
-			this.startupPasteRadio.Location = new System.Drawing.Point(10, 71);
-			this.startupPasteRadio.Margin = new System.Windows.Forms.Padding(0);
-			this.startupPasteRadio.Name = "startupPasteRadio";
-			this.startupPasteRadio.Size = new System.Drawing.Size(342, 32);
-			this.startupPasteRadio.TabIndex = 40;
-			this.startupPasteRadio.Text = "paste";
-			this.startupPasteRadio.UseVisualStyleBackColor = true;
-			this.startupPasteRadio.CheckedChanged += new System.EventHandler(this.startupPasteRadio_CheckedChanged);
+			this.startupLabel.Text = "startup actions:";
 			// 
 			// externalPage
 			// 
@@ -618,7 +600,6 @@
 			this.settingsTabs.ResumeLayout(false);
 			this.themePage.ResumeLayout(false);
 			this.themePage.PerformLayout();
-			this.updatesPage.ResumeLayout(false);
 			this.mousePage.ResumeLayout(false);
 			this.mousePage.PerformLayout();
 			this.slideshowPage.ResumeLayout(false);
@@ -639,12 +620,10 @@
 		private QuickLibrary.QlibRadioButton lightThemeRadio;
 		private QuickLibrary.QlibRadioButton systemThemeRadio;
 		private QuickLibrary.QlibRadioButton darkThemeRadio;
-		private QuickLibrary.QlibCheckBox updatesCheckBox;
 		private System.Windows.Forms.Label restartLabel1;
 		private QuickLibrary.QlibCheckBox fullscrCursorCheckBox;
 		private QuickLibrary.QlibTabControl settingsTabs;
 		private System.Windows.Forms.TabPage themePage;
-		private System.Windows.Forms.TabPage updatesPage;
 		private System.Windows.Forms.TabPage mousePage;
 		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
@@ -652,8 +631,6 @@
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.TabPage startupPage;
 		private System.Windows.Forms.Label startupLabel;
-		private QuickLibrary.QlibRadioButton startupNothingRadio;
-		private QuickLibrary.QlibRadioButton startupPasteRadio;
 		private System.Windows.Forms.TabPage externalPage;
 		private System.Windows.Forms.Label favExtLabel;
 		private QuickLibrary.QlibTextBox favExtTextBox;
@@ -677,5 +654,8 @@
 		private QuickLibrary.QlibRadioButton mouseWheelActionRadio3;
 		private System.Windows.Forms.LinkLabel themeRestart;
 		private System.Windows.Forms.LinkLabel localizationRestart;
+		private QuickLibrary.QlibCheckBox startupPasteCheckBox;
+		private QuickLibrary.QlibCheckBox startupMaximizeCheckBox;
+		private QuickLibrary.QlibCheckBox updatesCheckBox;
 	}
 }

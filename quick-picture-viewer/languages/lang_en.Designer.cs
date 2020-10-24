@@ -97,11 +97,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to App startup action.
+        ///   Looks up a localized string similar to App startup actions.
         /// </summary>
-        public static string app_startup_action {
+        public static string app_startup_actions {
             get {
-                return ResourceManager.GetString("app-startup-action", resourceCulture);
+                return ResourceManager.GetString("app-startup-actions", resourceCulture);
             }
         }
         
@@ -232,20 +232,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check for updates.
+        ///   Looks up a localized string similar to Check for app updates.
         /// </summary>
-        public static string check_for_updates {
+        public static string check_for_app_updates {
             get {
-                return ResourceManager.GetString("check-for-updates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Check for updates on app startup.
-        /// </summary>
-        public static string check_for_updates_on_startup {
-            get {
-                return ResourceManager.GetString("check-for-updates-on-startup", resourceCulture);
+                return ResourceManager.GetString("check-for-app-updates", resourceCulture);
             }
         }
         
@@ -435,15 +426,6 @@ namespace quick_picture_viewer.languages {
         public static string disk_size {
             get {
                 return ResourceManager.GetString("disk-size", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Do nothing.
-        /// </summary>
-        public static string do_nothing {
-            get {
-                return ResourceManager.GetString("do-nothing", resourceCulture);
             }
         }
         
@@ -795,6 +777,15 @@ namespace quick_picture_viewer.languages {
         public static string margins {
             get {
                 return ResourceManager.GetString("margins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximize window.
+        /// </summary>
+        public static string maximize_window {
+            get {
+                return ResourceManager.GetString("maximize-window", resourceCulture);
             }
         }
         
@@ -1551,15 +1542,6 @@ namespace quick_picture_viewer.languages {
         public static string update_failed {
             get {
                 return ResourceManager.GetString("update-failed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Updates.
-        /// </summary>
-        public static string updates {
-            get {
-                return ResourceManager.GetString("updates", resourceCulture);
             }
         }
         

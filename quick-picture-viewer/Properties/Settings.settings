@@ -17,8 +17,8 @@
     <Setting Name="ShowCursorInFullscreen" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="StartupAction" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="StartupPaste" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="FavoriteExternalApp" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Windows\System32\mspaint.exe</Value>
@@ -40,6 +40,9 @@
     </Setting>
     <Setting Name="MouseWheelScrollAction" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="StartupMaximize" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

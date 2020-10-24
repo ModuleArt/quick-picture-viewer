@@ -77,6 +77,11 @@ namespace quick_picture_viewer
 			InitLanguage();
 
 			closeFile();
+
+			if (Properties.Settings.Default.StartupMaximize)
+			{
+				this.WindowState = FormWindowState.Maximized;
+			}
 		}
 
 		protected override void WndProc(ref Message m)
@@ -195,11 +200,11 @@ namespace quick_picture_viewer
 			{
 				if ((Properties.Settings.Default.SlideshowTime - slideshowCounter) <= 1)
 				{
-					showSuggestion(resMan.GetString("next-image-in-1-second"));
+					showSuggestion(resMan.GetString("next-image-in-1-second"), SuggestionIcon.Info);
 				}
 				else
 				{
-					showSuggestion(string.Format(resMan.GetString("next-image-in-x-seconds"), (Properties.Settings.Default.SlideshowTime - slideshowCounter)));
+					showSuggestion(string.Format(resMan.GetString("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Info);
 				}
 			}
 		}
@@ -223,10 +228,10 @@ namespace quick_picture_viewer
 			{
 				if (string.IsNullOrEmpty(openPath))
 				{
-					if (Properties.Settings.Default.StartupAction == 1 && Clipboard.ContainsImage())
+					if (Properties.Settings.Default.StartupPaste && Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
-						showSuggestion(resMan.GetString("image-pasted-from-clipboard"));
+						showSuggestion(resMan.GetString("image-pasted-from-clipboard"), SuggestionIcon.Info);
 					}
 				}
 				else
@@ -244,7 +249,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				MessageBox.Show(resMan.GetString("unable-to-open-file"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("unable-to-open-file"), SuggestionIcon.Warning);
 			}
 
 			if (Properties.Settings.Default.CheckForUpdates)
@@ -273,7 +278,7 @@ namespace quick_picture_viewer
 				{
 					if (showUpToDateDialog)
 					{
-						MessageBox.Show(resMan.GetString("app-is-up-to-date"), resMan.GetString("updator"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+						showSuggestion(resMan.GetString("app-is-up-to-date"), SuggestionIcon.Check);
 					}
 				}
 				else
@@ -300,7 +305,7 @@ namespace quick_picture_viewer
 			{
 				if (showUpToDateDialog)
 				{
-					MessageBox.Show(resMan.GetString("update-failed"), resMan.GetString("updator"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+					showSuggestion(resMan.GetString("update-failed"), SuggestionIcon.Warning);
 					Console.WriteLine(ex);
 				}
 			}
@@ -382,7 +387,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(resMan.GetString("unable-to-open-file"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("unable-to-open-file"), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
@@ -427,14 +432,14 @@ namespace quick_picture_viewer
 					}
 					catch (Exception ex)
 					{
-						MessageBox.Show(resMan.GetString("dds-memory-error"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+						showSuggestion(resMan.GetString("dds-memory-error"), SuggestionIcon.Warning);
 						Console.WriteLine(ex);
 					}
 				}
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(resMan.GetString("unable-open-dds"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("unable-open-dds"), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
@@ -462,7 +467,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(resMan.GetString("unable-open-svg"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("unable-open-svg"), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
@@ -933,7 +938,7 @@ namespace quick_picture_viewer
 		private void copyButton_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetImage(originalImage);
-			showSuggestion(resMan.GetString("image-copied-to-clipboard"));
+			showSuggestion(resMan.GetString("image-copied-to-clipboard"), SuggestionIcon.Check);
 		}
 
 		private void pasteButton_Click(object sender, EventArgs e)
@@ -1119,7 +1124,7 @@ namespace quick_picture_viewer
 
 				setAlwaysOnTop(false, true);
 
-				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"));
+				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Info);
 			}
 			else
 			{
@@ -1423,7 +1428,7 @@ namespace quick_picture_viewer
 			if (currentIndex == -1)
 			{
 				setSlideshow(false);
-				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 				return 0;
 			}
 			else
@@ -1462,7 +1467,7 @@ namespace quick_picture_viewer
 
 			if (currentIndex == -1)
 			{
-				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 			else
 			{
@@ -1510,7 +1515,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				MessageBox.Show(resMan.GetString("no-files-to-open"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("no-files-to-open"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -1549,7 +1554,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+					showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 				}
 			}
 		}
@@ -1826,7 +1831,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -1845,11 +1850,31 @@ namespace quick_picture_viewer
 			zoomOutTimer.Start();
 		}
 
-		private void showSuggestion(string text)
+		private enum SuggestionIcon
+		{
+			Info = 0,
+			Check = 1,
+			Warning = 2
+		}
+
+		private void showSuggestion(string text, SuggestionIcon icon)
 		{
 			suggestionLabel.Invoke((MethodInvoker)(() => {
 				suggestionLabel.Text = text;
 				suggestionLabel.Visible = true;
+				if (icon == SuggestionIcon.Info)
+				{
+					suggestionIcon.Image = Properties.Resources.white_info;
+				}
+				else if (icon == SuggestionIcon.Check)
+				{
+					suggestionIcon.Image = Properties.Resources.white_check;
+				}
+				else
+				{
+					suggestionIcon.Image = Properties.Resources.white_warning;
+				}
+				suggestionIcon.Visible = true;
 			}));
 
 			if (suggestionTimer != null)
@@ -1869,6 +1894,8 @@ namespace quick_picture_viewer
 			suggestionLabel.Invoke((MethodInvoker)(() => {
 				suggestionLabel.Text = string.Empty;
 				suggestionLabel.Visible = false;
+				suggestionIcon.Image.Dispose();
+				suggestionIcon.Visible = false;
 			}));
 		}
 
@@ -1899,7 +1926,7 @@ namespace quick_picture_viewer
 		private void reloadButton_Click(object sender, EventArgs e)
 		{
 			openFile(Path.Combine(currentFolder, currentFile));
-			showSuggestion(resMan.GetString("file-reloaded"));
+			showSuggestion(resMan.GetString("file-reloaded"), SuggestionIcon.Check);
 		}
 
 		private void newWindowButton_Click(object sender, EventArgs e)
@@ -2013,11 +2040,11 @@ namespace quick_picture_viewer
 				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
 				Clipboard.Clear();
 				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
-				showSuggestion(resMan.GetString("file-copied-to-clipboard"));
+				showSuggestion(resMan.GetString("file-copied-to-clipboard"), SuggestionIcon.Check);
 			}
 			catch
 			{
-				MessageBox.Show(resMan.GetString("cur-file-not-found"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2057,7 +2084,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				MessageBox.Show(resMan.GetString("unable-to-run-external-app"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2069,7 +2096,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				MessageBox.Show(resMan.GetString("unable-to-run-external-app"), resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				showSuggestion(resMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
 			}
 		}
 
