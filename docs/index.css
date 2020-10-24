@@ -11,7 +11,7 @@
 
 body {
     margin: 0;
-    background: #f1f1f1;
+    background: #f1f1f1;  
 }
 
 /* HEADER */
@@ -150,6 +150,12 @@ header .navbar .link:hover {
     margin-left: 0;
 }
 
+.hero .size {
+    opacity: 0.5;
+    font: 14px "Inter";
+    margin: 12px;
+}
+
 /* MAIN */
 
 main {
@@ -160,7 +166,7 @@ main {
 main .screenshot {
     filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
     border-radius: 8px;
-    margin-top: -20vw;
+    margin-top: -21vw;
     background: #333;
     border: 2px solid rgba(0, 0, 0, 0.25);
     max-width: 100%;
@@ -169,6 +175,30 @@ main .screenshot {
 main h2 {
     font: bold 28px "Inter";
     margin-top: 96px;
+}
+
+main .features {
+    display: flex;
+    gap: 28px;
+    margin: 16px auto 0 auto;
+    justify-content: center;
+    font: 16px "Inter";
+    flex-wrap: wrap;
+}
+
+main .features h4 {
+    margin: 16px 0;
+    color: #7a36b1;
+    font: 20px "Inter";
+}
+
+main .features .feature {
+    padding: 32px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    background: #fff;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    width: 192px;
 }
 
 main .whats-new {
@@ -312,11 +342,19 @@ footer a:hover {
         display: none;
     }
 
-    main .screenshot {
-        border-radius: 0;
-        margin-left: -16px;
-        margin-right: -16px;
-        max-width: calc(100% + 28px);
+    .hero .buttons {
+        display: block;
+        padding: 16px;
+    }
+    
+    .hero .buttons .button {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 8px 0;
+    }
+
+    main .features .feature {
+        width: 100%;
     }
 
     footer {
