@@ -1,4 +1,5 @@
-﻿using QuickLibrary;
+﻿using Microsoft.Win32;
+using QuickLibrary;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -64,7 +65,6 @@ namespace quick_picture_viewer
 				darkThemeRadio.Checked = true;
 			}
 
-			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
 			escToExitCheckBox.Checked = Properties.Settings.Default.EscToExit;
 
@@ -82,10 +82,27 @@ namespace quick_picture_viewer
 				mouseWheelActionRadio3.Checked = true;
 			}
 
+			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			startupPasteCheckBox.Checked = Properties.Settings.Default.StartupPaste;
 			startupMaximizeCheckBox.Checked = Properties.Settings.Default.StartupMaximize;
+			startupBoundsCheckBox.Checked = Properties.Settings.Default.StartupRestoreBounds;
 
 			favExtTextBox.Text = Properties.Settings.Default.FavoriteExternalApp;
+
+			const string openWithKey = "HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer";
+			string openWithValue = (string)Registry.GetValue(openWithKey, string.Empty, string.Empty);
+			if (openWithValue.Length > 0)
+			{
+				openWithCheckBox.Checked = true;
+			}
+			const string browseWithKey1 = "HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer";
+			const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer";
+			string browseWithValue1 = (string)Registry.GetValue(browseWithKey1, string.Empty, string.Empty);
+			string browseWithValue2 = (string)Registry.GetValue(browseWithKey2, string.Empty, string.Empty);
+			if (browseWithValue1.Length > 0 && browseWithValue2.Length > 0)
+			{
+				browseWithCheckBox.Checked = true;
+			}
 
 			slideshowTimeNumeric.Value = Properties.Settings.Default.SlideshowTime;
 			slideshowCounterCheckBox.Checked = Properties.Settings.Default.SlideshowCounter;
@@ -119,10 +136,11 @@ namespace quick_picture_viewer
 			startupLabel.Text = owner.resMan.GetString("app-startup-actions") + ":";
 			startupPasteCheckBox.Text = owner.resMan.GetString("paste-from-clipboard");
 			startupMaximizeCheckBox.Text = owner.resMan.GetString("maximize-window");
+			startupBoundsCheckBox.Text = owner.resMan.GetString("restore-last-window-bounds");
 			updatesCheckBox.Text = owner.resMan.GetString("check-for-app-updates");
 			favExtLabel.Text = owner.resMan.GetString("fav-external-app") + ":";
 			browseBtn.Text = " " + owner.resMan.GetString("browse");
-			externalPage.Text = owner.resMan.GetString("external");
+			externalPage.Text = owner.resMan.GetString("windows");
 			slideshowPage.Text = owner.resMan.GetString("slideshow");
 			slideshowTimeLabel.Text = owner.resMan.GetString("switching-time") + ":";
 			mousePage.Text = owner.resMan.GetString("input");
@@ -139,6 +157,7 @@ namespace quick_picture_viewer
 			mouseWheelActionRadio3.Text = owner.resMan.GetString("next-prev-image");
 			themeRestart.Text = owner.resMan.GetString("restart");
 			localizationRestart.Text = owner.resMan.GetString("restart");
+			contextMenuLabel.Text = owner.resMan.GetString("context-menu") + ":";
 		}
 
 		private void SetDarkMode(bool dark)
@@ -172,6 +191,9 @@ namespace quick_picture_viewer
 			mouseWheelActionRadio3.SetDarkMode(dark);
 			startupMaximizeCheckBox.SetDarkMode(dark);
 			startupPasteCheckBox.SetDarkMode(dark);
+			startupBoundsCheckBox.SetDarkMode(dark);
+			openWithCheckBox.SetDarkMode(dark);
+			browseWithCheckBox.SetDarkMode(dark);
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -340,6 +362,12 @@ namespace quick_picture_viewer
 		private void startupMaximizeCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
 			Properties.Settings.Default.StartupMaximize = startupMaximizeCheckBox.Checked;
+			Properties.Settings.Default.Save();
+		}
+
+		private void startupBoundsCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.StartupRestoreBounds = startupBoundsCheckBox.Checked;
 			Properties.Settings.Default.Save();
 		}
 	}

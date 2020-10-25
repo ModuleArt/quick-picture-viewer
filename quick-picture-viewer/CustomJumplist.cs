@@ -7,11 +7,11 @@ namespace quick_picture_viewer
     {
         private JumpList list;
 
-        public CustomJumplist()
+        public CustomJumplist(string newWindowTitle, string newWindowDesc)
         {
             JumpItem[] jumpItems = { new JumpTask() { 
-                Title = "New window",
-                Description = "Create new QuickPictureViewer window",
+                Title = newWindowTitle,
+                Description = newWindowDesc,
                 ApplicationPath = Assembly.GetEntryAssembly().Location,
                 Arguments = "-1",
                 IconResourcePath = "quick-picture-viewer.exe"

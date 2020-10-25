@@ -48,11 +48,15 @@
 			this.slideshowTimeNumeric = new QuickLibrary.QlibNumeric();
 			this.slideshowCounterCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupPage = new System.Windows.Forms.TabPage();
+			this.startupBoundsCheckBox = new QuickLibrary.QlibCheckBox();
 			this.updatesCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupMaximizeCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupPasteCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupLabel = new System.Windows.Forms.Label();
 			this.externalPage = new System.Windows.Forms.TabPage();
+			this.browseWithCheckBox = new QuickLibrary.QlibCheckBox();
+			this.contextMenuLabel = new System.Windows.Forms.Label();
+			this.openWithCheckBox = new QuickLibrary.QlibCheckBox();
 			this.browseBtn = new System.Windows.Forms.Button();
 			this.favExtTextBox = new QuickLibrary.QlibTextBox();
 			this.favExtLabel = new System.Windows.Forms.Label();
@@ -103,7 +107,7 @@
 			this.settingsTabs.SelectedIndex = 0;
 			this.settingsTabs.ShowClosingButton = false;
 			this.settingsTabs.ShowClosingMessage = false;
-			this.settingsTabs.Size = new System.Drawing.Size(370, 280);
+			this.settingsTabs.Size = new System.Drawing.Size(370, 290);
 			this.settingsTabs.TabIndex = 1;
 			this.settingsTabs.TextColor = System.Drawing.Color.Black;
 			// 
@@ -119,7 +123,7 @@
 			this.themePage.Margin = new System.Windows.Forms.Padding(0);
 			this.themePage.Name = "themePage";
 			this.themePage.Padding = new System.Windows.Forms.Padding(10);
-			this.themePage.Size = new System.Drawing.Size(362, 216);
+			this.themePage.Size = new System.Drawing.Size(362, 226);
 			this.themePage.TabIndex = 0;
 			this.themePage.Text = "theme";
 			this.themePage.ToolTipText = "App theming";
@@ -127,7 +131,7 @@
 			// restartLabel1
 			// 
 			this.restartLabel1.AutoSize = true;
-			this.restartLabel1.Location = new System.Drawing.Point(10, 187);
+			this.restartLabel1.Location = new System.Drawing.Point(10, 197);
 			this.restartLabel1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.restartLabel1.Name = "restartLabel1";
 			this.restartLabel1.Size = new System.Drawing.Size(114, 19);
@@ -171,7 +175,7 @@
 			// 
 			// themeRestart
 			// 
-			this.themeRestart.Location = new System.Drawing.Point(10, 187);
+			this.themeRestart.Location = new System.Drawing.Point(10, 197);
 			this.themeRestart.Margin = new System.Windows.Forms.Padding(0);
 			this.themeRestart.Name = "themeRestart";
 			this.themeRestart.Size = new System.Drawing.Size(342, 19);
@@ -190,11 +194,11 @@
 			this.mousePage.Controls.Add(this.mouseWheelActionLabel);
 			this.mousePage.Controls.Add(this.escToExitCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
-			this.mousePage.Location = new System.Drawing.Point(4, 32);
+			this.mousePage.Location = new System.Drawing.Point(4, 60);
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
-			this.mousePage.Size = new System.Drawing.Size(362, 244);
+			this.mousePage.Size = new System.Drawing.Size(362, 226);
 			this.mousePage.TabIndex = 2;
 			this.mousePage.Text = "mouse & keyboard";
 			this.mousePage.ToolTipText = "Cursor options";
@@ -273,11 +277,11 @@
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
 			this.slideshowPage.Controls.Add(this.slideshowCounterCheckBox);
-			this.slideshowPage.Location = new System.Drawing.Point(4, 32);
+			this.slideshowPage.Location = new System.Drawing.Point(4, 60);
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
-			this.slideshowPage.Size = new System.Drawing.Size(362, 244);
+			this.slideshowPage.Size = new System.Drawing.Size(362, 226);
 			this.slideshowPage.TabIndex = 5;
 			this.slideshowPage.Text = "slideshow";
 			// 
@@ -340,6 +344,7 @@
 			// startupPage
 			// 
 			this.startupPage.BackColor = System.Drawing.SystemColors.Control;
+			this.startupPage.Controls.Add(this.startupBoundsCheckBox);
 			this.startupPage.Controls.Add(this.updatesCheckBox);
 			this.startupPage.Controls.Add(this.startupMaximizeCheckBox);
 			this.startupPage.Controls.Add(this.startupPasteCheckBox);
@@ -348,10 +353,21 @@
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
-			this.startupPage.Size = new System.Drawing.Size(362, 216);
+			this.startupPage.Size = new System.Drawing.Size(362, 226);
 			this.startupPage.TabIndex = 3;
 			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
+			// 
+			// startupBoundsCheckBox
+			// 
+			this.startupBoundsCheckBox.Location = new System.Drawing.Point(10, 103);
+			this.startupBoundsCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.startupBoundsCheckBox.Name = "startupBoundsCheckBox";
+			this.startupBoundsCheckBox.Size = new System.Drawing.Size(342, 32);
+			this.startupBoundsCheckBox.TabIndex = 46;
+			this.startupBoundsCheckBox.Text = "bounds";
+			this.startupBoundsCheckBox.UseVisualStyleBackColor = true;
+			this.startupBoundsCheckBox.CheckedChanged += new System.EventHandler(this.startupBoundsCheckBox_CheckedChanged);
 			// 
 			// updatesCheckBox
 			// 
@@ -376,7 +392,7 @@
 			// 
 			// startupPasteCheckBox
 			// 
-			this.startupPasteCheckBox.Location = new System.Drawing.Point(10, 103);
+			this.startupPasteCheckBox.Location = new System.Drawing.Point(10, 135);
 			this.startupPasteCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPasteCheckBox.Name = "startupPasteCheckBox";
 			this.startupPasteCheckBox.Size = new System.Drawing.Size(342, 32);
@@ -398,6 +414,9 @@
 			// externalPage
 			// 
 			this.externalPage.BackColor = System.Drawing.SystemColors.Control;
+			this.externalPage.Controls.Add(this.browseWithCheckBox);
+			this.externalPage.Controls.Add(this.contextMenuLabel);
+			this.externalPage.Controls.Add(this.openWithCheckBox);
 			this.externalPage.Controls.Add(this.browseBtn);
 			this.externalPage.Controls.Add(this.favExtTextBox);
 			this.externalPage.Controls.Add(this.favExtLabel);
@@ -405,9 +424,39 @@
 			this.externalPage.Margin = new System.Windows.Forms.Padding(0);
 			this.externalPage.Name = "externalPage";
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
-			this.externalPage.Size = new System.Drawing.Size(362, 216);
+			this.externalPage.Size = new System.Drawing.Size(362, 226);
 			this.externalPage.TabIndex = 4;
-			this.externalPage.Text = "external";
+			this.externalPage.Text = "windows";
+			// 
+			// browseWithCheckBox
+			// 
+			this.browseWithCheckBox.Location = new System.Drawing.Point(10, 71);
+			this.browseWithCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.browseWithCheckBox.Name = "browseWithCheckBox";
+			this.browseWithCheckBox.Size = new System.Drawing.Size(342, 32);
+			this.browseWithCheckBox.TabIndex = 46;
+			this.browseWithCheckBox.Text = "Browse folder with QuickPictureViewer";
+			this.browseWithCheckBox.UseVisualStyleBackColor = true;
+			// 
+			// contextMenuLabel
+			// 
+			this.contextMenuLabel.AutoSize = true;
+			this.contextMenuLabel.Location = new System.Drawing.Point(10, 10);
+			this.contextMenuLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.contextMenuLabel.Name = "contextMenuLabel";
+			this.contextMenuLabel.Size = new System.Drawing.Size(96, 19);
+			this.contextMenuLabel.TabIndex = 45;
+			this.contextMenuLabel.Text = "context menu:";
+			// 
+			// openWithCheckBox
+			// 
+			this.openWithCheckBox.Location = new System.Drawing.Point(10, 39);
+			this.openWithCheckBox.Margin = new System.Windows.Forms.Padding(0);
+			this.openWithCheckBox.Name = "openWithCheckBox";
+			this.openWithCheckBox.Size = new System.Drawing.Size(342, 32);
+			this.openWithCheckBox.TabIndex = 44;
+			this.openWithCheckBox.Text = "Open with QuickPictureViewer";
+			this.openWithCheckBox.UseVisualStyleBackColor = true;
 			// 
 			// browseBtn
 			// 
@@ -419,8 +468,8 @@
 			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.browseBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
 			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.browseBtn.Location = new System.Drawing.Point(232, 81);
-			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.browseBtn.Location = new System.Drawing.Point(232, 184);
+			this.browseBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.browseBtn.Name = "browseBtn";
 			this.browseBtn.Size = new System.Drawing.Size(120, 32);
 			this.browseBtn.TabIndex = 2;
@@ -433,8 +482,8 @@
 			// favExtTextBox
 			// 
 			this.favExtTextBox.DarkMode = false;
-			this.favExtTextBox.Location = new System.Drawing.Point(10, 39);
-			this.favExtTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.favExtTextBox.Location = new System.Drawing.Point(10, 142);
+			this.favExtTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.favExtTextBox.Name = "favExtTextBox";
 			this.favExtTextBox.ReadOnly = false;
 			this.favExtTextBox.Size = new System.Drawing.Size(342, 32);
@@ -445,8 +494,8 @@
 			// favExtLabel
 			// 
 			this.favExtLabel.AutoSize = true;
-			this.favExtLabel.Location = new System.Drawing.Point(10, 10);
-			this.favExtLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.favExtLabel.Location = new System.Drawing.Point(6, 113);
+			this.favExtLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.favExtLabel.Name = "favExtLabel";
 			this.favExtLabel.Size = new System.Drawing.Size(137, 19);
 			this.favExtLabel.TabIndex = 0;
@@ -465,7 +514,7 @@
 			this.langPage.Margin = new System.Windows.Forms.Padding(0);
 			this.langPage.Name = "langPage";
 			this.langPage.Padding = new System.Windows.Forms.Padding(10);
-			this.langPage.Size = new System.Drawing.Size(362, 216);
+			this.langPage.Size = new System.Drawing.Size(362, 226);
 			this.langPage.TabIndex = 6;
 			this.langPage.Text = "localization";
 			// 
@@ -500,7 +549,7 @@
 			// restartLabel2
 			// 
 			this.restartLabel2.AutoSize = true;
-			this.restartLabel2.Location = new System.Drawing.Point(10, 187);
+			this.restartLabel2.Location = new System.Drawing.Point(10, 197);
 			this.restartLabel2.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.restartLabel2.Name = "restartLabel2";
 			this.restartLabel2.Size = new System.Drawing.Size(114, 19);
@@ -526,7 +575,7 @@
 			// 
 			// localizationRestart
 			// 
-			this.localizationRestart.Location = new System.Drawing.Point(10, 187);
+			this.localizationRestart.Location = new System.Drawing.Point(10, 197);
 			this.localizationRestart.Margin = new System.Windows.Forms.Padding(0);
 			this.localizationRestart.Name = "localizationRestart";
 			this.localizationRestart.Size = new System.Drawing.Size(342, 19);
@@ -581,7 +630,7 @@
 			// 
 			this.AlternativeAppearance = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(390, 332);
+			this.ClientSize = new System.Drawing.Size(390, 342);
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.settingsTabs);
 			this.Draggable = true;
@@ -657,5 +706,9 @@
 		private QuickLibrary.QlibCheckBox startupPasteCheckBox;
 		private QuickLibrary.QlibCheckBox startupMaximizeCheckBox;
 		private QuickLibrary.QlibCheckBox updatesCheckBox;
+		private QuickLibrary.QlibCheckBox startupBoundsCheckBox;
+		private QuickLibrary.QlibCheckBox openWithCheckBox;
+		private System.Windows.Forms.Label contextMenuLabel;
+		private QuickLibrary.QlibCheckBox browseWithCheckBox;
 	}
 }

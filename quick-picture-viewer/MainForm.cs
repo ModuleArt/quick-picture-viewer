@@ -50,7 +50,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			this.darkMode = darkMode;
@@ -78,9 +78,15 @@ namespace quick_picture_viewer
 
 			closeFile();
 
+			if (Properties.Settings.Default.StartupRestoreBounds)
+			{
+				StartPosition = FormStartPosition.Manual;
+				Location = Properties.Settings.Default.StartupWindowLocation;
+				Size = Properties.Settings.Default.StartupWindowSize;
+			}
 			if (Properties.Settings.Default.StartupMaximize)
 			{
-				this.WindowState = FormWindowState.Maximized;
+				WindowState = FormWindowState.Maximized;
 			}
 		}
 
@@ -91,7 +97,7 @@ namespace quick_picture_viewer
 			{
 				if (m.WParam == (IntPtr)NativeMethodsManager.SC_MAXIMIZE)
 				{
-					this.OnResizeEnd(EventArgs.Empty);
+					OnResizeEnd(EventArgs.Empty);
 				}
 			}
 		}
@@ -1819,6 +1825,13 @@ namespace quick_picture_viewer
 
 				e.Cancel = (window == DialogResult.No);
 			}
+
+			if (Properties.Settings.Default.StartupRestoreBounds)
+			{
+				Properties.Settings.Default.StartupWindowLocation = Location;
+				Properties.Settings.Default.StartupWindowSize = Size;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void showFileButton_Click(object sender, EventArgs e)
@@ -2025,7 +2038,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				CustomJumplist jumplist = new CustomJumplist();
+				CustomJumplist jumplist = new CustomJumplist(resMan.GetString("new-window"), resMan.GetString("new-window-desc"));
 			}
 			catch (Exception ex)
 			{

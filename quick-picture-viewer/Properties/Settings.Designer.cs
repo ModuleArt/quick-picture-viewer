@@ -190,5 +190,41 @@ namespace quick_picture_viewer.Properties {
                 this["StartupMaximize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool StartupRestoreBounds {
+            get {
+                return ((bool)(this["StartupRestoreBounds"]));
+            }
+            set {
+                this["StartupRestoreBounds"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("700, 485")]
+        public global::System.Drawing.Size StartupWindowSize {
+            get {
+                return ((global::System.Drawing.Size)(this["StartupWindowSize"]));
+            }
+            set {
+                this["StartupWindowSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100, 100")]
+        public global::System.Drawing.Point StartupWindowLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["StartupWindowLocation"]));
+            }
+            set {
+                this["StartupWindowLocation"] = value;
+            }
+        }
     }
 }

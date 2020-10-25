@@ -313,6 +313,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Context menu.
+        /// </summary>
+        public static string context_menu {
+            get {
+                return ResourceManager.GetString("context-menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
         public static string copy {
@@ -480,15 +489,6 @@ namespace quick_picture_viewer.languages {
         public static string extension {
             get {
                 return ResourceManager.GetString("extension", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to External.
-        /// </summary>
-        public static string external {
-            get {
-                return ResourceManager.GetString("external", resourceCulture);
             }
         }
         
@@ -853,6 +853,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create new blank window.
+        /// </summary>
+        public static string new_window_desc {
+            get {
+                return ResourceManager.GetString("new-window-desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Next image in folder.
         /// </summary>
         public static string next_image {
@@ -1200,6 +1209,15 @@ namespace quick_picture_viewer.languages {
         public static string restart_required {
             get {
                 return ResourceManager.GetString("restart-required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore last window bounds.
+        /// </summary>
+        public static string restore_last_window_bounds {
+            get {
+                return ResourceManager.GetString("restore-last-window-bounds", resourceCulture);
             }
         }
         
@@ -1587,6 +1605,15 @@ namespace quick_picture_viewer.languages {
         public static string width {
             get {
                 return ResourceManager.GetString("width", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Windows.
+        /// </summary>
+        public static string windows {
+            get {
+                return ResourceManager.GetString("windows", resourceCulture);
             }
         }
         

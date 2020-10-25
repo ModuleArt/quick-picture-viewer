@@ -44,5 +44,14 @@
     <Setting Name="StartupMaximize" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="StartupRestoreBounds" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="StartupWindowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">700, 485</Value>
+    </Setting>
+    <Setting Name="StartupWindowLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">100, 100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
