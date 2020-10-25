@@ -250,6 +250,7 @@
 			// 
 			// escToExitCheckBox
 			// 
+			this.escToExitCheckBox.DarkMode = false;
 			this.escToExitCheckBox.Location = new System.Drawing.Point(10, 42);
 			this.escToExitCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.escToExitCheckBox.Name = "escToExitCheckBox";
@@ -261,6 +262,7 @@
 			// 
 			// fullscrCursorCheckBox
 			// 
+			this.fullscrCursorCheckBox.DarkMode = false;
 			this.fullscrCursorCheckBox.Location = new System.Drawing.Point(10, 10);
 			this.fullscrCursorCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fullscrCursorCheckBox.Name = "fullscrCursorCheckBox";
@@ -332,6 +334,7 @@
 			// 
 			// slideshowCounterCheckBox
 			// 
+			this.slideshowCounterCheckBox.DarkMode = false;
 			this.slideshowCounterCheckBox.Location = new System.Drawing.Point(10, 81);
 			this.slideshowCounterCheckBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.slideshowCounterCheckBox.Name = "slideshowCounterCheckBox";
@@ -360,6 +363,7 @@
 			// 
 			// startupBoundsCheckBox
 			// 
+			this.startupBoundsCheckBox.DarkMode = false;
 			this.startupBoundsCheckBox.Location = new System.Drawing.Point(10, 103);
 			this.startupBoundsCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupBoundsCheckBox.Name = "startupBoundsCheckBox";
@@ -371,6 +375,7 @@
 			// 
 			// updatesCheckBox
 			// 
+			this.updatesCheckBox.DarkMode = false;
 			this.updatesCheckBox.Location = new System.Drawing.Point(10, 39);
 			this.updatesCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.updatesCheckBox.Name = "updatesCheckBox";
@@ -381,6 +386,7 @@
 			// 
 			// startupMaximizeCheckBox
 			// 
+			this.startupMaximizeCheckBox.DarkMode = false;
 			this.startupMaximizeCheckBox.Location = new System.Drawing.Point(10, 71);
 			this.startupMaximizeCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupMaximizeCheckBox.Name = "startupMaximizeCheckBox";
@@ -392,6 +398,7 @@
 			// 
 			// startupPasteCheckBox
 			// 
+			this.startupPasteCheckBox.DarkMode = false;
 			this.startupPasteCheckBox.Location = new System.Drawing.Point(10, 135);
 			this.startupPasteCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPasteCheckBox.Name = "startupPasteCheckBox";
@@ -426,10 +433,11 @@
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
 			this.externalPage.Size = new System.Drawing.Size(362, 226);
 			this.externalPage.TabIndex = 4;
-			this.externalPage.Text = "windows";
+			this.externalPage.Text = "Windows";
 			// 
 			// browseWithCheckBox
 			// 
+			this.browseWithCheckBox.DarkMode = false;
 			this.browseWithCheckBox.Location = new System.Drawing.Point(10, 71);
 			this.browseWithCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.browseWithCheckBox.Name = "browseWithCheckBox";
@@ -437,6 +445,7 @@
 			this.browseWithCheckBox.TabIndex = 46;
 			this.browseWithCheckBox.Text = "Browse folder with QuickPictureViewer";
 			this.browseWithCheckBox.UseVisualStyleBackColor = true;
+			this.browseWithCheckBox.CheckedChanged += new System.EventHandler(this.browseWithCheckBox_CheckedChanged);
 			// 
 			// contextMenuLabel
 			// 
@@ -450,6 +459,7 @@
 			// 
 			// openWithCheckBox
 			// 
+			this.openWithCheckBox.DarkMode = false;
 			this.openWithCheckBox.Location = new System.Drawing.Point(10, 39);
 			this.openWithCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.openWithCheckBox.Name = "openWithCheckBox";
@@ -457,6 +467,7 @@
 			this.openWithCheckBox.TabIndex = 44;
 			this.openWithCheckBox.Text = "Open with QuickPictureViewer";
 			this.openWithCheckBox.UseVisualStyleBackColor = true;
+			this.openWithCheckBox.CheckedChanged += new System.EventHandler(this.openWithCheckBox_CheckedChanged);
 			// 
 			// browseBtn
 			// 

@@ -229,6 +229,10 @@
     <value>Настроить</value>
     <comment>Menu</comment>
   </data>
+  <data name="context-menu" xml:space="preserve">
+    <value>Контекстное меню</value>
+    <comment>Settings</comment>
+  </data>
   <data name="copy" xml:space="preserve">
     <value>Копировать</value>
     <comment>Menu</comment>
@@ -304,10 +308,6 @@
   <data name="extension" xml:space="preserve">
     <value>Расширение</value>
     <comment>Image info</comment>
-  </data>
-  <data name="external" xml:space="preserve">
-    <value>Сторонние</value>
-    <comment>Settings</comment>
   </data>
   <data name="fav-external-app" xml:space="preserve">
     <value>Любимое стороннее приложение</value>
@@ -469,6 +469,10 @@
     <value>Новое окно</value>
     <comment>Menu</comment>
   </data>
+  <data name="new-window-desc" xml:space="preserve">
+    <value>Создать новое пустое окно</value>
+    <comment>Main window</comment>
+  </data>
   <data name="next-image" xml:space="preserve">
     <value>Следующий файл в папке</value>
     <comment>Menu</comment>
@@ -623,6 +627,10 @@
   </data>
   <data name="restart-required" xml:space="preserve">
     <value>Требуется перезапуск приложения</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="restore-last-window-bounds" xml:space="preserve">
+    <value>Восстановить последние границы окна</value>
     <comment>Settings</comment>
   </data>
   <data name="right" xml:space="preserve">

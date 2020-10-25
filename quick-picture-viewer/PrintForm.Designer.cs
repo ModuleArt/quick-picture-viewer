@@ -120,7 +120,6 @@
 			// centerCheckbox
 			// 
 			this.centerCheckbox.Checked = true;
-			this.centerCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.centerCheckbox.Location = new System.Drawing.Point(10, 116);
 			this.centerCheckbox.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.centerCheckbox.Name = "centerCheckbox";
@@ -277,7 +276,6 @@
 			// marginsCheckBox
 			// 
 			this.marginsCheckBox.Checked = true;
-			this.marginsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.marginsCheckBox.Location = new System.Drawing.Point(10, 148);
 			this.marginsCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.marginsCheckBox.Name = "marginsCheckBox";

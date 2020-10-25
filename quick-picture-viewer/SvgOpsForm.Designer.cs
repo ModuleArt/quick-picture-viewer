@@ -142,7 +142,6 @@
 			// aspectRatioCheckbox
 			// 
 			this.aspectRatioCheckbox.Checked = true;
-			this.aspectRatioCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.aspectRatioCheckbox.Location = new System.Drawing.Point(10, 297);
 			this.aspectRatioCheckbox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.aspectRatioCheckbox.Name = "aspectRatioCheckbox";

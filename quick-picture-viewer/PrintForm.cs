@@ -57,9 +57,9 @@ namespace quick_picture_viewer
 			}
 
 			DarkMode = dark;
-			marginsCheckBox.SetDarkMode(dark);
-			horizontalCheckBox.SetDarkMode(dark);
-			centerCheckbox.SetDarkMode(dark);
+			marginsCheckBox.DarkMode = dark;
+			horizontalCheckBox.DarkMode = dark;
+			centerCheckbox.DarkMode = dark;
 			closeBtn.SetDarkMode(dark);
 			rightMarginTextBox.DarkMode = dark;
 			leftMarginTextBox.DarkMode = dark;

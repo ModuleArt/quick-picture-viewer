@@ -38,14 +38,14 @@ namespace quick_picture_viewer
 			}
 		};
 
-		private bool betaLangWarning = false;
+		private bool settingsStarted = false;
 		private MainForm owner;
 
 		public SettingsForm(bool darkMode)
 		{
 			if (darkMode)
 			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			InitializeComponent();
@@ -89,12 +89,7 @@ namespace quick_picture_viewer
 
 			favExtTextBox.Text = Properties.Settings.Default.FavoriteExternalApp;
 
-			const string openWithKey = "HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer";
-			string openWithValue = (string)Registry.GetValue(openWithKey, string.Empty, string.Empty);
-			if (openWithValue.Length > 0)
-			{
-				openWithCheckBox.Checked = true;
-			}
+			openWithCheckBox.Checked = GetOpenWithState();
 			const string browseWithKey1 = "HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer";
 			const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer";
 			string browseWithValue1 = (string)Registry.GetValue(browseWithKey1, string.Empty, string.Empty);
@@ -124,7 +119,7 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			this.Text = owner.resMan.GetString("settings");
+			Text = owner.resMan.GetString("settings");
 			langPage.Text = owner.resMan.GetString("localization");
 			startupPage.Text = owner.resMan.GetString("startup");
 			restartLabel1.Text = "* " + owner.resMan.GetString("restart-required");
@@ -140,7 +135,6 @@ namespace quick_picture_viewer
 			updatesCheckBox.Text = owner.resMan.GetString("check-for-app-updates");
 			favExtLabel.Text = owner.resMan.GetString("fav-external-app") + ":";
 			browseBtn.Text = " " + owner.resMan.GetString("browse");
-			externalPage.Text = owner.resMan.GetString("windows");
 			slideshowPage.Text = owner.resMan.GetString("slideshow");
 			slideshowTimeLabel.Text = owner.resMan.GetString("switching-time") + ":";
 			mousePage.Text = owner.resMan.GetString("input");
@@ -175,32 +169,32 @@ namespace quick_picture_viewer
 			}
 
 			DarkMode = dark;
-			updatesCheckBox.SetDarkMode(dark);
-			fullscrCursorCheckBox.SetDarkMode(dark);
+			updatesCheckBox.DarkMode = dark;
+			fullscrCursorCheckBox.DarkMode = dark;
 			darkThemeRadio.SetDarkMode(dark);
 			lightThemeRadio.SetDarkMode(dark);
 			systemThemeRadio.SetDarkMode(dark);
 			closeBtn.SetDarkMode(dark);
 			slideshowTimeNumeric.DarkMode = dark;
-			slideshowCounterCheckBox.SetDarkMode(dark);
+			slideshowCounterCheckBox.DarkMode = dark;
 			langComboBox.SetDarkMode(dark);
 			favExtTextBox.DarkMode = dark;
-			escToExitCheckBox.SetDarkMode(dark);
+			escToExitCheckBox.DarkMode = dark;
 			mouseWheelActionRadio1.SetDarkMode(dark);
 			mouseWheelActionRadio2.SetDarkMode(dark);
 			mouseWheelActionRadio3.SetDarkMode(dark);
-			startupMaximizeCheckBox.SetDarkMode(dark);
-			startupPasteCheckBox.SetDarkMode(dark);
-			startupBoundsCheckBox.SetDarkMode(dark);
-			openWithCheckBox.SetDarkMode(dark);
-			browseWithCheckBox.SetDarkMode(dark);
+			startupMaximizeCheckBox.DarkMode = dark;
+			startupPasteCheckBox.DarkMode = dark;
+			startupBoundsCheckBox.DarkMode = dark;
+			openWithCheckBox.DarkMode = dark;
+			browseWithCheckBox.DarkMode = dark;
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.KeyCode == Keys.Escape)
 			{
-				this.Close();
+				Close();
 			}
 		}
 
@@ -245,7 +239,7 @@ namespace quick_picture_viewer
 
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void favExtTextBox_TextChanged(object sender, EventArgs e)
@@ -282,7 +276,7 @@ namespace quick_picture_viewer
 
 			if (owner != null)
 			{
-				if (languages[langComboBox.SelectedIndex].Beta && betaLangWarning)
+				if (languages[langComboBox.SelectedIndex].Beta && settingsStarted)
 				{
 					MessageBox.Show(
 						owner.resMan.GetString("beta-lang-warning"),
@@ -318,10 +312,10 @@ namespace quick_picture_viewer
 
 		private void SettingsForm_Load(object sender, EventArgs e)
 		{
-			owner = this.Owner as MainForm;
+			owner = Owner as MainForm;
 			InitLanguage();
 			langComboBox_SelectedIndexChanged(null, null);
-			betaLangWarning = true;
+			settingsStarted = true;
 		}
 
 		private void escToExitCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -369,6 +363,68 @@ namespace quick_picture_viewer
 		{
 			Properties.Settings.Default.StartupRestoreBounds = startupBoundsCheckBox.Checked;
 			Properties.Settings.Default.Save();
+		}
+
+		private void openWithCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			if (settingsStarted)
+			{
+				try
+				{
+					if (openWithCheckBox.Checked)
+					{
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "", "Open with QuickPictureViewer");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
+					}
+					else
+					{
+						RegistryKey RegKey = Registry.ClassesRoot.OpenSubKey("*\\shell\\QuickPictureViewer", true);
+						RegKey.DeleteSubKeyTree("");
+					}
+				}
+				catch
+				{
+					MessageBox.Show("To change context menu options you need to run app with Administrator", owner.resMan.GetString("error"));
+				}
+			}
+		}
+
+		private void browseWithCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			if (settingsStarted)
+			{
+				try
+				{
+					if (browseWithCheckBox.Checked)
+					{
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "", "Browse folder with QuickPictureViewer");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
+
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "", "Browse folder with QuickPictureViewer");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
+					}
+					else
+					{
+						RegistryKey RegKey = Registry.ClassesRoot.OpenSubKey("Directory\\Background\\shell\\QuickPictureViewer", true);
+						RegKey.DeleteSubKeyTree("");
+						RegistryKey RegKey2 = Registry.ClassesRoot.OpenSubKey("Directory\\shell\\QuickPictureViewer", true);
+						RegKey2.DeleteSubKeyTree("");
+					}
+				}
+				catch
+				{
+					MessageBox.Show("To change context menu options you need to run app with Administrator", owner.resMan.GetString("error"));
+				}
+			}
+		}
+
+		private bool GetOpenWithState()
+		{
+			string openWithValue = (string)Registry.GetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", string.Empty, string.Empty);
+			return openWithValue.Length > 0;
 		}
 	}
 }

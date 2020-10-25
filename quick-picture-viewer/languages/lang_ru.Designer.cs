@@ -1609,15 +1609,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows.
-        /// </summary>
-        public static string windows {
-            get {
-                return ResourceManager.GetString("windows", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Масштаб.
         /// </summary>
         public static string zoom {

@@ -805,10 +805,6 @@
     <value>Ширина</value>
     <comment>SVG options</comment>
   </data>
-  <data name="windows" xml:space="preserve">
-    <value>Windows</value>
-    <comment>Settings</comment>
-  </data>
   <data name="zoom" xml:space="preserve">
     <value>Масштаб</value>
     <comment>Status bar</comment>
