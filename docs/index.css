@@ -52,11 +52,11 @@ header .logo:hover img {
 header .logo span {
     vertical-align: middle;
     padding: 0 4px 0 16px;
-    font: bold 20px "Inter";
+    font: bold 20px/30px "Inter";
 }
 
 header .navbar .link {
-    font: 16px "Inter";
+    font: 16px/24px "Inter";
     border: 2px solid transparent;
     padding: 8px 16px;
     border-radius: 8px;
@@ -90,13 +90,13 @@ header .navbar .link:hover {
 }
 
 .hero h1 {
-    font: bold 48px "Inter"; 
+    font: bold 48px/72px "Inter"; 
     color: #fff;
     margin: 16px;
 }
 
 .hero h3 {
-    font: 20px "Inter"; 
+    font: 20px/30px "Inter"; 
     color: #fff;
     margin: 20px 16px;
 }
@@ -134,7 +134,7 @@ header .navbar .link:hover {
 }
 
 .hero .button span {
-    font: 16px "Inter";
+    font: 16px/24px "Inter";
     vertical-align: middle;
     margin: 0 6px;
 }
@@ -155,7 +155,7 @@ header .navbar .link:hover {
 
 .hero .size {
     opacity: 0.5;
-    font: 14px "Inter";
+    font: 14px/21px "Inter";
     margin: 12px;
 }
 
@@ -176,7 +176,7 @@ main .screenshot {
 }
 
 main h2 {
-    font: bold 28px "Inter";
+    font: bold 28px/42px "Inter";
     margin-top: 96px;
 }
 
@@ -185,14 +185,14 @@ main .features {
     gap: 28px;
     margin: 16px auto 0 auto;
     justify-content: center;
-    font: 16px "Inter";
+    font: 16px/24px "Inter";
     flex-wrap: wrap;
 }
 
 main .features h4 {
     margin: 16px 0;
     color: #7a36b1;
-    font: 20px "Inter";
+    font: 20px/30px "Inter";
 }
 
 main .features .feature {
@@ -205,11 +205,11 @@ main .features .feature {
 }
 
 main .whats-new {
-    font: 16px "Inter";
+    font: 16px/24px "Inter";
 }
 
 main .whats-new .release-title {
-    font: bold 20px "Inter";
+    font: bold 20px/30px "Inter";
     vertical-align: middle;
     text-decoration: none;
     color: #000;
@@ -220,7 +220,7 @@ main .whats-new .release-title:hover {
 }
 
 main .whats-new .release-date {
-    font: 16px "Inter";
+    font: 16px/24px "Inter";
     vertical-align: middle;
 }
 
@@ -238,10 +238,9 @@ main .content {
     background: #fff;
     max-width: 570px;
     width: 100%;
-    font: 16px "Inter";
+    font: 16px/24px "Inter";
     text-align: left;
     box-sizing: border-box;
-    overflow-x: auto;
 }
 
 main .content table {
@@ -261,6 +260,20 @@ main .content a {
 
 main .content a:hover {
     text-decoration: underline;
+}
+
+main .hscroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+main .hscroll::-webkit-scrollbar-track {
+    background: #BFBFBF;
+    border-radius: 4px;
+}
+  
+main .hscroll::-webkit-scrollbar-thumb {
+    border-radius: 4px;
 }
 
 main .donate {
@@ -306,7 +319,7 @@ footer {
 footer span,
 footer a {
     opacity: 0.5;
-    font: 14px "Inter";
+    font: 14px/21px "Inter";
     color: #000;
     text-decoration: none;
 }
@@ -349,14 +362,20 @@ footer a:hover {
         display: block;
         padding: 16px;
     }
+
+    .hero .buttons a {
+        display: block;
+    }
     
     .hero .buttons .button {
-        width: 100%;
-        box-sizing: border-box;
         margin: 8px 0;
     }
 
     main .features .feature {
+        width: 100%;
+    }
+
+    main .donate a {
         width: 100%;
     }
 
