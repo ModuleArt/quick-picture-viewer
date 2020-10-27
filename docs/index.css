@@ -34,7 +34,7 @@ header .logo {
     transition: 0.25s transform;
 }
 
-header .logo:hover {
+header a:hover .logo {
     transform: translateY(-8px)
 }
 
@@ -45,7 +45,7 @@ header .logo img {
     transition: 0.25s filter;
 }
 
-header .logo:hover img {
+header a:hover .logo img {
     filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
 }
 
@@ -65,7 +65,7 @@ header .navbar .link {
     display: inline-block;
 }
 
-header .navbar .link:hover {
+header .navbar a:hover .link {
     border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-8px)
 }

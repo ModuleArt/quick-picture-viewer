@@ -90,14 +90,7 @@ namespace quick_picture_viewer
 			favExtTextBox.Text = Properties.Settings.Default.FavoriteExternalApp;
 
 			openWithCheckBox.Checked = GetOpenWithState();
-			const string browseWithKey1 = "HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer";
-			const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer";
-			string browseWithValue1 = (string)Registry.GetValue(browseWithKey1, string.Empty, string.Empty);
-			string browseWithValue2 = (string)Registry.GetValue(browseWithKey2, string.Empty, string.Empty);
-			if (browseWithValue1.Length > 0 && browseWithValue2.Length > 0)
-			{
-				browseWithCheckBox.Checked = true;
-			}
+			browseWithCheckBox.Checked = GetBrowseFolderWithState();
 
 			slideshowTimeNumeric.Value = Properties.Settings.Default.SlideshowTime;
 			slideshowCounterCheckBox.Checked = Properties.Settings.Default.SlideshowCounter;
@@ -200,13 +193,16 @@ namespace quick_picture_viewer
 
 		private void updatesCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.CheckForUpdates = updatesCheckBox.Checked;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.CheckForUpdates = updatesCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void systemThemeRadio_CheckedChanged(object sender, EventArgs e)
 		{
-			if (systemThemeRadio.Checked)
+			if (settingsStarted && systemThemeRadio.Checked)
 			{
 				Properties.Settings.Default.Theme = 0;
 				Properties.Settings.Default.Save();
@@ -215,7 +211,7 @@ namespace quick_picture_viewer
 
 		private void lightThemeRadio_CheckedChanged(object sender, EventArgs e)
 		{
-			if (lightThemeRadio.Checked)
+			if (settingsStarted && lightThemeRadio.Checked)
 			{
 				Properties.Settings.Default.Theme = 1;
 				Properties.Settings.Default.Save();
@@ -224,7 +220,7 @@ namespace quick_picture_viewer
 
 		private void darkThemeRadio_CheckedChanged(object sender, EventArgs e)
 		{
-			if (darkThemeRadio.Checked)
+			if (settingsStarted && darkThemeRadio.Checked)
 			{
 				Properties.Settings.Default.Theme = 2;
 				Properties.Settings.Default.Save();
@@ -233,8 +229,11 @@ namespace quick_picture_viewer
 
 		private void fullscrCursorCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.ShowCursorInFullscreen = fullscrCursorCheckBox.Checked;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.ShowCursorInFullscreen = fullscrCursorCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)
@@ -244,8 +243,11 @@ namespace quick_picture_viewer
 
 		private void favExtTextBox_TextChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.FavoriteExternalApp = favExtTextBox.Text;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.FavoriteExternalApp = favExtTextBox.Text;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void browseBtn_Click(object sender, EventArgs e)
@@ -259,20 +261,29 @@ namespace quick_picture_viewer
 
 		private void slideshowCounterCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.SlideshowCounter = slideshowCounterCheckBox.Checked;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.SlideshowCounter = slideshowCounterCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void slideshowTimeNumeric_ValueChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.SlideshowTime = (int)slideshowTimeNumeric.Value;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.SlideshowTime = (int)slideshowTimeNumeric.Value;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void langComboBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.Language = languages[langComboBox.SelectedIndex].Code;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.Language = languages[langComboBox.SelectedIndex].Code;
+				Properties.Settings.Default.Save();
+			}
 
 			if (owner != null)
 			{
@@ -320,26 +331,38 @@ namespace quick_picture_viewer
 
 		private void escToExitCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.EscToExit = escToExitCheckBox.Checked;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.EscToExit = escToExitCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void mouseWheelActionRadio1_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.MouseWheelScrollAction = 0;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.MouseWheelScrollAction = 0;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void mouseWheelActionRadio2_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.MouseWheelScrollAction = 1;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.MouseWheelScrollAction = 1;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void mouseWheelActionRadio3_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.MouseWheelScrollAction = 2;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.MouseWheelScrollAction = 2;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void restartLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -349,20 +372,29 @@ namespace quick_picture_viewer
 
 		private void startupPasteCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.StartupPaste = startupPasteCheckBox.Checked;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.StartupPaste = startupPasteCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void startupMaximizeCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.StartupMaximize = startupMaximizeCheckBox.Checked;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.StartupMaximize = startupMaximizeCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void startupBoundsCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.StartupRestoreBounds = startupBoundsCheckBox.Checked;
-			Properties.Settings.Default.Save();
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.StartupRestoreBounds = startupBoundsCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
 		}
 
 		private void openWithCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -385,7 +417,7 @@ namespace quick_picture_viewer
 				}
 				catch
 				{
-					MessageBox.Show("To change context menu options you need to run app with Administrator", owner.resMan.GetString("error"));
+					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 			}
 		}
@@ -416,15 +448,42 @@ namespace quick_picture_viewer
 				}
 				catch
 				{
-					MessageBox.Show("To change context menu options you need to run app with Administrator", owner.resMan.GetString("error"));
+					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 			}
 		}
 
 		private bool GetOpenWithState()
 		{
-			string openWithValue = (string)Registry.GetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", string.Empty, string.Empty);
-			return openWithValue.Length > 0;
+			try
+			{
+				string openWithValue = (string)Registry.GetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", string.Empty, string.Empty);
+				return openWithValue.Length > 0;
+			}
+			catch
+			{
+				return false;
+			}
+		}
+
+		private bool GetBrowseFolderWithState()
+		{
+			try
+			{
+				const string browseWithKey1 = "HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer";
+				const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer";
+				string browseWithValue1 = (string)Registry.GetValue(browseWithKey1, string.Empty, string.Empty);
+				string browseWithValue2 = (string)Registry.GetValue(browseWithKey2, string.Empty, string.Empty);
+				if (browseWithValue1.Length > 0 && browseWithValue2.Length > 0)
+				{
+					return true;
+				}
+				return false;
+			}
+			catch
+			{
+				return false;
+			}
 		}
 	}
 }

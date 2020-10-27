@@ -383,6 +383,7 @@
 			this.updatesCheckBox.TabIndex = 45;
 			this.updatesCheckBox.Text = "check for app updates";
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
+			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
 			// 
 			// startupMaximizeCheckBox
 			// 

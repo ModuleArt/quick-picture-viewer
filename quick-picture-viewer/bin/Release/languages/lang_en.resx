@@ -233,6 +233,10 @@
     <value>Context menu</value>
     <comment>Settings</comment>
   </data>
+  <data name="context-menu-notice" xml:space="preserve">
+    <value>To change context menu options you need to run the app with Administrator</value>
+    <comment>Settings</comment>
+  </data>
   <data name="copy" xml:space="preserve">
     <value>Copy</value>
     <comment>Menu</comment>
@@ -470,7 +474,7 @@
     <comment>Menu</comment>
   </data>
   <data name="new-window-desc" xml:space="preserve">
-    <value>Create new blank window</value>
+    <value>Create new empty window</value>
     <comment>Main window</comment>
   </data>
   <data name="next-image" xml:space="preserve">

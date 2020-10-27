@@ -322,6 +322,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to To change context menu options you need to run the app with Administrator.
+        /// </summary>
+        public static string context_menu_notice {
+            get {
+                return ResourceManager.GetString("context-menu-notice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
         public static string copy {
@@ -853,7 +862,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create new blank window.
+        ///   Looks up a localized string similar to Create new empty window.
         /// </summary>
         public static string new_window_desc {
             get {

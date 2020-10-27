@@ -233,6 +233,10 @@
     <value>Контекстное меню</value>
     <comment>Settings</comment>
   </data>
+  <data name="context-menu-notice" xml:space="preserve">
+    <value>Чтобы изменить параметры контекстного меню, вам необходимо запустить приложение с правами Администратора</value>
+    <comment>Settings</comment>
+  </data>
   <data name="copy" xml:space="preserve">
     <value>Копировать</value>
     <comment>Menu</comment>

@@ -322,6 +322,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Чтобы изменить параметры контекстного меню, вам необходимо запустить приложение с правами Администратора.
+        /// </summary>
+        public static string context_menu_notice {
+            get {
+                return ResourceManager.GetString("context-menu-notice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Копировать.
         /// </summary>
         public static string copy {
