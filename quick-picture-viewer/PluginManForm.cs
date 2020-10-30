@@ -6,6 +6,7 @@ using QuickLibrary;
 using System.IO.Compression;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
+using System.Diagnostics;
 
 namespace quick_picture_viewer
 {
@@ -32,6 +33,8 @@ namespace quick_picture_viewer
 			{
 				addPluginBtn.BackColor = ThemeManager.DarkSecondColor;
 				addPluginBtn.Image = Properties.Resources.white_open;
+				morePluginsBtn.BackColor = ThemeManager.DarkSecondColor;
+				morePluginsBtn.Image = Properties.Resources.white_plugin;
 				deleteBtn.Image = Properties.Resources.white_trash;
 			}
 
@@ -98,7 +101,7 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			this.Text = owner.resMan.GetString("plugin-manager");
+			Text = owner.resMan.GetString("plugin-manager");
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			listView1.Columns[0].Text = owner.resMan.GetString("plugin");
 			listView1.Columns[1].Text = owner.resMan.GetString("desc");
@@ -107,6 +110,7 @@ namespace quick_picture_viewer
 			addPluginBtn.Text = " " + owner.resMan.GetString("browse-for-plugins");
 			deleteBtn.Text = owner.resMan.GetString("delete-plugin");
 			openFileDialog1.Title = owner.resMan.GetString("browse-for-plugins");
+			morePluginsBtn.Text = " " + owner.resMan.GetString("more-plugins");
 		}
 
 		private void PluginManForm_KeyDown(object sender, KeyEventArgs e)
@@ -165,6 +169,11 @@ namespace quick_picture_viewer
 				}
 				RefreshPluginsList();
 			}
+		}
+
+		private void morePluginsBtn_Click(object sender, EventArgs e)
+		{
+			Process.Start("https://moduleart.github.io/quick-picture-viewer#plugins");
 		}
 	}
 }

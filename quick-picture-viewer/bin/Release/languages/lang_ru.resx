@@ -255,7 +255,7 @@
   </data>
   <data name="created-by" xml:space="preserve">
     <value>Разработчик</value>
-    <comment>About, Plugin manager</comment>
+    <comment>Plugin manager</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Текущий файл не найден</value>
@@ -417,10 +417,6 @@
     <value>Стрелка влево</value>
     <comment>Menu</comment>
   </data>
-  <data name="license" xml:space="preserve">
-    <value>Лицензия</value>
-    <comment>About</comment>
-  </data>
   <data name="light" xml:space="preserve">
     <value>Светлая</value>
     <comment>Settings</comment>
@@ -460,6 +456,10 @@
   <data name="more-options" xml:space="preserve">
     <value>Еще</value>
     <comment>Menu</comment>
+  </data>
+  <data name="more-plugins" xml:space="preserve">
+    <value>Больше плагинов</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="mouse-wheel-action" xml:space="preserve">
     <value>Действие на колёсико мыши</value>

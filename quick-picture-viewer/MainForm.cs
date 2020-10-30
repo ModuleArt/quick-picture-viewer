@@ -753,7 +753,7 @@ namespace quick_picture_viewer
 
 		private void aboutButton_Click(object sender, EventArgs e)
 		{
-			AboutForm aboutBox = new AboutForm(darkMode);
+			AboutForm aboutBox = new AboutForm();
 			aboutBox.Owner = this;
 			aboutBox.TopMost = alwaysOnTop;
 			aboutBox.ShowDialog();

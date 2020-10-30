@@ -31,14 +31,14 @@
 			this.settingsTabs = new QuickLibrary.QlibTabControl();
 			this.themePage = new System.Windows.Forms.TabPage();
 			this.restartLabel1 = new System.Windows.Forms.Label();
-			this.systemThemeRadio = new QuickLibrary.QlibRadioButton();
-			this.darkThemeRadio = new QuickLibrary.QlibRadioButton();
-			this.lightThemeRadio = new QuickLibrary.QlibRadioButton();
+			this.systemThemeRadio = new QuickLibrary.QlibRadio();
+			this.darkThemeRadio = new QuickLibrary.QlibRadio();
+			this.lightThemeRadio = new QuickLibrary.QlibRadio();
 			this.themeRestart = new System.Windows.Forms.LinkLabel();
 			this.mousePage = new System.Windows.Forms.TabPage();
-			this.mouseWheelActionRadio3 = new QuickLibrary.QlibRadioButton();
-			this.mouseWheelActionRadio2 = new QuickLibrary.QlibRadioButton();
-			this.mouseWheelActionRadio1 = new QuickLibrary.QlibRadioButton();
+			this.mouseWheelActionRadio3 = new QuickLibrary.QlibRadio();
+			this.mouseWheelActionRadio2 = new QuickLibrary.QlibRadio();
+			this.mouseWheelActionRadio1 = new QuickLibrary.QlibRadio();
 			this.mouseWheelActionLabel = new System.Windows.Forms.Label();
 			this.escToExitCheckBox = new QuickLibrary.QlibCheckBox();
 			this.fullscrCursorCheckBox = new QuickLibrary.QlibCheckBox();
@@ -141,6 +141,7 @@
 			// systemThemeRadio
 			// 
 			this.systemThemeRadio.Checked = true;
+			this.systemThemeRadio.DarkMode = false;
 			this.systemThemeRadio.Location = new System.Drawing.Point(10, 10);
 			this.systemThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.systemThemeRadio.Name = "systemThemeRadio";
@@ -153,6 +154,7 @@
 			// 
 			// darkThemeRadio
 			// 
+			this.darkThemeRadio.DarkMode = false;
 			this.darkThemeRadio.Location = new System.Drawing.Point(10, 74);
 			this.darkThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.darkThemeRadio.Name = "darkThemeRadio";
@@ -164,6 +166,7 @@
 			// 
 			// lightThemeRadio
 			// 
+			this.lightThemeRadio.DarkMode = false;
 			this.lightThemeRadio.Location = new System.Drawing.Point(10, 42);
 			this.lightThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.lightThemeRadio.Name = "lightThemeRadio";
@@ -205,6 +208,7 @@
 			// 
 			// mouseWheelActionRadio3
 			// 
+			this.mouseWheelActionRadio3.DarkMode = false;
 			this.mouseWheelActionRadio3.Location = new System.Drawing.Point(10, 177);
 			this.mouseWheelActionRadio3.Margin = new System.Windows.Forms.Padding(0);
 			this.mouseWheelActionRadio3.Name = "mouseWheelActionRadio3";
@@ -216,6 +220,7 @@
 			// 
 			// mouseWheelActionRadio2
 			// 
+			this.mouseWheelActionRadio2.DarkMode = false;
 			this.mouseWheelActionRadio2.Location = new System.Drawing.Point(10, 145);
 			this.mouseWheelActionRadio2.Margin = new System.Windows.Forms.Padding(0);
 			this.mouseWheelActionRadio2.Name = "mouseWheelActionRadio2";
@@ -228,6 +233,7 @@
 			// mouseWheelActionRadio1
 			// 
 			this.mouseWheelActionRadio1.Checked = true;
+			this.mouseWheelActionRadio1.DarkMode = false;
 			this.mouseWheelActionRadio1.Location = new System.Drawing.Point(10, 113);
 			this.mouseWheelActionRadio1.Margin = new System.Windows.Forms.Padding(0);
 			this.mouseWheelActionRadio1.Name = "mouseWheelActionRadio1";
@@ -678,9 +684,9 @@
 		}
 
 		#endregion
-		private QuickLibrary.QlibRadioButton lightThemeRadio;
-		private QuickLibrary.QlibRadioButton systemThemeRadio;
-		private QuickLibrary.QlibRadioButton darkThemeRadio;
+		private QuickLibrary.QlibRadio lightThemeRadio;
+		private QuickLibrary.QlibRadio systemThemeRadio;
+		private QuickLibrary.QlibRadio darkThemeRadio;
 		private System.Windows.Forms.Label restartLabel1;
 		private QuickLibrary.QlibCheckBox fullscrCursorCheckBox;
 		private QuickLibrary.QlibTabControl settingsTabs;
@@ -710,9 +716,9 @@
 		private System.Windows.Forms.Panel translateAuthorsPanel;
 		private QuickLibrary.QlibCheckBox escToExitCheckBox;
 		private System.Windows.Forms.Label mouseWheelActionLabel;
-		private QuickLibrary.QlibRadioButton mouseWheelActionRadio1;
-		private QuickLibrary.QlibRadioButton mouseWheelActionRadio2;
-		private QuickLibrary.QlibRadioButton mouseWheelActionRadio3;
+		private QuickLibrary.QlibRadio mouseWheelActionRadio1;
+		private QuickLibrary.QlibRadio mouseWheelActionRadio2;
+		private QuickLibrary.QlibRadio mouseWheelActionRadio3;
 		private System.Windows.Forms.LinkLabel themeRestart;
 		private System.Windows.Forms.LinkLabel localizationRestart;
 		private QuickLibrary.QlibCheckBox startupPasteCheckBox;

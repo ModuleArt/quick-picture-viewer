@@ -736,15 +736,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to License.
-        /// </summary>
-        public static string license {
-            get {
-                return ResourceManager.GetString("license", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Light.
         /// </summary>
         public static string light {
@@ -831,6 +822,15 @@ namespace quick_picture_viewer.languages {
         public static string more_options {
             get {
                 return ResourceManager.GetString("more-options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to More plugins.
+        /// </summary>
+        public static string more_plugins {
+            get {
+                return ResourceManager.GetString("more-plugins", resourceCulture);
             }
         }
         

@@ -255,7 +255,7 @@
   </data>
   <data name="created-by" xml:space="preserve">
     <value>Created by</value>
-    <comment>About, Plugin manager</comment>
+    <comment>Plugin manager</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Current file could not be found</value>
@@ -417,10 +417,6 @@
     <value>Left arrow</value>
     <comment>Menu</comment>
   </data>
-  <data name="license" xml:space="preserve">
-    <value>License</value>
-    <comment>About</comment>
-  </data>
   <data name="light" xml:space="preserve">
     <value>Light</value>
     <comment>Settings</comment>
@@ -460,6 +456,10 @@
   <data name="more-options" xml:space="preserve">
     <value>More options</value>
     <comment>Menu</comment>
+  </data>
+  <data name="more-plugins" xml:space="preserve">
+    <value>More plugins</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="mouse-wheel-action" xml:space="preserve">
     <value>Mouse wheel scroll action</value>

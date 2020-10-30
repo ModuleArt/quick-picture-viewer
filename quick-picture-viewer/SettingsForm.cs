@@ -164,18 +164,18 @@ namespace quick_picture_viewer
 			DarkMode = dark;
 			updatesCheckBox.DarkMode = dark;
 			fullscrCursorCheckBox.DarkMode = dark;
-			darkThemeRadio.SetDarkMode(dark);
-			lightThemeRadio.SetDarkMode(dark);
-			systemThemeRadio.SetDarkMode(dark);
+			darkThemeRadio.DarkMode = dark;
+			lightThemeRadio.DarkMode = dark;
+			systemThemeRadio.DarkMode = dark;
 			closeBtn.SetDarkMode(dark);
 			slideshowTimeNumeric.DarkMode = dark;
 			slideshowCounterCheckBox.DarkMode = dark;
 			langComboBox.SetDarkMode(dark);
 			favExtTextBox.DarkMode = dark;
 			escToExitCheckBox.DarkMode = dark;
-			mouseWheelActionRadio1.SetDarkMode(dark);
-			mouseWheelActionRadio2.SetDarkMode(dark);
-			mouseWheelActionRadio3.SetDarkMode(dark);
+			mouseWheelActionRadio1.DarkMode = dark;
+			mouseWheelActionRadio2.DarkMode = dark;
+			mouseWheelActionRadio3.DarkMode = dark;
 			startupMaximizeCheckBox.DarkMode = dark;
 			startupPasteCheckBox.DarkMode = dark;
 			startupBoundsCheckBox.DarkMode = dark;
@@ -417,7 +417,10 @@ namespace quick_picture_viewer
 				}
 				catch
 				{
+					settingsStarted = false;
 					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					openWithCheckBox.Checked = !openWithCheckBox.Checked;
+					settingsStarted = true;
 				}
 			}
 		}
@@ -448,7 +451,10 @@ namespace quick_picture_viewer
 				}
 				catch
 				{
+					settingsStarted = false;
 					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					browseWithCheckBox.Checked = !browseWithCheckBox.Checked;
+					settingsStarted = true;
 				}
 			}
 		}
