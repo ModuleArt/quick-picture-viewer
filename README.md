@@ -16,15 +16,17 @@
     <img alt="Module Art website" src="https://img.shields.io/badge/www-moduleart-%2300BCD4">
   </a>
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
-    <img src="https://img.shields.io/badge/planner-trello-%230079BF">
+    <img src="https://img.shields.io/badge/planner-trello-%230079BF" />
   </a>
   <a alt="Donate" href="#donate">
-    <img src="https://img.shields.io/badge/↓-donate-%23E85B46"
+    <img src="https://img.shields.io/badge/↓-donate-%23E85B46" />
   </a>
 </p>
 
 <p align="center">	
-  <img src="/docs/screenshots/main.png">	
+  <a href="https://moduleart.github.io/quick-picture-viewer">
+    <img src="/docs/screenshots/main.png">
+  </a>
 </p>
 
 <h2 align="center">Install</h2>
