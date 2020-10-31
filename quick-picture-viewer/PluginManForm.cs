@@ -14,12 +14,13 @@ namespace quick_picture_viewer
 	{
 		private MainForm owner;
 		private string[] codenames;
+		private string[] pluginsLinks;
 
 		public PluginManForm(bool darkMode)
 		{
 			if (darkMode)
 			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			InitializeComponent();
@@ -36,6 +37,7 @@ namespace quick_picture_viewer
 				morePluginsBtn.BackColor = ThemeManager.DarkSecondColor;
 				morePluginsBtn.Image = Properties.Resources.white_plugin;
 				deleteBtn.Image = Properties.Resources.white_trash;
+				pluginWebsiteBtn.Image = Properties.Resources.white_website;
 			}
 
 			DarkMode = dark;
@@ -46,7 +48,7 @@ namespace quick_picture_viewer
 
 		private void PluginManForm_Load(object sender, EventArgs e)
 		{
-			owner = this.Owner as MainForm;
+			owner = Owner as MainForm;
 			InitLanguage();
 
 			RefreshPluginsList();
@@ -65,9 +67,11 @@ namespace quick_picture_viewer
 
 			PluginInfo[] plugins = PluginManager.GetPlugins(true);
 			codenames = new string[plugins.Length];
+			pluginsLinks = new string[plugins.Length];
 			for (int i = 0; i < plugins.Length; i++)
 			{
 				codenames[i] = plugins[i].name;
+				pluginsLinks[i] = plugins[i].link;
 
 				string authors = "";
 				for (int j = 0; j < plugins[i].authors.Length; j++)
@@ -111,19 +115,20 @@ namespace quick_picture_viewer
 			deleteBtn.Text = owner.resMan.GetString("delete-plugin");
 			openFileDialog1.Title = owner.resMan.GetString("browse-for-plugins");
 			morePluginsBtn.Text = " " + owner.resMan.GetString("more-plugins");
+			pluginWebsiteBtn.Text = owner.resMan.GetString("plugin-website");
 		}
 
 		private void PluginManForm_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.KeyCode == Keys.Escape)
 			{
-				this.Close();
+				Close();
 			}
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void addPluginBtn_Click(object sender, EventArgs e)
@@ -174,6 +179,14 @@ namespace quick_picture_viewer
 		private void morePluginsBtn_Click(object sender, EventArgs e)
 		{
 			Process.Start("https://moduleart.github.io/quick-picture-viewer#plugins");
+		}
+
+		private void pluginWebsiteBtn_Click(object sender, EventArgs e)
+		{
+			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0)
+			{
+				Process.Start(pluginsLinks[listView1.SelectedIndices[0]]);
+			}
 		}
 	}
 }

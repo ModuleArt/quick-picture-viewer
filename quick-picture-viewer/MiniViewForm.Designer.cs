@@ -86,12 +86,13 @@
 			// 
 			// contextMenuStrip1
 			// 
+			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkboardBtn,
             this.qlibMenuSeparator2,
             this.newWindowBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(245, 66);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(263, 88);
 			// 
 			// checkboardBtn
 			// 
@@ -99,14 +100,14 @@
 			this.checkboardBtn.Name = "checkboardBtn";
 			this.checkboardBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-			this.checkboardBtn.Size = new System.Drawing.Size(244, 24);
+			this.checkboardBtn.Size = new System.Drawing.Size(262, 24);
 			this.checkboardBtn.Text = "checkboard background";
 			this.checkboardBtn.Click += new System.EventHandler(this.checkerboardBackgroundToolStripMenuItem_Click);
 			// 
 			// qlibMenuSeparator2
 			// 
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
-			this.qlibMenuSeparator2.Size = new System.Drawing.Size(241, 6);
+			this.qlibMenuSeparator2.Size = new System.Drawing.Size(259, 6);
 			// 
 			// newWindowBtn
 			// 
@@ -114,7 +115,7 @@
 			this.newWindowBtn.Name = "newWindowBtn";
 			this.newWindowBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-			this.newWindowBtn.Size = new System.Drawing.Size(244, 24);
+			this.newWindowBtn.Size = new System.Drawing.Size(262, 24);
 			this.newWindowBtn.Text = "new window";
 			this.newWindowBtn.Click += new System.EventHandler(this.newWindowBtn_Click);
 			// 
@@ -203,13 +204,10 @@
 			this.Controls.Add(this.picturePanel);
 			this.DarkMode = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.MinimumSize = new System.Drawing.Size(207, 207);
 			this.Name = "MiniViewForm";
-			this.Padding = new System.Windows.Forms.Padding(27);
-			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Quick Picture Viewer";
 			this.TopMost = true;

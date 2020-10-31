@@ -138,11 +138,9 @@
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.logoPictureBox);
 			this.Draggable = true;
-			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "WallpaperForm";
-			this.Padding = new System.Windows.Forms.Padding(10);
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

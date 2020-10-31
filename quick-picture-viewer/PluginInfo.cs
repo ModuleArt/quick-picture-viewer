@@ -69,6 +69,7 @@ namespace quick_picture_viewer
 		public string version;
 		public string title;
 		public MultilangString description;
+		public string link;
 		public Author[] authors;
 		public Target[] targets;
 		public Function[] functions;

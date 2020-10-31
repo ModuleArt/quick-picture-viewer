@@ -36,6 +36,8 @@
 			this.authorsColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.versionColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.pluginWebsiteBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibMenuSeparator2 = new QuickLibrary.QlibMenuSeparator();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
@@ -43,8 +45,8 @@
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.addPluginBtn = new System.Windows.Forms.Button();
 			this.morePluginsBtn = new System.Windows.Forms.Button();
+			this.addPluginBtn = new System.Windows.Forms.Button();
 			this.contextMenuStrip1.SuspendLayout();
 			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
@@ -94,18 +96,38 @@
 			// 
 			// contextMenuStrip1
 			// 
+			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pluginWebsiteBtn,
+            this.qlibMenuSeparator2,
             this.deleteBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(168, 28);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(210, 88);
+			// 
+			// pluginWebsiteBtn
+			// 
+			this.pluginWebsiteBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.pluginWebsiteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_website;
+			this.pluginWebsiteBtn.Name = "pluginWebsiteBtn";
+			this.pluginWebsiteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.pluginWebsiteBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+			this.pluginWebsiteBtn.Size = new System.Drawing.Size(209, 24);
+			this.pluginWebsiteBtn.Text = "plugin website";
+			this.pluginWebsiteBtn.Click += new System.EventHandler(this.pluginWebsiteBtn_Click);
+			// 
+			// qlibMenuSeparator2
+			// 
+			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
+			this.qlibMenuSeparator2.Size = new System.Drawing.Size(206, 6);
 			// 
 			// deleteBtn
 			// 
+			this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.deleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.deleteBtn.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-			this.deleteBtn.Size = new System.Drawing.Size(167, 24);
+			this.deleteBtn.Size = new System.Drawing.Size(209, 24);
 			this.deleteBtn.Text = "delete plugin";
 			this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
 			// 
@@ -157,23 +179,6 @@
 			this.openFileDialog1.Filter = "QPV plugin|*.zip";
 			this.openFileDialog1.RestoreDirectory = true;
 			// 
-			// addPluginBtn
-			// 
-			this.addPluginBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.addPluginBtn.FlatAppearance.BorderSize = 0;
-			this.addPluginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.addPluginBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
-			this.addPluginBtn.Location = new System.Drawing.Point(10, 358);
-			this.addPluginBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.addPluginBtn.Name = "addPluginBtn";
-			this.addPluginBtn.Size = new System.Drawing.Size(200, 32);
-			this.addPluginBtn.TabIndex = 44;
-			this.addPluginBtn.Text = " browse for plugins";
-			this.addPluginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.addPluginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.addPluginBtn.UseVisualStyleBackColor = false;
-			this.addPluginBtn.Click += new System.EventHandler(this.addPluginBtn_Click);
-			// 
 			// morePluginsBtn
 			// 
 			this.morePluginsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -191,6 +196,23 @@
 			this.morePluginsBtn.UseVisualStyleBackColor = false;
 			this.morePluginsBtn.Click += new System.EventHandler(this.morePluginsBtn_Click);
 			// 
+			// addPluginBtn
+			// 
+			this.addPluginBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.addPluginBtn.FlatAppearance.BorderSize = 0;
+			this.addPluginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.addPluginBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
+			this.addPluginBtn.Location = new System.Drawing.Point(10, 358);
+			this.addPluginBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.addPluginBtn.Name = "addPluginBtn";
+			this.addPluginBtn.Size = new System.Drawing.Size(200, 32);
+			this.addPluginBtn.TabIndex = 44;
+			this.addPluginBtn.Text = " browse for plugins";
+			this.addPluginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.addPluginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.addPluginBtn.UseVisualStyleBackColor = false;
+			this.addPluginBtn.Click += new System.EventHandler(this.addPluginBtn_Click);
+			// 
 			// PluginManForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -201,11 +223,9 @@
 			this.Controls.Add(this.listView1);
 			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "PluginManForm";
-			this.Padding = new System.Windows.Forms.Padding(10);
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "PluginManForm";
 			this.TitleLabel = this.titleLabel;
@@ -235,5 +255,7 @@
 		private QuickLibrary.QlibContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem deleteBtn;
 		private System.Windows.Forms.Button morePluginsBtn;
+		private System.Windows.Forms.ToolStripMenuItem pluginWebsiteBtn;
+		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator2;
 	}
 }

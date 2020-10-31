@@ -28,7 +28,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.settingsTabs = new QuickLibrary.QlibTabControl();
+			this.settingsTabs = new QuickLibrary.QlibTabs();
 			this.themePage = new System.Windows.Forms.TabPage();
 			this.restartLabel1 = new System.Windows.Forms.Label();
 			this.systemThemeRadio = new QuickLibrary.QlibRadio();
@@ -84,32 +84,20 @@
 			// 
 			// settingsTabs
 			// 
-			this.settingsTabs.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-			this.settingsTabs.AllowDrop = true;
-			this.settingsTabs.BackTabColor = System.Drawing.SystemColors.Control;
-			this.settingsTabs.ClosingButtonColor = System.Drawing.Color.WhiteSmoke;
-			this.settingsTabs.ClosingMessage = null;
 			this.settingsTabs.Controls.Add(this.themePage);
 			this.settingsTabs.Controls.Add(this.mousePage);
 			this.settingsTabs.Controls.Add(this.slideshowPage);
 			this.settingsTabs.Controls.Add(this.startupPage);
 			this.settingsTabs.Controls.Add(this.externalPage);
 			this.settingsTabs.Controls.Add(this.langPage);
-			this.settingsTabs.EnableDragDrop = false;
-			this.settingsTabs.HeaderColor = System.Drawing.SystemColors.ControlLight;
-			this.settingsTabs.HorizontalLineColor = System.Drawing.Color.Transparent;
-			this.settingsTabs.ItemSize = new System.Drawing.Size(240, 28);
+			this.settingsTabs.DarkMode = false;
 			this.settingsTabs.Location = new System.Drawing.Point(10, 42);
 			this.settingsTabs.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.settingsTabs.Multiline = true;
 			this.settingsTabs.Name = "settingsTabs";
 			this.settingsTabs.Padding = new System.Drawing.Point(0, 0);
 			this.settingsTabs.SelectedIndex = 0;
-			this.settingsTabs.ShowClosingButton = false;
-			this.settingsTabs.ShowClosingMessage = false;
 			this.settingsTabs.Size = new System.Drawing.Size(370, 290);
 			this.settingsTabs.TabIndex = 1;
-			this.settingsTabs.TextColor = System.Drawing.Color.Black;
 			// 
 			// themePage
 			// 
@@ -119,11 +107,11 @@
 			this.themePage.Controls.Add(this.darkThemeRadio);
 			this.themePage.Controls.Add(this.lightThemeRadio);
 			this.themePage.Controls.Add(this.themeRestart);
-			this.themePage.Location = new System.Drawing.Point(4, 60);
+			this.themePage.Location = new System.Drawing.Point(4, 52);
 			this.themePage.Margin = new System.Windows.Forms.Padding(0);
 			this.themePage.Name = "themePage";
 			this.themePage.Padding = new System.Windows.Forms.Padding(10);
-			this.themePage.Size = new System.Drawing.Size(362, 226);
+			this.themePage.Size = new System.Drawing.Size(362, 234);
 			this.themePage.TabIndex = 0;
 			this.themePage.Text = "theme";
 			this.themePage.ToolTipText = "App theming";
@@ -197,11 +185,11 @@
 			this.mousePage.Controls.Add(this.mouseWheelActionLabel);
 			this.mousePage.Controls.Add(this.escToExitCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
-			this.mousePage.Location = new System.Drawing.Point(4, 60);
+			this.mousePage.Location = new System.Drawing.Point(4, 52);
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
-			this.mousePage.Size = new System.Drawing.Size(362, 226);
+			this.mousePage.Size = new System.Drawing.Size(362, 234);
 			this.mousePage.TabIndex = 2;
 			this.mousePage.Text = "mouse & keyboard";
 			this.mousePage.ToolTipText = "Cursor options";
@@ -285,11 +273,11 @@
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
 			this.slideshowPage.Controls.Add(this.slideshowCounterCheckBox);
-			this.slideshowPage.Location = new System.Drawing.Point(4, 60);
+			this.slideshowPage.Location = new System.Drawing.Point(4, 52);
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
-			this.slideshowPage.Size = new System.Drawing.Size(362, 226);
+			this.slideshowPage.Size = new System.Drawing.Size(362, 234);
 			this.slideshowPage.TabIndex = 5;
 			this.slideshowPage.Text = "slideshow";
 			// 
@@ -358,11 +346,11 @@
 			this.startupPage.Controls.Add(this.startupMaximizeCheckBox);
 			this.startupPage.Controls.Add(this.startupPasteCheckBox);
 			this.startupPage.Controls.Add(this.startupLabel);
-			this.startupPage.Location = new System.Drawing.Point(4, 60);
+			this.startupPage.Location = new System.Drawing.Point(4, 52);
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
-			this.startupPage.Size = new System.Drawing.Size(362, 226);
+			this.startupPage.Size = new System.Drawing.Size(362, 234);
 			this.startupPage.TabIndex = 3;
 			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
@@ -434,11 +422,11 @@
 			this.externalPage.Controls.Add(this.browseBtn);
 			this.externalPage.Controls.Add(this.favExtTextBox);
 			this.externalPage.Controls.Add(this.favExtLabel);
-			this.externalPage.Location = new System.Drawing.Point(4, 60);
+			this.externalPage.Location = new System.Drawing.Point(4, 52);
 			this.externalPage.Margin = new System.Windows.Forms.Padding(0);
 			this.externalPage.Name = "externalPage";
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
-			this.externalPage.Size = new System.Drawing.Size(362, 226);
+			this.externalPage.Size = new System.Drawing.Size(362, 234);
 			this.externalPage.TabIndex = 4;
 			this.externalPage.Text = "Windows";
 			// 
@@ -528,11 +516,11 @@
 			this.langPage.Controls.Add(this.restartLabel2);
 			this.langPage.Controls.Add(this.langComboBox);
 			this.langPage.Controls.Add(this.localizationRestart);
-			this.langPage.Location = new System.Drawing.Point(4, 60);
+			this.langPage.Location = new System.Drawing.Point(4, 52);
 			this.langPage.Margin = new System.Windows.Forms.Padding(0);
 			this.langPage.Name = "langPage";
 			this.langPage.Padding = new System.Windows.Forms.Padding(10);
-			this.langPage.Size = new System.Drawing.Size(362, 226);
+			this.langPage.Size = new System.Drawing.Size(362, 234);
 			this.langPage.TabIndex = 6;
 			this.langPage.Text = "localization";
 			// 
@@ -652,11 +640,9 @@
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.settingsTabs);
 			this.Draggable = true;
-			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "SettingsForm";
-			this.Padding = new System.Windows.Forms.Padding(10);
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -689,7 +675,7 @@
 		private QuickLibrary.QlibRadio darkThemeRadio;
 		private System.Windows.Forms.Label restartLabel1;
 		private QuickLibrary.QlibCheckBox fullscrCursorCheckBox;
-		private QuickLibrary.QlibTabControl settingsTabs;
+		private QuickLibrary.QlibTabs settingsTabs;
 		private System.Windows.Forms.TabPage themePage;
 		private System.Windows.Forms.TabPage mousePage;
 		private System.Windows.Forms.Panel titlePanel;

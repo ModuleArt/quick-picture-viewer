@@ -79,7 +79,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lightweight, versatile desktop image viewer for Windows, built on top of WinForms (C#). The best replacement for the default Windows photo viewer..
+        ///   Looks up a localized string similar to Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer..
         /// </summary>
         public static string app_description {
             get {
@@ -1083,6 +1083,15 @@ namespace quick_picture_viewer.languages {
         public static string plugin_not_found {
             get {
                 return ResourceManager.GetString("plugin-not-found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plugin website.
+        /// </summary>
+        public static string plugin_website {
+            get {
+                return ResourceManager.GetString("plugin-website", resourceCulture);
             }
         }
         

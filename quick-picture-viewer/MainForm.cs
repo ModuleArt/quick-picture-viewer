@@ -206,11 +206,11 @@ namespace quick_picture_viewer
 			{
 				if ((Properties.Settings.Default.SlideshowTime - slideshowCounter) <= 1)
 				{
-					showSuggestion(resMan.GetString("next-image-in-1-second"), SuggestionIcon.Info);
+					showSuggestion(resMan.GetString("next-image-in-1-second"), SuggestionIcon.Slideshow);
 				}
 				else
 				{
-					showSuggestion(string.Format(resMan.GetString("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Info);
+					showSuggestion(string.Format(resMan.GetString("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Slideshow);
 				}
 			}
 		}
@@ -568,7 +568,7 @@ namespace quick_picture_viewer
 				dateCreatedLabel.Visible = directoryName != null;
 				dateModifiedLabel.Visible = directoryName != null;
 
-				this.Invoke((MethodInvoker)(() => this.Text = fileName + " - Quick Picture Viewer"));
+				Invoke((MethodInvoker)(() => Text = fileName + " - Quick Picture Viewer"));
 
 				zoomInButton.Enabled = true;
 				zoomOutButton.Enabled = true;
@@ -615,16 +615,16 @@ namespace quick_picture_viewer
 
 			if (string.IsNullOrEmpty(fakeName))
 			{
-				this.Text = currentFile + " - Quick Picture Viewer";
+				Text = currentFile + " - Quick Picture Viewer";
 			}
 			else
 			{
-				this.Text = fakeName + " - Quick Picture Viewer";
+				Text = fakeName + " - Quick Picture Viewer";
 			}
 
 			if (b)
 			{
-				this.Text = "* " + this.Text;
+				Text = "* " + Text;
 			}
 		}
 
@@ -777,7 +777,7 @@ namespace quick_picture_viewer
 		private void setAlwaysOnTop(bool b, bool saveToDisk)
 		{
 			alwaysOnTop = b;
-			this.TopMost = b;
+			TopMost = b;
 			onTopButton.Checked = b;
 
 			if (b)
@@ -967,7 +967,7 @@ namespace quick_picture_viewer
 			{
 				if (autoZoom)
 				{
-					this.AllowDrop = false;
+					AllowDrop = false;
 					if (currentFile != null || originalImage != null)
 					{
 						dragImage = true;
@@ -978,8 +978,8 @@ namespace quick_picture_viewer
 					Cursor.Current = Cursors.SizeAll;
 
 					panelMouseDownLocation = new Point(
-						this.PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
-						this.PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
+						PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
+						PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
 					);
 				}
 			}
@@ -987,7 +987,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
 		{
-			this.AllowDrop = true;
+			AllowDrop = true;
 			Cursor.Current = Cursors.Default;
 		}
 
@@ -1002,19 +1002,19 @@ namespace quick_picture_viewer
 						if (currentFile != null)
 						{
 							string[] paths = { Path.Combine(currentFolder, currentFile) };
-							this.DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
+							DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
 						}
 						else if (originalImage != null)
 						{
-							this.DoDragDrop(originalImage, DragDropEffects.Copy);
+							DoDragDrop(originalImage, DragDropEffects.Copy);
 						}
 						dragImage = false;
 					}
 				}
 				else
 				{
-					int newX = panelMouseDownLocation.X - this.PointToClient(Cursor.Position).X;
-					int newY = panelMouseDownLocation.Y - this.PointToClient(Cursor.Position).Y;
+					int newX = panelMouseDownLocation.X - PointToClient(Cursor.Position).X;
+					int newY = panelMouseDownLocation.Y - PointToClient(Cursor.Position).Y;
 
 					if (newX > picturePanel.HorizontalScroll.Minimum)
 					{
@@ -1104,7 +1104,7 @@ namespace quick_picture_viewer
 		{
 			fullscreen = b;
 
-			this.WindowState = FormWindowState.Normal;
+			WindowState = FormWindowState.Normal;
 
 			toolStrip1.Visible = !b;
 			statusStrip1.Visible = !b;
@@ -1119,14 +1119,14 @@ namespace quick_picture_viewer
 				}
 
 				picturePanel.Top = 0;
-				picturePanel.Height = this.ClientSize.Height;
+				picturePanel.Height = ClientSize.Height;
 				picturePanel.BackColor = Color.Black;
 
-				typeOpsButton.Left = this.ClientRectangle.Width + 27;
+				typeOpsButton.Left = ClientRectangle.Width + 27;
 				pleaseOpenLabel.ForeColor = Color.White;
 
-				this.FormBorderStyle = FormBorderStyle.None;
-				this.WindowState = FormWindowState.Maximized;
+				FormBorderStyle = FormBorderStyle.None;
+				WindowState = FormWindowState.Maximized;
 
 				setAlwaysOnTop(false, true);
 
@@ -1137,12 +1137,12 @@ namespace quick_picture_viewer
 				picturePanel.Cursor = Cursors.Default;
 
 				picturePanel.Top = toolStrip1.Height;
-				picturePanel.Height = this.ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
+				picturePanel.Height = ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
 
-				typeOpsButton.Left = this.ClientRectangle.Width - typeOpsButton.Width - 27;
-				pleaseOpenLabel.ForeColor = this.ForeColor;
+				typeOpsButton.Left = ClientRectangle.Width - typeOpsButton.Width - 27;
+				pleaseOpenLabel.ForeColor = ForeColor;
 
-				this.FormBorderStyle = FormBorderStyle.Sizable;
+				FormBorderStyle = FormBorderStyle.Sizable;
 
 				if (checkboardBackground)
 				{
@@ -1333,7 +1333,7 @@ namespace quick_picture_viewer
 					{
 						if (Properties.Settings.Default.EscToExit)
 						{
-							this.Close();
+							Close();
 						}
 					}
 					else if (e.KeyCode == Keys.F12)
@@ -1401,7 +1401,7 @@ namespace quick_picture_viewer
 
 		private void screenshotButton_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			Hide();
 
 			System.Threading.Thread.Sleep(250);
 
@@ -1414,7 +1414,7 @@ namespace quick_picture_viewer
 				setImageChanged(true, resMan.GetString("screenshot"));
 			}
 
-			this.Show();
+			Show();
 		}
 
 		private int nextFile()
@@ -1651,8 +1651,8 @@ namespace quick_picture_viewer
 			{
 				ThemeManager.setDarkModeToControl(picturePanel.Handle);
 
-				this.ForeColor = Color.White;
-				this.BackColor = ThemeManager.DarkBackColor;
+				ForeColor = Color.White;
+				BackColor = ThemeManager.DarkBackColor;
 				statusStrip1.BackColor = ThemeManager.DarkSecondColor;
 
 				openButton.Image = Properties.Resources.white_open;
@@ -1867,7 +1867,8 @@ namespace quick_picture_viewer
 		{
 			Info = 0,
 			Check = 1,
-			Warning = 2
+			Warning = 2,
+			Slideshow = 3
 		}
 
 		private void showSuggestion(string text, SuggestionIcon icon)
@@ -1883,9 +1884,13 @@ namespace quick_picture_viewer
 				{
 					suggestionIcon.Image = Properties.Resources.white_check;
 				}
-				else
+				else if (icon == SuggestionIcon.Warning)
 				{
 					suggestionIcon.Image = Properties.Resources.white_warning;
+				}
+				else
+				{
+					suggestionIcon.Image = Properties.Resources.white_slideshow;
 				}
 				suggestionIcon.Visible = true;
 			}));
@@ -1950,7 +1955,7 @@ namespace quick_picture_viewer
 		public void RestartApp()
 		{
 			restartApp = true;
-			this.Close();
+			Close();
 		}
 
 		public void NewWindow()
@@ -1968,7 +1973,7 @@ namespace quick_picture_viewer
 
 		private void miniViewButton_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			Hide();
 
 			MiniViewForm mvf = new MiniViewForm(originalImage, this.Text, checkboardBackground);
 			mvf.Owner = this;
@@ -2063,24 +2068,24 @@ namespace quick_picture_viewer
 
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void maximizeBtn_Click(object sender, EventArgs e)
 		{
-			if (this.WindowState == FormWindowState.Maximized)
+			if (WindowState == FormWindowState.Maximized)
 			{
-				this.WindowState = FormWindowState.Normal;
+				WindowState = FormWindowState.Normal;
 			}
 			else
 			{
-				this.WindowState = FormWindowState.Maximized;
+				WindowState = FormWindowState.Maximized;
 			}
 		}
 
 		private void minimizeBtn_Click(object sender, EventArgs e)
 		{
-			this.WindowState = FormWindowState.Minimized;
+			WindowState = FormWindowState.Minimized;
 		}
 
 		private void externalRunBtn_Click(object sender, EventArgs e)
@@ -2133,7 +2138,7 @@ namespace quick_picture_viewer
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
 			picturePanel.Focus();
-			this.AllowDrop = true;
+			AllowDrop = true;
 		}
 
 		private void backClearBtn_Click(object sender, EventArgs e)
@@ -2184,15 +2189,15 @@ namespace quick_picture_viewer
 
 		private void framelessBtn_Click(object sender, EventArgs e)
 		{
-			if (this.FormBorderStyle == FormBorderStyle.None)
+			if (FormBorderStyle == FormBorderStyle.None)
 			{
-				this.FormBorderStyle = FormBorderStyle.Sizable;
+				FormBorderStyle = FormBorderStyle.Sizable;
 				statusStrip1.SizingGrip = true;
 				framelessBtn.Checked = false;
 			}
 			else
 			{
-				this.FormBorderStyle = FormBorderStyle.None;
+				FormBorderStyle = FormBorderStyle.None;
 				statusStrip1.SizingGrip = false;
 				framelessBtn.Checked = true;
 			}

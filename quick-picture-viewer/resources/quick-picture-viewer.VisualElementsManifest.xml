@@ -2,7 +2,7 @@
 	<VisualElements
 		BackgroundColor="#E9AD2B"
 		ShowNameOnSquare150x150Logo="on"
-		ForegroundText="light" 
+		ForegroundText="dark" 
 		DisplayName="Picture Viewer"
 	/>
 </Application>

@@ -33,7 +33,6 @@
 			this.versionLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.titlePanel = new System.Windows.Forms.Panel();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.descTextBox = new System.Windows.Forms.TextBox();
 			this.makeDefaultBtn = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
 			this.updatesBtn = new System.Windows.Forms.Button();
 			this.githubBtn = new System.Windows.Forms.Button();
 			this.developerBtn = new System.Windows.Forms.Button();
-			this.titlePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -51,7 +49,7 @@
 			this.productLabel.Location = new System.Drawing.Point(10, 170);
 			this.productLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.productLabel.Name = "productLabel";
-			this.productLabel.Size = new System.Drawing.Size(300, 19);
+			this.productLabel.Size = new System.Drawing.Size(270, 19);
 			this.productLabel.TabIndex = 27;
 			this.productLabel.Text = "Quick Picture Viewer";
 			this.productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,7 +61,7 @@
 			this.versionLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.versionLabel.Name = "versionLabel";
 			this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.versionLabel.Size = new System.Drawing.Size(300, 19);
+			this.versionLabel.Size = new System.Drawing.Size(270, 19);
 			this.versionLabel.TabIndex = 28;
 			this.versionLabel.Text = "version";
 			this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +74,7 @@
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(288, 0);
+			this.closeBtn.Location = new System.Drawing.Point(258, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
@@ -85,22 +83,13 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// titlePanel
-			// 
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(320, 32);
-			this.titlePanel.TabIndex = 0;
-			// 
 			// logoPictureBox
 			// 
 			this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
 			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(320, 128);
+			this.logoPictureBox.Size = new System.Drawing.Size(290, 128);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 41;
 			this.logoPictureBox.TabStop = false;
@@ -113,7 +102,7 @@
 			this.descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.descTextBox.Multiline = true;
 			this.descTextBox.Name = "descTextBox";
-			this.descTextBox.Size = new System.Drawing.Size(300, 96);
+			this.descTextBox.Size = new System.Drawing.Size(270, 96);
 			this.descTextBox.TabIndex = 42;
 			this.descTextBox.Text = "description";
 			this.descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -126,7 +115,7 @@
 			this.makeDefaultBtn.Location = new System.Drawing.Point(10, 418);
 			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.makeDefaultBtn.Name = "makeDefaultBtn";
-			this.makeDefaultBtn.Size = new System.Drawing.Size(300, 32);
+			this.makeDefaultBtn.Size = new System.Drawing.Size(270, 32);
 			this.makeDefaultBtn.TabIndex = 43;
 			this.makeDefaultBtn.Text = "set as default photo viewer";
 			this.makeDefaultBtn.UseVisualStyleBackColor = false;
@@ -140,7 +129,7 @@
 			this.copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.copyrightLabel.Name = "copyrightLabel";
 			this.copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.copyrightLabel.Size = new System.Drawing.Size(300, 19);
+			this.copyrightLabel.Size = new System.Drawing.Size(270, 19);
 			this.copyrightLabel.TabIndex = 44;
 			this.copyrightLabel.Text = "Copyright © 2020 Module Art";
 			this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,7 +142,7 @@
 			this.updatesBtn.Location = new System.Drawing.Point(10, 334);
 			this.updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.updatesBtn.Name = "updatesBtn";
-			this.updatesBtn.Size = new System.Drawing.Size(300, 32);
+			this.updatesBtn.Size = new System.Drawing.Size(270, 32);
 			this.updatesBtn.TabIndex = 45;
 			this.updatesBtn.Text = "check for updates";
 			this.updatesBtn.UseVisualStyleBackColor = false;
@@ -164,12 +153,15 @@
 			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(156)))), ((int)(((byte)(38)))));
 			this.githubBtn.FlatAppearance.BorderSize = 0;
 			this.githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.githubBtn.Image = ((System.Drawing.Image)(resources.GetObject("githubBtn.Image")));
 			this.githubBtn.Location = new System.Drawing.Point(10, 376);
 			this.githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.githubBtn.Name = "githubBtn";
-			this.githubBtn.Size = new System.Drawing.Size(145, 32);
+			this.githubBtn.Size = new System.Drawing.Size(130, 32);
 			this.githubBtn.TabIndex = 46;
-			this.githubBtn.Text = "GitHub";
+			this.githubBtn.Text = " GitHub";
+			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.githubBtn.UseVisualStyleBackColor = false;
 			this.githubBtn.Click += new System.EventHandler(this.button1_Click);
 			// 
@@ -179,10 +171,10 @@
 			this.developerBtn.FlatAppearance.BorderSize = 0;
 			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
-			this.developerBtn.Location = new System.Drawing.Point(165, 376);
+			this.developerBtn.Location = new System.Drawing.Point(150, 376);
 			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.developerBtn.Name = "developerBtn";
-			this.developerBtn.Size = new System.Drawing.Size(145, 32);
+			this.developerBtn.Size = new System.Drawing.Size(130, 32);
 			this.developerBtn.TabIndex = 47;
 			this.developerBtn.Text = " Module Art";
 			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,14 +185,14 @@
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(320, 509);
+			this.ClientSize = new System.Drawing.Size(290, 509);
+			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.developerBtn);
 			this.Controls.Add(this.githubBtn);
 			this.Controls.Add(this.updatesBtn);
 			this.Controls.Add(this.copyrightLabel);
 			this.Controls.Add(this.makeDefaultBtn);
 			this.Controls.Add(this.descTextBox);
-			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.logoPictureBox);
 			this.Controls.Add(this.versionLabel);
 			this.Controls.Add(this.productLabel);
@@ -208,18 +200,15 @@
 			this.CustomBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(173)))), ((int)(((byte)(43)))));
 			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "AboutForm";
-			this.Padding = new System.Windows.Forms.Padding(10);
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "AboutForm";
 			this.Load += new System.EventHandler(this.AboutForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AboutForm_KeyDown);
-			this.titlePanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -230,7 +219,6 @@
 		private System.Windows.Forms.Label productLabel;
 		private System.Windows.Forms.Label versionLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private System.Windows.Forms.Panel titlePanel;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.PictureBox logoPictureBox;
 		private System.Windows.Forms.TextBox descTextBox;

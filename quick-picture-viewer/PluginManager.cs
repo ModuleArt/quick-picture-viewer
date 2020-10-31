@@ -61,7 +61,6 @@ namespace quick_picture_viewer
 							{
 								if (pi.targets[j].name == "quick-picture-viewer" && ver.CompareTo(pi.targets[j].minVersion) >= 0)
 								{
-									Console.WriteLine(pi.targets[j].maxVersion);
 									if (pi.targets[j].maxVersion == null || pi.targets[j].maxVersion == "" || ver.CompareTo(pi.targets[j].maxVersion) <= 0)
 									{
 										plugins.Add(pi);

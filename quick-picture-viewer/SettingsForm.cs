@@ -151,14 +151,10 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				settingsTabs.BackTabColor = ThemeManager.DarkBackColor;
-				settingsTabs.HeaderColor = ThemeManager.DarkSecondColor;
-				settingsTabs.TextColor = Color.White;
-				settingsTabs.HorizontalLineColor = Color.Transparent;
-
 				browseBtn.Image = Properties.Resources.white_open;
 				browseBtn.BackColor = ThemeManager.DarkSecondColor;
 				browseBtn.ForeColor = Color.White;
+				settingsTabs.DarkMode = dark;
 			}
 
 			DarkMode = dark;

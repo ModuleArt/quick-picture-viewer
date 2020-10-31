@@ -126,7 +126,7 @@
     <comment>Menu</comment>
   </data>
   <data name="app-description" xml:space="preserve">
-    <value>Lightweight, versatile desktop image viewer for Windows, built on top of WinForms (C#). The best replacement for the default Windows photo viewer.</value>
+    <value>Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer.</value>
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
@@ -571,6 +571,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Plugin directory not found</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-website" xml:space="preserve">
+    <value>Plugin website</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugins" xml:space="preserve">

@@ -16,7 +16,7 @@ namespace quick_picture_viewer
 			HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, productLabel, versionLabel, copyrightLabel });
+			SetDraggableControls(new List<Control>() { logoPictureBox, productLabel, versionLabel, copyrightLabel });
 
 			closeBtn.SetDarkMode(false);
 

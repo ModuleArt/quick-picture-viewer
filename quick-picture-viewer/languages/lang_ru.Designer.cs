@@ -79,7 +79,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Легкая и универсальная программа для просмотра изображений для компьютеров на Windows, построенная на базе WinForms (C#). Лучшая замена стандартной программе просмотра фотографий Windows..
+        ///   Looks up a localized string similar to Легкая и универсальная программа для просмотра изображений для компьютеров на Windows. Лучшая замена стандартной программе просмотра фотографий Windows..
         /// </summary>
         public static string app_description {
             get {
@@ -1083,6 +1083,15 @@ namespace quick_picture_viewer.languages {
         public static string plugin_not_found {
             get {
                 return ResourceManager.GetString("plugin-not-found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вебсайт плагина.
+        /// </summary>
+        public static string plugin_website {
+            get {
+                return ResourceManager.GetString("plugin-website", resourceCulture);
             }
         }
         

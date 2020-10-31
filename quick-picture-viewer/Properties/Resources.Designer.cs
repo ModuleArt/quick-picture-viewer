@@ -193,6 +193,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_website {
+            get {
+                object obj = ResourceManager.GetObject("black_website", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checkboard_dark {
             get {
                 object obj = ResourceManager.GetObject("checkboard_dark", resourceCulture);
@@ -746,6 +756,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_warning {
             get {
                 object obj = ResourceManager.GetObject("white_warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_website {
+            get {
+                object obj = ResourceManager.GetObject("white_website", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
