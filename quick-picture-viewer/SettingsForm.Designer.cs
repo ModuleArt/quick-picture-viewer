@@ -50,7 +50,6 @@
 			this.startupPage = new System.Windows.Forms.TabPage();
 			this.startupBoundsCheckBox = new QuickLibrary.QlibCheckBox();
 			this.updatesCheckBox = new QuickLibrary.QlibCheckBox();
-			this.startupMaximizeCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupPasteCheckBox = new QuickLibrary.QlibCheckBox();
 			this.startupLabel = new System.Windows.Forms.Label();
 			this.externalPage = new System.Windows.Forms.TabPage();
@@ -107,11 +106,11 @@
 			this.themePage.Controls.Add(this.darkThemeRadio);
 			this.themePage.Controls.Add(this.lightThemeRadio);
 			this.themePage.Controls.Add(this.themeRestart);
-			this.themePage.Location = new System.Drawing.Point(4, 52);
+			this.themePage.Location = new System.Drawing.Point(4, 60);
 			this.themePage.Margin = new System.Windows.Forms.Padding(0);
 			this.themePage.Name = "themePage";
 			this.themePage.Padding = new System.Windows.Forms.Padding(10);
-			this.themePage.Size = new System.Drawing.Size(362, 234);
+			this.themePage.Size = new System.Drawing.Size(362, 226);
 			this.themePage.TabIndex = 0;
 			this.themePage.Text = "theme";
 			this.themePage.ToolTipText = "App theming";
@@ -185,11 +184,11 @@
 			this.mousePage.Controls.Add(this.mouseWheelActionLabel);
 			this.mousePage.Controls.Add(this.escToExitCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
-			this.mousePage.Location = new System.Drawing.Point(4, 52);
+			this.mousePage.Location = new System.Drawing.Point(4, 60);
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
-			this.mousePage.Size = new System.Drawing.Size(362, 234);
+			this.mousePage.Size = new System.Drawing.Size(362, 226);
 			this.mousePage.TabIndex = 2;
 			this.mousePage.Text = "mouse & keyboard";
 			this.mousePage.ToolTipText = "Cursor options";
@@ -273,11 +272,11 @@
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
 			this.slideshowPage.Controls.Add(this.slideshowCounterCheckBox);
-			this.slideshowPage.Location = new System.Drawing.Point(4, 52);
+			this.slideshowPage.Location = new System.Drawing.Point(4, 60);
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
-			this.slideshowPage.Size = new System.Drawing.Size(362, 234);
+			this.slideshowPage.Size = new System.Drawing.Size(362, 226);
 			this.slideshowPage.TabIndex = 5;
 			this.slideshowPage.Text = "slideshow";
 			// 
@@ -343,14 +342,13 @@
 			this.startupPage.BackColor = System.Drawing.SystemColors.Control;
 			this.startupPage.Controls.Add(this.startupBoundsCheckBox);
 			this.startupPage.Controls.Add(this.updatesCheckBox);
-			this.startupPage.Controls.Add(this.startupMaximizeCheckBox);
 			this.startupPage.Controls.Add(this.startupPasteCheckBox);
 			this.startupPage.Controls.Add(this.startupLabel);
-			this.startupPage.Location = new System.Drawing.Point(4, 52);
+			this.startupPage.Location = new System.Drawing.Point(4, 60);
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
-			this.startupPage.Size = new System.Drawing.Size(362, 234);
+			this.startupPage.Size = new System.Drawing.Size(362, 226);
 			this.startupPage.TabIndex = 3;
 			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
@@ -358,7 +356,7 @@
 			// startupBoundsCheckBox
 			// 
 			this.startupBoundsCheckBox.DarkMode = false;
-			this.startupBoundsCheckBox.Location = new System.Drawing.Point(10, 103);
+			this.startupBoundsCheckBox.Location = new System.Drawing.Point(10, 71);
 			this.startupBoundsCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupBoundsCheckBox.Name = "startupBoundsCheckBox";
 			this.startupBoundsCheckBox.Size = new System.Drawing.Size(342, 32);
@@ -379,22 +377,10 @@
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
 			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
 			// 
-			// startupMaximizeCheckBox
-			// 
-			this.startupMaximizeCheckBox.DarkMode = false;
-			this.startupMaximizeCheckBox.Location = new System.Drawing.Point(10, 71);
-			this.startupMaximizeCheckBox.Margin = new System.Windows.Forms.Padding(0);
-			this.startupMaximizeCheckBox.Name = "startupMaximizeCheckBox";
-			this.startupMaximizeCheckBox.Size = new System.Drawing.Size(342, 32);
-			this.startupMaximizeCheckBox.TabIndex = 44;
-			this.startupMaximizeCheckBox.Text = "maximize";
-			this.startupMaximizeCheckBox.UseVisualStyleBackColor = true;
-			this.startupMaximizeCheckBox.CheckedChanged += new System.EventHandler(this.startupMaximizeCheckBox_CheckedChanged);
-			// 
 			// startupPasteCheckBox
 			// 
 			this.startupPasteCheckBox.DarkMode = false;
-			this.startupPasteCheckBox.Location = new System.Drawing.Point(10, 135);
+			this.startupPasteCheckBox.Location = new System.Drawing.Point(10, 103);
 			this.startupPasteCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPasteCheckBox.Name = "startupPasteCheckBox";
 			this.startupPasteCheckBox.Size = new System.Drawing.Size(342, 32);
@@ -422,11 +408,11 @@
 			this.externalPage.Controls.Add(this.browseBtn);
 			this.externalPage.Controls.Add(this.favExtTextBox);
 			this.externalPage.Controls.Add(this.favExtLabel);
-			this.externalPage.Location = new System.Drawing.Point(4, 52);
+			this.externalPage.Location = new System.Drawing.Point(4, 60);
 			this.externalPage.Margin = new System.Windows.Forms.Padding(0);
 			this.externalPage.Name = "externalPage";
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
-			this.externalPage.Size = new System.Drawing.Size(362, 234);
+			this.externalPage.Size = new System.Drawing.Size(362, 226);
 			this.externalPage.TabIndex = 4;
 			this.externalPage.Text = "Windows";
 			// 
@@ -516,11 +502,11 @@
 			this.langPage.Controls.Add(this.restartLabel2);
 			this.langPage.Controls.Add(this.langComboBox);
 			this.langPage.Controls.Add(this.localizationRestart);
-			this.langPage.Location = new System.Drawing.Point(4, 52);
+			this.langPage.Location = new System.Drawing.Point(4, 60);
 			this.langPage.Margin = new System.Windows.Forms.Padding(0);
 			this.langPage.Name = "langPage";
 			this.langPage.Padding = new System.Windows.Forms.Padding(10);
-			this.langPage.Size = new System.Drawing.Size(362, 234);
+			this.langPage.Size = new System.Drawing.Size(362, 226);
 			this.langPage.TabIndex = 6;
 			this.langPage.Text = "localization";
 			// 
@@ -708,7 +694,6 @@
 		private System.Windows.Forms.LinkLabel themeRestart;
 		private System.Windows.Forms.LinkLabel localizationRestart;
 		private QuickLibrary.QlibCheckBox startupPasteCheckBox;
-		private QuickLibrary.QlibCheckBox startupMaximizeCheckBox;
 		private QuickLibrary.QlibCheckBox updatesCheckBox;
 		private QuickLibrary.QlibCheckBox startupBoundsCheckBox;
 		private QuickLibrary.QlibCheckBox openWithCheckBox;

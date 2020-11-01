@@ -56,6 +56,8 @@
 			// 
 			// versionLabel
 			// 
+			this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.versionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(21)))));
 			this.versionLabel.Location = new System.Drawing.Point(10, 199);
 			this.versionLabel.Margin = new System.Windows.Forms.Padding(0);
@@ -124,6 +126,8 @@
 			// 
 			// copyrightLabel
 			// 
+			this.copyrightLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.copyrightLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(21)))));
 			this.copyrightLabel.Location = new System.Drawing.Point(10, 470);
 			this.copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);

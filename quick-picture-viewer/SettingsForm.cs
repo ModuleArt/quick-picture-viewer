@@ -84,7 +84,6 @@ namespace quick_picture_viewer
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			startupPasteCheckBox.Checked = Properties.Settings.Default.StartupPaste;
-			startupMaximizeCheckBox.Checked = Properties.Settings.Default.StartupMaximize;
 			startupBoundsCheckBox.Checked = Properties.Settings.Default.StartupRestoreBounds;
 
 			favExtTextBox.Text = Properties.Settings.Default.FavoriteExternalApp;
@@ -123,7 +122,6 @@ namespace quick_picture_viewer
 			themePage.Text = owner.resMan.GetString("theme");
 			startupLabel.Text = owner.resMan.GetString("app-startup-actions") + ":";
 			startupPasteCheckBox.Text = owner.resMan.GetString("paste-from-clipboard");
-			startupMaximizeCheckBox.Text = owner.resMan.GetString("maximize-window");
 			startupBoundsCheckBox.Text = owner.resMan.GetString("restore-last-window-bounds");
 			updatesCheckBox.Text = owner.resMan.GetString("check-for-app-updates");
 			favExtLabel.Text = owner.resMan.GetString("fav-external-app") + ":";
@@ -172,7 +170,6 @@ namespace quick_picture_viewer
 			mouseWheelActionRadio1.DarkMode = dark;
 			mouseWheelActionRadio2.DarkMode = dark;
 			mouseWheelActionRadio3.DarkMode = dark;
-			startupMaximizeCheckBox.DarkMode = dark;
 			startupPasteCheckBox.DarkMode = dark;
 			startupBoundsCheckBox.DarkMode = dark;
 			openWithCheckBox.DarkMode = dark;
@@ -371,15 +368,6 @@ namespace quick_picture_viewer
 			if (settingsStarted)
 			{
 				Properties.Settings.Default.StartupPaste = startupPasteCheckBox.Checked;
-				Properties.Settings.Default.Save();
-			}
-		}
-
-		private void startupMaximizeCheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			if (settingsStarted)
-			{
-				Properties.Settings.Default.StartupMaximize = startupMaximizeCheckBox.Checked;
 				Properties.Settings.Default.Save();
 			}
 		}

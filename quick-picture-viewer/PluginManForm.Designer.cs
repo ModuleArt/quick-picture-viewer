@@ -53,6 +53,8 @@
 			// 
 			// listView1
 			// 
+			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.listView1.BackColor = System.Drawing.SystemColors.Control;
 			this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -62,6 +64,7 @@
             this.versionColumn});
 			this.listView1.ContextMenuStrip = this.contextMenuStrip1;
 			this.listView1.FullRowSelect = true;
+			this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 			this.listView1.HideSelection = false;
 			this.listView1.Location = new System.Drawing.Point(10, 42);
 			this.listView1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
@@ -73,6 +76,7 @@
 			this.listView1.TabIndex = 0;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
+			this.listView1.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listView1_ColumnWidthChanging);
 			// 
 			// pluginNameColumn
 			// 
@@ -97,12 +101,13 @@
 			// contextMenuStrip1
 			// 
 			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pluginWebsiteBtn,
             this.qlibMenuSeparator2,
             this.deleteBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(210, 88);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(214, 74);
 			// 
 			// pluginWebsiteBtn
 			// 
@@ -111,14 +116,14 @@
 			this.pluginWebsiteBtn.Name = "pluginWebsiteBtn";
 			this.pluginWebsiteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.pluginWebsiteBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-			this.pluginWebsiteBtn.Size = new System.Drawing.Size(209, 24);
+			this.pluginWebsiteBtn.Size = new System.Drawing.Size(213, 28);
 			this.pluginWebsiteBtn.Text = "plugin website";
 			this.pluginWebsiteBtn.Click += new System.EventHandler(this.pluginWebsiteBtn_Click);
 			// 
 			// qlibMenuSeparator2
 			// 
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
-			this.qlibMenuSeparator2.Size = new System.Drawing.Size(206, 6);
+			this.qlibMenuSeparator2.Size = new System.Drawing.Size(210, 6);
 			// 
 			// deleteBtn
 			// 
@@ -127,7 +132,7 @@
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.deleteBtn.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-			this.deleteBtn.Size = new System.Drawing.Size(209, 24);
+			this.deleteBtn.Size = new System.Drawing.Size(213, 28);
 			this.deleteBtn.Text = "delete plugin";
 			this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
 			// 

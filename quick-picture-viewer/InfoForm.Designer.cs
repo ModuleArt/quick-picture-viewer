@@ -70,6 +70,8 @@
 			// 
 			// fileNameLabel
 			// 
+			this.fileNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.fileNameLabel.Location = new System.Drawing.Point(10, 48);
 			this.fileNameLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.fileNameLabel.Name = "fileNameLabel";
@@ -80,6 +82,7 @@
 			// 
 			// extensionTextBox
 			// 
+			this.extensionTextBox.DarkMode = false;
 			this.extensionTextBox.Location = new System.Drawing.Point(304, 168);
 			this.extensionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.extensionTextBox.Name = "extensionTextBox";
@@ -91,6 +94,8 @@
 			// 
 			// extensionLabel
 			// 
+			this.extensionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.extensionLabel.Location = new System.Drawing.Point(202, 174);
 			this.extensionLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
 			this.extensionLabel.Name = "extensionLabel";
@@ -149,6 +154,7 @@
 			// 
 			// compressionTextBox
 			// 
+			this.compressionTextBox.DarkMode = false;
 			this.compressionTextBox.Location = new System.Drawing.Point(122, 168);
 			this.compressionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.compressionTextBox.Name = "compressionTextBox";
@@ -159,6 +165,8 @@
 			// 
 			// compressionLabel
 			// 
+			this.compressionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.compressionLabel.Location = new System.Drawing.Point(10, 174);
 			this.compressionLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.compressionLabel.Name = "compressionLabel";
@@ -169,6 +177,7 @@
 			// 
 			// fullPathTextBox
 			// 
+			this.fullPathTextBox.DarkMode = false;
 			this.fullPathTextBox.Location = new System.Drawing.Point(122, 126);
 			this.fullPathTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.fullPathTextBox.Name = "fullPathTextBox";
@@ -180,6 +189,8 @@
 			// 
 			// fullPathLabel
 			// 
+			this.fullPathLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullPathLabel.Location = new System.Drawing.Point(10, 132);
 			this.fullPathLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.fullPathLabel.Name = "fullPathLabel";
@@ -190,6 +201,7 @@
 			// 
 			// folderTextBox
 			// 
+			this.folderTextBox.DarkMode = false;
 			this.folderTextBox.Location = new System.Drawing.Point(122, 84);
 			this.folderTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.folderTextBox.Name = "folderTextBox";
@@ -201,6 +213,7 @@
 			// 
 			// fileNameTextBox
 			// 
+			this.fileNameTextBox.DarkMode = false;
 			this.fileNameTextBox.Location = new System.Drawing.Point(122, 42);
 			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.fileNameTextBox.Name = "fileNameTextBox";
@@ -212,6 +225,8 @@
 			// 
 			// folderLabel
 			// 
+			this.folderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.folderLabel.Location = new System.Drawing.Point(10, 90);
 			this.folderLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.folderLabel.Name = "folderLabel";
@@ -222,6 +237,7 @@
 			// 
 			// sizeTextBox
 			// 
+			this.sizeTextBox.DarkMode = false;
 			this.sizeTextBox.Location = new System.Drawing.Point(521, 42);
 			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.sizeTextBox.Name = "sizeTextBox";
@@ -232,6 +248,8 @@
 			// 
 			// sizeLabel
 			// 
+			this.sizeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.sizeLabel.Location = new System.Drawing.Point(384, 48);
 			this.sizeLabel.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.sizeLabel.Name = "sizeLabel";
@@ -242,6 +260,7 @@
 			// 
 			// megapixelsTextBox
 			// 
+			this.megapixelsTextBox.DarkMode = false;
 			this.megapixelsTextBox.Location = new System.Drawing.Point(521, 84);
 			this.megapixelsTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
@@ -252,6 +271,8 @@
 			// 
 			// megapixelsLabel
 			// 
+			this.megapixelsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.megapixelsLabel.Location = new System.Drawing.Point(384, 90);
 			this.megapixelsLabel.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.megapixelsLabel.Name = "megapixelsLabel";
@@ -262,6 +283,7 @@
 			// 
 			// resolutionTextBox
 			// 
+			this.resolutionTextBox.DarkMode = false;
 			this.resolutionTextBox.Location = new System.Drawing.Point(521, 126);
 			this.resolutionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.resolutionTextBox.Name = "resolutionTextBox";
@@ -272,6 +294,8 @@
 			// 
 			// resolutionLabel
 			// 
+			this.resolutionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.resolutionLabel.Location = new System.Drawing.Point(384, 132);
 			this.resolutionLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
 			this.resolutionLabel.Name = "resolutionLabel";
@@ -282,6 +306,7 @@
 			// 
 			// inchesTextBox
 			// 
+			this.inchesTextBox.DarkMode = false;
 			this.inchesTextBox.Location = new System.Drawing.Point(521, 168);
 			this.inchesTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.inchesTextBox.Name = "inchesTextBox";
@@ -292,6 +317,8 @@
 			// 
 			// inchesLabel
 			// 
+			this.inchesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.inchesLabel.Location = new System.Drawing.Point(384, 174);
 			this.inchesLabel.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.inchesLabel.Name = "inchesLabel";
@@ -302,6 +329,7 @@
 			// 
 			// cmTextBox
 			// 
+			this.cmTextBox.DarkMode = false;
 			this.cmTextBox.Location = new System.Drawing.Point(521, 210);
 			this.cmTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.cmTextBox.Name = "cmTextBox";
@@ -312,6 +340,8 @@
 			// 
 			// cmLabel
 			// 
+			this.cmLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.cmLabel.Location = new System.Drawing.Point(384, 216);
 			this.cmLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
 			this.cmLabel.Name = "cmLabel";
@@ -322,6 +352,8 @@
 			// 
 			// ratioLabel
 			// 
+			this.ratioLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.ratioLabel.Location = new System.Drawing.Point(384, 300);
 			this.ratioLabel.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.ratioLabel.Name = "ratioLabel";
@@ -332,6 +364,7 @@
 			// 
 			// ratioTextBox
 			// 
+			this.ratioTextBox.DarkMode = false;
 			this.ratioTextBox.Location = new System.Drawing.Point(521, 294);
 			this.ratioTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.ratioTextBox.Name = "ratioTextBox";
@@ -342,6 +375,7 @@
 			// 
 			// diskSizeTextBox
 			// 
+			this.diskSizeTextBox.DarkMode = false;
 			this.diskSizeTextBox.Location = new System.Drawing.Point(521, 252);
 			this.diskSizeTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
@@ -353,6 +387,8 @@
 			// 
 			// diskSizeLabel
 			// 
+			this.diskSizeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.diskSizeLabel.Location = new System.Drawing.Point(384, 257);
 			this.diskSizeLabel.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.diskSizeLabel.Name = "diskSizeLabel";
@@ -363,6 +399,8 @@
 			// 
 			// modifiedLabel
 			// 
+			this.modifiedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.modifiedLabel.Location = new System.Drawing.Point(10, 258);
 			this.modifiedLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.modifiedLabel.Name = "modifiedLabel";
@@ -373,6 +411,7 @@
 			// 
 			// modifiedTextBox
 			// 
+			this.modifiedTextBox.DarkMode = false;
 			this.modifiedTextBox.Location = new System.Drawing.Point(122, 252);
 			this.modifiedTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
 			this.modifiedTextBox.Name = "modifiedTextBox";
@@ -384,6 +423,8 @@
 			// 
 			// createdLabel
 			// 
+			this.createdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.createdLabel.Location = new System.Drawing.Point(10, 216);
 			this.createdLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.createdLabel.Name = "createdLabel";
@@ -394,6 +435,7 @@
 			// 
 			// createdTextBox
 			// 
+			this.createdTextBox.DarkMode = false;
 			this.createdTextBox.Location = new System.Drawing.Point(122, 210);
 			this.createdTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.createdTextBox.Name = "createdTextBox";

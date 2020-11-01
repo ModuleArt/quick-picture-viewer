@@ -753,8 +753,9 @@
 			// MainForm
 			// 
 			this.AllowDrop = true;
-			this.BackColor = System.Drawing.SystemColors.Control;
 			resources.ApplyResources(this, "$this");
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.Controls.Add(this.typeOpsButton);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.picturePanel);

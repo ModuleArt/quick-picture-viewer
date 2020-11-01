@@ -52,6 +52,7 @@ namespace quick_picture_viewer
 			InitLanguage();
 
 			RefreshPluginsList();
+			AutoSizeColumns();
 		}
 
 		private void RefreshPluginsList()
@@ -187,6 +188,25 @@ namespace quick_picture_viewer
 			{
 				Process.Start(pluginsLinks[listView1.SelectedIndices[0]]);
 			}
+		}
+
+		private void AutoSizeColumns()
+		{
+			float x = listView1.Width / 100f;
+			
+			listView1.Columns[0].Width = (int)(x * 25) + 1;
+			listView1.Columns[1].Width = (int)(x * 36);
+			listView1.Columns[2].Width = (int)(x * 25);
+			listView1.Columns[3].Width = (int)(x * 14);
+
+			//int sum = listView1.Columns[0].Width + listView1.Columns[1].Width + listView1.Columns[2].Width + listView1.Columns[3].Width;
+			//listView1.Columns[0].Width += Width - 25 - sum;
+		}
+
+		private void listView1_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+		{
+			e.Cancel = true;
+			e.NewWidth = listView1.Columns[e.ColumnIndex].Width;
 		}
 	}
 }

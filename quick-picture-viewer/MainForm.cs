@@ -1329,13 +1329,6 @@ namespace quick_picture_viewer
 					{
 						fullscreenButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.Escape)
-					{
-						if (Properties.Settings.Default.EscToExit)
-						{
-							Close();
-						}
-					}
 					else if (e.KeyCode == Keys.F12)
 					{
 						screenshotButton.PerformClick();
@@ -1351,6 +1344,10 @@ namespace quick_picture_viewer
 					}
 					else if (e.KeyCode == Keys.Escape)
 					{
+						if (!fullscreen && Properties.Settings.Default.EscToExit)
+						{
+							Close();
+						}
 						setFullscreen(false);
 					}
 					else if (e.KeyCode == Keys.Down)
@@ -1828,8 +1825,16 @@ namespace quick_picture_viewer
 
 			if (Properties.Settings.Default.StartupRestoreBounds)
 			{
-				Properties.Settings.Default.StartupWindowLocation = Location;
-				Properties.Settings.Default.StartupWindowSize = Size;
+				if (WindowState == FormWindowState.Maximized) 
+				{
+					Properties.Settings.Default.StartupMaximize = true;
+				}
+				else
+				{
+					Properties.Settings.Default.StartupMaximize = false;
+					Properties.Settings.Default.StartupWindowLocation = Location;
+					Properties.Settings.Default.StartupWindowSize = Size;
+				}
 				Properties.Settings.Default.Save();
 			}
 		}
@@ -1892,6 +1897,7 @@ namespace quick_picture_viewer
 				{
 					suggestionIcon.Image = Properties.Resources.white_slideshow;
 				}
+				suggestionIcon.Height = suggestionLabel.Height;
 				suggestionIcon.Visible = true;
 			}));
 

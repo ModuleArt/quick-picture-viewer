@@ -781,15 +781,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Maximize window.
-        /// </summary>
-        public static string maximize_window {
-            get {
-                return ResourceManager.GetString("maximize-window", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to megapixels.
         /// </summary>
         public static string megapixels {
