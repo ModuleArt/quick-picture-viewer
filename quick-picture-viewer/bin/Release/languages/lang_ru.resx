@@ -126,7 +126,7 @@
     <comment>Menu</comment>
   </data>
   <data name="app-description" xml:space="preserve">
-    <value>Легкая и универсальная программа для просмотра изображений для компьютеров на Windows, построенная на базе WinForms (C#). Лучшая замена стандартной программе просмотра фотографий Windows.</value>
+    <value>Легкая и универсальная программа для просмотра изображений для компьютеров на Windows. Лучшая замена стандартной программе просмотра фотографий Windows.</value>
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
@@ -437,10 +437,6 @@
     <value>Отступы</value>
     <comment>Print</comment>
   </data>
-  <data name="maximize-window" xml:space="preserve">
-    <value>Развернуть окно</value>
-    <comment>Settings</comment>
-  </data>
   <data name="megapixels" xml:space="preserve">
     <value>мегапикселей</value>
     <comment>Image info</comment>
@@ -571,6 +567,10 @@
   </data>
   <data name="plugin-not-found" xml:space="preserve">
     <value>Директория плагина не найдена</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-website" xml:space="preserve">
+    <value>Вебсайт плагина</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugins" xml:space="preserve">
