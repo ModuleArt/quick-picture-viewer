@@ -27,7 +27,8 @@ namespace quick_picture_viewer
 			Bitmap bmp = null,
 			string path = null,
 			bool darkMode = false,
-			string language = "en"
+			string language = "en",
+			bool alwaysOnTop = false
 		);
 
 		public delegate void PluginOutput(object sender, OutputEventArgs oea);

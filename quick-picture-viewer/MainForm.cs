@@ -2242,7 +2242,8 @@ namespace quick_picture_viewer
 						plugins[i],
 						plugins[i].functions[j],
 						resMan.GetString("apply"),
-						resMan.GetString("configure")
+						resMan.GetString("configure"),
+						alwaysOnTop
 					);
 					tsmi.Output += Tsmi_Output;
 

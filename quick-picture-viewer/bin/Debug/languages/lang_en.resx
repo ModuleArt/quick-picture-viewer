@@ -437,10 +437,6 @@
     <value>Margins</value>
     <comment>Print</comment>
   </data>
-  <data name="maximize-window" xml:space="preserve">
-    <value>Maximize window</value>
-    <comment>Settings</comment>
-  </data>
   <data name="megapixels" xml:space="preserve">
     <value>megapixels</value>
     <comment>Image info</comment>

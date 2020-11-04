@@ -19,15 +19,16 @@ namespace quick_picture_viewer
 			PluginInfo pi, 
 			PluginInfo.Function func,
 			string applyText,
-			string configureText
+			string configureText,
+			bool alwaysOnTop
 		)
 		{
-			this.Text = func.title.Get(Properties.Settings.Default.Language);
-			this.dllPath = Path.Combine(PluginManager.pluginsFolder, pi.name, pi.name + ".dll");
+			Text = func.title.Get(Properties.Settings.Default.Language);
+			dllPath = Path.Combine(PluginManager.pluginsFolder, pi.name, pi.name + ".dll");
 
 			if (func.props.imageRequired)
 			{
-				this.Enabled = bmp != null;
+				Enabled = bmp != null;
 			}
 			
 			ToolStripMenuItem apply = new ToolStripMenuItem(applyText);
@@ -58,7 +59,7 @@ namespace quick_picture_viewer
 					OnOutput(oea);
 				}
 			};
-			this.DropDownItems.Add(apply);
+			DropDownItems.Add(apply);
 
 			if (func.props.configurable)
 			{
@@ -70,7 +71,7 @@ namespace quick_picture_viewer
 						IntPtr pluginPtr = PluginManager.LoadLibrary(dllPath);
 						IntPtr funcPtr = PluginManager.GetProcAddressOrdinal(pluginPtr, func.name + "_conf");
 						var callback = Marshal.GetDelegateForFunctionPointer<PluginManager.ConfFunction>(funcPtr);
-						callback(bmp, path, darkMode, Properties.Settings.Default.Language);
+						callback(bmp, path, darkMode, Properties.Settings.Default.Language, alwaysOnTop);
 					}
 					else if (pi.dllType == "cs")
 					{
@@ -81,7 +82,8 @@ namespace quick_picture_viewer
 							bmp,
 							path,
 							darkMode,
-							Properties.Settings.Default.Language
+							Properties.Settings.Default.Language,
+							alwaysOnTop
 						});
 					}
 				};
@@ -93,18 +95,18 @@ namespace quick_picture_viewer
 				{
 					conf.Image = Properties.Resources.black_options;
 				}
-				this.DropDownItems.Add(conf);
+				DropDownItems.Add(conf);
 			}
 
-			this.Image = PluginManager.GetPluginIcon(pi.name, func.name, darkMode);
+			Image = PluginManager.GetPluginIcon(pi.name, func.name, darkMode);
 			if (darkMode)
 			{
-				this.DropDown.BackColor = ThemeManager.DarkSecondColor;
+				DropDown.BackColor = ThemeManager.DarkSecondColor;
 				apply.Image = Properties.Resources.white_check;
 			}
 			else
 			{
-				this.DropDown.BackColor = ThemeManager.LightSecondColor;
+				DropDown.BackColor = ThemeManager.LightSecondColor;
 				apply.Image = Properties.Resources.black_check;
 			}
 		}

@@ -437,10 +437,6 @@
     <value>Отступы</value>
     <comment>Print</comment>
   </data>
-  <data name="maximize-window" xml:space="preserve">
-    <value>Развернуть окно</value>
-    <comment>Settings</comment>
-  </data>
   <data name="megapixels" xml:space="preserve">
     <value>мегапикселей</value>
     <comment>Image info</comment>
