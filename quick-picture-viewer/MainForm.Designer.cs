@@ -53,9 +53,9 @@
 			this.toolStripSeparator4 = new QuickLibrary.QlibToolStripSeparator();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
-			this.showFileButton = new System.Windows.Forms.ToolStripButton();
-			this.nextButton = new System.Windows.Forms.ToolStripButton();
 			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
+			this.nextButton = new System.Windows.Forms.ToolStripButton();
+			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new QuickLibrary.QlibToolStripSeparator();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
@@ -224,9 +224,9 @@
             this.toolStripSeparator4,
             this.infoButton,
             this.prevButton,
-            this.showFileButton,
-            this.nextButton,
             this.slideshowButton,
+            this.nextButton,
+            this.showFileButton,
             this.toolStripSeparator1,
             this.autoZoomButton,
             this.zoomOutButton,
@@ -321,13 +321,13 @@
 			this.prevButton.Name = "prevButton";
 			this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
 			// 
-			// showFileButton
+			// slideshowButton
 			// 
-			resources.ApplyResources(this.showFileButton, "showFileButton");
-			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
-			this.showFileButton.Name = "showFileButton";
-			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
+			resources.ApplyResources(this.slideshowButton, "slideshowButton");
+			this.slideshowButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.slideshowButton.Margin = new System.Windows.Forms.Padding(0);
+			this.slideshowButton.Name = "slideshowButton";
+			this.slideshowButton.Click += new System.EventHandler(this.slideshowButton_Click);
 			// 
 			// nextButton
 			// 
@@ -337,13 +337,13 @@
 			this.nextButton.Name = "nextButton";
 			this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
 			// 
-			// slideshowButton
+			// showFileButton
 			// 
-			resources.ApplyResources(this.slideshowButton, "slideshowButton");
-			this.slideshowButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.slideshowButton.Margin = new System.Windows.Forms.Padding(0);
-			this.slideshowButton.Name = "slideshowButton";
-			this.slideshowButton.Click += new System.EventHandler(this.slideshowButton_Click);
+			resources.ApplyResources(this.showFileButton, "showFileButton");
+			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
+			this.showFileButton.Name = "showFileButton";
+			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// toolStripSeparator1
 			// 
@@ -757,15 +757,16 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.Controls.Add(this.typeOpsButton);
+			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.picturePanel);
-			this.Controls.Add(this.statusStrip1);
 			this.KeyPreview = true;
 			this.Name = "MainForm";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
+			this.ResizeBegin += new System.EventHandler(this.MainForm_ResizeBegin);
 			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);

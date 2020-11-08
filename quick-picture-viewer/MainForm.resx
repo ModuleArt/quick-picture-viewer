@@ -193,6 +193,152 @@
   <data name="&gt;&gt;typeOpsButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>477, 17</value>
+  </metadata>
+  <data name="statusStrip1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="directoryLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAALJJREFUOE/Nks0JAjEQRnPwLihahgpeRQ/amj9YhAcbsABr0DbUClxR0PftBDES
+        ltmTPnhkZtl8E0jC37DGKz7xgXtsopsbdqwMDdzivOycaHIdddolvtHHOnSxsNLwBuziKpI9n00PD3Gt
+        IhswwjOu8IRjFEM8Yr/sjGzABqdWhgkqTLdxwUXsNURkA74ZoCbrBGKGGiJcAVUke/SQWla6aGNyjXrK
+        d1SqR/2bPKRfEcILB30+ElJnYjsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="directoryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="directoryLabel.Text" xml:space="preserve">
+    <value> folder</value>
+  </data>
+  <data name="fileLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAKVJREFUOE/Nkj0KAjEUBl9rqwiCl7ATxNJLeAqPIXgZrbyLXkAsxUJFUOfbRFhD
+        8mK5A0N+md0i1jk2eMN34gVnWOWBwzD9QZETzpuVgy7m0L7+4IwLbZTwAl+v2ihRCrRx73iH2zj+FRjj
+        Po4p1cAID7jDI06xHasGerhsVmYrfKFiiipeDaRM4qio4m5AD6kfplkGeA/TPHrKT9RXcupsjZ3B7AP8
+        ljJY5GqjGgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="fileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="fileLabel.Text" xml:space="preserve">
+    <value> file</value>
+  </data>
+  <data name="sizeLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAGZJREFUOE/VjzEKgDAQBO9bKtio//+FmvgI3REECRa5KwIOTJFiJ5y14vwwRC9X
+        GQpMcpOddAcY75IxuALlGKoDs2TM7W7ajt83jTJLbq/mCfBzksP9ckBgkaExEDgkkRAESn+B2QXamyDY
+        CyfAWwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="sizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="sizeLabel.Text" xml:space="preserve">
+    <value> size</value>
+  </data>
+  <data name="zoomLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAALVJREFUOE/V0r8OwVAUgPE7+rt6EBGC6ILRw5hsJJ7EK5DgEcTWxCLETAxWEgPf
+        6bGd9LaVGHzJLz0d2t721v26AiY44oYDxsgjsSK2WKGNyue4xgZyc29TzHU0LSAr8XZCVUdTDfJa3u4o
+        6Wgq46FjfDvUdTQ1sNcxvhGWOprkQyZ+gz5ekF2QleQgT061Cx1cMcAQIZ5I9R/0cIHseea6kItb0VnG
+        5OIzmtHZF80Q6Pg/OfcGzhogaYnUQccAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="zoomLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="zoomLabel.Text" xml:space="preserve">
+    <value> zoom</value>
+  </data>
+  <data name="hasChangesLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
+        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
+        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
+        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
+        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="hasChangesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="hasChangesLabel.Text" xml:space="preserve">
+    <value> not-saved</value>
+  </data>
+  <data name="hasChangesLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dateCreatedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAANpJREFUOE/F08EKAUEAh/E9kAPClfIeijwN8TZKilxR4gWEB6EIyUU5cxDff3a3
+        1TQ4yVe/ZqY0zc4u7xdVMcUZl2CcoIKPxdHDCjUUkAvGOtboIAZnfcyQNCu/RzCqFBbompWVjr1F2qyi
+        XjdQGexRNquXxtAx7ewNVBMjfxp1gp7VzrVBEUd/GnWDLtFOG4TCErj606h3J3DlPMG7O3DlvAPd6gb2
+        W7DTW9ihZFZWbcyhH7nKYomWWTkKv0S9Zz1OHkpjAwd8/BLD9FENoaPeg3GAr/+Ff+R5T5lgLGc/X8aO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="dateCreatedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="dateCreatedLabel.Text" xml:space="preserve">
+    <value> created</value>
+  </data>
+  <data name="dateCreatedLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dateModifiedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAOZJREFUOE/F08+qAVEAx/EpVzaEnai7sOAZ1I2nId5GKbFHySOg+x63bv6EjbK2
+        IL6/Y6ZmxplrFup+69PMGdNp5pzhvKuqe1QNjLHCCUfMUEdke1TQxxZNFJBHCS38QL9/4KkbzvhGRhfc
+        dN0rjQUGZhRKN8oOZV1w80+gstjgy4xiFJ5AdTB5nL7ONsEn9KSBLkg8TgN5r+afKAWtV6ADtNpxsj7B
+        FNqqOFnXQKv6C/8W2tIurFEzo1A9zKGbbOWwRNeMLCUxhPZZr1OE0rENfaGRX6I/77+gR726xxH+/C/8
+        V45zBz6DLrd6wgPCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="dateModifiedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="dateModifiedLabel.Text" xml:space="preserve">
+    <value> modified</value>
+  </data>
+  <data name="dateModifiedLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 417</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 29</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>593, 17</value>
   </metadata>
@@ -365,29 +511,28 @@
   <data name="prevButton.Text" xml:space="preserve">
     <value>prev image</value>
   </data>
-  <data name="showFileButton.AutoSize" type="System.Boolean, mscorlib">
+  <data name="slideshowButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="showFileButton.Enabled" type="System.Boolean, mscorlib">
+  <data name="slideshowButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="showFileButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="slideshowButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVDhPzZJBCoMwEEWz6L5gsafxeiL0GF6jILT3KYIb
-        LS3Y9w1RIyLjorQPHs4M5ieQuL/hgi32+MYrHtHME1NfugOWmA+dEe28R522wBEN93DGzpeetYAKNX9g
-        psGCaM1aQJjp2+AyxBygE6iuh27CHBDY7L8ScEfNgzecE63RQ0p8aeKE0TXqKb9wvuOW+jd6SL/CuQ8s
-        sUNuvTC3+wAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABtSURBVDhPzY9LCoAwEEPnYAquxfsvBX8L8RCaLEYUDVN/
+        4INH27SkjP2G+YbvcvZD5I5DECALKljDEZYMBLKghQXkeWIAuN9KfF3xoIMZzGHDQCALOMIAe+gj8M51
+        ZEEq3xRcNYnkh4rHBQFmC5UsR8jkx8YmAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="showFileButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="slideshowButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="showFileButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="slideshowButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 25</value>
   </data>
-  <data name="showFileButton.Text" xml:space="preserve">
-    <value>show file</value>
+  <data name="slideshowButton.Text" xml:space="preserve">
+    <value>slideshow</value>
   </data>
   <data name="nextButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -412,28 +557,29 @@
   <data name="nextButton.Text" xml:space="preserve">
     <value>Next image in folder | Right arrow</value>
   </data>
-  <data name="slideshowButton.AutoSize" type="System.Boolean, mscorlib">
+  <data name="showFileButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="slideshowButton.Enabled" type="System.Boolean, mscorlib">
+  <data name="showFileButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="slideshowButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="showFileButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABtSURBVDhPzY9LCoAwEEPnYAquxfsvBX8L8RCaLEYUDVN/
-        4INH27SkjP2G+YbvcvZD5I5DECALKljDEZYMBLKghQXkeWIAuN9KfF3xoIMZzGHDQCALOMIAe+gj8M51
-        ZEEq3xRcNYnkh4rHBQFmC5UsR8jkx8YmAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVDhPzZJBCoMwEEWz6L5gsafxeiL0GF6jILT3KYIb
+        LS3Y9w1RIyLjorQPHs4M5ieQuL/hgi32+MYrHtHME1NfugOWmA+dEe28R522wBEN93DGzpeetYAKNX9g
+        psGCaM1aQJjp2+AyxBygE6iuh27CHBDY7L8ScEfNgzecE63RQ0p8aeKE0TXqKb9wvuOW+jd6SL/CuQ8s
+        sUNuvTC3+wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="slideshowButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="showFileButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="slideshowButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="showFileButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 25</value>
   </data>
-  <data name="slideshowButton.Text" xml:space="preserve">
-    <value>slideshow</value>
+  <data name="showFileButton.Text" xml:space="preserve">
+    <value>show file</value>
   </data>
   <data name="toolStripSeparator1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1146,7 +1292,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="picturePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1156,6 +1302,9 @@
   </data>
   <data name="picturePanel.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
+  </data>
+  <data name="suggestionIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="suggestionIcon.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 27</value>
@@ -1323,158 +1472,12 @@
     <value>picturePanel</value>
   </data>
   <data name="&gt;&gt;picturePanel.Type" xml:space="preserve">
-    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=2.2.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;picturePanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picturePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>477, 17</value>
-  </metadata>
-  <data name="statusStrip1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="directoryLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALJJREFUOE/Nks0JAjEQRnPwLihahgpeRQ/amj9YhAcbsABr0DbUClxR0PftBDES
-        ltmTPnhkZtl8E0jC37DGKz7xgXtsopsbdqwMDdzivOycaHIdddolvtHHOnSxsNLwBuziKpI9n00PD3Gt
-        IhswwjOu8IRjFEM8Yr/sjGzABqdWhgkqTLdxwUXsNURkA74ZoCbrBGKGGiJcAVUke/SQWla6aGNyjXrK
-        d1SqR/2bPKRfEcILB30+ElJnYjsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="directoryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
-  </data>
-  <data name="directoryLabel.Text" xml:space="preserve">
-    <value> folder</value>
-  </data>
-  <data name="fileLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAKVJREFUOE/Nkj0KAjEUBl9rqwiCl7ATxNJLeAqPIXgZrbyLXkAsxUJFUOfbRFhD
-        8mK5A0N+md0i1jk2eMN34gVnWOWBwzD9QZETzpuVgy7m0L7+4IwLbZTwAl+v2ihRCrRx73iH2zj+FRjj
-        Po4p1cAID7jDI06xHasGerhsVmYrfKFiiipeDaRM4qio4m5AD6kfplkGeA/TPHrKT9RXcupsjZ3B7AP8
-        ljJY5GqjGgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="fileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="fileLabel.Text" xml:space="preserve">
-    <value> file</value>
-  </data>
-  <data name="sizeLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAGZJREFUOE/VjzEKgDAQBO9bKtio//+FmvgI3REECRa5KwIOTJFiJ5y14vwwRC9X
-        GQpMcpOddAcY75IxuALlGKoDs2TM7W7ajt83jTJLbq/mCfBzksP9ckBgkaExEDgkkRAESn+B2QXamyDY
-        CyfAWwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="sizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="sizeLabel.Text" xml:space="preserve">
-    <value> size</value>
-  </data>
-  <data name="zoomLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALVJREFUOE/V0r8OwVAUgPE7+rt6EBGC6ILRw5hsJJ7EK5DgEcTWxCLETAxWEgPf
-        6bGd9LaVGHzJLz0d2t721v26AiY44oYDxsgjsSK2WKGNyue4xgZyc29TzHU0LSAr8XZCVUdTDfJa3u4o
-        6Wgq46FjfDvUdTQ1sNcxvhGWOprkQyZ+gz5ekF2QleQgT061Cx1cMcAQIZ5I9R/0cIHseea6kItb0VnG
-        5OIzmtHZF80Q6Pg/OfcGzhogaYnUQccAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="zoomLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
-  </data>
-  <data name="zoomLabel.Text" xml:space="preserve">
-    <value> zoom</value>
-  </data>
-  <data name="hasChangesLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
-        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
-        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
-        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
-        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="hasChangesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="hasChangesLabel.Text" xml:space="preserve">
-    <value> not-saved</value>
-  </data>
-  <data name="hasChangesLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateCreatedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAANpJREFUOE/F08EKAUEAh/E9kAPClfIeijwN8TZKilxR4gWEB6EIyUU5cxDff3a3
-        1TQ4yVe/ZqY0zc4u7xdVMcUZl2CcoIKPxdHDCjUUkAvGOtboIAZnfcyQNCu/RzCqFBbompWVjr1F2qyi
-        XjdQGexRNquXxtAx7ewNVBMjfxp1gp7VzrVBEUd/GnWDLtFOG4TCErj606h3J3DlPMG7O3DlvAPd6gb2
-        W7DTW9ihZFZWbcyhH7nKYomWWTkKv0S9Zz1OHkpjAwd8/BLD9FENoaPeg3GAr/+Ff+R5T5lgLGc/X8aO
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="dateCreatedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
-  </data>
-  <data name="dateCreatedLabel.Text" xml:space="preserve">
-    <value> created</value>
-  </data>
-  <data name="dateCreatedLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateModifiedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAOZJREFUOE/F08+qAVEAx/EpVzaEnai7sOAZ1I2nId5GKbFHySOg+x63bv6EjbK2
-        IL6/Y6ZmxplrFup+69PMGdNp5pzhvKuqe1QNjLHCCUfMUEdke1TQxxZNFJBHCS38QL9/4KkbzvhGRhfc
-        dN0rjQUGZhRKN8oOZV1w80+gstjgy4xiFJ5AdTB5nL7ONsEn9KSBLkg8TgN5r+afKAWtV6ADtNpxsj7B
-        FNqqOFnXQKv6C/8W2tIurFEzo1A9zKGbbOWwRNeMLCUxhPZZr1OE0rENfaGRX6I/77+gR726xxH+/C/8
-        V45zBz6DLrd6wgPCAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="dateModifiedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
-  </data>
-  <data name="dateModifiedLabel.Text" xml:space="preserve">
-    <value> modified</value>
-  </data>
-  <data name="dateModifiedLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 417</value>
-  </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 29</value>
-  </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
@@ -5243,8 +5246,11 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAwAMAAA==
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 300</value>
+    <value>320, 320</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Quick Picture Viewer</value>
@@ -5381,10 +5387,10 @@
   <data name="&gt;&gt;prevButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showFileButton.Name" xml:space="preserve">
-    <value>showFileButton</value>
+  <data name="&gt;&gt;slideshowButton.Name" xml:space="preserve">
+    <value>slideshowButton</value>
   </data>
-  <data name="&gt;&gt;showFileButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;slideshowButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;nextButton.Name" xml:space="preserve">
@@ -5393,10 +5399,10 @@
   <data name="&gt;&gt;nextButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;slideshowButton.Name" xml:space="preserve">
-    <value>slideshowButton</value>
+  <data name="&gt;&gt;showFileButton.Name" xml:space="preserve">
+    <value>showFileButton</value>
   </data>
-  <data name="&gt;&gt;slideshowButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;showFileButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">

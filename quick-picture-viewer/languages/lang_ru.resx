@@ -774,7 +774,7 @@
     <comment>Message box</comment>
   </data>
   <data name="unable-to-open-file" xml:space="preserve">
-    <value>Невозможно открыть этот файл</value>
+    <value>Невозможно открыть файл</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">

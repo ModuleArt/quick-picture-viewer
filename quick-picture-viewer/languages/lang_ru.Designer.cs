@@ -1537,7 +1537,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Невозможно открыть этот файл.
+        ///   Looks up a localized string similar to Невозможно открыть файл.
         /// </summary>
         public static string unable_to_open_file {
             get {

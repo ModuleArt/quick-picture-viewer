@@ -158,6 +158,12 @@
     <Compile Include="MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NavPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavPanel.Designer.cs">
+      <DependentUpon>NavPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="PluginInfo.cs" />
     <Compile Include="PluginManager.cs" />
     <Compile Include="PluginManForm.cs">
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MiniViewForm.resx">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavPanel.resx">
+      <DependentUpon>NavPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PluginManForm.resx">
       <DependentUpon>PluginManForm.cs</DependentUpon>
