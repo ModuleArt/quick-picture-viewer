@@ -33,13 +33,13 @@
 			this.versionLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			this.descTextBox = new System.Windows.Forms.TextBox();
 			this.makeDefaultBtn = new System.Windows.Forms.Button();
 			this.copyrightLabel = new System.Windows.Forms.Label();
 			this.updatesBtn = new System.Windows.Forms.Button();
-			this.githubBtn = new System.Windows.Forms.Button();
 			this.developerBtn = new System.Windows.Forms.Button();
+			this.githubBtn = new System.Windows.Forms.Button();
+			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -85,17 +85,6 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// logoPictureBox
-			// 
-			this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
-			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
-			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(290, 128);
-			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.logoPictureBox.TabIndex = 41;
-			this.logoPictureBox.TabStop = false;
-			// 
 			// descTextBox
 			// 
 			this.descTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(173)))), ((int)(((byte)(43)))));
@@ -111,8 +100,10 @@
 			// 
 			// makeDefaultBtn
 			// 
-			this.makeDefaultBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(156)))), ((int)(((byte)(38)))));
+			this.makeDefaultBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
 			this.makeDefaultBtn.FlatAppearance.BorderSize = 0;
+			this.makeDefaultBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
+			this.makeDefaultBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
 			this.makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.makeDefaultBtn.Location = new System.Drawing.Point(10, 418);
 			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
@@ -140,22 +131,48 @@
 			// 
 			// updatesBtn
 			// 
-			this.updatesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(156)))), ((int)(((byte)(38)))));
+			this.updatesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
 			this.updatesBtn.FlatAppearance.BorderSize = 0;
+			this.updatesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
+			this.updatesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
 			this.updatesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.updatesBtn.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
 			this.updatesBtn.Location = new System.Drawing.Point(10, 334);
 			this.updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.updatesBtn.Name = "updatesBtn";
 			this.updatesBtn.Size = new System.Drawing.Size(270, 32);
 			this.updatesBtn.TabIndex = 45;
-			this.updatesBtn.Text = "check for updates";
+			this.updatesBtn.Text = " check for updates";
+			this.updatesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.updatesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.updatesBtn.UseVisualStyleBackColor = false;
 			this.updatesBtn.Click += new System.EventHandler(this.updatesBtn_Click);
 			// 
+			// developerBtn
+			// 
+			this.developerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
+			this.developerBtn.FlatAppearance.BorderSize = 0;
+			this.developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
+			this.developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
+			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
+			this.developerBtn.Location = new System.Drawing.Point(150, 376);
+			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.developerBtn.Name = "developerBtn";
+			this.developerBtn.Size = new System.Drawing.Size(130, 32);
+			this.developerBtn.TabIndex = 47;
+			this.developerBtn.Text = " Module Art";
+			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.developerBtn.UseVisualStyleBackColor = false;
+			this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
+			// 
 			// githubBtn
 			// 
-			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(156)))), ((int)(((byte)(38)))));
+			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
 			this.githubBtn.FlatAppearance.BorderSize = 0;
+			this.githubBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
+			this.githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
 			this.githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.githubBtn.Image = ((System.Drawing.Image)(resources.GetObject("githubBtn.Image")));
 			this.githubBtn.Location = new System.Drawing.Point(10, 376);
@@ -169,22 +186,16 @@
 			this.githubBtn.UseVisualStyleBackColor = false;
 			this.githubBtn.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// developerBtn
+			// logoPictureBox
 			// 
-			this.developerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(156)))), ((int)(((byte)(38)))));
-			this.developerBtn.FlatAppearance.BorderSize = 0;
-			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
-			this.developerBtn.Location = new System.Drawing.Point(150, 376);
-			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.developerBtn.Name = "developerBtn";
-			this.developerBtn.Size = new System.Drawing.Size(130, 32);
-			this.developerBtn.TabIndex = 47;
-			this.developerBtn.Text = " Module Art";
-			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.developerBtn.UseVisualStyleBackColor = false;
-			this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
+			this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
+			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
+			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
+			this.logoPictureBox.Name = "logoPictureBox";
+			this.logoPictureBox.Size = new System.Drawing.Size(290, 128);
+			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.logoPictureBox.TabIndex = 41;
+			this.logoPictureBox.TabStop = false;
 			// 
 			// AboutForm
 			// 

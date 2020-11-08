@@ -124,6 +124,9 @@
   <data name="black-open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black_website" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-website.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="white-autozoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-autozoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +165,9 @@
   </data>
   <data name="black-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_website" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-website.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,6 +268,9 @@
   <data name="black_palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black-newwindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-newwindow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="white-open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -273,6 +282,9 @@
   </data>
   <data name="white_options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_move" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-move.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-rotatel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-rotatel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,8 +304,8 @@
   <data name="white_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\light\white-print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white_warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white_crop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-crop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -325,19 +337,10 @@
   <data name="black-trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white_move" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\light\white-move.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white-print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-newwindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\dark\black-newwindow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="white_warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\light\white-warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="black_website" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\dark\black-website.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="white_website" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\light\white-website.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-sync" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-sync.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

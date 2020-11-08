@@ -19,11 +19,11 @@ namespace quick_picture_viewer
 {
 	public partial class MainForm : Form
 	{
-		private string openPath;
+		private string openPath = null;
 		private int zoomFactor = 100;
 		private int width = 0;
 		private int height = 0;
-		private Bitmap originalImage;
+		private Bitmap originalImage = null;
 		private bool autoZoom = true;
 		private Point panelMouseDownLocation;
 		private bool fullscreen = false;
@@ -41,7 +41,8 @@ namespace quick_picture_viewer
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
 		private System.Timers.Timer slideshowTimer = new System.Timers.Timer();
 		private System.Threading.Timer suggestionTimer;
-		private NavPanel navPanel;
+		private NavPanel navPanel = null;
+		private bool framelessMode = false;
 
 		public bool printCenterImage = true;
 		public ResourceManager resMan;
@@ -101,11 +102,32 @@ namespace quick_picture_viewer
 				{
 					OnResizeEnd(EventArgs.Empty);
 				}
-				//else if (m.WParam == (IntPtr)NativeMethodsManager.SC_RESTORE)
-				//{
-				//	OnResizeEnd(EventArgs.Empty);
-				//}
 			}
+		}
+
+		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+		{
+			if (keyData == Keys.Left)
+			{
+				prevFile();
+				return true;
+			}
+			else if (keyData == Keys.Right)
+			{
+				nextFile();
+				return true;
+			}
+			else if (keyData == Keys.Down)
+			{
+				zoomOut();
+				return true;
+			}
+			else if (keyData == Keys.Up)
+			{
+				zoomIn();
+				return true;
+			}
+			return base.ProcessCmdKey(ref msg, keyData);
 		}
 
 		private void InitLanguage()
@@ -777,6 +799,12 @@ namespace quick_picture_viewer
 		{
 			slideshow = b;
 			slideshowButton.GetCurrentParent().Invoke((MethodInvoker)(() => slideshowButton.Checked = b));
+
+			if (navPanel != null && !navPanel.IsDisposed)
+			{
+				navPanel.Invoke((MethodInvoker)(() => navPanel.SetSlideshowChecked(b)));
+			}
+
 			if (b)
 			{
 				setFullscreen(b);
@@ -1158,7 +1186,10 @@ namespace quick_picture_viewer
 				typeOpsButton.Left = ClientRectangle.Width - typeOpsButton.Width - 27;
 				pleaseOpenLabel.ForeColor = ForeColor;
 
-				FormBorderStyle = FormBorderStyle.Sizable;
+				if (!framelessMode)
+				{
+					FormBorderStyle = FormBorderStyle.Sizable;
+				}
 
 				if (checkboardBackground)
 				{
@@ -1351,15 +1382,6 @@ namespace quick_picture_viewer
 					{
 						screenshotButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.Left)
-					{
-						prevFile();
-					}
-					else if (e.KeyCode == Keys.Right)
-					{
-						Console.WriteLine('r');
-						nextFile();
-					}
 					else if (e.KeyCode == Keys.Escape)
 					{
 						if (!fullscreen && Properties.Settings.Default.EscToExit)
@@ -1367,14 +1389,6 @@ namespace quick_picture_viewer
 							Close();
 						}
 						setFullscreen(false);
-					}
-					else if (e.KeyCode == Keys.Down)
-					{
-						zoomOut();
-					}
-					else if (e.KeyCode == Keys.Up)
-					{
-						zoomIn();
 					}
 				}
 			}
@@ -2018,29 +2032,6 @@ namespace quick_picture_viewer
 			settingsBox.ShowDialog();
 		}
 
-		public void typeOpsButton_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-		{
-			if (!e.Alt && !e.Shift && !e.Control)
-			{
-				if (e.KeyCode == Keys.Left)
-				{
-					prevFile();
-				}
-				else if (e.KeyCode == Keys.Right)
-				{
-					nextFile();
-				}
-				else if (e.KeyCode == Keys.Down)
-				{
-					zoomOut();
-				}
-				else if (e.KeyCode == Keys.Up)
-				{
-					zoomIn();
-				}
-			}
-		}
-
 		private void typeOpsButton_VisibleChanged(object sender, EventArgs e)
 		{
 			Console.WriteLine(typeOpsButton.Location.X);
@@ -2218,20 +2209,25 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void framelessBtn_Click(object sender, EventArgs e)
+		private void SetFramelessMode(bool b)
 		{
-			if (FormBorderStyle == FormBorderStyle.None)
-			{
-				FormBorderStyle = FormBorderStyle.Sizable;
-				statusStrip1.SizingGrip = true;
-				framelessBtn.Checked = false;
-			}
-			else
+			framelessMode = b;
+			statusStrip1.SizingGrip = !b;
+			framelessBtn.Checked = b;
+
+			if (b)
 			{
 				FormBorderStyle = FormBorderStyle.None;
-				statusStrip1.SizingGrip = false;
-				framelessBtn.Checked = true;
 			}
+			else if(!fullscreen)
+			{
+				FormBorderStyle = FormBorderStyle.Sizable;
+			}
+		}
+
+		private void framelessBtn_Click(object sender, EventArgs e)
+		{
+			SetFramelessMode(!framelessMode);
 		}
 
 		private void pluginsBtn_DropDownClosed(object sender, EventArgs e)

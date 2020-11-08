@@ -56,7 +56,7 @@
 			// 
 			this.navSlideshowBtn.BackColor = System.Drawing.Color.Black;
 			this.navSlideshowBtn.Cursor = System.Windows.Forms.Cursors.Default;
-			this.navSlideshowBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.navSlideshowBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
 			this.navSlideshowBtn.FlatAppearance.BorderSize = 0;
 			this.navSlideshowBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
 			this.navSlideshowBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -78,7 +78,6 @@
 			// 
 			this.navNextBtn.BackColor = System.Drawing.Color.Black;
 			this.navNextBtn.Cursor = System.Windows.Forms.Cursors.Default;
-			this.navNextBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.navNextBtn.FlatAppearance.BorderSize = 0;
 			this.navNextBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
 			this.navNextBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -100,7 +99,6 @@
 			// 
 			this.navPrevBtn.BackColor = System.Drawing.Color.Black;
 			this.navPrevBtn.Cursor = System.Windows.Forms.Cursors.Default;
-			this.navPrevBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.navPrevBtn.FlatAppearance.BorderSize = 0;
 			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
 			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));

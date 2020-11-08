@@ -453,7 +453,6 @@
 			// browseBtn
 			// 
 			this.browseBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.browseBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.browseBtn.FlatAppearance.BorderSize = 0;
 			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

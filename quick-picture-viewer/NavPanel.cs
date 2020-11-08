@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using QuickLibrary;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -18,6 +19,22 @@ namespace quick_picture_viewer
 			TabStop = false;
 
 			InitializeComponent();
+		}
+
+		public void SetSlideshowChecked(bool b)
+		{
+			if (b)
+			{
+				navSlideshowBtn.BackColor = ThemeManager.DarkPaleColor;
+				navSlideshowBtn.FlatAppearance.MouseOverBackColor = ThemeManager.DarkPaleColor;
+				navSlideshowBtn.FlatAppearance.BorderSize = 1;
+			}
+			else
+			{
+				navSlideshowBtn.BackColor = ThemeManager.DarkMainColor;
+				navSlideshowBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(20, 20, 20);
+				navSlideshowBtn.FlatAppearance.BorderSize = 0;
+			}
 		}
 
 		private void NavPanel_MouseDown(object sender, MouseEventArgs e)

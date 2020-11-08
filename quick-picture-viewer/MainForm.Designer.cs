@@ -581,6 +581,7 @@
 			// 
 			this.reloadButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.reloadButton, "reloadButton");
+			this.reloadButton.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
 			this.reloadButton.Name = "reloadButton";
 			this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
 			// 
@@ -693,7 +694,6 @@
 			// 
 			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
 			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.typeOpsButton.FlatAppearance.BorderSize = 0;
 			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.typeOpsButton.Name = "typeOpsButton";
@@ -701,7 +701,6 @@
 			this.typeOpsButton.UseVisualStyleBackColor = false;
 			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
 			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			this.typeOpsButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.typeOpsButton_PreviewKeyDown);
 			// 
 			// picturePanel
 			// 

@@ -448,7 +448,6 @@
 			// propertiesButton
 			// 
 			this.propertiesButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.propertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.propertiesButton.FlatAppearance.BorderSize = 0;
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));

@@ -62,7 +62,7 @@ namespace quick_picture_viewer
 		{
 			Text = owner.resMan.GetString("about");
 			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
-			updatesBtn.Text = owner.resMan.GetString("check-for-app-updates");
+			updatesBtn.Text = " " + owner.resMan.GetString("check-for-app-updates");
 			descTextBox.Text = owner.resMan.GetString("app-description");
 			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
 			infoTooltip.SetToolTip(makeDefaultBtn, owner.resMan.GetString("open-windows-settings"));

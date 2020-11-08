@@ -1031,15 +1031,6 @@
   <data name="reloadButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="reloadButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAOJJREFUOE+l
-        kktqAkEURXtiUIJKprqWRBFciw7iQJ34WUFciyMRXYLgD3UhopJBZnpuPyX2ryLmwKFu0d1FVfX1HqBz
-        HZ/mjF8WH+MF67jAPWoBWcI/KeIah/iOb6iPWyg+sWAxShq32PZnv9zfQR83mPJnIZo4suhkgtpJhCV+
-        WHRSxZnFIN/4atFJHg8WgxwxZ9FJFk8Wg2hbFYtOyhh7hAaOLTrRJaonEVSgHfb8mdG9jjf0TD3Ru7Go
-        JNqJGKBKlEH9nSmuMLFI9+ictwr/4BxrGFugJFRfLfAvwncQwvMuvNonXS1zg0cAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="reloadButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F5</value>
   </data>
@@ -1286,7 +1277,7 @@
     <value>toolStrip1</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolStrip, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolStrip, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -5246,9 +5237,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAwAMAAA==
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>320, 320</value>
   </data>
@@ -5373,7 +5361,7 @@
     <value>toolStripSeparator4</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;infoButton.Name" xml:space="preserve">
     <value>infoButton</value>
@@ -5409,7 +5397,7 @@
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;autoZoomButton.Name" xml:space="preserve">
     <value>autoZoomButton</value>
@@ -5439,7 +5427,7 @@
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;editButton.Name" xml:space="preserve">
     <value>editButton</value>
@@ -5463,7 +5451,7 @@
     <value>toolStripSeparator7</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rotateRightButton.Name" xml:space="preserve">
     <value>rotateRightButton</value>
@@ -5547,7 +5535,7 @@
     <value>toolStripSeparator5</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolStripSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pluginsBtn.Name" xml:space="preserve">
     <value>pluginsBtn</value>
@@ -5595,7 +5583,7 @@
     <value>qlibMenuSeparator2</value>
   </data>
   <data name="&gt;&gt;qlibMenuSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;actualSizeBtn.Name" xml:space="preserve">
     <value>actualSizeBtn</value>
@@ -5607,7 +5595,7 @@
     <value>toolStripSeparator9</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backColorBtn.Name" xml:space="preserve">
     <value>backColorBtn</value>
@@ -5625,7 +5613,7 @@
     <value>qlibMenuSeparator1</value>
   </data>
   <data name="&gt;&gt;qlibMenuSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backCustomBtn.Name" xml:space="preserve">
     <value>backCustomBtn</value>
@@ -5655,7 +5643,7 @@
     <value>toolStripSeparator10</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator10.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.7.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibMenuSeparator, QuickLibrary, Version=2.2.8.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
     <value>settingsButton</value>

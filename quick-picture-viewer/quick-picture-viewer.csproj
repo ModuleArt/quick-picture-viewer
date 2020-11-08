@@ -357,6 +357,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-sync.png" />
     <None Include="resources\imgs\dark\black-website.png" />
     <None Include="resources\imgs\light\white-website.png" />
     <None Include="resources\imgs\light\white-warning.png" />
