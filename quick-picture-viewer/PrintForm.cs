@@ -1,7 +1,6 @@
 ﻿using QuickLibrary;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
@@ -166,7 +165,7 @@ namespace quick_picture_viewer
 			horizontalCheckBox.Text = owner.resMan.GetString("landscape-orientation");
 			marginsLabel.Text = owner.resMan.GetString("margins") + ":";
 			marginsCheckBox.Text = owner.resMan.GetString("margin-bounds");
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)

@@ -58,8 +58,8 @@
 			this.navSlideshowBtn.Cursor = System.Windows.Forms.Cursors.Default;
 			this.navSlideshowBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
 			this.navSlideshowBtn.FlatAppearance.BorderSize = 0;
-			this.navSlideshowBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-			this.navSlideshowBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+			this.navSlideshowBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+			this.navSlideshowBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
 			this.navSlideshowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.navSlideshowBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.navSlideshowBtn.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -100,8 +100,8 @@
 			this.navPrevBtn.BackColor = System.Drawing.Color.Black;
 			this.navPrevBtn.Cursor = System.Windows.Forms.Cursors.Default;
 			this.navPrevBtn.FlatAppearance.BorderSize = 0;
-			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
 			this.navPrevBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.navPrevBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;

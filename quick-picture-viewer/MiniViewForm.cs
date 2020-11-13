@@ -235,12 +235,12 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			Text = owner.resMan.GetString("picture-in-picture");
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
 			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
 			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
 			checkboardBtn.Text = owner.resMan.GetString("checkboard-background");
 			newWindowBtn.Text = owner.resMan.GetString("new-window");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void setCheckboardBackground(bool b)
@@ -332,8 +332,7 @@ namespace quick_picture_viewer
 				Cursor.Current = Cursors.SizeAll;
 				if (autoZoom)
 				{
-					NativeMethodsManager.ReleaseCapture();
-					NativeMethodsManager.SendMessage(Handle, 0xA1, 0x2, 0);
+					NativeMan.DragWindow(Handle);
 				}
 				else
 				{

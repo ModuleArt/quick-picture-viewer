@@ -32,7 +32,7 @@ namespace quick_picture_viewer
 			else
 			{
 				navSlideshowBtn.BackColor = ThemeManager.DarkMainColor;
-				navSlideshowBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(20, 20, 20);
+				navSlideshowBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
 				navSlideshowBtn.FlatAppearance.BorderSize = 0;
 			}
 		}

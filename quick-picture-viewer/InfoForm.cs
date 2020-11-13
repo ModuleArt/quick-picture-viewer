@@ -161,14 +161,9 @@ namespace quick_picture_viewer
 			Clipboard.SetText(fullPathTextBox.Text);
 		}
 
-		private void closeBtn_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-
 		private void InfoForm_Load(object sender, EventArgs e)
 		{
-			owner = this.Owner as MainForm;
+			owner = Owner as MainForm;
 			InitLanguage();
 
 			if (directoryName != null)
@@ -235,7 +230,6 @@ namespace quick_picture_viewer
 			infoTooltip.SetToolTip(copyNameButton, owner.resMan.GetString("copy"));
 			infoTooltip.SetToolTip(copyFolderButton, owner.resMan.GetString("copy"));
 			infoTooltip.SetToolTip(copyPathButton, owner.resMan.GetString("copy"));
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			extensionLabel.Text = owner.resMan.GetString("extension") + ":";
 			compressionLabel.Text = owner.resMan.GetString("compression") + ":";
 			propertiesButton.Text = " " + owner.resMan.GetString("file-properties");
@@ -243,6 +237,7 @@ namespace quick_picture_viewer
 			megapixelsLabel.Text = owner.resMan.GetString("size") + " (mp):";
 			inchesLabel.Text = owner.resMan.GetString("print-size") + " (in):";
 			cmLabel.Text = owner.resMan.GetString("print-size") + " (cm):";
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}
 }

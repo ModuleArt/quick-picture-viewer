@@ -107,7 +107,6 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			Text = owner.resMan.GetString("plugin-manager");
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			listView1.Columns[0].Text = owner.resMan.GetString("plugin");
 			listView1.Columns[1].Text = owner.resMan.GetString("desc");
 			listView1.Columns[2].Text = owner.resMan.GetString("created-by");
@@ -117,6 +116,7 @@ namespace quick_picture_viewer
 			openFileDialog1.Title = owner.resMan.GetString("browse-for-plugins");
 			morePluginsBtn.Text = " " + owner.resMan.GetString("more-plugins");
 			pluginWebsiteBtn.Text = owner.resMan.GetString("plugin-website");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void PluginManForm_KeyDown(object sender, KeyEventArgs e)

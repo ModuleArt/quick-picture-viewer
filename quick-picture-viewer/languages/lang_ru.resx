@@ -213,10 +213,6 @@
     <value>Очистить</value>
     <comment>Menu</comment>
   </data>
-  <data name="close" xml:space="preserve">
-    <value>Закрыть</value>
-    <comment>Titlebar</comment>
-  </data>
   <data name="comma" xml:space="preserve">
     <value>Запятая</value>
     <comment>Menu</comment>

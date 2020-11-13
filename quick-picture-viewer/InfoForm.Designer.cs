@@ -497,12 +497,12 @@
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
 			this.closeBtn.TabIndex = 1;
 			this.closeBtn.UseVisualStyleBackColor = true;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// InfoForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(730, 336);
+			this.CloseButton = this.closeBtn;
 			this.Controls.Add(this.modifiedLabel);
 			this.Controls.Add(this.copyPathButton);
 			this.Controls.Add(this.modifiedTextBox);

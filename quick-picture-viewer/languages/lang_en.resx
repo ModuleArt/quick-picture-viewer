@@ -213,10 +213,6 @@
     <value>Clear</value>
     <comment>Menu</comment>
   </data>
-  <data name="close" xml:space="preserve">
-    <value>Close</value>
-    <comment>Titlebar</comment>
-  </data>
   <data name="comma" xml:space="preserve">
     <value>Comma</value>
     <comment>Menu</comment>

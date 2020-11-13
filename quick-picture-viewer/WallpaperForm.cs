@@ -94,7 +94,7 @@ namespace quick_picture_viewer
 			fitComboBox.Items.Add(owner.resMan.GetString("tile"));
 			fitComboBox.Items.Add(owner.resMan.GetString("center"));
 			fitComboBox.Items.Add(owner.resMan.GetString("span"));
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}
 }

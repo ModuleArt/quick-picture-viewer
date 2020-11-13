@@ -277,15 +277,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Close.
-        /// </summary>
-        public static string close {
-            get {
-                return ResourceManager.GetString("close", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Comma.
         /// </summary>
         public static string comma {

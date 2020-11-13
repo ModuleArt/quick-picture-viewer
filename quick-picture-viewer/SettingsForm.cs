@@ -133,7 +133,6 @@ namespace quick_picture_viewer
 			slideshowCounterCheckBox.Text = owner.resMan.GetString("show-slideshow-counter");
 			fullscrCursorCheckBox.Text = owner.resMan.GetString("fullscreen-cursor");
 			langLabel.Text = owner.resMan.GetString("ui-lang") + ":";
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			translatedByLabel.Text = owner.resMan.GetString("translated-by") + ": ";
 			escToExitCheckBox.Text = string.Format(owner.resMan.GetString("esc-to-exit"), "Esc");
 			mouseWheelActionLabel.Text = owner.resMan.GetString("mouse-wheel-action") + ":";
@@ -143,6 +142,7 @@ namespace quick_picture_viewer
 			themeRestart.Text = owner.resMan.GetString("restart");
 			localizationRestart.Text = owner.resMan.GetString("restart");
 			contextMenuLabel.Text = owner.resMan.GetString("context-menu") + ":";
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void SetDarkMode(bool dark)

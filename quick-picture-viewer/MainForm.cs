@@ -96,9 +96,9 @@ namespace quick_picture_viewer
 		{
 			
 			base.WndProc(ref m);
-			if (m.Msg == NativeMethodsManager.WM_SYSCOMMAND)
+			if (m.Msg == NativeMan.WM_SYSCOMMAND)
 			{
-				if (m.WParam == (IntPtr)NativeMethodsManager.SC_MAXIMIZE)
+				if (m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE)
 				{
 					OnResizeEnd(EventArgs.Empty);
 				}
@@ -475,7 +475,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				showSuggestion(resMan.GetString("unable-open-dds"), SuggestionIcon.Warning);
+				showSuggestion(resMan.GetString("unable-open-dds") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
@@ -503,7 +503,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				showSuggestion(resMan.GetString("unable-open-svg"), SuggestionIcon.Warning);
+				showSuggestion(resMan.GetString("unable-open-svg") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
@@ -514,14 +514,14 @@ namespace quick_picture_viewer
 			{
 				if (imageChanged)
 				{
-					DialogResult window = MessageBox.Show(
+					DialogResult window = DialogMan.ShowConfirmDialog(
 						resMan.GetString("unsaved-data-lost"),
-						resMan.GetString("warning"),
-						MessageBoxButtons.YesNo,
-						MessageBoxIcon.Question
+						yesBtnImage: deleteBtn.Image,
+						windowTitle: resMan.GetString("warning"),
+						darkMode: darkMode
 					);
 
-					if (window == DialogResult.No)
+					if (window != DialogResult.Yes)
 					{
 						return;
 					}
@@ -1567,11 +1567,11 @@ namespace quick_picture_viewer
 
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
-			DialogResult d = MessageBox.Show(
+			DialogResult d = DialogMan.ShowConfirmDialog(
 				resMan.GetString("sure-move-to-trash"),
-				resMan.GetString("delete-file"),
-				MessageBoxButtons.YesNo,
-				MessageBoxIcon.Question
+				yesBtnImage: deleteBtn.Image,
+				windowTitle: resMan.GetString("delete-file"),
+				darkMode: darkMode
 			);
 
 			if (d == DialogResult.Yes)
@@ -1849,14 +1849,14 @@ namespace quick_picture_viewer
 		{
 			if (imageChanged)
 			{
-				DialogResult window = MessageBox.Show(
+				DialogResult window = DialogMan.ShowConfirmDialog(
 					resMan.GetString("sure-close-app"),
-					resMan.GetString("warning"),
-					MessageBoxButtons.YesNo,
-					MessageBoxIcon.Question
+					yesBtnImage: darkMode ? Properties.Resources.white_close : Properties.Resources.black_close,
+					windowTitle: resMan.GetString("warning"),
+					darkMode: darkMode
 				);
 
-				e.Cancel = (window == DialogResult.No);
+				e.Cancel = (window != DialogResult.Yes);
 			}
 
 			if (Properties.Settings.Default.StartupRestoreBounds)
@@ -2311,8 +2311,7 @@ namespace quick_picture_viewer
 			if (e.Button == MouseButtons.Left)
 			{
 				Cursor.Current = Cursors.SizeAll;
-				NativeMethodsManager.ReleaseCapture();
-				NativeMethodsManager.SendMessage(Handle, 0xA1, 0x2, 0);
+				NativeMan.DragWindow(Handle);
 			}
 		}
 
