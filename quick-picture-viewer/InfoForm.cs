@@ -52,7 +52,7 @@ namespace quick_picture_viewer
 			}
 
 			DarkMode = dark;
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 			fileNameTextBox.DarkMode = dark;
 			folderTextBox.DarkMode = dark;
 			fullPathTextBox.DarkMode = dark;

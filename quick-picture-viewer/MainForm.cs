@@ -1758,7 +1758,7 @@ namespace quick_picture_viewer
 				zoomTextBox.ForeColor = Color.White;
 			}
 
-			toolStrip1.SetDarkMode(dark, true);
+			toolStrip1.DarkMode = dark;
 		}
 
 		private void printButton_Click(object sender, EventArgs e)
@@ -2247,7 +2247,8 @@ namespace quick_picture_viewer
 			PluginInfo[] plugins = PluginManager.GetPlugins(true);
 			for (int i = 0; i < plugins.Length; i++)
 			{
-				QlibMenuSeparator separator = new QlibMenuSeparator();
+				QlibToolsep separator = new QlibToolsep();
+				separator.InsideMenu = true;
 				pluginsBtn.DropDownItems.Add(separator);
 				for (int j = 0; j < plugins[i].functions.Length; j++)
 				{

@@ -41,7 +41,7 @@ namespace quick_picture_viewer
 			}
 
 			DarkMode = dark;
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 			contextMenuStrip1.SetDarkMode(dark);
 			listView1.SetDarkMode(dark);
 		}

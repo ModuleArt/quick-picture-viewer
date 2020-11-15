@@ -55,7 +55,7 @@ namespace quick_picture_viewer
 			widthNumeric.DarkMode = dark;
 			heightNumeric.DarkMode = dark;
 			aspectRatioCheckbox.DarkMode = dark;
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 		}
 
 		private void okButton_Click(object sender, EventArgs e)

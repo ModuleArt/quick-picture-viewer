@@ -63,9 +63,9 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
-			closeBtn.SetDarkMode(true);
-			autoZoomBtn.SetDarkMode(true);
-			resizeBtn.SetDarkMode(true);
+			closeBtn.DarkMode = true;
+			autoZoomBtn.DarkMode = true;
+			resizeBtn.DarkMode = true;
 			contextMenuStrip1.SetDarkMode(true);
 			if (ThemeManager.isWindows10())
 			{

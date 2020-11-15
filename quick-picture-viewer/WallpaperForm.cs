@@ -35,7 +35,7 @@ namespace quick_picture_viewer
 
 			DarkMode = dark;
 			fitComboBox.SetDarkMode(dark);
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 		}
 
 		private void okButton_Click(object sender, EventArgs e)

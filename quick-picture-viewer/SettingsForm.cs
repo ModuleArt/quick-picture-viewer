@@ -107,6 +107,11 @@ namespace quick_picture_viewer
 			localizationRestart.LinkColor = ThemeManager.AccentColor;
 
 			SetDarkMode(darkMode);
+
+			if (ThemeManager.isWindows10())
+			{
+				makeDefaultBtn.Enabled = true;
+			}
 		}
 
 		private void InitLanguage()
@@ -142,6 +147,7 @@ namespace quick_picture_viewer
 			themeRestart.Text = owner.resMan.GetString("restart");
 			localizationRestart.Text = owner.resMan.GetString("restart");
 			contextMenuLabel.Text = owner.resMan.GetString("context-menu") + ":";
+			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -152,16 +158,18 @@ namespace quick_picture_viewer
 				browseBtn.Image = Properties.Resources.white_open;
 				browseBtn.BackColor = ThemeManager.DarkSecondColor;
 				browseBtn.ForeColor = Color.White;
-				settingsTabs.DarkMode = dark;
+				makeDefaultBtn.BackColor = ThemeManager.DarkSecondColor;
+				makeDefaultBtn.ForeColor = Color.White;
 			}
 
 			DarkMode = dark;
+			settingsTabs.DarkMode = dark;
 			updatesCheckBox.DarkMode = dark;
 			fullscrCursorCheckBox.DarkMode = dark;
 			darkThemeRadio.DarkMode = dark;
 			lightThemeRadio.DarkMode = dark;
 			systemThemeRadio.DarkMode = dark;
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 			slideshowTimeNumeric.DarkMode = dark;
 			slideshowCounterCheckBox.DarkMode = dark;
 			langComboBox.SetDarkMode(dark);

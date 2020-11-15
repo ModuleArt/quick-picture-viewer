@@ -18,7 +18,7 @@ namespace quick_picture_viewer
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { logoPictureBox, productLabel, versionLabel, copyrightLabel });
 
-			closeBtn.SetDarkMode(false);
+			closeBtn.DarkMode = false;
 
 			string fullVer = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			int lastDotIndex = fullVer.LastIndexOf('.');
@@ -35,7 +35,7 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isWindows10())
 			{
-				makeDefaultBtn.Visible = true;
+				makeDefaultBtn.Enabled = true;
 			}
 		}
 
