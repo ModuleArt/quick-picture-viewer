@@ -108,6 +108,7 @@
             this.deleteBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(210, 66);
+			this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
 			// 
 			// pluginWebsiteBtn
 			// 
@@ -230,6 +231,7 @@
 			// 
 			// PluginManForm
 			// 
+			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(600, 400);
 			this.Controls.Add(this.morePluginsBtn);
@@ -246,6 +248,8 @@
 			this.Text = "PluginManForm";
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.PluginManForm_Load);
+			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.PluginManForm_DragDrop);
+			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.PluginManForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PluginManForm_KeyDown);
 			this.contextMenuStrip1.ResumeLayout(false);
 			this.titlePanel.ResumeLayout(false);

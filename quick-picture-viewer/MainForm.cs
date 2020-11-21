@@ -1174,7 +1174,7 @@ namespace quick_picture_viewer
 
 				setAlwaysOnTop(false, true);
 
-				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Info);
+				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
 			}
 			else
 			{
@@ -1909,7 +1909,8 @@ namespace quick_picture_viewer
 			Info = 0,
 			Check = 1,
 			Warning = 2,
-			Slideshow = 3
+			Slideshow = 3,
+			Fullscreen = 4
 		}
 
 		private void showSuggestion(string text, SuggestionIcon icon)
@@ -1929,9 +1930,13 @@ namespace quick_picture_viewer
 				{
 					suggestionIcon.Image = Properties.Resources.white_warning;
 				}
-				else
+				else if (icon == SuggestionIcon.Slideshow)
 				{
 					suggestionIcon.Image = Properties.Resources.white_slideshow;
+				}
+				else
+				{
+					suggestionIcon.Image = Properties.Resources.white_fullscreen;
 				}
 				suggestionIcon.Height = suggestionLabel.Height;
 				suggestionIcon.Visible = true;

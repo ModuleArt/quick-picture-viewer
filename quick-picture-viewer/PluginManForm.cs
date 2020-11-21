@@ -136,10 +136,18 @@ namespace quick_picture_viewer
 		{
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
-				ZipFile.ExtractToDirectory(openFileDialog1.FileName, PluginManager.pluginsFolder);
-				RefreshPluginsList();
+				installZip(openFileDialog1.FileName);
 			}
 			openFileDialog1.Dispose();
+		}
+
+		private void installZip(string pathToZip)
+		{
+			if (Path.GetExtension(pathToZip) == ".zip")
+			{
+				ZipFile.ExtractToDirectory(pathToZip, Path.Combine(PluginManager.pluginsFolder, Path.GetFileNameWithoutExtension(pathToZip)));
+				RefreshPluginsList();
+			}
 		}
 
 		private void deleteBtn_Click(object sender, EventArgs e)
@@ -207,6 +215,35 @@ namespace quick_picture_viewer
 		{
 			e.Cancel = true;
 			e.NewWidth = listView1.Columns[e.ColumnIndex].Width;
+		}
+
+		private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			bool status = false;
+			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0)
+			{
+				status = true;
+			}
+			deleteBtn.Enabled = status;
+			pluginWebsiteBtn.Enabled = status;
+		}
+
+		private void PluginManForm_DragDrop(object sender, DragEventArgs e)
+		{
+			string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+			installZip(files[0]);
+		}
+
+		private void PluginManForm_DragEnter(object sender, DragEventArgs e)
+		{
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
+			{
+				e.Effect = DragDropEffects.All;
+			}
+			else
+			{
+				e.Effect = DragDropEffects.None;
+			}
 		}
 	}
 }

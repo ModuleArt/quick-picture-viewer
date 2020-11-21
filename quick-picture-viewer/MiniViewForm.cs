@@ -39,7 +39,7 @@ namespace quick_picture_viewer
 				Convert.ToInt32(Screen.FromHandle(Handle).WorkingArea.Height / 1.25f)
 			);
 
-			ratio = image.Width / image.Height;
+			ratio = (float)image.Width / (float)image.Height;
 
 			if (image.Width > image.Height)
 			{
@@ -175,6 +175,10 @@ namespace quick_picture_viewer
 					Point curPos = PointToClient(Cursor.Position);
 
 					int newWidth = curSize.Width + curPos.X - startPos.X;
+
+					Console.WriteLine(newWidth);
+					Console.WriteLine(ratio);
+
 					int newHeight = Convert.ToInt32(newWidth / ratio);
 
 					Size = new Size(newWidth, newHeight);
