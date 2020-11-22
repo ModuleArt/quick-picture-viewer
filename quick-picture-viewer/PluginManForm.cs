@@ -15,6 +15,7 @@ namespace quick_picture_viewer
 		private MainForm owner;
 		private string[] codenames;
 		private string[] pluginsLinks;
+		private bool darkMode = false;
 
 		public PluginManForm(bool darkMode)
 		{
@@ -30,6 +31,8 @@ namespace quick_picture_viewer
 
 		private void SetDarkMode(bool dark)
 		{
+			darkMode = dark;
+
 			if (dark)
 			{
 				addPluginBtn.BackColor = ThemeManager.DarkSecondColor;
@@ -160,11 +163,12 @@ namespace quick_picture_viewer
 
 		private void deletePlugin(int numberInList)
 		{
-			DialogResult window = MessageBox.Show(
+			DialogResult window = DialogMan.ShowConfirm(
 				owner.resMan.GetString("delete-plugin-warning"),
-				owner.resMan.GetString("warning"),
-				MessageBoxButtons.YesNo,
-				MessageBoxIcon.Question
+				windowTitle: owner.resMan.GetString("warning"),
+				yesBtnText: owner.resMan.GetString("delete-plugin"),
+				yesBtnImage: deleteBtn.Image,
+				darkMode: darkMode
 			);
 
 			if (window == DialogResult.Yes)
@@ -179,7 +183,11 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					MessageBox.Show(owner.resMan.GetString("plugin-not-found"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+					DialogMan.ShowInfo(
+						owner.resMan.GetString("plugin-not-found"),
+						owner.resMan.GetString("error"),
+						darkMode
+					);
 				}
 				RefreshPluginsList();
 			}

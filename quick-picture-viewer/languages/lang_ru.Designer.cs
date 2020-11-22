@@ -439,6 +439,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Не сохранять.
+        /// </summary>
+        public static string dont_save {
+            get {
+                return ResourceManager.GetString("dont-save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Потяните чтобы изменить размер окна.
         /// </summary>
         public static string drag_here_to_resize {
@@ -1546,11 +1555,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Все несохраненные изменения будут утеряны. Вы уверены, что хотите открыть новое изображение?.
+        ///   Looks up a localized string similar to Несохраненные изменения.
         /// </summary>
-        public static string unsaved_data_lost {
+        public static string unsaved_changes {
             get {
-                return ResourceManager.GetString("unsaved-data-lost", resourceCulture);
+                return ResourceManager.GetString("unsaved-changes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Текущее изображение имеет несохраненные изменения. Чтобы Вы хотели сделать?.
+        /// </summary>
+        public static string unsaved_changes_question {
+            get {
+                return ResourceManager.GetString("unsaved-changes-question", resourceCulture);
             }
         }
         

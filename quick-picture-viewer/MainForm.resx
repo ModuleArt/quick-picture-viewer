@@ -369,16 +369,6 @@
   <data name="saveAsButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="saveAsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVDhPvdExS0JRGMbxK5EYRVPi4OAcfQwh+hziErTk
-        5ubsB3ATKwiabKyQEAc/gbsNDQ7iZCG66P85h3M93ntRLkQP/PD13HPe91wN/ioN/GJ9wBglxLJAEdrk
-        xx1U9HmHxCb+Jj/RBsotvmy5jXs4w6Utd3KFqS1NooPChSp+oO++OSpwcfvDxBYO5P8aZDBCFzXkoOxt
-        0IT+Vq3d4BUP+MA7TjDATvwGS+RtaXKPN2j6C3rwn5v4DaLXO4IO6iZZtDDEOcLoygVbxhoomq5XeIaa
-        PEKvcQaTOlbQ4SR9XOATTzhGG/pNUuUUmtzBNSZIHV1bk7+DIChvAKP7URsPpbE9AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="saveAsButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -1267,14 +1257,14 @@
   <data name="toolStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
+  <data name="toolStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>684, 32</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="toolStrip1.Text" xml:space="preserve">
-    <value>toolStrip1</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
     <value>toolStrip1</value>

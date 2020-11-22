@@ -40,6 +40,7 @@ namespace quick_picture_viewer
 
 		private bool settingsStarted = false;
 		private MainForm owner;
+		private bool darkMode = false;
 
 		public SettingsForm(bool darkMode)
 		{
@@ -153,6 +154,8 @@ namespace quick_picture_viewer
 
 		private void SetDarkMode(bool dark)
 		{
+			darkMode = dark;
+
 			if (dark)
 			{
 				browseBtn.Image = Properties.Resources.white_open;
@@ -290,11 +293,10 @@ namespace quick_picture_viewer
 			{
 				if (languages[langComboBox.SelectedIndex].Beta && settingsStarted)
 				{
-					MessageBox.Show(
+					DialogMan.ShowInfo(
 						owner.resMan.GetString("beta-lang-warning"),
 						owner.resMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
-						MessageBoxButtons.OK,
-						MessageBoxIcon.Warning
+						darkMode
 					);
 				}
 
@@ -410,7 +412,11 @@ namespace quick_picture_viewer
 				catch
 				{
 					settingsStarted = false;
-					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					DialogMan.ShowInfo(
+						owner.resMan.GetString("context-menu-notice"),
+						owner.resMan.GetString("error"),
+						darkMode
+					);
 					openWithCheckBox.Checked = !openWithCheckBox.Checked;
 					settingsStarted = true;
 				}
@@ -444,7 +450,11 @@ namespace quick_picture_viewer
 				catch
 				{
 					settingsStarted = false;
-					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					DialogMan.ShowInfo(
+						owner.resMan.GetString("context-menu-notice"),
+						owner.resMan.GetString("error"),
+						darkMode
+					);
 					browseWithCheckBox.Checked = !browseWithCheckBox.Checked;
 					settingsStarted = true;
 				}

@@ -514,14 +514,22 @@ namespace quick_picture_viewer
 			{
 				if (imageChanged)
 				{
-					DialogResult window = DialogMan.ShowConfirmDialog(
-						resMan.GetString("unsaved-data-lost"),
-						yesBtnImage: deleteBtn.Image,
-						windowTitle: resMan.GetString("warning"),
+					DialogResult window = DialogMan.ShowConfirm(
+						resMan.GetString("unsaved-changes-question"),
+						windowTitle: resMan.GetString("unsaved-changes"),
+						yesBtnText: resMan.GetString("save-as"),
+						yesBtnImage: saveAsButton.Image,
+						showNoBtn: true,
+						noBtnText: resMan.GetString("dont-save"),
+						noBtnImage: deleteBtn.Image,
 						darkMode: darkMode
 					);
 
-					if (window != DialogResult.Yes)
+					if (window == DialogResult.Yes)
+					{
+						saveAsButton.PerformClick();
+					}
+					else if (window != DialogResult.No)
 					{
 						return;
 					}
@@ -1567,7 +1575,7 @@ namespace quick_picture_viewer
 
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
-			DialogResult d = DialogMan.ShowConfirmDialog(
+			DialogResult d = DialogMan.ShowConfirm(
 				resMan.GetString("sure-move-to-trash"),
 				yesBtnImage: deleteBtn.Image,
 				windowTitle: resMan.GetString("delete-file"),
@@ -1849,14 +1857,25 @@ namespace quick_picture_viewer
 		{
 			if (imageChanged)
 			{
-				DialogResult window = DialogMan.ShowConfirmDialog(
-					resMan.GetString("sure-close-app"),
-					yesBtnImage: darkMode ? Properties.Resources.white_close : Properties.Resources.black_close,
-					windowTitle: resMan.GetString("warning"),
+				DialogResult window = DialogMan.ShowConfirm(
+					resMan.GetString("unsaved-changes-question"),
+					windowTitle: resMan.GetString("unsaved-changes"),
+					yesBtnText: resMan.GetString("save-as"),
+					yesBtnImage: saveAsButton.Image,
+					showNoBtn: true,
+					noBtnText: resMan.GetString("dont-save"),
+					noBtnImage: deleteBtn.Image,
 					darkMode: darkMode
 				);
 
-				e.Cancel = (window != DialogResult.Yes);
+				if (window == DialogResult.Yes)
+				{
+					saveAsButton.PerformClick();
+				}
+				else if (window != DialogResult.No) 
+				{
+					e.Cancel = true;
+				}
 			}
 
 			if (Properties.Settings.Default.StartupRestoreBounds)

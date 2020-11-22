@@ -285,6 +285,10 @@
     <value>Размер на диске</value>
     <comment>Image info</comment>
   </data>
+  <data name="dont-save" xml:space="preserve">
+    <value>Не сохранять</value>
+    <comment>Main window</comment>
+  </data>
   <data name="drag-here-to-resize" xml:space="preserve">
     <value>Потяните чтобы изменить размер окна</value>
     <comment>Picture in picture</comment>
@@ -777,9 +781,13 @@
     <value>Не удалось запустить стороннее приложение</value>
     <comment>Message box</comment>
   </data>
-  <data name="unsaved-data-lost" xml:space="preserve">
-    <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите открыть новое изображение?</value>
-    <comment>Message box</comment>
+  <data name="unsaved-changes" xml:space="preserve">
+    <value>Несохраненные изменения</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsaved-changes-question" xml:space="preserve">
+    <value>Текущее изображение имеет несохраненные изменения. Чтобы Вы хотели сделать?</value>
+    <comment>Main window</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Обновление невозможно</value>

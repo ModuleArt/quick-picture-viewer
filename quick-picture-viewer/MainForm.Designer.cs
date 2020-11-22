@@ -265,6 +265,7 @@
 			resources.ApplyResources(this.saveAsButton, "saveAsButton");
 			this.saveAsButton.BackColor = System.Drawing.Color.Transparent;
 			this.saveAsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.saveAsButton.Image = global::quick_picture_viewer.Properties.Resources.black_saveas;
 			this.saveAsButton.Margin = new System.Windows.Forms.Padding(0);
 			this.saveAsButton.Name = "saveAsButton";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);

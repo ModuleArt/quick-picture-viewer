@@ -119,7 +119,11 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				MessageBox.Show(owner.resMan.GetString("print-margins-error"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				DialogMan.ShowInfo(
+					owner.resMan.GetString("plugin-not-found"),
+					owner.resMan.GetString("print-margins-error"),
+					darkMode
+				);
 			}
 		}
 

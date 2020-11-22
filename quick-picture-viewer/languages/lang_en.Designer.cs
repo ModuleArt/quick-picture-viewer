@@ -439,6 +439,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t save.
+        /// </summary>
+        public static string dont_save {
+            get {
+                return ResourceManager.GetString("dont-save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drag here to resize window.
         /// </summary>
         public static string drag_here_to_resize {
@@ -1546,11 +1555,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All unsaved data will be lost. Are you sure you want to open new image?.
+        ///   Looks up a localized string similar to Unsaved changes.
         /// </summary>
-        public static string unsaved_data_lost {
+        public static string unsaved_changes {
             get {
-                return ResourceManager.GetString("unsaved-data-lost", resourceCulture);
+                return ResourceManager.GetString("unsaved-changes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The current image has unsaved changes. What would you like to do?.
+        /// </summary>
+        public static string unsaved_changes_question {
+            get {
+                return ResourceManager.GetString("unsaved-changes-question", resourceCulture);
             }
         }
         
