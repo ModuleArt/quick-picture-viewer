@@ -31,7 +31,6 @@
 | Windows | Version | Codename | Branch | Release date | Size | Downloads | Link |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> | Community | Stable | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
-| 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.5">v2.2.5</a> | Community | Stable | Oct 30, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.5/total?label=dwnlds%40v2.2.5) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.5/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 
 <h2 align="center">Features</h2>
 
