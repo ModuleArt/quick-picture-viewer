@@ -55,7 +55,7 @@ namespace quick_picture_viewer
 			widthNumeric.DarkMode = dark;
 			heightNumeric.DarkMode = dark;
 			aspectRatioCheckbox.DarkMode = dark;
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 		}
 
 		private void okButton_Click(object sender, EventArgs e)
@@ -195,9 +195,9 @@ namespace quick_picture_viewer
 			heightLabel.Text = owner.resMan.GetString("height") + ":";
 			defaultSizeButton.Text = owner.resMan.GetString("original-size");
 			autoSizeBtn.Text = owner.resMan.GetString("auto-size");
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			okButton.Text = " " + owner.resMan.GetString("resize-svg");
 			aspectRatioCheckbox.Text = owner.resMan.GetString("maintain-aspect-ratio");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}
 }

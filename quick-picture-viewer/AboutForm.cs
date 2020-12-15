@@ -18,7 +18,7 @@ namespace quick_picture_viewer
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { logoPictureBox, productLabel, versionLabel, copyrightLabel });
 
-			closeBtn.SetDarkMode(false);
+			closeBtn.DarkMode = false;
 
 			string fullVer = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			int lastDotIndex = fullVer.LastIndexOf('.');
@@ -35,7 +35,7 @@ namespace quick_picture_viewer
 
 			if (ThemeManager.isWindows10())
 			{
-				makeDefaultBtn.Visible = true;
+				makeDefaultBtn.Enabled = true;
 			}
 		}
 
@@ -61,11 +61,11 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			Text = owner.resMan.GetString("about");
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
-			updatesBtn.Text = owner.resMan.GetString("check-for-app-updates");
+			updatesBtn.Text = " " + owner.resMan.GetString("check-for-app-updates");
 			descTextBox.Text = owner.resMan.GetString("app-description");
 			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
 			infoTooltip.SetToolTip(makeDefaultBtn, owner.resMan.GetString("open-windows-settings"));
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void makeDefaultBtn_Click(object sender, EventArgs e)

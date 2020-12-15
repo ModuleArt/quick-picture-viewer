@@ -40,6 +40,7 @@ namespace quick_picture_viewer
 
 		private bool settingsStarted = false;
 		private MainForm owner;
+		private bool darkMode = false;
 
 		public SettingsForm(bool darkMode)
 		{
@@ -107,6 +108,11 @@ namespace quick_picture_viewer
 			localizationRestart.LinkColor = ThemeManager.AccentColor;
 
 			SetDarkMode(darkMode);
+
+			if (ThemeManager.isWindows10())
+			{
+				makeDefaultBtn.Enabled = true;
+			}
 		}
 
 		private void InitLanguage()
@@ -133,7 +139,6 @@ namespace quick_picture_viewer
 			slideshowCounterCheckBox.Text = owner.resMan.GetString("show-slideshow-counter");
 			fullscrCursorCheckBox.Text = owner.resMan.GetString("fullscreen-cursor");
 			langLabel.Text = owner.resMan.GetString("ui-lang") + ":";
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			translatedByLabel.Text = owner.resMan.GetString("translated-by") + ": ";
 			escToExitCheckBox.Text = string.Format(owner.resMan.GetString("esc-to-exit"), "Esc");
 			mouseWheelActionLabel.Text = owner.resMan.GetString("mouse-wheel-action") + ":";
@@ -143,25 +148,31 @@ namespace quick_picture_viewer
 			themeRestart.Text = owner.resMan.GetString("restart");
 			localizationRestart.Text = owner.resMan.GetString("restart");
 			contextMenuLabel.Text = owner.resMan.GetString("context-menu") + ":";
+			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void SetDarkMode(bool dark)
 		{
+			darkMode = dark;
+
 			if (dark)
 			{
 				browseBtn.Image = Properties.Resources.white_open;
 				browseBtn.BackColor = ThemeManager.DarkSecondColor;
 				browseBtn.ForeColor = Color.White;
-				settingsTabs.DarkMode = dark;
+				makeDefaultBtn.BackColor = ThemeManager.DarkSecondColor;
+				makeDefaultBtn.ForeColor = Color.White;
 			}
 
 			DarkMode = dark;
+			settingsTabs.DarkMode = dark;
 			updatesCheckBox.DarkMode = dark;
 			fullscrCursorCheckBox.DarkMode = dark;
 			darkThemeRadio.DarkMode = dark;
 			lightThemeRadio.DarkMode = dark;
 			systemThemeRadio.DarkMode = dark;
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 			slideshowTimeNumeric.DarkMode = dark;
 			slideshowCounterCheckBox.DarkMode = dark;
 			langComboBox.SetDarkMode(dark);
@@ -282,11 +293,10 @@ namespace quick_picture_viewer
 			{
 				if (languages[langComboBox.SelectedIndex].Beta && settingsStarted)
 				{
-					MessageBox.Show(
+					DialogMan.ShowInfo(
 						owner.resMan.GetString("beta-lang-warning"),
 						owner.resMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
-						MessageBoxButtons.OK,
-						MessageBoxIcon.Warning
+						darkMode
 					);
 				}
 
@@ -402,7 +412,11 @@ namespace quick_picture_viewer
 				catch
 				{
 					settingsStarted = false;
-					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					DialogMan.ShowInfo(
+						owner.resMan.GetString("context-menu-notice"),
+						owner.resMan.GetString("error"),
+						darkMode
+					);
 					openWithCheckBox.Checked = !openWithCheckBox.Checked;
 					settingsStarted = true;
 				}
@@ -436,7 +450,11 @@ namespace quick_picture_viewer
 				catch
 				{
 					settingsStarted = false;
-					MessageBox.Show(owner.resMan.GetString("context-menu-notice"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					DialogMan.ShowInfo(
+						owner.resMan.GetString("context-menu-notice"),
+						owner.resMan.GetString("error"),
+						darkMode
+					);
 					browseWithCheckBox.Checked = !browseWithCheckBox.Checked;
 					settingsStarted = true;
 				}

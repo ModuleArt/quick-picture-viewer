@@ -35,7 +35,7 @@ namespace quick_picture_viewer
 
 			DarkMode = dark;
 			fitComboBox.SetDarkMode(dark);
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 		}
 
 		private void okButton_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace quick_picture_viewer
 			fitComboBox.Items.Add(owner.resMan.GetString("tile"));
 			fitComboBox.Items.Add(owner.resMan.GetString("center"));
 			fitComboBox.Items.Add(owner.resMan.GetString("span"));
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}
 }

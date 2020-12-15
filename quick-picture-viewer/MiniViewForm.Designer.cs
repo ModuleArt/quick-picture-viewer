@@ -35,7 +35,7 @@
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
 			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.qlibMenuSeparator2 = new QuickLibrary.QlibMenuSeparator();
+			this.qlibMenuSeparator2 = new QuickLibrary.QlibToolsep();
 			this.newWindowBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
@@ -92,7 +92,7 @@
             this.qlibMenuSeparator2,
             this.newWindowBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(263, 88);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(263, 66);
 			// 
 			// checkboardBtn
 			// 
@@ -106,6 +106,10 @@
 			// 
 			// qlibMenuSeparator2
 			// 
+			this.qlibMenuSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibMenuSeparator2.DarkMode = false;
+			this.qlibMenuSeparator2.InsideMenu = true;
+			this.qlibMenuSeparator2.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
 			this.qlibMenuSeparator2.Size = new System.Drawing.Size(259, 6);
 			// 
@@ -121,12 +125,14 @@
 			// 
 			// pictureBox
 			// 
+			this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
+			this.pictureBox.Location = new System.Drawing.Point(1, 1);
+			this.pictureBox.Margin = new System.Windows.Forms.Padding(1);
 			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(400, 400);
+			this.pictureBox.Size = new System.Drawing.Size(398, 398);
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
@@ -140,8 +146,12 @@
 			// 
 			this.autoZoomBtn.Cursor = System.Windows.Forms.Cursors.Default;
 			this.autoZoomBtn.DarkImage = null;
+			this.autoZoomBtn.DarkMode = false;
 			this.autoZoomBtn.FlatAppearance.BorderSize = 0;
+			this.autoZoomBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+			this.autoZoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.autoZoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.autoZoomBtn.ForeColor = System.Drawing.Color.Black;
 			this.autoZoomBtn.Image = global::quick_picture_viewer.Properties.Resources.white_autozoom;
 			this.autoZoomBtn.IsRed = false;
 			this.autoZoomBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_autozoom;
@@ -158,8 +168,12 @@
 			// 
 			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.closeBtn.DarkImage = null;
+			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.ForeColor = System.Drawing.Color.Black;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
@@ -177,8 +191,12 @@
 			this.resizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.resizeBtn.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
 			this.resizeBtn.DarkImage = null;
+			this.resizeBtn.DarkMode = false;
 			this.resizeBtn.FlatAppearance.BorderSize = 0;
+			this.resizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+			this.resizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.resizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.resizeBtn.ForeColor = System.Drawing.Color.Black;
 			this.resizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("resizeBtn.Image")));
 			this.resizeBtn.IsRed = false;
 			this.resizeBtn.LightImage = ((System.Drawing.Image)(resources.GetObject("resizeBtn.LightImage")));
@@ -203,6 +221,7 @@
 			this.Controls.Add(this.resizeBtn);
 			this.Controls.Add(this.picturePanel);
 			this.DarkMode = true;
+			this.ForeColor = System.Drawing.Color.White;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -235,6 +254,6 @@
 		private QuickLibrary.QlibContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem checkboardBtn;
 		private System.Windows.Forms.ToolStripMenuItem newWindowBtn;
-		private QuickLibrary.QlibMenuSeparator qlibMenuSeparator2;
+		private QuickLibrary.QlibToolsep qlibMenuSeparator2;
 	}
 }

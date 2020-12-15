@@ -1,6 +1,6 @@
 {
     "name": "qpv-blur",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "title": "Blur",
     "description": {
         "en": "Blur or pixelate region",
@@ -17,8 +17,8 @@
     "targets": [
         {
             "name": "quick-picture-viewer",
-            "minVersion": "2.2.6",
-            "maxVersion": "2.2.9"
+            "minVersion": "3.0.0",
+            "maxVersion": ""
         }
     ],
     "functions": [

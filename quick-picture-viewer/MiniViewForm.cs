@@ -39,7 +39,7 @@ namespace quick_picture_viewer
 				Convert.ToInt32(Screen.FromHandle(Handle).WorkingArea.Height / 1.25f)
 			);
 
-			ratio = image.Width / image.Height;
+			ratio = (float)image.Width / (float)image.Height;
 
 			if (image.Width > image.Height)
 			{
@@ -63,9 +63,9 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
-			closeBtn.SetDarkMode(true);
-			autoZoomBtn.SetDarkMode(true);
-			resizeBtn.SetDarkMode(true);
+			closeBtn.DarkMode = true;
+			autoZoomBtn.DarkMode = true;
+			resizeBtn.DarkMode = true;
 			contextMenuStrip1.SetDarkMode(true);
 			if (ThemeManager.isWindows10())
 			{
@@ -175,6 +175,10 @@ namespace quick_picture_viewer
 					Point curPos = PointToClient(Cursor.Position);
 
 					int newWidth = curSize.Width + curPos.X - startPos.X;
+
+					Console.WriteLine(newWidth);
+					Console.WriteLine(ratio);
+
 					int newHeight = Convert.ToInt32(newWidth / ratio);
 
 					Size = new Size(newWidth, newHeight);
@@ -235,12 +239,12 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			Text = owner.resMan.GetString("picture-in-picture");
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
 			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
 			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
 			checkboardBtn.Text = owner.resMan.GetString("checkboard-background");
 			newWindowBtn.Text = owner.resMan.GetString("new-window");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void setCheckboardBackground(bool b)
@@ -332,8 +336,7 @@ namespace quick_picture_viewer
 				Cursor.Current = Cursors.SizeAll;
 				if (autoZoom)
 				{
-					NativeMethodsManager.ReleaseCapture();
-					NativeMethodsManager.SendMessage(Handle, 0xA1, 0x2, 0);
+					NativeMan.DragWindow(Handle);
 				}
 				else
 				{
