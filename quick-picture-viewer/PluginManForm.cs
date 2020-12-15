@@ -69,7 +69,7 @@ namespace quick_picture_viewer
 				imageList1.Images.Clear();
 			}
 
-			PluginInfo[] plugins = PluginManager.GetPlugins(true);
+			PluginInfo[] plugins = PluginMan.GetPlugins(true, "bitmap");
 			codenames = new string[plugins.Length];
 			pluginsLinks = new string[plugins.Length];
 			for (int i = 0; i < plugins.Length; i++)
@@ -95,7 +95,7 @@ namespace quick_picture_viewer
 					"v" + plugins[i].version
 				});
 
-				Image img = PluginManager.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, false);
+				Image img = PluginMan.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, false);
 				if (img != null)
 				{
 					imageList1.Images.Add(imageList1.Images.Count.ToString(), img);
@@ -148,7 +148,7 @@ namespace quick_picture_viewer
 		{
 			if (Path.GetExtension(pathToZip) == ".zip")
 			{
-				ZipFile.ExtractToDirectory(pathToZip, Path.Combine(PluginManager.pluginsFolder, Path.GetFileNameWithoutExtension(pathToZip)));
+				ZipFile.ExtractToDirectory(pathToZip, Path.Combine(PluginMan.pluginsFolder, Path.GetFileNameWithoutExtension(pathToZip)));
 				RefreshPluginsList();
 			}
 		}
@@ -176,7 +176,7 @@ namespace quick_picture_viewer
 				listView1.Items[numberInList].Remove();
 				imageList1.Images[numberInList].Dispose();
 				
-				string pluginFolder = Path.Combine(PluginManager.pluginsFolder, codenames[numberInList]);
+				string pluginFolder = Path.Combine(PluginMan.pluginsFolder, codenames[numberInList]);
 				if (FileSystem.DirectoryExists(pluginFolder))
 				{
 					FileSystem.DeleteDirectory(pluginFolder, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin, UICancelOption.DoNothing);

@@ -164,8 +164,6 @@
     <Compile Include="NavPanel.Designer.cs">
       <DependentUpon>NavPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="PluginInfo.cs" />
-    <Compile Include="PluginManager.cs" />
     <Compile Include="PluginManForm.cs">
       <SubType>Form</SubType>
     </Compile>

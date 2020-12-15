@@ -2268,7 +2268,7 @@ namespace quick_picture_viewer
 
 		private void pluginsBtn_DropDownOpening(object sender, EventArgs eventArgs)
 		{
-			PluginInfo[] plugins = PluginManager.GetPlugins(true);
+			PluginInfo[] plugins = PluginMan.GetPlugins(true, "bitmap");
 			for (int i = 0; i < plugins.Length; i++)
 			{
 				QlibToolsep separator = new QlibToolsep();

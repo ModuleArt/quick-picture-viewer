@@ -24,9 +24,9 @@ namespace quick_picture_viewer
 		)
 		{
 			Text = func.title.Get(Properties.Settings.Default.Language);
-			dllPath = Path.Combine(PluginManager.pluginsFolder, pi.name, pi.name + ".dll");
+			dllPath = Path.Combine(PluginMan.pluginsFolder, pi.name, pi.name + ".dll");
 
-			if (func.props.imageRequired)
+			if (func.inputRequired)
 			{
 				Enabled = bmp != null;
 			}
@@ -37,9 +37,9 @@ namespace quick_picture_viewer
 				Bitmap res;
 				if (pi.dllType == "cpp")
 				{
-					IntPtr pluginPtr = PluginManager.LoadLibrary(dllPath);
-					IntPtr funcPtr = PluginManager.GetProcAddressOrdinal(pluginPtr, func.name);
-					var callback = Marshal.GetDelegateForFunctionPointer<PluginManager.RunFunction>(funcPtr);
+					IntPtr pluginPtr = PluginMan.LoadLibrary(dllPath);
+					IntPtr funcPtr = PluginMan.GetProcAddressOrdinal(pluginPtr, func.name);
+					var callback = Marshal.GetDelegateForFunctionPointer<PluginMan.RunFunction>(funcPtr);
 					res = callback(bmp, path);
 				}
 				else if (pi.dllType == "cs")
@@ -61,16 +61,16 @@ namespace quick_picture_viewer
 			};
 			DropDownItems.Add(apply);
 
-			if (func.props.configurable)
+			if (func.configurable)
 			{
 				ToolStripMenuItem conf = new ToolStripMenuItem(configureText + " ...");
 				conf.Click += (s, e) =>
 				{
 					if (pi.dllType == "cpp")
 					{
-						IntPtr pluginPtr = PluginManager.LoadLibrary(dllPath);
-						IntPtr funcPtr = PluginManager.GetProcAddressOrdinal(pluginPtr, func.name + "_conf");
-						var callback = Marshal.GetDelegateForFunctionPointer<PluginManager.ConfFunction>(funcPtr);
+						IntPtr pluginPtr = PluginMan.LoadLibrary(dllPath);
+						IntPtr funcPtr = PluginMan.GetProcAddressOrdinal(pluginPtr, func.name + "_conf");
+						var callback = Marshal.GetDelegateForFunctionPointer<PluginMan.ConfFunction>(funcPtr);
 						callback(bmp, path, darkMode, Properties.Settings.Default.Language, alwaysOnTop);
 					}
 					else if (pi.dllType == "cs")
@@ -98,7 +98,7 @@ namespace quick_picture_viewer
 				DropDownItems.Add(conf);
 			}
 
-			Image = PluginManager.GetPluginIcon(pi.name, func.name, darkMode);
+			Image = PluginMan.GetPluginIcon(pi.name, func.name, darkMode);
 			if (darkMode)
 			{
 				DropDown.BackColor = ThemeManager.DarkSecondColor;
