@@ -277,15 +277,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Закрыть.
-        /// </summary>
-        public static string close {
-            get {
-                return ResourceManager.GetString("close", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Запятая.
         /// </summary>
         public static string comma {
@@ -444,6 +435,15 @@ namespace quick_picture_viewer.languages {
         public static string disk_size {
             get {
                 return ResourceManager.GetString("disk-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не сохранять.
+        /// </summary>
+        public static string dont_save {
+            get {
+                return ResourceManager.GetString("dont-save", resourceCulture);
             }
         }
         
@@ -1537,7 +1537,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Невозможно открыть этот файл.
+        ///   Looks up a localized string similar to Невозможно открыть файл.
         /// </summary>
         public static string unable_to_open_file {
             get {
@@ -1555,11 +1555,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Все несохраненные изменения будут утеряны. Вы уверены, что хотите открыть новое изображение?.
+        ///   Looks up a localized string similar to Несохраненные изменения.
         /// </summary>
-        public static string unsaved_data_lost {
+        public static string unsaved_changes {
             get {
-                return ResourceManager.GetString("unsaved-data-lost", resourceCulture);
+                return ResourceManager.GetString("unsaved-changes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Текущее изображение имеет несохраненные изменения. Чтобы Вы хотели сделать?.
+        /// </summary>
+        public static string unsaved_changes_question {
+            get {
+                return ResourceManager.GetString("unsaved-changes-question", resourceCulture);
             }
         }
         

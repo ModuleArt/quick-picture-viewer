@@ -15,6 +15,7 @@ namespace quick_picture_viewer
 		private MainForm owner;
 		private string[] codenames;
 		private string[] pluginsLinks;
+		private bool darkMode = false;
 
 		public PluginManForm(bool darkMode)
 		{
@@ -30,6 +31,8 @@ namespace quick_picture_viewer
 
 		private void SetDarkMode(bool dark)
 		{
+			darkMode = dark;
+
 			if (dark)
 			{
 				addPluginBtn.BackColor = ThemeManager.DarkSecondColor;
@@ -41,7 +44,7 @@ namespace quick_picture_viewer
 			}
 
 			DarkMode = dark;
-			closeBtn.SetDarkMode(dark);
+			closeBtn.DarkMode = dark;
 			contextMenuStrip1.SetDarkMode(dark);
 			listView1.SetDarkMode(dark);
 		}
@@ -107,7 +110,6 @@ namespace quick_picture_viewer
 		private void InitLanguage()
 		{
 			Text = owner.resMan.GetString("plugin-manager");
-			infoTooltip.SetToolTip(closeBtn, owner.resMan.GetString("close") + " | Alt+F4");
 			listView1.Columns[0].Text = owner.resMan.GetString("plugin");
 			listView1.Columns[1].Text = owner.resMan.GetString("desc");
 			listView1.Columns[2].Text = owner.resMan.GetString("created-by");
@@ -117,6 +119,7 @@ namespace quick_picture_viewer
 			openFileDialog1.Title = owner.resMan.GetString("browse-for-plugins");
 			morePluginsBtn.Text = " " + owner.resMan.GetString("more-plugins");
 			pluginWebsiteBtn.Text = owner.resMan.GetString("plugin-website");
+			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void PluginManForm_KeyDown(object sender, KeyEventArgs e)
@@ -136,10 +139,18 @@ namespace quick_picture_viewer
 		{
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
-				ZipFile.ExtractToDirectory(openFileDialog1.FileName, PluginManager.pluginsFolder);
-				RefreshPluginsList();
+				installZip(openFileDialog1.FileName);
 			}
 			openFileDialog1.Dispose();
+		}
+
+		private void installZip(string pathToZip)
+		{
+			if (Path.GetExtension(pathToZip) == ".zip")
+			{
+				ZipFile.ExtractToDirectory(pathToZip, Path.Combine(PluginManager.pluginsFolder, Path.GetFileNameWithoutExtension(pathToZip)));
+				RefreshPluginsList();
+			}
 		}
 
 		private void deleteBtn_Click(object sender, EventArgs e)
@@ -152,11 +163,12 @@ namespace quick_picture_viewer
 
 		private void deletePlugin(int numberInList)
 		{
-			DialogResult window = MessageBox.Show(
+			DialogResult window = DialogMan.ShowConfirm(
 				owner.resMan.GetString("delete-plugin-warning"),
-				owner.resMan.GetString("warning"),
-				MessageBoxButtons.YesNo,
-				MessageBoxIcon.Question
+				windowTitle: owner.resMan.GetString("warning"),
+				yesBtnText: owner.resMan.GetString("delete-plugin"),
+				yesBtnImage: deleteBtn.Image,
+				darkMode: darkMode
 			);
 
 			if (window == DialogResult.Yes)
@@ -171,7 +183,11 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					MessageBox.Show(owner.resMan.GetString("plugin-not-found"), owner.resMan.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+					DialogMan.ShowInfo(
+						owner.resMan.GetString("plugin-not-found"),
+						owner.resMan.GetString("error"),
+						darkMode
+					);
 				}
 				RefreshPluginsList();
 			}
@@ -207,6 +223,35 @@ namespace quick_picture_viewer
 		{
 			e.Cancel = true;
 			e.NewWidth = listView1.Columns[e.ColumnIndex].Width;
+		}
+
+		private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			bool status = false;
+			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0)
+			{
+				status = true;
+			}
+			deleteBtn.Enabled = status;
+			pluginWebsiteBtn.Enabled = status;
+		}
+
+		private void PluginManForm_DragDrop(object sender, DragEventArgs e)
+		{
+			string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+			installZip(files[0]);
+		}
+
+		private void PluginManForm_DragEnter(object sender, DragEventArgs e)
+		{
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
+			{
+				e.Effect = DragDropEffects.All;
+			}
+			else
+			{
+				e.Effect = DragDropEffects.None;
+			}
 		}
 	}
 }

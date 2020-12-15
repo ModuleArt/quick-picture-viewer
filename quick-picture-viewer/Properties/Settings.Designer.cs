@@ -226,5 +226,17 @@ namespace quick_picture_viewer.Properties {
                 this["StartupWindowLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool NavPanel {
+            get {
+                return ((bool)(this["NavPanel"]));
+            }
+            set {
+                this["NavPanel"] = value;
+            }
+        }
     }
 }

@@ -82,11 +82,17 @@
 			// 
 			// extensionTextBox
 			// 
+			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.extensionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.extensionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.extensionTextBox.DarkMode = false;
+			this.extensionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.extensionTextBox.ForeColor = System.Drawing.Color.Black;
 			this.extensionTextBox.Location = new System.Drawing.Point(304, 168);
 			this.extensionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.extensionTextBox.Name = "extensionTextBox";
 			this.extensionTextBox.ReadOnly = true;
+			this.extensionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.extensionTextBox.Size = new System.Drawing.Size(70, 32);
 			this.extensionTextBox.TabIndex = 8;
 			this.extensionTextBox.Text = "N/A";
@@ -154,11 +160,17 @@
 			// 
 			// compressionTextBox
 			// 
+			this.compressionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.compressionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.compressionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.compressionTextBox.DarkMode = false;
+			this.compressionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.compressionTextBox.ForeColor = System.Drawing.Color.Black;
 			this.compressionTextBox.Location = new System.Drawing.Point(122, 168);
 			this.compressionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.compressionTextBox.Name = "compressionTextBox";
 			this.compressionTextBox.ReadOnly = true;
+			this.compressionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.compressionTextBox.Size = new System.Drawing.Size(70, 32);
 			this.compressionTextBox.TabIndex = 7;
 			this.compressionTextBox.WordWrap = true;
@@ -177,11 +189,17 @@
 			// 
 			// fullPathTextBox
 			// 
+			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fullPathTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.fullPathTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fullPathTextBox.DarkMode = false;
+			this.fullPathTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.fullPathTextBox.ForeColor = System.Drawing.Color.Black;
 			this.fullPathTextBox.Location = new System.Drawing.Point(122, 126);
 			this.fullPathTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.fullPathTextBox.Name = "fullPathTextBox";
 			this.fullPathTextBox.ReadOnly = true;
+			this.fullPathTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fullPathTextBox.Size = new System.Drawing.Size(220, 32);
 			this.fullPathTextBox.TabIndex = 5;
 			this.fullPathTextBox.Text = "N/A";
@@ -201,11 +219,17 @@
 			// 
 			// folderTextBox
 			// 
+			this.folderTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.folderTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.folderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.folderTextBox.DarkMode = false;
+			this.folderTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.folderTextBox.ForeColor = System.Drawing.Color.Black;
 			this.folderTextBox.Location = new System.Drawing.Point(122, 84);
 			this.folderTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.folderTextBox.Name = "folderTextBox";
 			this.folderTextBox.ReadOnly = true;
+			this.folderTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.folderTextBox.Size = new System.Drawing.Size(220, 32);
 			this.folderTextBox.TabIndex = 3;
 			this.folderTextBox.Text = "N/A";
@@ -213,11 +237,17 @@
 			// 
 			// fileNameTextBox
 			// 
+			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fileNameTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.fileNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fileNameTextBox.DarkMode = false;
+			this.fileNameTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.fileNameTextBox.ForeColor = System.Drawing.Color.Black;
 			this.fileNameTextBox.Location = new System.Drawing.Point(122, 42);
 			this.fileNameTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.fileNameTextBox.Name = "fileNameTextBox";
 			this.fileNameTextBox.ReadOnly = true;
+			this.fileNameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fileNameTextBox.Size = new System.Drawing.Size(220, 32);
 			this.fileNameTextBox.TabIndex = 1;
 			this.fileNameTextBox.Text = "N/A";
@@ -237,11 +267,17 @@
 			// 
 			// sizeTextBox
 			// 
+			this.sizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.sizeTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.sizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.sizeTextBox.DarkMode = false;
+			this.sizeTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.sizeTextBox.ForeColor = System.Drawing.Color.Black;
 			this.sizeTextBox.Location = new System.Drawing.Point(521, 42);
 			this.sizeTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.sizeTextBox.Name = "sizeTextBox";
 			this.sizeTextBox.ReadOnly = true;
+			this.sizeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.sizeTextBox.Size = new System.Drawing.Size(199, 32);
 			this.sizeTextBox.TabIndex = 13;
 			this.sizeTextBox.WordWrap = true;
@@ -260,11 +296,17 @@
 			// 
 			// megapixelsTextBox
 			// 
+			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.megapixelsTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.megapixelsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.megapixelsTextBox.DarkMode = false;
+			this.megapixelsTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.megapixelsTextBox.ForeColor = System.Drawing.Color.Black;
 			this.megapixelsTextBox.Location = new System.Drawing.Point(521, 84);
 			this.megapixelsTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.megapixelsTextBox.Name = "megapixelsTextBox";
 			this.megapixelsTextBox.ReadOnly = true;
+			this.megapixelsTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.megapixelsTextBox.Size = new System.Drawing.Size(199, 32);
 			this.megapixelsTextBox.TabIndex = 14;
 			this.megapixelsTextBox.WordWrap = true;
@@ -283,11 +325,17 @@
 			// 
 			// resolutionTextBox
 			// 
+			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.resolutionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.resolutionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.resolutionTextBox.DarkMode = false;
+			this.resolutionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.resolutionTextBox.ForeColor = System.Drawing.Color.Black;
 			this.resolutionTextBox.Location = new System.Drawing.Point(521, 126);
 			this.resolutionTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.resolutionTextBox.Name = "resolutionTextBox";
 			this.resolutionTextBox.ReadOnly = true;
+			this.resolutionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.resolutionTextBox.Size = new System.Drawing.Size(199, 32);
 			this.resolutionTextBox.TabIndex = 15;
 			this.resolutionTextBox.WordWrap = true;
@@ -306,11 +354,17 @@
 			// 
 			// inchesTextBox
 			// 
+			this.inchesTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.inchesTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.inchesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.inchesTextBox.DarkMode = false;
+			this.inchesTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.inchesTextBox.ForeColor = System.Drawing.Color.Black;
 			this.inchesTextBox.Location = new System.Drawing.Point(521, 168);
 			this.inchesTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.inchesTextBox.Name = "inchesTextBox";
 			this.inchesTextBox.ReadOnly = true;
+			this.inchesTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.inchesTextBox.Size = new System.Drawing.Size(199, 32);
 			this.inchesTextBox.TabIndex = 16;
 			this.inchesTextBox.WordWrap = true;
@@ -329,11 +383,17 @@
 			// 
 			// cmTextBox
 			// 
+			this.cmTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cmTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.cmTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.cmTextBox.DarkMode = false;
+			this.cmTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.cmTextBox.ForeColor = System.Drawing.Color.Black;
 			this.cmTextBox.Location = new System.Drawing.Point(521, 210);
 			this.cmTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.cmTextBox.Name = "cmTextBox";
 			this.cmTextBox.ReadOnly = true;
+			this.cmTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.cmTextBox.Size = new System.Drawing.Size(199, 32);
 			this.cmTextBox.TabIndex = 17;
 			this.cmTextBox.WordWrap = true;
@@ -364,22 +424,34 @@
 			// 
 			// ratioTextBox
 			// 
+			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.ratioTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.ratioTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.ratioTextBox.DarkMode = false;
+			this.ratioTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.ratioTextBox.ForeColor = System.Drawing.Color.Black;
 			this.ratioTextBox.Location = new System.Drawing.Point(521, 294);
 			this.ratioTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.ratioTextBox.Name = "ratioTextBox";
 			this.ratioTextBox.ReadOnly = true;
+			this.ratioTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.ratioTextBox.Size = new System.Drawing.Size(199, 32);
 			this.ratioTextBox.TabIndex = 19;
 			this.ratioTextBox.WordWrap = true;
 			// 
 			// diskSizeTextBox
 			// 
+			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.diskSizeTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.diskSizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.diskSizeTextBox.DarkMode = false;
+			this.diskSizeTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.diskSizeTextBox.ForeColor = System.Drawing.Color.Black;
 			this.diskSizeTextBox.Location = new System.Drawing.Point(521, 252);
 			this.diskSizeTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.diskSizeTextBox.Name = "diskSizeTextBox";
 			this.diskSizeTextBox.ReadOnly = true;
+			this.diskSizeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.diskSizeTextBox.Size = new System.Drawing.Size(199, 32);
 			this.diskSizeTextBox.TabIndex = 18;
 			this.diskSizeTextBox.Text = "N/A";
@@ -411,11 +483,17 @@
 			// 
 			// modifiedTextBox
 			// 
+			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.modifiedTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.modifiedTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.modifiedTextBox.DarkMode = false;
+			this.modifiedTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.modifiedTextBox.ForeColor = System.Drawing.Color.Black;
 			this.modifiedTextBox.Location = new System.Drawing.Point(122, 252);
 			this.modifiedTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
 			this.modifiedTextBox.Name = "modifiedTextBox";
 			this.modifiedTextBox.ReadOnly = true;
+			this.modifiedTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.modifiedTextBox.Size = new System.Drawing.Size(252, 32);
 			this.modifiedTextBox.TabIndex = 11;
 			this.modifiedTextBox.Text = "N/A";
@@ -435,11 +513,17 @@
 			// 
 			// createdTextBox
 			// 
+			this.createdTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.createdTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.createdTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.createdTextBox.DarkMode = false;
+			this.createdTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.createdTextBox.ForeColor = System.Drawing.Color.Black;
 			this.createdTextBox.Location = new System.Drawing.Point(122, 210);
 			this.createdTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.createdTextBox.Name = "createdTextBox";
 			this.createdTextBox.ReadOnly = true;
+			this.createdTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.createdTextBox.Size = new System.Drawing.Size(252, 32);
 			this.createdTextBox.TabIndex = 10;
 			this.createdTextBox.Text = "N/A";
@@ -448,7 +532,6 @@
 			// propertiesButton
 			// 
 			this.propertiesButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.propertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.propertiesButton.FlatAppearance.BorderSize = 0;
 			this.propertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.propertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("propertiesButton.Image")));
@@ -487,8 +570,10 @@
 			// closeBtn
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.ForeColor = System.Drawing.Color.Black;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
@@ -498,12 +583,12 @@
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
 			this.closeBtn.TabIndex = 1;
 			this.closeBtn.UseVisualStyleBackColor = true;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// InfoForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(730, 336);
+			this.CloseButton = this.closeBtn;
 			this.Controls.Add(this.modifiedLabel);
 			this.Controls.Add(this.copyPathButton);
 			this.Controls.Add(this.modifiedTextBox);
