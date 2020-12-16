@@ -43,6 +43,7 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.toolStrip1 = new QuickLibrary.QlibToolbar();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
@@ -80,8 +81,11 @@
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator5 = new QuickLibrary.QlibToolsep();
-			this.pluginsBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.effectsBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.pluginManBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolsBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.pluginManBtn2 = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibToolsep1 = new QuickLibrary.QlibToolsep();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,7 +104,6 @@
 			this.toolStripSeparator10 = new QuickLibrary.QlibToolsep();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
@@ -211,6 +214,18 @@
 			// 
 			this.colorDialog1.Color = System.Drawing.Color.Blue;
 			// 
+			// typeOpsButton
+			// 
+			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			// 
 			// toolStrip1
 			// 
 			this.toolStrip1.AlternativeAppearance = true;
@@ -245,7 +260,9 @@
             this.fullscreenButton,
             this.miniViewButton,
             this.toolStripSeparator5,
-            this.pluginsBtn,
+            this.effectsBtn,
+            this.toolsBtn,
+            this.qlibToolsep1,
             this.moreButton});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Name = "toolStrip1";
@@ -573,17 +590,17 @@
 			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
 			// 
-			// pluginsBtn
+			// effectsBtn
 			// 
-			resources.ApplyResources(this.pluginsBtn, "pluginsBtn");
-			this.pluginsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.pluginsBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			resources.ApplyResources(this.effectsBtn, "effectsBtn");
+			this.effectsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.effectsBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pluginManBtn});
-			this.pluginsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
-			this.pluginsBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.pluginsBtn.Name = "pluginsBtn";
-			this.pluginsBtn.DropDownClosed += new System.EventHandler(this.pluginsBtn_DropDownClosed);
-			this.pluginsBtn.DropDownOpening += new System.EventHandler(this.pluginsBtn_DropDownOpening);
+			this.effectsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_effects;
+			this.effectsBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.effectsBtn.Name = "effectsBtn";
+			this.effectsBtn.DropDownClosed += new System.EventHandler(this.effectsBtn_DropDownClosed);
+			this.effectsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
 			// 
 			// pluginManBtn
 			// 
@@ -593,6 +610,34 @@
 			this.pluginManBtn.Name = "pluginManBtn";
 			resources.ApplyResources(this.pluginManBtn, "pluginManBtn");
 			this.pluginManBtn.Click += new System.EventHandler(this.pluginManBtn_Click);
+			// 
+			// toolsBtn
+			// 
+			resources.ApplyResources(this.toolsBtn, "toolsBtn");
+			this.toolsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolsBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pluginManBtn2});
+			this.toolsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_tools;
+			this.toolsBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.toolsBtn.Name = "toolsBtn";
+			// 
+			// pluginManBtn2
+			// 
+			this.pluginManBtn2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.pluginManBtn2.ForeColor = System.Drawing.Color.Black;
+			this.pluginManBtn2.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
+			this.pluginManBtn2.Name = "pluginManBtn2";
+			resources.ApplyResources(this.pluginManBtn2, "pluginManBtn2");
+			this.pluginManBtn2.Click += new System.EventHandler(this.pluginManBtn_Click);
+			// 
+			// qlibToolsep1
+			// 
+			resources.ApplyResources(this.qlibToolsep1, "qlibToolsep1");
+			this.qlibToolsep1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep1.DarkMode = false;
+			this.qlibToolsep1.InsideMenu = false;
+			this.qlibToolsep1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.qlibToolsep1.Name = "qlibToolsep1";
 			// 
 			// moreButton
 			// 
@@ -760,18 +805,6 @@
 			this.aboutBtn.Name = "aboutBtn";
 			this.aboutBtn.Click += new System.EventHandler(this.aboutButton_Click);
 			// 
-			// typeOpsButton
-			// 
-			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			// 
 			// picturePanel
 			// 
 			resources.ApplyResources(this.picturePanel, "picturePanel");
@@ -930,8 +963,11 @@
 		private System.Windows.Forms.ToolStripMenuItem framelessBtn;
 		private System.Windows.Forms.ToolStripMenuItem customAngleBtn;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-		private System.Windows.Forms.ToolStripDropDownButton pluginsBtn;
+		private System.Windows.Forms.ToolStripDropDownButton effectsBtn;
 		private System.Windows.Forms.ToolStripMenuItem pluginManBtn;
 		private System.Windows.Forms.PictureBox suggestionIcon;
+		private System.Windows.Forms.ToolStripDropDownButton toolsBtn;
+		private System.Windows.Forms.ToolStripMenuItem pluginManBtn2;
+		private QuickLibrary.QlibToolsep qlibToolsep1;
 	}
 }

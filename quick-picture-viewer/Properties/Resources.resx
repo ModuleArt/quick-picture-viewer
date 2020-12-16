@@ -346,4 +346,16 @@
   <data name="black-saveas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-saveas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black_effects" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-effects.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_effects" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-effects.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

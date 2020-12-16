@@ -475,6 +475,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Эффекты.
+        /// </summary>
+        public static string effects {
+            get {
+                return ResourceManager.GetString("effects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ошибка.
         /// </summary>
         public static string error {
@@ -1087,15 +1096,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Плагины.
-        /// </summary>
-        public static string plugins {
-            get {
-                return ResourceManager.GetString("plugins", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Плюс.
         /// </summary>
         public static string plus {
@@ -1479,6 +1479,15 @@ namespace quick_picture_viewer.languages {
         public static string title {
             get {
                 return ResourceManager.GetString("title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Инструменты.
+        /// </summary>
+        public static string tools {
+            get {
+                return ResourceManager.GetString("tools", resourceCulture);
             }
         }
         

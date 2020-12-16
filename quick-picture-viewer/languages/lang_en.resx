@@ -301,6 +301,10 @@
     <value>Edit image</value>
     <comment>Menu</comment>
   </data>
+  <data name="effects" xml:space="preserve">
+    <value>Effects</value>
+    <comment>Menu</comment>
+  </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
     <comment>Message box</comment>
@@ -573,10 +577,6 @@
     <value>Plugin website</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="plugins" xml:space="preserve">
-    <value>Plugins</value>
-    <comment>Menu</comment>
-  </data>
   <data name="plus" xml:space="preserve">
     <value>Plus</value>
     <comment>Menu</comment>
@@ -748,6 +748,10 @@
   <data name="title" xml:space="preserve">
     <value>Title</value>
     <comment>Print</comment>
+  </data>
+  <data name="tools" xml:space="preserve">
+    <value>Tools</value>
+    <comment>Menu</comment>
   </data>
   <data name="top" xml:space="preserve">
     <value>Top</value>

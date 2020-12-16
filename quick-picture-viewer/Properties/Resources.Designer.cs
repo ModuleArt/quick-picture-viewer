@@ -93,6 +93,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_effects {
+            get {
+                object obj = ResourceManager.GetObject("black_effects", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_grid {
             get {
                 object obj = ResourceManager.GetObject("black-grid", resourceCulture);
@@ -196,6 +206,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap black_sync {
             get {
                 object obj = ResourceManager.GetObject("black-sync", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_tools {
+            get {
+                object obj = ResourceManager.GetObject("black_tools", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +386,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_edit {
             get {
                 object obj = ResourceManager.GetObject("white_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_effects {
+            get {
+                object obj = ResourceManager.GetObject("white_effects", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -756,6 +786,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_sync {
             get {
                 object obj = ResourceManager.GetObject("white_sync", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_tools {
+            get {
+                object obj = ResourceManager.GetObject("white_tools", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

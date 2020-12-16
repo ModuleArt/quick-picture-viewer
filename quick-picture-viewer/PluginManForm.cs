@@ -69,7 +69,11 @@ namespace quick_picture_viewer
 				imageList1.Images.Clear();
 			}
 
-			PluginInfo[] plugins = PluginMan.GetPlugins(true, "bitmap");
+			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
+			PluginMan.apiVer = 2;
+			PluginMan.inputType = "bitmap";
+
+			PluginInfo[] plugins = PluginMan.GetPlugins(true);
 			codenames = new string[plugins.Length];
 			pluginsLinks = new string[plugins.Length];
 			for (int i = 0; i < plugins.Length; i++)
@@ -148,7 +152,7 @@ namespace quick_picture_viewer
 		{
 			if (Path.GetExtension(pathToZip) == ".zip")
 			{
-				ZipFile.ExtractToDirectory(pathToZip, Path.Combine(PluginMan.pluginsFolder, Path.GetFileNameWithoutExtension(pathToZip)));
+				ZipFile.ExtractToDirectory(pathToZip, Path.Combine(PluginMan.pluginsFolder));
 				RefreshPluginsList();
 			}
 		}

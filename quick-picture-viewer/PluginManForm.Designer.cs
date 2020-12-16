@@ -192,7 +192,7 @@
 			// 
 			// openFileDialog1
 			// 
-			this.openFileDialog1.Filter = "QPV plugin|*.zip";
+			this.openFileDialog1.Filter = "QuickPlugins|*.qp.zip";
 			this.openFileDialog1.RestoreDirectory = true;
 			// 
 			// morePluginsBtn

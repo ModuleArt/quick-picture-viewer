@@ -1,0 +1,33 @@
+{
+  "name": "qpv-blur",
+  "version": "1.0.2",
+  "title": "Blur",
+  "description": {
+    "en": "Blur or pixelate region",
+    "ru": "Размытие или пикселизация области",
+    "es": "Difuminar o pixelar un área"
+  },
+  "link": "https://github.com/ModuleArt/qpv-blur",
+  "authors": [
+    {
+      "name": "Beelink",
+      "link": "https://github.com/Beelink"
+    }
+  ],
+  "apiVer": 2,
+  "inputType": "bitmap",
+  "dllType": "csharp",
+  "functions": [
+    {
+      "name": "blur",
+      "title": {
+        "en": "Blur region",
+        "ru": "Размыть область",
+        "es": "Área de desenfoque"
+      },
+      "type": "effect",
+      "configurable": true,
+      "inputRequired": true
+    }
+  ]
+}

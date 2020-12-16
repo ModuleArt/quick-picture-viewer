@@ -207,8 +207,10 @@ namespace quick_picture_viewer
 			hasChangesLabel.Text = resMan.GetString("not-saved");
 			zoomLabel.Text = resMan.GetString("zoom") + ": " + resMan.GetString("auto");
 
-			pluginsBtn.Text = resMan.GetString("plugins");
+			effectsBtn.Text = resMan.GetString("effects");
+			toolsBtn.Text = resMan.GetString("tools");
 			pluginManBtn.Text = resMan.GetString("plugin-manager");
+			pluginManBtn2.Text = resMan.GetString("plugin-manager");
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -1759,8 +1761,8 @@ namespace quick_picture_viewer
 				typeOpsButton.BackColor = ThemeManager.DarkSecondColor;
 				typeOpsButton.ForeColor = Color.White;
 
-				pluginsBtn.Image = Properties.Resources.white_plugin;
-				pluginManBtn.Image = Properties.Resources.white_plugin;
+				effectsBtn.Image = Properties.Resources.white_effects;
+				pluginManBtn.Image = Properties.Resources.white_tools;
 
 				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
 				zoomTextBox.ForeColor = Color.White;
@@ -2254,26 +2256,28 @@ namespace quick_picture_viewer
 			SetFramelessMode(!framelessMode);
 		}
 
-		private void pluginsBtn_DropDownClosed(object sender, EventArgs e)
+		private void effectsBtn_DropDownClosed(object sender, EventArgs e)
 		{
-			for (int i = pluginsBtn.DropDownItems.Count - 1; i > 0; i--)
+			for (int i = effectsBtn.DropDownItems.Count - 1; i > 0; i--)
 			{
-				if (pluginsBtn.DropDownItems[i].Image != null)
+				if (effectsBtn.DropDownItems[i].Image != null)
 				{
-					pluginsBtn.DropDownItems[i].Image.Dispose();
+					effectsBtn.DropDownItems[i].Image.Dispose();
 				}
-				pluginsBtn.DropDownItems.Remove(pluginsBtn.DropDownItems[i]);
+				effectsBtn.DropDownItems.Remove(effectsBtn.DropDownItems[i]);
 			}
 		}
 
-		private void pluginsBtn_DropDownOpening(object sender, EventArgs eventArgs)
+		private void effectsBtn_DropDownOpening(object sender, EventArgs eventArgs)
 		{
-			PluginInfo[] plugins = PluginMan.GetPlugins(true, "bitmap");
+			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
+			PluginMan.apiVer = 2;
+			PluginMan.inputType = "bitmap";
+
+			PluginInfo[] plugins = PluginMan.GetPlugins(true);
+
 			for (int i = 0; i < plugins.Length; i++)
 			{
-				QlibToolsep separator = new QlibToolsep();
-				separator.InsideMenu = true;
-				pluginsBtn.DropDownItems.Add(separator);
 				for (int j = 0; j < plugins[i].functions.Length; j++)
 				{
 					string path = null;
@@ -2289,24 +2293,26 @@ namespace quick_picture_viewer
 						plugins[i].functions[j],
 						resMan.GetString("apply"),
 						resMan.GetString("configure"),
-						alwaysOnTop
+						alwaysOnTop,
+						Properties.Settings.Default.Language
 					);
 					tsmi.Output += Tsmi_Output;
-
-					//tsmi.ShortcutKeys = (Keys)plugins[i].functions[j].hotkey.key | Keys.Control;
-					//if (plugins[i].functions[j].hotkey.shift)
-					//{
-					//	tsmi.ShortcutKeys |= Keys.Shift;
-					//}
 					
-					pluginsBtn.DropDownItems.Add(tsmi);
+					if (plugins[i].functions[j].type == "effect")
+					{
+						effectsBtn.DropDownItems.Add(tsmi);
+					}
+					else if (plugins[i].functions[j].type == "tool")
+					{
+						toolsBtn.DropDownItems.Add(tsmi);
+					}
 				}
 			}
 		}
 
 		private void Tsmi_Output(object sender, OutputEventArgs e)
 		{
-			openImage(e.Bitmap, currentFolder, currentFile);
+			openImage(e.input as Bitmap, currentFolder, currentFile);
 			setImageChanged(true);
 		}
 
