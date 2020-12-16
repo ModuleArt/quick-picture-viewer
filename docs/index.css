@@ -7,7 +7,7 @@
 	--filter-shadow-black: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 	--filter-shadow-extra-black: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
 	
-	--animation-speed: 0.25s;
+    --animation-speed: 0.25s;
 }
 
 @font-face {
@@ -24,6 +24,16 @@
 body {
     margin: 0;
     background: #f1f1f1;  
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
 }
 
 /* HEADER */
