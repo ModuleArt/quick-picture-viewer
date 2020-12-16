@@ -97,7 +97,6 @@ header .navbar a:hover .link {
 
 .hero .icon {
     width: 128px;
-    transform: rotate(-5deg);
     filter: var(--filter-shadow-white);
 }
 

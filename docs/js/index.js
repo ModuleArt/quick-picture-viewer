@@ -3,8 +3,6 @@ $(document).ready(function () {
 
     $.getJSON("https://api.github.com/repos/ModuleArt/quick-picture-viewer/releases/latest").done(function(json) {
 
-        console.log(json);
-        
         // download link
         let downloadLink = document.getElementById("download-link");
         downloadLink.href = "https://github.com/ModuleArt/quick-picture-viewer/releases/download/" + json.tag_name + "/QuickPictureViewer-Setup.exe";
