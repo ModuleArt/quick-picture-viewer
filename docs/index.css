@@ -1,3 +1,15 @@
+:root {
+	--module-color-dark: #11408D;
+	--module-color-accent: #53D7FD;
+	--module-color-light: #2F7CD4;
+	
+	--filter-shadow-white: drop-shadow(0 12px 24px rgba(255, 255, 255, 0.25));
+	--filter-shadow-black: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+	--filter-shadow-extra-black: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+	
+	--animation-speed: 0.25s;
+}
+
 @font-face {
     font-family: "Inter";
     src: url("fonts/inter-bold.ttf");
@@ -31,7 +43,7 @@ header a {
 }
 
 header .logo {
-    transition: 0.25s transform;
+    transition: transform var(--animation-speed);
 }
 
 header a:hover .logo {
@@ -41,12 +53,12 @@ header a:hover .logo {
 header .logo img {
     vertical-align: middle;
     width: 32px;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-    transition: 0.25s filter;
+    filter: var(--filter-shadow-white);
+    transition: filter var(--animation-speed);
 }
 
 header a:hover .logo img {
-    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+    filter: var(--filter-shadow-extra-black);
 }
 
 header .logo span {
@@ -60,7 +72,7 @@ header .navbar .link {
     border: 2px solid transparent;
     padding: 8px 16px;
     border-radius: 8px;
-    transition: 0.25s border-color, 0.25s transform;
+    transition: border-color var(--animation-speed), transform var(--animation-speed);
     vertical-align: middle;
     display: inline-block;
 }
@@ -77,8 +89,8 @@ header .navbar a:hover .link {
 }
 
 .hero {
-    background-color: #7a36b1;
-    background-image: linear-gradient(to right bottom, #4c158a, #ad65d6);
+    background-color: var(--module-color-light);
+    background-image: linear-gradient(to right bottom, var(--module-color-light), var(--module-color-dark));
     padding: 128px 0 0 0;
     text-align: center;
 }
@@ -86,7 +98,7 @@ header .navbar a:hover .link {
 .hero .icon {
     width: 128px;
     transform: rotate(-5deg);
-    filter: drop-shadow(0 12px 24px rgba(255, 255, 255, 0.25));
+    filter: var(--filter-shadow-white);
 }
 
 .hero h1 {
@@ -116,11 +128,11 @@ header .navbar a:hover .link {
     padding: 12px 24px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    transition: 0.25s transform, 0.25s filter;;
+    transition: transform var(--animation-speed), filter var(--animation-speed);
 }
 
 .hero .button.dark {
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    filter: var(--filter-shadow-black);
     background: #333;
     border-color: rgba(0, 0, 0, 0.25);
 }
@@ -130,7 +142,7 @@ header .navbar a:hover .link {
 }
 
 .hero a:hover .button.dark {
-    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+    filter: var(--filter-shadow-extra-black);
 }
 
 .hero .button span {
@@ -167,7 +179,7 @@ main {
 }
 
 main .screenshot {
-    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+    filter: var(--filter-shadow-extra-black);
     border-radius: 8px;
     margin-top: -21vw;
     background: #333;
@@ -191,13 +203,17 @@ main .features {
 
 main .features h4 {
     margin: 16px 0;
-    color: #7a36b1;
+    color: var(--module-color-light);
     font: 20px/30px "Inter";
+}
+
+main .features img {
+    width: 48px;
 }
 
 main .features .feature {
     padding: 32px;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    filter: var(--filter-shadow-black);
     background: #fff;
     border-radius: 8px;
     border: 2px solid rgba(0, 0, 0, 0.25);
@@ -234,7 +250,7 @@ main .content {
     display: inline-block;
     text-align: left;
     padding: 32px;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    filter: var(--filter-shadow-black);
     background: #fff;
     max-width: 570px;
     width: 100%;
@@ -254,7 +270,7 @@ main .content th, main .content td {
 }
 
 main .content a {
-    color: #ad65d6;
+    color: var(--module-color-light);
     text-decoration: none;
 }
 
@@ -336,15 +352,15 @@ footer a:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background: #7D3DB0;
+    background: var(--module-color-dark);
 }
   
 ::-webkit-scrollbar-thumb {
-    background: #642497;
+    background: var(--module-color-light);
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #4B0B7E;
+    background: var(--module-color-accent);
 }
 
 /* MEDIA */
