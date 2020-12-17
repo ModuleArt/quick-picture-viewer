@@ -213,10 +213,6 @@
     <value>Clear</value>
     <comment>Menu</comment>
   </data>
-  <data name="close" xml:space="preserve">
-    <value>Close</value>
-    <comment>Titlebar</comment>
-  </data>
   <data name="comma" xml:space="preserve">
     <value>Comma</value>
     <comment>Menu</comment>
@@ -289,6 +285,10 @@
     <value>Disk size</value>
     <comment>Image info</comment>
   </data>
+  <data name="dont-save" xml:space="preserve">
+    <value>Don't save</value>
+    <comment>Main window</comment>
+  </data>
   <data name="drag-here-to-resize" xml:space="preserve">
     <value>Drag here to resize window</value>
     <comment>Picture in picture</comment>
@@ -299,6 +299,10 @@
   </data>
   <data name="edit-image" xml:space="preserve">
     <value>Edit image</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="effects" xml:space="preserve">
+    <value>Effects</value>
     <comment>Menu</comment>
   </data>
   <data name="error" xml:space="preserve">
@@ -573,10 +577,6 @@
     <value>Plugin website</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="plugins" xml:space="preserve">
-    <value>Plugins</value>
-    <comment>Menu</comment>
-  </data>
   <data name="plus" xml:space="preserve">
     <value>Plus</value>
     <comment>Menu</comment>
@@ -749,6 +749,10 @@
     <value>Title</value>
     <comment>Print</comment>
   </data>
+  <data name="tools" xml:space="preserve">
+    <value>Tools</value>
+    <comment>Menu</comment>
+  </data>
   <data name="top" xml:space="preserve">
     <value>Top</value>
     <comment>Print</comment>
@@ -774,16 +778,20 @@
     <comment>Message box</comment>
   </data>
   <data name="unable-to-open-file" xml:space="preserve">
-    <value>Unable to open this file</value>
+    <value>Unable to open file</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">
     <value>Unable to run external app</value>
     <comment>Message box</comment>
   </data>
-  <data name="unsaved-data-lost" xml:space="preserve">
-    <value>All unsaved data will be lost. Are you sure you want to open new image?</value>
-    <comment>Message box</comment>
+  <data name="unsaved-changes" xml:space="preserve">
+    <value>Unsaved changes</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsaved-changes-question" xml:space="preserve">
+    <value>The current image has unsaved changes. What would you like to do?</value>
+    <comment>Main window</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Update failed</value>

@@ -1762,7 +1762,9 @@ namespace quick_picture_viewer
 				typeOpsButton.ForeColor = Color.White;
 
 				effectsBtn.Image = Properties.Resources.white_effects;
-				pluginManBtn.Image = Properties.Resources.white_tools;
+				toolsBtn.Image = Properties.Resources.white_tools;
+				pluginManBtn.Image = Properties.Resources.white_plugin;
+				pluginManBtn2.Image = Properties.Resources.white_plugin;
 
 				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
 				zoomTextBox.ForeColor = Color.White;

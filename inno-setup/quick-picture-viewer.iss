@@ -47,8 +47,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Newtonsoft.Json.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Utf8Json.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
@@ -59,7 +59,6 @@ Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Releas
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\quick-picture-viewer.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
 

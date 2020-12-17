@@ -213,10 +213,6 @@
     <value>Очистить</value>
     <comment>Menu</comment>
   </data>
-  <data name="close" xml:space="preserve">
-    <value>Закрыть</value>
-    <comment>Titlebar</comment>
-  </data>
   <data name="comma" xml:space="preserve">
     <value>Запятая</value>
     <comment>Menu</comment>
@@ -289,6 +285,10 @@
     <value>Размер на диске</value>
     <comment>Image info</comment>
   </data>
+  <data name="dont-save" xml:space="preserve">
+    <value>Не сохранять</value>
+    <comment>Main window</comment>
+  </data>
   <data name="drag-here-to-resize" xml:space="preserve">
     <value>Потяните чтобы изменить размер окна</value>
     <comment>Picture in picture</comment>
@@ -299,6 +299,10 @@
   </data>
   <data name="edit-image" xml:space="preserve">
     <value>Редактировать</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="effects" xml:space="preserve">
+    <value>Эффекты</value>
     <comment>Menu</comment>
   </data>
   <data name="error" xml:space="preserve">
@@ -573,10 +577,6 @@
     <value>Вебсайт плагина</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="plugins" xml:space="preserve">
-    <value>Плагины</value>
-    <comment>Menu</comment>
-  </data>
   <data name="plus" xml:space="preserve">
     <value>Плюс</value>
     <comment>Menu</comment>
@@ -749,6 +749,10 @@
     <value>Заголовок</value>
     <comment>Print</comment>
   </data>
+  <data name="tools" xml:space="preserve">
+    <value>Инструменты</value>
+    <comment>Menu</comment>
+  </data>
   <data name="top" xml:space="preserve">
     <value>Сверху</value>
     <comment>Print</comment>
@@ -774,16 +778,20 @@
     <comment>Message box</comment>
   </data>
   <data name="unable-to-open-file" xml:space="preserve">
-    <value>Невозможно открыть этот файл</value>
+    <value>Невозможно открыть файл</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">
     <value>Не удалось запустить стороннее приложение</value>
     <comment>Message box</comment>
   </data>
-  <data name="unsaved-data-lost" xml:space="preserve">
-    <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите открыть новое изображение?</value>
-    <comment>Message box</comment>
+  <data name="unsaved-changes" xml:space="preserve">
+    <value>Несохраненные изменения</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsaved-changes-question" xml:space="preserve">
+    <value>Текущее изображение имеет несохраненные изменения. Чтобы Вы хотели сделать?</value>
+    <comment>Main window</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Обновление невозможно</value>

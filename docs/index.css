@@ -26,16 +26,6 @@ body {
     background: #f1f1f1;  
 }
 
-#snow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 1000;
-}
-
 /* HEADER */
 
 header {
@@ -390,6 +380,7 @@ footer a:hover {
 
     .hero .buttons a {
         display: block;
+        margin: 8px 0;
     }
     
     .hero .buttons .button {
@@ -409,4 +400,16 @@ footer a:hover {
         gap: 8px;
         text-align: center;
     }
+}
+
+/* SPECIAL EFFECTS */
+
+.special-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
 }

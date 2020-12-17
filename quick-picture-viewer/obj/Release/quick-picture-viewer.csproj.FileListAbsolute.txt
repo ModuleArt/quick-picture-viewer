@@ -33,3 +33,8 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-p
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.csproj.CopyComplete
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.exe
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.pdb
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Utf8Json.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Utf8Json.xml
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.NavPanel.resources
