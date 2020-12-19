@@ -44,6 +44,7 @@ header a {
 
 header .logo {
     transition: transform var(--animation-speed);
+	padding: 6px 0;
 }
 
 header a:hover .logo {
@@ -65,6 +66,12 @@ header .logo span {
     vertical-align: middle;
     padding: 0 4px 0 16px;
     font: bold 20px/30px "Inter";
+}
+
+header .logo .tagline {
+    font-size: 14px;
+    opacity: 0.5;
+    font-weight: normal;
 }
 
 header .navbar .link {
@@ -364,7 +371,7 @@ footer a:hover {
 
 /* MEDIA */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
     header {
         justify-content: center;
     }
@@ -399,6 +406,12 @@ footer a:hover {
         flex-direction: column;
         gap: 8px;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header .tagline {
+        display: none;
     }
 }
 
