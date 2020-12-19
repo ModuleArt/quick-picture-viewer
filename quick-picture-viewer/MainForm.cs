@@ -1099,6 +1099,8 @@ namespace quick_picture_viewer
 					{
 						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
 					}
+
+					picturePanel.Update();
 				}
 			}
 		}

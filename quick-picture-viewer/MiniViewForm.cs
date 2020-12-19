@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Timers;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -19,7 +18,6 @@ namespace quick_picture_viewer
 		private int height = 0;
 		private Point panelMouseDownLocation;
 		private MainForm owner;
-		private System.Timers.Timer resizeTimer = new System.Timers.Timer();
 
 		public MiniViewForm(Image image, string title, bool checkboardBackground)
 		{
@@ -41,20 +39,10 @@ namespace quick_picture_viewer
 
 			ratio = (float)image.Width / (float)image.Height;
 
-			if (image.Width > image.Height)
+			Height = Convert.ToInt32(Width / ratio);
+			if (Height == MaximumSize.Height)
 			{
-				Width = 400;
-				Height = Convert.ToInt32(400 / ratio);
-			}
-			else
-			{
-				Width = Convert.ToInt32(400 * ratio);
-				Height = 400;
-			}
-
-			if (Width <= 200)
-			{
-				Height = Convert.ToInt32(Width / ratio);
+				Width = Convert.ToInt32(Height * ratio);
 			}
 
 			pictureBox.Image = image;
@@ -71,9 +59,6 @@ namespace quick_picture_viewer
 			{
 				ThemeManager.setDarkModeToControl(picturePanel.Handle);
 			}
-
-			resizeTimer.Elapsed += new ElapsedEventHandler(resizeTimer_Elapsed);
-			resizeTimer.Interval = 25;
 		}
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
@@ -167,29 +152,6 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void resizeTimer_Elapsed(object sender, ElapsedEventArgs e)
-		{
-			try
-			{
-				Invoke((MethodInvoker)(() => {
-					Point curPos = PointToClient(Cursor.Position);
-
-					int newWidth = curSize.Width + curPos.X - startPos.X;
-
-					Console.WriteLine(newWidth);
-					Console.WriteLine(ratio);
-
-					int newHeight = Convert.ToInt32(newWidth / ratio);
-
-					Size = new Size(newWidth, newHeight);
-				}));
-			}
-			catch
-			{
-
-			}
-		}
-
 		private void MiniViewForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Owner.Show();
@@ -220,7 +182,6 @@ namespace quick_picture_viewer
 				closeBtn.Visible = b;
 				zoomLabel.Visible = b;
 				autoZoomBtn.Visible = b;
-				resizeBtn.Visible = b;
 			}
 		}
 
@@ -317,6 +278,12 @@ namespace quick_picture_viewer
 				pictureBox.Dock = DockStyle.Fill;
 
 				zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
+
+				Height = Convert.ToInt32(Width / ratio);
+				if (Height == MaximumSize.Height)
+				{
+					Width = Convert.ToInt32(Height * ratio);
+				}
 			}
 			else
 			{
@@ -350,7 +317,6 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
 		{
-			resizeTimer.Stop();
 			Cursor.Current = Cursors.Default;
 		}
 
@@ -394,6 +360,8 @@ namespace quick_picture_viewer
 				{
 					picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
 				}
+
+				pictureBox.Update();
 			}
 		}
 
@@ -415,7 +383,6 @@ namespace quick_picture_viewer
 			Cursor.Current = Cursors.SizeNWSE;
 			startPos = PointToClient(Cursor.Position);
 			curSize = Size;
-			resizeTimer.Start();
 		}
 
 		private void checkerboardBackgroundToolStripMenuItem_Click(object sender, EventArgs e)
@@ -427,6 +394,40 @@ namespace quick_picture_viewer
 		private void newWindowBtn_Click(object sender, EventArgs e)
 		{
 			owner.NewWindow();
+		}
+
+		private void resizeBtn_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				Point curPos = PointToClient(Cursor.Position);
+
+				int newWidth = curSize.Width + curPos.X - startPos.X;
+
+				if (newWidth < MinimumSize.Width)
+				{
+					newWidth = MinimumSize.Width;
+				}
+
+				int newHeight;
+				if (autoZoom)
+				{
+					newHeight = Convert.ToInt32(newWidth / ratio);
+				}
+				else
+				{
+					newHeight = curSize.Height + curPos.Y - startPos.Y;
+				}
+
+				if (newHeight == MaximumSize.Height)
+				{
+					newWidth = Convert.ToInt32(newHeight * ratio);
+				}
+
+				Size = new Size(newWidth, newHeight);
+
+				Update();
+			}
 		}
 	}
 }

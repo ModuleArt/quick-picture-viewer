@@ -32,17 +32,17 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiniViewForm));
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.zoomLabel = new System.Windows.Forms.Label();
-			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.contextMenuStrip1 = new QuickLibrary.QlibContextMenuStrip(this.components);
 			this.checkboardBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.qlibMenuSeparator2 = new QuickLibrary.QlibToolsep();
 			this.newWindowBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.picturePanel.SuspendLayout();
+			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.contextMenuStrip1.SuspendLayout();
+			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -62,27 +62,6 @@
 			this.zoomLabel.Text = "Zoom: Auto";
 			this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.zoomLabel.Visible = false;
-			// 
-			// picturePanel
-			// 
-			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.picturePanel.AutoScroll = true;
-			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.picturePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.picturePanel.ContextMenuStrip = this.contextMenuStrip1;
-			this.picturePanel.Controls.Add(this.pictureBox);
-			this.picturePanel.Location = new System.Drawing.Point(0, 0);
-			this.picturePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.Size = new System.Drawing.Size(400, 400);
-			this.picturePanel.TabIndex = 5;
-			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.picturePanel.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
-			this.picturePanel.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
-			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// contextMenuStrip1
 			// 
@@ -122,25 +101,6 @@
 			this.newWindowBtn.Size = new System.Drawing.Size(262, 24);
 			this.newWindowBtn.Text = "new window";
 			this.newWindowBtn.Click += new System.EventHandler(this.newWindowBtn_Click);
-			// 
-			// pictureBox
-			// 
-			this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.pictureBox.Location = new System.Drawing.Point(1, 1);
-			this.pictureBox.Margin = new System.Windows.Forms.Padding(1);
-			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(398, 398);
-			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox.TabIndex = 0;
-			this.pictureBox.TabStop = false;
-			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.pictureBox.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
-			this.pictureBox.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
-			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// autoZoomBtn
 			// 
@@ -200,15 +160,53 @@
 			this.resizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("resizeBtn.Image")));
 			this.resizeBtn.IsRed = false;
 			this.resizeBtn.LightImage = ((System.Drawing.Image)(resources.GetObject("resizeBtn.LightImage")));
-			this.resizeBtn.Location = new System.Drawing.Point(368, 368);
+			this.resizeBtn.Location = new System.Drawing.Point(382, 382);
 			this.resizeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.resizeBtn.Name = "resizeBtn";
-			this.resizeBtn.Size = new System.Drawing.Size(31, 31);
+			this.resizeBtn.Size = new System.Drawing.Size(17, 17);
 			this.resizeBtn.TabIndex = 5;
 			this.resizeBtn.UseVisualStyleBackColor = false;
-			this.resizeBtn.Visible = false;
 			this.resizeBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseDown);
+			this.resizeBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseMove);
 			this.resizeBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// picturePanel
+			// 
+			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.picturePanel.AutoScroll = true;
+			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.picturePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.picturePanel.ContextMenuStrip = this.contextMenuStrip1;
+			this.picturePanel.Controls.Add(this.pictureBox);
+			this.picturePanel.Location = new System.Drawing.Point(1, 1);
+			this.picturePanel.Margin = new System.Windows.Forms.Padding(1);
+			this.picturePanel.Name = "picturePanel";
+			this.picturePanel.Size = new System.Drawing.Size(398, 398);
+			this.picturePanel.TabIndex = 5;
+			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
+			this.picturePanel.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
+			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// pictureBox
+			// 
+			this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox.Margin = new System.Windows.Forms.Padding(1);
+			this.pictureBox.Name = "pictureBox";
+			this.pictureBox.Size = new System.Drawing.Size(398, 398);
+			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox.TabIndex = 0;
+			this.pictureBox.TabStop = false;
+			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.pictureBox.MouseEnter += new System.EventHandler(this.MiniViewForm_MouseEnter);
+			this.pictureBox.MouseLeave += new System.EventHandler(this.MiniViewForm_MouseLeave);
+			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
 			// MiniViewForm
 			// 
@@ -225,7 +223,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(207, 207);
+			this.MinimumSize = new System.Drawing.Size(200, 200);
 			this.Name = "MiniViewForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Quick Picture Viewer";
@@ -235,8 +233,8 @@
 			this.Load += new System.EventHandler(this.MiniViewForm_Load);
 			this.SizeChanged += new System.EventHandler(this.MiniViewForm_ResizeEnd);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiniViewForm_KeyDown);
-			this.picturePanel.ResumeLayout(false);
 			this.contextMenuStrip1.ResumeLayout(false);
+			this.picturePanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 

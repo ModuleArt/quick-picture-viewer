@@ -122,7 +122,7 @@
 			// restartLabel1
 			// 
 			this.restartLabel1.AutoSize = true;
-			this.restartLabel1.Location = new System.Drawing.Point(6, 197);
+			this.restartLabel1.Location = new System.Drawing.Point(10, 197);
 			this.restartLabel1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.restartLabel1.Name = "restartLabel1";
 			this.restartLabel1.Size = new System.Drawing.Size(114, 19);
@@ -299,7 +299,7 @@
 			this.escToExitCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.escToExitCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.escToExitCheckBox.DarkMode = false;
-			this.escToExitCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.escToExitCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.escToExitCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.escToExitCheckBox.Image = null;
 			this.escToExitCheckBox.ImageIndex = 0;
@@ -319,7 +319,7 @@
 			this.fullscrCursorCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.fullscrCursorCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.fullscrCursorCheckBox.DarkMode = false;
-			this.fullscrCursorCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.fullscrCursorCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.fullscrCursorCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.fullscrCursorCheckBox.Image = null;
 			this.fullscrCursorCheckBox.ImageIndex = 0;
@@ -405,7 +405,7 @@
 			this.slideshowCounterCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.slideshowCounterCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.slideshowCounterCheckBox.DarkMode = false;
-			this.slideshowCounterCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.slideshowCounterCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.slideshowCounterCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.slideshowCounterCheckBox.Image = null;
 			this.slideshowCounterCheckBox.ImageIndex = 0;
@@ -441,7 +441,7 @@
 			this.startupBoundsCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.startupBoundsCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.startupBoundsCheckBox.DarkMode = false;
-			this.startupBoundsCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.startupBoundsCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.startupBoundsCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.startupBoundsCheckBox.Image = null;
 			this.startupBoundsCheckBox.ImageIndex = 0;
@@ -461,7 +461,7 @@
 			this.updatesCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.updatesCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.updatesCheckBox.DarkMode = false;
-			this.updatesCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.updatesCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.updatesCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.updatesCheckBox.Image = null;
 			this.updatesCheckBox.ImageIndex = 0;
@@ -481,7 +481,7 @@
 			this.startupPasteCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.startupPasteCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.startupPasteCheckBox.DarkMode = false;
-			this.startupPasteCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.startupPasteCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.startupPasteCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.startupPasteCheckBox.Image = null;
 			this.startupPasteCheckBox.ImageIndex = 0;
@@ -543,7 +543,7 @@
 			this.browseWithCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.browseWithCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.browseWithCheckBox.DarkMode = false;
-			this.browseWithCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.browseWithCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.browseWithCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.browseWithCheckBox.Image = null;
 			this.browseWithCheckBox.ImageIndex = 0;
@@ -573,7 +573,7 @@
 			this.openWithCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.openWithCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.openWithCheckBox.DarkMode = false;
-			this.openWithCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.openWithCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.openWithCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.openWithCheckBox.Image = null;
 			this.openWithCheckBox.ImageIndex = 0;
