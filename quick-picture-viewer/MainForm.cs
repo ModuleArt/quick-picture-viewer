@@ -758,7 +758,10 @@ namespace quick_picture_viewer
 
 		private void setZoomText(string text)
 		{
-			zoomTextBox.TextBox.Invoke((MethodInvoker)(() => zoomTextBox.Text = text));
+			if (!string.IsNullOrEmpty(text) && !zoomTextBox.IsDisposed)
+			{
+				zoomTextBox.TextBox.Invoke((MethodInvoker)(() => zoomTextBox.Text = text));
+			}
 		}
 
 		private void setAutoZoom(bool b)
@@ -1187,6 +1190,11 @@ namespace quick_picture_viewer
 				setAlwaysOnTop(false, true);
 
 				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
+
+				if (navPanel != null && !navPanel.IsDisposed && !Properties.Settings.Default.NavPanelInFullscreen)
+				{
+					navPanel.Visible = false;
+				}
 			}
 			else
 			{
@@ -1218,6 +1226,11 @@ namespace quick_picture_viewer
 					{
 						picturePanel.BackColor = Color.Transparent;
 					}
+				}
+
+				if (navPanel != null && !navPanel.IsDisposed)
+				{
+					navPanel.Visible = true;
 				}
 			}
 

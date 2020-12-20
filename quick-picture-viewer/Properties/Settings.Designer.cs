@@ -238,5 +238,17 @@ namespace quick_picture_viewer.Properties {
                 this["NavPanel"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool NavPanelInFullscreen {
+            get {
+                return ((bool)(this["NavPanelInFullscreen"]));
+            }
+            set {
+                this["NavPanelInFullscreen"] = value;
+            }
+        }
     }
 }

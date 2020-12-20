@@ -95,6 +95,9 @@ namespace quick_picture_viewer
 			slideshowTimeNumeric.Value = Properties.Settings.Default.SlideshowTime;
 			slideshowCounterCheckBox.Checked = Properties.Settings.Default.SlideshowCounter;
 
+			navBarCheckBox.Checked = Properties.Settings.Default.NavPanel;
+			navBarFullscreenCheckBox.Checked = Properties.Settings.Default.NavPanelInFullscreen;
+
 			for (int i = 0; i < languages.Length; i++)
 			{
 				if (Properties.Settings.Default.Language == languages[i].Code)
@@ -149,6 +152,9 @@ namespace quick_picture_viewer
 			localizationRestart.Text = owner.resMan.GetString("restart");
 			contextMenuLabel.Text = owner.resMan.GetString("context-menu") + ":";
 			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
+			navBarPage.Text = owner.resMan.GetString("navigation-bar");
+			navBarCheckBox.Text = owner.resMan.GetString("enable-navigation-bar");
+			navBarFullscreenCheckBox.Text = owner.resMan.GetString("nav-bar-fullscreen");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -185,6 +191,8 @@ namespace quick_picture_viewer
 			startupBoundsCheckBox.DarkMode = dark;
 			openWithCheckBox.DarkMode = dark;
 			browseWithCheckBox.DarkMode = dark;
+			navBarCheckBox.DarkMode = dark;
+			navBarFullscreenCheckBox.DarkMode = dark;
 		}
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
@@ -491,6 +499,24 @@ namespace quick_picture_viewer
 			catch
 			{
 				return false;
+			}
+		}
+
+		private void navBarCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.NavPanel = navBarCheckBox.Checked;
+				Properties.Settings.Default.Save();
+			}
+		}
+
+		private void navBarFullscreenCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			if (settingsStarted)
+			{
+				Properties.Settings.Default.NavPanelInFullscreen = navBarFullscreenCheckBox.Checked;
+				Properties.Settings.Default.Save();
 			}
 		}
 	}

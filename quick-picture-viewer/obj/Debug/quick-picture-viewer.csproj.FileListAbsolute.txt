@@ -6,11 +6,9 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-pic
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.exe
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\quick-picture-viewer.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Fizzler.dll
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Newtonsoft.Json.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Octokit.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Pfim.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Svg.dll
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Newtonsoft.Json.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Octokit.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Svg.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.InfoForm.resources
