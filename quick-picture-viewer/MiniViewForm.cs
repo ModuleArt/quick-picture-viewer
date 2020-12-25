@@ -51,14 +51,13 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
-			closeBtn.DarkMode = true;
-			autoZoomBtn.DarkMode = true;
-			resizeBtn.DarkMode = true;
 			contextMenuStrip1.SetDarkMode(true);
 			if (ThemeManager.isWindows10())
 			{
 				ThemeManager.setDarkModeToControl(picturePanel.Handle);
 			}
+
+			Opacity = Properties.Settings.Default.PipOpacity;
 		}
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
@@ -182,6 +181,7 @@ namespace quick_picture_viewer
 				closeBtn.Visible = b;
 				zoomLabel.Visible = b;
 				autoZoomBtn.Visible = b;
+				opacityBtn.Visible = b;
 			}
 		}
 
@@ -202,6 +202,7 @@ namespace quick_picture_viewer
 			Text = owner.resMan.GetString("picture-in-picture");
 			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
 			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
+			infoTooltip.SetToolTip(opacityBtn, owner.resMan.GetString("change-window-opacity") + " | Ctrl+O");
 			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
 			checkboardBtn.Text = owner.resMan.GetString("checkboard-background");
 			newWindowBtn.Text = owner.resMan.GetString("new-window");
@@ -240,6 +241,10 @@ namespace quick_picture_viewer
 					{
 						owner.setCheckboardBackground(!checkboardBackground, true);
 						setCheckboardBackground(!checkboardBackground);
+					}
+					else if (e.KeyCode == Keys.O)
+					{
+						opacityBtn.PerformClick();
 					}
 					else if (e.KeyCode == Keys.OemMinus)
 					{
@@ -428,6 +433,28 @@ namespace quick_picture_viewer
 
 				Update();
 			}
+		}
+
+		private void opacityBtn_Click(object sender, EventArgs e)
+		{
+			if (Opacity == 1)
+			{
+				Opacity = 0.75;
+			}
+			else if (Opacity == 0.75)
+			{
+				Opacity = 0.5;
+			}
+			else if (Opacity == 0.5)
+			{
+				Opacity = 0.25;
+			}
+			else if (Opacity == 0.25)
+			{
+				Opacity = 1;
+			}
+			Properties.Settings.Default.PipOpacity = Opacity;
+			Properties.Settings.Default.Save();
 		}
 	}
 }

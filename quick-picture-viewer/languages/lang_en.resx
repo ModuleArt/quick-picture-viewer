@@ -193,6 +193,10 @@
     <value>centimeters</value>
     <comment>Image info</comment>
   </data>
+  <data name="change-window-opacity" xml:space="preserve">
+    <value>Change window opacity</value>
+    <comment>Picture in picture</comment>
+  </data>
   <data name="check-for-app-updates" xml:space="preserve">
     <value>Check for app updates</value>
     <comment>Settings</comment>

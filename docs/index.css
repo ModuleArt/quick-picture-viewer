@@ -134,7 +134,7 @@ header .navbar a:hover .link {
     padding: 12px 24px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    transition: transform var(--animation-speed), filter var(--animation-speed);
+    transition: transform var(--animation-speed), filter var(--animation-speed), border-color var(--animation-speed);
 }
 
 .hero .button.dark {
@@ -145,10 +145,12 @@ header .navbar a:hover .link {
 
 .hero a:hover .button {
     transform: translateY(-8px);
+	border-color: #fff;
 }
 
 .hero a:hover .button.dark {
     filter: var(--filter-shadow-extra-black);
+	border-color: rgba(0, 0, 0, 0.25);
 }
 
 .hero .button span {

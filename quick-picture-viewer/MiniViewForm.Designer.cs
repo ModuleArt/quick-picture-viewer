@@ -39,6 +39,7 @@
 			this.autoZoomBtn = new QuickLibrary.QlibTitlebarButton();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.opacityBtn = new QuickLibrary.QlibTitlebarButton();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.contextMenuStrip1.SuspendLayout();
@@ -57,7 +58,7 @@
 			this.zoomLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.zoomLabel.Name = "zoomLabel";
 			this.zoomLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.zoomLabel.Size = new System.Drawing.Size(336, 32);
+			this.zoomLabel.Size = new System.Drawing.Size(304, 32);
 			this.zoomLabel.TabIndex = 4;
 			this.zoomLabel.Text = "Zoom: Auto";
 			this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,10 +107,10 @@
 			// 
 			this.autoZoomBtn.Cursor = System.Windows.Forms.Cursors.Default;
 			this.autoZoomBtn.DarkImage = null;
-			this.autoZoomBtn.DarkMode = false;
+			this.autoZoomBtn.DarkMode = true;
 			this.autoZoomBtn.FlatAppearance.BorderSize = 0;
 			this.autoZoomBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-			this.autoZoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.autoZoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
 			this.autoZoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.autoZoomBtn.ForeColor = System.Drawing.Color.Black;
 			this.autoZoomBtn.Image = global::quick_picture_viewer.Properties.Resources.white_autozoom;
@@ -128,10 +129,10 @@
 			// 
 			this.closeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.closeBtn.DarkImage = null;
-			this.closeBtn.DarkMode = false;
+			this.closeBtn.DarkMode = true;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(10)))), ((int)(((byte)(20)))));
+			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.ForeColor = System.Drawing.Color.Black;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
@@ -151,10 +152,10 @@
 			this.resizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.resizeBtn.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
 			this.resizeBtn.DarkImage = null;
-			this.resizeBtn.DarkMode = false;
+			this.resizeBtn.DarkMode = true;
 			this.resizeBtn.FlatAppearance.BorderSize = 0;
 			this.resizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-			this.resizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.resizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
 			this.resizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.resizeBtn.ForeColor = System.Drawing.Color.Black;
 			this.resizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("resizeBtn.Image")));
@@ -169,6 +170,29 @@
 			this.resizeBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseDown);
 			this.resizeBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseMove);
 			this.resizeBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// opacityBtn
+			// 
+			this.opacityBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.opacityBtn.Cursor = System.Windows.Forms.Cursors.Default;
+			this.opacityBtn.DarkImage = null;
+			this.opacityBtn.DarkMode = true;
+			this.opacityBtn.FlatAppearance.BorderSize = 0;
+			this.opacityBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+			this.opacityBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.opacityBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.opacityBtn.ForeColor = System.Drawing.Color.Black;
+			this.opacityBtn.Image = global::quick_picture_viewer.Properties.Resources.white_opacity;
+			this.opacityBtn.IsRed = false;
+			this.opacityBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_opacity;
+			this.opacityBtn.Location = new System.Drawing.Point(336, 0);
+			this.opacityBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.opacityBtn.Name = "opacityBtn";
+			this.opacityBtn.Size = new System.Drawing.Size(32, 32);
+			this.opacityBtn.TabIndex = 5;
+			this.opacityBtn.UseVisualStyleBackColor = false;
+			this.opacityBtn.Visible = false;
+			this.opacityBtn.Click += new System.EventHandler(this.opacityBtn_Click);
 			// 
 			// picturePanel
 			// 
@@ -213,6 +237,7 @@
 			this.AlternativeAppearance = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(400, 400);
+			this.Controls.Add(this.opacityBtn);
 			this.Controls.Add(this.zoomLabel);
 			this.Controls.Add(this.autoZoomBtn);
 			this.Controls.Add(this.closeBtn);
@@ -253,5 +278,6 @@
 		private System.Windows.Forms.ToolStripMenuItem checkboardBtn;
 		private System.Windows.Forms.ToolStripMenuItem newWindowBtn;
 		private QuickLibrary.QlibToolsep qlibMenuSeparator2;
+		private QuickLibrary.QlibTitlebarButton opacityBtn;
 	}
 }

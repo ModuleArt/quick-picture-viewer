@@ -232,6 +232,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change window opacity.
+        /// </summary>
+        public static string change_window_opacity {
+            get {
+                return ResourceManager.GetString("change-window-opacity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check for app updates.
         /// </summary>
         public static string check_for_app_updates {

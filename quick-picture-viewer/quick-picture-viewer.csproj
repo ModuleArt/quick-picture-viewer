@@ -349,6 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-opacity.png" />
     <None Include="resources\imgs\dark\black-tools.png" />
     <None Include="resources\imgs\dark\black-effects.png" />
     <None Include="resources\imgs\light\white-effects.png" />

@@ -250,5 +250,17 @@ namespace quick_picture_viewer.Properties {
                 this["NavPanelInFullscreen"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public double PipOpacity {
+            get {
+                return ((double)(this["PipOpacity"]));
+            }
+            set {
+                this["PipOpacity"] = value;
+            }
+        }
     }
 }

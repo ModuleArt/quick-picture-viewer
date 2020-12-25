@@ -58,7 +58,7 @@
 			// 
 			this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.versionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(21)))));
+			this.versionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(124)))), ((int)(((byte)(76)))));
 			this.versionLabel.Location = new System.Drawing.Point(10, 199);
 			this.versionLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.versionLabel.Name = "versionLabel";
@@ -91,7 +91,7 @@
 			// 
 			// descTextBox
 			// 
-			this.descTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(173)))), ((int)(((byte)(43)))));
+			this.descTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(205)))), ((int)(((byte)(126)))));
 			this.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.descTextBox.Location = new System.Drawing.Point(10, 228);
 			this.descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -104,11 +104,11 @@
 			// 
 			// makeDefaultBtn
 			// 
-			this.makeDefaultBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
+			this.makeDefaultBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(188)))), ((int)(((byte)(116)))));
 			this.makeDefaultBtn.Enabled = false;
 			this.makeDefaultBtn.FlatAppearance.BorderSize = 0;
-			this.makeDefaultBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
-			this.makeDefaultBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
+			this.makeDefaultBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(156)))), ((int)(((byte)(96)))));
+			this.makeDefaultBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
 			this.makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.makeDefaultBtn.Location = new System.Drawing.Point(10, 418);
 			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
@@ -123,7 +123,7 @@
 			// 
 			this.copyrightLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyrightLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(21)))));
+			this.copyrightLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(124)))), ((int)(((byte)(76)))));
 			this.copyrightLabel.Location = new System.Drawing.Point(10, 470);
 			this.copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.copyrightLabel.Name = "copyrightLabel";
@@ -135,10 +135,10 @@
 			// 
 			// updatesBtn
 			// 
-			this.updatesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
+			this.updatesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(188)))), ((int)(((byte)(116)))));
 			this.updatesBtn.FlatAppearance.BorderSize = 0;
-			this.updatesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
-			this.updatesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
+			this.updatesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(156)))), ((int)(((byte)(96)))));
+			this.updatesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
 			this.updatesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.updatesBtn.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
 			this.updatesBtn.Location = new System.Drawing.Point(10, 334);
@@ -154,10 +154,10 @@
 			// 
 			// developerBtn
 			// 
-			this.developerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
+			this.developerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(188)))), ((int)(((byte)(116)))));
 			this.developerBtn.FlatAppearance.BorderSize = 0;
-			this.developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
-			this.developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
+			this.developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(156)))), ((int)(((byte)(96)))));
+			this.developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
 			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
 			this.developerBtn.Location = new System.Drawing.Point(150, 376);
@@ -173,10 +173,10 @@
 			// 
 			// githubBtn
 			// 
-			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(159)))), ((int)(((byte)(39)))));
+			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(188)))), ((int)(((byte)(116)))));
 			this.githubBtn.FlatAppearance.BorderSize = 0;
-			this.githubBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
-			this.githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(36)))));
+			this.githubBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(156)))), ((int)(((byte)(96)))));
+			this.githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
 			this.githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.githubBtn.Image = ((System.Drawing.Image)(resources.GetObject("githubBtn.Image")));
 			this.githubBtn.Location = new System.Drawing.Point(10, 376);
@@ -216,7 +216,7 @@
 			this.Controls.Add(this.versionLabel);
 			this.Controls.Add(this.productLabel);
 			this.CustomBack = true;
-			this.CustomBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(173)))), ((int)(((byte)(43)))));
+			this.CustomBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(205)))), ((int)(((byte)(126)))));
 			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
