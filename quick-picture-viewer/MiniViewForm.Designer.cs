@@ -248,7 +248,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(200, 200);
+			this.MinimumSize = new System.Drawing.Size(240, 240);
 			this.Name = "MiniViewForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Quick Picture Viewer";

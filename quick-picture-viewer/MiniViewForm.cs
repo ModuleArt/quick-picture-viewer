@@ -57,7 +57,10 @@ namespace quick_picture_viewer
 				ThemeManager.setDarkModeToControl(picturePanel.Handle);
 			}
 
-			Opacity = Properties.Settings.Default.PipOpacity;
+			if (Properties.Settings.Default.PipOpacity >= 0.25)
+			{
+				Opacity = Properties.Settings.Default.PipOpacity;
+			}
 		}
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)

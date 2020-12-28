@@ -84,7 +84,16 @@ namespace quick_picture_viewer
 			{
 				StartPosition = FormStartPosition.Manual;
 				Location = Properties.Settings.Default.StartupWindowLocation;
-				Size = Properties.Settings.Default.StartupWindowSize;
+
+				if (Properties.Settings.Default.StartupWindowSize.Width >= MinimumSize.Width && Properties.Settings.Default.StartupWindowSize.Height >= MinimumSize.Height)
+				{
+					Size = Properties.Settings.Default.StartupWindowSize;
+				}
+				else
+				{
+					Properties.Settings.Default.StartupWindowSize = new Size(700, 485);
+				}
+				
 			}
 			if (Properties.Settings.Default.StartupMaximize)
 			{
@@ -394,6 +403,10 @@ namespace quick_picture_viewer
 				{
 					openDdsOrTga(path);
 				}
+				//else if (ext == ".heic" || ext == ".heif")
+				//{
+				//	openHeic(path);
+				//}
 				else
 				{
 					if (ext == ".gif")
@@ -468,17 +481,15 @@ namespace quick_picture_viewer
 						var bitmap = new Bitmap(image.Width, image.Height, image.Stride, format, data);
 						openImage(bitmap, Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
-					catch (Exception ex)
+					catch
 					{
 						showSuggestion(resMan.GetString("dds-memory-error"), SuggestionIcon.Warning);
-						Console.WriteLine(ex);
 					}
 				}
 			}
-			catch (Exception ex)
+			catch
 			{
 				showSuggestion(resMan.GetString("unable-open-dds") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-				Console.WriteLine(ex);
 			}
 		}
 
@@ -2213,21 +2224,21 @@ namespace quick_picture_viewer
 			if (navPanel != null && !navPanel.IsDisposed)
 			{
 				navPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-				if (navPanel.Location.X < 27)
+				if (navPanel.Location.X < navPanel.borderSpacing)
 				{
-					navPanel.Location = new Point(27, navPanel.Location.Y);
+					navPanel.Location = new Point(navPanel.borderSpacing, navPanel.Location.Y);
 				}
-				if (navPanel.Location.Y < 27 + toolStrip1.Location.Y)
+				if (navPanel.Location.Y < navPanel.borderSpacing + toolStrip1.Location.Y)
 				{
-					navPanel.Location = new Point(navPanel.Location.X, 27 + toolStrip1.Location.Y);
+					navPanel.Location = new Point(navPanel.Location.X, navPanel.borderSpacing + toolStrip1.Location.Y);
 				}
-				if (navPanel.Location.X + navPanel.Width > ClientRectangle.Width - 27)
+				if (navPanel.Location.X + navPanel.Width > ClientRectangle.Width - navPanel.borderSpacing)
 				{
-					navPanel.Location = new Point(ClientRectangle.Width - 27 - navPanel.Width, navPanel.Location.Y);
+					navPanel.Location = new Point(ClientRectangle.Width - navPanel.borderSpacing - navPanel.Width, navPanel.Location.Y);
 				}
-				if (navPanel.Location.Y + navPanel.Height > ClientRectangle.Height - 27 - statusStrip1.Height)
+				if (navPanel.Location.Y + navPanel.Height > ClientRectangle.Height - navPanel.borderSpacing - statusStrip1.Height)
 				{
-					navPanel.Location = new Point(navPanel.Location.X, ClientRectangle.Height - 27 - navPanel.Height - statusStrip1.Height);
+					navPanel.Location = new Point(navPanel.Location.X, ClientRectangle.Height - navPanel.borderSpacing - navPanel.Height - statusStrip1.Height);
 				}
 			}
 		}
@@ -2368,19 +2379,19 @@ namespace quick_picture_viewer
 			if (navPanel != null && !navPanel.IsDisposed)
 			{
 				navPanel.Anchor = AnchorStyles.None;
-				if (navPanel.Location.X == 27)
+				if (navPanel.Location.X == navPanel.borderSpacing)
 				{
 					navPanel.Anchor |= AnchorStyles.Left;
 				}
-				if (navPanel.Location.Y == toolStrip1.Height + 27)
+				if (navPanel.Location.Y == toolStrip1.Height + navPanel.borderSpacing)
 				{
 					navPanel.Anchor |= AnchorStyles.Top;
 				}
-				if (navPanel.Location.X + navPanel.Width == ClientRectangle.Width - 27)
+				if (navPanel.Location.X + navPanel.Width == ClientRectangle.Width - navPanel.borderSpacing)
 				{
 					navPanel.Anchor |= AnchorStyles.Right;
 				}
-				if (navPanel.Location.Y + navPanel.Height == ClientRectangle.Height - 27 - statusStrip1.Height)
+				if (navPanel.Location.Y + navPanel.Height == ClientRectangle.Height - navPanel.borderSpacing - statusStrip1.Height)
 				{
 					navPanel.Anchor |= AnchorStyles.Bottom;
 				}

@@ -130,7 +130,7 @@
 			this.copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.copyrightLabel.Size = new System.Drawing.Size(270, 19);
 			this.copyrightLabel.TabIndex = 44;
-			this.copyrightLabel.Text = "Copyright © 2020 Module Art";
+			this.copyrightLabel.Text = "Copyright © 2021 Module Art";
 			this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// updatesBtn

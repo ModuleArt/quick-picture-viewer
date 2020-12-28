@@ -34,6 +34,13 @@ namespace quick_picture_viewer
 				param = string.Empty;
 			}
 
+			if (Properties.Settings.Default.CallUpgrade)
+			{
+				Properties.Settings.Default.Upgrade();
+				Properties.Settings.Default.CallUpgrade = false;
+				Properties.Settings.Default.Save();
+			}
+
 			bool darkMode;
 			int theme = Properties.Settings.Default.Theme;
 			if (theme == 0)

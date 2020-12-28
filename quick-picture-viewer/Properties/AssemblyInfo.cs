@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Module Art")]
 [assembly: AssemblyProduct("Quick Picture Viewer")]
-[assembly: AssemblyCopyright("Copyright © 2020 Module Art")]
+[assembly: AssemblyCopyright("Copyright © 2021 Module Art")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

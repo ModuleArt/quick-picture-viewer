@@ -36,3 +36,7 @@ function formatBytes(bytes, decimals = 1) {
 
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
+
+function scrollToId(id) {
+	$("body,html").animate({ scrollTop: document.getElementById(id).offsetTop }, 800);
+}

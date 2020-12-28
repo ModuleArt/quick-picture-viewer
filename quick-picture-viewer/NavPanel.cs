@@ -6,6 +6,8 @@ namespace quick_picture_viewer
 {
 	public partial class NavPanel : UserControl
 	{
+		public int borderSpacing = 27;
+
 		private Point navPanelRelPoint;
 		private int extraTopMargin;
 		private int extraBottomMargin;
@@ -50,21 +52,21 @@ namespace quick_picture_viewer
 			if (e.Button == MouseButtons.Left)
 			{
 				Point newLoc = new Point(e.X + Location.X - navPanelRelPoint.X, e.Y + Location.Y - navPanelRelPoint.Y);
-				if (newLoc.X < 27)
+				if (newLoc.X < borderSpacing)
 				{
-					newLoc.X = 27;
+					newLoc.X = borderSpacing;
 				}
-				if (newLoc.Y < 27 + extraTopMargin)
+				if (newLoc.Y < borderSpacing + extraTopMargin)
 				{
-					newLoc.Y = 27 + extraTopMargin;
+					newLoc.Y = borderSpacing + extraTopMargin;
 				}
-				if (newLoc.X + Width > Parent.ClientRectangle.Width - 27)
+				if (newLoc.X + Width > Parent.ClientRectangle.Width - borderSpacing)
 				{
-					newLoc.X = Parent.ClientRectangle.Width - 27 - Width;
+					newLoc.X = Parent.ClientRectangle.Width - borderSpacing - Width;
 				}
-				if (newLoc.Y + Height > Parent.ClientRectangle.Height - 27 - extraBottomMargin)
+				if (newLoc.Y + Height > Parent.ClientRectangle.Height - borderSpacing - extraBottomMargin)
 				{
-					newLoc.Y = Parent.ClientRectangle.Height - 27 - Height - extraBottomMargin;
+					newLoc.Y = Parent.ClientRectangle.Height - borderSpacing - Height - extraBottomMargin;
 				}
 				Location = newLoc;
 			}
