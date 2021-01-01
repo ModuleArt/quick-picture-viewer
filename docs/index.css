@@ -267,14 +267,29 @@ main .content {
     box-sizing: border-box;
 }
 
-main .content table {
-    width: 100%;
-    min-width: 400px;
+main .content .flex-table {
+	min-width: 400px;
+	display: flex;
+	justify-content: space-between;
 }
 
-main .content th, main .content td {
-    padding: 8px 0;
-    text-align: center;
+main .content .flex-table-row, main .content .flex-table-header {
+	padding: 8px 0;
+}
+
+main .content .flex-table-header {
+	font-weight: bold;
+}
+
+main .content .flex-table-col span {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+main .content .flex-table-col img {
+	vertical-align: middle;
+	margin-right: 10px;
+	display: inline-block;
 }
 
 main .content a {
