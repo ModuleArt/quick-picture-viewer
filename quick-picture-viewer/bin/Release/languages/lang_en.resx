@@ -193,6 +193,10 @@
     <value>centimeters</value>
     <comment>Image info</comment>
   </data>
+  <data name="change-window-opacity" xml:space="preserve">
+    <value>Change window opacity</value>
+    <comment>Picture in picture</comment>
+  </data>
   <data name="check-for-app-updates" xml:space="preserve">
     <value>Check for app updates</value>
     <comment>Settings</comment>
@@ -262,7 +266,7 @@
     <comment>Settings</comment>
   </data>
   <data name="dds-memory-error" xml:space="preserve">
-    <value>DDS/TGA memory error</value>
+    <value>DDS/TGA: Memory error</value>
     <comment>Message box</comment>
   </data>
   <data name="delete-file" xml:space="preserve">
@@ -782,7 +786,11 @@
     <comment>Settings</comment>
   </data>
   <data name="unable-open-dds" xml:space="preserve">
-    <value>Unable to open DDS or TGA file</value>
+    <value>DDS/TGA: Unable to open the file</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-psd" xml:space="preserve">
+    <value>PSD: Unable to open the file</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-open-svg" xml:space="preserve">

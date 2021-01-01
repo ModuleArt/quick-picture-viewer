@@ -95,6 +95,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\quick-library\QuickLibrary\bin\Release\QuickLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="SimplePsd, Version=1.0.6.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\dlls\SimplePsd.dll</HintPath>
+    </Reference>
     <Reference Include="Svg, Version=3.1.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
       <HintPath>..\packages\Svg.3.1.1\lib\net452\Svg.dll</HintPath>
     </Reference>
@@ -126,6 +130,7 @@
     <Compile Include="CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DdsWrapper.cs" />
     <Compile Include="IcoWrapper.cs" />
     <Compile Include="InfoForm.cs">
       <SubType>Form</SubType>
@@ -167,6 +172,7 @@
     <Compile Include="PluginManForm.Designer.cs">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PsdWrapper.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>

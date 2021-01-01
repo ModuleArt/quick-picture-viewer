@@ -394,7 +394,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DDS/TGA memory error.
+        ///   Looks up a localized string similar to DDS/TGA: Memory error.
         /// </summary>
         public static string dds_memory_error {
             get {
@@ -1564,11 +1564,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to open DDS or TGA file.
+        ///   Looks up a localized string similar to DDS/TGA: Unable to open the file.
         /// </summary>
         public static string unable_open_dds {
             get {
                 return ResourceManager.GetString("unable-open-dds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PSD: Unable to open the file.
+        /// </summary>
+        public static string unable_open_psd {
+            get {
+                return ResourceManager.GetString("unable-open-psd", resourceCulture);
             }
         }
         

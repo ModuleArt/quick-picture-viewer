@@ -28,10 +28,10 @@
 
 <h2 align="center">Install</h2>
 
-| Windows | Version | Codename | Branch | Release date | Size | Downloads | Link |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> | Community | Stable | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
-| 7-10 | v3.0.0 | Community | Beta 1 | Dec 17, 2020 | 3.7 MB | - | <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.0-beta1.exe">Download (.exe)</a> |
+| Windows | Version | Codename | Release date | Size | Downloads | Link |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> (Stable) | Community | Stable | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
+| 7-10 | v3.0.1 (Beta 2) | Sunshine | Jan 1, 2021 | 3.7 MB | - | <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.1-beta2.exe">Download (.exe)</a> |
 
 <h2 align="center">Features</h2>
 
@@ -73,6 +73,15 @@
 | Plugin | Codename | Type | Last commit date | Last release date |
 | :---: | :---: | :---: | :---: | :---: |
 | <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-blur) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-blur) |
+
+### Contribution:
+
+Help Module Art!
+
+* Give us a star ⭐
+* Fork and Clone! Awesome
+* Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
+
 
 ### How to uninstall built-in photos app in Windows 10:
 <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>

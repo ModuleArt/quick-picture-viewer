@@ -47,7 +47,7 @@
 			this.navPanelDrag.Location = new System.Drawing.Point(0, 0);
 			this.navPanelDrag.Margin = new System.Windows.Forms.Padding(0);
 			this.navPanelDrag.Name = "navPanelDrag";
-			this.navPanelDrag.Size = new System.Drawing.Size(20, 32);
+			this.navPanelDrag.Size = new System.Drawing.Size(17, 32);
 			this.navPanelDrag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.navPanelDrag.TabIndex = 9;
 			this.navPanelDrag.TabStop = false;
@@ -65,7 +65,7 @@
 			this.navSlideshowBtn.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.navSlideshowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_slideshow;
 			this.navSlideshowBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.navSlideshowBtn.Location = new System.Drawing.Point(52, 0);
+			this.navSlideshowBtn.Location = new System.Drawing.Point(49, 0);
 			this.navSlideshowBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.navSlideshowBtn.Name = "navSlideshowBtn";
 			this.navSlideshowBtn.Size = new System.Drawing.Size(32, 32);
@@ -86,7 +86,7 @@
 			this.navNextBtn.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.navNextBtn.Image = global::quick_picture_viewer.Properties.Resources.white_next;
 			this.navNextBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.navNextBtn.Location = new System.Drawing.Point(84, 0);
+			this.navNextBtn.Location = new System.Drawing.Point(81, 0);
 			this.navNextBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.navNextBtn.Name = "navNextBtn";
 			this.navNextBtn.Size = new System.Drawing.Size(32, 32);
@@ -107,7 +107,7 @@
 			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.navPrevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
 			this.navPrevBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.navPrevBtn.Location = new System.Drawing.Point(20, 0);
+			this.navPrevBtn.Location = new System.Drawing.Point(17, 0);
 			this.navPrevBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.navPrevBtn.Name = "navPrevBtn";
 			this.navPrevBtn.Size = new System.Drawing.Size(32, 32);
@@ -129,7 +129,7 @@
 			this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "NavPanel";
-			this.Size = new System.Drawing.Size(116, 32);
+			this.Size = new System.Drawing.Size(113, 32);
 			this.Load += new System.EventHandler(this.NavPanel_Load);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NavPanel_MouseDown);
 			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NavPanel_MouseMove);

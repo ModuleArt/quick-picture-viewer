@@ -193,6 +193,10 @@
     <value>сантиметров</value>
     <comment>Image info</comment>
   </data>
+  <data name="change-window-opacity" xml:space="preserve">
+    <value>Изменить прозрачность окна</value>
+    <comment>Picture in picture</comment>
+  </data>
   <data name="check-for-app-updates" xml:space="preserve">
     <value>Проверить наличие обновлений</value>
     <comment>About</comment>
@@ -783,6 +787,10 @@
   </data>
   <data name="unable-open-dds" xml:space="preserve">
     <value>Невозможно открыть DDS или TGA файл</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-psd" xml:space="preserve">
+    <value />
     <comment>Message box</comment>
   </data>
   <data name="unable-open-svg" xml:space="preserve">

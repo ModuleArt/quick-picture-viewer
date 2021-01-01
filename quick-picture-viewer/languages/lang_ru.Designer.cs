@@ -1573,6 +1573,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string unable_open_psd {
+            get {
+                return ResourceManager.GetString("unable-open-psd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Невозможно открыть SVG файл.
         /// </summary>
         public static string unable_open_svg {

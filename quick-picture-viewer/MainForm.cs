@@ -35,7 +35,6 @@ namespace quick_picture_viewer
 		private bool checkboardBackground = false;
 		private bool slideshow = false;
 		private int slideshowCounter = 0;
-		private GCHandle tmpGcHandle;
 		private bool dragImage = false;
 		private System.Timers.Timer zoomInTimer = new System.Timers.Timer();
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
@@ -213,8 +212,8 @@ namespace quick_picture_viewer
 			prevButton.Text = resMan.GetString("prev-image") + " | " + resMan.GetString("left-arrow");
 			nextButton.Text = resMan.GetString("next-image") + " | " + resMan.GetString("right-arrow");
 
-			hasChangesLabel.Text = resMan.GetString("not-saved");
-			zoomLabel.Text = resMan.GetString("zoom") + ": " + resMan.GetString("auto");
+			hasChangesLabel.Text = " " + resMan.GetString("not-saved");
+			zoomLabel.Text = " " + resMan.GetString("zoom") + ": " + resMan.GetString("auto");
 
 			effectsBtn.Text = resMan.GetString("effects");
 			toolsBtn.Text = resMan.GetString("tools");
@@ -401,12 +400,33 @@ namespace quick_picture_viewer
 				}
 				else if (ext == ".dds" || ext == ".tga")
 				{
-					openDdsOrTga(path);
+					Bitmap bmp = DdsWrapper.ParseDdsOrTga(path);
+					switch (DdsWrapper.CurrentError)
+					{
+						case DdsWrapper.Error.NoError:
+							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+							break;
+						case DdsWrapper.Error.MemoryError:
+							showSuggestion(resMan.GetString("dds-memory-error"), SuggestionIcon.Warning);
+							break;
+						case DdsWrapper.Error.UnableToOpen:
+							showSuggestion(resMan.GetString("unable-open-dds") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							break;
+					}
 				}
-				//else if (ext == ".heic" || ext == ".heif")
-				//{
-				//	openHeic(path);
-				//}
+				else if (ext == ".psd")
+				{
+					Bitmap bmp = PsdWrapper.ParsePsd(path);
+					switch (PsdWrapper.CurrentError)
+					{
+						case PsdWrapper.Error.NoError:
+							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+							break;
+						case PsdWrapper.Error.UnableToOpen:
+							showSuggestion(resMan.GetString("unable-open-psd") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							break;
+					}
+				}
 				else
 				{
 					if (ext == ".gif")
@@ -440,56 +460,6 @@ namespace quick_picture_viewer
 			{
 				showSuggestion(resMan.GetString("unable-to-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
-			}
-		}
-
-		public void openDdsOrTga(string path)
-		{
-			try
-			{
-				using (var image = Pfim.Pfim.FromFile(path))
-				{
-					PixelFormat format;
-
-					switch (image.Format)
-					{
-						case Pfim.ImageFormat.Rgba32:
-							format = PixelFormat.Format32bppArgb;
-							break;
-						case Pfim.ImageFormat.Rgb24:
-							format = PixelFormat.Format24bppRgb;
-							break;
-						case Pfim.ImageFormat.Rgba16:
-							format = PixelFormat.Format16bppArgb1555;
-							break;
-						case Pfim.ImageFormat.Rgb8:
-							format = PixelFormat.Format8bppIndexed;
-							break;
-						default:
-							throw new NotImplementedException();
-					}
-
-					try
-					{
-						if (tmpGcHandle != null && tmpGcHandle.IsAllocated)
-						{
-							tmpGcHandle.Free();
-						}
-
-						tmpGcHandle = GCHandle.Alloc(image.Data, GCHandleType.Pinned);
-						var data = Marshal.UnsafeAddrOfPinnedArrayElement(image.Data, 0);
-						var bitmap = new Bitmap(image.Width, image.Height, image.Stride, format, data);
-						openImage(bitmap, Path.GetDirectoryName(path), Path.GetFileName(path));
-					}
-					catch
-					{
-						showSuggestion(resMan.GetString("dds-memory-error"), SuggestionIcon.Warning);
-					}
-				}
-			}
-			catch
-			{
-				showSuggestion(resMan.GetString("unable-open-dds") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 			}
 		}
 
@@ -1560,7 +1530,7 @@ namespace quick_picture_viewer
 
 		private string[] getCurrentFiles()
 		{
-			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", ".dds", ".tga" };
+			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", ".dds", ".tga", ".psd" };
 			List<string> arlist = new List<string>();
 
 			if (currentFolder != null)
@@ -2340,6 +2310,7 @@ namespace quick_picture_viewer
 
 		private void Tsmi_Output(object sender, OutputEventArgs e)
 		{
+			setImageChanged(false);
 			openImage(e.input as Bitmap, currentFolder, currentFile);
 			setImageChanged(true);
 		}
@@ -2362,15 +2333,6 @@ namespace quick_picture_viewer
 			if (restartApp)
 			{
 				NewWindow();
-			}
-		}
-
-		private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
-		{
-			if (e.Button == MouseButtons.Left)
-			{
-				Cursor.Current = Cursors.SizeAll;
-				NativeMan.DragWindow(Handle);
 			}
 		}
 

@@ -789,6 +789,10 @@
     <value>Невозможно открыть DDS или TGA файл</value>
     <comment>Message box</comment>
   </data>
+  <data name="unable-open-psd" xml:space="preserve">
+    <value />
+    <comment>Message box</comment>
+  </data>
   <data name="unable-open-svg" xml:space="preserve">
     <value>Невозможно открыть SVG файл</value>
     <comment>Message box</comment>

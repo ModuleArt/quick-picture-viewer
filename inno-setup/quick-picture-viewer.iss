@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "3.0.0"
+#define MyAppVersion "3.0.1"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io"
 #define MyAppExeName "quick-picture-viewer.exe"
@@ -20,7 +20,7 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\QuickPictureViewer
 DisableProgramGroupPage=yes
-LicenseFile=D:\Projects\DotNet\quick-picture-viewer\LICENSE.md
+LicenseFile=D:\Projects\DotNet\quick-picture-viewer\LICENSE
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=D:\Projects\DotNet\quick-picture-viewer\inno-setup
@@ -52,6 +52,7 @@ Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Releas
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\SimplePsd.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Pfim.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.dll"; DestDir: "{app}"; Flags: ignoreversion

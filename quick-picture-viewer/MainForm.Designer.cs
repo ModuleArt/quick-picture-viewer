@@ -233,6 +233,7 @@
 			this.toolStrip1.BackColor = System.Drawing.Color.White;
 			this.toolStrip1.CanOverflow = false;
 			this.toolStrip1.DarkMode = false;
+			this.toolStrip1.DragForm = true;
 			this.toolStrip1.ForeColor = System.Drawing.Color.Black;
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -266,7 +267,6 @@
             this.moreButton});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
 			// 
 			// openButton
 			// 
