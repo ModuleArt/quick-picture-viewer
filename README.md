@@ -30,7 +30,7 @@
 
 | Windows | Version | Codename | Release date | Size | Downloads | Link |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> (Stable) | Community | Stable | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
+| 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> (Stable) | Community | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 | 7-10 | v3.0.1 (Beta 2) | Sunshine | Jan 1, 2021 | 3.7 MB | - | <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.1-beta2.exe">Download (.exe)</a> |
 
 <h2 align="center">Features</h2>
@@ -70,9 +70,9 @@
 
 ### Plugins:
 
-| Plugin | Codename | Type | Last commit date | Last release date |
-| :---: | :---: | :---: | :---: | :---: |
-| <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-blur) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-blur) |
+| Plugin | Codename | Type | Last commit date | Last release date | Download (.zip) |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <a href="https://github.com/ModuleArt/qpv-blur">Blur</a> | qpv-blur | Built-in | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-blur) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-blur) | <a href="https://github.com/ModuleArt/qpv-blur/releases/">Releases</a> |
 
 ### Contribution:
 
