@@ -4,7 +4,7 @@
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  Quick Picture Viewer is a lightweight, versatile desktop image viewer for Windows, built on top of WinForms (C#).<br>The best replacement for the default Windows photo viewer.
+  Quick Picture Viewer is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
 </p>
 
 <p align="center">
@@ -54,7 +54,7 @@
 
 | Icon | App name | Last commit date | Last release date | Description |
 | :---: | :---: | :---: | :---: | :---: |
-| <img src="https://github.com/ModuleArt/quick-screen-recorder/blob/master/quick-screen-recorder/resources/imgs/rec64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-screen-recorder) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-screen-recorder) | Lightweight desktop screen recorder for Windows, built on top of WinForms (C#). |
+| <img src="https://github.com/ModuleArt/quick-whiteboard/blob/master/quick-whiteboard/resources/imgs/whiteboard64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-whiteboard) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-whiteboard) | Lightweight tool to draw or keep notes on your desktop background for Windows. |
 | <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-color-picker) | Lightweight desktop color picker and color editor utility for Windows, built on top of WinForms (C#). |
  
 <h2 align="center">More screenshots</h2>
