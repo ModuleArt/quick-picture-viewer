@@ -28,7 +28,7 @@
 
 <h2 align="center">Install</h2>
 
-| Windows | Version | Codename | Release date | Size | Downloads | Link |
+| Windows | Version | Codename | Release date | Size | Downloads | |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> (Stable) | Community | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 | 7-10 | v3.0.1 (Beta 2) | Sunshine | Jan 1, 2021 | 3.7 MB | - | <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.1-beta2.exe">Download (.exe)</a> |
@@ -52,7 +52,7 @@
 
 <h2 align="center">Other great apps</h2>
 
-| Icon | App name | Last commit date | Last release date | Description |
+| | App | Last commit | Last release | Description |
 | :---: | :---: | :---: | :---: | :---: |
 | <img src="https://github.com/ModuleArt/quick-whiteboard/blob/master/quick-whiteboard/resources/imgs/whiteboard64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-whiteboard) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-whiteboard) | Lightweight tool to draw or keep notes on your desktop background for Windows. |
 | <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-color-picker) | Lightweight desktop color picker and color editor utility for Windows, built on top of WinForms (C#). |
