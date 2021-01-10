@@ -403,6 +403,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DDS/TGA: Unsupported pixel format.
+        /// </summary>
+        public static string dds_unsupported_pixel_format {
+            get {
+                return ResourceManager.GetString("dds-unsupported-pixel-format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete file.
         /// </summary>
         public static string delete_file {
@@ -457,15 +466,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Drag here to resize window.
-        /// </summary>
-        public static string drag_here_to_resize {
-            get {
-                return ResourceManager.GetString("drag-here-to-resize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Dragged image.
         /// </summary>
         public static string dragged_image {
@@ -516,6 +516,15 @@ namespace quick_picture_viewer.languages {
         public static string esc_to_exit {
             get {
                 return ResourceManager.GetString("esc-to-exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit Picture-in-Picture mode.
+        /// </summary>
+        public static string exit_picture_in_picture {
+            get {
+                return ResourceManager.GetString("exit-picture-in-picture", resourceCulture);
             }
         }
         
@@ -961,15 +970,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No folder.
-        /// </summary>
-        public static string no_folder {
-            get {
-                return ResourceManager.GetString("no-folder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Not saved.
         /// </summary>
         public static string not_saved {
@@ -1069,7 +1069,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picture in picture.
+        ///   Looks up a localized string similar to Picture-in-Picture mode.
         /// </summary>
         public static string picture_in_picture {
             get {

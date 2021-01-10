@@ -394,11 +394,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ошибка памяти при чтении DDS/TGA.
+        ///   Looks up a localized string similar to DDS/TGA: Ошибка памяти .
         /// </summary>
         public static string dds_memory_error {
             get {
                 return ResourceManager.GetString("dds-memory-error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DDS/TGA: Неподдерживаемый формат пикселей.
+        /// </summary>
+        public static string dds_unsupported_pixel_format {
+            get {
+                return ResourceManager.GetString("dds-unsupported-pixel-format", resourceCulture);
             }
         }
         
@@ -457,15 +466,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Потяните чтобы изменить размер окна.
-        /// </summary>
-        public static string drag_here_to_resize {
-            get {
-                return ResourceManager.GetString("drag-here-to-resize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Перетащенное изображение.
         /// </summary>
         public static string dragged_image {
@@ -516,6 +516,15 @@ namespace quick_picture_viewer.languages {
         public static string esc_to_exit {
             get {
                 return ResourceManager.GetString("esc-to-exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выйти из режима &quot;Картинка в картинке&quot;.
+        /// </summary>
+        public static string exit_picture_in_picture {
+            get {
+                return ResourceManager.GetString("exit-picture-in-picture", resourceCulture);
             }
         }
         
@@ -961,15 +970,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Нет папки.
-        /// </summary>
-        public static string no_folder {
-            get {
-                return ResourceManager.GetString("no-folder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Не сохранено.
         /// </summary>
         public static string not_saved {
@@ -1069,7 +1069,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Картинка в картинке.
+        ///   Looks up a localized string similar to Режим &quot;Картинка в картинке&quot;.
         /// </summary>
         public static string picture_in_picture {
             get {
@@ -1564,7 +1564,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Невозможно открыть DDS или TGA файл.
+        ///   Looks up a localized string similar to DDS/TGA: Невозможно открыть файл.
         /// </summary>
         public static string unable_open_dds {
             get {
@@ -1573,7 +1573,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to PSD: Невозможно открыть файл.
         /// </summary>
         public static string unable_open_psd {
             get {

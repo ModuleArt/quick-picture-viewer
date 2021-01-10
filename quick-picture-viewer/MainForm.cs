@@ -412,6 +412,9 @@ namespace quick_picture_viewer
 						case DdsWrapper.Error.UnableToOpen:
 							showSuggestion(resMan.GetString("unable-open-dds") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
+						case DdsWrapper.Error.UnsupportedPixelFormat:
+							showSuggestion(resMan.GetString("dds-unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							break;
 					}
 				}
 				else if (ext == ".psd")
@@ -560,7 +563,7 @@ namespace quick_picture_viewer
 				{
 					currentFolder = null;
 					currentFile = null;
-					directoryLabel.Text = " " + resMan.GetString("no-folder");
+					directoryLabel.Visible = false;
 					sizeLabel.Text = " " + resMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
 				}
 				else
@@ -569,6 +572,7 @@ namespace quick_picture_viewer
 
 					currentFolder = directoryName;
 					currentFile = fileName;
+					directoryLabel.Visible = true;
 					directoryLabel.Text = " " + resMan.GetString("folder") + ": " + directoryName;
 					sizeLabel.Text = " " + resMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
@@ -901,7 +905,7 @@ namespace quick_picture_viewer
 
 			if (currentFile != null)
 			{
-				saveFileDialog1.FileName = currentFile;
+				saveFileDialog1.FileName = Path.GetFileNameWithoutExtension(currentFile);
 				saveFileDialog1.InitialDirectory = currentFolder;
 
 				switch (Path.GetExtension(currentFile))
@@ -972,6 +976,8 @@ namespace quick_picture_viewer
 						break;
 				}
 				fs.Close();
+
+				setImageChanged(false);
 				openFile(saveFileDialog1.FileName);
 			}
 			saveFileDialog1.Dispose();
@@ -1648,7 +1654,7 @@ namespace quick_picture_viewer
 
 			pleaseOpenLabel.Visible = true;
 
-			directoryLabel.Text = " " + resMan.GetString("no-folder");
+			directoryLabel.Visible = false;
 			fileLabel.Text = " " + resMan.GetString("no-file");
 			sizeLabel.Text = " " + resMan.GetString("size") + ": 0 x 0 px";
 			dateCreatedLabel.Visible = false;

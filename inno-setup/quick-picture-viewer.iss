@@ -34,6 +34,7 @@ UninstallDisplayName={#MyAppName}
 WizardImageFile=164x314.bmp,192x386.bmp,246x459.bmp,273x556.bmp,328x604.bmp,355x700.bmp,410x797.bmp
 WizardSmallImageFile=small-55x55.bmp,small-64x68.bmp,small-83x80.bmp,small-92x97.bmp,small-110x106.bmp,small-119x123.bmp,small-138x140.bmp
 ChangesAssociations=yes
+VersionInfoVersion={#MyAppVersion}
 
 [Messages]
 SetupWindowTitle=Setup - {#MyAppName} v{#MyAppVersion}

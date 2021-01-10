@@ -10,11 +10,12 @@ namespace quick_picture_viewer
 		private static GCHandle TmpGcHandle;
 
 		public static Error CurrentError = 0;
-		public enum Error
+		public enum Error : int
 		{
-			NoError = 0,
-			MemoryError = 1,
-			UnableToOpen = 2
+			NoError,
+			MemoryError,
+			UnableToOpen,
+			UnsupportedPixelFormat
 		}
 
 		public static Bitmap ParseDdsOrTga(string path)
@@ -40,7 +41,8 @@ namespace quick_picture_viewer
 							format = PixelFormat.Format8bppIndexed;
 							break;
 						default:
-							throw new NotImplementedException();
+							CurrentError = Error.UnableToOpen;
+							return null;
 					}
 
 					try

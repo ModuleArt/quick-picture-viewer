@@ -202,8 +202,7 @@ main h2 {
 
 main .features {
     display: flex;
-    gap: 28px;
-    margin: 16px auto 0 auto;
+    margin: 2px auto 0 auto;
     justify-content: center;
     font: 16px/24px "Inter";
     flex-wrap: wrap;
@@ -220,6 +219,7 @@ main .features img {
 }
 
 main .features .feature {
+	margin: 14px;
     padding: 32px;
     filter: var(--filter-shadow-black);
     background: #fff;
@@ -268,7 +268,7 @@ main .content {
 }
 
 main .content .flex-table {
-	min-width: 400px;
+	min-width: 500px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -418,10 +418,13 @@ footer a:hover {
     main .donate a {
         width: 100%;
     }
+	
+	footer span {
+		margin-bottom: 8px;
+	}
 
     footer {
         flex-direction: column;
-        gap: 8px;
         text-align: center;
     }
 }

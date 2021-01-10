@@ -293,10 +293,6 @@
     <value>Don't save</value>
     <comment>Main window</comment>
   </data>
-  <data name="drag-here-to-resize" xml:space="preserve">
-    <value>Drag here to resize window</value>
-    <comment>Picture in picture</comment>
-  </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Dragged image</value>
     <comment>Status bar</comment>

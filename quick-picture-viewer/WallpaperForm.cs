@@ -43,22 +43,22 @@ namespace quick_picture_viewer
 			switch (fitComboBox.SelectedIndex)
 			{
 				case 2:
-					WallpaperManager.Set(bmp, WallpaperManager.Style.Stretch);
+					WallpaperMan.Set(bmp, WallpaperMan.Style.Stretch);
 					break;
 				case 3:
-					WallpaperManager.Set(bmp, WallpaperManager.Style.Tile);
+					WallpaperMan.Set(bmp, WallpaperMan.Style.Tile);
 					break;
 				case 4:
-					WallpaperManager.Set(bmp, WallpaperManager.Style.Center);
+					WallpaperMan.Set(bmp, WallpaperMan.Style.Center);
 					break;
 				case 0:
-					WallpaperManager.Set(bmp, WallpaperManager.Style.Fill);
+					WallpaperMan.Set(bmp, WallpaperMan.Style.Fill);
 					break;
 				case 1:
-					WallpaperManager.Set(bmp, WallpaperManager.Style.Fit);
+					WallpaperMan.Set(bmp, WallpaperMan.Style.Fit);
 					break;
 				case 5:
-					WallpaperManager.Set(bmp, WallpaperManager.Style.Span);
+					WallpaperMan.Set(bmp, WallpaperMan.Style.Span);
 					break;
 			}
 		}

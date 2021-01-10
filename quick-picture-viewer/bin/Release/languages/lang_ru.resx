@@ -293,10 +293,6 @@
     <value>Не сохранять</value>
     <comment>Main window</comment>
   </data>
-  <data name="drag-here-to-resize" xml:space="preserve">
-    <value>Потяните чтобы изменить размер окна</value>
-    <comment>Picture in picture</comment>
-  </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Перетащенное изображение</value>
     <comment>Status bar</comment>

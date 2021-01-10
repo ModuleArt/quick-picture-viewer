@@ -269,6 +269,10 @@
     <value>DDS/TGA: Memory error</value>
     <comment>Message box</comment>
   </data>
+  <data name="dds-unsupported-pixel-format" xml:space="preserve">
+    <value>DDS/TGA: Unsupported pixel format</value>
+    <comment>Message box</comment>
+  </data>
   <data name="delete-file" xml:space="preserve">
     <value>Delete file</value>
     <comment>Message box</comment>
@@ -293,10 +297,6 @@
     <value>Don't save</value>
     <comment>Main window</comment>
   </data>
-  <data name="drag-here-to-resize" xml:space="preserve">
-    <value>Drag here to resize window</value>
-    <comment>Picture in picture</comment>
-  </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Dragged image</value>
     <comment>Status bar</comment>
@@ -320,6 +320,10 @@
   <data name="esc-to-exit" xml:space="preserve">
     <value>Press {0} to exit app</value>
     <comment>Main window</comment>
+  </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>Exit Picture-in-Picture mode</value>
+    <comment>Picture in picture</comment>
   </data>
   <data name="extension" xml:space="preserve">
     <value>Extension</value>
@@ -517,10 +521,6 @@
     <value>No files to open</value>
     <comment>Message box</comment>
   </data>
-  <data name="no-folder" xml:space="preserve">
-    <value>No folder</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="not-saved" xml:space="preserve">
     <value>Not saved</value>
     <comment>Status bar</comment>
@@ -566,7 +566,7 @@
     <comment>Menu</comment>
   </data>
   <data name="picture-in-picture" xml:space="preserve">
-    <value>Picture in picture</value>
+    <value>Picture-in-Picture mode</value>
     <comment>Menu</comment>
   </data>
   <data name="pixels" xml:space="preserve">

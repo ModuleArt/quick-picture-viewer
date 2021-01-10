@@ -266,7 +266,11 @@
     <comment>Settings</comment>
   </data>
   <data name="dds-memory-error" xml:space="preserve">
-    <value>Ошибка памяти при чтении DDS/TGA</value>
+    <value>DDS/TGA: Ошибка памяти </value>
+    <comment>Message box</comment>
+  </data>
+  <data name="dds-unsupported-pixel-format" xml:space="preserve">
+    <value>DDS/TGA: Неподдерживаемый формат пикселей</value>
     <comment>Message box</comment>
   </data>
   <data name="delete-file" xml:space="preserve">
@@ -293,10 +297,6 @@
     <value>Не сохранять</value>
     <comment>Main window</comment>
   </data>
-  <data name="drag-here-to-resize" xml:space="preserve">
-    <value>Потяните чтобы изменить размер окна</value>
-    <comment>Picture in picture</comment>
-  </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Перетащенное изображение</value>
     <comment>Status bar</comment>
@@ -320,6 +320,10 @@
   <data name="esc-to-exit" xml:space="preserve">
     <value>Нажмите {0}, чтобы выйти из приложения</value>
     <comment>Main window</comment>
+  </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>Выйти из режима "Картинка в картинке"</value>
+    <comment>Picture in picture</comment>
   </data>
   <data name="extension" xml:space="preserve">
     <value>Расширение</value>
@@ -517,10 +521,6 @@
     <value>Нет файлов для открытия</value>
     <comment>Message box</comment>
   </data>
-  <data name="no-folder" xml:space="preserve">
-    <value>Нет папки</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="not-saved" xml:space="preserve">
     <value>Не сохранено</value>
     <comment>Status bar</comment>
@@ -566,7 +566,7 @@
     <comment>Menu</comment>
   </data>
   <data name="picture-in-picture" xml:space="preserve">
-    <value>Картинка в картинке</value>
+    <value>Режим "Картинка в картинке"</value>
     <comment>Menu</comment>
   </data>
   <data name="pixels" xml:space="preserve">
@@ -786,11 +786,11 @@
     <comment>Settings</comment>
   </data>
   <data name="unable-open-dds" xml:space="preserve">
-    <value>Невозможно открыть DDS или TGA файл</value>
+    <value>DDS/TGA: Невозможно открыть файл</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-open-psd" xml:space="preserve">
-    <value />
+    <value>PSD: Невозможно открыть файл</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-open-svg" xml:space="preserve">

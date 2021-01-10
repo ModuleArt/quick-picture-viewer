@@ -76,7 +76,7 @@
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
 			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
@@ -552,7 +552,9 @@
 			// toolStripSeparator3
 			// 
 			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-			this.toolStripSeparator3.BackColor = System.Drawing.Color.Black;
+			this.toolStripSeparator3.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator3.DarkMode = false;
+			this.toolStripSeparator3.InsideMenu = false;
 			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
 			// 
@@ -962,7 +964,7 @@
 		private System.Windows.Forms.ToolStripMenuItem aboutBtn;
 		private System.Windows.Forms.ToolStripMenuItem framelessBtn;
 		private System.Windows.Forms.ToolStripMenuItem customAngleBtn;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+		private QuickLibrary.QlibToolsep toolStripSeparator3;
 		private System.Windows.Forms.ToolStripDropDownButton effectsBtn;
 		private System.Windows.Forms.ToolStripMenuItem pluginManBtn;
 		private System.Windows.Forms.PictureBox suggestionIcon;

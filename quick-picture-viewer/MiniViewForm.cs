@@ -18,6 +18,7 @@ namespace quick_picture_viewer
 		private int height = 0;
 		private Point panelMouseDownLocation;
 		private MainForm owner;
+		private string title;
 
 		public MiniViewForm(Image image, string title, bool checkboardBackground)
 		{
@@ -26,7 +27,7 @@ namespace quick_picture_viewer
 				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
-			Text = title;
+			this.title = title;
 			this.checkboardBackground = checkboardBackground;
 
 			InitializeComponent();
@@ -190,6 +191,8 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_Load(object sender, EventArgs e)
 		{
+			Text = title;
+
 			Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
 			Left = workingArea.Left + workingArea.Width - Size.Width - 32;
 			Top = workingArea.Top + 32;
@@ -202,13 +205,12 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			Text = owner.resMan.GetString("picture-in-picture");
 			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
-			infoTooltip.SetToolTip(resizeBtn, owner.resMan.GetString("drag-here-to-resize"));
 			infoTooltip.SetToolTip(opacityBtn, owner.resMan.GetString("change-window-opacity") + " | Ctrl+O");
 			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
 			checkboardBtn.Text = owner.resMan.GetString("checkboard-background");
 			newWindowBtn.Text = owner.resMan.GetString("new-window");
+			quitPipBtn.Text = owner.resMan.GetString("exit-picture-in-picture");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -240,7 +242,11 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					if (e.KeyCode == Keys.B)
+					if (e.KeyCode == Keys.N)
+					{
+						owner.NewWindow();
+					}
+					else if (e.KeyCode == Keys.B)
 					{
 						owner.setCheckboardBackground(!checkboardBackground, true);
 						setCheckboardBackground(!checkboardBackground);
@@ -379,6 +385,15 @@ namespace quick_picture_viewer
 			{
 				updatePictureBoxLocation();
 			}
+
+			if (Width > 240)
+			{
+				zoomLabel.ForeColor = Color.White;
+			}
+			else
+			{
+				zoomLabel.ForeColor = Color.Black;
+			}
 		}
 
 		private void MiniViewForm_Deactivate(object sender, EventArgs e)
@@ -458,6 +473,11 @@ namespace quick_picture_viewer
 			}
 			Properties.Settings.Default.PipOpacity = Opacity;
 			Properties.Settings.Default.Save();
+		}
+
+		private void quitPipBtn_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 	}
 }
