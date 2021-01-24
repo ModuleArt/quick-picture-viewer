@@ -110,13 +110,13 @@ header .navbar a:hover .link {
 .hero h1 {
     font: bold 48px/72px "Inter"; 
     color: #fff;
-    margin: 16px;
+    margin: 16px 32px;
 }
 
 .hero h3 {
     font: 20px/30px "Inter"; 
     color: #fff;
-    margin: 20px 16px;
+    margin: 20px 32px;
 }
 
 .hero .buttons {
@@ -183,7 +183,7 @@ header .navbar a:hover .link {
 
 main {
     text-align: center;
-    padding: 0 16px;
+    padding: 0 32px;
 }
 
 main .screenshot {
@@ -197,12 +197,11 @@ main .screenshot {
 
 main h2 {
     font: bold 28px/42px "Inter";
-    margin-top: 96px;
+    margin: 96px 0 16px 0;
 }
 
 main .features {
     display: flex;
-    margin: 2px auto 0 auto;
     justify-content: center;
     font: 16px/24px "Inter";
     flex-wrap: wrap;
@@ -219,7 +218,7 @@ main .features img {
 }
 
 main .features .feature {
-	margin: 14px;
+	margin: 16px;
     padding: 32px;
     filter: var(--filter-shadow-black);
     background: #fff;
@@ -248,15 +247,10 @@ main .whats-new .release-date {
     vertical-align: middle;
 }
 
-main .whats-new .release-markdown {
-    margin-top: 16px;
-}
-
 main .content {
     border-radius: 8px;
     border: 2px solid rgba(0, 0, 0, 0.25);
     display: inline-block;
-    text-align: left;
     padding: 32px;
     filter: var(--filter-shadow-black);
     background: #fff;
@@ -265,6 +259,7 @@ main .content {
     font: 16px/24px "Inter";
     text-align: left;
     box-sizing: border-box;
+    margin: 16px auto;
 }
 
 main .content .flex-table {
@@ -317,7 +312,6 @@ main .hscroll::-webkit-scrollbar-thumb {
 
 main .donate {
     display: flex;
-    margin: 0 auto;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -399,7 +393,7 @@ footer a:hover {
 
     .hero .buttons {
         display: block;
-        padding: 16px;
+        padding: 32px;
     }
 
     .hero .buttons a {
@@ -413,12 +407,13 @@ footer a:hover {
 
     main .features .feature {
         width: 100%;
+        margin: 16px 0;
     }
 
     main .donate a {
         width: 100%;
     }
-	
+
 	footer span {
 		margin-bottom: 8px;
 	}

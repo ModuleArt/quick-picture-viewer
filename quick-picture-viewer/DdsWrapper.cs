@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 
@@ -7,8 +6,7 @@ namespace quick_picture_viewer
 {
 	public static class DdsWrapper
 	{
-		private static GCHandle TmpGcHandle;
-
+		public static string TypeName = "DDS/TGA";
 		public static Error CurrentError = 0;
 		public enum Error : int
 		{
@@ -17,6 +15,8 @@ namespace quick_picture_viewer
 			UnableToOpen,
 			UnsupportedPixelFormat
 		}
+
+		private static GCHandle TmpGcHandle;
 
 		public static Bitmap ParseDdsOrTga(string path)
 		{
@@ -41,7 +41,7 @@ namespace quick_picture_viewer
 							format = PixelFormat.Format8bppIndexed;
 							break;
 						default:
-							CurrentError = Error.UnableToOpen;
+							CurrentError = Error.UnsupportedPixelFormat;
 							return null;
 					}
 

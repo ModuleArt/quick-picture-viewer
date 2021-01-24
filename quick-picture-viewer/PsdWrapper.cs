@@ -5,6 +5,7 @@ namespace quick_picture_viewer
 {
 	public static class PsdWrapper
 	{
+		public static string TypeName = "PSD";
 		public static Error CurrentError = 0;
 		public enum Error
 		{

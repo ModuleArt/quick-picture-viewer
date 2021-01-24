@@ -394,24 +394,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DDS/TGA: Ошибка памяти .
-        /// </summary>
-        public static string dds_memory_error {
-            get {
-                return ResourceManager.GetString("dds-memory-error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to DDS/TGA: Неподдерживаемый формат пикселей.
-        /// </summary>
-        public static string dds_unsupported_pixel_format {
-            get {
-                return ResourceManager.GetString("dds-unsupported-pixel-format", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Удалить файл.
         /// </summary>
         public static string delete_file {
@@ -822,6 +804,15 @@ namespace quick_picture_viewer.languages {
         public static string megapixels {
             get {
                 return ResourceManager.GetString("megapixels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ошибка памяти .
+        /// </summary>
+        public static string memory_error {
+            get {
+                return ResourceManager.GetString("memory-error", resourceCulture);
             }
         }
         
@@ -1564,38 +1555,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DDS/TGA: Невозможно открыть файл.
-        /// </summary>
-        public static string unable_open_dds {
-            get {
-                return ResourceManager.GetString("unable-open-dds", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to PSD: Невозможно открыть файл.
-        /// </summary>
-        public static string unable_open_psd {
-            get {
-                return ResourceManager.GetString("unable-open-psd", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Невозможно открыть SVG файл.
-        /// </summary>
-        public static string unable_open_svg {
-            get {
-                return ResourceManager.GetString("unable-open-svg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Невозможно открыть файл.
         /// </summary>
-        public static string unable_to_open_file {
+        public static string unable_open_file {
             get {
-                return ResourceManager.GetString("unable-to-open-file", resourceCulture);
+                return ResourceManager.GetString("unable-open-file", resourceCulture);
             }
         }
         
@@ -1623,6 +1587,15 @@ namespace quick_picture_viewer.languages {
         public static string unsaved_changes_question {
             get {
                 return ResourceManager.GetString("unsaved-changes-question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неподдерживаемый формат пикселей.
+        /// </summary>
+        public static string unsupported_pixel_format {
+            get {
+                return ResourceManager.GetString("unsupported-pixel-format", resourceCulture);
             }
         }
         

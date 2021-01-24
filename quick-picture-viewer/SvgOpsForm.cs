@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -61,12 +62,16 @@ namespace quick_picture_viewer
 		private void okButton_Click(object sender, EventArgs e)
 		{
 			MainForm mf = Owner as MainForm;
-
-			int width = (int)widthNumeric.Value;
-			int height = (int)heightNumeric.Value;
-
-			mf.openSvg(path, width, height);
-
+			Bitmap bmp = SvgWrapper.ParseSvg(path, (int)widthNumeric.Value, (int)heightNumeric.Value);
+			switch (SvgWrapper.CurrentError)
+			{
+				case SvgWrapper.Error.NoError:
+					mf.openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+					break;
+				case SvgWrapper.Error.UnableToOpen:
+					mf.showSuggestion(SvgWrapper.TypeName + " - " + owner.resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), MainForm.SuggestionIcon.Warning);
+					break;
+			}
 			Close();
 		}
 
@@ -130,6 +135,7 @@ namespace quick_picture_viewer
 			int height = Convert.ToInt32(svgDocument.Height.Value);
 
 			bool aspectChecked = aspectRatioCheckbox.Checked;
+			aspectRatioCheckbox.Checked = false;
 
 			widthNumeric.Value = width;
 			heightNumeric.Value = height;
@@ -173,11 +179,7 @@ namespace quick_picture_viewer
 			{
 				f = panelHeight;
 			}
-			Console.WriteLine(f);
-
 			int k = (int)(8 * (Math.Round(f / 8.0)));
-			Console.WriteLine(k);
-
 			setPreset(k);
 		}
 

@@ -265,14 +265,6 @@
     <value>Dark</value>
     <comment>Settings</comment>
   </data>
-  <data name="dds-memory-error" xml:space="preserve">
-    <value>DDS/TGA: Memory error</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="dds-unsupported-pixel-format" xml:space="preserve">
-    <value>DDS/TGA: Unsupported pixel format</value>
-    <comment>Message box</comment>
-  </data>
   <data name="delete-file" xml:space="preserve">
     <value>Delete file</value>
     <comment>Message box</comment>
@@ -456,6 +448,10 @@
   <data name="megapixels" xml:space="preserve">
     <value>megapixels</value>
     <comment>Image info</comment>
+  </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>Memory error</value>
+    <comment>Message box</comment>
   </data>
   <data name="minus" xml:space="preserve">
     <value>Minus</value>
@@ -785,19 +781,7 @@
     <value>User interface language</value>
     <comment>Settings</comment>
   </data>
-  <data name="unable-open-dds" xml:space="preserve">
-    <value>DDS/TGA: Unable to open the file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-psd" xml:space="preserve">
-    <value>PSD: Unable to open the file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-svg" xml:space="preserve">
-    <value>Unable to open SVG file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-to-open-file" xml:space="preserve">
+  <data name="unable-open-file" xml:space="preserve">
     <value>Unable to open file</value>
     <comment>Message box</comment>
   </data>
@@ -812,6 +796,10 @@
   <data name="unsaved-changes-question" xml:space="preserve">
     <value>The current image has unsaved changes. What would you like to do?</value>
     <comment>Main window</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>Unsupported pixel format</value>
+    <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Update failed</value>

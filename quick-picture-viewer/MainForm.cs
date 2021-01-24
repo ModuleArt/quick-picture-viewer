@@ -1,19 +1,17 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using QuickLibrary;
-using Svg;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Reflection;
+using System.Resources;
 using System.Timers;
 using System.Windows.Forms;
-using System.Globalization;
-using System.Resources;
-using System.Reflection;
 
 namespace quick_picture_viewer
 {
@@ -92,7 +90,7 @@ namespace quick_picture_viewer
 				{
 					Properties.Settings.Default.StartupWindowSize = new Size(700, 485);
 				}
-				
+
 			}
 			if (Properties.Settings.Default.StartupMaximize)
 			{
@@ -102,7 +100,7 @@ namespace quick_picture_viewer
 
 		protected override void WndProc(ref Message m)
 		{
-			
+
 			base.WndProc(ref m);
 			if (m.Msg == NativeMan.WM_SYSCOMMAND)
 			{
@@ -295,7 +293,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(resMan.GetString("unable-to-open-file"), SuggestionIcon.Warning);
+				showSuggestion(resMan.GetString("unable-open-file"), SuggestionIcon.Warning);
 			}
 
 			if (Properties.Settings.Default.CheckForUpdates)
@@ -357,9 +355,10 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void showTypeOpsButton(bool show, string type)
+		private void showTypeOpsButton(bool show, string type = null)
 		{
-			typeOpsButton.Invoke((MethodInvoker)(() => {
+			typeOpsButton.Invoke((MethodInvoker)(() =>
+			{
 				typeOpsButton.Visible = show;
 
 				if (show)
@@ -374,6 +373,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
+				showTypeOpsButton(false);
 				string ext = Path.GetExtension(path);
 				if (ext == ".webp")
 				{
@@ -386,17 +386,26 @@ namespace quick_picture_viewer
 						openImage(webp.Decode(rawWebP, decoderOptions), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
 
-					showTypeOpsButton(false, null);
+					
 				}
 				else if (ext == ".ico")
 				{
 					Bitmap bmp = new Icon(path, 128, 128).ToBitmap();
 					openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-					showTypeOpsButton(false, null);
 				}
 				else if (ext == ".svg")
 				{
-					openSvg(path, -1, -1);
+					Bitmap bmp = SvgWrapper.ParseSvg(path);
+					switch (SvgWrapper.CurrentError)
+					{
+						case SvgWrapper.Error.NoError:
+							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+							showTypeOpsButton(true, SvgWrapper.TypeName);
+							break;
+						case SvgWrapper.Error.UnableToOpen:
+							showSuggestion(SvgWrapper.TypeName + " - " + resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							break;
+					}
 				}
 				else if (ext == ".dds" || ext == ".tga")
 				{
@@ -407,13 +416,13 @@ namespace quick_picture_viewer
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 							break;
 						case DdsWrapper.Error.MemoryError:
-							showSuggestion(resMan.GetString("dds-memory-error"), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("memory-error") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 						case DdsWrapper.Error.UnableToOpen:
-							showSuggestion(resMan.GetString("unable-open-dds") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 						case DdsWrapper.Error.UnsupportedPixelFormat:
-							showSuggestion(resMan.GetString("dds-unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -426,7 +435,7 @@ namespace quick_picture_viewer
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 							break;
 						case PsdWrapper.Error.UnableToOpen:
-							showSuggestion(resMan.GetString("unable-open-psd") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -455,46 +464,16 @@ namespace quick_picture_viewer
 						//	openImage(new Bitmap(outStream), Path.GetDirectoryName(path), Path.GetFileName(path));
 						//}
 					}
-
-					showTypeOpsButton(false, null);
 				}
 			}
 			catch (Exception ex)
 			{
-				showSuggestion(resMan.GetString("unable-to-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+				showSuggestion(resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
 
-		public void openSvg(string path, int width, int height)
-		{
-			try
-			{
-				SvgDocument svgDocument = SvgDocument.Open(path);
-				svgDocument.ShapeRendering = SvgShapeRendering.Auto;
-
-				if (width == -1)
-				{
-					width = Convert.ToInt32(svgDocument.Width.Value);
-				}
-
-				if (height == -1)
-				{
-					height = Convert.ToInt32(svgDocument.Height.Value);
-				}
-
-				openImage(svgDocument.Draw(width, height), Path.GetDirectoryName(path), Path.GetFileName(path));
-
-				showTypeOpsButton(true, "SVG");
-			}
-			catch (Exception ex)
-			{
-				showSuggestion(resMan.GetString("unable-open-svg") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-				Console.WriteLine(ex);
-			}
-		}
-
-		private void openImage(Bitmap bitmap, string directoryName, string fileName)
+		public void openImage(Bitmap bitmap, string directoryName, string fileName)
 		{
 			if (bitmap != originalImage)
 			{
@@ -1878,7 +1857,7 @@ namespace quick_picture_viewer
 				{
 					saveAsButton.PerformClick();
 				}
-				else if (window != DialogResult.No) 
+				else if (window != DialogResult.No)
 				{
 					e.Cancel = true;
 				}
@@ -1886,7 +1865,7 @@ namespace quick_picture_viewer
 
 			if (Properties.Settings.Default.StartupRestoreBounds)
 			{
-				if (WindowState == FormWindowState.Maximized) 
+				if (WindowState == FormWindowState.Maximized)
 				{
 					Properties.Settings.Default.StartupMaximize = true;
 				}
@@ -1929,7 +1908,7 @@ namespace quick_picture_viewer
 			zoomOutTimer.Start();
 		}
 
-		private enum SuggestionIcon
+		public enum SuggestionIcon
 		{
 			Info = 0,
 			Check = 1,
@@ -1938,9 +1917,10 @@ namespace quick_picture_viewer
 			Fullscreen = 4
 		}
 
-		private void showSuggestion(string text, SuggestionIcon icon)
+		public void showSuggestion(string text, SuggestionIcon icon)
 		{
-			suggestionLabel.Invoke((MethodInvoker)(() => {
+			suggestionLabel.Invoke((MethodInvoker)(() =>
+			{
 				suggestionLabel.Text = text;
 				suggestionLabel.Visible = true;
 				if (icon == SuggestionIcon.Info)
@@ -1981,7 +1961,8 @@ namespace quick_picture_viewer
 		private void hideSuggestion()
 		{
 			suggestionTimer.Dispose();
-			suggestionLabel.Invoke((MethodInvoker)(() => {
+			suggestionLabel.Invoke((MethodInvoker)(() =>
+			{
 				suggestionLabel.Text = string.Empty;
 				suggestionLabel.Visible = false;
 				suggestionIcon.Image.Dispose();
@@ -2100,7 +2081,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-			
+
 			}
 		}
 
@@ -2249,7 +2230,7 @@ namespace quick_picture_viewer
 			{
 				FormBorderStyle = FormBorderStyle.None;
 			}
-			else if(!fullscreen)
+			else if (!fullscreen)
 			{
 				FormBorderStyle = FormBorderStyle.Sizable;
 			}
@@ -2301,7 +2282,7 @@ namespace quick_picture_viewer
 						Properties.Settings.Default.Language
 					);
 					tsmi.Output += Tsmi_Output;
-					
+
 					if (plugins[i].functions[j].type == "effect")
 					{
 						effectsBtn.DropDownItems.Add(tsmi);

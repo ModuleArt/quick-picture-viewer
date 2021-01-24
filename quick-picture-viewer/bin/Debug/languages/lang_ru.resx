@@ -265,14 +265,6 @@
     <value>Тёмная</value>
     <comment>Settings</comment>
   </data>
-  <data name="dds-memory-error" xml:space="preserve">
-    <value>DDS/TGA: Ошибка памяти </value>
-    <comment>Message box</comment>
-  </data>
-  <data name="dds-unsupported-pixel-format" xml:space="preserve">
-    <value>DDS/TGA: Неподдерживаемый формат пикселей</value>
-    <comment>Message box</comment>
-  </data>
   <data name="delete-file" xml:space="preserve">
     <value>Удалить файл</value>
     <comment>Message box</comment>
@@ -456,6 +448,10 @@
   <data name="megapixels" xml:space="preserve">
     <value>мегапикселей</value>
     <comment>Image info</comment>
+  </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>Ошибка памяти </value>
+    <comment>Message box</comment>
   </data>
   <data name="minus" xml:space="preserve">
     <value>Минус</value>
@@ -785,12 +781,8 @@
     <value>Язык интерфейса</value>
     <comment>Settings</comment>
   </data>
-  <data name="unable-open-dds" xml:space="preserve">
-    <value>DDS/TGA: Невозможно открыть файл</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-psd" xml:space="preserve">
-    <value>PSD: Невозможно открыть файл</value>
+  <data name="unable-open-file" xml:space="preserve">
+    <value>Невозможно открыть файл</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-open-svg" xml:space="preserve">
@@ -812,6 +804,10 @@
   <data name="unsaved-changes-question" xml:space="preserve">
     <value>Текущее изображение имеет несохраненные изменения. Чтобы Вы хотели сделать?</value>
     <comment>Main window</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>Неподдерживаемый формат пикселей</value>
+    <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Обновление невозможно</value>
