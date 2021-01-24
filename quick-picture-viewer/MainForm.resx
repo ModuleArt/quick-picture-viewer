@@ -910,27 +910,6 @@
   <data name="pasteButton.Text" xml:space="preserve">
     <value>paste image</value>
   </data>
-  <data name="screenshotButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="screenshotButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACaSURBVDhPzZHRCoJAEEUXzL8Kid5M+k/tn4yI+oCefDHq
-        XHSjnVZZIagDB9YZvbs7um/xWGCUyUYq/xuwwxuqLzvc4wc2oMEeVS9VGFGgaurVKnhswB3zYRklQ73z
-        wga8P1d4xBZ1Ak/wzVzAGTe4xZMKI8kBF1xjgQrzJAfoCldU0OQVLBrQalhG0YCDIVoOqB3mDH7jr3Du
-        CQGaPbxOj3KGAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="screenshotButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="screenshotButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 25</value>
-  </data>
-  <data name="screenshotButton.Text" xml:space="preserve">
-    <value>capture screen</value>
-  </data>
   <data name="toolStripSeparator3.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -5525,12 +5504,6 @@
     <value>pasteButton</value>
   </data>
   <data name="&gt;&gt;pasteButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;screenshotButton.Name" xml:space="preserve">
-    <value>screenshotButton</value>
-  </data>
-  <data name="&gt;&gt;screenshotButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">

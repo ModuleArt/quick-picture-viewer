@@ -75,7 +75,6 @@
 			this.copyImageButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
-			this.screenshotButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
@@ -255,7 +254,6 @@
             this.editButton,
             this.copyButton,
             this.pasteButton,
-            this.screenshotButton,
             this.toolStripSeparator3,
             this.checkboardButton,
             this.fullscreenButton,
@@ -541,14 +539,6 @@
 			this.pasteButton.Name = "pasteButton";
 			this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
 			// 
-			// screenshotButton
-			// 
-			resources.ApplyResources(this.screenshotButton, "screenshotButton");
-			this.screenshotButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.screenshotButton.Margin = new System.Windows.Forms.Padding(0);
-			this.screenshotButton.Name = "screenshotButton";
-			this.screenshotButton.Click += new System.EventHandler(this.screenshotButton_Click);
-			// 
 			// toolStripSeparator3
 			// 
 			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
@@ -622,6 +612,8 @@
 			this.toolsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_tools;
 			this.toolsBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.toolsBtn.Name = "toolsBtn";
+			this.toolsBtn.DropDownClosed += new System.EventHandler(this.effectsBtn_DropDownClosed);
+			this.toolsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
 			// 
 			// pluginManBtn2
 			// 
@@ -909,7 +901,6 @@
 		private System.Windows.Forms.ToolStripStatusLabel fileLabel;
 		private System.Windows.Forms.ToolStripStatusLabel sizeLabel;
 		private System.Windows.Forms.ToolStripStatusLabel zoomLabel;
-		private System.Windows.Forms.ToolStripButton screenshotButton;
 		private System.Windows.Forms.ToolStripButton nextButton;
 		private QuickLibrary.QlibToolsep toolStripSeparator4;
 		private QuickLibrary.QlibToolsep toolStripSeparator5;

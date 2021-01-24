@@ -137,10 +137,6 @@
     <value>Действия при запуске приложения</value>
     <comment>Settings</comment>
   </data>
-  <data name="apply" xml:space="preserve">
-    <value>Применить</value>
-    <comment>Menu</comment>
-  </data>
   <data name="aspect-ratio" xml:space="preserve">
     <value>Соотношение</value>
     <comment>Image info</comment>
@@ -224,10 +220,6 @@
   <data name="compression" xml:space="preserve">
     <value>Сжатие</value>
     <comment>Image info</comment>
-  </data>
-  <data name="configure" xml:space="preserve">
-    <value>Настроить</value>
-    <comment>Menu</comment>
   </data>
   <data name="context-menu" xml:space="preserve">
     <value>Контекстное меню</value>
@@ -672,10 +664,6 @@
   <data name="save-as" xml:space="preserve">
     <value>Сохранить как</value>
     <comment>Menu</comment>
-  </data>
-  <data name="screenshot" xml:space="preserve">
-    <value>Скриншот</value>
-    <comment>Status bar</comment>
   </data>
   <data name="scroll-up-down" xml:space="preserve">
     <value>Прокрутка вверх / вниз</value>

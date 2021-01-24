@@ -653,10 +653,6 @@
     <value>Guardar como</value>
     <comment>Menu</comment>
   </data>
-  <data name="screenshot" xml:space="preserve">
-    <value>Captura de pantalla</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="scroll-up-down" xml:space="preserve">
     <value>Desplazarse hacia arriba / abajo</value>
     <comment>Settings</comment>

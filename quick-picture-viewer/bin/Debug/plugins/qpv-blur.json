@@ -1,6 +1,6 @@
 {
   "name": "qpv-blur",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "title": "Blur",
   "description": {
     "en": "Blur or pixelate region",
@@ -14,7 +14,7 @@
       "link": "https://github.com/Beelink"
     }
   ],
-  "apiVer": 2,
+  "apiVer": 3,
   "inputType": "bitmap",
   "dllType": "csharp",
   "functions": [
@@ -26,8 +26,19 @@
         "es": "Área de desenfoque"
       },
       "type": "effect",
-      "configurable": true,
-      "inputRequired": true
+      "inputRequired": true,
+      "dialog": true
+    },
+    {
+      "name": "screenshot",
+      "title": {
+        "en": "Screenshot",
+        "ru": "Скриншот",
+        "es": "Captura de pantalla"
+      },
+      "type": "tool",
+      "inputRequired": false,
+      "dialog": false
     }
   ]
 }

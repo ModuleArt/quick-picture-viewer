@@ -137,10 +137,6 @@
     <value>App startup actions</value>
     <comment>Settings</comment>
   </data>
-  <data name="apply" xml:space="preserve">
-    <value>Apply</value>
-    <comment>Menu</comment>
-  </data>
   <data name="aspect-ratio" xml:space="preserve">
     <value>Aspect ratio</value>
     <comment>Image info</comment>
@@ -224,10 +220,6 @@
   <data name="compression" xml:space="preserve">
     <value>Compression</value>
     <comment>Image info</comment>
-  </data>
-  <data name="configure" xml:space="preserve">
-    <value>Configure</value>
-    <comment>Menu</comment>
   </data>
   <data name="context-menu" xml:space="preserve">
     <value>Context menu</value>
@@ -673,10 +665,6 @@
     <value>Save as</value>
     <comment>Menu</comment>
   </data>
-  <data name="screenshot" xml:space="preserve">
-    <value>Screenshot</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="scroll-up-down" xml:space="preserve">
     <value>Scroll up / down</value>
     <comment>Settings</comment>
@@ -782,14 +770,6 @@
     <comment>Settings</comment>
   </data>
   <data name="unable-open-file" xml:space="preserve">
-    <value>Unable to open the file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-svg" xml:space="preserve">
-    <value>Unable to open SVG file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-to-open-file" xml:space="preserve">
     <value>Unable to open file</value>
     <comment>Message box</comment>
   </data>

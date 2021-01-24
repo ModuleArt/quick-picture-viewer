@@ -197,7 +197,6 @@ namespace quick_picture_viewer
 			openButton.Text = resMan.GetString("open-file") + " | Ctrl+O";
 			saveAsButton.Text = resMan.GetString("save-as") + " | Ctrl+S";
 			pasteButton.Text = resMan.GetString("paste-image") + " | Ctrl+V";
-			screenshotButton.Text = resMan.GetString("capture-screen") + " | F12";
 			checkboardButton.Text = resMan.GetString("checkboard-background") + " | Ctrl+B";
 			fullscreenButton.Text = resMan.GetString("fullscreen") + " | F";
 			miniViewButton.Text = resMan.GetString("picture-in-picture") + " | Ctrl+Shift+P";
@@ -1369,10 +1368,6 @@ namespace quick_picture_viewer
 					{
 						fullscreenButton.PerformClick();
 					}
-					else if (e.KeyCode == Keys.F12)
-					{
-						screenshotButton.PerformClick();
-					}
 					else if (e.KeyCode == Keys.Escape)
 					{
 						if (!fullscreen && Properties.Settings.Default.EscToExit)
@@ -1417,24 +1412,6 @@ namespace quick_picture_viewer
 		private void onTopButton_Click(object sender, EventArgs e)
 		{
 			setAlwaysOnTop(!alwaysOnTop, true);
-		}
-
-		private void screenshotButton_Click(object sender, EventArgs e)
-		{
-			Hide();
-
-			System.Threading.Thread.Sleep(250);
-
-			Bitmap bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-			using (Graphics g = Graphics.FromImage(bmp))
-			{
-				g.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size);
-
-				openImage(bmp, null, resMan.GetString("screenshot"));
-				setImageChanged(true, resMan.GetString("screenshot"));
-			}
-
-			Show();
 		}
 
 		public int nextFile()
@@ -1707,7 +1684,6 @@ namespace quick_picture_viewer
 				rotate180Button.Image = Properties.Resources.white_degree;
 				customAngleBtn.Image = Properties.Resources.white_angle;
 
-				screenshotButton.Image = Properties.Resources.white_screenshot;
 				infoButton.Image = Properties.Resources.white_info;
 				copyButton.Image = Properties.Resources.white_copy;
 				copyImageButton.Image = Properties.Resources.white_image;
@@ -2251,12 +2227,21 @@ namespace quick_picture_viewer
 				}
 				effectsBtn.DropDownItems.Remove(effectsBtn.DropDownItems[i]);
 			}
+
+			for (int i = toolsBtn.DropDownItems.Count - 1; i > 0; i--)
+			{
+				if (toolsBtn.DropDownItems[i].Image != null)
+				{
+					toolsBtn.DropDownItems[i].Image.Dispose();
+				}
+				toolsBtn.DropDownItems.Remove(toolsBtn.DropDownItems[i]);
+			}
 		}
 
 		private void effectsBtn_DropDownOpening(object sender, EventArgs eventArgs)
 		{
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
-			PluginMan.apiVer = 2;
+			PluginMan.apiVer = 3;
 			PluginMan.inputType = "bitmap";
 
 			PluginInfo[] plugins = PluginMan.GetPlugins(true);
@@ -2276,8 +2261,6 @@ namespace quick_picture_viewer
 						darkMode,
 						plugins[i],
 						plugins[i].functions[j],
-						resMan.GetString("apply"),
-						resMan.GetString("configure"),
 						alwaysOnTop,
 						Properties.Settings.Default.Language
 					);
@@ -2297,9 +2280,13 @@ namespace quick_picture_viewer
 
 		private void Tsmi_Output(object sender, OutputEventArgs e)
 		{
-			setImageChanged(false);
-			openImage(e.input as Bitmap, currentFolder, currentFile);
-			setImageChanged(true);
+			Show();
+			if (e.input != null)
+			{
+				setImageChanged(false);
+				openImage(e.input as Bitmap, currentFolder, currentFile);
+				setImageChanged(true);
+			}
 		}
 
 		private void zoomTextBox_MouseLeave(object sender, EventArgs e)

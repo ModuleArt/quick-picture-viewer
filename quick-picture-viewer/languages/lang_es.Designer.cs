@@ -1267,15 +1267,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Captura de pantalla.
-        /// </summary>
-        public static string screenshot {
-            get {
-                return ResourceManager.GetString("screenshot", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Desplazarse hacia arriba / abajo.
         /// </summary>
         public static string scroll_up_down {

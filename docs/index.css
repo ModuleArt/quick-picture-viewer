@@ -184,6 +184,8 @@ header .navbar a:hover .link {
 main {
     text-align: center;
     padding: 0 32px;
+	max-width: 1320px;
+    margin: 0 auto;
 }
 
 main .screenshot {
@@ -205,6 +207,8 @@ main .features {
     justify-content: center;
     font: 16px/24px "Inter";
     flex-wrap: wrap;
+	width: calc(100% + 32px);
+	margin: 0 -16px;
 }
 
 main .features h4 {
@@ -225,6 +229,18 @@ main .features .feature {
     border-radius: 8px;
     border: 2px solid rgba(0, 0, 0, 0.25);
     width: 192px;
+	flex-grow: 1;
+}
+
+main .features .feature.--small span {
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 8px;
+}
+
+main .features .feature.--small img {
+	vertical-align: middle;
+	display: inline-block;
 }
 
 main .whats-new {
@@ -268,12 +284,18 @@ main .content .flex-table {
 	justify-content: space-between;
 }
 
-main .content .flex-table-row, main .content .flex-table-header {
+main .content .flex-table-row {
 	padding: 8px 0;
+	flex: 1;
 }
 
-main .content .flex-table-header {
+main .content .flex-table-row.--header {
 	font-weight: bold;
+}
+
+main .content .flex-table-col {
+	display: flex;
+	flex-direction: column;
 }
 
 main .content .flex-table-col span {
@@ -403,11 +425,6 @@ footer a:hover {
     
     .hero .buttons .button {
         margin: 8px 0;
-    }
-
-    main .features .feature {
-        width: 100%;
-        margin: 16px 0;
     }
 
     main .donate a {
