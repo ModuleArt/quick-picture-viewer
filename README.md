@@ -68,10 +68,10 @@
 
 <hr>
 
-### Plugins:
+### Built-in plugins:
 
 | Plugin | Codename | Last commit date | Last release date | Download (.zip) |
-| :---: | :---: | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: | :---: |
 | <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region</a> | blur | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
 | <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | screenshot | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
 
