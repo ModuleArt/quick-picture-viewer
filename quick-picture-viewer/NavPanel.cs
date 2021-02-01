@@ -76,11 +76,11 @@ namespace quick_picture_viewer
 		{
 			owner = Parent as MainForm;
 
-			infoTooltip.SetToolTip(navPrevBtn, owner.resMan.GetString("prev-image") + " | " + owner.resMan.GetString("left-arrow"));
-			infoTooltip.SetToolTip(navNextBtn, owner.resMan.GetString("next-image") + " | " + owner.resMan.GetString("right-arrow"));
-			infoTooltip.SetToolTip(navSlideshowBtn, owner.resMan.GetString("slideshow") + " | Ctrl+Shift+S");
+			infoTooltip.SetToolTip(navPrevBtn, LangMan.GetString("prev-image") + " | " + LangMan.GetString("left-arrow"));
+			infoTooltip.SetToolTip(navNextBtn, LangMan.GetString("next-image") + " | " + LangMan.GetString("right-arrow"));
+			infoTooltip.SetToolTip(navSlideshowBtn, LangMan.GetString("slideshow") + " | Ctrl+Shift+S");
 
-			Location = new Point(27, Parent.ClientRectangle.Height - extraBottomMargin - Height - 27);
+			Location = new Point(borderSpacing, Parent.ClientRectangle.Height - extraBottomMargin - Height - borderSpacing);
 		}
 
 		private void navNextBtn_Click(object sender, System.EventArgs e)

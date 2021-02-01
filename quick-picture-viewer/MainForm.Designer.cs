@@ -591,7 +591,6 @@
 			this.effectsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_effects;
 			this.effectsBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.effectsBtn.Name = "effectsBtn";
-			this.effectsBtn.DropDownClosed += new System.EventHandler(this.effectsBtn_DropDownClosed);
 			this.effectsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
 			// 
 			// pluginManBtn
@@ -612,7 +611,6 @@
 			this.toolsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_tools;
 			this.toolsBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.toolsBtn.Name = "toolsBtn";
-			this.toolsBtn.DropDownClosed += new System.EventHandler(this.effectsBtn_DropDownClosed);
 			this.toolsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
 			// 
 			// pluginManBtn2

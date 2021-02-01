@@ -228,19 +228,29 @@ main .features .feature {
     background: #fff;
     border-radius: 8px;
     border: 2px solid rgba(0, 0, 0, 0.25);
-    width: 192px;
+    width: 238px;
 	flex-grow: 1;
+}
+
+main .features .feature.--disabled {
+	opacity: 0.25;
+}
+
+main .features .feature.--small {
+	padding: 16px;
 }
 
 main .features .feature.--small span {
 	vertical-align: middle;
 	display: inline-block;
-	margin-left: 8px;
+	margin: 0 0 2px 8px;
+	font: 14px/21px "Inter";
 }
 
 main .features .feature.--small img {
 	vertical-align: middle;
 	display: inline-block;
+	width: 24px;
 }
 
 main .whats-new {
@@ -423,6 +433,10 @@ footer a:hover {
         margin: 8px 0;
     }
     
+	.hero .buttons a:hover .button {
+		transform: translateY(0);
+	}
+	
     .hero .buttons .button {
         margin: 8px 0;
     }
@@ -445,6 +459,10 @@ footer a:hover {
     header .tagline {
         display: none;
     }
+	
+	.hero h1 {
+		font: bold 28px/42px "Inter"; 
+	}
 }
 
 /* SPECIAL EFFECTS */

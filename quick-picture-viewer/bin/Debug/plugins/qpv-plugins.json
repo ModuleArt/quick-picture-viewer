@@ -1,13 +1,13 @@
 {
-  "name": "qpv-blur",
-  "version": "1.1.0",
-  "title": "Blur",
+  "name": "qpv-plugins",
+  "version": "1.1.1",
+  "title": "QPV Plugins",
   "description": {
-    "en": "Blur or pixelate region",
-    "ru": "Размытие или пикселизация области",
-    "es": "Difuminar o pixelar un área"
+    "en": "Set of preinstalled plugins",
+    "ru": "Набор предустановленных плагинов",
+    "es": "Conjunto de complementos preinstalados"
   },
-  "link": "https://github.com/ModuleArt/qpv-blur",
+  "link": "https://github.com/ModuleArt/qpv-plugins",
   "authors": [
     {
       "name": "Beelink",
@@ -27,7 +27,8 @@
       },
       "type": "effect",
       "inputRequired": true,
-      "dialog": true
+      "dialog": true,
+      "hideMainForm":  false
     },
     {
       "name": "screenshot",
@@ -38,7 +39,8 @@
       },
       "type": "tool",
       "inputRequired": false,
-      "dialog": false
+      "dialog": false,
+      "hideMainForm":  true
     }
   ]
 }

@@ -13,7 +13,6 @@ namespace quick_picture_viewer
 		private float aspectRatio;
 		private int panelWidth;
 		private int panelHeight;
-		private MainForm owner;
 
 		public SvgOpsForm(string path, int imageWidth, int imageHeight, int panelWidth, int panelHeight, bool darkMode)
 		{
@@ -69,7 +68,7 @@ namespace quick_picture_viewer
 					mf.openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 					break;
 				case SvgWrapper.Error.UnableToOpen:
-					mf.showSuggestion(SvgWrapper.TypeName + " - " + owner.resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), MainForm.SuggestionIcon.Warning);
+					mf.showSuggestion(SvgWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), MainForm.SuggestionIcon.Warning);
 					break;
 			}
 			Close();
@@ -185,20 +184,19 @@ namespace quick_picture_viewer
 
 		private void SvgOpsForm_Load(object sender, EventArgs e)
 		{
-			owner = Owner as MainForm;
 			InitLanguage();
 		}
 
 		private void InitLanguage()
 		{
-			Text = "SVG " + owner.resMan.GetString("type-options");
-			presetsLabel.Text = owner.resMan.GetString("presets") + ":";
-			widthLabel.Text = owner.resMan.GetString("width") + ":";
-			heightLabel.Text = owner.resMan.GetString("height") + ":";
-			defaultSizeButton.Text = owner.resMan.GetString("original-size");
-			autoSizeBtn.Text = owner.resMan.GetString("auto-size");
-			okButton.Text = " " + owner.resMan.GetString("resize-svg");
-			aspectRatioCheckbox.Text = owner.resMan.GetString("maintain-aspect-ratio");
+			Text = "SVG " + LangMan.GetString("type-options");
+			presetsLabel.Text = LangMan.GetString("presets") + ":";
+			widthLabel.Text = LangMan.GetString("width") + ":";
+			heightLabel.Text = LangMan.GetString("height") + ":";
+			defaultSizeButton.Text = LangMan.GetString("original-size");
+			autoSizeBtn.Text = LangMan.GetString("auto-size");
+			okButton.Text = " " + LangMan.GetString("resize-svg");
+			aspectRatioCheckbox.Text = LangMan.GetString("maintain-aspect-ratio");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}

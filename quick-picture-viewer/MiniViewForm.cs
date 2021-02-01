@@ -106,7 +106,7 @@ namespace quick_picture_viewer
 			{
 				zoomFactor = newZoomFactor;
 
-				zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
+				zoomLabel.Text = LangMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
 
 				setAutoZoom(false);
 
@@ -205,12 +205,12 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			infoTooltip.SetToolTip(autoZoomBtn, owner.resMan.GetString("auto-zoom") + " | Ctrl+A");
-			infoTooltip.SetToolTip(opacityBtn, owner.resMan.GetString("change-window-opacity") + " | Ctrl+O");
-			zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
-			checkboardBtn.Text = owner.resMan.GetString("checkboard-background");
-			newWindowBtn.Text = owner.resMan.GetString("new-window");
-			quitPipBtn.Text = owner.resMan.GetString("exit-picture-in-picture");
+			infoTooltip.SetToolTip(autoZoomBtn, LangMan.GetString("auto-zoom") + " | Ctrl+A");
+			infoTooltip.SetToolTip(opacityBtn, LangMan.GetString("change-window-opacity") + " | Ctrl+O");
+			zoomLabel.Text = LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
+			checkboardBtn.Text = LangMan.GetString("checkboard-background");
+			newWindowBtn.Text = LangMan.GetString("new-window");
+			quitPipBtn.Text = LangMan.GetString("exit-picture-in-picture");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -291,7 +291,7 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.Fill;
 
-				zoomLabel.Text = owner.resMan.GetString("zoom") + ": " + owner.resMan.GetString("auto");
+				zoomLabel.Text = LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
 
 				Height = Convert.ToInt32(Width / ratio);
 				if (Height == MaximumSize.Height)

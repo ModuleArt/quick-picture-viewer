@@ -8,8 +8,6 @@ using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Resources;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -42,7 +40,6 @@ namespace quick_picture_viewer
 		private bool framelessMode = false;
 
 		public bool printCenterImage = true;
-		public ResourceManager resMan;
 		public bool restartApp = false;
 
 		public MainForm(string openPath, bool darkMode)
@@ -145,12 +142,12 @@ namespace quick_picture_viewer
 					case "en":
 					case "es":
 					case "ru":
-						resMan = new ResourceManager("quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName, Assembly.GetExecutingAssembly());
+						LangMan.InitResMan("quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 						Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 						break;
 					default:
-						resMan = new ResourceManager("quick_picture_viewer.languages.lang_en", Assembly.GetExecutingAssembly());
-						Properties.Settings.Default.Language = "en";
+						LangMan.InitResMan();
+						Properties.Settings.Default.Language = LangMan.defaultLang;
 						break;
 				}
 
@@ -158,64 +155,64 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				resMan = new ResourceManager("quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language, Assembly.GetExecutingAssembly());
+				LangMan.InitResMan("quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language);
 			}
 
-			pleaseOpenLabel.Text = resMan.GetString("please-open-image");
+			pleaseOpenLabel.Text = LangMan.GetString("please-open-image");
 
-			moreButton.Text = resMan.GetString("more-options");
-			aboutBtn.Text = resMan.GetString("about") + " ...";
-			settingsButton.Text = resMan.GetString("settings") + " ...";
-			settingsButton.ShortcutKeyDisplayString = "Ctrl+" + resMan.GetString("comma");
-			newWindowButton.Text = resMan.GetString("new-window");
-			framelessBtn.Text = resMan.GetString("frameless-mode");
-			onTopButton.Text = resMan.GetString("always-on-top");
-			backColorBtn.Text = resMan.GetString("background-color");
-			backClearBtn.Text = resMan.GetString("clear");
-			backCustomBtn.Text = resMan.GetString("choose-color") + " ...";
-			actualSizeBtn.Text = resMan.GetString("zoom-to-actual-size") + " (100%)";
-			setAsDesktopButton.Text = resMan.GetString("set-as-desktop-background") + " ...";
-			printButton.Text = resMan.GetString("print") + " ...";
-			deleteBtn.Text = resMan.GetString("move-to-trash") + " ...";
-			reloadButton.Text = resMan.GetString("reload-file");
+			moreButton.Text = LangMan.GetString("more-options");
+			aboutBtn.Text = LangMan.GetString("about") + " ...";
+			settingsButton.Text = LangMan.GetString("settings") + " ...";
+			settingsButton.ShortcutKeyDisplayString = "Ctrl+" + LangMan.GetString("comma");
+			newWindowButton.Text = LangMan.GetString("new-window");
+			framelessBtn.Text = LangMan.GetString("frameless-mode");
+			onTopButton.Text = LangMan.GetString("always-on-top");
+			backColorBtn.Text = LangMan.GetString("background-color");
+			backClearBtn.Text = LangMan.GetString("clear");
+			backCustomBtn.Text = LangMan.GetString("choose-color") + " ...";
+			actualSizeBtn.Text = LangMan.GetString("zoom-to-actual-size") + " (100%)";
+			setAsDesktopButton.Text = LangMan.GetString("set-as-desktop-background") + " ...";
+			printButton.Text = LangMan.GetString("print") + " ...";
+			deleteBtn.Text = LangMan.GetString("move-to-trash") + " ...";
+			reloadButton.Text = LangMan.GetString("reload-file");
 
-			editButton.Text = resMan.GetString("edit-image");
-			flipHorizontalButton.Text = resMan.GetString("flip-horizontal");
-			flipVerticalButton.Text = resMan.GetString("flip-vertical");
-			rotateRightButton.Text = resMan.GetString("rotate-right");
-			rotateLeftButton.Text = resMan.GetString("rotate-left");
-			rotate180Button.Text = resMan.GetString("rotate-180");
+			editButton.Text = LangMan.GetString("edit-image");
+			flipHorizontalButton.Text = LangMan.GetString("flip-horizontal");
+			flipVerticalButton.Text = LangMan.GetString("flip-vertical");
+			rotateRightButton.Text = LangMan.GetString("rotate-right");
+			rotateLeftButton.Text = LangMan.GetString("rotate-left");
+			rotate180Button.Text = LangMan.GetString("rotate-180");
 
-			copyButton.Text = resMan.GetString("copy");
-			copyImageButton.Text = resMan.GetString("copy-image");
-			copyFileBtn.Text = resMan.GetString("copy-file");
+			copyButton.Text = LangMan.GetString("copy");
+			copyImageButton.Text = LangMan.GetString("copy-image");
+			copyFileBtn.Text = LangMan.GetString("copy-file");
 
-			externalBtn.Text = resMan.GetString("open-external");
-			externalRunBtn.Text = resMan.GetString("open-with-default");
-			externalChooseBtn.Text = resMan.GetString("open-with-choose") + " ...";
+			externalBtn.Text = LangMan.GetString("open-external");
+			externalRunBtn.Text = LangMan.GetString("open-with-default");
+			externalChooseBtn.Text = LangMan.GetString("open-with-choose") + " ...";
 
-			openButton.Text = resMan.GetString("open-file") + " | Ctrl+O";
-			saveAsButton.Text = resMan.GetString("save-as") + " | Ctrl+S";
-			pasteButton.Text = resMan.GetString("paste-image") + " | Ctrl+V";
-			checkboardButton.Text = resMan.GetString("checkboard-background") + " | Ctrl+B";
-			fullscreenButton.Text = resMan.GetString("fullscreen") + " | F";
-			miniViewButton.Text = resMan.GetString("picture-in-picture") + " | Ctrl+Shift+P";
-			autoZoomButton.Text = resMan.GetString("auto-zoom") + " | Ctrl+A";
-			zoomInButton.Text = resMan.GetString("zoom-in") + " | Ctrl+" + resMan.GetString("plus");
-			zoomOutButton.Text = resMan.GetString("zoom-out") + " | Ctrl+" + resMan.GetString("minus");
-			infoButton.Text = resMan.GetString("image-info") + " | Ctrl+I";
-			slideshowButton.Text = resMan.GetString("slideshow") + " | Ctrl+Shift+S";
-			showFileButton.Text = resMan.GetString("show-file-explorer") + " | Ctrl+Shift+L";
-			prevButton.Text = resMan.GetString("prev-image") + " | " + resMan.GetString("left-arrow");
-			nextButton.Text = resMan.GetString("next-image") + " | " + resMan.GetString("right-arrow");
+			openButton.Text = LangMan.GetString("open-file") + " | Ctrl+O";
+			saveAsButton.Text = LangMan.GetString("save-as") + " | Ctrl+S";
+			pasteButton.Text = LangMan.GetString("paste-image") + " | Ctrl+V";
+			checkboardButton.Text = LangMan.GetString("checkboard-background") + " | Ctrl+B";
+			fullscreenButton.Text = LangMan.GetString("fullscreen") + " | F";
+			miniViewButton.Text = LangMan.GetString("picture-in-picture") + " | Ctrl+Shift+P";
+			autoZoomButton.Text = LangMan.GetString("auto-zoom") + " | Ctrl+A";
+			zoomInButton.Text = LangMan.GetString("zoom-in") + " | Ctrl+" + LangMan.GetString("plus");
+			zoomOutButton.Text = LangMan.GetString("zoom-out") + " | Ctrl+" + LangMan.GetString("minus");
+			infoButton.Text = LangMan.GetString("image-info") + " | Ctrl+I";
+			slideshowButton.Text = LangMan.GetString("slideshow") + " | Ctrl+Shift+S";
+			showFileButton.Text = LangMan.GetString("show-file-explorer") + " | Ctrl+Shift+L";
+			prevButton.Text = LangMan.GetString("prev-image") + " | " + LangMan.GetString("left-arrow");
+			nextButton.Text = LangMan.GetString("next-image") + " | " + LangMan.GetString("right-arrow");
 
-			hasChangesLabel.Text = " " + resMan.GetString("not-saved");
-			zoomLabel.Text = " " + resMan.GetString("zoom") + ": " + resMan.GetString("auto");
+			hasChangesLabel.Text = " " + LangMan.GetString("not-saved");
+			zoomLabel.Text = " " + LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
 
-			effectsBtn.Text = resMan.GetString("effects");
-			toolsBtn.Text = resMan.GetString("tools");
-			pluginManBtn.Text = resMan.GetString("plugin-manager");
-			pluginManBtn2.Text = resMan.GetString("plugin-manager");
+			effectsBtn.Text = LangMan.GetString("effects");
+			toolsBtn.Text = LangMan.GetString("tools");
+			pluginManBtn.Text = LangMan.GetString("plugin-manager");
+			pluginManBtn2.Text = LangMan.GetString("plugin-manager");
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -241,11 +238,11 @@ namespace quick_picture_viewer
 			{
 				if ((Properties.Settings.Default.SlideshowTime - slideshowCounter) <= 1)
 				{
-					showSuggestion(resMan.GetString("next-image-in-1-second"), SuggestionIcon.Slideshow);
+					showSuggestion(LangMan.GetString("next-image-in-1-second"), SuggestionIcon.Slideshow);
 				}
 				else
 				{
-					showSuggestion(string.Format(resMan.GetString("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Slideshow);
+					showSuggestion(string.Format(LangMan.GetString("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Slideshow);
 				}
 			}
 		}
@@ -254,7 +251,7 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
-			openFileDialog1.Title = resMan.GetString("open-file");
+			openFileDialog1.Title = LangMan.GetString("open-file");
 
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
@@ -273,7 +270,7 @@ namespace quick_picture_viewer
 					if (Properties.Settings.Default.StartupPaste && Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
-						showSuggestion(resMan.GetString("image-pasted-from-clipboard"), SuggestionIcon.Info);
+						showSuggestion(LangMan.GetString("image-pasted-from-clipboard"), SuggestionIcon.Info);
 					}
 				}
 				else
@@ -292,7 +289,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(resMan.GetString("unable-open-file"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("unable-open-file"), SuggestionIcon.Warning);
 			}
 
 			if (Properties.Settings.Default.CheckForUpdates)
@@ -321,7 +318,7 @@ namespace quick_picture_viewer
 				{
 					if (showUpToDateDialog)
 					{
-						showSuggestion(resMan.GetString("app-is-up-to-date"), SuggestionIcon.Check);
+						showSuggestion(LangMan.GetString("app-is-up-to-date"), SuggestionIcon.Check);
 					}
 				}
 				else
@@ -348,7 +345,7 @@ namespace quick_picture_viewer
 			{
 				if (showUpToDateDialog)
 				{
-					showSuggestion(resMan.GetString("update-failed"), SuggestionIcon.Warning);
+					showSuggestion(LangMan.GetString("update-failed"), SuggestionIcon.Warning);
 					Console.WriteLine(ex);
 				}
 			}
@@ -362,7 +359,7 @@ namespace quick_picture_viewer
 
 				if (show)
 				{
-					typeOpsButton.Text = " " + type + " " + resMan.GetString("type-options");
+					typeOpsButton.Text = " " + type + " " + LangMan.GetString("type-options");
 					typeOpsButton.Focus();
 				}
 			}));
@@ -402,7 +399,7 @@ namespace quick_picture_viewer
 							showTypeOpsButton(true, SvgWrapper.TypeName);
 							break;
 						case SvgWrapper.Error.UnableToOpen:
-							showSuggestion(SvgWrapper.TypeName + " - " + resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(SvgWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -415,13 +412,13 @@ namespace quick_picture_viewer
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 							break;
 						case DdsWrapper.Error.MemoryError:
-							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("memory-error") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("memory-error") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 						case DdsWrapper.Error.UnableToOpen:
-							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 						case DdsWrapper.Error.UnsupportedPixelFormat:
-							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -434,7 +431,7 @@ namespace quick_picture_viewer
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 							break;
 						case PsdWrapper.Error.UnableToOpen:
-							showSuggestion(PsdWrapper.TypeName + " - " + resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -450,24 +447,12 @@ namespace quick_picture_viewer
 						{
 							openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 						}
-
-						//Stream imageStreamSource = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-						//JpegBitmapDecoder jpegDecoder = new JpegBitmapDecoder(imageStreamSource, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
-						//BitmapSource bitmapSource = jpegDecoder.Frames[0];
-
-						//using (MemoryStream outStream = new MemoryStream())
-						//{
-						//	BitmapEncoder enc = new BmpBitmapEncoder();
-						//	enc.Frames.Add(BitmapFrame.Create(bitmapSource));
-						//	enc.Save(outStream);
-						//	openImage(new Bitmap(outStream), Path.GetDirectoryName(path), Path.GetFileName(path));
-						//}
 					}
 				}
 			}
 			catch (Exception ex)
 			{
-				showSuggestion(resMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
@@ -479,12 +464,12 @@ namespace quick_picture_viewer
 				if (imageChanged)
 				{
 					DialogResult window = DialogMan.ShowConfirm(
-						resMan.GetString("unsaved-changes-question"),
-						windowTitle: resMan.GetString("unsaved-changes"),
-						yesBtnText: resMan.GetString("save-as"),
+						LangMan.GetString("unsaved-changes-question"),
+						windowTitle: LangMan.GetString("unsaved-changes"),
+						yesBtnText: LangMan.GetString("save-as"),
 						yesBtnImage: saveAsButton.Image,
 						showNoBtn: true,
-						noBtnText: resMan.GetString("dont-save"),
+						noBtnText: LangMan.GetString("dont-save"),
 						noBtnImage: deleteBtn.Image,
 						darkMode: darkMode
 					);
@@ -509,7 +494,7 @@ namespace quick_picture_viewer
 					pictureBox.Image = null;
 				}
 
-				const int exifOrientationID = 0x112; //274
+				const int exifOrientationID = 0x112; // 274
 				if (bitmap.PropertyIdList.Contains(exifOrientationID))
 				{
 					var prop = bitmap.GetPropertyItem(exifOrientationID);
@@ -535,14 +520,14 @@ namespace quick_picture_viewer
 
 				width = pictureBox.Image.Size.Width;
 				height = pictureBox.Image.Size.Height;
-				fileLabel.Text = " " + resMan.GetString("file") + ": " + fileName;
+				fileLabel.Text = " " + LangMan.GetString("file") + ": " + fileName;
 
 				if (directoryName == null)
 				{
 					currentFolder = null;
 					currentFile = null;
 					directoryLabel.Visible = false;
-					sizeLabel.Text = " " + resMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
+					sizeLabel.Text = " " + LangMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
 				}
 				else
 				{
@@ -551,11 +536,11 @@ namespace quick_picture_viewer
 					currentFolder = directoryName;
 					currentFile = fileName;
 					directoryLabel.Visible = true;
-					directoryLabel.Text = " " + resMan.GetString("folder") + ": " + directoryName;
-					sizeLabel.Text = " " + resMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
+					directoryLabel.Text = " " + LangMan.GetString("folder") + ": " + directoryName;
+					sizeLabel.Text = " " + LangMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
-					dateCreatedLabel.Text = " " + resMan.GetString("created") + ": " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
-					dateModifiedLabel.Text = " " + resMan.GetString("modified") + ": " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
+					dateCreatedLabel.Text = " " + LangMan.GetString("created") + ": " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
+					dateModifiedLabel.Text = " " + LangMan.GetString("modified") + ": " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
 				}
 
 				nextButton.Enabled = directoryName != null;
@@ -607,7 +592,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					setZoomText(resMan.GetString("auto"));
+					setZoomText(LangMan.GetString("auto"));
 				}
 			}
 		}
@@ -679,15 +664,12 @@ namespace quick_picture_viewer
 		{
 			zoomFactor = newZoomFactor;
 
-			zoomLabel.Text = " " + resMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
+			zoomLabel.Text = " " + LangMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
 
 			setAutoZoom(false);
 
 			int newWidth = Convert.ToInt32(width * zoomFactor / 100);
 			int newHeight = Convert.ToInt32(height * zoomFactor / 100);
-
-			//int newScrollH = Convert.ToInt32(picturePanel.HorizontalScroll.Value * zoomFactor / 100);
-			//int newScrollV = Convert.ToInt32(picturePanel.VerticalScroll.Value * zoomFactor / 100);
 
 			Size newSize = new Size(newWidth, newHeight);
 
@@ -737,7 +719,7 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.Fill;
 
-				zoomLabel.Text = " " + resMan.GetString("zoom") + ": " + resMan.GetString("auto");
+				zoomLabel.Text = " " + LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
 			}
 			else
 			{
@@ -747,14 +729,14 @@ namespace quick_picture_viewer
 
 		private void autoZoomButton_Click(object sender, EventArgs e)
 		{
-			if (zoomTextBox.Text == resMan.GetString("auto"))
+			if (zoomTextBox.Text == LangMan.GetString("auto"))
 			{
 				zoomToFit();
 				setZoomText(zoomFactor + "%");
 			}
 			else
 			{
-				setZoomText(resMan.GetString("auto"));
+				setZoomText(LangMan.GetString("auto"));
 			}
 		}
 
@@ -849,7 +831,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
 			pictureBox.Image = originalImage;
-			setZoomText(resMan.GetString("auto"));
+			setZoomText(LangMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -857,7 +839,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
 			pictureBox.Image = originalImage;
-			setZoomText(resMan.GetString("auto"));
+			setZoomText(LangMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -865,7 +847,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText(resMan.GetString("auto"));
+			setZoomText(LangMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -873,7 +855,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText(resMan.GetString("auto"));
+			setZoomText(LangMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -940,9 +922,6 @@ namespace quick_picture_viewer
 						originalImage.Save(fs, ImageFormat.Tiff);
 						break;
 					case 6:
-						//originalImage.Save(fs, System.Drawing.Imaging.ImageFormat.Tiff);
-						//Icon icon = Icon.FromHandle(originalImage.GetHicon());
-						//icon.Save(fs);
 						IcoWrapper.ConvertToIcon(originalImage, fs);
 						break;
 					case 7:
@@ -964,15 +943,15 @@ namespace quick_picture_viewer
 		private void copyButton_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetImage(originalImage);
-			showSuggestion(resMan.GetString("image-copied-to-clipboard"), SuggestionIcon.Check);
+			showSuggestion(LangMan.GetString("image-copied-to-clipboard"), SuggestionIcon.Check);
 		}
 
 		private void pasteButton_Click(object sender, EventArgs e)
 		{
 			if (Clipboard.ContainsImage())
 			{
-				openImage(new Bitmap(Clipboard.GetImage()), null, resMan.GetString("from-clipboard"));
-				setImageChanged(true, resMan.GetString("from-clipboard"));
+				openImage(new Bitmap(Clipboard.GetImage()), null, LangMan.GetString("from-clipboard"));
+				setImageChanged(true, LangMan.GetString("from-clipboard"));
 			}
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
@@ -1154,7 +1133,7 @@ namespace quick_picture_viewer
 
 				setAlwaysOnTop(false, true);
 
-				showSuggestion(string.Format(resMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
+				showSuggestion(string.Format(LangMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
 
 				if (navPanel != null && !navPanel.IsDisposed && !Properties.Settings.Default.NavPanelInFullscreen)
 				{
@@ -1199,7 +1178,7 @@ namespace quick_picture_viewer
 				}
 			}
 
-			setZoomText(resMan.GetString("auto"));
+			setZoomText(LangMan.GetString("auto"));
 
 			OnResizeEnd(EventArgs.Empty);
 		}
@@ -1208,7 +1187,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				if (zoomTextBox.Text == resMan.GetString("auto"))
+				if (zoomTextBox.Text == LangMan.GetString("auto"))
 				{
 					setAutoZoom(true);
 				}
@@ -1387,8 +1366,8 @@ namespace quick_picture_viewer
 
 			if (bitmap != null)
 			{
-				openImage(bitmap, null, resMan.GetString("dragged-image"));
-				setImageChanged(true, resMan.GetString("dragged-image"));
+				openImage(bitmap, null, LangMan.GetString("dragged-image"));
+				setImageChanged(true, LangMan.GetString("dragged-image"));
 			}
 			else if (files.Length > 0)
 			{
@@ -1431,7 +1410,7 @@ namespace quick_picture_viewer
 			if (currentIndex == -1)
 			{
 				setSlideshow(false);
-				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 				return 0;
 			}
 			else
@@ -1470,7 +1449,7 @@ namespace quick_picture_viewer
 
 			if (currentIndex == -1)
 			{
-				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 			else
 			{
@@ -1521,7 +1500,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				showSuggestion(resMan.GetString("no-files-to-open"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("no-files-to-open"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -1536,9 +1515,9 @@ namespace quick_picture_viewer
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
 			DialogResult d = DialogMan.ShowConfirm(
-				resMan.GetString("sure-move-to-trash"),
+				LangMan.GetString("sure-move-to-trash"),
 				yesBtnImage: deleteBtn.Image,
-				windowTitle: resMan.GetString("delete-file"),
+				windowTitle: LangMan.GetString("delete-file"),
 				darkMode: darkMode
 			);
 
@@ -1560,7 +1539,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+					showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 				}
 			}
 		}
@@ -1611,12 +1590,12 @@ namespace quick_picture_viewer
 			pleaseOpenLabel.Visible = true;
 
 			directoryLabel.Visible = false;
-			fileLabel.Text = " " + resMan.GetString("no-file");
-			sizeLabel.Text = " " + resMan.GetString("size") + ": 0 x 0 px";
+			fileLabel.Text = " " + LangMan.GetString("no-file");
+			sizeLabel.Text = " " + LangMan.GetString("size") + ": 0 x 0 px";
 			dateCreatedLabel.Visible = false;
 			dateModifiedLabel.Visible = false;
 
-			setZoomText(resMan.GetString("auto"));
+			setZoomText(LangMan.GetString("auto"));
 			setSlideshow(false);
 			setFullscreen(false);
 		}
@@ -1734,7 +1713,7 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
-			string docTitle = resMan.GetString("image") + " 1";
+			string docTitle = LangMan.GetString("image") + " 1";
 			if (currentFile != null)
 			{
 				docTitle = currentFile;
@@ -1819,12 +1798,12 @@ namespace quick_picture_viewer
 			if (imageChanged)
 			{
 				DialogResult window = DialogMan.ShowConfirm(
-					resMan.GetString("unsaved-changes-question"),
-					windowTitle: resMan.GetString("unsaved-changes"),
-					yesBtnText: resMan.GetString("save-as"),
+					LangMan.GetString("unsaved-changes-question"),
+					windowTitle: LangMan.GetString("unsaved-changes"),
+					yesBtnText: LangMan.GetString("save-as"),
 					yesBtnImage: saveAsButton.Image,
 					showNoBtn: true,
-					noBtnText: resMan.GetString("dont-save"),
+					noBtnText: LangMan.GetString("dont-save"),
 					noBtnImage: deleteBtn.Image,
 					darkMode: darkMode
 				);
@@ -1865,7 +1844,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -1973,7 +1952,7 @@ namespace quick_picture_viewer
 		private void reloadButton_Click(object sender, EventArgs e)
 		{
 			openFile(Path.Combine(currentFolder, currentFile));
-			showSuggestion(resMan.GetString("file-reloaded"), SuggestionIcon.Check);
+			showSuggestion(LangMan.GetString("file-reloaded"), SuggestionIcon.Check);
 		}
 
 		private void newWindowButton_Click(object sender, EventArgs e)
@@ -1996,7 +1975,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText(resMan.GetString("auto"));
+			setZoomText(LangMan.GetString("auto"));
 			setImageChanged(true);
 		}
 
@@ -2053,7 +2032,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				CustomJumplist jumplist = new CustomJumplist(resMan.GetString("new-window"), resMan.GetString("new-window-desc"));
+				CustomJumplist jumplist = new CustomJumplist(LangMan.GetString("new-window"), LangMan.GetString("new-window-desc"));
 			}
 			catch
 			{
@@ -2068,11 +2047,11 @@ namespace quick_picture_viewer
 				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
 				Clipboard.Clear();
 				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
-				showSuggestion(resMan.GetString("file-copied-to-clipboard"), SuggestionIcon.Check);
+				showSuggestion(LangMan.GetString("file-copied-to-clipboard"), SuggestionIcon.Check);
 			}
 			catch
 			{
-				showSuggestion(resMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2090,7 +2069,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(resMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2102,7 +2081,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(resMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2115,11 +2094,11 @@ namespace quick_picture_viewer
 			if (lastSlashIndex >= 0)
 			{
 				string appName = Properties.Settings.Default.FavoriteExternalApp.Substring(lastSlashIndex + 1, Properties.Settings.Default.FavoriteExternalApp.Length - lastSlashIndex - 1);
-				externalFavoriteBtn.Text = resMan.GetString("open-with") + " \"" + appName + "\"";
+				externalFavoriteBtn.Text = LangMan.GetString("open-with") + " \"" + appName + "\"";
 			}
 			else
 			{
-				externalFavoriteBtn.Text = resMan.GetString("open-with-custom");
+				externalFavoriteBtn.Text = LangMan.GetString("open-with-custom");
 			}
 		}
 
@@ -2217,7 +2196,7 @@ namespace quick_picture_viewer
 			SetFramelessMode(!framelessMode);
 		}
 
-		private void effectsBtn_DropDownClosed(object sender, EventArgs e)
+		private void effectsBtn_DropDownOpening(object sender, EventArgs eventArgs)
 		{
 			for (int i = effectsBtn.DropDownItems.Count - 1; i > 0; i--)
 			{
@@ -2236,10 +2215,7 @@ namespace quick_picture_viewer
 				}
 				toolsBtn.DropDownItems.Remove(toolsBtn.DropDownItems[i]);
 			}
-		}
 
-		private void effectsBtn_DropDownOpening(object sender, EventArgs eventArgs)
-		{
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 			PluginMan.apiVer = 3;
 			PluginMan.inputType = "bitmap";
@@ -2262,7 +2238,8 @@ namespace quick_picture_viewer
 						plugins[i],
 						plugins[i].functions[j],
 						alwaysOnTop,
-						Properties.Settings.Default.Language
+						Properties.Settings.Default.Language,
+						this
 					);
 					tsmi.Output += Tsmi_Output;
 
@@ -2278,14 +2255,20 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void Tsmi_Output(object sender, OutputEventArgs e)
+		private void Tsmi_Output(object sender, PluginMan.OutputEventArgs e)
 		{
 			Show();
 			if (e.input != null)
 			{
-				setImageChanged(false);
-				openImage(e.input as Bitmap, currentFolder, currentFile);
-				setImageChanged(true);
+				directoryLabel.Visible = false;
+				string title = string.Format(LangMan.GetString("from-format"), sender.ToString());
+
+				if((sender as PluginMenuItem).OwnerItem.Name == "effectsBtn")
+				{
+					setImageChanged(false);
+				}
+				openImage(e.input as Bitmap, null, title);
+				setImageChanged(true, title);
 			}
 		}
 

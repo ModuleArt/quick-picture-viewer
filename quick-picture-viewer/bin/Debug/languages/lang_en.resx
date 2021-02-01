@@ -173,10 +173,6 @@
     <value>Browse for plugins</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="capture-screen" xml:space="preserve">
-    <value>Capture screen</value>
-    <comment>Menu</comment>
-  </data>
   <data name="center" xml:space="preserve">
     <value>Center</value>
     <comment>Wallpaper</comment>
@@ -359,6 +355,10 @@
   </data>
   <data name="from-clipboard" xml:space="preserve">
     <value>From clipboard</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>From "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">

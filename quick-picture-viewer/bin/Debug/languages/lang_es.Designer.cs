@@ -196,15 +196,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Captura de pantalla.
-        /// </summary>
-        public static string capture_screen {
-            get {
-                return ResourceManager.GetString("capture-screen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Centro.
         /// </summary>
         public static string center {

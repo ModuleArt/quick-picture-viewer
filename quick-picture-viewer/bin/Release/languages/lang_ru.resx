@@ -137,10 +137,6 @@
     <value>Действия при запуске приложения</value>
     <comment>Settings</comment>
   </data>
-  <data name="apply" xml:space="preserve">
-    <value>Применить</value>
-    <comment>Menu</comment>
-  </data>
   <data name="aspect-ratio" xml:space="preserve">
     <value>Соотношение</value>
     <comment>Image info</comment>
@@ -176,10 +172,6 @@
   <data name="browse-for-plugins" xml:space="preserve">
     <value>Найти плагины</value>
     <comment>Plugin manager</comment>
-  </data>
-  <data name="capture-screen" xml:space="preserve">
-    <value>Сделать скриншот</value>
-    <comment>Menu</comment>
   </data>
   <data name="center" xml:space="preserve">
     <value>Центрировать</value>
@@ -225,10 +217,6 @@
     <value>Сжатие</value>
     <comment>Image info</comment>
   </data>
-  <data name="configure" xml:space="preserve">
-    <value>Настроить</value>
-    <comment>Menu</comment>
-  </data>
   <data name="context-menu" xml:space="preserve">
     <value>Контекстное меню</value>
     <comment>Settings</comment>
@@ -264,10 +252,6 @@
   <data name="dark" xml:space="preserve">
     <value>Тёмная</value>
     <comment>Settings</comment>
-  </data>
-  <data name="dds-memory-error" xml:space="preserve">
-    <value>Ошибка памяти при чтении DDS/TGA</value>
-    <comment>Message box</comment>
   </data>
   <data name="delete-file" xml:space="preserve">
     <value>Удалить файл</value>
@@ -316,6 +300,10 @@
   <data name="esc-to-exit" xml:space="preserve">
     <value>Нажмите {0}, чтобы выйти из приложения</value>
     <comment>Main window</comment>
+  </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>Выйти из режима "Картинка в картинке"</value>
+    <comment>Picture in picture</comment>
   </data>
   <data name="extension" xml:space="preserve">
     <value>Расширение</value>
@@ -367,6 +355,10 @@
   </data>
   <data name="from-clipboard" xml:space="preserve">
     <value>С буфера обмена</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>Получено с "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">
@@ -449,6 +441,10 @@
     <value>мегапикселей</value>
     <comment>Image info</comment>
   </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>Ошибка памяти </value>
+    <comment>Message box</comment>
+  </data>
   <data name="minus" xml:space="preserve">
     <value>Минус</value>
     <comment>Menu</comment>
@@ -513,10 +509,6 @@
     <value>Нет файлов для открытия</value>
     <comment>Message box</comment>
   </data>
-  <data name="no-folder" xml:space="preserve">
-    <value>Нет папки</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="not-saved" xml:space="preserve">
     <value>Не сохранено</value>
     <comment>Status bar</comment>
@@ -562,7 +554,7 @@
     <comment>Menu</comment>
   </data>
   <data name="picture-in-picture" xml:space="preserve">
-    <value>Картинка в картинке</value>
+    <value>Режим "Картинка в картинке"</value>
     <comment>Menu</comment>
   </data>
   <data name="pixels" xml:space="preserve">
@@ -673,10 +665,6 @@
     <value>Сохранить как</value>
     <comment>Menu</comment>
   </data>
-  <data name="screenshot" xml:space="preserve">
-    <value>Скриншот</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="scroll-up-down" xml:space="preserve">
     <value>Прокрутка вверх / вниз</value>
     <comment>Settings</comment>
@@ -781,19 +769,7 @@
     <value>Язык интерфейса</value>
     <comment>Settings</comment>
   </data>
-  <data name="unable-open-dds" xml:space="preserve">
-    <value>Невозможно открыть DDS или TGA файл</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-psd" xml:space="preserve">
-    <value />
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-svg" xml:space="preserve">
-    <value>Невозможно открыть SVG файл</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-to-open-file" xml:space="preserve">
+  <data name="unable-open-file" xml:space="preserve">
     <value>Невозможно открыть файл</value>
     <comment>Message box</comment>
   </data>
@@ -808,6 +784,10 @@
   <data name="unsaved-changes-question" xml:space="preserve">
     <value>Текущее изображение имеет несохраненные изменения. Чтобы Вы хотели сделать?</value>
     <comment>Main window</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>Неподдерживаемый формат пикселей</value>
+    <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Обновление невозможно</value>

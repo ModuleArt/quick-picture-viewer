@@ -120,41 +120,41 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			Text = owner.resMan.GetString("settings");
-			langPage.Text = owner.resMan.GetString("localization");
-			startupPage.Text = owner.resMan.GetString("startup");
-			restartLabel1.Text = "* " + owner.resMan.GetString("restart-required");
-			restartLabel2.Text = "* " + owner.resMan.GetString("restart-required");
-			systemThemeRadio.Text = owner.resMan.GetString("use-system-setting");
-			lightThemeRadio.Text = owner.resMan.GetString("light");
-			darkThemeRadio.Text = owner.resMan.GetString("dark");
-			themePage.Text = owner.resMan.GetString("theme");
-			startupLabel.Text = owner.resMan.GetString("app-startup-actions") + ":";
-			startupPasteCheckBox.Text = owner.resMan.GetString("paste-from-clipboard");
-			startupBoundsCheckBox.Text = owner.resMan.GetString("restore-last-window-bounds");
-			updatesCheckBox.Text = owner.resMan.GetString("check-for-app-updates");
-			favExtLabel.Text = owner.resMan.GetString("fav-external-app") + ":";
-			browseBtn.Text = " " + owner.resMan.GetString("browse");
-			slideshowPage.Text = owner.resMan.GetString("slideshow");
-			slideshowTimeLabel.Text = owner.resMan.GetString("switching-time") + ":";
-			mousePage.Text = owner.resMan.GetString("input");
-			slideshowSecondsLabel.Text = owner.resMan.GetString("seconds");
-			slideshowCounterCheckBox.Text = owner.resMan.GetString("show-slideshow-counter");
-			fullscrCursorCheckBox.Text = owner.resMan.GetString("fullscreen-cursor");
-			langLabel.Text = owner.resMan.GetString("ui-lang") + ":";
-			translatedByLabel.Text = owner.resMan.GetString("translated-by") + ": ";
-			escToExitCheckBox.Text = string.Format(owner.resMan.GetString("esc-to-exit"), "Esc");
-			mouseWheelActionLabel.Text = owner.resMan.GetString("mouse-wheel-action") + ":";
-			mouseWheelActionRadio1.Text = owner.resMan.GetString("scroll-up-down");
-			mouseWheelActionRadio2.Text = owner.resMan.GetString("zoom-in-out");
-			mouseWheelActionRadio3.Text = owner.resMan.GetString("next-prev-image");
-			themeRestart.Text = owner.resMan.GetString("restart");
-			localizationRestart.Text = owner.resMan.GetString("restart");
-			contextMenuLabel.Text = owner.resMan.GetString("context-menu") + ":";
-			makeDefaultBtn.Text = owner.resMan.GetString("set-as-default-image-viewer");
-			navBarPage.Text = owner.resMan.GetString("navigation-bar");
-			navBarCheckBox.Text = owner.resMan.GetString("enable-navigation-bar");
-			navBarFullscreenCheckBox.Text = owner.resMan.GetString("nav-bar-fullscreen");
+			Text = LangMan.GetString("settings");
+			langPage.Text = LangMan.GetString("localization");
+			startupPage.Text = LangMan.GetString("startup");
+			restartLabel1.Text = "* " + LangMan.GetString("restart-required");
+			restartLabel2.Text = "* " + LangMan.GetString("restart-required");
+			systemThemeRadio.Text = LangMan.GetString("use-system-setting");
+			lightThemeRadio.Text = LangMan.GetString("light");
+			darkThemeRadio.Text = LangMan.GetString("dark");
+			themePage.Text = LangMan.GetString("theme");
+			startupLabel.Text = LangMan.GetString("app-startup-actions") + ":";
+			startupPasteCheckBox.Text = LangMan.GetString("paste-from-clipboard");
+			startupBoundsCheckBox.Text = LangMan.GetString("restore-last-window-bounds");
+			updatesCheckBox.Text = LangMan.GetString("check-for-app-updates");
+			favExtLabel.Text = LangMan.GetString("fav-external-app") + ":";
+			browseBtn.Text = " " + LangMan.GetString("browse");
+			slideshowPage.Text = LangMan.GetString("slideshow");
+			slideshowTimeLabel.Text = LangMan.GetString("switching-time") + ":";
+			mousePage.Text = LangMan.GetString("input");
+			slideshowSecondsLabel.Text = LangMan.GetString("seconds");
+			slideshowCounterCheckBox.Text = LangMan.GetString("show-slideshow-counter");
+			fullscrCursorCheckBox.Text = LangMan.GetString("fullscreen-cursor");
+			langLabel.Text = LangMan.GetString("ui-lang") + ":";
+			translatedByLabel.Text = LangMan.GetString("translated-by") + ": ";
+			escToExitCheckBox.Text = string.Format(LangMan.GetString("esc-to-exit"), "Esc");
+			mouseWheelActionLabel.Text = LangMan.GetString("mouse-wheel-action") + ":";
+			mouseWheelActionRadio1.Text = LangMan.GetString("scroll-up-down");
+			mouseWheelActionRadio2.Text = LangMan.GetString("zoom-in-out");
+			mouseWheelActionRadio3.Text = LangMan.GetString("next-prev-image");
+			themeRestart.Text = LangMan.GetString("restart");
+			localizationRestart.Text = LangMan.GetString("restart");
+			contextMenuLabel.Text = LangMan.GetString("context-menu") + ":";
+			makeDefaultBtn.Text = LangMan.GetString("set-as-default-image-viewer");
+			navBarPage.Text = LangMan.GetString("navigation-bar");
+			navBarCheckBox.Text = LangMan.GetString("enable-navigation-bar");
+			navBarFullscreenCheckBox.Text = LangMan.GetString("nav-bar-fullscreen");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -302,8 +302,8 @@ namespace quick_picture_viewer
 				if (languages[langComboBox.SelectedIndex].Beta && settingsStarted)
 				{
 					DialogMan.ShowInfo(
-						owner.resMan.GetString("beta-lang-warning"),
-						owner.resMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
+						LangMan.GetString("beta-lang-warning"),
+						LangMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
 						darkMode
 					);
 				}
@@ -421,8 +421,8 @@ namespace quick_picture_viewer
 				{
 					settingsStarted = false;
 					DialogMan.ShowInfo(
-						owner.resMan.GetString("context-menu-notice"),
-						owner.resMan.GetString("error"),
+						LangMan.GetString("context-menu-notice"),
+						LangMan.GetString("error"),
 						darkMode
 					);
 					openWithCheckBox.Checked = !openWithCheckBox.Checked;
@@ -459,8 +459,8 @@ namespace quick_picture_viewer
 				{
 					settingsStarted = false;
 					DialogMan.ShowInfo(
-						owner.resMan.GetString("context-menu-notice"),
-						owner.resMan.GetString("error"),
+						LangMan.GetString("context-menu-notice"),
+						LangMan.GetString("error"),
 						darkMode
 					);
 					browseWithCheckBox.Checked = !browseWithCheckBox.Checked;

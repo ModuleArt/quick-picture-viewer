@@ -9,8 +9,6 @@ namespace quick_picture_viewer
 {
 	partial class InfoForm : QlibFixedForm
 	{
-		private bool darkMode;
-		private MainForm owner;
 		private Bitmap bitmap;
 		private string directoryName;
 		private string fileName;
@@ -19,10 +17,9 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
-			this.darkMode = darkMode;
 			this.bitmap = bitmap;
 			this.fileName = fileName;
 			this.directoryName = directoryName;
@@ -163,7 +160,6 @@ namespace quick_picture_viewer
 
 		private void InfoForm_Load(object sender, EventArgs e)
 		{
-			owner = Owner as MainForm;
 			InitLanguage();
 
 			if (directoryName != null)
@@ -190,26 +186,26 @@ namespace quick_picture_viewer
 
 			compressionTextBox.Text = getImageCompression(bitmap);
 
-			sizeTextBox.Text = bitmap.Width + " x " + bitmap.Height + " " + owner.resMan.GetString("pixels");
-			megapixelsTextBox.Text = ((((float)bitmap.Height * bitmap.Width) / 1000000)).ToString("0.##") + " " + owner.resMan.GetString("megapixels");
+			sizeTextBox.Text = bitmap.Width + " x " + bitmap.Height + " " + LangMan.GetString("pixels");
+			megapixelsTextBox.Text = ((((float)bitmap.Height * bitmap.Width) / 1000000)).ToString("0.##") + " " + LangMan.GetString("megapixels");
 			resolutionTextBox.Text = Math.Round(bitmap.HorizontalResolution) + " x " + Math.Round(bitmap.VerticalResolution) + " DPI";
-			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " " + owner.resMan.GetString("inches");
-			cmTextBox.Text = cmWidth.ToString("0.##") + " x " + cmHeight.ToString("0.##") + " " + owner.resMan.GetString("centimeters");
+			inchesTextBox.Text = inchesWidth.ToString("0.##") + " x " + inchesHeight.ToString("0.##") + " " + LangMan.GetString("inches");
+			cmTextBox.Text = cmWidth.ToString("0.##") + " x " + cmHeight.ToString("0.##") + " " + LangMan.GetString("centimeters");
 
 			int firstRatio = bitmap.Width / GCD(bitmap.Width, bitmap.Height);
 			int secondRatio = bitmap.Height / GCD(bitmap.Width, bitmap.Height);
 			ratioTextBox.Text = string.Format("{0} : {1} (", firstRatio, secondRatio);
 			if (firstRatio == secondRatio)
 			{
-				ratioTextBox.Text += owner.resMan.GetString("square");
+				ratioTextBox.Text += LangMan.GetString("square");
 			}
 			else if (firstRatio > secondRatio)
 			{
-				ratioTextBox.Text += owner.resMan.GetString("landscape");
+				ratioTextBox.Text += LangMan.GetString("landscape");
 			}
 			else
 			{
-				ratioTextBox.Text += owner.resMan.GetString("portrait");
+				ratioTextBox.Text += LangMan.GetString("portrait");
 			}
 			ratioTextBox.Text += ")";
 
@@ -218,25 +214,25 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			this.Text = owner.resMan.GetString("image-info");
-			fileNameLabel.Text = owner.resMan.GetString("file") + ":";
-			folderLabel.Text = owner.resMan.GetString("folder") + ":";
-			fullPathLabel.Text = owner.resMan.GetString("full-path") + ":";
-			diskSizeLabel.Text = owner.resMan.GetString("disk-size") + ":";
-			ratioLabel.Text = owner.resMan.GetString("aspect-ratio") + ":";
-			resolutionLabel.Text = owner.resMan.GetString("resolution") + ":";
-			createdLabel.Text = owner.resMan.GetString("created") + ":";
-			modifiedLabel.Text = owner.resMan.GetString("modified") + ":";
-			infoTooltip.SetToolTip(copyNameButton, owner.resMan.GetString("copy"));
-			infoTooltip.SetToolTip(copyFolderButton, owner.resMan.GetString("copy"));
-			infoTooltip.SetToolTip(copyPathButton, owner.resMan.GetString("copy"));
-			extensionLabel.Text = owner.resMan.GetString("extension") + ":";
-			compressionLabel.Text = owner.resMan.GetString("compression") + ":";
-			propertiesButton.Text = " " + owner.resMan.GetString("file-properties");
-			sizeLabel.Text = owner.resMan.GetString("size") + " (px):";
-			megapixelsLabel.Text = owner.resMan.GetString("size") + " (mp):";
-			inchesLabel.Text = owner.resMan.GetString("print-size") + " (in):";
-			cmLabel.Text = owner.resMan.GetString("print-size") + " (cm):";
+			Text = LangMan.GetString("image-info");
+			fileNameLabel.Text = LangMan.GetString("file") + ":";
+			folderLabel.Text = LangMan.GetString("folder") + ":";
+			fullPathLabel.Text = LangMan.GetString("full-path") + ":";
+			diskSizeLabel.Text = LangMan.GetString("disk-size") + ":";
+			ratioLabel.Text = LangMan.GetString("aspect-ratio") + ":";
+			resolutionLabel.Text = LangMan.GetString("resolution") + ":";
+			createdLabel.Text = LangMan.GetString("created") + ":";
+			modifiedLabel.Text = LangMan.GetString("modified") + ":";
+			infoTooltip.SetToolTip(copyNameButton, LangMan.GetString("copy"));
+			infoTooltip.SetToolTip(copyFolderButton, LangMan.GetString("copy"));
+			infoTooltip.SetToolTip(copyPathButton, LangMan.GetString("copy"));
+			extensionLabel.Text = LangMan.GetString("extension") + ":";
+			compressionLabel.Text = LangMan.GetString("compression") + ":";
+			propertiesButton.Text = " " + LangMan.GetString("file-properties");
+			sizeLabel.Text = LangMan.GetString("size") + " (px):";
+			megapixelsLabel.Text = LangMan.GetString("size") + " (mp):";
+			inchesLabel.Text = LangMan.GetString("print-size") + " (in):";
+			cmLabel.Text = LangMan.GetString("print-size") + " (cm):";
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}

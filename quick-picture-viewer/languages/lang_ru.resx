@@ -173,10 +173,6 @@
     <value>Найти плагины</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="capture-screen" xml:space="preserve">
-    <value>Сделать скриншот</value>
-    <comment>Menu</comment>
-  </data>
   <data name="center" xml:space="preserve">
     <value>Центрировать</value>
     <comment>Wallpaper</comment>
@@ -359,6 +355,10 @@
   </data>
   <data name="from-clipboard" xml:space="preserve">
     <value>С буфера обмена</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>Получено с "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">

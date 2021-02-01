@@ -177,10 +177,6 @@
     <value>Buscar complementos</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="capture-screen" xml:space="preserve">
-    <value>Captura de pantalla</value>
-    <comment>Menu</comment>
-  </data>
   <data name="center" xml:space="preserve">
     <value>Centro</value>
     <comment>Wallpaper</comment>
@@ -652,10 +648,6 @@
   <data name="save-as" xml:space="preserve">
     <value>Guardar como</value>
     <comment>Menu</comment>
-  </data>
-  <data name="screenshot" xml:space="preserve">
-    <value>Captura de pantalla</value>
-    <comment>Status bar</comment>
   </data>
   <data name="scroll-up-down" xml:space="preserve">
     <value>Desplazarse hacia arriba / abajo</value>

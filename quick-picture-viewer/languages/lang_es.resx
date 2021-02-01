@@ -177,10 +177,6 @@
     <value>Buscar complementos</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="capture-screen" xml:space="preserve">
-    <value>Captura de pantalla</value>
-    <comment>Menu</comment>
-  </data>
   <data name="center" xml:space="preserve">
     <value>Centro</value>
     <comment>Wallpaper</comment>

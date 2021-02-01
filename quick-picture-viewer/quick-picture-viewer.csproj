@@ -172,6 +172,7 @@
     <Compile Include="PluginManForm.Designer.cs">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LangMan.cs" />
     <Compile Include="SvgWrapper.cs" />
     <Compile Include="PsdWrapper.cs" />
     <Compile Include="SettingsForm.cs">
@@ -227,11 +228,13 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_ru.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="languages\lang_en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_en.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MiniViewForm.resx">
       <DependentUpon>MiniViewForm.cs</DependentUpon>

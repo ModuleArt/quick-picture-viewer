@@ -137,10 +137,6 @@
     <value>App startup actions</value>
     <comment>Settings</comment>
   </data>
-  <data name="apply" xml:space="preserve">
-    <value>Apply</value>
-    <comment>Menu</comment>
-  </data>
   <data name="aspect-ratio" xml:space="preserve">
     <value>Aspect ratio</value>
     <comment>Image info</comment>
@@ -176,10 +172,6 @@
   <data name="browse-for-plugins" xml:space="preserve">
     <value>Browse for plugins</value>
     <comment>Plugin manager</comment>
-  </data>
-  <data name="capture-screen" xml:space="preserve">
-    <value>Capture screen</value>
-    <comment>Menu</comment>
   </data>
   <data name="center" xml:space="preserve">
     <value>Center</value>
@@ -225,10 +217,6 @@
     <value>Compression</value>
     <comment>Image info</comment>
   </data>
-  <data name="configure" xml:space="preserve">
-    <value>Configure</value>
-    <comment>Menu</comment>
-  </data>
   <data name="context-menu" xml:space="preserve">
     <value>Context menu</value>
     <comment>Settings</comment>
@@ -264,10 +252,6 @@
   <data name="dark" xml:space="preserve">
     <value>Dark</value>
     <comment>Settings</comment>
-  </data>
-  <data name="dds-memory-error" xml:space="preserve">
-    <value>DDS/TGA: Memory error</value>
-    <comment>Message box</comment>
   </data>
   <data name="delete-file" xml:space="preserve">
     <value>Delete file</value>
@@ -316,6 +300,10 @@
   <data name="esc-to-exit" xml:space="preserve">
     <value>Press {0} to exit app</value>
     <comment>Main window</comment>
+  </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>Exit Picture-in-Picture mode</value>
+    <comment>Picture in picture</comment>
   </data>
   <data name="extension" xml:space="preserve">
     <value>Extension</value>
@@ -367,6 +355,10 @@
   </data>
   <data name="from-clipboard" xml:space="preserve">
     <value>From clipboard</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>From "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">
@@ -449,6 +441,10 @@
     <value>megapixels</value>
     <comment>Image info</comment>
   </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>Memory error</value>
+    <comment>Message box</comment>
+  </data>
   <data name="minus" xml:space="preserve">
     <value>Minus</value>
     <comment>Menu</comment>
@@ -513,10 +509,6 @@
     <value>No files to open</value>
     <comment>Message box</comment>
   </data>
-  <data name="no-folder" xml:space="preserve">
-    <value>No folder</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="not-saved" xml:space="preserve">
     <value>Not saved</value>
     <comment>Status bar</comment>
@@ -562,7 +554,7 @@
     <comment>Menu</comment>
   </data>
   <data name="picture-in-picture" xml:space="preserve">
-    <value>Picture in picture</value>
+    <value>Picture-in-Picture mode</value>
     <comment>Menu</comment>
   </data>
   <data name="pixels" xml:space="preserve">
@@ -673,10 +665,6 @@
     <value>Save as</value>
     <comment>Menu</comment>
   </data>
-  <data name="screenshot" xml:space="preserve">
-    <value>Screenshot</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="scroll-up-down" xml:space="preserve">
     <value>Scroll up / down</value>
     <comment>Settings</comment>
@@ -781,19 +769,7 @@
     <value>User interface language</value>
     <comment>Settings</comment>
   </data>
-  <data name="unable-open-dds" xml:space="preserve">
-    <value>DDS/TGA: Unable to open the file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-psd" xml:space="preserve">
-    <value>PSD: Unable to open the file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-open-svg" xml:space="preserve">
-    <value>Unable to open SVG file</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-to-open-file" xml:space="preserve">
+  <data name="unable-open-file" xml:space="preserve">
     <value>Unable to open file</value>
     <comment>Message box</comment>
   </data>
@@ -808,6 +784,10 @@
   <data name="unsaved-changes-question" xml:space="preserve">
     <value>The current image has unsaved changes. What would you like to do?</value>
     <comment>Main window</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>Unsupported pixel format</value>
+    <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Update failed</value>

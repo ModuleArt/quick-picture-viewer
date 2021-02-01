@@ -9,13 +9,12 @@ namespace quick_picture_viewer
 	partial class WallpaperForm : QlibFixedForm
 	{
 		private Bitmap bmp;
-		private MainForm owner;
 
 		public WallpaperForm(Bitmap bmp, bool darkMode)
 		{
 			if (darkMode)
 			{
-				this.HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
 
 			this.bmp = bmp;
@@ -67,33 +66,32 @@ namespace quick_picture_viewer
 		{
 			if (e.KeyCode == Keys.Escape)
 			{
-				this.Close();
+				Close();
 			}
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void WallpaperForm_Load(object sender, EventArgs e)
 		{
-			owner = this.Owner as MainForm;
 			InitLanguage();
 			fitComboBox.SelectedIndex = 0;
 		}
 
 		private void InitLanguage()
 		{
-			this.Text = owner.resMan.GetString("set-as-desktop-background");
-			fitLabel.Text = owner.resMan.GetString("choose-fit") + ":";
-			okButton.Text = " " + owner.resMan.GetString("set-background");
-			fitComboBox.Items.Add(owner.resMan.GetString("fill"));
-			fitComboBox.Items.Add(owner.resMan.GetString("fit"));
-			fitComboBox.Items.Add(owner.resMan.GetString("stretch"));
-			fitComboBox.Items.Add(owner.resMan.GetString("tile"));
-			fitComboBox.Items.Add(owner.resMan.GetString("center"));
-			fitComboBox.Items.Add(owner.resMan.GetString("span"));
+			Text = LangMan.GetString("set-as-desktop-background");
+			fitLabel.Text = LangMan.GetString("choose-fit") + ":";
+			okButton.Text = " " + LangMan.GetString("set-background");
+			fitComboBox.Items.Add(LangMan.GetString("fill"));
+			fitComboBox.Items.Add(LangMan.GetString("fit"));
+			fitComboBox.Items.Add(LangMan.GetString("stretch"));
+			fitComboBox.Items.Add(LangMan.GetString("tile"));
+			fitComboBox.Items.Add(LangMan.GetString("center"));
+			fitComboBox.Items.Add(LangMan.GetString("span"));
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}

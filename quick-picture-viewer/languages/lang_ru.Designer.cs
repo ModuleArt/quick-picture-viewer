@@ -187,15 +187,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сделать скриншот.
-        /// </summary>
-        public static string capture_screen {
-            get {
-                return ResourceManager.GetString("capture-screen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Центрировать.
         /// </summary>
         public static string center {
@@ -606,6 +597,15 @@ namespace quick_picture_viewer.languages {
         public static string from_clipboard {
             get {
                 return ResourceManager.GetString("from-clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Получено с &quot;{0}&quot;.
+        /// </summary>
+        public static string from_format {
+            get {
+                return ResourceManager.GetString("from-format", resourceCulture);
             }
         }
         

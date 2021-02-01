@@ -12,7 +12,6 @@ namespace quick_picture_viewer
 {
 	public partial class PluginManForm : QlibFixedForm
 	{
-		private MainForm owner;
 		private string[] codenames;
 		private string[] pluginsLinks;
 		private bool darkMode = false;
@@ -23,6 +22,8 @@ namespace quick_picture_viewer
 			{
 				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
 			}
+
+			this.darkMode = darkMode;
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
@@ -51,7 +52,6 @@ namespace quick_picture_viewer
 
 		private void PluginManForm_Load(object sender, EventArgs e)
 		{
-			owner = Owner as MainForm;
 			InitLanguage();
 
 			RefreshPluginsList();
@@ -70,7 +70,7 @@ namespace quick_picture_viewer
 			}
 
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
-			PluginMan.apiVer = 2;
+			PluginMan.apiVer = 3;
 			PluginMan.inputType = "bitmap";
 
 			PluginInfo[] plugins = PluginMan.GetPlugins(true);
@@ -93,13 +93,13 @@ namespace quick_picture_viewer
 				}
 
 				var listViewItem = new ListViewItem(new string[] {
-					plugins[i].title + " (" + plugins[i].name + ")",
+					plugins[i].title,
 					plugins[i].description.Get(Properties.Settings.Default.Language),
 					authors,
 					"v" + plugins[i].version
 				});
 
-				Image img = PluginMan.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, false);
+				Image img = PluginMan.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, darkMode);
 				if (img != null)
 				{
 					imageList1.Images.Add(imageList1.Images.Count.ToString(), img);
@@ -113,16 +113,16 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			Text = owner.resMan.GetString("plugin-manager");
-			listView1.Columns[0].Text = owner.resMan.GetString("plugin");
-			listView1.Columns[1].Text = owner.resMan.GetString("desc");
-			listView1.Columns[2].Text = owner.resMan.GetString("created-by");
-			listView1.Columns[3].Text = owner.resMan.GetString("version");
-			addPluginBtn.Text = " " + owner.resMan.GetString("browse-for-plugins");
-			deleteBtn.Text = owner.resMan.GetString("delete-plugin");
-			openFileDialog1.Title = owner.resMan.GetString("browse-for-plugins");
-			morePluginsBtn.Text = " " + owner.resMan.GetString("more-plugins");
-			pluginWebsiteBtn.Text = owner.resMan.GetString("plugin-website");
+			Text = LangMan.GetString("plugin-manager");
+			listView1.Columns[0].Text = LangMan.GetString("plugin");
+			listView1.Columns[1].Text = LangMan.GetString("desc");
+			listView1.Columns[2].Text = LangMan.GetString("created-by");
+			listView1.Columns[3].Text = LangMan.GetString("version");
+			addPluginBtn.Text = " " + LangMan.GetString("browse-for-plugins");
+			deleteBtn.Text = LangMan.GetString("delete-plugin");
+			openFileDialog1.Title = LangMan.GetString("browse-for-plugins");
+			morePluginsBtn.Text = " " + LangMan.GetString("more-plugins");
+			pluginWebsiteBtn.Text = LangMan.GetString("plugin-website");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -168,9 +168,9 @@ namespace quick_picture_viewer
 		private void deletePlugin(int numberInList)
 		{
 			DialogResult window = DialogMan.ShowConfirm(
-				owner.resMan.GetString("delete-plugin-warning"),
-				windowTitle: owner.resMan.GetString("warning"),
-				yesBtnText: owner.resMan.GetString("delete-plugin"),
+				LangMan.GetString("delete-plugin-warning"),
+				windowTitle: LangMan.GetString("warning"),
+				yesBtnText: LangMan.GetString("delete-plugin"),
 				yesBtnImage: deleteBtn.Image,
 				darkMode: darkMode
 			);
@@ -188,8 +188,8 @@ namespace quick_picture_viewer
 				else
 				{
 					DialogMan.ShowInfo(
-						owner.resMan.GetString("plugin-not-found"),
-						owner.resMan.GetString("error"),
+						LangMan.GetString("plugin-not-found"),
+						LangMan.GetString("error"),
 						darkMode
 					);
 				}
@@ -214,13 +214,10 @@ namespace quick_picture_viewer
 		{
 			float x = listView1.Width / 100f;
 			
-			listView1.Columns[0].Width = (int)(x * 25) + 1;
-			listView1.Columns[1].Width = (int)(x * 36);
-			listView1.Columns[2].Width = (int)(x * 25);
-			listView1.Columns[3].Width = (int)(x * 14);
-
-			//int sum = listView1.Columns[0].Width + listView1.Columns[1].Width + listView1.Columns[2].Width + listView1.Columns[3].Width;
-			//listView1.Columns[0].Width += Width - 25 - sum;
+			listView1.Columns[0].Width = (int)(x * 20);
+			listView1.Columns[1].Width = (int)(x * 40);
+			listView1.Columns[2].Width = (int)(x * 30);
+			listView1.Columns[3].Width = (int)(x * 10);
 		}
 
 		private void listView1_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
