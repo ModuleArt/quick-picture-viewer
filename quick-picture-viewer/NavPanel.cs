@@ -27,13 +27,13 @@ namespace quick_picture_viewer
 		{
 			if (b)
 			{
-				navSlideshowBtn.BackColor = ThemeManager.DarkPaleColor;
-				navSlideshowBtn.FlatAppearance.MouseOverBackColor = ThemeManager.DarkPaleColor;
+				navSlideshowBtn.BackColor = ThemeMan.DarkPaleColor;
+				navSlideshowBtn.FlatAppearance.MouseOverBackColor = ThemeMan.DarkPaleColor;
 				navSlideshowBtn.FlatAppearance.BorderSize = 1;
 			}
 			else
 			{
-				navSlideshowBtn.BackColor = ThemeManager.DarkMainColor;
+				navSlideshowBtn.BackColor = ThemeMan.DarkMainColor;
 				navSlideshowBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
 				navSlideshowBtn.FlatAppearance.BorderSize = 0;
 			}

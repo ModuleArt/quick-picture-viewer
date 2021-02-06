@@ -9,9 +9,13 @@ namespace quick_picture_viewer
 {
 	partial class AboutForm : QlibFixedForm
 	{
-		public AboutForm()
+		private bool darkMode = false;
+
+		public AboutForm(bool darkMode)
 		{
-			HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+			this.darkMode = darkMode;
+
+			HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { logoPictureBox, productLabel, versionLabel, copyrightLabel });
@@ -31,7 +35,7 @@ namespace quick_picture_viewer
 				versionLabel.Text += " (x64)";
 			}
 
-			if (ThemeManager.isWindows10())
+			if (ThemeMan.isWindows10())
 			{
 				makeDefaultBtn.Enabled = true;
 			}
@@ -72,8 +76,7 @@ namespace quick_picture_viewer
 
 		private void updatesBtn_Click(object sender, EventArgs e)
 		{
-			MainForm parent = (MainForm)Owner;
-			parent.checkForUpdates(true);
+			UpdateMan.CheckForUpdates(true, TopMost, darkMode, Owner.Handle);
 			Close();
 		}
 

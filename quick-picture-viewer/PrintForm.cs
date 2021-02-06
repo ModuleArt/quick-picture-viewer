@@ -15,7 +15,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			this.darkMode = darkMode;
@@ -42,17 +42,17 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				ThemeManager.setDarkModeToControl(printPreviewControl1.Handle);
+				ThemeMan.setDarkModeToControl(printPreviewControl1.Handle);
 
-				okButton.BackColor = ThemeManager.DarkSecondColor;
+				okButton.BackColor = ThemeMan.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_print;
 
-				printPreviewControl1.BackColor = ThemeManager.DarkBackColor;
+				printPreviewControl1.BackColor = ThemeMan.DarkBackColor;
 
-				okButton.BackColor = ThemeManager.DarkSecondColor;
+				okButton.BackColor = ThemeMan.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_print;
 
-				setMarginsButton.BackColor = ThemeManager.DarkSecondColor;
+				setMarginsButton.BackColor = ThemeMan.DarkSecondColor;
 			}
 
 			DarkMode = dark;
@@ -135,11 +135,11 @@ namespace quick_picture_viewer
 
 				if (btn.Enabled)
 				{
-					btn.BackColor = ThemeManager.DarkSecondColor;
+					btn.BackColor = ThemeMan.DarkSecondColor;
 				}
 				else
 				{
-					btn.BackColor = ThemeManager.DarkSecondColor;
+					btn.BackColor = ThemeMan.DarkSecondColor;
 				}
 			}
 		}

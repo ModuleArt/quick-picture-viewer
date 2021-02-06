@@ -88,7 +88,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Приложение использует актуальную версию.
+        ///   Looks up a localized string similar to Приложение использует актуальную версию!.
         /// </summary>
         public static string app_is_up_to_date {
             get {
@@ -421,6 +421,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Загрузка обновления....
+        /// </summary>
+        public static string downloading_update {
+            get {
+                return ResourceManager.GetString("downloading-update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Перетащенное изображение.
         /// </summary>
         public static string dragged_image {
@@ -601,7 +610,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Получено с &quot;{0}&quot;.
+        ///   Looks up a localized string similar to Получено из &quot;{0}&quot;.
         /// </summary>
         public static string from_format {
             get {
@@ -696,6 +705,24 @@ namespace quick_picture_viewer.languages {
         public static string input {
             get {
                 return ResourceManager.GetString("input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Установить.
+        /// </summary>
+        public static string install {
+            get {
+                return ResourceManager.GetString("install", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Установить обновление.
+        /// </summary>
+        public static string install_update {
+            get {
+                return ResourceManager.GetString("install-update", resourceCulture);
             }
         }
         
@@ -867,6 +894,15 @@ namespace quick_picture_viewer.languages {
         public static string navigation_bar {
             get {
                 return ResourceManager.GetString("navigation-bar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Доступно новое обновление!.
+        /// </summary>
+        public static string new_version_available {
+            get {
+                return ResourceManager.GetString("new-version-available", resourceCulture);
             }
         }
         
@@ -1182,6 +1218,15 @@ namespace quick_picture_viewer.languages {
         public static string print_size {
             get {
                 return ResourceManager.GetString("print-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Все готово к установке.
+        /// </summary>
+        public static string ready_to_install {
+            get {
+                return ResourceManager.GetString("ready-to-install", resourceCulture);
             }
         }
         
@@ -1573,7 +1618,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Обновление невозможно.
+        ///   Looks up a localized string similar to Сбой обновления приложения.
         /// </summary>
         public static string update_failed {
             get {
@@ -1582,11 +1627,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Менеджер обновлений.
+        ///   Looks up a localized string similar to Доступна версия {0} для Quick Picture Viewer, вы используете версию {1}, обновить сейчас?.
         /// </summary>
-        public static string updator {
+        public static string update_text {
             get {
-                return ResourceManager.GetString("updator", resourceCulture);
+                return ResourceManager.GetString("update-text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обновление Quick Picture Viewer.
+        /// </summary>
+        public static string updating_qpv {
+            get {
+                return ResourceManager.GetString("updating-qpv", resourceCulture);
             }
         }
         
@@ -1614,6 +1668,15 @@ namespace quick_picture_viewer.languages {
         public static string warning {
             get {
                 return ResourceManager.GetString("warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Что нового?.
+        /// </summary>
+        public static string whats_new {
+            get {
+                return ResourceManager.GetString("whats-new", resourceCulture);
             }
         }
         

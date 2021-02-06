@@ -29,7 +29,6 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-pic
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.PluginManForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.dll
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.NavPanel.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Utf8Json.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Threading.Tasks.Extensions.dll
@@ -37,3 +36,4 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Utf8Json.
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\SimplePsd.dll
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.pdb

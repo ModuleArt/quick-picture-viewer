@@ -20,7 +20,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			this.darkMode = darkMode;
@@ -36,9 +36,9 @@ namespace quick_picture_viewer
 
 			if (dark)
 			{
-				addPluginBtn.BackColor = ThemeManager.DarkSecondColor;
+				addPluginBtn.BackColor = ThemeMan.DarkSecondColor;
 				addPluginBtn.Image = Properties.Resources.white_open;
-				morePluginsBtn.BackColor = ThemeManager.DarkSecondColor;
+				morePluginsBtn.BackColor = ThemeMan.DarkSecondColor;
 				morePluginsBtn.Image = Properties.Resources.white_plugin;
 				deleteBtn.Image = Properties.Resources.white_trash;
 				pluginWebsiteBtn.Image = Properties.Resources.white_website;

@@ -22,9 +22,9 @@ namespace quick_picture_viewer
 
 		public MiniViewForm(Image image, string title, bool checkboardBackground)
 		{
-			if (ThemeManager.isWindows10())
+			if (ThemeMan.isWindows10())
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			this.title = title;
@@ -53,9 +53,9 @@ namespace quick_picture_viewer
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
 			contextMenuStrip1.SetDarkMode(true);
-			if (ThemeManager.isWindows10())
+			if (ThemeMan.isWindows10())
 			{
-				ThemeManager.setDarkModeToControl(picturePanel.Handle);
+				ThemeMan.setDarkModeToControl(picturePanel.Handle);
 			}
 
 			if (Properties.Settings.Default.PipOpacity == 0.25 || Properties.Settings.Default.PipOpacity == 0.75)
@@ -127,7 +127,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				pictureBox.Left = 0;
+				pictureBox.Left = -picturePanel.HorizontalScroll.Value;
 			}
 
 			if (pictureBox.Height < picturePanel.Height)
@@ -136,7 +136,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				pictureBox.Top = 0;
+				pictureBox.Top = -picturePanel.VerticalScroll.Value;
 			}
 		}
 

@@ -130,8 +130,8 @@
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
-    <value>Приложение использует актуальную версию</value>
-    <comment>Message box</comment>
+    <value>Приложение использует актуальную версию!</value>
+    <comment>Update manager</comment>
   </data>
   <data name="app-startup-actions" xml:space="preserve">
     <value>Действия при запуске приложения</value>
@@ -277,6 +277,10 @@
     <value>Не сохранять</value>
     <comment>Main window</comment>
   </data>
+  <data name="downloading-update" xml:space="preserve">
+    <value>Загрузка обновления...</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Перетащенное изображение</value>
     <comment>Status bar</comment>
@@ -358,7 +362,7 @@
     <comment>Status bar</comment>
   </data>
   <data name="from-format" xml:space="preserve">
-    <value>Получено с "{0}"</value>
+    <value>Получено из "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">
@@ -400,6 +404,14 @@
   <data name="input" xml:space="preserve">
     <value>Клавиатура и мышь</value>
     <comment>Settings</comment>
+  </data>
+  <data name="install" xml:space="preserve">
+    <value>Установить</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="install-update" xml:space="preserve">
+    <value>Установить обновление</value>
+    <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
     <value>Альбомная</value>
@@ -476,6 +488,10 @@
   <data name="navigation-bar" xml:space="preserve">
     <value>Панель навигации</value>
     <comment>Settings</comment>
+  </data>
+  <data name="new-version-available" xml:space="preserve">
+    <value>Доступно новое обновление!</value>
+    <comment>Update manager</comment>
   </data>
   <data name="new-window" xml:space="preserve">
     <value>Новое окно</value>
@@ -616,6 +632,10 @@
   <data name="print-size" xml:space="preserve">
     <value>Размер печати</value>
     <comment>Image info</comment>
+  </data>
+  <data name="ready-to-install" xml:space="preserve">
+    <value>Все готово к установке</value>
+    <comment>Update manager</comment>
   </data>
   <data name="reload-file" xml:space="preserve">
     <value>Переоткрыть файл</value>
@@ -790,12 +810,16 @@
     <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
-    <value>Обновление невозможно</value>
-    <comment>Message box</comment>
+    <value>Сбой обновления приложения</value>
+    <comment>Update manager</comment>
   </data>
-  <data name="updator" xml:space="preserve">
-    <value>Менеджер обновлений</value>
-    <comment>Message box</comment>
+  <data name="update-text" xml:space="preserve">
+    <value>Доступна версия {0} для Quick Picture Viewer, вы используете версию {1}, обновить сейчас?</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="updating-qpv" xml:space="preserve">
+    <value>Обновление Quick Picture Viewer</value>
+    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Использовать системную настройку</value>
@@ -808,6 +832,10 @@
   <data name="warning" xml:space="preserve">
     <value>Внимание</value>
     <comment>Message box</comment>
+  </data>
+  <data name="whats-new" xml:space="preserve">
+    <value>Что нового?</value>
+    <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
     <value>Ширина</value>

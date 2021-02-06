@@ -45,7 +45,7 @@ namespace quick_picture_viewer
 			int theme = Properties.Settings.Default.Theme;
 			if (theme == 0)
 			{
-				darkMode = ThemeManager.isDarkTheme();
+				darkMode = ThemeMan.isDarkTheme();
 			}
 			else if (theme == 1)
 			{
@@ -58,7 +58,7 @@ namespace quick_picture_viewer
 
 			if (darkMode)
 			{
-				ThemeManager.allowDarkModeForApp(true);
+				ThemeMan.allowDarkModeForApp(true);
 			}
 
 			Application.Run(new MainForm(param, darkMode));

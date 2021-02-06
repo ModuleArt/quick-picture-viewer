@@ -130,8 +130,8 @@
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
-    <value>Application is up to date</value>
-    <comment>Message box</comment>
+    <value>Application is up to date!</value>
+    <comment>Update Manager</comment>
   </data>
   <data name="app-startup-actions" xml:space="preserve">
     <value>App startup actions</value>
@@ -277,6 +277,10 @@
     <value>Don't save</value>
     <comment>Main window</comment>
   </data>
+  <data name="downloading-update" xml:space="preserve">
+    <value>Downloading update...</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Dragged image</value>
     <comment>Status bar</comment>
@@ -401,6 +405,14 @@
     <value>Mouse and keyboard</value>
     <comment>Settings</comment>
   </data>
+  <data name="install" xml:space="preserve">
+    <value>Install</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="install-update" xml:space="preserve">
+    <value>Install update</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="landscape" xml:space="preserve">
     <value>Landscape</value>
     <comment>Image info</comment>
@@ -476,6 +488,10 @@
   <data name="navigation-bar" xml:space="preserve">
     <value>Navigation bar</value>
     <comment>Settings</comment>
+  </data>
+  <data name="new-version-available" xml:space="preserve">
+    <value>New version available!</value>
+    <comment>Update manager</comment>
   </data>
   <data name="new-window" xml:space="preserve">
     <value>New window</value>
@@ -616,6 +632,10 @@
   <data name="print-size" xml:space="preserve">
     <value>Print size</value>
     <comment>Image info</comment>
+  </data>
+  <data name="ready-to-install" xml:space="preserve">
+    <value>Ready to install</value>
+    <comment>Update manager</comment>
   </data>
   <data name="reload-file" xml:space="preserve">
     <value>Reload file</value>
@@ -791,11 +811,15 @@
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Update failed</value>
-    <comment>Message box</comment>
+    <comment>Update manager</comment>
   </data>
-  <data name="updator" xml:space="preserve">
-    <value>Update manager</value>
-    <comment>Message box</comment>
+  <data name="update-text" xml:space="preserve">
+    <value>The version {0} for Quick Picture Viewer is available, you're using version {1}, update now?</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="updating-qpv" xml:space="preserve">
+    <value>Updating Quick Picture Viewer</value>
+    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Use system setting</value>
@@ -808,6 +832,10 @@
   <data name="warning" xml:space="preserve">
     <value>Warning</value>
     <comment>Message box</comment>
+  </data>
+  <data name="whats-new" xml:space="preserve">
+    <value>What's new?</value>
+    <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
     <value>Width</value>

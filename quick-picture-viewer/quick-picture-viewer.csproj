@@ -172,7 +172,6 @@
     <Compile Include="PluginManForm.Designer.cs">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LangMan.cs" />
     <Compile Include="SvgWrapper.cs" />
     <Compile Include="PsdWrapper.cs" />
     <Compile Include="SettingsForm.cs">

@@ -594,6 +594,7 @@
 			this.makeDefaultBtn.TabIndex = 47;
 			this.makeDefaultBtn.Text = "set as default photo viewer";
 			this.makeDefaultBtn.UseVisualStyleBackColor = false;
+			this.makeDefaultBtn.Click += new System.EventHandler(this.makeDefaultBtn_Click);
 			// 
 			// browseWithCheckBox
 			// 

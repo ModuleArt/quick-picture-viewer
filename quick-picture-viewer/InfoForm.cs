@@ -17,7 +17,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			this.bitmap = bitmap;
@@ -37,15 +37,15 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				propertiesButton.BackColor = ThemeManager.DarkSecondColor;
+				propertiesButton.BackColor = ThemeMan.DarkSecondColor;
 				propertiesButton.Image = Properties.Resources.white_imgfile;
 
 				copyNameButton.Image = Properties.Resources.white_copy;
-				copyNameButton.BackColor = ThemeManager.DarkSecondColor;
+				copyNameButton.BackColor = ThemeMan.DarkSecondColor;
 				copyFolderButton.Image = Properties.Resources.white_copy;
-				copyFolderButton.BackColor = ThemeManager.DarkSecondColor;
+				copyFolderButton.BackColor = ThemeMan.DarkSecondColor;
 				copyPathButton.Image = Properties.Resources.white_copy;
-				copyPathButton.BackColor = ThemeManager.DarkSecondColor;
+				copyPathButton.BackColor = ThemeMan.DarkSecondColor;
 			}
 
 			DarkMode = dark;

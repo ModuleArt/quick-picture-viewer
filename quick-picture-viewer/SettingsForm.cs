@@ -46,7 +46,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			InitializeComponent();
@@ -107,12 +107,12 @@ namespace quick_picture_viewer
 				}
 			}
 
-			themeRestart.LinkColor = ThemeManager.AccentColor;
-			localizationRestart.LinkColor = ThemeManager.AccentColor;
+			themeRestart.LinkColor = ThemeMan.AccentColor;
+			localizationRestart.LinkColor = ThemeMan.AccentColor;
 
 			SetDarkMode(darkMode);
 
-			if (ThemeManager.isWindows10())
+			if (ThemeMan.isWindows10())
 			{
 				makeDefaultBtn.Enabled = true;
 			}
@@ -165,9 +165,9 @@ namespace quick_picture_viewer
 			if (dark)
 			{
 				browseBtn.Image = Properties.Resources.white_open;
-				browseBtn.BackColor = ThemeManager.DarkSecondColor;
+				browseBtn.BackColor = ThemeMan.DarkSecondColor;
 				browseBtn.ForeColor = Color.White;
-				makeDefaultBtn.BackColor = ThemeManager.DarkSecondColor;
+				makeDefaultBtn.BackColor = ThemeMan.DarkSecondColor;
 				makeDefaultBtn.ForeColor = Color.White;
 			}
 
@@ -317,7 +317,7 @@ namespace quick_picture_viewer
 					LinkLabel ll = new LinkLabel();
 					ll.AutoSize = true;
 					ll.Text = languages[langComboBox.SelectedIndex].Authors[i];
-					ll.LinkColor = ThemeManager.AccentColor;
+					ll.LinkColor = ThemeMan.AccentColor;
 					ll.Margin = new Padding(0, 0, 0, 0);
 					ll.Click += Ll_Click;
 					translateAuthorsPanel.Controls.Add(ll);
@@ -518,6 +518,11 @@ namespace quick_picture_viewer
 				Properties.Settings.Default.NavPanelInFullscreen = navBarFullscreenCheckBox.Checked;
 				Properties.Settings.Default.Save();
 			}
+		}
+
+		private void makeDefaultBtn_Click(object sender, EventArgs e)
+		{
+			Process.Start("ms-settings:defaultapps");
 		}
 	}
 }

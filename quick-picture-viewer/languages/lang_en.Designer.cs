@@ -88,7 +88,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Application is up to date.
+        ///   Looks up a localized string similar to Application is up to date!.
         /// </summary>
         public static string app_is_up_to_date {
             get {
@@ -421,6 +421,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Downloading update....
+        /// </summary>
+        public static string downloading_update {
+            get {
+                return ResourceManager.GetString("downloading-update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dragged image.
         /// </summary>
         public static string dragged_image {
@@ -700,6 +709,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Install.
+        /// </summary>
+        public static string install {
+            get {
+                return ResourceManager.GetString("install", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Install update.
+        /// </summary>
+        public static string install_update {
+            get {
+                return ResourceManager.GetString("install-update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Landscape.
         /// </summary>
         public static string landscape {
@@ -867,6 +894,15 @@ namespace quick_picture_viewer.languages {
         public static string navigation_bar {
             get {
                 return ResourceManager.GetString("navigation-bar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New version available!.
+        /// </summary>
+        public static string new_version_available {
+            get {
+                return ResourceManager.GetString("new-version-available", resourceCulture);
             }
         }
         
@@ -1182,6 +1218,15 @@ namespace quick_picture_viewer.languages {
         public static string print_size {
             get {
                 return ResourceManager.GetString("print-size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ready to install.
+        /// </summary>
+        public static string ready_to_install {
+            get {
+                return ResourceManager.GetString("ready-to-install", resourceCulture);
             }
         }
         
@@ -1582,11 +1627,20 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update manager.
+        ///   Looks up a localized string similar to The version {0} for Quick Picture Viewer is available, you&apos;re using version {1}, update now?.
         /// </summary>
-        public static string updator {
+        public static string update_text {
             get {
-                return ResourceManager.GetString("updator", resourceCulture);
+                return ResourceManager.GetString("update-text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating Quick Picture Viewer.
+        /// </summary>
+        public static string updating_qpv {
+            get {
+                return ResourceManager.GetString("updating-qpv", resourceCulture);
             }
         }
         
@@ -1614,6 +1668,15 @@ namespace quick_picture_viewer.languages {
         public static string warning {
             get {
                 return ResourceManager.GetString("warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What&apos;s new?.
+        /// </summary>
+        public static string whats_new {
+            get {
+                return ResourceManager.GetString("whats-new", resourceCulture);
             }
         }
         

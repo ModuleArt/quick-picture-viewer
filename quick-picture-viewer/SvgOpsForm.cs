@@ -18,7 +18,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			this.path = path;
@@ -38,16 +38,16 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				defaultSizeButton.BackColor = ThemeManager.DarkSecondColor;
-				autoSizeBtn.BackColor = ThemeManager.DarkSecondColor;
-				size16Button.BackColor = ThemeManager.DarkSecondColor;
-				size32Button.BackColor = ThemeManager.DarkSecondColor;
-				size64Button.BackColor = ThemeManager.DarkSecondColor;
-				size128Button.BackColor = ThemeManager.DarkSecondColor;
-				size256Button.BackColor = ThemeManager.DarkSecondColor;
-				size512Button.BackColor = ThemeManager.DarkSecondColor;
+				defaultSizeButton.BackColor = ThemeMan.DarkSecondColor;
+				autoSizeBtn.BackColor = ThemeMan.DarkSecondColor;
+				size16Button.BackColor = ThemeMan.DarkSecondColor;
+				size32Button.BackColor = ThemeMan.DarkSecondColor;
+				size64Button.BackColor = ThemeMan.DarkSecondColor;
+				size128Button.BackColor = ThemeMan.DarkSecondColor;
+				size256Button.BackColor = ThemeMan.DarkSecondColor;
+				size512Button.BackColor = ThemeMan.DarkSecondColor;
 
-				okButton.BackColor = ThemeManager.DarkSecondColor;
+				okButton.BackColor = ThemeMan.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_size;
 			}
 

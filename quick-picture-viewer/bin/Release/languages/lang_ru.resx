@@ -358,7 +358,7 @@
     <comment>Status bar</comment>
   </data>
   <data name="from-format" xml:space="preserve">
-    <value>Получено с "{0}"</value>
+    <value>Получено из "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">

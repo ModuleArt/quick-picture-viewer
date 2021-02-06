@@ -46,7 +46,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			this.darkMode = darkMode;
@@ -142,11 +142,11 @@ namespace quick_picture_viewer
 					case "en":
 					case "es":
 					case "ru":
-						LangMan.InitResMan("quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
+						LangMan.InitResMan("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 						Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 						break;
 					default:
-						LangMan.InitResMan();
+						LangMan.InitResMan("quick_picture_viewer");
 						Properties.Settings.Default.Language = LangMan.defaultLang;
 						break;
 				}
@@ -155,7 +155,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				LangMan.InitResMan("quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language);
+				LangMan.InitResMan("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language);
 			}
 
 			pleaseOpenLabel.Text = LangMan.GetString("please-open-image");
@@ -292,11 +292,6 @@ namespace quick_picture_viewer
 				showSuggestion(LangMan.GetString("unable-open-file"), SuggestionIcon.Warning);
 			}
 
-			if (Properties.Settings.Default.CheckForUpdates)
-			{
-				checkForUpdates(false);
-			}
-
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
 			setCheckboardBackground(Properties.Settings.Default.CheckboardBackground, false);
 
@@ -304,50 +299,25 @@ namespace quick_picture_viewer
 			{
 				picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
 			}
-		}
 
-		public async void checkForUpdates(bool showUpToDateDialog)
-		{
-			try
+			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe");
+			UpdateMan.InitLang(
+				LangMan.GetString("new-version-available"), 
+				LangMan.GetString("update-text"), 
+				LangMan.GetString("install-update"), 
+				LangMan.GetString("whats-new"),
+
+				LangMan.GetString("updating-qpv"),
+				LangMan.GetString("downloading-update"),
+				LangMan.GetString("ready-to-install"),
+				LangMan.GetString("update-failed"),
+				LangMan.GetString("install"),
+
+				LangMan.GetString("app-is-up-to-date")
+			);
+			if (Properties.Settings.Default.CheckForUpdates)
 			{
-				UpdateChecker checker = new UpdateChecker("ModuleArt", "quick-picture-viewer");
-
-				bool update = await checker.CheckUpdate();
-
-				if (update == false)
-				{
-					if (showUpToDateDialog)
-					{
-						showSuggestion(LangMan.GetString("app-is-up-to-date"), SuggestionIcon.Check);
-					}
-				}
-				else
-				{
-					UpdateForm updateDialog = new UpdateForm(checker, "Quick Picture Viewer", darkMode);
-					updateDialog.Owner = this;
-					updateDialog.TopMost = alwaysOnTop;
-
-					DialogResult result = updateDialog.ShowDialog();
-					if (result == DialogResult.Yes)
-					{
-						DownloadForm downloadBox = new DownloadForm(checker.GetAssetUrl("QuickPictureViewer-Setup.exe"), darkMode);
-						downloadBox.Owner = this;
-						downloadBox.TopMost = alwaysOnTop;
-						downloadBox.ShowDialog();
-					}
-					else
-					{
-						updateDialog.Dispose();
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				if (showUpToDateDialog)
-				{
-					showSuggestion(LangMan.GetString("update-failed"), SuggestionIcon.Warning);
-					Console.WriteLine(ex);
-				}
+				UpdateMan.CheckForUpdates(false, TopMost, darkMode, Handle);
 			}
 		}
 
@@ -688,7 +658,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				pictureBox.Left = 0;
+				pictureBox.Left = -picturePanel.HorizontalScroll.Value;
 			}
 
 			if (pictureBox.Height < picturePanel.Height)
@@ -697,7 +667,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				pictureBox.Top = 0;
+				pictureBox.Top = -picturePanel.VerticalScroll.Value;
 			}
 		}
 
@@ -742,7 +712,7 @@ namespace quick_picture_viewer
 
 		private void aboutButton_Click(object sender, EventArgs e)
 		{
-			AboutForm aboutBox = new AboutForm();
+			AboutForm aboutBox = new AboutForm(darkMode);
 			aboutBox.Owner = this;
 			aboutBox.TopMost = alwaysOnTop;
 			aboutBox.ShowDialog();
@@ -1629,11 +1599,11 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				ThemeManager.setDarkModeToControl(picturePanel.Handle);
+				ThemeMan.setDarkModeToControl(picturePanel.Handle);
 
 				ForeColor = Color.White;
-				BackColor = ThemeManager.DarkBackColor;
-				statusStrip1.BackColor = ThemeManager.DarkSecondColor;
+				BackColor = ThemeMan.DarkBackColor;
+				statusStrip1.BackColor = ThemeMan.DarkSecondColor;
 
 				openButton.Image = Properties.Resources.white_open;
 				saveAsButton.Image = Properties.Resources.white_saveas;
@@ -1694,7 +1664,7 @@ namespace quick_picture_viewer
 				hasChangesLabel.Image = Properties.Resources.white_erase;
 
 				typeOpsButton.Image = Properties.Resources.white_options;
-				typeOpsButton.BackColor = ThemeManager.DarkSecondColor;
+				typeOpsButton.BackColor = ThemeMan.DarkSecondColor;
 				typeOpsButton.ForeColor = Color.White;
 
 				effectsBtn.Image = Properties.Resources.white_effects;
@@ -1702,7 +1672,7 @@ namespace quick_picture_viewer
 				pluginManBtn.Image = Properties.Resources.white_plugin;
 				pluginManBtn2.Image = Properties.Resources.white_plugin;
 
-				zoomTextBox.BackColor = ThemeManager.DarkMainColor;
+				zoomTextBox.BackColor = ThemeMan.DarkMainColor;
 				zoomTextBox.ForeColor = Color.White;
 			}
 

@@ -14,7 +14,7 @@ namespace quick_picture_viewer
 		{
 			if (darkMode)
 			{
-				HandleCreated += new EventHandler(ThemeManager.formHandleCreated);
+				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 			}
 
 			this.bmp = bmp;
@@ -28,7 +28,7 @@ namespace quick_picture_viewer
 		{
 			if (dark)
 			{
-				okButton.BackColor = ThemeManager.DarkSecondColor;
+				okButton.BackColor = ThemeMan.DarkSecondColor;
 				okButton.Image = Properties.Resources.white_desktop;
 			}
 
