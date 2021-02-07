@@ -4,7 +4,7 @@
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  Quick Picture Viewer is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
+  <a href="https://moduleart.github.io/quick-picture-viewer/">Quick Picture Viewer</a> is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
 </p>
 
 <p align="center">
@@ -26,56 +26,40 @@
   </a>
 </p>
 
-<h2 align="center">Install</h2>
+## Installation
 
 | Windows | Version | Codename | Release date | Size | Downloads | Installer |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> (Stable) | Community | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 | 7-10 | v3.0.2 (Beta 3) | Sunshine | Feb 1, 2021 | 3.7 MB | - | <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.2-beta3.exe">Download (.exe)</a> |
 
-<h2 align="center">Features</h2>
+## Features
 
-* Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif
-* Supported other file types: .ico, .webp, .svg, .dds, .tga, .psd
-* Basic image editing: rotate, flip, change file type
-* Built-in plugins: Blur region, Screenshot 
-* Open image with external app or show in file explorer
-* Picture in picture mode
-* Copy, paste to clipboard
-* Checkerboard background
-* Window can be always on top, borderless and fullscreen
-* Set image as desktop background
-* Print image or export to PDF
-* View image details
-* Slideshow
-* Dark mode
+* 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif ...
+* 🖻 Supported other file types: .ico, .webp, .svg, .dds, .tga, .psd
+* ✍️ Basic image editing: Rotate, Flip, Change file type ...
+* 🧩 Plugins ready
+* ↗️ Open image with external app or show in file explorer
+* 🖽 Picture in picture mode
+* ♟️ Checkerboard background
+* 🗔 Window can be always on top, frameless and fullscreen
+* 🖥️ Set image as desktop background
+* 🖨️ Print image or export to PDF
+* ℹ️ View image details
+* 🎞️ Slideshow
+* 🕶️ Dark mode
 
-<h2 align="center">Other great apps</h2>
+Want more? Open a new issue or 👍 an existing one so we can talk about it.
 
-| | App | Last commit | Last release | Description |
-| :---: | :---: | :---: | :---: | :---: |
-| <img src="https://github.com/ModuleArt/quick-whiteboard/blob/master/quick-whiteboard/resources/imgs/whiteboard64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-whiteboard) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-whiteboard) | Lightweight tool to draw or keep notes on your desktop background for Windows. |
-| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-color-picker) | Lightweight desktop color picker and color editor utility for Windows, built on top of WinForms (C#). |
- 
-<h2 align="center">More screenshots</h2>
-<p align="center">
-  <img src="/docs/screenshots/svg.png">
-  <br><br>
-  <img src="/docs/screenshots/checkerboard.png">
-  <br><br>
-  <img src="/docs/screenshots/info.png">
-</p>
+## Release notes:
 
-<hr>
+<a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Over here!</a>
 
-### Built-in plugins:
+## Bug report
 
-| Plugin | Codename | Last commit date | Last release date | Download (.zip) |
-| :---: | :---: | :---: | :---: | :---: |
-| <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region</a> | blur | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
-| <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | screenshot | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
+If you want to report a bug, first, thank you, that helps us a lot. Please open an issue and mention your OS, your Quick Picture Viewer version, and how to reproduce it. Adding a screenshot of the issue is a big help too.
 
-### Contribution:
+## Contribution
 
 Help Module Art!
 
@@ -83,8 +67,15 @@ Help Module Art!
 * Fork and Clone! Awesome
 * Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
 
+## Built-in plugins:
 
-### How to uninstall built-in photos app in Windows 10:
+| Plugin | Codename | Last commit date | Last release date | Download (.zip) |
+| :---: | :---: | :---: | :---: | :---: |
+| <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region</a> | blur | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
+| <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | screenshot | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
+
+
+## How to uninstall built-in photos app in Windows 10
 <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>
 Powershell (Admin):
 
@@ -92,5 +83,12 @@ Powershell (Admin):
 Get-AppxPackage *photos* | Remove-AppxPackage
 ```
 
-### Extension module for Windows Explorer to render SVG thumbnails:
+## Extension module for Windows Explorer to render SVG thumbnails:
 <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
+
+## Other great apps
+
+| | App | Last commit | Last release | Description |
+| :---: | :---: | :---: | :---: | :---: |
+| <img src="https://github.com/ModuleArt/quick-whiteboard/blob/master/quick-whiteboard/resources/imgs/whiteboard64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/quick-whiteboard) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-whiteboard) | Lightweight tool to draw or keep notes on your desktop background for Windows. |
+| <img src="https://github.com/ModuleArt/quick-color-picker/blob/master/quick-color-picker/resources/imgs/picker64.png?raw=true"/> | <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> | ![GitHub last commit](https://img.shields.io/github/last-commit/moduleart/quick-color-picker) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/quick-color-picker) | Lightweight desktop color picker and color editor utility for Windows, built on top of WinForms (C#). |
