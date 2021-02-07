@@ -195,7 +195,7 @@ namespace quick_picture_viewer
 			saveAsButton.Text = LangMan.GetString("save-as") + " | Ctrl+S";
 			pasteButton.Text = LangMan.GetString("paste-image") + " | Ctrl+V";
 			checkboardButton.Text = LangMan.GetString("checkboard-background") + " | Ctrl+B";
-			fullscreenButton.Text = LangMan.GetString("fullscreen") + " | F";
+			fullscreenBtn.Text = LangMan.GetString("fullscreen") + " | F";
 			miniViewButton.Text = LangMan.GetString("picture-in-picture") + " | Ctrl+Shift+P";
 			autoZoomButton.Text = LangMan.GetString("auto-zoom") + " | Ctrl+A";
 			zoomInButton.Text = LangMan.GetString("zoom-in") + " | Ctrl+" + LangMan.GetString("plus");
@@ -213,6 +213,8 @@ namespace quick_picture_viewer
 			toolsBtn.Text = LangMan.GetString("tools");
 			pluginManBtn.Text = LangMan.GetString("plugin-manager");
 			pluginManBtn2.Text = LangMan.GetString("plugin-manager");
+
+			framelessCloseBtn.Text = NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4";
 		}
 
 		private void zoomInTimer_Event(Object source, ElapsedEventArgs e)
@@ -1256,7 +1258,7 @@ namespace quick_picture_viewer
 				{
 					if (e.KeyCode == Keys.Enter)
 					{
-						fullscreenButton.PerformClick();
+						fullscreenBtn.PerformClick();
 					}
 					else if (e.KeyCode == Keys.Down)
 					{
@@ -1315,7 +1317,7 @@ namespace quick_picture_viewer
 				{
 					if (e.KeyCode == Keys.F || e.KeyCode == Keys.F11)
 					{
-						fullscreenButton.PerformClick();
+						fullscreenBtn.PerformClick();
 					}
 					else if (e.KeyCode == Keys.Escape)
 					{
@@ -1580,7 +1582,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_DoubleClick(object sender, EventArgs e)
 		{
-			fullscreenButton.PerformClick();
+			fullscreenBtn.PerformClick();
 		}
 
 		private void showOpenWithDialog(string path)
@@ -1640,7 +1642,7 @@ namespace quick_picture_viewer
 				pasteButton.Image = Properties.Resources.white_paste;
 
 				checkboardButton.Image = Properties.Resources.white_grid;
-				fullscreenButton.Image = Properties.Resources.white_fullscreen;
+				fullscreenBtn.Image = Properties.Resources.white_fullscreen;
 				onTopButton.Image = Properties.Resources.white_ontop;
 				miniViewButton.Image = Properties.Resources.white_miniview;
 
@@ -1671,6 +1673,8 @@ namespace quick_picture_viewer
 				toolsBtn.Image = Properties.Resources.white_tools;
 				pluginManBtn.Image = Properties.Resources.white_plugin;
 				pluginManBtn2.Image = Properties.Resources.white_plugin;
+
+				framelessCloseBtn.Image = Properties.Resources.white_close;
 
 				zoomTextBox.BackColor = ThemeMan.DarkMainColor;
 				zoomTextBox.ForeColor = Color.White;
@@ -2150,6 +2154,7 @@ namespace quick_picture_viewer
 			framelessMode = b;
 			statusStrip1.SizingGrip = !b;
 			framelessBtn.Checked = b;
+			framelessCloseBtn.Visible = b;
 
 			if (b)
 			{
@@ -2317,6 +2322,11 @@ namespace quick_picture_viewer
 			nextButton.Visible = !hideToolstripBtns;
 			prevButton.Visible = !hideToolstripBtns;
 			slideshowButton.Visible = !hideToolstripBtns;
+		}
+
+		private void framelessCloseBtn_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 	}
 }

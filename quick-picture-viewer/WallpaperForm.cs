@@ -20,7 +20,7 @@ namespace quick_picture_viewer
 			this.bmp = bmp;
 
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titlePanel, logoPictureBox, titleLabel, fitLabel });
+			SetDraggableControls(new List<Control>() { titlePanel, titleLabel, fitLabel });
 			SetDarkMode(darkMode);
 		}
 

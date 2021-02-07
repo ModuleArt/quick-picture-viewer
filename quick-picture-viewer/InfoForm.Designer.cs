@@ -572,6 +572,8 @@
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.ForeColor = System.Drawing.Color.Black;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
@@ -623,6 +625,7 @@
 			this.Controls.Add(this.folderTextBox);
 			this.Controls.Add(this.fileNameTextBox);
 			this.Draggable = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "InfoForm";

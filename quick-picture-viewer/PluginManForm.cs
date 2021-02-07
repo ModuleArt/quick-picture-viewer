@@ -199,7 +199,7 @@ namespace quick_picture_viewer
 
 		private void morePluginsBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://moduleart.github.io/quick-picture-viewer#plugins");
+			Process.Start("https://github.com/ModuleArt/qpv-plugins");
 		}
 
 		private void pluginWebsiteBtn_Click(object sender, EventArgs e)

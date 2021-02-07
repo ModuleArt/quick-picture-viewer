@@ -1006,15 +1006,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Открыть параметры Windows.
-        /// </summary>
-        public static string open_windows_settings {
-            get {
-                return ResourceManager.GetString("open-windows-settings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Открыть с помощью.
         /// </summary>
         public static string open_with {

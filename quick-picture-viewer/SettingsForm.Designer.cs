@@ -28,6 +28,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
 			this.settingsTabs = new QuickLibrary.QlibTabs();
 			this.themePage = new System.Windows.Forms.TabPage();
 			this.restartLabel1 = new System.Windows.Forms.Label();
@@ -831,6 +832,7 @@
 			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.settingsTabs);
 			this.Draggable = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "SettingsForm";

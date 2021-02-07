@@ -537,10 +537,6 @@
     <value>Открыть файл</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Открыть параметры Windows</value>
-    <comment>About</comment>
-  </data>
   <data name="open-with" xml:space="preserve">
     <value>Открыть с помощью</value>
     <comment>Menu</comment>

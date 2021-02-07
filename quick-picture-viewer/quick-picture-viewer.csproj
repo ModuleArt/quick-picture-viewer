@@ -357,7 +357,6 @@
     <None Include="resources\imgs\light\white-move.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="picture.ico" />
     <None Include="resources\imgs\light\white-opacity.png" />
     <None Include="resources\imgs\dark\black-tools.png" />
     <None Include="resources\imgs\dark\black-effects.png" />
@@ -390,6 +389,8 @@
     <None Include="resources\imgs\light\white-exe.png" />
     <None Include="resources\imgs\light\white-list.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="picture.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

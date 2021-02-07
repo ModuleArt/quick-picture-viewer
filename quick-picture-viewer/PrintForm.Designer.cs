@@ -119,10 +119,20 @@
 			// 
 			// centerCheckbox
 			// 
+			this.centerCheckbox.BackColor = System.Drawing.SystemColors.Control;
+			this.centerCheckbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.centerCheckbox.Checked = true;
+			this.centerCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.centerCheckbox.Cursor = System.Windows.Forms.Cursors.Default;
+			this.centerCheckbox.DarkMode = false;
+			this.centerCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.centerCheckbox.ForeColor = System.Drawing.Color.Black;
+			this.centerCheckbox.Image = null;
+			this.centerCheckbox.ImageIndex = 0;
 			this.centerCheckbox.Location = new System.Drawing.Point(10, 116);
 			this.centerCheckbox.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.centerCheckbox.Name = "centerCheckbox";
+			this.centerCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.centerCheckbox.Size = new System.Drawing.Size(294, 32);
 			this.centerCheckbox.TabIndex = 4;
 			this.centerCheckbox.Text = "center image";
@@ -141,6 +151,12 @@
 			// 
 			// bottomMarginTextBox
 			// 
+			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.bottomMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.bottomMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.bottomMarginTextBox.DarkMode = false;
+			this.bottomMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.bottomMarginTextBox.ForeColor = System.Drawing.Color.Black;
 			this.bottomMarginTextBox.Location = new System.Drawing.Point(238, 248);
 			this.bottomMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.bottomMarginTextBox.Maximum = new decimal(new int[] {
@@ -154,6 +170,7 @@
             0,
             0});
 			this.bottomMarginTextBox.Name = "bottomMarginTextBox";
+			this.bottomMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.bottomMarginTextBox.Size = new System.Drawing.Size(66, 32);
 			this.bottomMarginTextBox.TabIndex = 9;
 			this.bottomMarginTextBox.Value = new decimal(new int[] {
@@ -164,6 +181,12 @@
 			// 
 			// rightMarginTextBox
 			// 
+			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.rightMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.rightMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.rightMarginTextBox.DarkMode = false;
+			this.rightMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.rightMarginTextBox.ForeColor = System.Drawing.Color.Black;
 			this.rightMarginTextBox.Location = new System.Drawing.Point(162, 248);
 			this.rightMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.rightMarginTextBox.Maximum = new decimal(new int[] {
@@ -177,6 +200,7 @@
             0,
             0});
 			this.rightMarginTextBox.Name = "rightMarginTextBox";
+			this.rightMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.rightMarginTextBox.Size = new System.Drawing.Size(66, 32);
 			this.rightMarginTextBox.TabIndex = 8;
 			this.rightMarginTextBox.Value = new decimal(new int[] {
@@ -187,6 +211,12 @@
 			// 
 			// topMarginTextBox
 			// 
+			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.topMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.topMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.topMarginTextBox.DarkMode = false;
+			this.topMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.topMarginTextBox.ForeColor = System.Drawing.Color.Black;
 			this.topMarginTextBox.Location = new System.Drawing.Point(86, 248);
 			this.topMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.topMarginTextBox.Maximum = new decimal(new int[] {
@@ -200,6 +230,7 @@
             0,
             0});
 			this.topMarginTextBox.Name = "topMarginTextBox";
+			this.topMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.topMarginTextBox.Size = new System.Drawing.Size(66, 32);
 			this.topMarginTextBox.TabIndex = 7;
 			this.topMarginTextBox.Value = new decimal(new int[] {
@@ -220,6 +251,12 @@
 			// 
 			// leftMarginTextBox
 			// 
+			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.leftMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.leftMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.leftMarginTextBox.DarkMode = false;
+			this.leftMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.leftMarginTextBox.ForeColor = System.Drawing.Color.Black;
 			this.leftMarginTextBox.Location = new System.Drawing.Point(10, 248);
 			this.leftMarginTextBox.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.leftMarginTextBox.Maximum = new decimal(new int[] {
@@ -233,6 +270,7 @@
             0,
             0});
 			this.leftMarginTextBox.Name = "leftMarginTextBox";
+			this.leftMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.leftMarginTextBox.Size = new System.Drawing.Size(66, 32);
 			this.leftMarginTextBox.TabIndex = 6;
 			this.leftMarginTextBox.Value = new decimal(new int[] {
@@ -253,20 +291,36 @@
 			// 
 			// titleTextBox
 			// 
+			this.titleTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.titleTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.titleTextBox.DarkMode = false;
+			this.titleTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.titleTextBox.ForeColor = System.Drawing.Color.Black;
 			this.titleTextBox.Location = new System.Drawing.Point(104, 42);
 			this.titleTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 10, 10);
 			this.titleTextBox.Name = "titleTextBox";
 			this.titleTextBox.ReadOnly = false;
+			this.titleTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.titleTextBox.Size = new System.Drawing.Size(200, 32);
 			this.titleTextBox.TabIndex = 2;
 			this.titleTextBox.WordWrap = true;
 			// 
 			// horizontalCheckBox
 			// 
+			this.horizontalCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.horizontalCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.horizontalCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
+			this.horizontalCheckBox.DarkMode = false;
 			this.horizontalCheckBox.FlatAppearance.BorderSize = 0;
+			this.horizontalCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.horizontalCheckBox.ForeColor = System.Drawing.Color.Black;
+			this.horizontalCheckBox.Image = null;
+			this.horizontalCheckBox.ImageIndex = 0;
 			this.horizontalCheckBox.Location = new System.Drawing.Point(10, 84);
 			this.horizontalCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.horizontalCheckBox.Name = "horizontalCheckBox";
+			this.horizontalCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.horizontalCheckBox.Size = new System.Drawing.Size(294, 32);
 			this.horizontalCheckBox.TabIndex = 3;
 			this.horizontalCheckBox.Text = "landscape";
@@ -275,10 +329,20 @@
 			// 
 			// marginsCheckBox
 			// 
+			this.marginsCheckBox.BackColor = System.Drawing.SystemColors.Control;
+			this.marginsCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.marginsCheckBox.Checked = true;
+			this.marginsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.marginsCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
+			this.marginsCheckBox.DarkMode = false;
+			this.marginsCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.marginsCheckBox.ForeColor = System.Drawing.Color.Black;
+			this.marginsCheckBox.Image = null;
+			this.marginsCheckBox.ImageIndex = 0;
 			this.marginsCheckBox.Location = new System.Drawing.Point(10, 148);
 			this.marginsCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.marginsCheckBox.Name = "marginsCheckBox";
+			this.marginsCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.marginsCheckBox.Size = new System.Drawing.Size(294, 32);
 			this.marginsCheckBox.TabIndex = 5;
 			this.marginsCheckBox.Text = "margin bounds";
@@ -308,7 +372,10 @@
 			// closeBtn
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeBtn.ForeColor = System.Drawing.Color.Black;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
@@ -353,6 +420,7 @@
 			this.Controls.Add(this.leftMarginTextBox);
 			this.Controls.Add(this.marginsCheckBox);
 			this.Draggable = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "PrintForm";

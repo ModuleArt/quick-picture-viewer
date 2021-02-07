@@ -65,7 +65,6 @@ namespace quick_picture_viewer
 			updatesBtn.Text = " " + LangMan.GetString("check-for-app-updates");
 			descTextBox.Text = LangMan.GetString("app-description");
 			makeDefaultBtn.Text = LangMan.GetString("set-as-default-image-viewer");
-			infoTooltip.SetToolTip(makeDefaultBtn, LangMan.GetString("open-windows-settings"));
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 

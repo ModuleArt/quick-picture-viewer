@@ -77,7 +77,7 @@
 			this.pasteButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
-			this.fullscreenButton = new System.Windows.Forms.ToolStripButton();
+			this.fullscreenBtn = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator5 = new QuickLibrary.QlibToolsep();
 			this.effectsBtn = new System.Windows.Forms.ToolStripDropDownButton();
@@ -103,6 +103,7 @@
 			this.toolStripSeparator10 = new QuickLibrary.QlibToolsep();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.framelessCloseBtn = new System.Windows.Forms.ToolStripButton();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
@@ -256,13 +257,14 @@
             this.pasteButton,
             this.toolStripSeparator3,
             this.checkboardButton,
-            this.fullscreenButton,
+            this.fullscreenBtn,
             this.miniViewButton,
             this.toolStripSeparator5,
             this.effectsBtn,
             this.toolsBtn,
             this.qlibToolsep1,
-            this.moreButton});
+            this.moreButton,
+            this.framelessCloseBtn});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Name = "toolStrip1";
 			// 
@@ -557,13 +559,13 @@
 			this.checkboardButton.Name = "checkboardButton";
 			this.checkboardButton.Click += new System.EventHandler(this.checkboardButton_Click);
 			// 
-			// fullscreenButton
+			// fullscreenBtn
 			// 
-			resources.ApplyResources(this.fullscreenButton, "fullscreenButton");
-			this.fullscreenButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.fullscreenButton.Margin = new System.Windows.Forms.Padding(0);
-			this.fullscreenButton.Name = "fullscreenButton";
-			this.fullscreenButton.Click += new System.EventHandler(this.fullscreenButton_Click);
+			resources.ApplyResources(this.fullscreenBtn, "fullscreenBtn");
+			this.fullscreenBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.fullscreenBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.fullscreenBtn.Name = "fullscreenBtn";
+			this.fullscreenBtn.Click += new System.EventHandler(this.fullscreenButton_Click);
 			// 
 			// miniViewButton
 			// 
@@ -727,6 +729,8 @@
 			// 
 			// backClearBtn
 			// 
+			this.backClearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.backClearBtn.ForeColor = System.Drawing.Color.Black;
 			resources.ApplyResources(this.backClearBtn, "backClearBtn");
 			this.backClearBtn.Name = "backClearBtn";
 			this.backClearBtn.Click += new System.EventHandler(this.backClearBtn_Click);
@@ -735,13 +739,15 @@
 			// 
 			this.qlibMenuSeparator1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.qlibMenuSeparator1.DarkMode = false;
-			this.qlibMenuSeparator1.InsideMenu = false;
-			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.qlibMenuSeparator1.InsideMenu = true;
+			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator1.Name = "qlibMenuSeparator1";
 			resources.ApplyResources(this.qlibMenuSeparator1, "qlibMenuSeparator1");
 			// 
 			// backCustomBtn
 			// 
+			this.backCustomBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.backCustomBtn.ForeColor = System.Drawing.Color.Black;
 			this.backCustomBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
 			this.backCustomBtn.Name = "backCustomBtn";
 			resources.ApplyResources(this.backCustomBtn, "backCustomBtn");
@@ -796,6 +802,16 @@
 			resources.ApplyResources(this.aboutBtn, "aboutBtn");
 			this.aboutBtn.Name = "aboutBtn";
 			this.aboutBtn.Click += new System.EventHandler(this.aboutButton_Click);
+			// 
+			// framelessCloseBtn
+			// 
+			this.framelessCloseBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			resources.ApplyResources(this.framelessCloseBtn, "framelessCloseBtn");
+			this.framelessCloseBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.framelessCloseBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.framelessCloseBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.framelessCloseBtn.Name = "framelessCloseBtn";
+			this.framelessCloseBtn.Click += new System.EventHandler(this.framelessCloseBtn_Click);
 			// 
 			// picturePanel
 			// 
@@ -893,7 +909,7 @@
 		private QuickLibrary.QlibToolsep toolStripSeparator2;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.ToolStripButton pasteButton;
-		private System.Windows.Forms.ToolStripButton fullscreenButton;
+		private System.Windows.Forms.ToolStripButton framelessCloseBtn;
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel directoryLabel;
 		private System.Windows.Forms.ToolStripStatusLabel fileLabel;
@@ -960,5 +976,6 @@
 		private System.Windows.Forms.ToolStripDropDownButton toolsBtn;
 		private System.Windows.Forms.ToolStripMenuItem pluginManBtn2;
 		private QuickLibrary.QlibToolsep qlibToolsep1;
+		private System.Windows.Forms.ToolStripButton fullscreenBtn;
 	}
 }

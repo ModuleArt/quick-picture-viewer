@@ -943,15 +943,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abra la configuración de Windows.
-        /// </summary>
-        public static string open_windows_settings {
-            get {
-                return ResourceManager.GetString("open-windows-settings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Abrir con.
         /// </summary>
         public static string open_with {
