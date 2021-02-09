@@ -49,7 +49,7 @@
 * 🎞️ Slideshow
 * 🕶️ Dark mode
 
-Want more? Open <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">a new issue</a> or 👍 <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">an existing one</a> so we can talk about it.
+Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
 
 ## Release notes:
 
@@ -57,7 +57,7 @@ Want more? Open <a href="https://github.com/ModuleArt/quick-picture-viewer/issue
 
 ## Bug report:
 
-If you want to report a bug, first, thank you, that helps us a lot. Please <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">open an issue</a> and mention your OS, your Quick Picture Viewer version, and how to reproduce it. Adding a screenshot of the issue or screen recording is a big help too.
+If you want to report a bug, first, thank you, that helps us a lot. Please open an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">issue</a> and mention your OS, your Quick Picture Viewer version, and how to reproduce it. Adding a screenshot of the issue or screen recording is a big help too.
 
 ## Contribution:
 
@@ -69,14 +69,15 @@ Help Module Art!
 
 ## Built-in plugins:
 
-| Plugin | Codename | Last commit date | Last release date | Download (.zip) |
-| :---: | :---: | :---: | :---: | :---: |
-| <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region</a> | blur | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
-| <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | screenshot | ![GitHub last commit](https://img.shields.io/github/last-commit/ModuleArt/qpv-plugins) | ![GitHub Release Date](https://img.shields.io/github/release-date/ModuleArt/qpv-plugins) | <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a> |
+<a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a>
+
+#### 🧩 Plugin list:
+<a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region [blur]</a> - Blur or pixelate some area of the picture.<br>
+<a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot [screenshot]</a> - Take a screen capture.
 
 ## Useful links:
 
-### How to uninstall built-in photos app in Windows 10:
+#### How to uninstall built-in photos app in Windows 10:
 <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>
 Powershell (Admin):
 
@@ -84,7 +85,7 @@ Powershell (Admin):
 Get-AppxPackage *photos* | Remove-AppxPackage
 ```
 
-### Extension module for Windows Explorer to render SVG thumbnails:
+#### Extension module for Windows Explorer to render SVG thumbnails:
 <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
 
 ## Other great apps:
