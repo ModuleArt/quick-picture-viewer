@@ -187,6 +187,11 @@ Root: HKCR; Subkey: "WebpImg\DefaultIcon"; ValueType: string; ValueName: ""; Val
 Root: HKCR; Subkey: "WebpImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 ; PSD
 Root: HKCR; Subkey: ".psd"; ValueType: string; ValueName: ""; ValueData: "PsdImg"; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "PsdImg"; ValueType: string; ValueName: ""; ValueData: "PSD image (Photoshop document)"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "PsdImg"; ValueType: string; ValueName: ""; ValueData: "PSD file (Photoshop Document)"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "PsdImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\psd.ico"
 Root: HKCR; Subkey: "PsdImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
+; CR2
+Root: HKCR; Subkey: ".cr2"; ValueType: string; ValueName: ""; ValueData: "Cr2Img"; Flags: uninsdeletevalue
+Root: HKCR; Subkey: "Cr2Img"; ValueType: string; ValueName: ""; ValueData: "CR2 image (Canon Digital Camera Raw)"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "Cr2Img\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\cr2.ico"
+Root: HKCR; Subkey: "Cr2Img\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
