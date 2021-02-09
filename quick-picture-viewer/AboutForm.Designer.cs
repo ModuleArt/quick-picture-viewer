@@ -168,6 +168,7 @@
 			this.developerBtn.Text = " Module Art";
 			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.infoTooltip.SetToolTip(this.developerBtn, "moduleart.github.io");
 			this.developerBtn.UseVisualStyleBackColor = false;
 			this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
 			// 
@@ -187,6 +188,7 @@
 			this.githubBtn.Text = " GitHub";
 			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.infoTooltip.SetToolTip(this.githubBtn, "github.com/ModuleArt/quick-picture-viewer");
 			this.githubBtn.UseVisualStyleBackColor = false;
 			this.githubBtn.Click += new System.EventHandler(this.button1_Click);
 			// 

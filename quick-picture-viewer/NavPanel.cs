@@ -1,4 +1,5 @@
 ﻿using QuickLibrary;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -21,6 +22,34 @@ namespace quick_picture_viewer
 			TabStop = false;
 
 			InitializeComponent();
+		}
+
+		public void SetExtraMargins(int top, int bottom)
+		{
+			bool tileTop = false;
+			bool tileBottom = false;
+
+			if (Location.Y == borderSpacing + extraTopMargin) 
+			{
+				tileTop = true;
+			}
+
+			if (Location.Y == Parent.ClientRectangle.Height - borderSpacing - extraBottomMargin - Height)
+			{
+				tileBottom = true;
+			}
+
+			extraTopMargin = top;
+			extraBottomMargin = bottom;
+
+			if (tileTop)
+			{
+				Location = new Point(Location.X, borderSpacing + top);
+			}
+			if (tileBottom)
+			{
+				Location = new Point(Location.X, Parent.ClientRectangle.Height - borderSpacing - bottom - Height);
+			}
 		}
 
 		public void SetSlideshowChecked(bool b)

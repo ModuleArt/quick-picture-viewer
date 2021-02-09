@@ -313,14 +313,24 @@ namespace quick_picture_viewer
 				LangMan.GetString("downloading-update"),
 				LangMan.GetString("ready-to-install"),
 				LangMan.GetString("update-failed"),
-				LangMan.GetString("install"),
-
-				LangMan.GetString("app-is-up-to-date")
+				LangMan.GetString("install")
 			);
+			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
+			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
 			if (Properties.Settings.Default.CheckForUpdates)
 			{
 				UpdateMan.CheckForUpdates(false, TopMost, darkMode, Handle);
 			}
+		}
+
+		private void UpdateMan_IsUpToDate(object sender, EventArgs e)
+		{
+			showSuggestion(LangMan.GetString("app-is-up-to-date"), SuggestionIcon.Check);
+		}
+
+		private void UpdateMan_UpdateFailed(object sender, EventArgs e)
+		{
+			showSuggestion(LangMan.GetString("update-failed"), SuggestionIcon.Warning);
 		}
 
 		private void showTypeOpsButton(bool show, string type = null)
@@ -404,6 +414,19 @@ namespace quick_picture_viewer
 							break;
 						case PsdWrapper.Error.UnableToOpen:
 							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							break;
+					}
+				}
+				else if (ext == ".cr2")
+				{
+					Bitmap bmp = Cr2Wrapper.ParseCr2(path);
+					switch (Cr2Wrapper.CurrentError)
+					{
+						case Cr2Wrapper.Error.NoError:
+							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+							break;
+						case Cr2Wrapper.Error.UnableToOpen:
+							showSuggestion(Cr2Wrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -1107,9 +1130,16 @@ namespace quick_picture_viewer
 
 				showSuggestion(string.Format(LangMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
 
-				if (navPanel != null && !navPanel.IsDisposed && !Properties.Settings.Default.NavPanelInFullscreen)
+				if (navPanel != null && !navPanel.IsDisposed)
 				{
-					navPanel.Visible = false;
+					if (Properties.Settings.Default.NavPanelInFullscreen)
+					{
+						navPanel.SetExtraMargins(0, 0);
+					}
+					else
+					{
+						navPanel.Visible = false;
+					}
 				}
 			}
 			else
@@ -1146,6 +1176,13 @@ namespace quick_picture_viewer
 
 				if (navPanel != null && !navPanel.IsDisposed)
 				{
+					int extraTopMargin = 0;
+					if (toolStrip1.Visible) extraTopMargin += toolStrip1.Height;
+
+					int extraBottomMargin = 0;
+					if (statusStrip1.Visible) extraBottomMargin += statusStrip1.Height;
+
+					navPanel.SetExtraMargins(extraTopMargin, extraBottomMargin);
 					navPanel.Visible = true;
 				}
 			}
@@ -2303,7 +2340,13 @@ namespace quick_picture_viewer
 			{
 				if (navPanel == null || navPanel.IsDisposed)
 				{
-					navPanel = new NavPanel(toolStrip1.Height, statusStrip1.Height);
+					int extraTopMargin = 0;
+					if (toolStrip1.Visible) extraTopMargin += toolStrip1.Height;
+
+					int extraBottomMargin = 0;
+					if (statusStrip1.Visible) extraBottomMargin += statusStrip1.Height;
+
+					navPanel = new NavPanel(extraTopMargin, extraBottomMargin);
 					Controls.Add(navPanel);
 					navPanel.BringToFront();
 					statusStrip1.BringToFront();
