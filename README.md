@@ -49,7 +49,7 @@
 * 🎞️ Slideshow
 * 🕶️ Dark mode
 
-Want more? Open a new issue or 👍 an existing one so we can talk about it.
+Want more? Open <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">a new issue</a> or 👍 <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">an existing one</a> so we can talk about it.
 
 ## Release notes:
 
