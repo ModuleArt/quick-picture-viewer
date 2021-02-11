@@ -1129,18 +1129,6 @@ namespace quick_picture_viewer
 				setAlwaysOnTop(false, true);
 
 				showSuggestion(string.Format(LangMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
-
-				if (navPanel != null && !navPanel.IsDisposed)
-				{
-					if (Properties.Settings.Default.NavPanelInFullscreen)
-					{
-						navPanel.SetExtraMargins(0, 0);
-					}
-					else
-					{
-						navPanel.Visible = false;
-					}
-				}
 			}
 			else
 			{
@@ -1176,13 +1164,6 @@ namespace quick_picture_viewer
 
 				if (navPanel != null && !navPanel.IsDisposed)
 				{
-					int extraTopMargin = 0;
-					if (toolStrip1.Visible) extraTopMargin += toolStrip1.Height;
-
-					int extraBottomMargin = 0;
-					if (statusStrip1.Visible) extraBottomMargin += statusStrip1.Height;
-
-					navPanel.SetExtraMargins(extraTopMargin, extraBottomMargin);
 					navPanel.Visible = true;
 				}
 			}
@@ -2151,17 +2132,17 @@ namespace quick_picture_viewer
 				{
 					navPanel.Location = new Point(navPanel.borderSpacing, navPanel.Location.Y);
 				}
-				if (navPanel.Location.Y < navPanel.borderSpacing + toolStrip1.Location.Y)
+				if (navPanel.Location.Y < navPanel.borderSpacing + navPanel.extraTopMargin)
 				{
-					navPanel.Location = new Point(navPanel.Location.X, navPanel.borderSpacing + toolStrip1.Location.Y);
+					navPanel.Location = new Point(navPanel.Location.X, navPanel.borderSpacing + navPanel.extraTopMargin);
 				}
 				if (navPanel.Location.X + navPanel.Width > ClientRectangle.Width - navPanel.borderSpacing)
 				{
 					navPanel.Location = new Point(ClientRectangle.Width - navPanel.borderSpacing - navPanel.Width, navPanel.Location.Y);
 				}
-				if (navPanel.Location.Y + navPanel.Height > ClientRectangle.Height - navPanel.borderSpacing - statusStrip1.Height)
+				if (navPanel.Location.Y + navPanel.Height > ClientRectangle.Height - navPanel.borderSpacing - navPanel.extraBottomMargin)
 				{
-					navPanel.Location = new Point(navPanel.Location.X, ClientRectangle.Height - navPanel.borderSpacing - navPanel.Height - statusStrip1.Height);
+					navPanel.Location = new Point(navPanel.Location.X, ClientRectangle.Height - navPanel.borderSpacing - navPanel.Height - navPanel.extraBottomMargin);
 				}
 			}
 		}
@@ -2314,7 +2295,7 @@ namespace quick_picture_viewer
 				{
 					navPanel.Anchor |= AnchorStyles.Left;
 				}
-				if (navPanel.Location.Y == toolStrip1.Height + navPanel.borderSpacing)
+				if (navPanel.Location.Y == navPanel.extraTopMargin + navPanel.borderSpacing)
 				{
 					navPanel.Anchor |= AnchorStyles.Top;
 				}
@@ -2322,7 +2303,7 @@ namespace quick_picture_viewer
 				{
 					navPanel.Anchor |= AnchorStyles.Right;
 				}
-				if (navPanel.Location.Y + navPanel.Height == ClientRectangle.Height - navPanel.borderSpacing - statusStrip1.Height)
+				if (navPanel.Location.Y + navPanel.Height == ClientRectangle.Height - navPanel.borderSpacing - navPanel.extraBottomMargin)
 				{
 					navPanel.Anchor |= AnchorStyles.Bottom;
 				}
@@ -2370,6 +2351,36 @@ namespace quick_picture_viewer
 		private void framelessCloseBtn_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+		private void statusStrip1_VisibleChanged(object sender, EventArgs e)
+		{
+			if (navPanel != null && !navPanel.IsDisposed)
+			{
+				if (statusStrip1.Visible)
+				{
+					navPanel.SetExtraBottomMargin(statusStrip1.Height);
+				}
+				else
+				{
+					navPanel.SetExtraBottomMargin(0);
+				}
+			}
+		}
+
+		private void toolStrip1_VisibleChanged(object sender, EventArgs e)
+		{
+			if (navPanel != null && !navPanel.IsDisposed)
+			{
+				if (toolStrip1.Visible)
+				{
+					navPanel.SetExtraTopMargin(toolStrip1.Height);
+				}
+				else
+				{
+					navPanel.SetExtraTopMargin(0);
+				}
+			}
 		}
 	}
 }

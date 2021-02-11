@@ -1,5 +1,4 @@
 ﻿using QuickLibrary;
-using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,8 +9,8 @@ namespace quick_picture_viewer
 		public int borderSpacing = 27;
 
 		private Point navPanelRelPoint;
-		private int extraTopMargin;
-		private int extraBottomMargin;
+		public int extraTopMargin;
+		public int extraBottomMargin;
 		private MainForm owner;
 
 		public NavPanel(int extraTopMargin, int extraBottomMargin)
@@ -24,32 +23,22 @@ namespace quick_picture_viewer
 			InitializeComponent();
 		}
 
-		public void SetExtraMargins(int top, int bottom)
+		public void SetExtraTopMargin(int top)
 		{
-			bool tileTop = false;
-			bool tileBottom = false;
-
-			if (Location.Y == borderSpacing + extraTopMargin) 
+			if (Top == borderSpacing + extraTopMargin)
 			{
-				tileTop = true;
+				Top = borderSpacing + top;
 			}
-
-			if (Location.Y == Parent.ClientRectangle.Height - borderSpacing - extraBottomMargin - Height)
-			{
-				tileBottom = true;
-			}
-
 			extraTopMargin = top;
-			extraBottomMargin = bottom;
+		}
 
-			if (tileTop)
+		public void SetExtraBottomMargin(int bottom)
+		{
+			if (Top == Parent.ClientRectangle.Height - borderSpacing - extraBottomMargin - Height)
 			{
-				Location = new Point(Location.X, borderSpacing + top);
+				Top = Parent.ClientRectangle.Height - borderSpacing - bottom - Height;
 			}
-			if (tileBottom)
-			{
-				Location = new Point(Location.X, Parent.ClientRectangle.Height - borderSpacing - bottom - Height);
-			}
+			extraBottomMargin = bottom;
 		}
 
 		public void SetSlideshowChecked(bool b)

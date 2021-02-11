@@ -149,6 +149,7 @@
 			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.ShowItemToolTips = true;
+			this.statusStrip1.VisibleChanged += new System.EventHandler(this.statusStrip1_VisibleChanged);
 			// 
 			// directoryLabel
 			// 
@@ -267,6 +268,7 @@
             this.framelessCloseBtn});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.VisibleChanged += new System.EventHandler(this.toolStrip1_VisibleChanged);
 			// 
 			// openButton
 			// 
