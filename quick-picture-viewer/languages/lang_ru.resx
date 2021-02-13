@@ -717,6 +717,14 @@
     <value>Показать счётчик слайдшоу</value>
     <comment>Settings</comment>
   </data>
+  <data name="show-status-bar" xml:space="preserve">
+    <value>Показывать статус бар</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-toolbar" xml:space="preserve">
+    <value>Показывать панель инструментов</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="size" xml:space="preserve">
     <value>Размер</value>
     <comment>Status bar</comment>
@@ -824,6 +832,10 @@
   <data name="version" xml:space="preserve">
     <value>Версия</value>
     <comment>Plugin manager</comment>
+  </data>
+  <data name="view" xml:space="preserve">
+    <value>Вид</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Внимание</value>

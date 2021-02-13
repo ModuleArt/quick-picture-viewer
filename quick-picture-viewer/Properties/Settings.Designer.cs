@@ -274,5 +274,29 @@ namespace quick_picture_viewer.Properties {
                 this["CallUpgrade"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowStatusBar {
+            get {
+                return ((bool)(this["ShowStatusBar"]));
+            }
+            set {
+                this["ShowStatusBar"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowToolbar {
+            get {
+                return ((bool)(this["ShowToolbar"]));
+            }
+            set {
+                this["ShowToolbar"] = value;
+            }
+        }
     }
 }

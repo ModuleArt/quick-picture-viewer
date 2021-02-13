@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
@@ -43,7 +44,6 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.toolStrip1 = new QuickLibrary.QlibToolbar();
 			this.openButton = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
@@ -105,14 +105,20 @@
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.framelessCloseBtn = new System.Windows.Forms.ToolStripButton();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.rmbMenu = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.showMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.showStatusBarBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.typeOpsButton = new System.Windows.Forms.Button();
+			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
+			this.rmbMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
@@ -214,18 +220,6 @@
 			// colorDialog1
 			// 
 			this.colorDialog1.Color = System.Drawing.Color.Blue;
-			// 
-			// typeOpsButton
-			// 
-			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
 			// 
 			// toolStrip1
 			// 
@@ -819,6 +813,7 @@
 			// 
 			resources.ApplyResources(this.picturePanel, "picturePanel");
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.ContextMenuStrip = this.rmbMenu;
 			this.picturePanel.Controls.Add(this.suggestionIcon);
 			this.picturePanel.Controls.Add(this.suggestionLabel);
 			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
@@ -829,6 +824,33 @@
 			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// rmbMenu
+			// 
+			resources.ApplyResources(this.rmbMenu, "rmbMenu");
+			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showMenuItem});
+			this.rmbMenu.Name = "rmbMenu";
+			// 
+			// showMenuItem
+			// 
+			this.showMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showToolbarBtn,
+            this.showStatusBarBtn});
+			resources.ApplyResources(this.showMenuItem, "showMenuItem");
+			this.showMenuItem.ForeColor = System.Drawing.Color.Black;
+			this.showMenuItem.Image = global::quick_picture_viewer.Properties.Resources.black_show;
+			this.showMenuItem.Name = "showMenuItem";
+			this.showMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			// 
+			// showStatusBarBtn
+			// 
+			this.showStatusBarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
+			this.showStatusBarBtn.Name = "showStatusBarBtn";
+			this.showStatusBarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.showStatusBarBtn, "showStatusBarBtn");
+			this.showStatusBarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
 			// 
 			// suggestionIcon
 			// 
@@ -862,6 +884,26 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
+			// typeOpsButton
+			// 
+			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			// 
+			// showToolbarBtn
+			// 
+			this.showToolbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_toolbar;
+			this.showToolbarBtn.Name = "showToolbarBtn";
+			this.showToolbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.showToolbarBtn, "showToolbarBtn");
+			this.showToolbarBtn.Click += new System.EventHandler(this.showToolbarBtn_Click);
+			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -890,6 +932,7 @@
 			this.toolStrip1.PerformLayout();
 			this.picturePanel.ResumeLayout(false);
 			this.picturePanel.PerformLayout();
+			this.rmbMenu.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
@@ -979,5 +1022,9 @@
 		private System.Windows.Forms.ToolStripMenuItem pluginManBtn2;
 		private QuickLibrary.QlibToolsep qlibToolsep1;
 		private System.Windows.Forms.ToolStripButton fullscreenBtn;
+		private QuickLibrary.QlibContextMenuStrip rmbMenu;
+		private System.Windows.Forms.ToolStripMenuItem showMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem showStatusBarBtn;
+		private System.Windows.Forms.ToolStripMenuItem showToolbarBtn;
 	}
 }

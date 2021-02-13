@@ -1420,6 +1420,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show status bar.
+        /// </summary>
+        public static string show_status_bar {
+            get {
+                return ResourceManager.GetString("show-status-bar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show toolbar.
+        /// </summary>
+        public static string show_toolbar {
+            get {
+                return ResourceManager.GetString("show-toolbar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Size.
         /// </summary>
         public static string size {
@@ -1659,6 +1677,15 @@ namespace quick_picture_viewer.languages {
         public static string version {
             get {
                 return ResourceManager.GetString("version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View.
+        /// </summary>
+        public static string view {
+            get {
+                return ResourceManager.GetString("view", resourceCulture);
             }
         }
         

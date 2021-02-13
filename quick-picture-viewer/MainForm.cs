@@ -74,6 +74,9 @@ namespace quick_picture_viewer
 
 			closeFile();
 
+			toolStrip1.Visible = Properties.Settings.Default.ShowToolbar;
+			statusStrip1.Visible = Properties.Settings.Default.ShowStatusBar;
+
 			if (Properties.Settings.Default.StartupRestoreBounds)
 			{
 				StartPosition = FormStartPosition.Manual;
@@ -211,8 +214,12 @@ namespace quick_picture_viewer
 
 			effectsBtn.Text = LangMan.GetString("effects");
 			toolsBtn.Text = LangMan.GetString("tools");
-			pluginManBtn.Text = LangMan.GetString("plugin-manager");
-			pluginManBtn2.Text = LangMan.GetString("plugin-manager");
+			pluginManBtn.Text = LangMan.GetString("plugin-manager") + " ...";
+			pluginManBtn2.Text = LangMan.GetString("plugin-manager") + " ...";
+
+			showMenuItem.Text = LangMan.GetString("view");
+			showToolbarBtn.Text = LangMan.GetString("show-toolbar");
+			showStatusBarBtn.Text = LangMan.GetString("show-status-bar");
 
 			framelessCloseBtn.Text = NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4";
 		}
@@ -574,6 +581,14 @@ namespace quick_picture_viewer
 
 				pleaseOpenLabel.Invoke((MethodInvoker)(() => pleaseOpenLabel.Visible = false));
 
+				CheckAutoZoomNeeded();
+			}
+		}
+
+		private void CheckAutoZoomNeeded()
+		{
+			if (originalImage != null)
+			{
 				if (!fullscreen && (originalImage.Width < picturePanel.Width - 32) && (originalImage.Height < picturePanel.Height - 32))
 				{
 					if (zoomTextBox.Text == "100%")
@@ -589,6 +604,10 @@ namespace quick_picture_viewer
 				{
 					setZoomText(LangMan.GetString("auto"));
 				}
+			}
+			else
+			{
+				setZoomText(LangMan.GetString("auto"));
 			}
 		}
 
@@ -671,11 +690,11 @@ namespace quick_picture_viewer
 			pictureBox.Invoke((MethodInvoker)(() =>
 			{
 				pictureBox.Size = newSize;
-				updatePictureBoxLocation();
+				UpdatePictureBoxLocation();
 			}));
 		}
 
-		private void updatePictureBoxLocation()
+		private void UpdatePictureBoxLocation()
 		{
 			if (pictureBox.Width < picturePanel.Width)
 			{
@@ -1096,6 +1115,24 @@ namespace quick_picture_viewer
 			setFullscreen(!fullscreen);
 		}
 
+		private void UpdatePicturePanelHeight()
+		{
+			int topMargin = 0;
+			if (toolStrip1.Visible)
+			{
+				topMargin += toolStrip1.Height;
+			}
+
+			int bottomMargin = 0;
+			if (statusStrip1.Visible)
+			{
+				bottomMargin += statusStrip1.Height;
+			}
+
+			picturePanel.Top = topMargin;
+			picturePanel.Height = ClientSize.Height - topMargin - bottomMargin;
+		}
+
 		private void setFullscreen(bool b)
 		{
 			OnResizeBegin(EventArgs.Empty);
@@ -1104,11 +1141,11 @@ namespace quick_picture_viewer
 
 			WindowState = FormWindowState.Normal;
 
-			toolStrip1.Visible = !b;
-			statusStrip1.Visible = !b;
-
 			if (b)
 			{
+				toolStrip1.Visible = false;
+				statusStrip1.Visible = false;
+
 				if (!Properties.Settings.Default.ShowCursorInFullscreen)
 				{
 					Bitmap bitmap = new Bitmap(1, 1);
@@ -1116,8 +1153,6 @@ namespace quick_picture_viewer
 					picturePanel.Cursor = new Cursor(ptr);
 				}
 
-				picturePanel.Top = 0;
-				picturePanel.Height = ClientSize.Height;
 				picturePanel.BackColor = Color.Black;
 
 				typeOpsButton.Left = ClientRectangle.Width + 27;
@@ -1126,16 +1161,21 @@ namespace quick_picture_viewer
 				FormBorderStyle = FormBorderStyle.None;
 				WindowState = FormWindowState.Maximized;
 
+				if (!Properties.Settings.Default.NavPanelInFullscreen && navPanel != null && !navPanel.IsDisposed)
+				{
+					navPanel.Visible = false;
+				}
+
 				setAlwaysOnTop(false, true);
 
 				showSuggestion(string.Format(LangMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
 			}
 			else
 			{
-				picturePanel.Cursor = Cursors.Default;
+				toolStrip1.Visible = Properties.Settings.Default.ShowToolbar;
+				statusStrip1.Visible = Properties.Settings.Default.ShowStatusBar;
 
-				picturePanel.Top = toolStrip1.Height;
-				picturePanel.Height = ClientSize.Height - toolStrip1.Height - statusStrip1.Height;
+				picturePanel.Cursor = Cursors.Default;
 
 				typeOpsButton.Left = ClientRectangle.Width - typeOpsButton.Width - 27;
 				pleaseOpenLabel.ForeColor = ForeColor;
@@ -1168,7 +1208,7 @@ namespace quick_picture_viewer
 				}
 			}
 
-			setZoomText(LangMan.GetString("auto"));
+			CheckAutoZoomNeeded();
 
 			OnResizeEnd(EventArgs.Empty);
 		}
@@ -1344,6 +1384,14 @@ namespace quick_picture_viewer
 							Close();
 						}
 						setFullscreen(false);
+					}
+					else if (e.KeyCode == Keys.F7)
+					{
+						showToolbarBtn.PerformClick();
+					}
+					else if (e.KeyCode == Keys.F8)
+					{
+						showStatusBarBtn.PerformClick();
 					}
 				}
 			}
@@ -1696,6 +1744,12 @@ namespace quick_picture_viewer
 
 				zoomTextBox.BackColor = ThemeMan.DarkMainColor;
 				zoomTextBox.ForeColor = Color.White;
+
+				rmbMenu.SetDarkMode(dark);
+				showMenuItem.Image = Properties.Resources.white_show;
+				showMenuItem.DropDown.BackColor = ThemeMan.DarkSecondColor;
+				showToolbarBtn.Image = Properties.Resources.white_toolbar;
+				showStatusBarBtn.Image = Properties.Resources.white_statusbar;
 			}
 
 			toolStrip1.DarkMode = dark;
@@ -2122,7 +2176,7 @@ namespace quick_picture_viewer
 		{
 			if (!autoZoom)
 			{
-				updatePictureBoxLocation();
+				UpdatePictureBoxLocation();
 			}
 
 			if (navPanel != null && !navPanel.IsDisposed)
@@ -2366,6 +2420,11 @@ namespace quick_picture_viewer
 					navPanel.SetExtraBottomMargin(0);
 				}
 			}
+
+			showStatusBarBtn.Checked = statusStrip1.Visible;
+
+			UpdatePicturePanelHeight();
+			UpdatePictureBoxLocation();
 		}
 
 		private void toolStrip1_VisibleChanged(object sender, EventArgs e)
@@ -2381,6 +2440,25 @@ namespace quick_picture_viewer
 					navPanel.SetExtraTopMargin(0);
 				}
 			}
+
+			showToolbarBtn.Checked = toolStrip1.Visible;
+
+			UpdatePicturePanelHeight();
+			UpdatePictureBoxLocation();
+		}
+
+		private void showStatusBarBtn_Click(object sender, EventArgs e)
+		{
+			statusStrip1.Visible = !statusStrip1.Visible;
+			Properties.Settings.Default.ShowStatusBar = statusStrip1.Visible;
+			Properties.Settings.Default.Save();
+		}
+
+		private void showToolbarBtn_Click(object sender, EventArgs e)
+		{
+			toolStrip1.Visible = !toolStrip1.Visible;
+			Properties.Settings.Default.ShowToolbar = toolStrip1.Visible;
+			Properties.Settings.Default.Save();
 		}
 	}
 }

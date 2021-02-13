@@ -721,6 +721,14 @@
     <value>Show slideshow counter</value>
     <comment>Settings</comment>
   </data>
+  <data name="show-status-bar" xml:space="preserve">
+    <value>Show status bar</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-toolbar" xml:space="preserve">
+    <value>Show toolbar</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="size" xml:space="preserve">
     <value>Size</value>
     <comment>Status bar</comment>
@@ -828,6 +836,10 @@
   <data name="version" xml:space="preserve">
     <value>Version</value>
     <comment>Plugin manager</comment>
+  </data>
+  <data name="view" xml:space="preserve">
+    <value>View</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Warning</value>

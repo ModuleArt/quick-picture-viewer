@@ -392,6 +392,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-statusbar.png" />
+    <None Include="resources\imgs\light\white-toolbar.png" />
+    <None Include="resources\imgs\dark\black-toolbar.png" />
+    <None Include="resources\imgs\dark\black-statusbar.png" />
+    <None Include="resources\imgs\light\white-show.png" />
+    <None Include="resources\imgs\dark\black-show.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
