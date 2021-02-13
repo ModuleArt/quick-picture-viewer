@@ -175,7 +175,7 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="center" xml:space="preserve">
-    <value>中央</value>
+    <value>居中</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="center-image" xml:space="preserve">
@@ -203,7 +203,7 @@
     <comment>Menu</comment>
   </data>
   <data name="choose-fit" xml:space="preserve">
-    <value>选择模式</value>
+    <value>选择契合度</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="clear" xml:space="preserve">
@@ -339,7 +339,7 @@
     <comment>Wallpaper</comment>
   </data>
   <data name="fit" xml:space="preserve">
-    <value>适合</value>
+    <value>适应</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="flip-horizontal" xml:space="preserve">
@@ -703,7 +703,7 @@
     <comment>Menu</comment>
   </data>
   <data name="set-background" xml:space="preserve">
-    <value>设置壁纸</value>
+    <value>设置背景</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="set-margins-btn" xml:space="preserve">
@@ -739,7 +739,7 @@
     <comment>Menu</comment>
   </data>
   <data name="span" xml:space="preserve">
-    <value>Span</value>
+    <value>跨区</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="square" xml:space="preserve">
