@@ -26,14 +26,14 @@
   </a>
 </p>
 
-## Installation:
+## ⬇️ Installation:
 
 | Windows | Version | Release date | Size | Downloads | Installer |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> (Stable) | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
 | 7-10 | v3.0.2 (Beta 3) | Feb 1, 2021 | 3.7 MB | - | <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.2-beta3.exe">Download (.exe)</a> |
 
-## Features:
+## 😃 Features:
 
 * 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif ...
 * 🖻 Supported other file types: .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
@@ -51,15 +51,15 @@
 
 Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
 
-## Release notes:
+## 📋 Release notes:
 
 <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Over here!</a>
 
-## Bug report:
+## 🐞 Bug report:
 
 If you want to report a bug, first, thank you, that helps us a lot. Please open an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">issue</a> and mention your OS, your Quick Picture Viewer version, and how to reproduce it. Adding a screenshot of the issue or screen recording is a big help too.
 
-## Contribution:
+## 🔨 Contribution:
 
 Help Module Art!
 
@@ -67,15 +67,14 @@ Help Module Art!
 * Fork and Clone! Awesome
 * Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
 
-## Built-in plugins:
+## 🧩 Built-in plugins:
+
+- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region [blur]</a> - Blur or pixelate some area of the picture.<br>
+- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot [screenshot]</a> - Take a screen capture.
 
 <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a>
 
-#### 🧩 Plugin list:
-<a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region [blur]</a> - Blur or pixelate some area of the picture.<br>
-<a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot [screenshot]</a> - Take a screen capture.
-
-## Useful links:
+## 🔗 Useful links:
 
 #### How to uninstall built-in photos app in Windows 10:
 <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>
@@ -88,8 +87,8 @@ Get-AppxPackage *photos* | Remove-AppxPackage
 #### Extension module for Windows Explorer to render SVG thumbnails:
 <a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
 
-## Other great apps:
+## 🧰 Other great apps:
 
-<a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
-<a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> - Lightweight desktop screen recorder for Windows.<br>
-<a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> - Lightweight tool to draw or keep notes on your desktop background for Windows.
+- <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
+- <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> - Lightweight desktop screen recorder for Windows.<br>
+- <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> - Lightweight tool to draw or keep notes on your desktop background for Windows.
