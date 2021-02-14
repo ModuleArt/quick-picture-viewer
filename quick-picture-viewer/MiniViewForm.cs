@@ -22,11 +22,6 @@ namespace quick_picture_viewer
 
 		public MiniViewForm(Image image, string title, bool checkboardBackground)
 		{
-			if (ThemeMan.isWindows10())
-			{
-				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-			}
-
 			this.title = title;
 			this.checkboardBackground = checkboardBackground;
 
@@ -106,7 +101,7 @@ namespace quick_picture_viewer
 			{
 				zoomFactor = newZoomFactor;
 
-				zoomLabel.Text = LangMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
+				zoomLabel.Text = LangMan.Get("zoom") + ": " + zoomFactor.ToString() + "%";
 
 				setAutoZoom(false);
 
@@ -205,12 +200,12 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			infoTooltip.SetToolTip(autoZoomBtn, LangMan.GetString("auto-zoom") + " | Ctrl+A");
-			infoTooltip.SetToolTip(opacityBtn, LangMan.GetString("change-window-opacity") + " | Ctrl+O");
-			zoomLabel.Text = LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
-			checkboardBtn.Text = LangMan.GetString("checkboard-background");
-			newWindowBtn.Text = LangMan.GetString("new-window");
-			quitPipBtn.Text = LangMan.GetString("exit-picture-in-picture");
+			infoTooltip.SetToolTip(autoZoomBtn, LangMan.Get("auto-zoom") + " | Ctrl+A");
+			infoTooltip.SetToolTip(opacityBtn, LangMan.Get("change-window-opacity") + " | Ctrl+O");
+			zoomLabel.Text = LangMan.Get("zoom") + ": " + LangMan.Get("auto");
+			checkboardBtn.Text = LangMan.Get("checkboard-background");
+			newWindowBtn.Text = LangMan.Get("new-window");
+			quitPipBtn.Text = LangMan.Get("exit-picture-in-picture");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -291,7 +286,7 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.Fill;
 
-				zoomLabel.Text = LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
+				zoomLabel.Text = LangMan.Get("zoom") + ": " + LangMan.Get("auto");
 
 				Height = Convert.ToInt32(Width / ratio);
 				if (Height == MaximumSize.Height)

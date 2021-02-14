@@ -14,41 +14,41 @@ namespace quick_picture_viewer
 		{
 			public string Code;
 			public string[] Authors;
-			public bool Beta;
 		}
 
 		private Language[] languages = {
 			new Language
 			{
 				Code = "en",
-				Authors = new string[] { "Beelink" },
-				Beta = false
+				Authors = new string[] { "Beelink" }
 			},
 			new Language
 			{
 				Code = "ru",
-				Authors = new string[] { "Beelink" },
-				Beta = false
+				Authors = new string[] { "Beelink" }
+			},
+			new Language
+			{
+				Code = "cn",
+				Authors = new string[] { "jiwangyihao" }
+			},
+			new Language
+			{
+				Code = "hu",
+				Authors = new string[] { "KristofKekesi" }
 			},
 			new Language
 			{
 				Code = "es",
-				Authors = new string[] { "IpsumRy" },
-				Beta = true
+				Authors = new string[] { "IpsumRy" }
 			}
 		};
 
 		private bool settingsStarted = false;
 		private MainForm owner;
-		private bool darkMode = false;
 
-		public SettingsForm(bool darkMode)
+		public SettingsForm()
 		{
-			if (darkMode)
-			{
-				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-			}
-
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
 
@@ -110,8 +110,6 @@ namespace quick_picture_viewer
 			themeRestart.LinkColor = ThemeMan.AccentColor;
 			localizationRestart.LinkColor = ThemeMan.AccentColor;
 
-			SetDarkMode(darkMode);
-
 			if (ThemeMan.isWindows10())
 			{
 				makeDefaultBtn.Enabled = true;
@@ -120,48 +118,46 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			Text = LangMan.GetString("settings");
-			langPage.Text = LangMan.GetString("localization");
-			startupPage.Text = LangMan.GetString("startup");
-			restartLabel1.Text = "* " + LangMan.GetString("restart-required");
-			restartLabel2.Text = "* " + LangMan.GetString("restart-required");
-			systemThemeRadio.Text = LangMan.GetString("use-system-setting");
-			lightThemeRadio.Text = LangMan.GetString("light");
-			darkThemeRadio.Text = LangMan.GetString("dark");
-			themePage.Text = LangMan.GetString("theme");
-			startupLabel.Text = LangMan.GetString("app-startup-actions") + ":";
-			startupPasteCheckBox.Text = LangMan.GetString("paste-from-clipboard");
-			startupBoundsCheckBox.Text = LangMan.GetString("restore-last-window-bounds");
-			updatesCheckBox.Text = LangMan.GetString("check-for-app-updates");
-			favExtLabel.Text = LangMan.GetString("fav-external-app") + ":";
-			browseBtn.Text = " " + LangMan.GetString("browse");
-			slideshowPage.Text = LangMan.GetString("slideshow");
-			slideshowTimeLabel.Text = LangMan.GetString("switching-time") + ":";
-			mousePage.Text = LangMan.GetString("input");
-			slideshowSecondsLabel.Text = LangMan.GetString("seconds");
-			slideshowCounterCheckBox.Text = LangMan.GetString("show-slideshow-counter");
-			fullscrCursorCheckBox.Text = LangMan.GetString("fullscreen-cursor");
-			langLabel.Text = LangMan.GetString("ui-lang") + ":";
-			translatedByLabel.Text = LangMan.GetString("translated-by") + ": ";
-			escToExitCheckBox.Text = string.Format(LangMan.GetString("esc-to-exit"), "Esc");
-			mouseWheelActionLabel.Text = LangMan.GetString("mouse-wheel-action") + ":";
-			mouseWheelActionRadio1.Text = LangMan.GetString("scroll-up-down");
-			mouseWheelActionRadio2.Text = LangMan.GetString("zoom-in-out");
-			mouseWheelActionRadio3.Text = LangMan.GetString("next-prev-image");
-			themeRestart.Text = LangMan.GetString("restart");
-			localizationRestart.Text = LangMan.GetString("restart");
-			contextMenuLabel.Text = LangMan.GetString("context-menu") + ":";
-			makeDefaultBtn.Text = LangMan.GetString("set-as-default-image-viewer");
-			navBarPage.Text = LangMan.GetString("navigation-bar");
-			navBarCheckBox.Text = LangMan.GetString("enable-navigation-bar");
-			navBarFullscreenCheckBox.Text = LangMan.GetString("nav-bar-fullscreen");
+			Text = LangMan.Get("settings");
+			langPage.Text = LangMan.Get("localization");
+			startupPage.Text = LangMan.Get("startup");
+			restartLabel1.Text = "* " + LangMan.Get("restart-required");
+			restartLabel2.Text = "* " + LangMan.Get("restart-required");
+			systemThemeRadio.Text = LangMan.Get("use-system-setting");
+			lightThemeRadio.Text = LangMan.Get("light");
+			darkThemeRadio.Text = LangMan.Get("dark");
+			themePage.Text = LangMan.Get("theme");
+			startupLabel.Text = LangMan.Get("app-startup-actions") + ":";
+			startupPasteCheckBox.Text = LangMan.Get("paste-from-clipboard");
+			startupBoundsCheckBox.Text = LangMan.Get("restore-last-window-bounds");
+			updatesCheckBox.Text = LangMan.Get("check-for-app-updates");
+			favExtLabel.Text = LangMan.Get("fav-external-app") + ":";
+			browseBtn.Text = " " + LangMan.Get("browse");
+			slideshowPage.Text = LangMan.Get("slideshow");
+			slideshowTimeLabel.Text = LangMan.Get("switching-time") + ":";
+			mousePage.Text = LangMan.Get("input");
+			slideshowSecondsLabel.Text = LangMan.Get("seconds");
+			slideshowCounterCheckBox.Text = LangMan.Get("show-slideshow-counter");
+			fullscrCursorCheckBox.Text = LangMan.Get("fullscreen-cursor");
+			langLabel.Text = LangMan.Get("ui-lang") + ":";
+			translatedByLabel.Text = LangMan.Get("translated-by") + ": ";
+			escToExitCheckBox.Text = string.Format(LangMan.Get("esc-to-exit"), "Esc");
+			mouseWheelActionLabel.Text = LangMan.Get("mouse-wheel-action") + ":";
+			mouseWheelActionRadio1.Text = LangMan.Get("scroll-up-down");
+			mouseWheelActionRadio2.Text = LangMan.Get("zoom-in-out");
+			mouseWheelActionRadio3.Text = LangMan.Get("next-prev-image");
+			themeRestart.Text = LangMan.Get("restart");
+			localizationRestart.Text = LangMan.Get("restart");
+			contextMenuLabel.Text = LangMan.Get("context-menu") + ":";
+			makeDefaultBtn.Text = LangMan.Get("set-as-default-image-viewer");
+			navBarPage.Text = LangMan.Get("navigation-bar");
+			navBarCheckBox.Text = LangMan.Get("enable-navigation-bar");
+			navBarFullscreenCheckBox.Text = LangMan.Get("nav-bar-fullscreen");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
 		private void SetDarkMode(bool dark)
 		{
-			darkMode = dark;
-
 			if (dark)
 			{
 				browseBtn.Image = Properties.Resources.white_open;
@@ -299,15 +295,6 @@ namespace quick_picture_viewer
 
 			if (owner != null)
 			{
-				if (languages[langComboBox.SelectedIndex].Beta && settingsStarted)
-				{
-					DialogMan.ShowInfo(
-						LangMan.GetString("beta-lang-warning"),
-						LangMan.GetString("warning") + " - " + langComboBox.Items[langComboBox.SelectedIndex].ToString(),
-						darkMode
-					);
-				}
-
 				translateAuthorsPanel.Controls.Clear();
 				translateAuthorsPanel.Left = translatedByLabel.Location.X + translatedByLabel.Width;
 
@@ -335,6 +322,7 @@ namespace quick_picture_viewer
 		private void SettingsForm_Load(object sender, EventArgs e)
 		{
 			owner = Owner as MainForm;
+			SetDarkMode(DarkMode);
 			InitLanguage();
 			langComboBox_SelectedIndexChanged(null, null);
 			settingsStarted = true;
@@ -421,9 +409,9 @@ namespace quick_picture_viewer
 				{
 					settingsStarted = false;
 					DialogMan.ShowInfo(
-						LangMan.GetString("context-menu-notice"),
-						LangMan.GetString("error"),
-						darkMode
+						LangMan.Get("context-menu-notice"),
+						LangMan.Get("error"),
+						DarkMode
 					);
 					openWithCheckBox.Checked = !openWithCheckBox.Checked;
 					settingsStarted = true;
@@ -459,9 +447,9 @@ namespace quick_picture_viewer
 				{
 					settingsStarted = false;
 					DialogMan.ShowInfo(
-						LangMan.GetString("context-menu-notice"),
-						LangMan.GetString("error"),
-						darkMode
+						LangMan.Get("context-menu-notice"),
+						LangMan.Get("error"),
+						DarkMode
 					);
 					browseWithCheckBox.Checked = !browseWithCheckBox.Checked;
 					settingsStarted = true;

@@ -157,10 +157,6 @@
     <value>Background color</value>
     <comment>Menu</comment>
   </data>
-  <data name="beta-lang-warning" xml:space="preserve">
-    <value>This language is still in beta. The application may crash or not launch.</value>
-    <comment>Settings</comment>
-  </data>
   <data name="bottom" xml:space="preserve">
     <value>Bottom</value>
     <comment>Print</comment>

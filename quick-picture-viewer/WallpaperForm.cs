@@ -10,18 +10,12 @@ namespace quick_picture_viewer
 	{
 		private Bitmap bmp;
 
-		public WallpaperForm(Bitmap bmp, bool darkMode)
+		public WallpaperForm(Bitmap bmp)
 		{
-			if (darkMode)
-			{
-				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-			}
-
 			this.bmp = bmp;
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel, fitLabel });
-			SetDarkMode(darkMode);
 		}
 
 		private void SetDarkMode(bool dark)
@@ -77,21 +71,22 @@ namespace quick_picture_viewer
 
 		private void WallpaperForm_Load(object sender, EventArgs e)
 		{
+			SetDarkMode(DarkMode);
 			InitLanguage();
 			fitComboBox.SelectedIndex = 0;
 		}
 
 		private void InitLanguage()
 		{
-			Text = LangMan.GetString("set-as-desktop-background");
-			fitLabel.Text = LangMan.GetString("choose-fit") + ":";
-			okButton.Text = " " + LangMan.GetString("set-background");
-			fitComboBox.Items.Add(LangMan.GetString("fill"));
-			fitComboBox.Items.Add(LangMan.GetString("fit"));
-			fitComboBox.Items.Add(LangMan.GetString("stretch"));
-			fitComboBox.Items.Add(LangMan.GetString("tile"));
-			fitComboBox.Items.Add(LangMan.GetString("center"));
-			fitComboBox.Items.Add(LangMan.GetString("span"));
+			Text = LangMan.Get("set-as-desktop-background");
+			fitLabel.Text = LangMan.Get("choose-fit") + ":";
+			okButton.Text = " " + LangMan.Get("set-background");
+			fitComboBox.Items.Add(LangMan.Get("fill"));
+			fitComboBox.Items.Add(LangMan.Get("fit"));
+			fitComboBox.Items.Add(LangMan.Get("stretch"));
+			fitComboBox.Items.Add(LangMan.Get("tile"));
+			fitComboBox.Items.Add(LangMan.Get("center"));
+			fitComboBox.Items.Add(LangMan.Get("span"));
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}

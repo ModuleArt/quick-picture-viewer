@@ -94,9 +94,9 @@ namespace quick_picture_viewer
 		{
 			owner = Parent as MainForm;
 
-			infoTooltip.SetToolTip(navPrevBtn, LangMan.GetString("prev-image") + " | " + LangMan.GetString("left-arrow"));
-			infoTooltip.SetToolTip(navNextBtn, LangMan.GetString("next-image") + " | " + LangMan.GetString("right-arrow"));
-			infoTooltip.SetToolTip(navSlideshowBtn, LangMan.GetString("slideshow") + " | Ctrl+Shift+S");
+			infoTooltip.SetToolTip(navPrevBtn, LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow"));
+			infoTooltip.SetToolTip(navNextBtn, LangMan.Get("next-image") + " | " + LangMan.Get("right-arrow"));
+			infoTooltip.SetToolTip(navSlideshowBtn, LangMan.Get("slideshow") + " | Ctrl+Shift+S");
 
 			Location = new Point(borderSpacing, Parent.ClientRectangle.Height - extraBottomMargin - Height - borderSpacing);
 		}

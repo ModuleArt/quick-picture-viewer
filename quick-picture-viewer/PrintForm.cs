@@ -8,25 +8,16 @@ namespace quick_picture_viewer
 {
 	partial class PrintForm : QlibFixedForm
 	{
-		private bool darkMode;
 		private MainForm owner;
 
-		public PrintForm(PrintDocument pd, bool darkMode, string docTitle)
+		public PrintForm(PrintDocument pd, string docTitle)
 		{
-			if (darkMode)
-			{
-				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-			}
-
-			this.darkMode = darkMode;
-
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { 
 				titlePanel, titleLabel, 
 				printPreviewControl1, 
 				documentLabel, marginsLabel, leftLabel, rightLabel, topLabel, bottomLabel
 			});
-			SetDarkMode(darkMode);
 
 			leftMarginTextBox.Value = pd.DefaultPageSettings.Margins.Left;
 			topMarginTextBox.Value = pd.DefaultPageSettings.Margins.Top;
@@ -120,16 +111,16 @@ namespace quick_picture_viewer
 			catch
 			{
 				DialogMan.ShowInfo(
-					LangMan.GetString("plugin-not-found"),
-					LangMan.GetString("print-margins-error"),
-					darkMode
+					LangMan.Get("plugin-not-found"),
+					LangMan.Get("print-margins-error"),
+					DarkMode
 				);
 			}
 		}
 
 		private void setMarginsButton_EnabledChanged(object sender, EventArgs e)
 		{
-			if (darkMode)
+			if (DarkMode)
 			{
 				Button btn = (Button)sender;
 
@@ -152,23 +143,24 @@ namespace quick_picture_viewer
 			marginsCheckBox.Checked = printPreviewControl1.Document.OriginAtMargins;
 			horizontalCheckBox.Checked = printPreviewControl1.Document.DefaultPageSettings.Landscape;
 
+			SetDarkMode(DarkMode);
 			InitLanguage();
 		}
 
 		private void InitLanguage()
 		{
-			Text = LangMan.GetString("print-conf");
-			setMarginsButton.Text = LangMan.GetString("set-margins-btn");
-			okButton.Text = LangMan.GetString("print");
-			leftLabel.Text = LangMan.GetString("left") + ":";
-			rightLabel.Text = LangMan.GetString("right") + ":";
-			topLabel.Text = LangMan.GetString("top") + ":";
-			bottomLabel.Text = LangMan.GetString("bottom") + ":";
-			documentLabel.Text = LangMan.GetString("title") + ":";
-			centerCheckbox.Text = LangMan.GetString("center-image");
-			horizontalCheckBox.Text = LangMan.GetString("landscape-orientation");
-			marginsLabel.Text = LangMan.GetString("margins") + ":";
-			marginsCheckBox.Text = LangMan.GetString("margin-bounds");
+			Text = LangMan.Get("print-conf");
+			setMarginsButton.Text = LangMan.Get("set-margins-btn");
+			okButton.Text = LangMan.Get("print");
+			leftLabel.Text = LangMan.Get("left") + ":";
+			rightLabel.Text = LangMan.Get("right") + ":";
+			topLabel.Text = LangMan.Get("top") + ":";
+			bottomLabel.Text = LangMan.Get("bottom") + ":";
+			documentLabel.Text = LangMan.Get("title") + ":";
+			centerCheckbox.Text = LangMan.Get("center-image");
+			horizontalCheckBox.Text = LangMan.Get("landscape-orientation");
+			marginsLabel.Text = LangMan.Get("margins") + ":";
+			marginsCheckBox.Text = LangMan.Get("margin-bounds");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 

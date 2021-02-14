@@ -145,11 +145,12 @@ namespace quick_picture_viewer
 					case "en":
 					case "es":
 					case "ru":
-						LangMan.InitResMan("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
+					case "cn":
+						LangMan.Init("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 						Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 						break;
 					default:
-						LangMan.InitResMan("quick_picture_viewer");
+						LangMan.Init("quick_picture_viewer");
 						Properties.Settings.Default.Language = LangMan.defaultLang;
 						break;
 				}
@@ -158,68 +159,68 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				LangMan.InitResMan("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language);
+				LangMan.Init("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language);
 			}
 
-			pleaseOpenLabel.Text = LangMan.GetString("please-open-image");
+			pleaseOpenLabel.Text = LangMan.Get("please-open-image");
 
-			moreButton.Text = LangMan.GetString("more-options");
-			aboutBtn.Text = LangMan.GetString("about") + " ...";
-			settingsButton.Text = LangMan.GetString("settings") + " ...";
-			settingsButton.ShortcutKeyDisplayString = "Ctrl+" + LangMan.GetString("comma");
-			newWindowButton.Text = LangMan.GetString("new-window");
-			framelessBtn.Text = LangMan.GetString("frameless-mode");
-			onTopButton.Text = LangMan.GetString("always-on-top");
-			backColorBtn.Text = LangMan.GetString("background-color");
-			backClearBtn.Text = LangMan.GetString("clear");
-			backCustomBtn.Text = LangMan.GetString("choose-color") + " ...";
-			actualSizeBtn.Text = LangMan.GetString("zoom-to-actual-size") + " (100%)";
-			setAsDesktopButton.Text = LangMan.GetString("set-as-desktop-background") + " ...";
-			printButton.Text = LangMan.GetString("print") + " ...";
-			deleteBtn.Text = LangMan.GetString("move-to-trash") + " ...";
-			reloadButton.Text = LangMan.GetString("reload-file");
+			moreButton.Text = LangMan.Get("more-options");
+			aboutBtn.Text = LangMan.Get("about") + " ...";
+			settingsButton.Text = LangMan.Get("settings") + " ...";
+			settingsButton.ShortcutKeyDisplayString = "Ctrl+" + LangMan.Get("comma");
+			newWindowButton.Text = LangMan.Get("new-window");
+			framelessBtn.Text = LangMan.Get("frameless-mode");
+			onTopButton.Text = LangMan.Get("always-on-top");
+			backColorBtn.Text = LangMan.Get("background-color");
+			backClearBtn.Text = LangMan.Get("clear");
+			backCustomBtn.Text = LangMan.Get("choose-color") + " ...";
+			actualSizeBtn.Text = LangMan.Get("zoom-to-actual-size") + " (100%)";
+			setAsDesktopButton.Text = LangMan.Get("set-as-desktop-background") + " ...";
+			printButton.Text = LangMan.Get("print") + " ...";
+			deleteBtn.Text = LangMan.Get("move-to-trash") + " ...";
+			reloadButton.Text = LangMan.Get("reload-file");
 
-			editButton.Text = LangMan.GetString("edit-image");
-			flipHorizontalButton.Text = LangMan.GetString("flip-horizontal");
-			flipVerticalButton.Text = LangMan.GetString("flip-vertical");
-			rotateRightButton.Text = LangMan.GetString("rotate-right");
-			rotateLeftButton.Text = LangMan.GetString("rotate-left");
-			rotate180Button.Text = LangMan.GetString("rotate-180");
+			editButton.Text = LangMan.Get("edit-image");
+			flipHorizontalButton.Text = LangMan.Get("flip-horizontal");
+			flipVerticalButton.Text = LangMan.Get("flip-vertical");
+			rotateRightButton.Text = LangMan.Get("rotate-right");
+			rotateLeftButton.Text = LangMan.Get("rotate-left");
+			rotate180Button.Text = LangMan.Get("rotate-180");
 
-			copyButton.Text = LangMan.GetString("copy");
-			copyImageButton.Text = LangMan.GetString("copy-image");
-			copyFileBtn.Text = LangMan.GetString("copy-file");
+			copyButton.Text = LangMan.Get("copy");
+			copyImageButton.Text = LangMan.Get("copy-image");
+			copyFileBtn.Text = LangMan.Get("copy-file");
 
-			externalBtn.Text = LangMan.GetString("open-external");
-			externalRunBtn.Text = LangMan.GetString("open-with-default");
-			externalChooseBtn.Text = LangMan.GetString("open-with-choose") + " ...";
+			externalBtn.Text = LangMan.Get("open-external");
+			externalRunBtn.Text = LangMan.Get("open-with-default");
+			externalChooseBtn.Text = LangMan.Get("open-with-choose") + " ...";
 
-			openButton.Text = LangMan.GetString("open-file") + " | Ctrl+O";
-			saveAsButton.Text = LangMan.GetString("save-as") + " | Ctrl+S";
-			pasteButton.Text = LangMan.GetString("paste-image") + " | Ctrl+V";
-			checkboardButton.Text = LangMan.GetString("checkboard-background") + " | Ctrl+B";
-			fullscreenBtn.Text = LangMan.GetString("fullscreen") + " | F";
-			miniViewButton.Text = LangMan.GetString("picture-in-picture") + " | Ctrl+Shift+P";
-			autoZoomButton.Text = LangMan.GetString("auto-zoom") + " | Ctrl+A";
-			zoomInButton.Text = LangMan.GetString("zoom-in") + " | Ctrl+" + LangMan.GetString("plus");
-			zoomOutButton.Text = LangMan.GetString("zoom-out") + " | Ctrl+" + LangMan.GetString("minus");
-			infoButton.Text = LangMan.GetString("image-info") + " | Ctrl+I";
-			slideshowButton.Text = LangMan.GetString("slideshow") + " | Ctrl+Shift+S";
-			showFileButton.Text = LangMan.GetString("show-file-explorer") + " | Ctrl+Shift+L";
-			prevButton.Text = LangMan.GetString("prev-image") + " | " + LangMan.GetString("left-arrow");
-			nextButton.Text = LangMan.GetString("next-image") + " | " + LangMan.GetString("right-arrow");
+			openButton.Text = LangMan.Get("open-file") + " | Ctrl+O";
+			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+S";
+			pasteButton.Text = LangMan.Get("paste-image") + " | Ctrl+V";
+			checkboardButton.Text = LangMan.Get("checkboard-background") + " | Ctrl+B";
+			fullscreenBtn.Text = LangMan.Get("fullscreen") + " | F";
+			miniViewButton.Text = LangMan.Get("picture-in-picture") + " | Ctrl+Shift+P";
+			autoZoomButton.Text = LangMan.Get("auto-zoom") + " | Ctrl+A";
+			zoomInButton.Text = LangMan.Get("zoom-in") + " | Ctrl+" + LangMan.Get("plus");
+			zoomOutButton.Text = LangMan.Get("zoom-out") + " | Ctrl+" + LangMan.Get("minus");
+			infoButton.Text = LangMan.Get("image-info") + " | Ctrl+I";
+			slideshowButton.Text = LangMan.Get("slideshow") + " | Ctrl+Shift+S";
+			showFileButton.Text = LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L";
+			prevButton.Text = LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow");
+			nextButton.Text = LangMan.Get("next-image") + " | " + LangMan.Get("right-arrow");
 
-			hasChangesLabel.Text = " " + LangMan.GetString("not-saved");
-			zoomLabel.Text = " " + LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
+			hasChangesLabel.Text = " " + LangMan.Get("not-saved");
+			zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + LangMan.Get("auto");
 
-			effectsBtn.Text = LangMan.GetString("effects");
-			toolsBtn.Text = LangMan.GetString("tools");
-			pluginManBtn.Text = LangMan.GetString("plugin-manager") + " ...";
-			pluginManBtn2.Text = LangMan.GetString("plugin-manager") + " ...";
+			effectsBtn.Text = LangMan.Get("effects");
+			toolsBtn.Text = LangMan.Get("tools");
+			pluginManBtn.Text = LangMan.Get("plugin-manager") + " ...";
+			pluginManBtn2.Text = LangMan.Get("plugin-manager") + " ...";
 
-			showMenuItem.Text = LangMan.GetString("view");
-			showToolbarBtn.Text = LangMan.GetString("show-toolbar");
-			showStatusBarBtn.Text = LangMan.GetString("show-status-bar");
+			showMenuItem.Text = LangMan.Get("view");
+			showToolbarBtn.Text = LangMan.Get("show-toolbar");
+			showStatusBarBtn.Text = LangMan.Get("show-status-bar");
 
 			framelessCloseBtn.Text = NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4";
 		}
@@ -247,11 +248,11 @@ namespace quick_picture_viewer
 			{
 				if ((Properties.Settings.Default.SlideshowTime - slideshowCounter) <= 1)
 				{
-					showSuggestion(LangMan.GetString("next-image-in-1-second"), SuggestionIcon.Slideshow);
+					showSuggestion(LangMan.Get("next-image-in-1-second"), SuggestionIcon.Slideshow);
 				}
 				else
 				{
-					showSuggestion(string.Format(LangMan.GetString("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Slideshow);
+					showSuggestion(string.Format(LangMan.Get("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Slideshow);
 				}
 			}
 		}
@@ -260,7 +261,7 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
-			openFileDialog1.Title = LangMan.GetString("open-file");
+			openFileDialog1.Title = LangMan.Get("open-file");
 
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
@@ -279,7 +280,7 @@ namespace quick_picture_viewer
 					if (Properties.Settings.Default.StartupPaste && Clipboard.ContainsImage())
 					{
 						pasteButton.PerformClick();
-						showSuggestion(LangMan.GetString("image-pasted-from-clipboard"), SuggestionIcon.Info);
+						showSuggestion(LangMan.Get("image-pasted-from-clipboard"), SuggestionIcon.Info);
 					}
 				}
 				else
@@ -298,7 +299,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(LangMan.GetString("unable-open-file"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("unable-open-file"), SuggestionIcon.Warning);
 			}
 
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
@@ -309,35 +310,35 @@ namespace quick_picture_viewer
 				picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
 			}
 
-			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe");
+			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe", darkMode);
 			UpdateMan.InitLang(
-				LangMan.GetString("new-version-available"), 
-				LangMan.GetString("update-text"), 
-				LangMan.GetString("install-update"), 
-				LangMan.GetString("whats-new"),
+				LangMan.Get("new-version-available"), 
+				LangMan.Get("update-text"), 
+				LangMan.Get("install-update"), 
+				LangMan.Get("whats-new"),
 
-				LangMan.GetString("updating-qpv"),
-				LangMan.GetString("downloading-update"),
-				LangMan.GetString("ready-to-install"),
-				LangMan.GetString("update-failed"),
-				LangMan.GetString("install")
+				LangMan.Get("updating-qpv"),
+				LangMan.Get("downloading-update"),
+				LangMan.Get("ready-to-install"),
+				LangMan.Get("update-failed"),
+				LangMan.Get("install")
 			);
 			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
 			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
 			if (Properties.Settings.Default.CheckForUpdates)
 			{
-				UpdateMan.CheckForUpdates(false, TopMost, darkMode, Handle);
+				UpdateMan.CheckForUpdates(false, TopMost, Handle);
 			}
 		}
 
 		private void UpdateMan_IsUpToDate(object sender, EventArgs e)
 		{
-			showSuggestion(LangMan.GetString("app-is-up-to-date"), SuggestionIcon.Check);
+			showSuggestion(LangMan.Get("app-is-up-to-date"), SuggestionIcon.Check);
 		}
 
 		private void UpdateMan_UpdateFailed(object sender, EventArgs e)
 		{
-			showSuggestion(LangMan.GetString("update-failed"), SuggestionIcon.Warning);
+			showSuggestion(LangMan.Get("update-failed"), SuggestionIcon.Warning);
 		}
 
 		private void showTypeOpsButton(bool show, string type = null)
@@ -348,7 +349,7 @@ namespace quick_picture_viewer
 
 				if (show)
 				{
-					typeOpsButton.Text = " " + type + " " + LangMan.GetString("type-options");
+					typeOpsButton.Text = " " + type + " " + LangMan.Get("type-options");
 					typeOpsButton.Focus();
 				}
 			}));
@@ -388,7 +389,7 @@ namespace quick_picture_viewer
 							showTypeOpsButton(true, SvgWrapper.TypeName);
 							break;
 						case SvgWrapper.Error.UnableToOpen:
-							showSuggestion(SvgWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(SvgWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -401,13 +402,13 @@ namespace quick_picture_viewer
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 							break;
 						case DdsWrapper.Error.MemoryError:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("memory-error") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("memory-error") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 						case DdsWrapper.Error.UnableToOpen:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 						case DdsWrapper.Error.UnsupportedPixelFormat:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -420,7 +421,7 @@ namespace quick_picture_viewer
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 							break;
 						case PsdWrapper.Error.UnableToOpen:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -433,7 +434,7 @@ namespace quick_picture_viewer
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 							break;
 						case Cr2Wrapper.Error.UnableToOpen:
-							showSuggestion(Cr2Wrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							showSuggestion(Cr2Wrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 							break;
 					}
 				}
@@ -454,7 +455,7 @@ namespace quick_picture_viewer
 			}
 			catch (Exception ex)
 			{
-				showSuggestion(LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 				Console.WriteLine(ex);
 			}
 		}
@@ -466,12 +467,12 @@ namespace quick_picture_viewer
 				if (imageChanged)
 				{
 					DialogResult window = DialogMan.ShowConfirm(
-						LangMan.GetString("unsaved-changes-question"),
-						windowTitle: LangMan.GetString("unsaved-changes"),
-						yesBtnText: LangMan.GetString("save-as"),
+						LangMan.Get("unsaved-changes-question"),
+						windowTitle: LangMan.Get("unsaved-changes"),
+						yesBtnText: LangMan.Get("save-as"),
 						yesBtnImage: saveAsButton.Image,
 						showNoBtn: true,
-						noBtnText: LangMan.GetString("dont-save"),
+						noBtnText: LangMan.Get("dont-save"),
 						noBtnImage: deleteBtn.Image,
 						darkMode: darkMode
 					);
@@ -522,14 +523,14 @@ namespace quick_picture_viewer
 
 				width = pictureBox.Image.Size.Width;
 				height = pictureBox.Image.Size.Height;
-				fileLabel.Text = " " + LangMan.GetString("file") + ": " + fileName;
+				fileLabel.Text = " " + LangMan.Get("file") + ": " + fileName;
 
 				if (directoryName == null)
 				{
 					currentFolder = null;
 					currentFile = null;
 					directoryLabel.Visible = false;
-					sizeLabel.Text = " " + LangMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
+					sizeLabel.Text = " " + LangMan.Get("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
 				}
 				else
 				{
@@ -538,11 +539,11 @@ namespace quick_picture_viewer
 					currentFolder = directoryName;
 					currentFile = fileName;
 					directoryLabel.Visible = true;
-					directoryLabel.Text = " " + LangMan.GetString("folder") + ": " + directoryName;
-					sizeLabel.Text = " " + LangMan.GetString("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
+					directoryLabel.Text = " " + LangMan.Get("folder") + ": " + directoryName;
+					sizeLabel.Text = " " + LangMan.Get("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
-					dateCreatedLabel.Text = " " + LangMan.GetString("created") + ": " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
-					dateModifiedLabel.Text = " " + LangMan.GetString("modified") + ": " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
+					dateCreatedLabel.Text = " " + LangMan.Get("created") + ": " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
+					dateModifiedLabel.Text = " " + LangMan.Get("modified") + ": " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
 				}
 
 				nextButton.Enabled = directoryName != null;
@@ -602,12 +603,12 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					setZoomText(LangMan.GetString("auto"));
+					setZoomText(LangMan.Get("auto"));
 				}
 			}
 			else
 			{
-				setZoomText(LangMan.GetString("auto"));
+				setZoomText(LangMan.Get("auto"));
 			}
 		}
 
@@ -678,7 +679,7 @@ namespace quick_picture_viewer
 		{
 			zoomFactor = newZoomFactor;
 
-			zoomLabel.Text = " " + LangMan.GetString("zoom") + ": " + zoomFactor.ToString() + "%";
+			zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + zoomFactor.ToString() + "%";
 
 			setAutoZoom(false);
 
@@ -733,7 +734,7 @@ namespace quick_picture_viewer
 			{
 				pictureBox.Dock = DockStyle.Fill;
 
-				zoomLabel.Text = " " + LangMan.GetString("zoom") + ": " + LangMan.GetString("auto");
+				zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + LangMan.Get("auto");
 			}
 			else
 			{
@@ -743,20 +744,20 @@ namespace quick_picture_viewer
 
 		private void autoZoomButton_Click(object sender, EventArgs e)
 		{
-			if (zoomTextBox.Text == LangMan.GetString("auto"))
+			if (zoomTextBox.Text == LangMan.Get("auto"))
 			{
 				zoomToFit();
 				setZoomText(zoomFactor + "%");
 			}
 			else
 			{
-				setZoomText(LangMan.GetString("auto"));
+				setZoomText(LangMan.Get("auto"));
 			}
 		}
 
 		private void aboutButton_Click(object sender, EventArgs e)
 		{
-			AboutForm aboutBox = new AboutForm(darkMode);
+			AboutForm aboutBox = new AboutForm();
 			aboutBox.Owner = this;
 			aboutBox.TopMost = alwaysOnTop;
 			aboutBox.ShowDialog();
@@ -845,7 +846,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.GetString("auto"));
+			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
@@ -853,7 +854,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.GetString("auto"));
+			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
@@ -861,7 +862,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.GetString("auto"));
+			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
@@ -869,7 +870,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.GetString("auto"));
+			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
@@ -957,15 +958,15 @@ namespace quick_picture_viewer
 		private void copyButton_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetImage(originalImage);
-			showSuggestion(LangMan.GetString("image-copied-to-clipboard"), SuggestionIcon.Check);
+			showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
 		}
 
 		private void pasteButton_Click(object sender, EventArgs e)
 		{
 			if (Clipboard.ContainsImage())
 			{
-				openImage(new Bitmap(Clipboard.GetImage()), null, LangMan.GetString("from-clipboard"));
-				setImageChanged(true, LangMan.GetString("from-clipboard"));
+				openImage(new Bitmap(Clipboard.GetImage()), null, LangMan.Get("from-clipboard"));
+				setImageChanged(true, LangMan.Get("from-clipboard"));
 			}
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
@@ -1168,7 +1169,7 @@ namespace quick_picture_viewer
 
 				setAlwaysOnTop(false, true);
 
-				showSuggestion(string.Format(LangMan.GetString("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
+				showSuggestion(string.Format(LangMan.Get("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
 			}
 			else
 			{
@@ -1217,7 +1218,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				if (zoomTextBox.Text == LangMan.GetString("auto"))
+				if (zoomTextBox.Text == LangMan.Get("auto"))
 				{
 					setAutoZoom(true);
 				}
@@ -1404,8 +1405,8 @@ namespace quick_picture_viewer
 
 			if (bitmap != null)
 			{
-				openImage(bitmap, null, LangMan.GetString("dragged-image"));
-				setImageChanged(true, LangMan.GetString("dragged-image"));
+				openImage(bitmap, null, LangMan.Get("dragged-image"));
+				setImageChanged(true, LangMan.Get("dragged-image"));
 			}
 			else if (files.Length > 0)
 			{
@@ -1448,7 +1449,7 @@ namespace quick_picture_viewer
 			if (currentIndex == -1)
 			{
 				setSlideshow(false);
-				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 				return 0;
 			}
 			else
@@ -1487,7 +1488,7 @@ namespace quick_picture_viewer
 
 			if (currentIndex == -1)
 			{
-				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 			else
 			{
@@ -1538,24 +1539,25 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				showSuggestion(LangMan.GetString("no-files-to-open"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("no-files-to-open"), SuggestionIcon.Warning);
 			}
 		}
 
 		private void setAsDesktopButton_Click(object sender, EventArgs e)
 		{
-			WallpaperForm wallpaperForm = new WallpaperForm(originalImage, darkMode);
+			WallpaperForm wallpaperForm = new WallpaperForm(originalImage);
 			wallpaperForm.Owner = this;
 			wallpaperForm.TopMost = alwaysOnTop;
+			wallpaperForm.DarkMode = darkMode;
 			wallpaperForm.ShowDialog();
 		}
 
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
 			DialogResult d = DialogMan.ShowConfirm(
-				LangMan.GetString("sure-move-to-trash"),
+				LangMan.Get("sure-move-to-trash"),
 				yesBtnImage: deleteBtn.Image,
-				windowTitle: LangMan.GetString("delete-file"),
+				windowTitle: LangMan.Get("delete-file"),
 				darkMode: darkMode
 			);
 
@@ -1577,7 +1579,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+					showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 				}
 			}
 		}
@@ -1628,21 +1630,22 @@ namespace quick_picture_viewer
 			pleaseOpenLabel.Visible = true;
 
 			directoryLabel.Visible = false;
-			fileLabel.Text = " " + LangMan.GetString("no-file");
-			sizeLabel.Text = " " + LangMan.GetString("size") + ": 0 x 0 px";
+			fileLabel.Text = " " + LangMan.Get("no-file");
+			sizeLabel.Text = " " + LangMan.Get("size") + ": 0 x 0 px";
 			dateCreatedLabel.Visible = false;
 			dateModifiedLabel.Visible = false;
 
-			setZoomText(LangMan.GetString("auto"));
+			setZoomText(LangMan.Get("auto"));
 			setSlideshow(false);
 			setFullscreen(false);
 		}
 
 		private void infoButton_Click(object sender, EventArgs e)
 		{
-			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile, darkMode);
+			InfoForm infoForm = new InfoForm(originalImage, currentFolder, currentFile);
 			infoForm.Owner = this;
 			infoForm.TopMost = alwaysOnTop;
+			infoForm.DarkMode = darkMode;
 			infoForm.ShowDialog();
 		}
 
@@ -1759,7 +1762,7 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
-			string docTitle = LangMan.GetString("image") + " 1";
+			string docTitle = LangMan.Get("image") + " 1";
 			if (currentFile != null)
 			{
 				docTitle = currentFile;
@@ -1768,9 +1771,10 @@ namespace quick_picture_viewer
 			printDocument1.DocumentName = docTitle;
 			printDocument1.PrinterSettings.PrintFileName = docTitle;
 
-			PrintForm pf = new PrintForm(printDocument1, darkMode, docTitle);
+			PrintForm pf = new PrintForm(printDocument1, docTitle);
 			pf.Owner = this;
 			pf.TopMost = alwaysOnTop;
+			pf.DarkMode = darkMode;
 
 			if (pf.ShowDialog() == DialogResult.OK)
 			{
@@ -1844,12 +1848,12 @@ namespace quick_picture_viewer
 			if (imageChanged)
 			{
 				DialogResult window = DialogMan.ShowConfirm(
-					LangMan.GetString("unsaved-changes-question"),
-					windowTitle: LangMan.GetString("unsaved-changes"),
-					yesBtnText: LangMan.GetString("save-as"),
+					LangMan.Get("unsaved-changes-question"),
+					windowTitle: LangMan.Get("unsaved-changes"),
+					yesBtnText: LangMan.Get("save-as"),
 					yesBtnImage: saveAsButton.Image,
 					showNoBtn: true,
-					noBtnText: LangMan.GetString("dont-save"),
+					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: deleteBtn.Image,
 					darkMode: darkMode
 				);
@@ -1890,7 +1894,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -1988,9 +1992,10 @@ namespace quick_picture_viewer
 					pictureBox.Image.Width,
 					pictureBox.Image.Height,
 					picturePanel.Width - 32,
-					picturePanel.Height - 32,
-					darkMode);
+					picturePanel.Height - 32
+				);
 				sof.Owner = this;
+				sof.DarkMode = darkMode;
 				sof.ShowDialog();
 			}
 		}
@@ -1998,7 +2003,7 @@ namespace quick_picture_viewer
 		private void reloadButton_Click(object sender, EventArgs e)
 		{
 			openFile(Path.Combine(currentFolder, currentFile));
-			showSuggestion(LangMan.GetString("file-reloaded"), SuggestionIcon.Check);
+			showSuggestion(LangMan.Get("file-reloaded"), SuggestionIcon.Check);
 		}
 
 		private void newWindowButton_Click(object sender, EventArgs e)
@@ -2021,7 +2026,7 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.GetString("auto"));
+			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
@@ -2038,9 +2043,10 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
-			SettingsForm settingsBox = new SettingsForm(darkMode);
+			SettingsForm settingsBox = new SettingsForm();
 			settingsBox.Owner = this;
 			settingsBox.TopMost = alwaysOnTop;
+			settingsBox.DarkMode = darkMode;
 			settingsBox.ShowDialog();
 		}
 
@@ -2078,7 +2084,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				CustomJumplist jumplist = new CustomJumplist(LangMan.GetString("new-window"), LangMan.GetString("new-window-desc"));
+				CustomJumplist jumplist = new CustomJumplist(LangMan.Get("new-window"), LangMan.Get("new-window-desc"));
 			}
 			catch
 			{
@@ -2093,11 +2099,11 @@ namespace quick_picture_viewer
 				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
 				Clipboard.Clear();
 				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
-				showSuggestion(LangMan.GetString("file-copied-to-clipboard"), SuggestionIcon.Check);
+				showSuggestion(LangMan.Get("file-copied-to-clipboard"), SuggestionIcon.Check);
 			}
 			catch
 			{
-				showSuggestion(LangMan.GetString("cur-file-not-found"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2115,7 +2121,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(LangMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("unable-to-run-external-app"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2127,7 +2133,7 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(LangMan.GetString("unable-to-run-external-app"), SuggestionIcon.Warning);
+				showSuggestion(LangMan.Get("unable-to-run-external-app"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2140,11 +2146,11 @@ namespace quick_picture_viewer
 			if (lastSlashIndex >= 0)
 			{
 				string appName = Properties.Settings.Default.FavoriteExternalApp.Substring(lastSlashIndex + 1, Properties.Settings.Default.FavoriteExternalApp.Length - lastSlashIndex - 1);
-				externalFavoriteBtn.Text = LangMan.GetString("open-with") + " \"" + appName + "\"";
+				externalFavoriteBtn.Text = LangMan.Get("open-with") + " \"" + appName + "\"";
 			}
 			else
 			{
-				externalFavoriteBtn.Text = LangMan.GetString("open-with-custom");
+				externalFavoriteBtn.Text = LangMan.Get("open-with-custom");
 			}
 		}
 
@@ -2308,7 +2314,7 @@ namespace quick_picture_viewer
 			if (e.input != null)
 			{
 				directoryLabel.Visible = false;
-				string title = string.Format(LangMan.GetString("from-format"), sender.ToString());
+				string title = string.Format(LangMan.Get("from-format"), sender.ToString());
 
 				if((sender as PluginMenuItem).OwnerItem.Name == "effectsBtn")
 				{
@@ -2326,9 +2332,10 @@ namespace quick_picture_viewer
 
 		private void pluginManBtn_Click(object sender, EventArgs e)
 		{
-			PluginManForm pmf = new PluginManForm(darkMode);
+			PluginManForm pmf = new PluginManForm();
 			pmf.Owner = this;
 			pmf.TopMost = alwaysOnTop;
+			pmf.DarkMode = darkMode;
 			pmf.ShowDialog();
 		}
 

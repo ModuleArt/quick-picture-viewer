@@ -22,14 +22,14 @@ namespace quick_picture_viewer.languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class lang_es {
+    public class lang_cn {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_es() {
+        internal lang_cn() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace quick_picture_viewer.languages {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("quick_picture_viewer.languages.lang_es", typeof(lang_es).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("quick_picture_viewer.languages.lang_cn", typeof(lang_cn).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Acerca de .
+        ///   Looks up a localized string similar to 关于.
         /// </summary>
         public static string about {
             get {
@@ -70,7 +70,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Siempre sobre ventana.
+        ///   Looks up a localized string similar to 置于顶层.
         /// </summary>
         public static string always_on_top {
             get {
@@ -79,7 +79,8 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ligero, visor de imagenes versátil para Windows, hecho con WinForms (C#). El mejor remplazo para el visor defualt de Windows..
+        ///   Looks up a localized string similar to 轻量级、多功能的PC图像查看器
+        ///替代Windows照片查看器的最佳选择.
         /// </summary>
         public static string app_description {
             get {
@@ -88,7 +89,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La aplicación esta actulizada.
+        ///   Looks up a localized string similar to 已是最新版本！.
         /// </summary>
         public static string app_is_up_to_date {
             get {
@@ -97,25 +98,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Acción de inicio de la aplicación.
+        ///   Looks up a localized string similar to 启动时执行.
         /// </summary>
-        public static string app_startup_action {
+        public static string app_startup_actions {
             get {
-                return ResourceManager.GetString("app-startup-action", resourceCulture);
+                return ResourceManager.GetString("app-startup-actions", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aplicar.
-        /// </summary>
-        public static string apply {
-            get {
-                return ResourceManager.GetString("apply", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ratio de Aspecto.
+        ///   Looks up a localized string similar to 长宽比.
         /// </summary>
         public static string aspect_ratio {
             get {
@@ -124,7 +116,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Auto.
+        ///   Looks up a localized string similar to 自动.
         /// </summary>
         public static string auto {
             get {
@@ -133,7 +125,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tamaño automático.
+        ///   Looks up a localized string similar to 自动设置尺寸.
         /// </summary>
         public static string auto_size {
             get {
@@ -142,7 +134,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom automático.
+        ///   Looks up a localized string similar to 自动缩放.
         /// </summary>
         public static string auto_zoom {
             get {
@@ -151,7 +143,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Color de Fondo.
+        ///   Looks up a localized string similar to 背景颜色.
         /// </summary>
         public static string background_color {
             get {
@@ -160,7 +152,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inferioir.
+        ///   Looks up a localized string similar to 下.
         /// </summary>
         public static string bottom {
             get {
@@ -169,7 +161,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Navegar.
+        ///   Looks up a localized string similar to 浏览.
         /// </summary>
         public static string browse {
             get {
@@ -178,7 +170,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buscar complementos.
+        ///   Looks up a localized string similar to 在本地查找插件.
         /// </summary>
         public static string browse_for_plugins {
             get {
@@ -187,7 +179,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Centro.
+        ///   Looks up a localized string similar to 居中.
         /// </summary>
         public static string center {
             get {
@@ -196,7 +188,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Centrar Imagen.
+        ///   Looks up a localized string similar to 图片位于中央.
         /// </summary>
         public static string center_image {
             get {
@@ -205,7 +197,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to centímetros.
+        ///   Looks up a localized string similar to 厘米.
         /// </summary>
         public static string centimeters {
             get {
@@ -214,25 +206,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buscar actualizaciones.
+        ///   Looks up a localized string similar to 改变窗口透明度.
         /// </summary>
-        public static string check_for_updates {
+        public static string change_window_opacity {
             get {
-                return ResourceManager.GetString("check-for-updates", resourceCulture);
+                return ResourceManager.GetString("change-window-opacity", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buscar actualizaciones al iniciar la app.
+        ///   Looks up a localized string similar to 检查更新.
         /// </summary>
-        public static string check_for_updates_on_startup {
+        public static string check_for_app_updates {
             get {
-                return ResourceManager.GetString("check-for-updates-on-startup", resourceCulture);
+                return ResourceManager.GetString("check-for-app-updates", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fondo de tablero de ajedrez.
+        ///   Looks up a localized string similar to 像素背景.
         /// </summary>
         public static string checkboard_background {
             get {
@@ -241,7 +233,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Escoger color.
+        ///   Looks up a localized string similar to 选择颜色.
         /// </summary>
         public static string choose_color {
             get {
@@ -250,7 +242,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Escoger un tamaño.
+        ///   Looks up a localized string similar to 选择契合度.
         /// </summary>
         public static string choose_fit {
             get {
@@ -259,7 +251,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Limpiar.
+        ///   Looks up a localized string similar to 清除.
         /// </summary>
         public static string clear {
             get {
@@ -268,16 +260,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cerrar.
-        /// </summary>
-        public static string close {
-            get {
-                return ResourceManager.GetString("close", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Coma.
+        ///   Looks up a localized string similar to 逗号.
         /// </summary>
         public static string comma {
             get {
@@ -286,7 +269,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Compresión.
+        ///   Looks up a localized string similar to 压缩方式.
         /// </summary>
         public static string compression {
             get {
@@ -295,16 +278,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configurar.
+        ///   Looks up a localized string similar to 右键菜单.
         /// </summary>
-        public static string configure {
+        public static string context_menu {
             get {
-                return ResourceManager.GetString("configure", resourceCulture);
+                return ResourceManager.GetString("context-menu", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copiar.
+        ///   Looks up a localized string similar to 更改右键菜单选项需要以管理员身份运行.
+        /// </summary>
+        public static string context_menu_notice {
+            get {
+                return ResourceManager.GetString("context-menu-notice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 复制.
         /// </summary>
         public static string copy {
             get {
@@ -313,7 +305,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copiar archivo original.
+        ///   Looks up a localized string similar to 复制原始文件.
         /// </summary>
         public static string copy_file {
             get {
@@ -322,7 +314,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copiar esta imagen.
+        ///   Looks up a localized string similar to 复制此图像.
         /// </summary>
         public static string copy_image {
             get {
@@ -331,7 +323,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Creado.
+        ///   Looks up a localized string similar to 创建时间.
         /// </summary>
         public static string created {
             get {
@@ -340,7 +332,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Created by.
+        ///   Looks up a localized string similar to 创建者.
         /// </summary>
         public static string created_by {
             get {
@@ -349,7 +341,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No se pudo encontrar el archivo actual.
+        ///   Looks up a localized string similar to 当前文件无法找到.
         /// </summary>
         public static string cur_file_not_found {
             get {
@@ -358,7 +350,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oscuro.
+        ///   Looks up a localized string similar to 暗色模式.
         /// </summary>
         public static string dark {
             get {
@@ -367,16 +359,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error de memoria DDS / TGA.
-        /// </summary>
-        public static string dds_memory_error {
-            get {
-                return ResourceManager.GetString("dds-memory-error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Eliminar archivo.
+        ///   Looks up a localized string similar to 删除文件.
         /// </summary>
         public static string delete_file {
             get {
@@ -385,7 +368,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Eliminar plugin.
+        ///   Looks up a localized string similar to 删除插件.
         /// </summary>
         public static string delete_plugin {
             get {
@@ -394,7 +377,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ¿Estás seguro de que quieres eliminar el plugin?.
+        ///   Looks up a localized string similar to 你确定要移除这个插件吗？.
         /// </summary>
         public static string delete_plugin_warning {
             get {
@@ -403,7 +386,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Descripción.
+        ///   Looks up a localized string similar to 说明.
         /// </summary>
         public static string desc {
             get {
@@ -412,7 +395,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tamaño del disco.
+        ///   Looks up a localized string similar to 文件大小.
         /// </summary>
         public static string disk_size {
             get {
@@ -421,25 +404,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hacer nada.
+        ///   Looks up a localized string similar to 不保存.
         /// </summary>
-        public static string do_nothing {
+        public static string dont_save {
             get {
-                return ResourceManager.GetString("do-nothing", resourceCulture);
+                return ResourceManager.GetString("dont-save", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Arrastra aquí para cambiar el tamaño de la ventana.
+        ///   Looks up a localized string similar to 下载更新中....
         /// </summary>
-        public static string drag_here_to_resize {
+        public static string downloading_update {
             get {
-                return ResourceManager.GetString("drag-here-to-resize", resourceCulture);
+                return ResourceManager.GetString("downloading-update", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen arrastrada.
+        ///   Looks up a localized string similar to 拖曳的图像.
         /// </summary>
         public static string dragged_image {
             get {
@@ -448,7 +431,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Editar imagen.
+        ///   Looks up a localized string similar to 编辑图像.
         /// </summary>
         public static string edit_image {
             get {
@@ -457,7 +440,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error.
+        ///   Looks up a localized string similar to 特效.
+        /// </summary>
+        public static string effects {
+            get {
+                return ResourceManager.GetString("effects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 启用浮动导航栏.
+        /// </summary>
+        public static string enable_navigation_bar {
+            get {
+                return ResourceManager.GetString("enable-navigation-bar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 草屋.
         /// </summary>
         public static string error {
             get {
@@ -466,7 +467,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Presione {0} para salir de la aplicación.
+        ///   Looks up a localized string similar to 按{0}以退出软件.
         /// </summary>
         public static string esc_to_exit {
             get {
@@ -475,7 +476,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Extensión.
+        ///   Looks up a localized string similar to 退出画中画模式.
+        /// </summary>
+        public static string exit_picture_in_picture {
+            get {
+                return ResourceManager.GetString("exit-picture-in-picture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 扩展方式.
         /// </summary>
         public static string extension {
             get {
@@ -484,16 +494,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Externa.
-        /// </summary>
-        public static string external {
-            get {
-                return ResourceManager.GetString("external", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to App externa favorita.
+        ///   Looks up a localized string similar to 自定义菜单中的外部程序.
         /// </summary>
         public static string fav_external_app {
             get {
@@ -502,7 +503,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Archivo.
+        ///   Looks up a localized string similar to 文件.
         /// </summary>
         public static string file {
             get {
@@ -511,7 +512,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Archivo copiado al portapapeles.
+        ///   Looks up a localized string similar to 文件已复制到剪贴板.
         /// </summary>
         public static string file_copied_to_clipboard {
             get {
@@ -520,7 +521,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Propiedades de archivo.
+        ///   Looks up a localized string similar to 文件属性.
         /// </summary>
         public static string file_properties {
             get {
@@ -529,7 +530,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Archivo recargado.
+        ///   Looks up a localized string similar to 文件已刷新.
         /// </summary>
         public static string file_reloaded {
             get {
@@ -538,7 +539,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Llenar.
+        ///   Looks up a localized string similar to 填充.
         /// </summary>
         public static string fill {
             get {
@@ -547,7 +548,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ajustar.
+        ///   Looks up a localized string similar to 适应.
         /// </summary>
         public static string fit {
             get {
@@ -556,7 +557,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flip horizontal.
+        ///   Looks up a localized string similar to 水平翻转.
         /// </summary>
         public static string flip_horizontal {
             get {
@@ -565,7 +566,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Voltear vertical.
+        ///   Looks up a localized string similar to 垂直翻转.
         /// </summary>
         public static string flip_vertical {
             get {
@@ -574,7 +575,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Carpeta.
+        ///   Looks up a localized string similar to 文件夹.
         /// </summary>
         public static string folder {
             get {
@@ -583,7 +584,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modo sin marco.
+        ///   Looks up a localized string similar to 无边框模式.
         /// </summary>
         public static string frameless_mode {
             get {
@@ -592,7 +593,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Del portapapeles.
+        ///   Looks up a localized string similar to 来自剪贴板.
         /// </summary>
         public static string from_clipboard {
             get {
@@ -601,7 +602,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ruta completa.
+        ///   Looks up a localized string similar to 来自&quot;{0}&quot;.
+        /// </summary>
+        public static string from_format {
+            get {
+                return ResourceManager.GetString("from-format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 完整路径.
         /// </summary>
         public static string full_path {
             get {
@@ -610,7 +620,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pantalla completa.
+        ///   Looks up a localized string similar to 全屏.
         /// </summary>
         public static string fullscreen {
             get {
@@ -619,7 +629,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mostrar cursor en pantalla completa.
+        ///   Looks up a localized string similar to 在全屏模式下显示鼠标指针.
         /// </summary>
         public static string fullscreen_cursor {
             get {
@@ -628,7 +638,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Altura.
+        ///   Looks up a localized string similar to 高.
         /// </summary>
         public static string height {
             get {
@@ -637,7 +647,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen.
+        ///   Looks up a localized string similar to 图像.
         /// </summary>
         public static string image {
             get {
@@ -646,7 +656,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen copiada al portapapeles.
+        ///   Looks up a localized string similar to 图像已复制到剪贴板.
         /// </summary>
         public static string image_copied_to_clipboard {
             get {
@@ -655,7 +665,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Información de la imagen.
+        ///   Looks up a localized string similar to 图像信息.
         /// </summary>
         public static string image_info {
             get {
@@ -664,7 +674,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen pegada del portapapeles.
+        ///   Looks up a localized string similar to 图像已从剪贴板中粘贴.
         /// </summary>
         public static string image_pasted_from_clipboard {
             get {
@@ -673,7 +683,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to pulgadas.
+        ///   Looks up a localized string similar to 英尺.
         /// </summary>
         public static string inches {
             get {
@@ -682,7 +692,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ratón y teclado.
+        ///   Looks up a localized string similar to 鼠标和键盘.
         /// </summary>
         public static string input {
             get {
@@ -691,7 +701,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paisaje.
+        ///   Looks up a localized string similar to 安装.
+        /// </summary>
+        public static string install {
+            get {
+                return ResourceManager.GetString("install", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 安装更新.
+        /// </summary>
+        public static string install_update {
+            get {
+                return ResourceManager.GetString("install-update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 横屏.
         /// </summary>
         public static string landscape {
             get {
@@ -700,7 +728,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paisaje.
+        ///   Looks up a localized string similar to 水平纸张.
         /// </summary>
         public static string landscape_orientation {
             get {
@@ -709,7 +737,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Izquierda.
+        ///   Looks up a localized string similar to 左.
         /// </summary>
         public static string left {
             get {
@@ -718,7 +746,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flecha izquierda.
+        ///   Looks up a localized string similar to ←.
         /// </summary>
         public static string left_arrow {
             get {
@@ -727,16 +755,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Licencia.
-        /// </summary>
-        public static string license {
-            get {
-                return ResourceManager.GetString("license", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Luz.
+        ///   Looks up a localized string similar to 亮色模式.
         /// </summary>
         public static string light {
             get {
@@ -745,7 +764,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Localización.
+        ///   Looks up a localized string similar to 多语言.
         /// </summary>
         public static string localization {
             get {
@@ -754,7 +773,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mantener la relación de aspecto.
+        ///   Looks up a localized string similar to 保持纵横比.
         /// </summary>
         public static string maintain_aspect_ratio {
             get {
@@ -763,7 +782,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Límites de margen.
+        ///   Looks up a localized string similar to 设置外边距.
         /// </summary>
         public static string margin_bounds {
             get {
@@ -772,7 +791,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Márgenes.
+        ///   Looks up a localized string similar to 外边距.
         /// </summary>
         public static string margins {
             get {
@@ -781,7 +800,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to megapíxeles.
+        ///   Looks up a localized string similar to 百万像素.
         /// </summary>
         public static string megapixels {
             get {
@@ -790,7 +809,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Menos.
+        ///   Looks up a localized string similar to 存储错误.
+        /// </summary>
+        public static string memory_error {
+            get {
+                return ResourceManager.GetString("memory-error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;-&quot;.
         /// </summary>
         public static string minus {
             get {
@@ -799,7 +827,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modificado.
+        ///   Looks up a localized string similar to 已修改.
         /// </summary>
         public static string modified {
             get {
@@ -808,7 +836,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mas opciones.
+        ///   Looks up a localized string similar to 更多选项.
         /// </summary>
         public static string more_options {
             get {
@@ -817,7 +845,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mouse wheel scroll action.
+        ///   Looks up a localized string similar to 更多插件.
+        /// </summary>
+        public static string more_plugins {
+            get {
+                return ResourceManager.GetString("more-plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 鼠标滚轮动作.
         /// </summary>
         public static string mouse_wheel_action {
             get {
@@ -826,7 +863,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mover archivo a la Papelera de reciclaje.
+        ///   Looks up a localized string similar to 移动文件至回收站.
         /// </summary>
         public static string move_to_trash {
             get {
@@ -835,7 +872,34 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nueva ventana.
+        ///   Looks up a localized string similar to 在全屏模式下显示导航栏.
+        /// </summary>
+        public static string nav_bar_fullscreen {
+            get {
+                return ResourceManager.GetString("nav-bar-fullscreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 导航栏.
+        /// </summary>
+        public static string navigation_bar {
+            get {
+                return ResourceManager.GetString("navigation-bar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 新版本可用！.
+        /// </summary>
+        public static string new_version_available {
+            get {
+                return ResourceManager.GetString("new-version-available", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 新窗口.
         /// </summary>
         public static string new_window {
             get {
@@ -844,7 +908,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Siguiente imagen en carpeta.
+        ///   Looks up a localized string similar to 新建空窗口.
+        /// </summary>
+        public static string new_window_desc {
+            get {
+                return ResourceManager.GetString("new-window-desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 下一张.
         /// </summary>
         public static string next_image {
             get {
@@ -853,7 +926,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Siguiente imagen en 1 segundo.
+        ///   Looks up a localized string similar to 1秒后下一张.
         /// </summary>
         public static string next_image_in_1_second {
             get {
@@ -862,7 +935,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Siguiente imagen en {0} segundos.
+        ///   Looks up a localized string similar to {0}秒后下一张.
         /// </summary>
         public static string next_image_in_x_seconds {
             get {
@@ -871,7 +944,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen siguiente / anterior en carpeta.
+        ///   Looks up a localized string similar to 下一张/上一张.
         /// </summary>
         public static string next_prev_image {
             get {
@@ -880,7 +953,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ningún archivo.
+        ///   Looks up a localized string similar to 无文件.
         /// </summary>
         public static string no_file {
             get {
@@ -889,7 +962,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No hay archivos para abrir.
+        ///   Looks up a localized string similar to 没有可打开的文件.
         /// </summary>
         public static string no_files_to_open {
             get {
@@ -898,16 +971,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sin carpeta.
-        /// </summary>
-        public static string no_folder {
-            get {
-                return ResourceManager.GetString("no-folder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No guardado.
+        ///   Looks up a localized string similar to 未保存.
         /// </summary>
         public static string not_saved {
             get {
@@ -916,7 +980,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir archivo con app externa.
+        ///   Looks up a localized string similar to 使用其他程序打开.
         /// </summary>
         public static string open_external {
             get {
@@ -925,7 +989,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir documento.
+        ///   Looks up a localized string similar to 打开.
         /// </summary>
         public static string open_file {
             get {
@@ -934,7 +998,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir con.
+        ///   Looks up a localized string similar to 打开Windows设置.
+        /// </summary>
+        public static string open_windows_settings {
+            get {
+                return ResourceManager.GetString("open-windows-settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 打开   使用.
         /// </summary>
         public static string open_with {
             get {
@@ -943,7 +1016,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Elija la app para abrir.
+        ///   Looks up a localized string similar to 选择一个应用程序....
         /// </summary>
         public static string open_with_choose {
             get {
@@ -952,7 +1025,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir con app personalizada.
+        ///   Looks up a localized string similar to 打开   使用自定义应用.
         /// </summary>
         public static string open_with_custom {
             get {
@@ -961,7 +1034,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abrir con la app predeterminada.
+        ///   Looks up a localized string similar to 打开   使用默认应用.
         /// </summary>
         public static string open_with_default {
             get {
@@ -970,7 +1043,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tamaño original.
+        ///   Looks up a localized string similar to 原始尺寸.
         /// </summary>
         public static string original_size {
             get {
@@ -979,7 +1052,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pegar del portapapeles.
+        ///   Looks up a localized string similar to 从剪贴板中粘贴.
         /// </summary>
         public static string paste_from_clipboard {
             get {
@@ -988,7 +1061,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pegar imagen.
+        ///   Looks up a localized string similar to 粘贴图像.
         /// </summary>
         public static string paste_image {
             get {
@@ -997,7 +1070,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen en imagen.
+        ///   Looks up a localized string similar to 画中画（小窗）模式.
         /// </summary>
         public static string picture_in_picture {
             get {
@@ -1006,7 +1079,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to pixeles.
+        ///   Looks up a localized string similar to 像素.
         /// </summary>
         public static string pixels {
             get {
@@ -1015,7 +1088,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abra una imagen para verla o editarla..
+        ///   Looks up a localized string similar to 请打开一张图片来查看或编辑.
         /// </summary>
         public static string please_open_image {
             get {
@@ -1024,7 +1097,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugin.
+        ///   Looks up a localized string similar to 插件.
         /// </summary>
         public static string plugin {
             get {
@@ -1033,7 +1106,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugin manager.
+        ///   Looks up a localized string similar to 插件管理.
         /// </summary>
         public static string plugin_manager {
             get {
@@ -1042,7 +1115,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No se encontró el directorio de plugins.
+        ///   Looks up a localized string similar to 未发现插件文件夹.
         /// </summary>
         public static string plugin_not_found {
             get {
@@ -1051,16 +1124,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugins.
+        ///   Looks up a localized string similar to 插件网站.
         /// </summary>
-        public static string plugins {
+        public static string plugin_website {
             get {
-                return ResourceManager.GetString("plugins", resourceCulture);
+                return ResourceManager.GetString("plugin-website", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plus.
+        ///   Looks up a localized string similar to &quot;+&quot;.
         /// </summary>
         public static string plus {
             get {
@@ -1069,7 +1142,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Retrato.
+        ///   Looks up a localized string similar to 竖屏.
         /// </summary>
         public static string portrait {
             get {
@@ -1078,7 +1151,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Preajustes.
+        ///   Looks up a localized string similar to 预设.
         /// </summary>
         public static string presets {
             get {
@@ -1087,7 +1160,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Presiona {0} para salir del modo de pantalla completa.
+        ///   Looks up a localized string similar to 按{0}以退出全屏模式.
         /// </summary>
         public static string press_to_exit_fullscreen {
             get {
@@ -1096,7 +1169,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imagen anterior en carpeta.
+        ///   Looks up a localized string similar to 上一张.
         /// </summary>
         public static string prev_image {
             get {
@@ -1105,7 +1178,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imprimir / Exportar a PDF.
+        ///   Looks up a localized string similar to 打印 / 转换为PDF.
         /// </summary>
         public static string print {
             get {
@@ -1114,7 +1187,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configuración de impresión.
+        ///   Looks up a localized string similar to 打印配置.
         /// </summary>
         public static string print_conf {
             get {
@@ -1123,7 +1196,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No se pueden establecer los márgenes del documento.
+        ///   Looks up a localized string similar to 无法设置文档外边距.
         /// </summary>
         public static string print_margins_error {
             get {
@@ -1132,7 +1205,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tamaño de impresión.
+        ///   Looks up a localized string similar to 打印大小.
         /// </summary>
         public static string print_size {
             get {
@@ -1141,7 +1214,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recargar archivo.
+        ///   Looks up a localized string similar to 已就绪，等待安装.
+        /// </summary>
+        public static string ready_to_install {
+            get {
+                return ResourceManager.GetString("ready-to-install", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 刷新文件.
         /// </summary>
         public static string reload_file {
             get {
@@ -1150,7 +1232,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cambiar el tamaño de SVG.
+        ///   Looks up a localized string similar to 更改大小.
         /// </summary>
         public static string resize_svg {
             get {
@@ -1159,7 +1241,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resolución.
+        ///   Looks up a localized string similar to 分辨率.
         /// </summary>
         public static string resolution {
             get {
@@ -1168,7 +1250,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reiniciar.
+        ///   Looks up a localized string similar to 重启应用.
         /// </summary>
         public static string restart {
             get {
@@ -1177,7 +1259,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reincio de la app requerido.
+        ///   Looks up a localized string similar to 需要重启应用.
         /// </summary>
         public static string restart_required {
             get {
@@ -1186,7 +1268,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Derecha.
+        ///   Looks up a localized string similar to 还原上次窗口大小.
+        /// </summary>
+        public static string restore_last_window_bounds {
+            get {
+                return ResourceManager.GetString("restore-last-window-bounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 右.
         /// </summary>
         public static string right {
             get {
@@ -1195,7 +1286,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flecha derecha.
+        ///   Looks up a localized string similar to →.
         /// </summary>
         public static string right_arrow {
             get {
@@ -1204,7 +1295,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotar 180°.
+        ///   Looks up a localized string similar to 旋转180°.
         /// </summary>
         public static string rotate_180 {
             get {
@@ -1213,7 +1304,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotar en sentido contra-reloj.
+        ///   Looks up a localized string similar to 逆时针旋转90°.
         /// </summary>
         public static string rotate_left {
             get {
@@ -1222,7 +1313,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotar en sentido reloj.
+        ///   Looks up a localized string similar to 顺时针旋转90°.
         /// </summary>
         public static string rotate_right {
             get {
@@ -1231,7 +1322,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Guardar como.
+        ///   Looks up a localized string similar to 另存为.
         /// </summary>
         public static string save_as {
             get {
@@ -1240,7 +1331,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Desplazarse hacia arriba / abajo.
+        ///   Looks up a localized string similar to 向上/向下滚动.
         /// </summary>
         public static string scroll_up_down {
             get {
@@ -1249,7 +1340,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to segundo.
+        ///   Looks up a localized string similar to 秒.
         /// </summary>
         public static string seconds {
             get {
@@ -1258,7 +1349,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Establecer como app default.
+        ///   Looks up a localized string similar to 设置为默认图像查看器.
         /// </summary>
         public static string set_as_default_image_viewer {
             get {
@@ -1267,7 +1358,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Establecer como fondo de pantalla.
+        ///   Looks up a localized string similar to 设置为桌面壁纸.
         /// </summary>
         public static string set_as_desktop_background {
             get {
@@ -1276,7 +1367,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Establecer fondo.
+        ///   Looks up a localized string similar to 设置背景.
         /// </summary>
         public static string set_background {
             get {
@@ -1285,7 +1376,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Establecer margenes.
+        ///   Looks up a localized string similar to 设置外边距.
         /// </summary>
         public static string set_margins_btn {
             get {
@@ -1294,7 +1385,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configuración.
+        ///   Looks up a localized string similar to 设置.
         /// </summary>
         public static string settings {
             get {
@@ -1303,7 +1394,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mostrar archivo en explorador.
+        ///   Looks up a localized string similar to 在文件管理器中显示.
         /// </summary>
         public static string show_file_explorer {
             get {
@@ -1312,7 +1403,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mostrar contador de diapositivas.
+        ///   Looks up a localized string similar to 显示幻灯片倒计时.
         /// </summary>
         public static string show_slideshow_counter {
             get {
@@ -1321,7 +1412,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tamaño.
+        ///   Looks up a localized string similar to 显示状态栏.
+        /// </summary>
+        public static string show_status_bar {
+            get {
+                return ResourceManager.GetString("show-status-bar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 显示工具栏.
+        /// </summary>
+        public static string show_toolbar {
+            get {
+                return ResourceManager.GetString("show-toolbar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 大小.
         /// </summary>
         public static string size {
             get {
@@ -1330,7 +1439,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Presentación.
+        ///   Looks up a localized string similar to 幻灯片放映.
         /// </summary>
         public static string slideshow {
             get {
@@ -1339,7 +1448,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Duración.
+        ///   Looks up a localized string similar to 跨区.
         /// </summary>
         public static string span {
             get {
@@ -1348,7 +1457,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cuadrado.
+        ///   Looks up a localized string similar to 方形.
         /// </summary>
         public static string square {
             get {
@@ -1357,7 +1466,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inicio.
+        ///   Looks up a localized string similar to 启动时.
         /// </summary>
         public static string startup {
             get {
@@ -1366,7 +1475,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Estirar.
+        ///   Looks up a localized string similar to 拉伸.
         /// </summary>
         public static string stretch {
             get {
@@ -1375,7 +1484,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se perderán todos los datos no guardados. ¿Estás seguro de que quieres cerrar la aplicación?.
+        ///   Looks up a localized string similar to 所有未保存的数据都将丢失，你确定要关闭应用吗？.
         /// </summary>
         public static string sure_close_app {
             get {
@@ -1384,7 +1493,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ¿Está seguro de que desea mover este archivo a la Papelera de reciclaje?.
+        ///   Looks up a localized string similar to 你确定要将这个文件移动到回收站吗？.
         /// </summary>
         public static string sure_move_to_trash {
             get {
@@ -1393,7 +1502,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cambiar tiempo.
+        ///   Looks up a localized string similar to 更换图片时长.
         /// </summary>
         public static string switching_time {
             get {
@@ -1402,7 +1511,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tema.
+        ///   Looks up a localized string similar to 主题.
         /// </summary>
         public static string theme {
             get {
@@ -1411,7 +1520,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Loseta.
+        ///   Looks up a localized string similar to 平铺.
         /// </summary>
         public static string tile {
             get {
@@ -1420,7 +1529,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Título.
+        ///   Looks up a localized string similar to 标题.
         /// </summary>
         public static string title {
             get {
@@ -1429,7 +1538,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Superioir.
+        ///   Looks up a localized string similar to 工具.
+        /// </summary>
+        public static string tools {
+            get {
+                return ResourceManager.GetString("tools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 上.
         /// </summary>
         public static string top {
             get {
@@ -1438,7 +1556,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Traducido por:.
+        ///   Looks up a localized string similar to 翻译者：.
         /// </summary>
         public static string translated_by {
             get {
@@ -1447,7 +1565,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to opciones.
+        ///   Looks up a localized string similar to 选项.
         /// </summary>
         public static string type_options {
             get {
@@ -1456,7 +1574,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Idioma de interfaz de usuario.
+        ///   Looks up a localized string similar to 用户界面语言.
         /// </summary>
         public static string ui_lang {
             get {
@@ -1465,34 +1583,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No se puede abrir el archivo DDS o TGA.
+        ///   Looks up a localized string similar to 无法打开文件.
         /// </summary>
-        public static string unable_open_dds {
+        public static string unable_open_file {
             get {
-                return ResourceManager.GetString("unable-open-dds", resourceCulture);
+                return ResourceManager.GetString("unable-open-file", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No se puede abrir el archivo SVG.
-        /// </summary>
-        public static string unable_open_svg {
-            get {
-                return ResourceManager.GetString("unable-open-svg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No se puede abrir este archivo.
-        /// </summary>
-        public static string unable_to_open_file {
-            get {
-                return ResourceManager.GetString("unable-to-open-file", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No se puede ejecutar la aplicación externa.
+        ///   Looks up a localized string similar to 无法启动外部应用程序.
         /// </summary>
         public static string unable_to_run_external_app {
             get {
@@ -1501,16 +1601,34 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Todo los datos no guardado serán perdido. ¿ Estas seguro de abrir una nueva imágen?.
+        ///   Looks up a localized string similar to 未保存的更改.
         /// </summary>
-        public static string unsaved_data_lost {
+        public static string unsaved_changes {
             get {
-                return ResourceManager.GetString("unsaved-data-lost", resourceCulture);
+                return ResourceManager.GetString("unsaved-changes", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Actualización fallida.
+        ///   Looks up a localized string similar to 当前图片有未保存的更改，你确定要这样做吗？.
+        /// </summary>
+        public static string unsaved_changes_question {
+            get {
+                return ResourceManager.GetString("unsaved-changes-question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 不支持的像素格式.
+        /// </summary>
+        public static string unsupported_pixel_format {
+            get {
+                return ResourceManager.GetString("unsupported-pixel-format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 更新失败.
         /// </summary>
         public static string update_failed {
             get {
@@ -1519,25 +1637,25 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Actualizaciones.
+        ///   Looks up a localized string similar to 当前版本{1}，新版本{0}可用，立即更新？.
         /// </summary>
-        public static string updates {
+        public static string update_text {
             get {
-                return ResourceManager.GetString("updates", resourceCulture);
+                return ResourceManager.GetString("update-text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Administrador de actualización.
+        ///   Looks up a localized string similar to 正在更新 Quick Picture Viewer.
         /// </summary>
-        public static string updator {
+        public static string updating_qpv {
             get {
-                return ResourceManager.GetString("updator", resourceCulture);
+                return ResourceManager.GetString("updating-qpv", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Usar configuración del sistema.
+        ///   Looks up a localized string similar to 跟随系统.
         /// </summary>
         public static string use_system_setting {
             get {
@@ -1546,7 +1664,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Versión.
+        ///   Looks up a localized string similar to 版本.
         /// </summary>
         public static string version {
             get {
@@ -1555,7 +1673,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Advertencia.
+        ///   Looks up a localized string similar to 显示.
+        /// </summary>
+        public static string view {
+            get {
+                return ResourceManager.GetString("view", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 警告.
         /// </summary>
         public static string warning {
             get {
@@ -1564,7 +1691,16 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ancho.
+        ///   Looks up a localized string similar to 更新内容.
+        /// </summary>
+        public static string whats_new {
+            get {
+                return ResourceManager.GetString("whats-new", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 宽.
         /// </summary>
         public static string width {
             get {
@@ -1573,7 +1709,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom.
+        ///   Looks up a localized string similar to 缩放.
         /// </summary>
         public static string zoom {
             get {
@@ -1582,7 +1718,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enfocar Zoom.
+        ///   Looks up a localized string similar to 放大.
         /// </summary>
         public static string zoom_in {
             get {
@@ -1591,7 +1727,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom + / +.
+        ///   Looks up a localized string similar to 放大/缩小.
         /// </summary>
         public static string zoom_in_out {
             get {
@@ -1600,7 +1736,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Desenfocar Zoom.
+        ///   Looks up a localized string similar to 缩小.
         /// </summary>
         public static string zoom_out {
             get {
@@ -1609,7 +1745,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom al tamaño real.
+        ///   Looks up a localized string similar to 缩放到真实尺寸.
         /// </summary>
         public static string zoom_to_actual_size {
             get {

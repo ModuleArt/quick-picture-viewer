@@ -14,13 +14,8 @@ namespace quick_picture_viewer
 		private int panelWidth;
 		private int panelHeight;
 
-		public SvgOpsForm(string path, int imageWidth, int imageHeight, int panelWidth, int panelHeight, bool darkMode)
+		public SvgOpsForm(string path, int imageWidth, int imageHeight, int panelWidth, int panelHeight)
 		{
-			if (darkMode)
-			{
-				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-			}
-
 			this.path = path;
 			aspectRatio = imageWidth / (float)imageHeight;
 			this.panelWidth = panelWidth;
@@ -28,7 +23,6 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel, presetsLabel, widthLabel, heightLabel });
-			SetDarkMode(darkMode);
 
 			widthNumeric.Value = imageWidth;
 			heightNumeric.Value = imageHeight;
@@ -68,7 +62,7 @@ namespace quick_picture_viewer
 					mf.openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 					break;
 				case SvgWrapper.Error.UnableToOpen:
-					mf.showSuggestion(SvgWrapper.TypeName + " - " + LangMan.GetString("unable-open-file") + ": " + Path.GetFileName(path), MainForm.SuggestionIcon.Warning);
+					mf.showSuggestion(SvgWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), MainForm.SuggestionIcon.Warning);
 					break;
 			}
 			Close();
@@ -184,19 +178,20 @@ namespace quick_picture_viewer
 
 		private void SvgOpsForm_Load(object sender, EventArgs e)
 		{
+			SetDarkMode(DarkMode);
 			InitLanguage();
 		}
 
 		private void InitLanguage()
 		{
-			Text = "SVG " + LangMan.GetString("type-options");
-			presetsLabel.Text = LangMan.GetString("presets") + ":";
-			widthLabel.Text = LangMan.GetString("width") + ":";
-			heightLabel.Text = LangMan.GetString("height") + ":";
-			defaultSizeButton.Text = LangMan.GetString("original-size");
-			autoSizeBtn.Text = LangMan.GetString("auto-size");
-			okButton.Text = " " + LangMan.GetString("resize-svg");
-			aspectRatioCheckbox.Text = LangMan.GetString("maintain-aspect-ratio");
+			Text = "SVG " + LangMan.Get("type-options");
+			presetsLabel.Text = LangMan.Get("presets") + ":";
+			widthLabel.Text = LangMan.Get("width") + ":";
+			heightLabel.Text = LangMan.Get("height") + ":";
+			defaultSizeButton.Text = LangMan.Get("original-size");
+			autoSizeBtn.Text = LangMan.Get("auto-size");
+			okButton.Text = " " + LangMan.Get("resize-svg");
+			aspectRatioCheckbox.Text = LangMan.Get("maintain-aspect-ratio");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 	}

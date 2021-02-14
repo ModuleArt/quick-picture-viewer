@@ -9,14 +9,8 @@ namespace quick_picture_viewer
 {
 	partial class AboutForm : QlibFixedForm
 	{
-		private bool darkMode = false;
-
-		public AboutForm(bool darkMode)
+		public AboutForm()
 		{
-			this.darkMode = darkMode;
-
-			HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { logoPictureBox, productLabel, versionLabel, copyrightLabel });
 
@@ -61,10 +55,10 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			Text = LangMan.GetString("about");
-			updatesBtn.Text = " " + LangMan.GetString("check-for-app-updates");
-			descTextBox.Text = LangMan.GetString("app-description");
-			makeDefaultBtn.Text = LangMan.GetString("set-as-default-image-viewer");
+			Text = LangMan.Get("about");
+			updatesBtn.Text = " " + LangMan.Get("check-for-app-updates");
+			descTextBox.Text = LangMan.Get("app-description");
+			makeDefaultBtn.Text = LangMan.Get("set-as-default-image-viewer");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -75,7 +69,7 @@ namespace quick_picture_viewer
 
 		private void updatesBtn_Click(object sender, EventArgs e)
 		{
-			UpdateMan.CheckForUpdates(true, TopMost, darkMode, Owner.Handle);
+			UpdateMan.CheckForUpdates(true, TopMost, Owner.Handle);
 			Close();
 		}
 

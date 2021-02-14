@@ -759,6 +759,8 @@
 			this.langComboBox.Items.AddRange(new object[] {
             "English",
             "Russian (Русский)",
+            "[Beta] Chinese (中國人)",
+            "[Beta] Hungarian (Magyar)",
             "[Beta] Spanish (Española)"});
 			this.langComboBox.Location = new System.Drawing.Point(10, 39);
 			this.langComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);

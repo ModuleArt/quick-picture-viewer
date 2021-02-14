@@ -14,26 +14,15 @@ namespace quick_picture_viewer
 	{
 		private string[] codenames;
 		private string[] pluginsLinks;
-		private bool darkMode = false;
 
-		public PluginManForm(bool darkMode)
+		public PluginManForm()
 		{
-			if (darkMode)
-			{
-				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-			}
-
-			this.darkMode = darkMode;
-
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
-			SetDarkMode(darkMode);
 		}
 
 		private void SetDarkMode(bool dark)
 		{
-			darkMode = dark;
-
 			if (dark)
 			{
 				addPluginBtn.BackColor = ThemeMan.DarkSecondColor;
@@ -52,6 +41,7 @@ namespace quick_picture_viewer
 
 		private void PluginManForm_Load(object sender, EventArgs e)
 		{
+			SetDarkMode(DarkMode);
 			InitLanguage();
 
 			RefreshPluginsList();
@@ -99,7 +89,7 @@ namespace quick_picture_viewer
 					"v" + plugins[i].version
 				});
 
-				Image img = PluginMan.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, darkMode);
+				Image img = PluginMan.GetPluginIcon(plugins[i].name, plugins[i].functions[0].name, DarkMode);
 				if (img != null)
 				{
 					imageList1.Images.Add(imageList1.Images.Count.ToString(), img);
@@ -113,16 +103,16 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			Text = LangMan.GetString("plugin-manager");
-			listView1.Columns[0].Text = LangMan.GetString("plugin");
-			listView1.Columns[1].Text = LangMan.GetString("desc");
-			listView1.Columns[2].Text = LangMan.GetString("created-by");
-			listView1.Columns[3].Text = LangMan.GetString("version");
-			addPluginBtn.Text = " " + LangMan.GetString("browse-for-plugins");
-			deleteBtn.Text = LangMan.GetString("delete-plugin");
-			openFileDialog1.Title = LangMan.GetString("browse-for-plugins");
-			morePluginsBtn.Text = " " + LangMan.GetString("more-plugins");
-			pluginWebsiteBtn.Text = LangMan.GetString("plugin-website");
+			Text = LangMan.Get("plugin-manager");
+			listView1.Columns[0].Text = LangMan.Get("plugin");
+			listView1.Columns[1].Text = LangMan.Get("desc");
+			listView1.Columns[2].Text = LangMan.Get("created-by");
+			listView1.Columns[3].Text = LangMan.Get("version");
+			addPluginBtn.Text = " " + LangMan.Get("browse-for-plugins");
+			deleteBtn.Text = LangMan.Get("delete-plugin");
+			openFileDialog1.Title = LangMan.Get("browse-for-plugins");
+			morePluginsBtn.Text = " " + LangMan.Get("more-plugins");
+			pluginWebsiteBtn.Text = LangMan.Get("plugin-website");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -168,11 +158,11 @@ namespace quick_picture_viewer
 		private void deletePlugin(int numberInList)
 		{
 			DialogResult window = DialogMan.ShowConfirm(
-				LangMan.GetString("delete-plugin-warning"),
-				windowTitle: LangMan.GetString("warning"),
-				yesBtnText: LangMan.GetString("delete-plugin"),
+				LangMan.Get("delete-plugin-warning"),
+				windowTitle: LangMan.Get("warning"),
+				yesBtnText: LangMan.Get("delete-plugin"),
 				yesBtnImage: deleteBtn.Image,
-				darkMode: darkMode
+				darkMode: DarkMode
 			);
 
 			if (window == DialogResult.Yes)
@@ -188,9 +178,9 @@ namespace quick_picture_viewer
 				else
 				{
 					DialogMan.ShowInfo(
-						LangMan.GetString("plugin-not-found"),
-						LangMan.GetString("error"),
-						darkMode
+						LangMan.Get("plugin-not-found"),
+						LangMan.Get("error"),
+						DarkMode
 					);
 				}
 				RefreshPluginsList();

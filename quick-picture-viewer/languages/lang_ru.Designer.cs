@@ -151,15 +151,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Этот язык все еще находится в стадии бета-тестирования. Приложение может вылетать или не запускаться..
-        /// </summary>
-        public static string beta_lang_warning {
-            get {
-                return ResourceManager.GetString("beta-lang-warning", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Снизу.
         /// </summary>
         public static string bottom {

@@ -157,10 +157,6 @@
     <value>Цвет фона</value>
     <comment>Menu</comment>
   </data>
-  <data name="beta-lang-warning" xml:space="preserve">
-    <value>Этот язык все еще находится в стадии бета-тестирования. Приложение может вылетать или не запускаться.</value>
-    <comment>Settings</comment>
-  </data>
   <data name="bottom" xml:space="preserve">
     <value>Снизу</value>
     <comment>Print</comment>
