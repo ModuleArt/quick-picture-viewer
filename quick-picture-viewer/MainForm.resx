@@ -1237,7 +1237,7 @@
     <value>176, 17</value>
   </metadata>
   <data name="rmbMenu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="showToolbarBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F7</value>
@@ -1261,7 +1261,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="showMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>180, 26</value>
   </data>
   <data name="showMenuItem.Text" xml:space="preserve">
     <value>view</value>
@@ -1270,13 +1270,13 @@
     <value>Ctrl+V</value>
   </data>
   <data name="pasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 24</value>
+    <value>180, 26</value>
   </data>
   <data name="pasteBtn.Text" xml:space="preserve">
     <value>paste</value>
   </data>
   <data name="rmbMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 74</value>
+    <value>181, 78</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Name" xml:space="preserve">
     <value>rmbMenu</value>

@@ -803,12 +803,15 @@
 			// 
 			// rmbMenu
 			// 
-			this.rmbMenu.BackColor = System.Drawing.SystemColors.Control;
+			this.rmbMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.rmbMenu.DarkMode = false;
 			resources.ApplyResources(this.rmbMenu, "rmbMenu");
+			this.rmbMenu.ForeColor = System.Drawing.Color.Black;
 			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showMenuItem,
             this.pasteBtn});
 			this.rmbMenu.Name = "rmbMenu";
+			this.rmbMenu.Opened += new System.EventHandler(this.rmbMenu_Opened);
 			// 
 			// showMenuItem
 			// 

@@ -67,6 +67,8 @@
 			// 
 			// contextMenuStrip1
 			// 
+			this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.contextMenuStrip1.DarkMode = true;
 			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkboardBtn,
@@ -74,10 +76,12 @@
             this.newWindowBtn,
             this.quitPipBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(279, 90);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(279, 112);
 			// 
 			// checkboardBtn
 			// 
+			this.checkboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.checkboardBtn.ForeColor = System.Drawing.Color.White;
 			this.checkboardBtn.Image = global::quick_picture_viewer.Properties.Resources.white_grid;
 			this.checkboardBtn.Name = "checkboardBtn";
 			this.checkboardBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -97,6 +101,8 @@
 			// 
 			// newWindowBtn
 			// 
+			this.newWindowBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.newWindowBtn.ForeColor = System.Drawing.Color.White;
 			this.newWindowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_newwindow;
 			this.newWindowBtn.Name = "newWindowBtn";
 			this.newWindowBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -107,6 +113,8 @@
 			// 
 			// quitPipBtn
 			// 
+			this.quitPipBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.quitPipBtn.ForeColor = System.Drawing.Color.White;
 			this.quitPipBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.quitPipBtn.Name = "quitPipBtn";
 			this.quitPipBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);

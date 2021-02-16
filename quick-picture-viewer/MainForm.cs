@@ -1409,7 +1409,11 @@ namespace quick_picture_viewer
 
 		private void MainForm_DragEnter(object sender, DragEventArgs e)
 		{
-			if (e.Data.GetDataPresent(DataFormats.FileDrop) || e.Data.GetDataPresent(DataFormats.Bitmap))
+			if (
+				e.Data.GetDataPresent(DataFormats.FileDrop) || 
+				e.Data.GetDataPresent(DataFormats.Bitmap) || 
+				e.Data.GetDataPresent(DataFormats.Dib)
+			)
 			{
 				e.Effect = DragDropEffects.All;
 			}
@@ -1739,14 +1743,13 @@ namespace quick_picture_viewer
 				zoomTextBox.BackColor = ThemeMan.DarkMainColor;
 				zoomTextBox.ForeColor = Color.White;
 
-				rmbMenu.SetDarkMode(dark);
 				showMenuItem.Image = Properties.Resources.white_show;
-				showMenuItem.DropDown.BackColor = ThemeMan.DarkSecondColor;
 				showToolbarBtn.Image = Properties.Resources.white_toolbar;
 				showStatusBarBtn.Image = Properties.Resources.white_statusbar;
 				pasteBtn.Image = Properties.Resources.white_paste;
 			}
 
+			rmbMenu.DarkMode = dark;
 			toolStrip1.DarkMode = dark;
 		}
 
@@ -2472,6 +2475,11 @@ namespace quick_picture_viewer
 				string path = ((string[])Clipboard.GetData(DataFormats.FileDrop))[0];
 				openFile(path);
 			}
+		}
+
+		private void rmbMenu_Opened(object sender, EventArgs e)
+		{
+			pasteBtn.Enabled = Clipboard.ContainsImage() || Clipboard.ContainsData(DataFormats.FileDrop) || Clipboard.ContainsData(DataFormats.Dib);
 		}
 	}
 }

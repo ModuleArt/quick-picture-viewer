@@ -47,7 +47,6 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
-			contextMenuStrip1.SetDarkMode(true);
 			if (ThemeMan.isWindows10())
 			{
 				ThemeMan.setDarkModeToControl(picturePanel.Handle);
