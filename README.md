@@ -28,15 +28,17 @@
 
 ## ⬇️ Installation:
 
-| Windows | Version | Release date | Size | Downloads | Installer |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| 7-10 | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6</a> (Stable) | Nov 4, 2020 | 3.8 MB | ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) | <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (.exe)</a> |
-| 7-10 | v3.0.2 (Beta 3) | Feb 1, 2021 | 3.7 MB | - | <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.2-beta3.exe">Download (.exe)</a> |
+<p align="center">	
+
+<a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6 (Stable)</a> - Nov 4, 2020 - ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6) - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a>
+
+v3.0.2 (Beta 3) - Feb 1, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.2-beta3.exe">Download (3.7 MB)</a>
+
+</p>
 
 ## 😃 Features:
 
-* 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif ...
-* 🖻 Supported other file types: .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
+* 🖼️ Supported file formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
 * ✍️ Basic image editing: Rotate, Flip, Change file type ...
 * 🧩 Plugins ready
 * ↗️ Open image with external app or show in file explorer
