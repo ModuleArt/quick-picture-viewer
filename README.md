@@ -20,10 +20,8 @@
   </a>
 </p>
 
-<p align="center">	
-<h4><a href="https://github.com/ModuleArt/quick-picture-viewer/releases/tag/v2.2.6">v2.2.6 (Stable)</a> - Nov 4, 2020 - <img src="https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6"/> - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a></h4><br>
-<h4>v3.0.2 (Beta 3) - Feb 1, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.2-beta3.exe">Download (3.7 MB)</a></h4>
-</p>
+<h5 align="center">v2.2.6 (Stable) - Nov 4, 2020 - <img src="https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=latest%40v2.2.6"/> - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a></h5><br>
+<h5 align="center">v3.0.2 (Beta 3) - Feb 1, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.2-beta3.exe">Download (3.7 MB)</a></h5>
 
 <p align="center">	
   <a href="https://moduleart.github.io/quick-picture-viewer">
