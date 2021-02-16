@@ -76,16 +76,15 @@ Help Module Art!
 
 ## 🔗 Useful links:
 
-#### How to uninstall built-in photos app in Windows 10:
-<a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">Guide</a><br>
+- <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a><br>
 Powershell (Admin):
 
 ```powershell
 Get-AppxPackage *photos* | Remove-AppxPackage
 ```
 
-#### Extension module for Windows Explorer to render SVG thumbnails:
-<a href="https://github.com/tibold/svg-explorer-extension/">Guide</a>
+- <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a><br>
+- <a href="https://github.com/kov-serg/ai-extension/">Adobe Illustrator thumnails preview for windows explorer</a>
 
 ## 🧰 Other great apps:
 
