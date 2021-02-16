@@ -66,18 +66,16 @@ Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dib.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\exif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\gif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\ico.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jfif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpe.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpeg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\png.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\rle.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\svg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tga.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tiff.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\webp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\psd.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\cr2.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -125,11 +123,6 @@ Root: HKCR; Subkey: ".gif"; ValueType: string; ValueName: ""; ValueData: "GifImg
 Root: HKCR; Subkey: "GifImg"; ValueType: string; ValueName: ""; ValueData: "GIF image (Graphics interchange format)"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "GifImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\gif.ico"
 Root: HKCR; Subkey: "GifImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
-; ICO
-Root: HKCR; Subkey: ".ico"; ValueType: string; ValueName: ""; ValueData: "IcoImg"; Flags: uninsdeletevalue
-Root: HKCR; Subkey: "IcoImg"; ValueType: string; ValueName: ""; ValueData: "ICO image (Icons file)"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "IcoImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\ico.ico"
-Root: HKCR; Subkey: "IcoImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 ; JFIF
 Root: HKCR; Subkey: ".jfif"; ValueType: string; ValueName: ""; ValueData: "JfifImg"; Flags: uninsdeletevalue
 Root: HKCR; Subkey: "JfifImg"; ValueType: string; ValueName: ""; ValueData: "JFIF image (JPEG file interchange format)"; Flags: uninsdeletekey
@@ -138,12 +131,12 @@ Root: HKCR; Subkey: "JfifImg\shell\open\command"; ValueType: string; ValueName: 
 ; JPE
 Root: HKCR; Subkey: ".jpe"; ValueType: string; ValueName: ""; ValueData: "JpeImg"; Flags: uninsdeletevalue
 Root: HKCR; Subkey: "JpeImg"; ValueType: string; ValueName: ""; ValueData: "JPE image (Joint photographic experts group)"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "JpeImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\jpe.ico"
+Root: HKCR; Subkey: "JpeImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\jpg.ico"
 Root: HKCR; Subkey: "JpeImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
-; JPEG
+; JPG
 Root: HKCR; Subkey: ".jpeg"; ValueType: string; ValueName: ""; ValueData: "JpegImg"; Flags: uninsdeletevalue
 Root: HKCR; Subkey: "JpegImg"; ValueType: string; ValueName: ""; ValueData: "JPEG image (Joint photographic experts group)"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "JpegImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\jpeg.ico"
+Root: HKCR; Subkey: "JpegImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\jpg.ico"
 Root: HKCR; Subkey: "JpegImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 ; JPG
 Root: HKCR; Subkey: ".jpg"; ValueType: string; ValueName: ""; ValueData: "JpgImg"; Flags: uninsdeletevalue
@@ -178,7 +171,7 @@ Root: HKCR; Subkey: "TifImg\shell\open\command"; ValueType: string; ValueName: "
 ; TIFF
 Root: HKCR; Subkey: ".tiff"; ValueType: string; ValueName: ""; ValueData: "TiffImg"; Flags: uninsdeletevalue
 Root: HKCR; Subkey: "TiffImg"; ValueType: string; ValueName: ""; ValueData: "TIFF image (Tagged image file format)"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "TiffImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\tiff.ico"
+Root: HKCR; Subkey: "TiffImg\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\tif.ico"
 Root: HKCR; Subkey: "TiffImg\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 ; WEBP
 Root: HKCR; Subkey: ".webp"; ValueType: string; ValueName: ""; ValueData: "WebpImg"; Flags: uninsdeletevalue
@@ -195,3 +188,13 @@ Root: HKCR; Subkey: ".cr2"; ValueType: string; ValueName: ""; ValueData: "Cr2Img
 Root: HKCR; Subkey: "Cr2Img"; ValueType: string; ValueName: ""; ValueData: "CR2 image (Canon Digital Camera Raw)"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "Cr2Img\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\cr2.ico"
 Root: HKCR; Subkey: "Cr2Img\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
+
+
+
+
+
+; ICO fix
+Root: HKCR; Subkey: ".ico"; ValueType: none; ValueName: ""; ValueData: "IcoImg"; Flags: deletevalue
+Root: HKCR; Subkey: "IcoImg"; ValueType: none; ValueName: ""; ValueData: "ICO image (Icons file)"; Flags: deletevalue
+Root: HKCR; Subkey: "IcoImg\DefaultIcon"; ValueType: none; ValueName: ""; ValueData: "{app}\icons\ico.ico"; Flags: deletevalue;
+Root: HKCR; Subkey: "IcoImg\shell\open\command"; ValueType: none; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: deletevalue

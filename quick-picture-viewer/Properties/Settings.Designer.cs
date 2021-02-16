@@ -298,5 +298,17 @@ namespace quick_picture_viewer.Properties {
                 this["ShowToolbar"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SkippedVersion {
+            get {
+                return ((string)(this["SkippedVersion"]));
+            }
+            set {
+                this["SkippedVersion"] = value;
+            }
+        }
     }
 }

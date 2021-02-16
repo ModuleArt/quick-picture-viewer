@@ -700,20 +700,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install.
+        ///   Looks up a localized string similar to Install now.
         /// </summary>
-        public static string install {
+        public static string install_now {
             get {
-                return ResourceManager.GetString("install", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Install update.
-        /// </summary>
-        public static string install_update {
-            get {
-                return ResourceManager.GetString("install-update", resourceCulture);
+                return ResourceManager.GetString("install-now", resourceCulture);
             }
         }
         
@@ -1434,6 +1425,15 @@ namespace quick_picture_viewer.languages {
         public static string size {
             get {
                 return ResourceManager.GetString("size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip this version.
+        /// </summary>
+        public static string skip_this_version {
+            get {
+                return ResourceManager.GetString("skip-this-version", resourceCulture);
             }
         }
         

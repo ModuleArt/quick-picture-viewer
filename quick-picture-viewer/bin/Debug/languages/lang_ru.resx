@@ -401,12 +401,8 @@
     <value>Клавиатура и мышь</value>
     <comment>Settings</comment>
   </data>
-  <data name="install" xml:space="preserve">
-    <value>Установить</value>
-    <comment>Update manager</comment>
-  </data>
-  <data name="install-update" xml:space="preserve">
-    <value>Установить обновление</value>
+  <data name="install-now" xml:space="preserve">
+    <value>Установить сейчас</value>
     <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
@@ -724,6 +720,10 @@
   <data name="size" xml:space="preserve">
     <value>Размер</value>
     <comment>Status bar</comment>
+  </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>Пропустить эту версию</value>
+    <comment>Update manager</comment>
   </data>
   <data name="slideshow" xml:space="preserve">
     <value>Слайдшоу</value>

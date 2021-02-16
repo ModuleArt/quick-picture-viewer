@@ -197,7 +197,6 @@ namespace quick_picture_viewer
 
 			openButton.Text = LangMan.Get("open-file") + " | Ctrl+O";
 			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+S";
-			pasteButton.Text = LangMan.Get("paste-image") + " | Ctrl+V";
 			checkboardButton.Text = LangMan.Get("checkboard-background") + " | Ctrl+B";
 			fullscreenBtn.Text = LangMan.Get("fullscreen") + " | F";
 			miniViewButton.Text = LangMan.Get("picture-in-picture") + " | Ctrl+Shift+P";
@@ -221,6 +220,7 @@ namespace quick_picture_viewer
 			showMenuItem.Text = LangMan.Get("view");
 			showToolbarBtn.Text = LangMan.Get("show-toolbar");
 			showStatusBarBtn.Text = LangMan.Get("show-status-bar");
+			pasteBtn.Text = LangMan.Get("paste-image");
 
 			framelessCloseBtn.Text = NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4";
 		}
@@ -279,7 +279,7 @@ namespace quick_picture_viewer
 					ShowNavPanel(false, Properties.Settings.Default.NavPanel);
 					if (Properties.Settings.Default.StartupPaste && Clipboard.ContainsImage())
 					{
-						pasteButton.PerformClick();
+						pasteBtn.PerformClick();
 						showSuggestion(LangMan.Get("image-pasted-from-clipboard"), SuggestionIcon.Info);
 					}
 				}
@@ -310,25 +310,31 @@ namespace quick_picture_viewer
 				picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
 			}
 
-			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe", darkMode);
+			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe", darkMode, Properties.Settings.Default.SkippedVersion);
 			UpdateMan.InitLang(
 				LangMan.Get("new-version-available"), 
 				LangMan.Get("update-text"), 
-				LangMan.Get("install-update"), 
+				LangMan.Get("install-now"), 
+				LangMan.Get("skip-this-version"),
 				LangMan.Get("whats-new"),
 
 				LangMan.Get("updating-qpv"),
 				LangMan.Get("downloading-update"),
 				LangMan.Get("ready-to-install"),
-				LangMan.Get("update-failed"),
-				LangMan.Get("install")
+				LangMan.Get("update-failed")
 			);
 			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
 			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
+			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;
 			if (Properties.Settings.Default.CheckForUpdates)
 			{
 				UpdateMan.CheckForUpdates(false, TopMost, Handle);
 			}
+		}
+
+		private void UpdateMan_UpdateSkipped(object sender, UpdateSkippedEventArgs e)
+		{
+			Properties.Settings.Default.SkippedVersion = e.SkippedVersion;
 		}
 
 		private void UpdateMan_IsUpToDate(object sender, EventArgs e)
@@ -961,20 +967,6 @@ namespace quick_picture_viewer
 			showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
 		}
 
-		private void pasteButton_Click(object sender, EventArgs e)
-		{
-			if (Clipboard.ContainsImage())
-			{
-				openImage(new Bitmap(Clipboard.GetImage()), null, LangMan.Get("from-clipboard"));
-				setImageChanged(true, LangMan.Get("from-clipboard"));
-			}
-			else if (Clipboard.ContainsData(DataFormats.FileDrop))
-			{
-				string path = ((string[])Clipboard.GetData(DataFormats.FileDrop))[0];
-				openFile(path);
-			}
-		}
-
 		private void picturePanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -1293,7 +1285,7 @@ namespace quick_picture_viewer
 						}
 						else if (e.KeyCode == Keys.V)
 						{
-							pasteButton.PerformClick();
+							pasteBtn.PerformClick();
 						}
 						else if (e.KeyCode == Keys.Oemplus)
 						{
@@ -1708,7 +1700,6 @@ namespace quick_picture_viewer
 				copyButton.Image = Properties.Resources.white_copy;
 				copyImageButton.Image = Properties.Resources.white_image;
 				copyFileBtn.Image = Properties.Resources.white_imgfile;
-				pasteButton.Image = Properties.Resources.white_paste;
 
 				checkboardButton.Image = Properties.Resources.white_grid;
 				fullscreenBtn.Image = Properties.Resources.white_fullscreen;
@@ -1753,6 +1744,7 @@ namespace quick_picture_viewer
 				showMenuItem.DropDown.BackColor = ThemeMan.DarkSecondColor;
 				showToolbarBtn.Image = Properties.Resources.white_toolbar;
 				showStatusBarBtn.Image = Properties.Resources.white_statusbar;
+				pasteBtn.Image = Properties.Resources.white_paste;
 			}
 
 			toolStrip1.DarkMode = dark;
@@ -2466,6 +2458,20 @@ namespace quick_picture_viewer
 			toolStrip1.Visible = !toolStrip1.Visible;
 			Properties.Settings.Default.ShowToolbar = toolStrip1.Visible;
 			Properties.Settings.Default.Save();
+		}
+
+		private void pasteBtn_Click(object sender, EventArgs e)
+		{
+			if (Clipboard.ContainsImage())
+			{
+				openImage(new Bitmap(Clipboard.GetImage()), null, LangMan.Get("from-clipboard"));
+				setImageChanged(true, LangMan.Get("from-clipboard"));
+			}
+			else if (Clipboard.ContainsData(DataFormats.FileDrop))
+			{
+				string path = ((string[])Clipboard.GetData(DataFormats.FileDrop))[0];
+				openFile(path);
+			}
 		}
 	}
 }

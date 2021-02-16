@@ -227,6 +227,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_cn.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="languages\lang_es.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -402,6 +403,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-paste.png" />
     <None Include="resources\imgs\light\white-statusbar.png" />
     <None Include="resources\imgs\light\white-toolbar.png" />
     <None Include="resources\imgs\dark\black-toolbar.png" />

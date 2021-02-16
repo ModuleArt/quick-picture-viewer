@@ -74,7 +74,6 @@
 			this.copyButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.copyImageButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.pasteButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenBtn = new System.Windows.Forms.ToolStripButton();
@@ -104,21 +103,22 @@
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.framelessCloseBtn = new System.Windows.Forms.ToolStripButton();
-			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.rmbMenu = new QuickLibrary.QlibContextMenuStrip(this.components);
 			this.showMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.showStatusBarBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.typeOpsButton = new System.Windows.Forms.Button();
+			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.typeOpsButton = new System.Windows.Forms.Button();
-			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
-			this.picturePanel.SuspendLayout();
 			this.rmbMenu.SuspendLayout();
+			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
@@ -249,7 +249,6 @@
             this.toolStripSeparator2,
             this.editButton,
             this.copyButton,
-            this.pasteButton,
             this.toolStripSeparator3,
             this.checkboardButton,
             this.fullscreenBtn,
@@ -406,6 +405,7 @@
 			resources.ApplyResources(this.zoomTextBox, "zoomTextBox");
 			this.zoomTextBox.Margin = new System.Windows.Forms.Padding(7, -1, 7, -1);
 			this.zoomTextBox.Name = "zoomTextBox";
+			this.zoomTextBox.ShortcutsEnabled = false;
 			this.zoomTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zoomTextBox_KeyPress);
 			this.zoomTextBox.MouseEnter += new System.EventHandler(this.zoomTextBox_MouseEnter);
 			this.zoomTextBox.MouseLeave += new System.EventHandler(this.zoomTextBox_MouseLeave);
@@ -528,14 +528,6 @@
 			this.copyFileBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyFileBtn.Name = "copyFileBtn";
 			this.copyFileBtn.Click += new System.EventHandler(this.copyFileBtn_Click);
-			// 
-			// pasteButton
-			// 
-			resources.ApplyResources(this.pasteButton, "pasteButton");
-			this.pasteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.pasteButton.Margin = new System.Windows.Forms.Padding(0);
-			this.pasteButton.Name = "pasteButton";
-			this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
 			// 
 			// toolStripSeparator3
 			// 
@@ -809,6 +801,67 @@
 			this.framelessCloseBtn.Name = "framelessCloseBtn";
 			this.framelessCloseBtn.Click += new System.EventHandler(this.framelessCloseBtn_Click);
 			// 
+			// rmbMenu
+			// 
+			this.rmbMenu.BackColor = System.Drawing.SystemColors.Control;
+			resources.ApplyResources(this.rmbMenu, "rmbMenu");
+			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showMenuItem,
+            this.pasteBtn});
+			this.rmbMenu.Name = "rmbMenu";
+			// 
+			// showMenuItem
+			// 
+			this.showMenuItem.BackColor = System.Drawing.SystemColors.Control;
+			this.showMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showToolbarBtn,
+            this.showStatusBarBtn});
+			resources.ApplyResources(this.showMenuItem, "showMenuItem");
+			this.showMenuItem.ForeColor = System.Drawing.Color.Black;
+			this.showMenuItem.Image = global::quick_picture_viewer.Properties.Resources.black_show;
+			this.showMenuItem.Name = "showMenuItem";
+			this.showMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			// 
+			// showToolbarBtn
+			// 
+			this.showToolbarBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.showToolbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_toolbar;
+			this.showToolbarBtn.Name = "showToolbarBtn";
+			this.showToolbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.showToolbarBtn, "showToolbarBtn");
+			this.showToolbarBtn.Click += new System.EventHandler(this.showToolbarBtn_Click);
+			// 
+			// showStatusBarBtn
+			// 
+			this.showStatusBarBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.showStatusBarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
+			this.showStatusBarBtn.Name = "showStatusBarBtn";
+			this.showStatusBarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.showStatusBarBtn, "showStatusBarBtn");
+			this.showStatusBarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
+			// 
+			// pasteBtn
+			// 
+			this.pasteBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.pasteBtn.ForeColor = System.Drawing.Color.Black;
+			this.pasteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_paste;
+			this.pasteBtn.Name = "pasteBtn";
+			this.pasteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.pasteBtn, "pasteBtn");
+			this.pasteBtn.Click += new System.EventHandler(this.pasteBtn_Click);
+			// 
+			// typeOpsButton
+			// 
+			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
+			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			// 
 			// picturePanel
 			// 
 			resources.ApplyResources(this.picturePanel, "picturePanel");
@@ -824,33 +877,6 @@
 			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// rmbMenu
-			// 
-			resources.ApplyResources(this.rmbMenu, "rmbMenu");
-			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showMenuItem});
-			this.rmbMenu.Name = "rmbMenu";
-			// 
-			// showMenuItem
-			// 
-			this.showMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.showMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showToolbarBtn,
-            this.showStatusBarBtn});
-			resources.ApplyResources(this.showMenuItem, "showMenuItem");
-			this.showMenuItem.ForeColor = System.Drawing.Color.Black;
-			this.showMenuItem.Image = global::quick_picture_viewer.Properties.Resources.black_show;
-			this.showMenuItem.Name = "showMenuItem";
-			this.showMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			// 
-			// showStatusBarBtn
-			// 
-			this.showStatusBarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
-			this.showStatusBarBtn.Name = "showStatusBarBtn";
-			this.showStatusBarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			resources.ApplyResources(this.showStatusBarBtn, "showStatusBarBtn");
-			this.showStatusBarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
 			// 
 			// suggestionIcon
 			// 
@@ -884,26 +910,6 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
-			// typeOpsButton
-			// 
-			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			// 
-			// showToolbarBtn
-			// 
-			this.showToolbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_toolbar;
-			this.showToolbarBtn.Name = "showToolbarBtn";
-			this.showToolbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			resources.ApplyResources(this.showToolbarBtn, "showToolbarBtn");
-			this.showToolbarBtn.Click += new System.EventHandler(this.showToolbarBtn_Click);
-			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -930,9 +936,9 @@
 			this.statusStrip1.PerformLayout();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
+			this.rmbMenu.ResumeLayout(false);
 			this.picturePanel.ResumeLayout(false);
 			this.picturePanel.PerformLayout();
-			this.rmbMenu.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
@@ -953,7 +959,6 @@
 		private System.Windows.Forms.ToolStripButton autoZoomButton;
 		private QuickLibrary.QlibToolsep toolStripSeparator2;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-		private System.Windows.Forms.ToolStripButton pasteButton;
 		private System.Windows.Forms.ToolStripButton framelessCloseBtn;
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel directoryLabel;
@@ -1026,5 +1031,6 @@
 		private System.Windows.Forms.ToolStripMenuItem showMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem showStatusBarBtn;
 		private System.Windows.Forms.ToolStripMenuItem showToolbarBtn;
+		private System.Windows.Forms.ToolStripMenuItem pasteBtn;
 	}
 }

@@ -401,12 +401,8 @@
     <value>Mouse and keyboard</value>
     <comment>Settings</comment>
   </data>
-  <data name="install" xml:space="preserve">
-    <value>Install</value>
-    <comment>Update manager</comment>
-  </data>
-  <data name="install-update" xml:space="preserve">
-    <value>Install update</value>
+  <data name="install-now" xml:space="preserve">
+    <value>Install now</value>
     <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
@@ -728,6 +724,10 @@
   <data name="size" xml:space="preserve">
     <value>Size</value>
     <comment>Status bar</comment>
+  </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>Skip this version</value>
+    <comment>Update manager</comment>
   </data>
   <data name="slideshow" xml:space="preserve">
     <value>Slideshow</value>
