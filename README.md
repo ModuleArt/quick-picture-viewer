@@ -11,7 +11,6 @@
   <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">
     <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/moduleart/quick-picture-viewer?include_prereleases">
     <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/total">
-    <img src="https://img.shields.io/github/downloads/ModuleArt/quick-picture-viewer/v2.2.6/total?label=downloads%40v2.2.6"/>
   </a>
   <a href="https://moduleart.github.io">
     <img alt="Module Art website" src="https://img.shields.io/badge/www-moduleart-%2300BCD4">
@@ -21,8 +20,7 @@
   </a>
 </p>
 
-<h5 align="center">v2.2.6 (Stable) - Nov 4, 2020 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a></h5>
-<h5 align="center">v3.0.2 (Beta 3) - Feb 1, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.2-beta3.exe">Download (3.7 MB)</a></h5>
+<h4 align="center">v2.2.6 (Stable) - Nov 4, 2020 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a></h4>
 
 <p align="center">	
   <a href="https://moduleart.github.io/quick-picture-viewer">
