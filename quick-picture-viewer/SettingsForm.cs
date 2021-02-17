@@ -24,11 +24,6 @@ namespace quick_picture_viewer
 			},
 			new Language
 			{
-				Code = "ru",
-				Authors = new string[] { "Beelink" }
-			},
-			new Language
-			{
 				Code = "cn",
 				Authors = new string[] { "jiwangyihao" }
 			},
@@ -36,6 +31,11 @@ namespace quick_picture_viewer
 			{
 				Code = "hu",
 				Authors = new string[] { "KristofKekesi" }
+			},
+			new Language
+			{
+				Code = "ru",
+				Authors = new string[] { "Beelink" }
 			},
 			new Language
 			{

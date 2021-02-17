@@ -173,6 +173,10 @@
     <value>Browse</value>
     <comment>Settings</comment>
   </data>
+  <data name="browse-folder-with-qpv" xml:space="preserve">
+    <value>Browse with QuickPictureViewer</value>
+    <comment>Settings</comment>
+  </data>
   <data name="browse-for-plugins" xml:space="preserve">
     <value>Browse for plugins</value>
     <comment>Plugin manager</comment>
@@ -556,6 +560,10 @@
   <data name="open-with-default" xml:space="preserve">
     <value>Open with default app</value>
     <comment>Menu</comment>
+  </data>
+  <data name="open-with-qpv" xml:space="preserve">
+    <value>Open with QuickPictureViewer</value>
+    <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
     <value>Original size</value>

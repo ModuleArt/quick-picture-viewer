@@ -121,6 +121,14 @@
     <value>关于</value>
     <comment>Menu</comment>
   </data>
+  <data name="all-files" xml:space="preserve">
+    <value>所有文件</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>所有图片格式</value>
+    <comment>Open file dialog</comment>
+  </data>
   <data name="always-on-top" xml:space="preserve">
     <value>置于顶层</value>
     <comment>Menu</comment>
@@ -164,6 +172,10 @@
   </data>
   <data name="browse" xml:space="preserve">
     <value>浏览</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="browse-folder-with-qpv" xml:space="preserve">
+    <value>使用QuickPictureViewer浏览此文件夹</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -402,12 +414,8 @@
     <value>鼠标和键盘</value>
     <comment>Settings</comment>
   </data>
-  <data name="install" xml:space="preserve">
-    <value>安装</value>
-    <comment>Update manager</comment>
-  </data>
-  <data name="install-update" xml:space="preserve">
-    <value>安装更新</value>
+  <data name="install-now" xml:space="preserve">
+    <value>现在安装</value>
     <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
@@ -431,7 +439,7 @@
     <comment>Settings</comment>
   </data>
   <data name="localization" xml:space="preserve">
-    <value>多语言</value>
+    <value>   多语言   </value>
     <comment>Settings</comment>
   </data>
   <data name="maintain-aspect-ratio" xml:space="preserve">
@@ -483,7 +491,7 @@
     <comment>Settings</comment>
   </data>
   <data name="navigation-bar" xml:space="preserve">
-    <value>导航栏</value>
+    <value>  导航栏  </value>
     <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
@@ -534,10 +542,6 @@
     <value>打开</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>打开Windows设置</value>
-    <comment>About</comment>
-  </data>
   <data name="open-with" xml:space="preserve">
     <value>打开   使用</value>
     <comment>Menu</comment>
@@ -553,6 +557,10 @@
   <data name="open-with-default" xml:space="preserve">
     <value>打开   使用默认应用</value>
     <comment>Menu</comment>
+  </data>
+  <data name="open-with-qpv" xml:space="preserve">
+    <value>使用QuickPictureViewer打开</value>
+    <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
     <value>原始尺寸</value>
@@ -730,6 +738,10 @@
     <value>大小</value>
     <comment>Status bar</comment>
   </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>跳过这一版本</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="slideshow" xml:space="preserve">
     <value>幻灯片放映</value>
     <comment>Menu</comment>
@@ -743,7 +755,7 @@
     <comment>Image info</comment>
   </data>
   <data name="startup" xml:space="preserve">
-    <value>启动时</value>
+    <value>    启动时    </value>
     <comment>Settings</comment>
   </data>
   <data name="stretch" xml:space="preserve">
@@ -763,7 +775,7 @@
     <comment>Settings</comment>
   </data>
   <data name="theme" xml:space="preserve">
-    <value>主题</value>
+    <value>   主题   </value>
     <comment>Settings</comment>
   </data>
   <data name="tile" xml:space="preserve">
@@ -783,7 +795,7 @@
     <comment>Print</comment>
   </data>
   <data name="translated-by" xml:space="preserve">
-    <value>翻译者：</value>
+    <value>翻译者</value>
     <comment>Settings</comment>
   </data>
   <data name="type-options" xml:space="preserve">
@@ -819,7 +831,7 @@
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>当前版本{1}，新版本{0}可用，立即更新？</value>
+    <value>新版本{0}可用，当前版本{1}，立即更新？</value>
     <comment>Update manager</comment>
   </data>
   <data name="updating-qpv" xml:space="preserve">

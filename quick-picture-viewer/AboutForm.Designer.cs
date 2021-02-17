@@ -137,6 +137,7 @@
 			this.descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.descTextBox.Multiline = true;
 			this.descTextBox.Name = "descTextBox";
+			this.descTextBox.ReadOnly = true;
 			this.descTextBox.Size = new System.Drawing.Size(270, 96);
 			this.descTextBox.TabIndex = 1;
 			this.descTextBox.Text = "description";
