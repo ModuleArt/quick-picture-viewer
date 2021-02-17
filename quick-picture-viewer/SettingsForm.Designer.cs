@@ -613,7 +613,7 @@
 			this.browseWithCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.browseWithCheckBox.Size = new System.Drawing.Size(352, 32);
 			this.browseWithCheckBox.TabIndex = 2;
-			this.browseWithCheckBox.Text = "Browse folder with QuickPictureViewer";
+			this.browseWithCheckBox.Text = "browse folder with qpv";
 			this.browseWithCheckBox.UseVisualStyleBackColor = true;
 			this.browseWithCheckBox.CheckedChanged += new System.EventHandler(this.browseWithCheckBox_CheckedChanged);
 			// 
@@ -643,7 +643,7 @@
 			this.openWithCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.openWithCheckBox.Size = new System.Drawing.Size(352, 32);
 			this.openWithCheckBox.TabIndex = 1;
-			this.openWithCheckBox.Text = "Open with QuickPictureViewer";
+			this.openWithCheckBox.Text = "open with qpv";
 			this.openWithCheckBox.UseVisualStyleBackColor = true;
 			this.openWithCheckBox.CheckedChanged += new System.EventHandler(this.openWithCheckBox_CheckedChanged);
 			// 
@@ -758,7 +758,7 @@
 			this.langComboBox.Items.AddRange(new object[] {
             "English",
             "Russian (Русский)",
-            "Chinese (中國人)",
+            "Chinese (中文)",
             "Hungarian (Magyar)",
             "Spanish (Española)"});
 			this.langComboBox.Location = new System.Drawing.Point(10, 39);

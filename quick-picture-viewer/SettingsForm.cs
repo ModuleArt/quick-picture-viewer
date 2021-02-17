@@ -153,6 +153,8 @@ namespace quick_picture_viewer
 			navBarPage.Text = LangMan.Get("navigation-bar");
 			navBarCheckBox.Text = LangMan.Get("enable-navigation-bar");
 			navBarFullscreenCheckBox.Text = LangMan.Get("nav-bar-fullscreen");
+			openWithCheckBox.Text = LangMan.Get("open-with-qpv");
+			browseWithCheckBox.Text = LangMan.Get("browse-folder-with-qpv");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 

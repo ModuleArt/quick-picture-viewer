@@ -174,6 +174,10 @@
     <value>浏览</value>
     <comment>Settings</comment>
   </data>
+  <data name="browse-folder-with-qpv" xml:space="preserve">
+    <value>使用QuickPictureViewer浏览此文件夹</value>
+    <comment>Settings</comment>
+  </data>
   <data name="browse-for-plugins" xml:space="preserve">
     <value>在本地查找插件</value>
     <comment>Plugin manager</comment>
@@ -553,6 +557,10 @@
   <data name="open-with-default" xml:space="preserve">
     <value>打开   使用默认应用</value>
     <comment>Menu</comment>
+  </data>
+  <data name="open-with-qpv" xml:space="preserve">
+    <value>使用QuickPictureViewer打开</value>
+    <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
     <value>原始尺寸</value>

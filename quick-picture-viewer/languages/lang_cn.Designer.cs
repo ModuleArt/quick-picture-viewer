@@ -70,6 +70,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 所有文件.
+        /// </summary>
+        public static string all_files {
+            get {
+                return ResourceManager.GetString("all-files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 所有图片格式.
+        /// </summary>
+        public static string all_image_formats {
+            get {
+                return ResourceManager.GetString("all-image-formats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 置于顶层.
         /// </summary>
         public static string always_on_top {
@@ -166,6 +184,15 @@ namespace quick_picture_viewer.languages {
         public static string browse {
             get {
                 return ResourceManager.GetString("browse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 使用QuickPictureViewer浏览此文件夹.
+        /// </summary>
+        public static string browse_folder_with_qpv {
+            get {
+                return ResourceManager.GetString("browse-folder-with-qpv", resourceCulture);
             }
         }
         
@@ -701,20 +728,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 安装.
+        ///   Looks up a localized string similar to 现在安装.
         /// </summary>
-        public static string install {
+        public static string install_now {
             get {
-                return ResourceManager.GetString("install", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 安装更新.
-        /// </summary>
-        public static string install_update {
-            get {
-                return ResourceManager.GetString("install-update", resourceCulture);
+                return ResourceManager.GetString("install-now", resourceCulture);
             }
         }
         
@@ -764,7 +782,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 多语言.
+        ///   Looks up a localized string similar to    多语言   .
         /// </summary>
         public static string localization {
             get {
@@ -881,7 +899,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 导航栏.
+        ///   Looks up a localized string similar to   导航栏  .
         /// </summary>
         public static string navigation_bar {
             get {
@@ -998,15 +1016,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 打开Windows设置.
-        /// </summary>
-        public static string open_windows_settings {
-            get {
-                return ResourceManager.GetString("open-windows-settings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 打开   使用.
         /// </summary>
         public static string open_with {
@@ -1039,6 +1048,15 @@ namespace quick_picture_viewer.languages {
         public static string open_with_default {
             get {
                 return ResourceManager.GetString("open-with-default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 使用QuickPictureViewer打开.
+        /// </summary>
+        public static string open_with_qpv {
+            get {
+                return ResourceManager.GetString("open-with-qpv", resourceCulture);
             }
         }
         
@@ -1439,6 +1457,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 跳过这一版本.
+        /// </summary>
+        public static string skip_this_version {
+            get {
+                return ResourceManager.GetString("skip-this-version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 幻灯片放映.
         /// </summary>
         public static string slideshow {
@@ -1466,7 +1493,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 启动时.
+        ///   Looks up a localized string similar to     启动时    .
         /// </summary>
         public static string startup {
             get {
@@ -1511,7 +1538,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 主题.
+        ///   Looks up a localized string similar to    主题   .
         /// </summary>
         public static string theme {
             get {
@@ -1556,7 +1583,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 翻译者：.
+        ///   Looks up a localized string similar to 翻译者.
         /// </summary>
         public static string translated_by {
             get {
@@ -1637,7 +1664,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 当前版本{1}，新版本{0}可用，立即更新？.
+        ///   Looks up a localized string similar to 新版本{0}可用，当前版本{1}，立即更新？.
         /// </summary>
         public static string update_text {
             get {

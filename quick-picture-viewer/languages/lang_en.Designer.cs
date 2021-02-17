@@ -187,6 +187,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Browse with QuickPictureViewer.
+        /// </summary>
+        public static string browse_folder_with_qpv {
+            get {
+                return ResourceManager.GetString("browse-folder-with-qpv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browse for plugins.
         /// </summary>
         public static string browse_for_plugins {
@@ -1047,6 +1056,15 @@ namespace quick_picture_viewer.languages {
         public static string open_with_default {
             get {
                 return ResourceManager.GetString("open-with-default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open with QuickPictureViewer.
+        /// </summary>
+        public static string open_with_qpv {
+            get {
+                return ResourceManager.GetString("open-with-qpv", resourceCulture);
             }
         }
         
