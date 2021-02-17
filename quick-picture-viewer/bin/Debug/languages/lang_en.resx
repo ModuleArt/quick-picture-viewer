@@ -121,6 +121,14 @@
     <value>About</value>
     <comment>Menu</comment>
   </data>
+  <data name="all-files" xml:space="preserve">
+    <value>All files</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>All image formats</value>
+    <comment>Open file dialog</comment>
+  </data>
   <data name="always-on-top" xml:space="preserve">
     <value>Always on top</value>
     <comment>Menu</comment>

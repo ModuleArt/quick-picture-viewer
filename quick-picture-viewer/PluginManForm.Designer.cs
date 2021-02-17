@@ -42,10 +42,10 @@
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.morePluginsBtn = new System.Windows.Forms.Button();
 			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.morePluginsBtn = new System.Windows.Forms.Button();
 			this.addPluginBtn = new System.Windows.Forms.Button();
 			this.contextMenuStrip1.SuspendLayout();
 			this.titlePanel.SuspendLayout();
@@ -73,7 +73,7 @@
 			this.listView1.ShowItemToolTips = true;
 			this.listView1.Size = new System.Drawing.Size(680, 306);
 			this.listView1.SmallImageList = this.imageList1;
-			this.listView1.TabIndex = 0;
+			this.listView1.TabIndex = 2;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			this.listView1.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listView1_ColumnWidthChanging);
@@ -100,14 +100,17 @@
 			// 
 			// contextMenuStrip1
 			// 
-			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.contextMenuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.contextMenuStrip1.DarkMode = false;
+			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.contextMenuStrip1.ForeColor = System.Drawing.Color.Black;
 			this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pluginWebsiteBtn,
             this.qlibMenuSeparator2,
             this.deleteBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(210, 66);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(211, 66);
 			this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
 			// 
 			// pluginWebsiteBtn
@@ -118,7 +121,7 @@
 			this.pluginWebsiteBtn.Name = "pluginWebsiteBtn";
 			this.pluginWebsiteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.pluginWebsiteBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-			this.pluginWebsiteBtn.Size = new System.Drawing.Size(209, 24);
+			this.pluginWebsiteBtn.Size = new System.Drawing.Size(210, 24);
 			this.pluginWebsiteBtn.Text = "plugin website";
 			this.pluginWebsiteBtn.Click += new System.EventHandler(this.pluginWebsiteBtn_Click);
 			// 
@@ -129,7 +132,7 @@
 			this.qlibMenuSeparator2.InsideMenu = true;
 			this.qlibMenuSeparator2.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
-			this.qlibMenuSeparator2.Size = new System.Drawing.Size(206, 6);
+			this.qlibMenuSeparator2.Size = new System.Drawing.Size(207, 6);
 			// 
 			// deleteBtn
 			// 
@@ -139,7 +142,7 @@
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.deleteBtn.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-			this.deleteBtn.Size = new System.Drawing.Size(209, 24);
+			this.deleteBtn.Size = new System.Drawing.Size(210, 24);
 			this.deleteBtn.Text = "delete plugin";
 			this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
 			// 
@@ -170,6 +173,24 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
+			// morePluginsBtn
+			// 
+			this.morePluginsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.morePluginsBtn.FlatAppearance.BorderSize = 0;
+			this.morePluginsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.morePluginsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
+			this.morePluginsBtn.Location = new System.Drawing.Point(490, 358);
+			this.morePluginsBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.morePluginsBtn.Name = "morePluginsBtn";
+			this.morePluginsBtn.Size = new System.Drawing.Size(200, 32);
+			this.morePluginsBtn.TabIndex = 4;
+			this.morePluginsBtn.Text = " more plugins";
+			this.morePluginsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.morePluginsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.infoTooltip.SetToolTip(this.morePluginsBtn, "github.com/ModuleArt/qpv-plugins");
+			this.morePluginsBtn.UseVisualStyleBackColor = false;
+			this.morePluginsBtn.Click += new System.EventHandler(this.morePluginsBtn_Click);
+			// 
 			// titlePanel
 			// 
 			this.titlePanel.Controls.Add(this.titleLabel);
@@ -178,7 +199,7 @@
 			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.titlePanel.Name = "titlePanel";
 			this.titlePanel.Size = new System.Drawing.Size(700, 32);
-			this.titlePanel.TabIndex = 1;
+			this.titlePanel.TabIndex = 0;
 			// 
 			// titleLabel
 			// 
@@ -195,23 +216,6 @@
 			this.openFileDialog1.Filter = "QuickPlugins|*.qp.zip";
 			this.openFileDialog1.RestoreDirectory = true;
 			// 
-			// morePluginsBtn
-			// 
-			this.morePluginsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.morePluginsBtn.FlatAppearance.BorderSize = 0;
-			this.morePluginsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.morePluginsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
-			this.morePluginsBtn.Location = new System.Drawing.Point(490, 358);
-			this.morePluginsBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.morePluginsBtn.Name = "morePluginsBtn";
-			this.morePluginsBtn.Size = new System.Drawing.Size(200, 32);
-			this.morePluginsBtn.TabIndex = 45;
-			this.morePluginsBtn.Text = " more plugins";
-			this.morePluginsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.morePluginsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.morePluginsBtn.UseVisualStyleBackColor = false;
-			this.morePluginsBtn.Click += new System.EventHandler(this.morePluginsBtn_Click);
-			// 
 			// addPluginBtn
 			// 
 			this.addPluginBtn.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -222,7 +226,7 @@
 			this.addPluginBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.addPluginBtn.Name = "addPluginBtn";
 			this.addPluginBtn.Size = new System.Drawing.Size(200, 32);
-			this.addPluginBtn.TabIndex = 44;
+			this.addPluginBtn.TabIndex = 3;
 			this.addPluginBtn.Text = " browse for plugins";
 			this.addPluginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.addPluginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

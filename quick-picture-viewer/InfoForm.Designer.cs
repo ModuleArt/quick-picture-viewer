@@ -94,7 +94,7 @@
 			this.extensionTextBox.ReadOnly = true;
 			this.extensionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.extensionTextBox.Size = new System.Drawing.Size(70, 32);
-			this.extensionTextBox.TabIndex = 8;
+			this.extensionTextBox.TabIndex = 9;
 			this.extensionTextBox.Text = "N/A";
 			this.extensionTextBox.WordWrap = true;
 			// 
@@ -121,7 +121,7 @@
 			this.copyPathButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyPathButton.Name = "copyPathButton";
 			this.copyPathButton.Size = new System.Drawing.Size(32, 32);
-			this.copyPathButton.TabIndex = 6;
+			this.copyPathButton.TabIndex = 7;
 			this.copyPathButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyPathButton.UseVisualStyleBackColor = false;
 			this.copyPathButton.Click += new System.EventHandler(this.copyPathButton_Click);
@@ -137,7 +137,7 @@
 			this.copyFolderButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyFolderButton.Name = "copyFolderButton";
 			this.copyFolderButton.Size = new System.Drawing.Size(32, 32);
-			this.copyFolderButton.TabIndex = 4;
+			this.copyFolderButton.TabIndex = 5;
 			this.copyFolderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyFolderButton.UseVisualStyleBackColor = false;
 			this.copyFolderButton.Click += new System.EventHandler(this.copyFolderButton_Click);
@@ -153,7 +153,7 @@
 			this.copyNameButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyNameButton.Name = "copyNameButton";
 			this.copyNameButton.Size = new System.Drawing.Size(32, 32);
-			this.copyNameButton.TabIndex = 2;
+			this.copyNameButton.TabIndex = 3;
 			this.copyNameButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyNameButton.UseVisualStyleBackColor = false;
 			this.copyNameButton.Click += new System.EventHandler(this.copyNameButton_Click);
@@ -172,7 +172,7 @@
 			this.compressionTextBox.ReadOnly = true;
 			this.compressionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.compressionTextBox.Size = new System.Drawing.Size(70, 32);
-			this.compressionTextBox.TabIndex = 7;
+			this.compressionTextBox.TabIndex = 8;
 			this.compressionTextBox.WordWrap = true;
 			// 
 			// compressionLabel
@@ -201,7 +201,7 @@
 			this.fullPathTextBox.ReadOnly = true;
 			this.fullPathTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fullPathTextBox.Size = new System.Drawing.Size(220, 32);
-			this.fullPathTextBox.TabIndex = 5;
+			this.fullPathTextBox.TabIndex = 6;
 			this.fullPathTextBox.Text = "N/A";
 			this.fullPathTextBox.WordWrap = false;
 			// 
@@ -231,7 +231,7 @@
 			this.folderTextBox.ReadOnly = true;
 			this.folderTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.folderTextBox.Size = new System.Drawing.Size(220, 32);
-			this.folderTextBox.TabIndex = 3;
+			this.folderTextBox.TabIndex = 4;
 			this.folderTextBox.Text = "N/A";
 			this.folderTextBox.WordWrap = true;
 			// 
@@ -249,7 +249,7 @@
 			this.fileNameTextBox.ReadOnly = true;
 			this.fileNameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fileNameTextBox.Size = new System.Drawing.Size(220, 32);
-			this.fileNameTextBox.TabIndex = 1;
+			this.fileNameTextBox.TabIndex = 2;
 			this.fileNameTextBox.Text = "N/A";
 			this.fileNameTextBox.WordWrap = true;
 			// 
@@ -539,7 +539,7 @@
 			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.propertiesButton.Name = "propertiesButton";
 			this.propertiesButton.Size = new System.Drawing.Size(252, 32);
-			this.propertiesButton.TabIndex = 20;
+			this.propertiesButton.TabIndex = 12;
 			this.propertiesButton.Text = " File properties";
 			this.propertiesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.propertiesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -555,7 +555,7 @@
 			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
 			this.titlePanel.Name = "titlePanel";
 			this.titlePanel.Size = new System.Drawing.Size(730, 32);
-			this.titlePanel.TabIndex = 22;
+			this.titlePanel.TabIndex = 0;
 			// 
 			// titleLabel
 			// 

@@ -70,6 +70,24 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Все файлы.
+        /// </summary>
+        public static string all_files {
+            get {
+                return ResourceManager.GetString("all-files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Все форматы изображений.
+        /// </summary>
+        public static string all_image_formats {
+            get {
+                return ResourceManager.GetString("all-image-formats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Поверх всех окон.
         /// </summary>
         public static string always_on_top {

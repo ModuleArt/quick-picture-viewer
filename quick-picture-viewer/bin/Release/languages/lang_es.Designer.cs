@@ -160,15 +160,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Este lenguaje sigue en beta, La aplicación puede crashear o no abrir..
-        /// </summary>
-        public static string beta_lang_warning {
-            get {
-                return ResourceManager.GetString("beta-lang-warning", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Inferioir.
         /// </summary>
         public static string bottom {
@@ -939,15 +930,6 @@ namespace quick_picture_viewer.languages {
         public static string open_file {
             get {
                 return ResourceManager.GetString("open-file", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Abra la configuración de Windows.
-        /// </summary>
-        public static string open_windows_settings {
-            get {
-                return ResourceManager.GetString("open-windows-settings", resourceCulture);
             }
         }
         

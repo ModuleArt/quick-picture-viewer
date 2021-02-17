@@ -121,6 +121,14 @@
     <value>О приложении</value>
     <comment>Menu</comment>
   </data>
+  <data name="all-files" xml:space="preserve">
+    <value>Все файлы</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>Все форматы изображений</value>
+    <comment>Open file dialog</comment>
+  </data>
   <data name="always-on-top" xml:space="preserve">
     <value>Поверх всех окон</value>
     <comment>Menu</comment>
@@ -130,8 +138,8 @@
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
-    <value>Приложение использует актуальную версию</value>
-    <comment>Message box</comment>
+    <value>Приложение использует актуальную версию!</value>
+    <comment>Update manager</comment>
   </data>
   <data name="app-startup-actions" xml:space="preserve">
     <value>Действия при запуске приложения</value>
@@ -156,10 +164,6 @@
   <data name="background-color" xml:space="preserve">
     <value>Цвет фона</value>
     <comment>Menu</comment>
-  </data>
-  <data name="beta-lang-warning" xml:space="preserve">
-    <value>Этот язык все еще находится в стадии бета-тестирования. Приложение может вылетать или не запускаться.</value>
-    <comment>Settings</comment>
   </data>
   <data name="bottom" xml:space="preserve">
     <value>Снизу</value>
@@ -276,6 +280,10 @@
   <data name="dont-save" xml:space="preserve">
     <value>Не сохранять</value>
     <comment>Main window</comment>
+  </data>
+  <data name="downloading-update" xml:space="preserve">
+    <value>Загрузка обновления...</value>
+    <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Перетащенное изображение</value>
@@ -401,6 +409,10 @@
     <value>Клавиатура и мышь</value>
     <comment>Settings</comment>
   </data>
+  <data name="install-now" xml:space="preserve">
+    <value>Установить сейчас</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="landscape" xml:space="preserve">
     <value>Альбомная</value>
     <comment>Image info</comment>
@@ -477,6 +489,10 @@
     <value>Панель навигации</value>
     <comment>Settings</comment>
   </data>
+  <data name="new-version-available" xml:space="preserve">
+    <value>Доступно новое обновление!</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="new-window" xml:space="preserve">
     <value>Новое окно</value>
     <comment>Menu</comment>
@@ -520,10 +536,6 @@
   <data name="open-file" xml:space="preserve">
     <value>Открыть файл</value>
     <comment>Menu</comment>
-  </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Открыть параметры Windows</value>
-    <comment>About</comment>
   </data>
   <data name="open-with" xml:space="preserve">
     <value>Открыть с помощью</value>
@@ -617,6 +629,10 @@
     <value>Размер печати</value>
     <comment>Image info</comment>
   </data>
+  <data name="ready-to-install" xml:space="preserve">
+    <value>Все готово к установке</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="reload-file" xml:space="preserve">
     <value>Переоткрыть файл</value>
     <comment>Menu</comment>
@@ -701,9 +717,21 @@
     <value>Показать счётчик слайдшоу</value>
     <comment>Settings</comment>
   </data>
+  <data name="show-status-bar" xml:space="preserve">
+    <value>Показывать статус бар</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-toolbar" xml:space="preserve">
+    <value>Показывать панель инструментов</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="size" xml:space="preserve">
     <value>Размер</value>
     <comment>Status bar</comment>
+  </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>Пропустить эту версию</value>
+    <comment>Update manager</comment>
   </data>
   <data name="slideshow" xml:space="preserve">
     <value>Слайдшоу</value>
@@ -790,12 +818,16 @@
     <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
-    <value>Обновление невозможно</value>
-    <comment>Message box</comment>
+    <value>Сбой обновления приложения</value>
+    <comment>Update manager</comment>
   </data>
-  <data name="updator" xml:space="preserve">
-    <value>Менеджер обновлений</value>
-    <comment>Message box</comment>
+  <data name="update-text" xml:space="preserve">
+    <value>Доступна версия {0} для Quick Picture Viewer, вы используете версию {1}, обновить сейчас?</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="updating-qpv" xml:space="preserve">
+    <value>Обновление Quick Picture Viewer</value>
+    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Использовать системную настройку</value>
@@ -805,9 +837,17 @@
     <value>Версия</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="view" xml:space="preserve">
+    <value>Вид</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="warning" xml:space="preserve">
     <value>Внимание</value>
     <comment>Message box</comment>
+  </data>
+  <data name="whats-new" xml:space="preserve">
+    <value>Что нового?</value>
+    <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
     <value>Ширина</value>

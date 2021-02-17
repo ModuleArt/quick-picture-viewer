@@ -106,7 +106,7 @@
 			this.settingsTabs.Padding = new System.Drawing.Point(0, 0);
 			this.settingsTabs.SelectedIndex = 0;
 			this.settingsTabs.Size = new System.Drawing.Size(380, 290);
-			this.settingsTabs.TabIndex = 1;
+			this.settingsTabs.TabIndex = 2;
 			// 
 			// themePage
 			// 
@@ -203,7 +203,7 @@
 			this.themeRestart.Margin = new System.Windows.Forms.Padding(0);
 			this.themeRestart.Name = "themeRestart";
 			this.themeRestart.Size = new System.Drawing.Size(352, 19);
-			this.themeRestart.TabIndex = 39;
+			this.themeRestart.TabIndex = 3;
 			this.themeRestart.TabStop = true;
 			this.themeRestart.Text = "restart";
 			this.themeRestart.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -242,7 +242,7 @@
 			this.mouseWheelActionRadio3.Name = "mouseWheelActionRadio3";
 			this.mouseWheelActionRadio3.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.mouseWheelActionRadio3.Size = new System.Drawing.Size(352, 32);
-			this.mouseWheelActionRadio3.TabIndex = 45;
+			this.mouseWheelActionRadio3.TabIndex = 4;
 			this.mouseWheelActionRadio3.Text = "next / previous image";
 			this.mouseWheelActionRadio3.UseVisualStyleBackColor = true;
 			this.mouseWheelActionRadio3.CheckedChanged += new System.EventHandler(this.mouseWheelActionRadio3_CheckedChanged);
@@ -262,7 +262,7 @@
 			this.mouseWheelActionRadio2.Name = "mouseWheelActionRadio2";
 			this.mouseWheelActionRadio2.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.mouseWheelActionRadio2.Size = new System.Drawing.Size(352, 32);
-			this.mouseWheelActionRadio2.TabIndex = 44;
+			this.mouseWheelActionRadio2.TabIndex = 3;
 			this.mouseWheelActionRadio2.Text = "zoom in / out";
 			this.mouseWheelActionRadio2.UseVisualStyleBackColor = true;
 			this.mouseWheelActionRadio2.CheckedChanged += new System.EventHandler(this.mouseWheelActionRadio2_CheckedChanged);
@@ -283,7 +283,7 @@
 			this.mouseWheelActionRadio1.Name = "mouseWheelActionRadio1";
 			this.mouseWheelActionRadio1.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.mouseWheelActionRadio1.Size = new System.Drawing.Size(352, 32);
-			this.mouseWheelActionRadio1.TabIndex = 43;
+			this.mouseWheelActionRadio1.TabIndex = 2;
 			this.mouseWheelActionRadio1.TabStop = true;
 			this.mouseWheelActionRadio1.Text = "scroll up / down";
 			this.mouseWheelActionRadio1.UseVisualStyleBackColor = true;
@@ -314,7 +314,7 @@
 			this.escToExitCheckBox.Name = "escToExitCheckBox";
 			this.escToExitCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.escToExitCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.escToExitCheckBox.TabIndex = 3;
+			this.escToExitCheckBox.TabIndex = 1;
 			this.escToExitCheckBox.Text = "press esc to exit";
 			this.escToExitCheckBox.UseVisualStyleBackColor = true;
 			this.escToExitCheckBox.CheckedChanged += new System.EventHandler(this.escToExitCheckBox_CheckedChanged);
@@ -334,7 +334,7 @@
 			this.fullscrCursorCheckBox.Name = "fullscrCursorCheckBox";
 			this.fullscrCursorCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fullscrCursorCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.fullscrCursorCheckBox.TabIndex = 1;
+			this.fullscrCursorCheckBox.TabIndex = 0;
 			this.fullscrCursorCheckBox.Text = "show cursor in fullscreen";
 			this.fullscrCursorCheckBox.UseVisualStyleBackColor = true;
 			this.fullscrCursorCheckBox.CheckedChanged += new System.EventHandler(this.fullscrCursorCheckBox_CheckedChanged);
@@ -367,7 +367,7 @@
 			this.navBarFullscreenCheckBox.Name = "navBarFullscreenCheckBox";
 			this.navBarFullscreenCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.navBarFullscreenCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.navBarFullscreenCheckBox.TabIndex = 3;
+			this.navBarFullscreenCheckBox.TabIndex = 1;
 			this.navBarFullscreenCheckBox.Text = "show nav bar in fullscreen";
 			this.navBarFullscreenCheckBox.UseVisualStyleBackColor = true;
 			this.navBarFullscreenCheckBox.CheckedChanged += new System.EventHandler(this.navBarFullscreenCheckBox_CheckedChanged);
@@ -387,7 +387,7 @@
 			this.navBarCheckBox.Name = "navBarCheckBox";
 			this.navBarCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.navBarCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.navBarCheckBox.TabIndex = 2;
+			this.navBarCheckBox.TabIndex = 0;
 			this.navBarCheckBox.Text = "enable nav bar";
 			this.navBarCheckBox.UseVisualStyleBackColor = true;
 			this.navBarCheckBox.CheckedChanged += new System.EventHandler(this.navBarCheckBox_CheckedChanged);
@@ -450,7 +450,7 @@
 			this.slideshowTimeNumeric.Name = "slideshowTimeNumeric";
 			this.slideshowTimeNumeric.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.slideshowTimeNumeric.Size = new System.Drawing.Size(80, 32);
-			this.slideshowTimeNumeric.TabIndex = 2;
+			this.slideshowTimeNumeric.TabIndex = 0;
 			this.slideshowTimeNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -509,7 +509,7 @@
 			this.startupBoundsCheckBox.Name = "startupBoundsCheckBox";
 			this.startupBoundsCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.startupBoundsCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.startupBoundsCheckBox.TabIndex = 46;
+			this.startupBoundsCheckBox.TabIndex = 1;
 			this.startupBoundsCheckBox.Text = "bounds";
 			this.startupBoundsCheckBox.UseVisualStyleBackColor = true;
 			this.startupBoundsCheckBox.CheckedChanged += new System.EventHandler(this.startupBoundsCheckBox_CheckedChanged);
@@ -529,7 +529,7 @@
 			this.updatesCheckBox.Name = "updatesCheckBox";
 			this.updatesCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.updatesCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.updatesCheckBox.TabIndex = 45;
+			this.updatesCheckBox.TabIndex = 0;
 			this.updatesCheckBox.Text = "check for app updates";
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
 			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
@@ -549,7 +549,7 @@
 			this.startupPasteCheckBox.Name = "startupPasteCheckBox";
 			this.startupPasteCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.startupPasteCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.startupPasteCheckBox.TabIndex = 43;
+			this.startupPasteCheckBox.TabIndex = 2;
 			this.startupPasteCheckBox.Text = "paste";
 			this.startupPasteCheckBox.UseVisualStyleBackColor = true;
 			this.startupPasteCheckBox.CheckedChanged += new System.EventHandler(this.startupPasteCheckBox_CheckedChanged);
@@ -592,7 +592,7 @@
 			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.makeDefaultBtn.Name = "makeDefaultBtn";
 			this.makeDefaultBtn.Size = new System.Drawing.Size(352, 32);
-			this.makeDefaultBtn.TabIndex = 47;
+			this.makeDefaultBtn.TabIndex = 0;
 			this.makeDefaultBtn.Text = "set as default photo viewer";
 			this.makeDefaultBtn.UseVisualStyleBackColor = false;
 			this.makeDefaultBtn.Click += new System.EventHandler(this.makeDefaultBtn_Click);
@@ -612,7 +612,7 @@
 			this.browseWithCheckBox.Name = "browseWithCheckBox";
 			this.browseWithCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.browseWithCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.browseWithCheckBox.TabIndex = 46;
+			this.browseWithCheckBox.TabIndex = 2;
 			this.browseWithCheckBox.Text = "Browse folder with QuickPictureViewer";
 			this.browseWithCheckBox.UseVisualStyleBackColor = true;
 			this.browseWithCheckBox.CheckedChanged += new System.EventHandler(this.browseWithCheckBox_CheckedChanged);
@@ -642,7 +642,7 @@
 			this.openWithCheckBox.Name = "openWithCheckBox";
 			this.openWithCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.openWithCheckBox.Size = new System.Drawing.Size(352, 32);
-			this.openWithCheckBox.TabIndex = 44;
+			this.openWithCheckBox.TabIndex = 1;
 			this.openWithCheckBox.Text = "Open with QuickPictureViewer";
 			this.openWithCheckBox.UseVisualStyleBackColor = true;
 			this.openWithCheckBox.CheckedChanged += new System.EventHandler(this.openWithCheckBox_CheckedChanged);
@@ -660,8 +660,7 @@
 			this.browseBtn.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
 			this.browseBtn.Name = "browseBtn";
 			this.browseBtn.Size = new System.Drawing.Size(120, 32);
-			this.browseBtn.TabIndex = 2;
-			this.browseBtn.TabStop = false;
+			this.browseBtn.TabIndex = 4;
 			this.browseBtn.Text = " browse";
 			this.browseBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.browseBtn.UseVisualStyleBackColor = false;
@@ -681,7 +680,7 @@
 			this.favExtTextBox.ReadOnly = false;
 			this.favExtTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.favExtTextBox.Size = new System.Drawing.Size(222, 32);
-			this.favExtTextBox.TabIndex = 1;
+			this.favExtTextBox.TabIndex = 3;
 			this.favExtTextBox.WordWrap = true;
 			this.favExtTextBox.TextChanged += new System.EventHandler(this.favExtTextBox_TextChanged);
 			// 
@@ -718,7 +717,7 @@
 			this.translateAuthorsPanel.Margin = new System.Windows.Forms.Padding(0);
 			this.translateAuthorsPanel.Name = "translateAuthorsPanel";
 			this.translateAuthorsPanel.Size = new System.Drawing.Size(260, 19);
-			this.translateAuthorsPanel.TabIndex = 43;
+			this.translateAuthorsPanel.TabIndex = 1;
 			// 
 			// translatedByLabel
 			// 
@@ -759,9 +758,9 @@
 			this.langComboBox.Items.AddRange(new object[] {
             "English",
             "Russian (Русский)",
-            "[Beta] Chinese (中國人)",
-            "[Beta] Hungarian (Magyar)",
-            "[Beta] Spanish (Española)"});
+            "Chinese (中國人)",
+            "Hungarian (Magyar)",
+            "Spanish (Española)"});
 			this.langComboBox.Location = new System.Drawing.Point(10, 39);
 			this.langComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.langComboBox.Name = "langComboBox";
@@ -775,7 +774,7 @@
 			this.localizationRestart.Margin = new System.Windows.Forms.Padding(0);
 			this.localizationRestart.Name = "localizationRestart";
 			this.localizationRestart.Size = new System.Drawing.Size(352, 19);
-			this.localizationRestart.TabIndex = 44;
+			this.localizationRestart.TabIndex = 2;
 			this.localizationRestart.TabStop = true;
 			this.localizationRestart.Text = "restart";
 			this.localizationRestart.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -807,7 +806,7 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 17;
+			this.closeBtn.TabIndex = 1;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 

@@ -161,10 +161,6 @@
     <value>Color de Fondo</value>
     <comment>Menu</comment>
   </data>
-  <data name="beta-lang-warning" xml:space="preserve">
-    <value>Este lenguaje sigue en beta, La aplicación puede crashear o no abrir.</value>
-    <comment>Settings</comment>
-  </data>
   <data name="bottom" xml:space="preserve">
     <value>Inferioir</value>
     <comment>Print</comment>
@@ -508,10 +504,6 @@
   <data name="open-file" xml:space="preserve">
     <value>Abrir documento</value>
     <comment>Menu</comment>
-  </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Abra la configuración de Windows</value>
-    <comment>About</comment>
   </data>
   <data name="open-with" xml:space="preserve">
     <value>Abrir con</value>

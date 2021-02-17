@@ -64,7 +64,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(294, 32);
-			this.okButton.TabIndex = 11;
+			this.okButton.TabIndex = 12;
 			this.okButton.Text = "print";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -151,7 +151,7 @@
 			// 
 			// bottomMarginTextBox
 			// 
-			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.bottomMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.bottomMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.bottomMarginTextBox.DarkMode = false;
@@ -181,7 +181,7 @@
 			// 
 			// rightMarginTextBox
 			// 
-			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.rightMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.rightMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.rightMarginTextBox.DarkMode = false;
@@ -211,7 +211,7 @@
 			// 
 			// topMarginTextBox
 			// 
-			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.topMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.topMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.topMarginTextBox.DarkMode = false;
@@ -251,7 +251,7 @@
 			// 
 			// leftMarginTextBox
 			// 
-			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.leftMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.leftMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.leftMarginTextBox.DarkMode = false;
@@ -291,7 +291,7 @@
 			// 
 			// titleTextBox
 			// 
-			this.titleTextBox.BackColor = System.Drawing.SystemColors.Control;
+			this.titleTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.titleTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.titleTextBox.DarkMode = false;
@@ -356,7 +356,7 @@
 			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.printPreviewControl1.Name = "printPreviewControl1";
 			this.printPreviewControl1.Size = new System.Drawing.Size(309, 252);
-			this.printPreviewControl1.TabIndex = 0;
+			this.printPreviewControl1.TabIndex = 11;
 			this.printPreviewControl1.TabStop = false;
 			// 
 			// titlePanel
@@ -374,6 +374,8 @@
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
+			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.ForeColor = System.Drawing.Color.Black;
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
@@ -383,7 +385,7 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 17;
+			this.closeBtn.TabIndex = 1;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 

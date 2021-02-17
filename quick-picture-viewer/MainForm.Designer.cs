@@ -126,7 +126,6 @@
 			// openFileDialog1
 			// 
 			this.openFileDialog1.FileName = "image";
-			resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
 			this.openFileDialog1.RestoreDirectory = true;
 			// 
 			// fileSystemWatcher1

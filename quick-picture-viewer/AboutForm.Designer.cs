@@ -33,12 +33,12 @@
 			this.versionLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
+			this.developerBtn = new System.Windows.Forms.Button();
+			this.githubBtn = new System.Windows.Forms.Button();
 			this.descTextBox = new System.Windows.Forms.TextBox();
 			this.makeDefaultBtn = new System.Windows.Forms.Button();
 			this.copyrightLabel = new System.Windows.Forms.Label();
 			this.updatesBtn = new System.Windows.Forms.Button();
-			this.developerBtn = new System.Windows.Forms.Button();
-			this.githubBtn = new System.Windows.Forms.Button();
 			this.logoPictureBox = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
 			this.SuspendLayout();
@@ -84,10 +84,50 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
+			this.closeBtn.TabIndex = 0;
 			this.infoTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			// 
+			// developerBtn
+			// 
+			this.developerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
+			this.developerBtn.FlatAppearance.BorderSize = 0;
+			this.developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
+			this.developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
+			this.developerBtn.Location = new System.Drawing.Point(150, 376);
+			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.developerBtn.Name = "developerBtn";
+			this.developerBtn.Size = new System.Drawing.Size(130, 32);
+			this.developerBtn.TabIndex = 4;
+			this.developerBtn.Text = " Module Art";
+			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.infoTooltip.SetToolTip(this.developerBtn, "moduleart.github.io");
+			this.developerBtn.UseVisualStyleBackColor = false;
+			this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
+			// 
+			// githubBtn
+			// 
+			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
+			this.githubBtn.FlatAppearance.BorderSize = 0;
+			this.githubBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
+			this.githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+			this.githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.githubBtn.Image = ((System.Drawing.Image)(resources.GetObject("githubBtn.Image")));
+			this.githubBtn.Location = new System.Drawing.Point(10, 376);
+			this.githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.githubBtn.Name = "githubBtn";
+			this.githubBtn.Size = new System.Drawing.Size(130, 32);
+			this.githubBtn.TabIndex = 3;
+			this.githubBtn.Text = " GitHub";
+			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.infoTooltip.SetToolTip(this.githubBtn, "github.com/ModuleArt/quick-picture-viewer");
+			this.githubBtn.UseVisualStyleBackColor = false;
+			this.githubBtn.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// descTextBox
 			// 
@@ -98,7 +138,7 @@
 			this.descTextBox.Multiline = true;
 			this.descTextBox.Name = "descTextBox";
 			this.descTextBox.Size = new System.Drawing.Size(270, 96);
-			this.descTextBox.TabIndex = 42;
+			this.descTextBox.TabIndex = 1;
 			this.descTextBox.Text = "description";
 			this.descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -114,7 +154,7 @@
 			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.makeDefaultBtn.Name = "makeDefaultBtn";
 			this.makeDefaultBtn.Size = new System.Drawing.Size(270, 32);
-			this.makeDefaultBtn.TabIndex = 43;
+			this.makeDefaultBtn.TabIndex = 5;
 			this.makeDefaultBtn.Text = "set as default photo viewer";
 			this.makeDefaultBtn.UseVisualStyleBackColor = false;
 			this.makeDefaultBtn.Click += new System.EventHandler(this.makeDefaultBtn_Click);
@@ -145,52 +185,12 @@
 			this.updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.updatesBtn.Name = "updatesBtn";
 			this.updatesBtn.Size = new System.Drawing.Size(270, 32);
-			this.updatesBtn.TabIndex = 45;
+			this.updatesBtn.TabIndex = 2;
 			this.updatesBtn.Text = " check for updates";
 			this.updatesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.updatesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.updatesBtn.UseVisualStyleBackColor = false;
 			this.updatesBtn.Click += new System.EventHandler(this.updatesBtn_Click);
-			// 
-			// developerBtn
-			// 
-			this.developerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
-			this.developerBtn.FlatAppearance.BorderSize = 0;
-			this.developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
-			this.developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
-			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
-			this.developerBtn.Location = new System.Drawing.Point(150, 376);
-			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.developerBtn.Name = "developerBtn";
-			this.developerBtn.Size = new System.Drawing.Size(130, 32);
-			this.developerBtn.TabIndex = 47;
-			this.developerBtn.Text = " Module Art";
-			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.infoTooltip.SetToolTip(this.developerBtn, "moduleart.github.io");
-			this.developerBtn.UseVisualStyleBackColor = false;
-			this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
-			// 
-			// githubBtn
-			// 
-			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
-			this.githubBtn.FlatAppearance.BorderSize = 0;
-			this.githubBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
-			this.githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
-			this.githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.githubBtn.Image = ((System.Drawing.Image)(resources.GetObject("githubBtn.Image")));
-			this.githubBtn.Location = new System.Drawing.Point(10, 376);
-			this.githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.githubBtn.Name = "githubBtn";
-			this.githubBtn.Size = new System.Drawing.Size(130, 32);
-			this.githubBtn.TabIndex = 46;
-			this.githubBtn.Text = " GitHub";
-			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.infoTooltip.SetToolTip(this.githubBtn, "github.com/ModuleArt/quick-picture-viewer");
-			this.githubBtn.UseVisualStyleBackColor = false;
-			this.githubBtn.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// logoPictureBox
 			// 

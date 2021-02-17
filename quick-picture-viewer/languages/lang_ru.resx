@@ -121,6 +121,14 @@
     <value>О приложении</value>
     <comment>Menu</comment>
   </data>
+  <data name="all-files" xml:space="preserve">
+    <value>Все файлы</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>Все форматы изображений</value>
+    <comment>Open file dialog</comment>
+  </data>
   <data name="always-on-top" xml:space="preserve">
     <value>Поверх всех окон</value>
     <comment>Menu</comment>

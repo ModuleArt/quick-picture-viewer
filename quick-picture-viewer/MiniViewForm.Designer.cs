@@ -69,14 +69,15 @@
 			// 
 			this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
 			this.contextMenuStrip1.DarkMode = true;
-			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.contextMenuStrip1.ForeColor = System.Drawing.Color.Black;
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkboardBtn,
             this.qlibMenuSeparator2,
             this.newWindowBtn,
             this.quitPipBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(279, 112);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(296, 96);
 			// 
 			// checkboardBtn
 			// 
@@ -86,7 +87,7 @@
 			this.checkboardBtn.Name = "checkboardBtn";
 			this.checkboardBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-			this.checkboardBtn.Size = new System.Drawing.Size(278, 24);
+			this.checkboardBtn.Size = new System.Drawing.Size(295, 26);
 			this.checkboardBtn.Text = "checkboard background";
 			this.checkboardBtn.Click += new System.EventHandler(this.checkerboardBackgroundToolStripMenuItem_Click);
 			// 
@@ -97,7 +98,7 @@
 			this.qlibMenuSeparator2.InsideMenu = true;
 			this.qlibMenuSeparator2.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
-			this.qlibMenuSeparator2.Size = new System.Drawing.Size(275, 6);
+			this.qlibMenuSeparator2.Size = new System.Drawing.Size(292, 6);
 			// 
 			// newWindowBtn
 			// 
@@ -107,7 +108,7 @@
 			this.newWindowBtn.Name = "newWindowBtn";
 			this.newWindowBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-			this.newWindowBtn.Size = new System.Drawing.Size(278, 24);
+			this.newWindowBtn.Size = new System.Drawing.Size(295, 26);
 			this.newWindowBtn.Text = "new window";
 			this.newWindowBtn.Click += new System.EventHandler(this.newWindowBtn_Click);
 			// 
@@ -120,7 +121,7 @@
 			this.quitPipBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.quitPipBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.P)));
-			this.quitPipBtn.Size = new System.Drawing.Size(278, 24);
+			this.quitPipBtn.Size = new System.Drawing.Size(295, 26);
 			this.quitPipBtn.Text = "quit picture in picture";
 			this.quitPipBtn.Click += new System.EventHandler(this.quitPipBtn_Click);
 			// 
@@ -141,7 +142,7 @@
 			this.autoZoomBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.autoZoomBtn.Name = "autoZoomBtn";
 			this.autoZoomBtn.Size = new System.Drawing.Size(32, 32);
-			this.autoZoomBtn.TabIndex = 4;
+			this.autoZoomBtn.TabIndex = 0;
 			this.autoZoomBtn.UseVisualStyleBackColor = false;
 			this.autoZoomBtn.Visible = false;
 			this.autoZoomBtn.Click += new System.EventHandler(this.autoZoomButton_Click);
@@ -186,7 +187,7 @@
 			this.resizeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.resizeBtn.Name = "resizeBtn";
 			this.resizeBtn.Size = new System.Drawing.Size(17, 17);
-			this.resizeBtn.TabIndex = 5;
+			this.resizeBtn.TabIndex = 3;
 			this.resizeBtn.UseVisualStyleBackColor = false;
 			this.resizeBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseDown);
 			this.resizeBtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.resizeBtn_MouseMove);
@@ -210,7 +211,7 @@
 			this.opacityBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.opacityBtn.Name = "opacityBtn";
 			this.opacityBtn.Size = new System.Drawing.Size(32, 32);
-			this.opacityBtn.TabIndex = 5;
+			this.opacityBtn.TabIndex = 1;
 			this.opacityBtn.UseVisualStyleBackColor = false;
 			this.opacityBtn.Visible = false;
 			this.opacityBtn.Click += new System.EventHandler(this.opacityBtn_Click);
