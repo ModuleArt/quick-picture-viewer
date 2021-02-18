@@ -39,3 +39,5 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\SimplePsd
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.languages.lang_cn.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_cn.resx
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_hu.resx
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.languages.lang_hu.resources
