@@ -24,6 +24,7 @@ namespace quick_picture_viewer
 		private Point panelMouseDownLocation;
 		private bool fullscreen = false;
 		private string currentFolder;
+		private string selectedFolder;
 		private string currentFile;
 		private bool alwaysOnTop = false;
 		private bool imageChanged = false;
@@ -196,6 +197,7 @@ namespace quick_picture_viewer
 			externalChooseBtn.Text = LangMan.Get("open-with-choose") + " ...";
 
 			openButton.Text = LangMan.Get("open-file") + " | Ctrl+O";
+			openFolderButton.Text = LangMan.Get("open-folder") + " | Ctrl+Shift+O";
 			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+S";
 			pasteButton.Text = LangMan.Get("paste-image") + " | Ctrl+V";
 			checkboardButton.Text = LangMan.Get("checkboard-background") + " | Ctrl+B";
@@ -266,8 +268,23 @@ namespace quick_picture_viewer
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				openFile(openFileDialog1.FileName);
+				selectedFolder = null;
 			}
 			openFileDialog1.Dispose();
+		}
+
+		private void openFolderButton_Click(object sender, EventArgs e)
+		{
+			setSlideshow(false);
+
+			openFolderDialog1.Description = LangMan.Get("open-folder");
+
+			if(openFolderDialog1.ShowDialog() == DialogResult.OK)
+            {
+				currentFolder = openFolderDialog1.SelectedPath;
+				selectedFolder = openFolderDialog1.SelectedPath;
+				openFile(getCurrentFiles(true).FirstOrDefault());
+            }
 		}
 
 		private void MainForm_Load(object sender, EventArgs e)
@@ -1272,6 +1289,10 @@ namespace quick_picture_viewer
 						{
 							miniViewButton.PerformClick();
 						}
+						else if (e.KeyCode == Keys.O)
+                        {
+							openFolderButton.PerformClick();
+                        }
 					}
 					else
 					{
@@ -1434,7 +1455,8 @@ namespace quick_picture_viewer
 
 		public int nextFile()
 		{
-			string[] filePaths = getCurrentFiles();
+
+			string[] filePaths = selectedFolder != null ? getCurrentFiles(true) : getCurrentFiles();
 
 			int currentIndex = -1;
 			for (int i = 0; i < filePaths.Length; i++)
@@ -1474,7 +1496,7 @@ namespace quick_picture_viewer
 
 		public void prevFile()
 		{
-			string[] filePaths = getCurrentFiles();
+			string[] filePaths = selectedFolder != null ? getCurrentFiles(true) : getCurrentFiles();
 
 			int currentIndex = -1;
 			for (int i = 0; i < filePaths.Length; i++)
@@ -1508,14 +1530,14 @@ namespace quick_picture_viewer
 			prevFile();
 		}
 
-		private string[] getCurrentFiles()
+		private string[] getCurrentFiles(bool recursive = false)
 		{
 			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", ".dds", ".tga", ".psd" };
 			List<string> arlist = new List<string>();
 
 			if (currentFolder != null)
 			{
-				string[] allFiles = Directory.GetFiles(currentFolder);
+				string[] allFiles = recursive ? Directory.GetFiles(selectedFolder, "*", System.IO.SearchOption.AllDirectories) : Directory.GetFiles(currentFolder);
 				for (int i = 0; i < allFiles.Length; i++)
 				{
 					string ext = Path.GetExtension(allFiles[i]).ToLower();
@@ -1677,6 +1699,7 @@ namespace quick_picture_viewer
 				statusStrip1.BackColor = ThemeMan.DarkSecondColor;
 
 				openButton.Image = Properties.Resources.white_open;
+				openFolderButton.Image = Properties.Resources.white_picfolder;
 				saveAsButton.Image = Properties.Resources.white_saveas;
 				printButton.Image = Properties.Resources.white_print;
 				deleteBtn.Image = Properties.Resources.white_trash;
@@ -2467,5 +2490,5 @@ namespace quick_picture_viewer
 			Properties.Settings.Default.ShowToolbar = toolStrip1.Visible;
 			Properties.Settings.Default.Save();
 		}
-	}
+    }
 }

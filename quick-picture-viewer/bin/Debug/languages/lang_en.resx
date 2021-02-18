@@ -533,6 +533,10 @@
     <value>Open file</value>
     <comment>Menu</comment>
   </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Open folder recursively</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-windows-settings" xml:space="preserve">
     <value>Open Windows settings</value>
     <comment>About</comment>

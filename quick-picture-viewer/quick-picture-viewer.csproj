@@ -402,6 +402,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-picfolder.png" />
     <None Include="resources\imgs\light\white-statusbar.png" />
     <None Include="resources\imgs\light\white-toolbar.png" />
     <None Include="resources\imgs\dark\black-toolbar.png" />
