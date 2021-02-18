@@ -50,6 +50,13 @@ Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/iss
 
 <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Over here!</a>
 
+## 🧩 Built-in plugins:
+
+- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region [blur]</a> - Blur or pixelate some area of the picture.<br>
+- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot [screenshot]</a> - Take a screen capture.
+
+<a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a>
+
 ## 🐞 Bug report:
 
 If you want to report a bug, first, thank you, that helps us a lot. Please open an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">issue</a> and mention your OS, your Quick Picture Viewer version, and how to reproduce it. Adding a screenshot of the issue or screen recording is a big help too.
@@ -62,12 +69,16 @@ Help Module Art!
 * Fork and Clone! Awesome
 * Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
 
-## 🧩 Built-in plugins:
+Code contributors:
 
-- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region [blur]</a> - Blur or pixelate some area of the picture.<br>
-- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot [screenshot]</a> - Take a screen capture.
+- <a href="https://github.com/Beelink">Beelink</a>
 
-<a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a>
+Translation contributors:
+
+- <a href="https://github.com/jiwangyihao">jiwangyihao</a> (Chinese)
+- <a href="https://github.com/KristofKekesi">KristofKekesi</a> (Hungarian)
+- <a href="https://github.com/Beelink">Beelink</a> (Russian)
+- <a href="https://github.com/IpsumRy">IpsumRy</a> (Spanish)
 
 ## 🔗 Useful links:
 
