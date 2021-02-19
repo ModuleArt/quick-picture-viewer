@@ -20,8 +20,8 @@
   </a>
 </p>
 
+<h4 align="center">3.0.4 (Stable) - Feb 19, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.0.4/QuickPictureViewer-Setup.exe">Download (2.9 MB)</a></h4>
 <h4 align="center">v2.2.6 (Stable) - Nov 4, 2020 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a></h4>
-<h4 align="center">v3.0.3 (Beta 4) - Feb 17, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/raw/master/inno-setup/beta/v3.0.3-beta4.exe">Download (3 MB)</a></h4>
 
 <p align="center">	
   <a href="https://moduleart.github.io/quick-picture-viewer">
