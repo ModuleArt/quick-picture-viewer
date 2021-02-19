@@ -413,6 +413,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-imgfile.png" />
+    <None Include="resources\imgs\dark\black-image.png" />
+    <None Include="resources\imgs\dark\black-copy.png" />
+    <None Include="resources\imgs\dark\black-rotater.png" />
+    <None Include="resources\imgs\dark\black-edit.png" />
     <None Include="resources\imgs\dark\black-paste.png" />
     <None Include="resources\imgs\light\white-statusbar.png" />
     <None Include="resources\imgs\light\white-toolbar.png" />

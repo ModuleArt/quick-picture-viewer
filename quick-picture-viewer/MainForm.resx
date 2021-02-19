@@ -691,15 +691,6 @@
   <data name="rotateRightButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="rotateRightButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAL1JREFUOE/N0r8KglAYh2GX/hENrUXQVbQVQfcSQUPU0GV0I9HQ0NTkFFQEXUGN
-        TQ3R0Fbvz3MG7aiIky88eERQj35eIStjghOeeMDHGCWorj06tXHBGn00rRH20LUebnCq4opZcBbfCl/L
-        aQ49OakO7ki8gfas187dG3WzzFfWGzTwMstoR2TZwhAHs4w2xdYsU9tBc+JUgX7jIjiLbwnNgoYttv9B
-        0mzUMMAGZ7SQWniUP5a+T3iUC5Pn/QDwaSQM+jLsTgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="rotateRightButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+G</value>
   </data>
@@ -766,16 +757,6 @@
   <data name="customAngleBtn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="editButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVDhP1dGxCkFRGMDxUxLZLAYbA5lkMCosNmExyKK8
-        w30Ng8liNJksvAC7gZFiURi8gP93ThlwT+csyr9+db9Tt3vvd9WvqmJqLv1r4oySnjxrQW4u6smzDg4o
-        6Mkzee0Twp5s3UkfR+T09Jl1J1k8sENFDt5qQG4u6+lLAcao4YIVUpCcdrJG3VyqGEaYoAf5rDxCS0Oe
-        GtGTKYMrbDt5NcQGUSQxwBKyE6dfucAdW9wwQxtxOLXHHF0k5OAfUuoJr+Eie9zi9tEAAAAASUVORK5C
-        YII=
-</value>
-  </data>
   <data name="editButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -785,66 +766,28 @@
   <data name="editButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 25</value>
   </data>
-  <data name="copyButton.AutoSize" type="System.Boolean, mscorlib">
+  <data name="effectsBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="copyImageButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="copyImageButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAANZJREFUOE/N
-        0ksLQUEYxvEjisj99gV8UEtSloQFO8VCkoWFJJFsLJQPYoMo/u+MS6c5Mjue+tU7pzlPc07j/E3KOOJm
-        SfaW8MoZUT1aJY6THnWk9VtmmOpRxfWOTcECcz2qfCwIo4OsWn2OZ0EAI+ywRRKSNIbIqZWOZ0ELY0hR
-        FWvkscSzNAGJUVDEBhF5QHxo4IAu/KhBymSPUbBHSq3ekZIm5O+HHus6VjAKCno0Ip8zQB9yCtGDq0Au
-        UkyPngligjbkFBm4LlIFV0irjQtcV/lXcZw75iZGahwH6/4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="copyImageButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+C</value>
-  </data>
-  <data name="copyImageButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
-  </data>
-  <data name="copyImageButton.Text" xml:space="preserve">
-    <value>copy image</value>
-  </data>
-  <data name="copyFileBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="copyFileBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAKVJREFUOE/Nkj0KAjEUBl9rqwiCl7ATxNJLeAqPIXgZrbyLXkAsxUJFUOfbRFhD
-        8mK5A0N+md0i1jk2eMN34gVnWOWBwzD9QZETzpuVgy7m0L7+4IwLbZTwAl+v2ihRCrRx73iH2zj+FRjj
-        Po4p1cAID7jDI06xHasGerhsVmYrfKFiiipeDaRM4qio4m5AD6kfplkGeA/TPHrKT9RXcupsjZ3B7AP8
-        ljJY5GqjGgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="copyFileBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+C</value>
-  </data>
-  <data name="copyFileBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 24</value>
-  </data>
-  <data name="copyFileBtn.Text" xml:space="preserve">
-    <value>copy file</value>
-  </data>
-  <data name="copyButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVDhPY6AW6ALi70D8Hw8GybcDMVbwE4hFIUycQAyI
-        f0CYmABkAzEAp2tIMQAEMFxDqgEggKJn1ABIOhCCMHECYSBGDnkUA0Ap8TcQgwRxYZA8ctyDxLACclyD
-        AshxzYABBgYApSo8t1t1S1sAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="copyButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="effectsBtn.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="copyButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="effectsBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="copyButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="effectsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 25</value>
+  </data>
+  <data name="toolsBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolsBtn.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolsBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolsBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 25</value>
   </data>
   <data name="toolStripSeparator3.AutoSize" type="System.Boolean, mscorlib">
@@ -897,54 +840,6 @@
   </data>
   <data name="miniViewButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 25</value>
-  </data>
-  <data name="toolStripSeparator5.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 24</value>
-  </data>
-  <data name="effectsBtn.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pluginManBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F2</value>
-  </data>
-  <data name="pluginManBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 24</value>
-  </data>
-  <data name="pluginManBtn.Text" xml:space="preserve">
-    <value>plugin manager</value>
-  </data>
-  <data name="effectsBtn.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="effectsBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="effectsBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 25</value>
-  </data>
-  <data name="toolsBtn.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pluginManBtn2.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F2</value>
-  </data>
-  <data name="pluginManBtn2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 24</value>
-  </data>
-  <data name="pluginManBtn2.Text" xml:space="preserve">
-    <value>plugin manager</value>
-  </data>
-  <data name="toolsBtn.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolsBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolsBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 25</value>
   </data>
   <data name="qlibToolsep1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1126,6 +1021,18 @@
   <data name="newWindowButton.Text" xml:space="preserve">
     <value>new window</value>
   </data>
+  <data name="qlibToolsep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 6</value>
+  </data>
+  <data name="pluginManBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F2</value>
+  </data>
+  <data name="pluginManBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 24</value>
+  </data>
+  <data name="pluginManBtn.Text" xml:space="preserve">
+    <value>plugin manager</value>
+  </data>
   <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 6</value>
   </data>
@@ -1213,7 +1120,7 @@
     <value>toolStrip1</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolbar, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolbar, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1263,6 +1170,33 @@
   <data name="showMenuItem.Text" xml:space="preserve">
     <value>view</value>
   </data>
+  <data name="qlibToolsep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 6</value>
+  </data>
+  <data name="copyImageBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="copyImageBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 26</value>
+  </data>
+  <data name="copyImageBtn.Text" xml:space="preserve">
+    <value>copy image</value>
+  </data>
+  <data name="copyFileBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+C</value>
+  </data>
+  <data name="copyFileBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 26</value>
+  </data>
+  <data name="copyFileBtn.Text" xml:space="preserve">
+    <value>copy file</value>
+  </data>
+  <data name="copyBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 26</value>
+  </data>
+  <data name="copyBtn.Text" xml:space="preserve">
+    <value>copy</value>
+  </data>
   <data name="pasteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+V</value>
   </data>
@@ -1273,13 +1207,13 @@
     <value>paste</value>
   </data>
   <data name="rmbMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 56</value>
+    <value>162, 96</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Name" xml:space="preserve">
     <value>rmbMenu</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibContextMenuStrip, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibContextMenuStrip, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="suggestionIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1361,6 +1295,9 @@
   </data>
   <data name="pleaseOpenLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="pleaseOpenLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="pleaseOpenLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
@@ -1450,7 +1387,7 @@
     <value>picturePanel</value>
   </data>
   <data name="&gt;&gt;picturePanel.Type" xml:space="preserve">
-    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=3.0.3.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=3.0.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;picturePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -4134,6 +4071,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOAHAAA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>320, 320</value>
   </data>
@@ -4258,7 +4198,7 @@
     <value>toolStripSeparator4</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;infoButton.Name" xml:space="preserve">
     <value>infoButton</value>
@@ -4294,7 +4234,7 @@
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;autoZoomButton.Name" xml:space="preserve">
     <value>autoZoomButton</value>
@@ -4324,7 +4264,7 @@
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;editButton.Name" xml:space="preserve">
     <value>editButton</value>
@@ -4348,7 +4288,7 @@
     <value>toolStripSeparator7</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rotateRightButton.Name" xml:space="preserve">
     <value>rotateRightButton</value>
@@ -4374,29 +4314,23 @@
   <data name="&gt;&gt;customAngleBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;copyButton.Name" xml:space="preserve">
-    <value>copyButton</value>
+  <data name="&gt;&gt;effectsBtn.Name" xml:space="preserve">
+    <value>effectsBtn</value>
   </data>
-  <data name="&gt;&gt;copyButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;effectsBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;copyImageButton.Name" xml:space="preserve">
-    <value>copyImageButton</value>
+  <data name="&gt;&gt;toolsBtn.Name" xml:space="preserve">
+    <value>toolsBtn</value>
   </data>
-  <data name="&gt;&gt;copyImageButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyFileBtn.Name" xml:space="preserve">
-    <value>copyFileBtn</value>
-  </data>
-  <data name="&gt;&gt;copyFileBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolsBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkboardButton.Name" xml:space="preserve">
     <value>checkboardButton</value>
@@ -4416,41 +4350,11 @@
   <data name="&gt;&gt;miniViewButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
-    <value>toolStripSeparator5</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;effectsBtn.Name" xml:space="preserve">
-    <value>effectsBtn</value>
-  </data>
-  <data name="&gt;&gt;effectsBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pluginManBtn.Name" xml:space="preserve">
-    <value>pluginManBtn</value>
-  </data>
-  <data name="&gt;&gt;pluginManBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolsBtn.Name" xml:space="preserve">
-    <value>toolsBtn</value>
-  </data>
-  <data name="&gt;&gt;toolsBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pluginManBtn2.Name" xml:space="preserve">
-    <value>pluginManBtn2</value>
-  </data>
-  <data name="&gt;&gt;pluginManBtn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;qlibToolsep1.Name" xml:space="preserve">
     <value>qlibToolsep1</value>
   </data>
   <data name="&gt;&gt;qlibToolsep1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;moreButton.Name" xml:space="preserve">
     <value>moreButton</value>
@@ -4486,7 +4390,7 @@
     <value>qlibMenuSeparator2</value>
   </data>
   <data name="&gt;&gt;qlibMenuSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;actualSizeBtn.Name" xml:space="preserve">
     <value>actualSizeBtn</value>
@@ -4498,7 +4402,7 @@
     <value>toolStripSeparator9</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backColorBtn.Name" xml:space="preserve">
     <value>backColorBtn</value>
@@ -4516,7 +4420,7 @@
     <value>qlibMenuSeparator1</value>
   </data>
   <data name="&gt;&gt;qlibMenuSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backCustomBtn.Name" xml:space="preserve">
     <value>backCustomBtn</value>
@@ -4542,11 +4446,23 @@
   <data name="&gt;&gt;newWindowButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;qlibToolsep2.Name" xml:space="preserve">
+    <value>qlibToolsep2</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep2.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pluginManBtn.Name" xml:space="preserve">
+    <value>pluginManBtn</value>
+  </data>
+  <data name="&gt;&gt;pluginManBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator10.Name" xml:space="preserve">
     <value>toolStripSeparator10</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator10.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
     <value>settingsButton</value>
@@ -4582,6 +4498,30 @@
     <value>showStatusBarBtn</value>
   </data>
   <data name="&gt;&gt;showStatusBarBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep3.Name" xml:space="preserve">
+    <value>qlibToolsep3</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep3.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;copyBtn.Name" xml:space="preserve">
+    <value>copyBtn</value>
+  </data>
+  <data name="&gt;&gt;copyBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyImageBtn.Name" xml:space="preserve">
+    <value>copyImageBtn</value>
+  </data>
+  <data name="&gt;&gt;copyImageBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyFileBtn.Name" xml:space="preserve">
+    <value>copyFileBtn</value>
+  </data>
+  <data name="&gt;&gt;copyFileBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pasteBtn.Name" xml:space="preserve">

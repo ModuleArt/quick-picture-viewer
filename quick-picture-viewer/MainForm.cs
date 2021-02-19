@@ -187,10 +187,6 @@ namespace quick_picture_viewer
 			rotateLeftButton.Text = LangMan.Get("rotate-left");
 			rotate180Button.Text = LangMan.Get("rotate-180");
 
-			copyButton.Text = LangMan.Get("copy");
-			copyImageButton.Text = LangMan.Get("copy-image");
-			copyFileBtn.Text = LangMan.Get("copy-file");
-
 			externalBtn.Text = LangMan.Get("open-external");
 			externalRunBtn.Text = LangMan.Get("open-with-default");
 			externalChooseBtn.Text = LangMan.Get("open-with-choose") + " ...";
@@ -215,12 +211,14 @@ namespace quick_picture_viewer
 			effectsBtn.Text = LangMan.Get("effects");
 			toolsBtn.Text = LangMan.Get("tools");
 			pluginManBtn.Text = LangMan.Get("plugin-manager") + " ...";
-			pluginManBtn2.Text = LangMan.Get("plugin-manager") + " ...";
 
 			showMenuItem.Text = LangMan.Get("view");
 			showToolbarBtn.Text = LangMan.Get("show-toolbar");
 			showStatusBarBtn.Text = LangMan.Get("show-status-bar");
 			pasteBtn.Text = LangMan.Get("paste-image");
+			copyBtn.Text = LangMan.Get("copy");
+			copyImageBtn.Text = LangMan.Get("copy-image");
+			copyFileBtn.Text = LangMan.Get("copy-file");
 
 			framelessCloseBtn.Text = NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4";
 		}
@@ -580,7 +578,7 @@ namespace quick_picture_viewer
 				rotateRightButton.Enabled = true;
 				rotate180Button.Enabled = true;
 				saveAsButton.Enabled = true;
-				copyImageButton.Enabled = true;
+				copyImageBtn.Enabled = true;
 				autoZoomButton.Enabled = true;
 				setAsDesktopButton.Enabled = true;
 				infoButton.Enabled = true;
@@ -964,12 +962,6 @@ namespace quick_picture_viewer
 			saveFileDialog1.Dispose();
 		}
 
-		private void copyButton_Click(object sender, EventArgs e)
-		{
-			Clipboard.SetImage(originalImage);
-			showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
-		}
-
 		private void picturePanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -1286,10 +1278,6 @@ namespace quick_picture_viewer
 						{
 							autoZoomButton.PerformClick();
 						}
-						else if (e.KeyCode == Keys.V)
-						{
-							pasteBtn.PerformClick();
-						}
 						else if (e.KeyCode == Keys.Oemplus)
 						{
 							zoomInButton.PerformClick();
@@ -1380,14 +1368,6 @@ namespace quick_picture_viewer
 							Close();
 						}
 						setFullscreen(false);
-					}
-					else if (e.KeyCode == Keys.F7)
-					{
-						showToolbarBtn.PerformClick();
-					}
-					else if (e.KeyCode == Keys.F8)
-					{
-						showStatusBarBtn.PerformClick();
 					}
 				}
 			}
@@ -1611,7 +1591,7 @@ namespace quick_picture_viewer
 			rotate180Button.Enabled = false;
 			flipHorizontalButton.Enabled = false;
 			flipVerticalButton.Enabled = false;
-			copyImageButton.Enabled = false;
+			copyImageBtn.Enabled = false;
 			copyFileBtn.Enabled = false;
 			setAsDesktopButton.Enabled = false;
 			reloadButton.Enabled = false;
@@ -1704,9 +1684,6 @@ namespace quick_picture_viewer
 				customAngleBtn.Image = Properties.Resources.white_angle;
 
 				infoButton.Image = Properties.Resources.white_info;
-				copyButton.Image = Properties.Resources.white_copy;
-				copyImageButton.Image = Properties.Resources.white_image;
-				copyFileBtn.Image = Properties.Resources.white_imgfile;
 
 				checkboardButton.Image = Properties.Resources.white_grid;
 				fullscreenBtn.Image = Properties.Resources.white_fullscreen;
@@ -1739,7 +1716,6 @@ namespace quick_picture_viewer
 				effectsBtn.Image = Properties.Resources.white_effects;
 				toolsBtn.Image = Properties.Resources.white_tools;
 				pluginManBtn.Image = Properties.Resources.white_plugin;
-				pluginManBtn2.Image = Properties.Resources.white_plugin;
 
 				framelessCloseBtn.Image = Properties.Resources.white_close;
 
@@ -1750,6 +1726,9 @@ namespace quick_picture_viewer
 				showToolbarBtn.Image = Properties.Resources.white_toolbar;
 				showStatusBarBtn.Image = Properties.Resources.white_statusbar;
 				pasteBtn.Image = Properties.Resources.white_paste;
+				copyBtn.Image = Properties.Resources.white_copy;
+				copyImageBtn.Image = Properties.Resources.white_image;
+				copyFileBtn.Image = Properties.Resources.white_imgfile;
 			}
 
 			rmbMenu.DarkMode = dark;
@@ -2090,21 +2069,6 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void copyFileBtn_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
-				Clipboard.Clear();
-				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
-				showSuggestion(LangMan.Get("file-copied-to-clipboard"), SuggestionIcon.Check);
-			}
-			catch
-			{
-				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
-			}
-		}
-
 		private void externalRunBtn_Click(object sender, EventArgs e)
 		{
 			try
@@ -2249,23 +2213,8 @@ namespace quick_picture_viewer
 
 		private void effectsBtn_DropDownOpening(object sender, EventArgs eventArgs)
 		{
-			for (int i = effectsBtn.DropDownItems.Count - 1; i > 0; i--)
-			{
-				if (effectsBtn.DropDownItems[i].Image != null)
-				{
-					effectsBtn.DropDownItems[i].Image.Dispose();
-				}
-				effectsBtn.DropDownItems.Remove(effectsBtn.DropDownItems[i]);
-			}
-
-			for (int i = toolsBtn.DropDownItems.Count - 1; i > 0; i--)
-			{
-				if (toolsBtn.DropDownItems[i].Image != null)
-				{
-					toolsBtn.DropDownItems[i].Image.Dispose();
-				}
-				toolsBtn.DropDownItems.Remove(toolsBtn.DropDownItems[i]);
-			}
+			effectsBtn.DropDownItems.Clear();
+			toolsBtn.DropDownItems.Clear();
 
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 			PluginMan.apiVer = 3;
@@ -2326,15 +2275,6 @@ namespace quick_picture_viewer
 		private void zoomTextBox_MouseLeave(object sender, EventArgs e)
 		{
 			picturePanel.Focus();
-		}
-
-		private void pluginManBtn_Click(object sender, EventArgs e)
-		{
-			PluginManForm pmf = new PluginManForm();
-			pmf.Owner = this;
-			pmf.TopMost = alwaysOnTop;
-			pmf.DarkMode = darkMode;
-			pmf.ShowDialog();
 		}
 
 		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -2454,15 +2394,21 @@ namespace quick_picture_viewer
 
 		private void showStatusBarBtn_Click(object sender, EventArgs e)
 		{
-			statusStrip1.Visible = !statusStrip1.Visible;
-			Properties.Settings.Default.ShowStatusBar = statusStrip1.Visible;
+			if (!fullscreen)
+			{
+				statusStrip1.Visible = !Properties.Settings.Default.ShowStatusBar;
+			}
+			Properties.Settings.Default.ShowStatusBar = !Properties.Settings.Default.ShowStatusBar;
 			Properties.Settings.Default.Save();
 		}
 
 		private void showToolbarBtn_Click(object sender, EventArgs e)
 		{
-			toolStrip1.Visible = !toolStrip1.Visible;
-			Properties.Settings.Default.ShowToolbar = toolStrip1.Visible;
+			if (!fullscreen)
+			{
+				toolStrip1.Visible = !Properties.Settings.Default.ShowToolbar;
+			}
+			Properties.Settings.Default.ShowToolbar = !Properties.Settings.Default.ShowToolbar;
 			Properties.Settings.Default.Save();
 		}
 
@@ -2480,9 +2426,44 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void rmbMenu_Opened(object sender, EventArgs e)
+		private void pluginManBtn_Click_1(object sender, EventArgs e)
+		{
+			PluginManForm pmf = new PluginManForm();
+			pmf.Owner = this;
+			pmf.TopMost = alwaysOnTop;
+			pmf.DarkMode = darkMode;
+			pmf.ShowDialog();
+		}
+
+		private void copyImageBtn_Click(object sender, EventArgs e)
+		{
+			Clipboard.SetImage(originalImage);
+			showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
+		}
+
+		private void copyFileBtn_Click_1(object sender, EventArgs e)
+		{
+			try
+			{
+				string[] filesToCopy = { Path.Combine(currentFolder, currentFile) };
+				Clipboard.Clear();
+				Clipboard.SetData(DataFormats.FileDrop, filesToCopy);
+				showSuggestion(LangMan.Get("file-copied-to-clipboard"), SuggestionIcon.Check);
+			}
+			catch
+			{
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
+			}
+		}
+
+		private void rmbMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
 		{
 			pasteBtn.Enabled = Clipboard.ContainsImage() || Clipboard.ContainsData(DataFormats.FileDrop) || Clipboard.ContainsData(DataFormats.Dib);
+		}
+
+		private void copyImageBtn_EnabledChanged(object sender, EventArgs e)
+		{
+			copyBtn.Enabled = !(!copyImageBtn.Enabled && !copyFileBtn.Enabled);
 		}
 	}
 }

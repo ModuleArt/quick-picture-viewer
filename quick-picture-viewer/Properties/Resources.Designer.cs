@@ -93,6 +93,26 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_copy {
+            get {
+                object obj = ResourceManager.GetObject("black-copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_edit {
+            get {
+                object obj = ResourceManager.GetObject("black-edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_effects {
             get {
                 object obj = ResourceManager.GetObject("black_effects", resourceCulture);
@@ -106,6 +126,26 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap black_grid {
             get {
                 object obj = ResourceManager.GetObject("black-grid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_image {
+            get {
+                object obj = ResourceManager.GetObject("black-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_imgfile {
+            get {
+                object obj = ResourceManager.GetObject("black-imgfile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +226,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap black_plugin {
             get {
                 object obj = ResourceManager.GetObject("black_plugin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_rotater {
+            get {
+                object obj = ResourceManager.GetObject("black-rotater", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

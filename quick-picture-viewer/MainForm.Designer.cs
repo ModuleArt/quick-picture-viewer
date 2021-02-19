@@ -71,18 +71,12 @@
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.rotate180Button = new System.Windows.Forms.ToolStripMenuItem();
 			this.customAngleBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.copyButton = new System.Windows.Forms.ToolStripDropDownButton();
-			this.copyImageButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.effectsBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.toolsBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenBtn = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator5 = new QuickLibrary.QlibToolsep();
-			this.effectsBtn = new System.Windows.Forms.ToolStripDropDownButton();
-			this.pluginManBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolsBtn = new System.Windows.Forms.ToolStripDropDownButton();
-			this.pluginManBtn2 = new System.Windows.Forms.ToolStripMenuItem();
 			this.qlibToolsep1 = new QuickLibrary.QlibToolsep();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,6 +93,8 @@
 			this.onTopButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.framelessBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibToolsep2 = new QuickLibrary.QlibToolsep();
+			this.pluginManBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator10 = new QuickLibrary.QlibToolsep();
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,6 +103,10 @@
 			this.showMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.showStatusBarBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibToolsep3 = new QuickLibrary.QlibToolsep();
+			this.copyBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.copyImageBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
@@ -247,14 +247,12 @@
             this.zoomInButton,
             this.toolStripSeparator2,
             this.editButton,
-            this.copyButton,
+            this.effectsBtn,
+            this.toolsBtn,
             this.toolStripSeparator3,
             this.checkboardButton,
             this.fullscreenBtn,
             this.miniViewButton,
-            this.toolStripSeparator5,
-            this.effectsBtn,
-            this.toolsBtn,
             this.qlibToolsep1,
             this.moreButton,
             this.framelessCloseBtn});
@@ -442,6 +440,8 @@
             this.rotateLeftButton,
             this.rotate180Button,
             this.customAngleBtn});
+			this.editButton.ForeColor = System.Drawing.Color.Black;
+			this.editButton.Image = global::quick_picture_viewer.Properties.Resources.black_edit;
 			this.editButton.Margin = new System.Windows.Forms.Padding(0);
 			this.editButton.Name = "editButton";
 			// 
@@ -475,6 +475,7 @@
 			this.rotateRightButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.rotateRightButton, "rotateRightButton");
 			this.rotateRightButton.ForeColor = System.Drawing.Color.Black;
+			this.rotateRightButton.Image = global::quick_picture_viewer.Properties.Resources.black_rotater;
 			this.rotateRightButton.Name = "rotateRightButton";
 			this.rotateRightButton.Click += new System.EventHandler(this.rotateRightButton_Click);
 			// 
@@ -502,31 +503,23 @@
 			this.customAngleBtn.Image = global::quick_picture_viewer.Properties.Resources.black_angle;
 			this.customAngleBtn.Name = "customAngleBtn";
 			// 
-			// copyButton
+			// effectsBtn
 			// 
-			resources.ApplyResources(this.copyButton, "copyButton");
-			this.copyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.copyButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyImageButton,
-            this.copyFileBtn});
-			this.copyButton.Margin = new System.Windows.Forms.Padding(0);
-			this.copyButton.Name = "copyButton";
+			resources.ApplyResources(this.effectsBtn, "effectsBtn");
+			this.effectsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.effectsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_effects;
+			this.effectsBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.effectsBtn.Name = "effectsBtn";
+			this.effectsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
 			// 
-			// copyImageButton
+			// toolsBtn
 			// 
-			this.copyImageButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			resources.ApplyResources(this.copyImageButton, "copyImageButton");
-			this.copyImageButton.ForeColor = System.Drawing.Color.Black;
-			this.copyImageButton.Name = "copyImageButton";
-			this.copyImageButton.Click += new System.EventHandler(this.copyButton_Click);
-			// 
-			// copyFileBtn
-			// 
-			this.copyFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			resources.ApplyResources(this.copyFileBtn, "copyFileBtn");
-			this.copyFileBtn.ForeColor = System.Drawing.Color.Black;
-			this.copyFileBtn.Name = "copyFileBtn";
-			this.copyFileBtn.Click += new System.EventHandler(this.copyFileBtn_Click);
+			resources.ApplyResources(this.toolsBtn, "toolsBtn");
+			this.toolsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_tools;
+			this.toolsBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.toolsBtn.Name = "toolsBtn";
+			this.toolsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
 			// 
 			// toolStripSeparator3
 			// 
@@ -562,55 +555,6 @@
 			this.miniViewButton.Name = "miniViewButton";
 			this.miniViewButton.Click += new System.EventHandler(this.miniViewButton_Click);
 			// 
-			// toolStripSeparator5
-			// 
-			resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
-			this.toolStripSeparator5.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.toolStripSeparator5.DarkMode = false;
-			this.toolStripSeparator5.InsideMenu = false;
-			this.toolStripSeparator5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			// 
-			// effectsBtn
-			// 
-			resources.ApplyResources(this.effectsBtn, "effectsBtn");
-			this.effectsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.effectsBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pluginManBtn});
-			this.effectsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_effects;
-			this.effectsBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.effectsBtn.Name = "effectsBtn";
-			this.effectsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
-			// 
-			// pluginManBtn
-			// 
-			this.pluginManBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.pluginManBtn.ForeColor = System.Drawing.Color.Black;
-			this.pluginManBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
-			this.pluginManBtn.Name = "pluginManBtn";
-			resources.ApplyResources(this.pluginManBtn, "pluginManBtn");
-			this.pluginManBtn.Click += new System.EventHandler(this.pluginManBtn_Click);
-			// 
-			// toolsBtn
-			// 
-			resources.ApplyResources(this.toolsBtn, "toolsBtn");
-			this.toolsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolsBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pluginManBtn2});
-			this.toolsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_tools;
-			this.toolsBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.toolsBtn.Name = "toolsBtn";
-			this.toolsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
-			// 
-			// pluginManBtn2
-			// 
-			this.pluginManBtn2.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.pluginManBtn2.ForeColor = System.Drawing.Color.Black;
-			this.pluginManBtn2.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
-			this.pluginManBtn2.Name = "pluginManBtn2";
-			resources.ApplyResources(this.pluginManBtn2, "pluginManBtn2");
-			this.pluginManBtn2.Click += new System.EventHandler(this.pluginManBtn_Click);
-			// 
 			// qlibToolsep1
 			// 
 			resources.ApplyResources(this.qlibToolsep1, "qlibToolsep1");
@@ -636,6 +580,8 @@
             this.onTopButton,
             this.framelessBtn,
             this.newWindowButton,
+            this.qlibToolsep2,
+            this.pluginManBtn,
             this.toolStripSeparator10,
             this.settingsButton,
             this.aboutBtn});
@@ -765,6 +711,24 @@
 			resources.ApplyResources(this.newWindowButton, "newWindowButton");
 			this.newWindowButton.Click += new System.EventHandler(this.newWindowButton_Click);
 			// 
+			// qlibToolsep2
+			// 
+			this.qlibToolsep2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep2.DarkMode = false;
+			this.qlibToolsep2.InsideMenu = true;
+			this.qlibToolsep2.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibToolsep2.Name = "qlibToolsep2";
+			resources.ApplyResources(this.qlibToolsep2, "qlibToolsep2");
+			// 
+			// pluginManBtn
+			// 
+			this.pluginManBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.pluginManBtn.ForeColor = System.Drawing.Color.Black;
+			this.pluginManBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
+			this.pluginManBtn.Name = "pluginManBtn";
+			resources.ApplyResources(this.pluginManBtn, "pluginManBtn");
+			this.pluginManBtn.Click += new System.EventHandler(this.pluginManBtn_Click_1);
+			// 
 			// toolStripSeparator10
 			// 
 			this.toolStripSeparator10.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -808,13 +772,15 @@
 			this.rmbMenu.ForeColor = System.Drawing.Color.Black;
 			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showMenuItem,
+            this.qlibToolsep3,
+            this.copyBtn,
             this.pasteBtn});
 			this.rmbMenu.Name = "rmbMenu";
-			this.rmbMenu.Opened += new System.EventHandler(this.rmbMenu_Opened);
+			this.rmbMenu.Opening += new System.ComponentModel.CancelEventHandler(this.rmbMenu_Opening);
 			// 
 			// showMenuItem
 			// 
-			this.showMenuItem.BackColor = System.Drawing.SystemColors.Control;
+			this.showMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.showMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showToolbarBtn,
             this.showStatusBarBtn});
@@ -826,7 +792,8 @@
 			// 
 			// showToolbarBtn
 			// 
-			this.showToolbarBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.showToolbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showToolbarBtn.ForeColor = System.Drawing.Color.Black;
 			this.showToolbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_toolbar;
 			this.showToolbarBtn.Name = "showToolbarBtn";
 			this.showToolbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -835,16 +802,60 @@
 			// 
 			// showStatusBarBtn
 			// 
-			this.showStatusBarBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.showStatusBarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showStatusBarBtn.ForeColor = System.Drawing.Color.Black;
 			this.showStatusBarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
 			this.showStatusBarBtn.Name = "showStatusBarBtn";
 			this.showStatusBarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			resources.ApplyResources(this.showStatusBarBtn, "showStatusBarBtn");
 			this.showStatusBarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
 			// 
+			// qlibToolsep3
+			// 
+			this.qlibToolsep3.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep3.DarkMode = false;
+			this.qlibToolsep3.InsideMenu = true;
+			this.qlibToolsep3.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibToolsep3.Name = "qlibToolsep3";
+			resources.ApplyResources(this.qlibToolsep3, "qlibToolsep3");
+			// 
+			// copyBtn
+			// 
+			this.copyBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyImageBtn,
+            this.copyFileBtn});
+			this.copyBtn.ForeColor = System.Drawing.Color.Black;
+			this.copyBtn.Image = global::quick_picture_viewer.Properties.Resources.black_copy;
+			this.copyBtn.Name = "copyBtn";
+			this.copyBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.copyBtn, "copyBtn");
+			// 
+			// copyImageBtn
+			// 
+			this.copyImageBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyImageBtn.ForeColor = System.Drawing.Color.Black;
+			this.copyImageBtn.Image = global::quick_picture_viewer.Properties.Resources.black_image;
+			this.copyImageBtn.Name = "copyImageBtn";
+			this.copyImageBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.copyImageBtn, "copyImageBtn");
+			this.copyImageBtn.Click += new System.EventHandler(this.copyImageBtn_Click);
+			this.copyImageBtn.EnabledChanged += new System.EventHandler(this.copyImageBtn_EnabledChanged);
+			// 
+			// copyFileBtn
+			// 
+			this.copyFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.copyFileBtn.ForeColor = System.Drawing.Color.Black;
+			this.copyFileBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.copyFileBtn.Name = "copyFileBtn";
+			this.copyFileBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.copyFileBtn, "copyFileBtn");
+			this.copyFileBtn.Click += new System.EventHandler(this.copyFileBtn_Click_1);
+			this.copyFileBtn.EnabledChanged += new System.EventHandler(this.copyImageBtn_EnabledChanged);
+			// 
 			// pasteBtn
 			// 
-			this.pasteBtn.BackColor = System.Drawing.SystemColors.Control;
+			this.pasteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.pasteBtn.ForeColor = System.Drawing.Color.Black;
 			this.pasteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_paste;
 			this.pasteBtn.Name = "pasteBtn";
@@ -969,7 +980,6 @@
 		private System.Windows.Forms.ToolStripStatusLabel zoomLabel;
 		private System.Windows.Forms.ToolStripButton nextButton;
 		private QuickLibrary.QlibToolsep toolStripSeparator4;
-		private QuickLibrary.QlibToolsep toolStripSeparator5;
 		private System.Windows.Forms.ToolStripButton prevButton;
 		private System.Windows.Forms.ToolStripStatusLabel dateCreatedLabel;
 		private System.Windows.Forms.ToolStripStatusLabel dateModifiedLabel;
@@ -1001,9 +1011,6 @@
 		private QuickLibrary.QlibToolsep toolStripSeparator7;
 		private QuickLibrary.QlibToolsep toolStripSeparator9;
 		private QuickLibrary.QlibToolsep toolStripSeparator10;
-		private System.Windows.Forms.ToolStripDropDownButton copyButton;
-		private System.Windows.Forms.ToolStripMenuItem copyImageButton;
-		private System.Windows.Forms.ToolStripMenuItem copyFileBtn;
 		private System.Windows.Forms.ToolStripMenuItem printButton;
 		private System.Windows.Forms.ToolStripMenuItem onTopButton;
 		private System.Windows.Forms.ToolStripTextBox zoomTextBox;
@@ -1023,10 +1030,8 @@
 		private System.Windows.Forms.ToolStripMenuItem customAngleBtn;
 		private QuickLibrary.QlibToolsep toolStripSeparator3;
 		private System.Windows.Forms.ToolStripDropDownButton effectsBtn;
-		private System.Windows.Forms.ToolStripMenuItem pluginManBtn;
 		private System.Windows.Forms.PictureBox suggestionIcon;
 		private System.Windows.Forms.ToolStripDropDownButton toolsBtn;
-		private System.Windows.Forms.ToolStripMenuItem pluginManBtn2;
 		private QuickLibrary.QlibToolsep qlibToolsep1;
 		private System.Windows.Forms.ToolStripButton fullscreenBtn;
 		private QuickLibrary.QlibContextMenuStrip rmbMenu;
@@ -1034,5 +1039,11 @@
 		private System.Windows.Forms.ToolStripMenuItem showStatusBarBtn;
 		private System.Windows.Forms.ToolStripMenuItem showToolbarBtn;
 		private System.Windows.Forms.ToolStripMenuItem pasteBtn;
+		private System.Windows.Forms.ToolStripMenuItem pluginManBtn;
+		private QuickLibrary.QlibToolsep qlibToolsep2;
+		private System.Windows.Forms.ToolStripMenuItem copyBtn;
+		private System.Windows.Forms.ToolStripMenuItem copyImageBtn;
+		private System.Windows.Forms.ToolStripMenuItem copyFileBtn;
+		private QuickLibrary.QlibToolsep qlibToolsep3;
 	}
 }

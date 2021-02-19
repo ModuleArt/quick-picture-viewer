@@ -26,17 +26,6 @@ body {
     background: #f1f1f1;  
 }
 
-body::after {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 128px;
-    content: "";
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f1f1f1);
-    pointer-events: none;
-}
-
 /* HEADER */
 
 header {
@@ -93,6 +82,8 @@ header .navbar .link {
     transition: border-color var(--animation-speed), transform var(--animation-speed);
     vertical-align: middle;
     display: inline-block;
+	text-align: center;
+	min-width: 85px;
 }
 
 header .navbar a:hover .link {
@@ -295,7 +286,7 @@ main .content {
     padding: 32px;
     filter: var(--filter-shadow-black);
     background: #fff;
-    max-width: 570px;
+    max-width: 580px;
     width: 100%;
     font: 16px/24px "Inter";
     text-align: left;
