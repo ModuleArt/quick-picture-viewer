@@ -866,7 +866,7 @@
     <value>False</value>
   </data>
   <data name="deleteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Del</value>
+    <value>Delete</value>
   </data>
   <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>334, 24</value>
