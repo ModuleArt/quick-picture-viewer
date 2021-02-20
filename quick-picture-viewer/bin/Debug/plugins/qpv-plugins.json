@@ -1,9 +1,11 @@
 {
   "name": "qpv-plugins",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "title": "QPV Plugins",
   "description": {
     "en": "Set of preinstalled plugins",
+    "cn": "一组预装的插件",
+    "hu": "Előre telepített bővítmények készlete",
     "ru": "Набор предустановленных плагинов",
     "es": "Conjunto de complementos preinstalados"
   },
@@ -21,19 +23,65 @@
     {
       "name": "blur",
       "title": {
-        "en": "Blur region",
-        "ru": "Размыть область",
-        "es": "Área de desenfoque"
+        "en": "Blur",
+        "cn": "模糊",
+        "hu": "Elhomályosít",
+        "ru": "Размытие",
+        "es": "Difuminar"
       },
       "type": "effect",
       "inputRequired": true,
       "dialog": true,
       "hideMainForm":  false
     },
+	  {
+      "name": "grayscale",
+      "title": {
+        "en": "Grayscale",
+        "cn": "灰阶",
+        "hu": "Szürkeárnyalatos",
+        "ru": "Оттенки серого",
+        "es": "Escala de grises"
+      },
+      "type": "effect",
+      "inputRequired": true,
+      "dialog": false,
+      "hideMainForm":  false
+    },
+	  {
+      "name": "invert",
+      "title": {
+        "en": "Invert colors",
+        "cn": "反转颜色",
+        "hu": "Invert színek",
+        "ru": "Инвертировать цвета",
+        "es": "Captura de pantalla"
+      },
+      "type": "effect",
+      "inputRequired": true,
+      "dialog": false,
+      "hideMainForm":  false
+    },
+	  {
+      "name": "rainbow",
+      "title": {
+        "en": "Rainbow",
+        "cn": "彩虹",
+        "hu": "Szivárvány",
+        "ru": "Радуга",
+        "es": "Arcoíris"
+      },
+      "type": "effect",
+      "inputRequired": true,
+      "dialog": false,
+      "hideMainForm":  false
+    },
     {
       "name": "screenshot",
       "title": {
         "en": "Screenshot",
+        "cn": "截屏",
+        "hu": "Pillanatkép",
         "ru": "Скриншот",
         "es": "Captura de pantalla"
       },

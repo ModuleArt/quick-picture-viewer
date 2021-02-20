@@ -40,7 +40,7 @@ namespace quick_picture_viewer
 			new Language
 			{
 				Code = "es",
-				Authors = new string[] { "IpsumRy" }
+				Authors = new string[] { "asluppiter" }
 			}
 		};
 

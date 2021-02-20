@@ -78,7 +78,7 @@ Translation contributors:
 - <a href="https://github.com/jiwangyihao">jiwangyihao</a> (Chinese)
 - <a href="https://github.com/KristofKekesi">KristofKekesi</a> (Hungarian)
 - <a href="https://github.com/Beelink">Beelink</a> (Russian)
-- <a href="https://github.com/IpsumRy">IpsumRy</a> (Spanish)
+- <a href="https://github.com/asluppiter">asluppiter</a> (Spanish)
 
 ## 🔗 Useful links:
 
