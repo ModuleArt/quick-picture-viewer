@@ -53,6 +53,7 @@
     value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
+
     mimetype: application/x-microsoft.net.object.bytearray.base64
     value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
@@ -389,6 +390,10 @@
     <value>Magasság</value>
     <comment>SVG options</comment>
   </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Segítsen nekünk az alkalmazás lefordításában</value>
+    <comment>Settings</comment>
+  </data>
   <data name="image" xml:space="preserve">
     <value>Kép</value>
     <comment>Print</comment>
@@ -478,7 +483,6 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="mouse-wheel-action" xml:space="preserve">
-    <value>Mouse wheel scroll action</value>
     <value>Egérgörgő művelete</value>
     <comment>Settings</comment>
   </data>
@@ -534,12 +538,20 @@
     <value>Nem mentett</value>
     <comment>Status bar</comment>
   </data>
+  <data name="open" xml:space="preserve">
+    <value>Nyisd ki</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-external" xml:space="preserve">
     <value>Fájl megnyitása külső alkalmazással</value>
     <comment>Menu</comment>
   </data>
   <data name="open-file" xml:space="preserve">
     <value>Fájl megnyitása</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Rekurzívan nyissa meg a mappát</value>
     <comment>Menu</comment>
   </data>
   <data name="open-windows-settings" xml:space="preserve">
@@ -555,7 +567,6 @@
     <comment>Menu</comment>
   </data>
   <data name="open-with-custom" xml:space="preserve">
-    <value>Open with custom app</value>
     <value>Megyitás másik alkalmazással</value>
     <comment>Menu</comment>
   </data>

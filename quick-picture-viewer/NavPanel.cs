@@ -103,7 +103,7 @@ namespace quick_picture_viewer
 
 		private void navNextBtn_Click(object sender, System.EventArgs e)
 		{
-			owner.nextFile();
+			owner.NextFile();
 		}
 
 		private void navSlideshowBtn_Click(object sender, System.EventArgs e)
@@ -113,7 +113,7 @@ namespace quick_picture_viewer
 
 		private void navPrevBtn_Click(object sender, System.EventArgs e)
 		{
-			owner.prevFile();
+			owner.PrevFile();
 		}
 	}
 }

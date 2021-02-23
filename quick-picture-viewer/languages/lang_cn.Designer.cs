@@ -674,6 +674,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 帮助我们翻译这个程序.
+        /// </summary>
+        public static string help_us_translate_app {
+            get {
+                return ResourceManager.GetString("help-us-translate-app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 图像.
         /// </summary>
         public static string image {
@@ -998,6 +1007,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 打开.
+        /// </summary>
+        public static string open {
+            get {
+                return ResourceManager.GetString("open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 使用其他程序打开.
         /// </summary>
         public static string open_external {
@@ -1012,6 +1030,15 @@ namespace quick_picture_viewer.languages {
         public static string open_file {
             get {
                 return ResourceManager.GetString("open-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 递归打开文件夹.
+        /// </summary>
+        public static string open_recursive {
+            get {
+                return ResourceManager.GetString("open-recursive", resourceCulture);
             }
         }
         

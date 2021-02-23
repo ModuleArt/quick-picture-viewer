@@ -223,9 +223,29 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_picfolder {
+            get {
+                object obj = ResourceManager.GetObject("black-picfolder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_plugin {
             get {
                 object obj = ResourceManager.GetObject("black_plugin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_recursive {
+            get {
+                object obj = ResourceManager.GetObject("black_recursive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -786,6 +806,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_print {
             get {
                 object obj = ResourceManager.GetObject("white-print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_recursive {
+            get {
+                object obj = ResourceManager.GetObject("white_recursive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -673,6 +673,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help us to translate this app.
+        /// </summary>
+        public static string help_us_translate_app {
+            get {
+                return ResourceManager.GetString("help-us-translate-app", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image.
         /// </summary>
         public static string image {
@@ -997,6 +1006,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string open {
+            get {
+                return ResourceManager.GetString("open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open file with external app.
         /// </summary>
         public static string open_external {
@@ -1011,6 +1029,15 @@ namespace quick_picture_viewer.languages {
         public static string open_file {
             get {
                 return ResourceManager.GetString("open-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open folder recursively.
+        /// </summary>
+        public static string open_recursive {
+            get {
+                return ResourceManager.GetString("open-recursive", resourceCulture);
             }
         }
         

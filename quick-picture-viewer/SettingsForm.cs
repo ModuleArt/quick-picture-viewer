@@ -155,6 +155,7 @@ namespace quick_picture_viewer
 			navBarFullscreenCheckBox.Text = LangMan.Get("nav-bar-fullscreen");
 			openWithCheckBox.Text = LangMan.Get("open-with-qpv");
 			browseWithCheckBox.Text = LangMan.Get("browse-folder-with-qpv");
+			helpTranslateBtn.Text = LangMan.Get("help-us-translate-app");
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -165,8 +166,12 @@ namespace quick_picture_viewer
 				browseBtn.Image = Properties.Resources.white_open;
 				browseBtn.BackColor = ThemeMan.DarkSecondColor;
 				browseBtn.ForeColor = Color.White;
+
 				makeDefaultBtn.BackColor = ThemeMan.DarkSecondColor;
 				makeDefaultBtn.ForeColor = Color.White;
+
+				helpTranslateBtn.BackColor = ThemeMan.DarkSecondColor;
+				helpTranslateBtn.ForeColor = Color.White;
 			}
 
 			DarkMode = dark;
@@ -513,6 +518,11 @@ namespace quick_picture_viewer
 		private void makeDefaultBtn_Click(object sender, EventArgs e)
 		{
 			Process.Start("ms-settings:defaultapps");
+		}
+
+		private void helpTranslateBtn_Click(object sender, EventArgs e)
+		{
+			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-to-translate-the-app");
 		}
 	}
 }

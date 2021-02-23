@@ -389,6 +389,10 @@
     <value>Height</value>
     <comment>SVG options</comment>
   </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Help us to translate this app</value>
+    <comment>Settings</comment>
+  </data>
   <data name="image" xml:space="preserve">
     <value>Image</value>
     <comment>Print</comment>
@@ -533,12 +537,20 @@
     <value>Not saved</value>
     <comment>Status bar</comment>
   </data>
+  <data name="open" xml:space="preserve">
+    <value>Open</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-external" xml:space="preserve">
     <value>Open file with external app</value>
     <comment>Menu</comment>
   </data>
   <data name="open-file" xml:space="preserve">
     <value>Open file</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Open folder recursively</value>
     <comment>Menu</comment>
   </data>
   <data name="open-windows-settings" xml:space="preserve">

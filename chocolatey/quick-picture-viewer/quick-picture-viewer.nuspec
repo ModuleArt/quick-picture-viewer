@@ -3,7 +3,7 @@
   <metadata>
     <id>quick-picture-viewer</id>
     <version>3.0.4</version>
-    <packageSourceUrl>https://github.com/ModuleArt/quick-picture-viewer/chocolatey/quick-picture-viewer</packageSourceUrl>
+    <packageSourceUrl>https://github.com/ModuleArt/quick-picture-viewer/tree/master/chocolatey/quick-picture-viewer</packageSourceUrl>
     <owners>Module Art</owners>
     <title>Quick Picture Viewer</title>
     <authors>Module Art</authors>

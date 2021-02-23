@@ -413,6 +413,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-recursive.png" />
+    <None Include="resources\imgs\light\white-recursive.png" />
+    <None Include="resources\imgs\dark\black-picfolder.png" />
     <None Include="resources\imgs\dark\black-imgfile.png" />
     <None Include="resources\imgs\dark\black-image.png" />
     <None Include="resources\imgs\dark\black-copy.png" />

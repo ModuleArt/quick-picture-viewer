@@ -65,6 +65,7 @@
 			this.favExtTextBox = new QuickLibrary.QlibTextBox();
 			this.favExtLabel = new System.Windows.Forms.Label();
 			this.langPage = new System.Windows.Forms.TabPage();
+			this.helpTranslateBtn = new System.Windows.Forms.Button();
 			this.translateAuthorsPanel = new System.Windows.Forms.Panel();
 			this.translatedByLabel = new System.Windows.Forms.Label();
 			this.langLabel = new System.Windows.Forms.Label();
@@ -697,6 +698,7 @@
 			// langPage
 			// 
 			this.langPage.BackColor = System.Drawing.SystemColors.Control;
+			this.langPage.Controls.Add(this.helpTranslateBtn);
 			this.langPage.Controls.Add(this.translateAuthorsPanel);
 			this.langPage.Controls.Add(this.translatedByLabel);
 			this.langPage.Controls.Add(this.langLabel);
@@ -710,6 +712,20 @@
 			this.langPage.Size = new System.Drawing.Size(372, 226);
 			this.langPage.TabIndex = 6;
 			this.langPage.Text = "localization";
+			// 
+			// helpTranslateBtn
+			// 
+			this.helpTranslateBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.helpTranslateBtn.FlatAppearance.BorderSize = 0;
+			this.helpTranslateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.helpTranslateBtn.Location = new System.Drawing.Point(10, 110);
+			this.helpTranslateBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.helpTranslateBtn.Name = "helpTranslateBtn";
+			this.helpTranslateBtn.Size = new System.Drawing.Size(352, 32);
+			this.helpTranslateBtn.TabIndex = 2;
+			this.helpTranslateBtn.Text = "help us to translate the app";
+			this.helpTranslateBtn.UseVisualStyleBackColor = false;
+			this.helpTranslateBtn.Click += new System.EventHandler(this.helpTranslateBtn_Click);
 			// 
 			// translateAuthorsPanel
 			// 
@@ -774,7 +790,7 @@
 			this.localizationRestart.Margin = new System.Windows.Forms.Padding(0);
 			this.localizationRestart.Name = "localizationRestart";
 			this.localizationRestart.Size = new System.Drawing.Size(352, 19);
-			this.localizationRestart.TabIndex = 2;
+			this.localizationRestart.TabIndex = 3;
 			this.localizationRestart.TabStop = true;
 			this.localizationRestart.Text = "restart";
 			this.localizationRestart.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -912,5 +928,6 @@
 		private System.Windows.Forms.TabPage navBarPage;
 		private QuickLibrary.QlibCheckBox navBarCheckBox;
 		private QuickLibrary.QlibCheckBox navBarFullscreenCheckBox;
+		private System.Windows.Forms.Button helpTranslateBtn;
 	}
 }

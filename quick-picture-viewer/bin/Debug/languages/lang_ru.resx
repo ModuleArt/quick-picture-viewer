@@ -389,6 +389,10 @@
     <value>Высота</value>
     <comment>SVG options</comment>
   </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Помогите нам перевести это приложение</value>
+    <comment>Settings</comment>
+  </data>
   <data name="image" xml:space="preserve">
     <value>Изображение</value>
     <comment>Print</comment>
@@ -533,12 +537,20 @@
     <value>Не сохранено</value>
     <comment>Status bar</comment>
   </data>
+  <data name="open" xml:space="preserve">
+    <value>Открыть</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-external" xml:space="preserve">
     <value>Открыть файл с помощью стороннего приложения</value>
     <comment>Menu</comment>
   </data>
   <data name="open-file" xml:space="preserve">
     <value>Открыть файл</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Открыть папку рекурсивно</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with" xml:space="preserve">

@@ -45,7 +45,9 @@
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.toolStrip1 = new QuickLibrary.QlibToolbar();
-			this.openButton = new System.Windows.Forms.ToolStripButton();
+			this.openBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.openRecursive = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.externalBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,6 +111,7 @@
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeOpsButton = new System.Windows.Forms.Button();
+			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
@@ -159,16 +162,18 @@
 			// directoryLabel
 			// 
 			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.directoryLabel, "directoryLabel");
+			this.directoryLabel.Image = global::quick_picture_viewer.Properties.Resources.black_picfolder;
 			this.directoryLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
 			this.directoryLabel.Name = "directoryLabel";
+			resources.ApplyResources(this.directoryLabel, "directoryLabel");
 			// 
 			// fileLabel
 			// 
 			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.fileLabel, "fileLabel");
+			this.fileLabel.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
 			this.fileLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
 			this.fileLabel.Name = "fileLabel";
+			resources.ApplyResources(this.fileLabel, "fileLabel");
 			// 
 			// sizeLabel
 			// 
@@ -231,7 +236,7 @@
 			this.toolStrip1.ForeColor = System.Drawing.Color.Black;
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openButton,
+            this.openBtn,
             this.saveAsButton,
             this.externalBtn,
             this.toolStripSeparator4,
@@ -260,14 +265,34 @@
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.VisibleChanged += new System.EventHandler(this.toolStrip1_VisibleChanged);
 			// 
-			// openButton
+			// openBtn
 			// 
-			resources.ApplyResources(this.openButton, "openButton");
-			this.openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.openButton.Image = global::quick_picture_viewer.Properties.Resources.black_open;
-			this.openButton.Margin = new System.Windows.Forms.Padding(0);
-			this.openButton.Name = "openButton";
-			this.openButton.Click += new System.EventHandler(this.openButton_Click_1);
+			resources.ApplyResources(this.openBtn, "openBtn");
+			this.openBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.openBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openFileBtn,
+            this.openRecursive});
+			this.openBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
+			this.openBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.openBtn.Name = "openBtn";
+			// 
+			// openFileBtn
+			// 
+			this.openFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.openFileBtn.ForeColor = System.Drawing.Color.Black;
+			this.openFileBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.openFileBtn.Name = "openFileBtn";
+			resources.ApplyResources(this.openFileBtn, "openFileBtn");
+			this.openFileBtn.Click += new System.EventHandler(this.openFileBtn_Click);
+			// 
+			// openRecursive
+			// 
+			this.openRecursive.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.openRecursive.ForeColor = System.Drawing.Color.Black;
+			this.openRecursive.Image = global::quick_picture_viewer.Properties.Resources.black_recursive;
+			this.openRecursive.Name = "openRecursive";
+			resources.ApplyResources(this.openRecursive, "openRecursive");
+			this.openRecursive.Click += new System.EventHandler(this.openRecursive_Click);
 			// 
 			// saveAsButton
 			// 
@@ -965,7 +990,6 @@
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.IO.FileSystemWatcher fileSystemWatcher1;
 		private QuickLibrary.QlibToolbar toolStrip1;
-		private System.Windows.Forms.ToolStripButton openButton;
 		private QuickLibrary.QlibToolsep toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton zoomInButton;
 		private System.Windows.Forms.ToolStripButton zoomOutButton;
@@ -1045,5 +1069,9 @@
 		private System.Windows.Forms.ToolStripMenuItem copyImageBtn;
 		private System.Windows.Forms.ToolStripMenuItem copyFileBtn;
 		private QuickLibrary.QlibToolsep qlibToolsep3;
+		private System.Windows.Forms.ToolStripDropDownButton openBtn;
+		private System.Windows.Forms.ToolStripMenuItem openFileBtn;
+		private System.Windows.Forms.ToolStripMenuItem openRecursive;
+		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
 	}
 }

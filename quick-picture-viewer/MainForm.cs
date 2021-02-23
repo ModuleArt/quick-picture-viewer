@@ -23,8 +23,6 @@ namespace quick_picture_viewer
 		private bool autoZoom = true;
 		private Point panelMouseDownLocation;
 		private bool fullscreen = false;
-		private string currentFolder;
-		private string currentFile;
 		private bool alwaysOnTop = false;
 		private bool imageChanged = false;
 		private bool darkMode = false;
@@ -38,6 +36,10 @@ namespace quick_picture_viewer
 		private System.Threading.Timer suggestionTimer;
 		private NavPanel navPanel = null;
 		private bool framelessMode = false;
+
+		private string currentFolder;
+		private string recursiveFolder;
+		private string currentFile;
 
 		public bool printCenterImage = true;
 		public bool restartApp = false;
@@ -115,12 +117,12 @@ namespace quick_picture_viewer
 		{
 			if (keyData == Keys.Left)
 			{
-				prevFile();
+				PrevFile();
 				return true;
 			}
 			else if (keyData == Keys.Right)
 			{
-				nextFile();
+				NextFile();
 				return true;
 			}
 			else if (keyData == Keys.Down)
@@ -191,7 +193,10 @@ namespace quick_picture_viewer
 			externalRunBtn.Text = LangMan.Get("open-with-default");
 			externalChooseBtn.Text = LangMan.Get("open-with-choose") + " ...";
 
-			openButton.Text = LangMan.Get("open-file") + " | Ctrl+O";
+			openBtn.Text = LangMan.Get("open");
+			openFileBtn.Text = LangMan.Get("open-file");
+			openRecursive.Text = LangMan.Get("open-recursive");
+
 			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+S";
 			checkboardButton.Text = LangMan.Get("checkboard-background") + " | Ctrl+B";
 			fullscreenBtn.Text = LangMan.Get("fullscreen") + " | F";
@@ -239,7 +244,7 @@ namespace quick_picture_viewer
 			if (slideshowCounter >= Properties.Settings.Default.SlideshowTime)
 			{
 				slideshowCounter = 0;
-				nextFile();
+				NextFile();
 			}
 
 			if (Properties.Settings.Default.SlideshowCounter)
@@ -253,22 +258,6 @@ namespace quick_picture_viewer
 					showSuggestion(string.Format(LangMan.Get("next-image-in-x-seconds"), Properties.Settings.Default.SlideshowTime - slideshowCounter), SuggestionIcon.Slideshow);
 				}
 			}
-		}
-
-		private void openButton_Click_1(object sender, EventArgs e)
-		{
-			setSlideshow(false);
-
-			openFileDialog1.Title = LangMan.Get("open-file");
-			openFileDialog1.Filter = LangMan.Get("all-image-formats") + 
-				" (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.exif, *.gif, *.bmp, *.dib, *.rle, *.tiff, *.tif, *.ico, *.webp, *.svg, *.dds, *.tga, *.psd, *.cr2) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif; *.exif; *.gif; *.bmp, *.dib; *.rle; *.tiff; *.tif; *.ico; *.webp; *.svg; *.dds; *.tga; *.psd; |PNG (*.png)|*.png|JPG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg; *.jpeg; *.jpe; *.jfif; *.exif|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp; *.dib; *.rle|TIF (*.tiff, *.tif)|*.tiff; *.tif|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp|SVG (*.svg)|*.svg|DirectDraw Surface (*.dds)|*.dds|Targa (*.tga)|*.tga|Photoshop Document (*.psd)|*.psd|Canon Digital Camera Raw (*.cr2)|*.cr2|" + 
-				LangMan.Get("all-files") + " (*.*)|*.*";
-
-			if (openFileDialog1.ShowDialog() == DialogResult.OK)
-			{
-				openFile(openFileDialog1.FileName);
-			}
-			openFileDialog1.Dispose();
 		}
 
 		private void MainForm_Load(object sender, EventArgs e)
@@ -378,8 +367,6 @@ namespace quick_picture_viewer
 						decoderOptions.alpha_dithering_strength = 100;
 						openImage(webp.Decode(rawWebP, decoderOptions), Path.GetDirectoryName(path), Path.GetFileName(path));
 					}
-
-					
 				}
 				else if (ext == ".ico")
 				{
@@ -545,7 +532,17 @@ namespace quick_picture_viewer
 
 					currentFolder = directoryName;
 					currentFile = fileName;
+
 					directoryLabel.Visible = true;
+					if (recursiveFolder != null)
+					{
+						directoryLabel.Image = darkMode ? Properties.Resources.white_recursive : Properties.Resources.black_recursive;
+					}
+					else
+					{
+						directoryLabel.Image = darkMode ? Properties.Resources.white_picfolder : Properties.Resources.black_picfolder;
+					}
+
 					directoryLabel.Text = " " + LangMan.Get("folder") + ": " + directoryName;
 					sizeLabel.Text = " " + LangMan.Get("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
@@ -957,6 +954,7 @@ namespace quick_picture_viewer
 				fs.Close();
 
 				setImageChanged(false);
+				CheckRecursiveFolder(saveFileDialog1.FileName);
 				openFile(saveFileDialog1.FileName);
 			}
 			saveFileDialog1.Dispose();
@@ -1073,11 +1071,11 @@ namespace quick_picture_viewer
 				{
 					if (e.Delta > 0)
 					{
-						prevFile();
+						PrevFile();
 					}
 					else if (e.Delta < 0)
 					{
-						nextFile();
+						NextFile();
 					}
 				}
 			}
@@ -1262,11 +1260,7 @@ namespace quick_picture_viewer
 					}
 					else
 					{
-						if (e.KeyCode == Keys.O)
-						{
-							openButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.B)
+						if (e.KeyCode == Keys.B)
 						{
 							checkboardButton.PerformClick();
 						}
@@ -1385,8 +1379,8 @@ namespace quick_picture_viewer
 			}
 			else if (files.Length > 0)
 			{
-				string path = files[0];
-				openFile(path);
+				CheckRecursiveFolder(files[0]);
+				openFile(files[0]);
 			}
 		}
 
@@ -1411,9 +1405,9 @@ namespace quick_picture_viewer
 			setAlwaysOnTop(!alwaysOnTop, true);
 		}
 
-		public int nextFile()
+		public int NextFile()
 		{
-			string[] filePaths = getCurrentFiles();
+			string[] filePaths = GetCurrentFiles();
 
 			int currentIndex = -1;
 			for (int i = 0; i < filePaths.Length; i++)
@@ -1433,27 +1427,19 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				if (currentIndex == filePaths.Length - 1)
-				{
-					openFile(filePaths[0]);
-				}
-				else
-				{
-					openFile(filePaths[currentIndex + 1]);
-				}
-
+				openFile(currentIndex == filePaths.Length - 1 ? filePaths[0] : filePaths[currentIndex + 1]);
 				return filePaths.Length;
 			}
 		}
 
 		private void nextButton_Click(object sender, EventArgs e)
 		{
-			nextFile();
+			NextFile();
 		}
 
-		public void prevFile()
+		public void PrevFile()
 		{
-			string[] filePaths = getCurrentFiles();
+			string[] filePaths = GetCurrentFiles();
 
 			int currentIndex = -1;
 			for (int i = 0; i < filePaths.Length; i++)
@@ -1471,30 +1457,23 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				if (currentIndex == 0)
-				{
-					openFile(filePaths[filePaths.Length - 1]);
-				}
-				else
-				{
-					openFile(filePaths[currentIndex - 1]);
-				}
+				openFile(currentIndex == 0 ? filePaths[filePaths.Length - 1] : filePaths[currentIndex - 1]);
 			}
 		}
 
 		private void prevButton_Click(object sender, EventArgs e)
 		{
-			prevFile();
+			PrevFile();
 		}
 
-		private string[] getCurrentFiles()
+		private string[] GetCurrentFiles()
 		{
-			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", ".dds", ".tga", ".psd" };
+			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", ".dds", ".tga", ".psd", ".cr2" };
 			List<string> arlist = new List<string>();
 
 			if (currentFolder != null)
 			{
-				string[] allFiles = Directory.GetFiles(currentFolder);
+				string[] allFiles = recursiveFolder != null ? Directory.GetFiles(recursiveFolder, "*", System.IO.SearchOption.AllDirectories) : Directory.GetFiles(currentFolder);
 				for (int i = 0; i < allFiles.Length; i++)
 				{
 					string ext = Path.GetExtension(allFiles[i]).ToLower();
@@ -1510,7 +1489,7 @@ namespace quick_picture_viewer
 
 		private void openFirstFileInFolder()
 		{
-			string[] filePaths = getCurrentFiles();
+			string[] filePaths = GetCurrentFiles();
 
 			if (filePaths.Length > 0)
 			{
@@ -1550,7 +1529,7 @@ namespace quick_picture_viewer
 					pictureBox.Image.Dispose();
 					pictureBox.Image = null;
 
-					if (nextFile() <= 1)
+					if (NextFile() <= 1)
 					{
 						closeFile();
 					}
@@ -1655,7 +1634,10 @@ namespace quick_picture_viewer
 				BackColor = ThemeMan.DarkBackColor;
 				statusStrip1.BackColor = ThemeMan.DarkSecondColor;
 
-				openButton.Image = Properties.Resources.white_open;
+				openBtn.Image = Properties.Resources.white_open;
+				openFileBtn.Image = Properties.Resources.white_imgfile;
+				openRecursive.Image = Properties.Resources.white_recursive;
+
 				saveAsButton.Image = Properties.Resources.white_saveas;
 				printButton.Image = Properties.Resources.white_print;
 				deleteBtn.Image = Properties.Resources.white_trash;
@@ -2427,6 +2409,7 @@ namespace quick_picture_viewer
 			else if (Clipboard.ContainsData(DataFormats.FileDrop))
 			{
 				string path = ((string[])Clipboard.GetData(DataFormats.FileDrop))[0];
+				CheckRecursiveFolder(path);
 				openFile(path);
 			}
 		}
@@ -2469,6 +2452,45 @@ namespace quick_picture_viewer
 		private void copyImageBtn_EnabledChanged(object sender, EventArgs e)
 		{
 			copyBtn.Enabled = !(!copyImageBtn.Enabled && !copyFileBtn.Enabled);
+		}
+
+		private void openFileBtn_Click(object sender, EventArgs e)
+		{
+			setSlideshow(false);
+
+			openFileDialog1.Title = LangMan.Get("open-file");
+			openFileDialog1.Filter = LangMan.Get("all-image-formats") +
+				" (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.exif, *.gif, *.bmp, *.dib, *.rle, *.tiff, *.tif, *.ico, *.webp, *.svg, *.dds, *.tga, *.psd, *.cr2) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif; *.exif; *.gif; *.bmp, *.dib; *.rle; *.tiff; *.tif; *.ico; *.webp; *.svg; *.dds; *.tga; *.psd; |PNG (*.png)|*.png|JPG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg; *.jpeg; *.jpe; *.jfif; *.exif|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp; *.dib; *.rle|TIF (*.tiff, *.tif)|*.tiff; *.tif|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp|SVG (*.svg)|*.svg|DirectDraw Surface (*.dds)|*.dds|Targa (*.tga)|*.tga|Photoshop Document (*.psd)|*.psd|Canon Digital Camera Raw (*.cr2)|*.cr2|" +
+				LangMan.Get("all-files") + " (*.*)|*.*";
+
+			if (openFileDialog1.ShowDialog() == DialogResult.OK)
+			{
+				CheckRecursiveFolder(openFileDialog1.FileName);
+				openFile(openFileDialog1.FileName);
+			}
+			openFileDialog1.Dispose();
+		}
+
+		private void openRecursive_Click(object sender, EventArgs e)
+		{
+			setSlideshow(false);
+
+			folderBrowserDialog1.Description = LangMan.Get("open-recursive");
+			if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+			{
+				currentFolder = folderBrowserDialog1.SelectedPath;
+				recursiveFolder = folderBrowserDialog1.SelectedPath;
+				openFirstFileInFolder();
+			}
+			folderBrowserDialog1.Dispose();
+		}
+
+		private void CheckRecursiveFolder(string fileToOpen)
+		{
+			if (recursiveFolder != null && Path.GetDirectoryName(fileToOpen) != Path.GetFullPath(currentFolder))
+			{
+				recursiveFolder = null;
+			}
 		}
 	}
 }
