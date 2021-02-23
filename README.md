@@ -71,14 +71,17 @@ Help Module Art!
 
 Code contributors:
 
-- <a href="https://github.com/Beelink">Beelink</a>
+- <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
+- <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
 
 Translation contributors:
 
-- <a href="https://github.com/jiwangyihao">jiwangyihao</a> (Chinese)
-- <a href="https://github.com/KristofKekesi">KristofKekesi</a> (Hungarian)
-- <a href="https://github.com/Beelink">Beelink</a> (Russian)
-- <a href="https://github.com/asluppiter">asluppiter</a> (Spanish)
+- <a href="https://github.com/jiwangyihao">jiwangyihao</a> - Chinese
+- <a href="https://github.com/KristofKekesi">KristofKekesi</a> - Hungarian
+- <a href="https://github.com/Beelink">Beelink</a> - Russian
+- <a href="https://github.com/asluppiter">asluppiter</a> - Spanish
+
+<a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-to-translate-the-app">Help us to translate this app</a>
 
 ## 🔗 Useful links:
 
