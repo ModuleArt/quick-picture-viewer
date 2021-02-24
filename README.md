@@ -83,6 +83,13 @@ Translation contributors:
 
 <a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
 
+## 💿 Another installation methods:
+
+Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:
+```powershell
+winget install ModuleArt.QuickPictureViewer
+```
+
 ## 🔗 Useful links:
 
 - <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a><br>
