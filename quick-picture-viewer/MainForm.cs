@@ -277,8 +277,7 @@ namespace quick_picture_viewer
 				{
 					if (File.GetAttributes(openPath).HasFlag(FileAttributes.Directory))
 					{
-						currentFolder = openPath;
-						openFirstFileInFolder();
+						openFirstFileInFolder(openPath);
 					}
 					else
 					{
@@ -621,14 +620,7 @@ namespace quick_picture_viewer
 			imageChanged = b;
 			hasChangesLabel.Visible = b;
 
-			if (string.IsNullOrEmpty(fakeName))
-			{
-				Text = currentFile + " - Quick Picture Viewer";
-			}
-			else
-			{
-				Text = fakeName + " - Quick Picture Viewer";
-			}
+			Text = string.IsNullOrEmpty(fakeName) ? currentFile + " - Quick Picture Viewer" : fakeName + " - Quick Picture Viewer";
 
 			if (b)
 			{
@@ -669,14 +661,7 @@ namespace quick_picture_viewer
 			double zoomFactorX = picturePanel.Width / (double)originalImage.Width;
 			double zoomFactorY = picturePanel.Height / (double)originalImage.Height;
 
-			if (zoomFactorX > zoomFactorY)
-			{
-				zoomFactor = Convert.ToInt32(zoomFactorY * 100);
-			}
-			else
-			{
-				zoomFactor = Convert.ToInt32(zoomFactorX * 100);
-			}
+			zoomFactor = zoomFactorX > zoomFactorY ? Convert.ToInt32(zoomFactorY * 100) : Convert.ToInt32(zoomFactorX * 100);
 		}
 
 		private void setZoomFactor(int newZoomFactor)
@@ -701,23 +686,8 @@ namespace quick_picture_viewer
 
 		private void UpdatePictureBoxLocation()
 		{
-			if (pictureBox.Width < picturePanel.Width)
-			{
-				pictureBox.Left = (picturePanel.Width - pictureBox.Width) / 2;
-			}
-			else
-			{
-				pictureBox.Left = -picturePanel.HorizontalScroll.Value;
-			}
-
-			if (pictureBox.Height < picturePanel.Height)
-			{
-				pictureBox.Top = (picturePanel.Height - pictureBox.Height) / 2;
-			}
-			else
-			{
-				pictureBox.Top = -picturePanel.VerticalScroll.Value;
-			}
+			pictureBox.Left = pictureBox.Width < picturePanel.Width ? (picturePanel.Width - pictureBox.Width) / 2 : -picturePanel.HorizontalScroll.Value;
+			pictureBox.Top = pictureBox.Height < picturePanel.Height ? (picturePanel.Height - pictureBox.Height) / 2 : -picturePanel.VerticalScroll.Value;
 		}
 
 		private void setZoomText(string text)
@@ -824,14 +794,7 @@ namespace quick_picture_viewer
 					Properties.Settings.Default.BackColor = "";
 					Properties.Settings.Default.Save();
 
-					if (darkMode)
-					{
-						picturePanel.BackgroundImage = Properties.Resources.checkboard_dark;
-					}
-					else
-					{
-						picturePanel.BackgroundImage = Properties.Resources.checkboard_light;
-					}
+					picturePanel.BackgroundImage = darkMode ? Properties.Resources.checkboard_dark : Properties.Resources.checkboard_light;
 				}
 			}
 			else
@@ -1017,14 +980,7 @@ namespace quick_picture_viewer
 
 					if (newX > picturePanel.HorizontalScroll.Minimum)
 					{
-						if (newX < picturePanel.HorizontalScroll.Maximum)
-						{
-							picturePanel.HorizontalScroll.Value = newX;
-						}
-						else
-						{
-							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
-						}
+						picturePanel.HorizontalScroll.Value = newX < picturePanel.HorizontalScroll.Maximum ? newX : picturePanel.HorizontalScroll.Maximum;
 					}
 					else
 					{
@@ -1033,14 +989,7 @@ namespace quick_picture_viewer
 
 					if (newY > picturePanel.VerticalScroll.Minimum)
 					{
-						if (newY < picturePanel.VerticalScroll.Maximum)
-						{
-							picturePanel.VerticalScroll.Value = newY;
-						}
-						else
-						{
-							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
-						}
+						picturePanel.VerticalScroll.Value = newY < picturePanel.VerticalScroll.Maximum ? newY : picturePanel.VerticalScroll.Maximum;
 					}
 					else
 					{
@@ -1300,53 +1249,25 @@ namespace quick_picture_viewer
 					{
 						int newVerticalValue = picturePanel.VerticalScroll.Value + picturePanel.VerticalScroll.LargeChange;
 
-						if (newVerticalValue >= picturePanel.VerticalScroll.Maximum)
-						{
-							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
-						}
-						else
-						{
-							picturePanel.VerticalScroll.Value = newVerticalValue;
-						}
+						picturePanel.VerticalScroll.Value = newVerticalValue >= picturePanel.VerticalScroll.Maximum ? picturePanel.VerticalScroll.Maximum : newVerticalValue;
 					}
 					else if (e.KeyCode == Keys.Up)
 					{
 						int newVerticalValue = picturePanel.VerticalScroll.Value - picturePanel.VerticalScroll.LargeChange;
 
-						if (newVerticalValue <= picturePanel.VerticalScroll.Minimum)
-						{
-							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
-						}
-						else
-						{
-							picturePanel.VerticalScroll.Value = newVerticalValue;
-						}
+						picturePanel.VerticalScroll.Value = newVerticalValue <= picturePanel.VerticalScroll.Minimum ? picturePanel.VerticalScroll.Minimum : newVerticalValue;
 					}
 					else if (e.KeyCode == Keys.Left)
 					{
 						int newHorizontalValue = picturePanel.HorizontalScroll.Value - picturePanel.HorizontalScroll.LargeChange;
 
-						if (newHorizontalValue <= picturePanel.HorizontalScroll.Minimum)
-						{
-							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
-						}
-						else
-						{
-							picturePanel.HorizontalScroll.Value = newHorizontalValue;
-						}
+						picturePanel.HorizontalScroll.Value = newHorizontalValue <= picturePanel.HorizontalScroll.Minimum ? picturePanel.HorizontalScroll.Minimum : newHorizontalValue;
 					}
 					else if (e.KeyCode == Keys.Right)
 					{
 						int newHorizontalValue = picturePanel.HorizontalScroll.Value + picturePanel.HorizontalScroll.LargeChange;
 
-						if (newHorizontalValue >= picturePanel.HorizontalScroll.Maximum)
-						{
-							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
-						}
-						else
-						{
-							picturePanel.HorizontalScroll.Value = newHorizontalValue;
-						}
+						picturePanel.HorizontalScroll.Value = newHorizontalValue >= picturePanel.HorizontalScroll.Maximum ? picturePanel.HorizontalScroll.Maximum : newHorizontalValue;
 					}
 				}
 				else
@@ -1379,8 +1300,15 @@ namespace quick_picture_viewer
 			}
 			else if (files.Length > 0)
 			{
-				CheckRecursiveFolder(files[0]);
-				openFile(files[0]);
+				if (File.GetAttributes(files[0]).HasFlag(FileAttributes.Directory))
+				{
+					openFirstFileInFolder(files[0]);
+				}
+				else
+				{
+					CheckRecursiveFolder(files[0]);
+					openFile(files[0]);
+				}
 			}
 		}
 
@@ -1487,8 +1415,10 @@ namespace quick_picture_viewer
 			return arlist.ToArray();
 		}
 
-		private void openFirstFileInFolder()
+		private void openFirstFileInFolder(string folderPath)
 		{
+			currentFolder = folderPath;
+
 			string[] filePaths = GetCurrentFiles();
 
 			if (filePaths.Length > 0)
@@ -2343,14 +2273,7 @@ namespace quick_picture_viewer
 		{
 			if (navPanel != null && !navPanel.IsDisposed)
 			{
-				if (statusStrip1.Visible)
-				{
-					navPanel.SetExtraBottomMargin(statusStrip1.Height);
-				}
-				else
-				{
-					navPanel.SetExtraBottomMargin(0);
-				}
+				navPanel.SetExtraBottomMargin(statusStrip1.Visible ? statusStrip1.Height : 0);
 			}
 
 			showStatusBarBtn.Checked = statusStrip1.Visible;
@@ -2363,14 +2286,7 @@ namespace quick_picture_viewer
 		{
 			if (navPanel != null && !navPanel.IsDisposed)
 			{
-				if (toolStrip1.Visible)
-				{
-					navPanel.SetExtraTopMargin(toolStrip1.Height);
-				}
-				else
-				{
-					navPanel.SetExtraTopMargin(0);
-				}
+				navPanel.SetExtraTopMargin(toolStrip1.Visible ? toolStrip1.Height : 0);
 			}
 
 			showToolbarBtn.Checked = toolStrip1.Visible;
@@ -2478,9 +2394,8 @@ namespace quick_picture_viewer
 			folderBrowserDialog1.Description = LangMan.Get("open-recursive");
 			if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
 			{
-				currentFolder = folderBrowserDialog1.SelectedPath;
 				recursiveFolder = folderBrowserDialog1.SelectedPath;
-				openFirstFileInFolder();
+				openFirstFileInFolder(folderBrowserDialog1.SelectedPath);
 			}
 			folderBrowserDialog1.Dispose();
 		}

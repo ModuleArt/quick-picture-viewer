@@ -11,6 +11,8 @@ namespace quick_picture_viewer
 	{
 		public AboutForm()
 		{
+			HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
+
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { logoPictureBox, productLabel, versionLabel, copyrightLabel });
 

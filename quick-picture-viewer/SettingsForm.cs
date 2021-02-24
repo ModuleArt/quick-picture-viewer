@@ -522,7 +522,7 @@ namespace quick_picture_viewer
 
 		private void helpTranslateBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-to-translate-the-app");
+			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app");
 		}
 	}
 }

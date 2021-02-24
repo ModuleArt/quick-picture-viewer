@@ -673,7 +673,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Help us to translate this app.
+        ///   Looks up a localized string similar to Help us translate this app.
         /// </summary>
         public static string help_us_translate_app {
             get {
