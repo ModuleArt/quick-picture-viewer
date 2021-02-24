@@ -87,7 +87,7 @@ Translation contributors:
 
 - Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
 ```powershell
-Powershell $> choco install quick-picture-viewer
+Powershell $> choco install quick-picture-viewer --version 3.0.4
 ```
 
 - Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
