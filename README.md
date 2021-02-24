@@ -89,7 +89,7 @@ Translation contributors:
 ```powershell
 Powershell $> winget install ModuleArt.QuickPictureViewer
 ```
-- Using <a href="">Scoop</a>:<br>
+- Using <a href="https://github.com/lukesampson/scoop">Scoop</a>:<br>
 ```powershell
 Powershell $> scoop install mingit-busybox 7zip sudo
 Powershell $> scoop bucket add extras
