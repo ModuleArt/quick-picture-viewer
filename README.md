@@ -85,19 +85,13 @@ Translation contributors:
 
 ## 💿 Another installation methods:
 
-Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:
-```powershell
-winget install ModuleArt.QuickPictureViewer
-```
+- Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
+Powershell > `winget install ModuleArt.QuickPictureViewer`
 
 ## 🔗 Useful links:
 
 - <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a><br>
-Powershell (Admin):
-
-```powershell
-Get-AppxPackage *photos* | Remove-AppxPackage
-```
+Powershell (Admin) > `Get-AppxPackage *photos* | Remove-AppxPackage`
 
 - <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a><br>
 - <a href="https://github.com/kov-serg/ai-extension/">Adobe Illustrator thumnails preview for windows explorer</a>
