@@ -85,6 +85,11 @@ Translation contributors:
 
 ## 💿 Another installation methods:
 
+- Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
+```powershell
+Powershell $> choco install quick-picture-viewer
+```
+
 - Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
 ```powershell
 Powershell $> winget install ModuleArt.QuickPictureViewer
