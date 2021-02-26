@@ -171,6 +171,12 @@
     <Compile Include="MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionForm.Designer.cs">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NavPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MiniViewForm.resx">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionForm.resx">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavPanel.resx">
       <DependentUpon>NavPanel.cs</DependentUpon>
@@ -413,6 +422,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-crop.png" />
+    <None Include="resources\imgs\light\white-selection.png" />
+    <None Include="resources\imgs\dark\black-selection.png" />
     <None Include="resources\imgs\dark\black-recursive.png" />
     <None Include="resources\imgs\light\white-recursive.png" />
     <None Include="resources\imgs\dark\black-picfolder.png" />

@@ -645,6 +645,15 @@
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 24</value>
   </data>
+  <data name="selectionBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="selectionBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="selectionBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 25</value>
+  </data>
   <data name="editButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -688,7 +697,7 @@
   <data name="flipVerticalButton.Text" xml:space="preserve">
     <value>flip vertical</value>
   </data>
-  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="qlibToolsep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
   </data>
   <data name="rotateRightButton.Enabled" type="System.Boolean, mscorlib">
@@ -759,6 +768,18 @@
   </data>
   <data name="customAngleBtn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="cropBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+R</value>
+  </data>
+  <data name="cropBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 24</value>
+  </data>
+  <data name="cropBtn.Text" xml:space="preserve">
+    <value>crop</value>
   </data>
   <data name="editButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
@@ -4074,6 +4095,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOAHAAA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>320, 320</value>
   </data>
@@ -4157,6 +4181,12 @@
   </data>
   <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
+    <value>folderBrowserDialog1</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openBtn.Name" xml:space="preserve">
     <value>openBtn</value>
@@ -4278,6 +4308,12 @@
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;selectionBtn.Name" xml:space="preserve">
+    <value>selectionBtn</value>
+  </data>
+  <data name="&gt;&gt;selectionBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;editButton.Name" xml:space="preserve">
     <value>editButton</value>
   </data>
@@ -4296,10 +4332,10 @@
   <data name="&gt;&gt;flipVerticalButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
-    <value>toolStripSeparator7</value>
+  <data name="&gt;&gt;qlibToolsep4.Name" xml:space="preserve">
+    <value>qlibToolsep4</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
+  <data name="&gt;&gt;qlibToolsep4.Type" xml:space="preserve">
     <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.4.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rotateRightButton.Name" xml:space="preserve">
@@ -4324,6 +4360,18 @@
     <value>customAngleBtn</value>
   </data>
   <data name="&gt;&gt;customAngleBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
+    <value>toolStripSeparator7</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.4.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cropBtn.Name" xml:space="preserve">
+    <value>cropBtn</value>
+  </data>
+  <data name="&gt;&gt;cropBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;effectsBtn.Name" xml:space="preserve">
@@ -4541,12 +4589,6 @@
   </data>
   <data name="&gt;&gt;pasteBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
-    <value>folderBrowserDialog1</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

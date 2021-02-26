@@ -34,8 +34,10 @@ namespace quick_picture_viewer
 		private System.Timers.Timer zoomOutTimer = new System.Timers.Timer();
 		private System.Timers.Timer slideshowTimer = new System.Timers.Timer();
 		private System.Threading.Timer suggestionTimer;
-		private NavPanel navPanel = null;
 		private bool framelessMode = false;
+
+		private NavPanel navPanel = null;
+		private SelectionForm selForm = null;
 
 		private string currentFolder;
 		private string recursiveFolder;
@@ -686,8 +688,15 @@ namespace quick_picture_viewer
 
 		private void UpdatePictureBoxLocation()
 		{
-			pictureBox.Left = pictureBox.Width < picturePanel.Width ? (picturePanel.Width - pictureBox.Width) / 2 : -picturePanel.HorizontalScroll.Value;
-			pictureBox.Top = pictureBox.Height < picturePanel.Height ? (picturePanel.Height - pictureBox.Height) / 2 : -picturePanel.VerticalScroll.Value;
+			pictureBox.Location = new Point(
+				pictureBox.Width < picturePanel.Width ? (picturePanel.Width - pictureBox.Width) / 2 : -picturePanel.HorizontalScroll.Value,
+				pictureBox.Height < picturePanel.Height ? (picturePanel.Height - pictureBox.Height) / 2 : -picturePanel.VerticalScroll.Value
+			);
+
+			if (selForm != null)
+			{
+				selForm.UpdateContainerRect(pictureBox.Location.X, pictureBox.Location.Y + picturePanel.Location.Y, pictureBox.Width, pictureBox.Height);
+			}
 		}
 
 		private void setZoomText(string text)
@@ -927,76 +936,97 @@ namespace quick_picture_viewer
 		{
 			if (e.Button == MouseButtons.Left)
 			{
-				if (autoZoom)
+				if (selForm != null)
 				{
-					AllowDrop = false;
-					if (currentFile != null || originalImage != null)
-					{
-						dragImage = true;
-					}
+
 				}
 				else
 				{
-					Cursor.Current = Cursors.SizeAll;
+					if (autoZoom)
+					{
+						AllowDrop = false;
+						if (currentFile != null || originalImage != null)
+						{
+							dragImage = true;
+						}
+					}
+					else
+					{
+						Cursor.Current = Cursors.SizeAll;
 
-					panelMouseDownLocation = new Point(
-						PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
-						PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
-					);
+						panelMouseDownLocation = new Point(
+							PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
+							PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
+						);
+					}
 				}
 			}
 		}
 
 		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
 		{
-			AllowDrop = true;
-			Cursor.Current = Cursors.Default;
+			if (selForm != null)
+			{
+
+			}
+			else
+			{
+				AllowDrop = true;
+				Cursor.Current = Cursors.Default;
+			}
 		}
 
 		private void picturePanel_MouseMove(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
 			{
-				if (autoZoom)
+				if (selForm != null)
 				{
-					if (dragImage)
-					{
-						if (currentFile != null)
-						{
-							string[] paths = { Path.Combine(currentFolder, currentFile) };
-							DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
-						}
-						else if (originalImage != null)
-						{
-							DoDragDrop(originalImage, DragDropEffects.Copy);
-						}
-						dragImage = false;
-					}
+
 				}
 				else
 				{
-					int newX = panelMouseDownLocation.X - PointToClient(Cursor.Position).X;
-					int newY = panelMouseDownLocation.Y - PointToClient(Cursor.Position).Y;
-
-					if (newX > picturePanel.HorizontalScroll.Minimum)
+					if (autoZoom)
 					{
-						picturePanel.HorizontalScroll.Value = newX < picturePanel.HorizontalScroll.Maximum ? newX : picturePanel.HorizontalScroll.Maximum;
+						if (dragImage)
+						{
+							if (currentFile != null)
+							{
+								string[] paths = { Path.Combine(currentFolder, currentFile) };
+								DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
+							}
+							else if (originalImage != null)
+							{
+								DoDragDrop(originalImage, DragDropEffects.Copy);
+							}
+							dragImage = false;
+						}
 					}
 					else
 					{
-						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
-					}
+						int newX = panelMouseDownLocation.X - PointToClient(Cursor.Position).X;
+						int newY = panelMouseDownLocation.Y - PointToClient(Cursor.Position).Y;
 
-					if (newY > picturePanel.VerticalScroll.Minimum)
-					{
-						picturePanel.VerticalScroll.Value = newY < picturePanel.VerticalScroll.Maximum ? newY : picturePanel.VerticalScroll.Maximum;
-					}
-					else
-					{
-						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
-					}
+						if (newX > picturePanel.HorizontalScroll.Minimum)
+						{
+							picturePanel.HorizontalScroll.Value = newX < picturePanel.HorizontalScroll.Maximum ? newX : picturePanel.HorizontalScroll.Maximum;
+						}
+						else
+						{
+							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
+						}
 
-					picturePanel.Update();
+						if (newY > picturePanel.VerticalScroll.Minimum)
+						{
+							picturePanel.VerticalScroll.Value = newY < picturePanel.VerticalScroll.Maximum ? newY : picturePanel.VerticalScroll.Maximum;
+						}
+						else
+						{
+							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
+						}
+
+						picturePanel.Update();
+					}
 				}
 			}
 		}
@@ -2405,6 +2435,49 @@ namespace quick_picture_viewer
 			if (recursiveFolder != null && Path.GetDirectoryName(fileToOpen) != Path.GetFullPath(currentFolder))
 			{
 				recursiveFolder = null;
+			}
+		}
+
+		private void selectionBtn_CheckedChanged(object sender, EventArgs e)
+		{
+			if (selectionBtn.Checked)
+			{
+				if (selForm == null || selForm.IsDisposed)
+				{
+					selForm = new SelectionForm(darkMode);
+					selForm.Owner = this;
+					selForm.Show();
+					SelectionForm.SetParent(selForm.Handle, Handle);
+					//Console.WriteLine(selForm.Location.Y);
+					//SelectionForm.MoveWindow(selForm.Handle, 0, 0, selForm.Width, selForm.Height, true);
+					selForm.UpdateContainerRect(pictureBox.Location.X, pictureBox.Location.Y + picturePanel.Location.Y, pictureBox.Width, pictureBox.Height);
+				}
+			}
+			else
+			{
+				if (selForm != null && !selForm.IsDisposed)
+				{
+					selForm.Dispose();
+					selForm = null;
+				}
+			}
+		}
+
+		private void cropBtn_Click(object sender, EventArgs e)
+		{
+			if (selForm != null)
+			{
+				float scale = (float)originalImage.Width / (float)pictureBox.Width;
+
+				Rectangle r = new Rectangle()
+				{
+					Width = (int)(selForm.Width * scale),
+					Height = (int)(selForm.Height * scale),
+					X = selForm.Location.X - ClientRectangle.Location.X,
+					Y = selForm.Location.Y - ClientRectangle.Location.Y
+				};
+				Bitmap croppedImage = originalImage.Clone(r, originalImage.PixelFormat);
+				openImage(croppedImage, null, null);
 			}
 		}
 	}

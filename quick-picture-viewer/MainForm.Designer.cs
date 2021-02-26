@@ -44,6 +44,7 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.toolStrip1 = new QuickLibrary.QlibToolbar();
 			this.openBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,14 +66,17 @@
 			this.zoomTextBox = new System.Windows.Forms.ToolStripTextBox();
 			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new QuickLibrary.QlibToolsep();
+			this.selectionBtn = new System.Windows.Forms.ToolStripButton();
 			this.editButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.flipHorizontalButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.flipVerticalButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator7 = new QuickLibrary.QlibToolsep();
+			this.qlibToolsep4 = new QuickLibrary.QlibToolsep();
 			this.rotateRightButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.rotateLeftButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.rotate180Button = new System.Windows.Forms.ToolStripMenuItem();
 			this.customAngleBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator7 = new QuickLibrary.QlibToolsep();
+			this.cropBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.effectsBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.toolsBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
@@ -111,7 +115,6 @@
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeOpsButton = new System.Windows.Forms.Button();
-			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
@@ -251,6 +254,7 @@
             this.zoomTextBox,
             this.zoomInButton,
             this.toolStripSeparator2,
+            this.selectionBtn,
             this.editButton,
             this.effectsBtn,
             this.toolsBtn,
@@ -453,6 +457,16 @@
 			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			// 
+			// selectionBtn
+			// 
+			resources.ApplyResources(this.selectionBtn, "selectionBtn");
+			this.selectionBtn.CheckOnClick = true;
+			this.selectionBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.selectionBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
+			this.selectionBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.selectionBtn.Name = "selectionBtn";
+			this.selectionBtn.CheckedChanged += new System.EventHandler(this.selectionBtn_CheckedChanged);
+			// 
 			// editButton
 			// 
 			resources.ApplyResources(this.editButton, "editButton");
@@ -460,11 +474,13 @@
 			this.editButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.flipHorizontalButton,
             this.flipVerticalButton,
-            this.toolStripSeparator7,
+            this.qlibToolsep4,
             this.rotateRightButton,
             this.rotateLeftButton,
             this.rotate180Button,
-            this.customAngleBtn});
+            this.customAngleBtn,
+            this.toolStripSeparator7,
+            this.cropBtn});
 			this.editButton.ForeColor = System.Drawing.Color.Black;
 			this.editButton.Image = global::quick_picture_viewer.Properties.Resources.black_edit;
 			this.editButton.Margin = new System.Windows.Forms.Padding(0);
@@ -486,14 +502,14 @@
 			this.flipVerticalButton.Name = "flipVerticalButton";
 			this.flipVerticalButton.Click += new System.EventHandler(this.flipVerticalButton_Click);
 			// 
-			// toolStripSeparator7
+			// qlibToolsep4
 			// 
-			this.toolStripSeparator7.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.toolStripSeparator7.DarkMode = false;
-			this.toolStripSeparator7.InsideMenu = true;
-			this.toolStripSeparator7.Margin = new System.Windows.Forms.Padding(4);
-			this.toolStripSeparator7.Name = "toolStripSeparator7";
-			resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
+			this.qlibToolsep4.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep4.DarkMode = false;
+			this.qlibToolsep4.InsideMenu = true;
+			this.qlibToolsep4.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibToolsep4.Name = "qlibToolsep4";
+			resources.ApplyResources(this.qlibToolsep4, "qlibToolsep4");
 			// 
 			// rotateRightButton
 			// 
@@ -527,6 +543,24 @@
 			this.customAngleBtn.ForeColor = System.Drawing.Color.Black;
 			this.customAngleBtn.Image = global::quick_picture_viewer.Properties.Resources.black_angle;
 			this.customAngleBtn.Name = "customAngleBtn";
+			// 
+			// toolStripSeparator7
+			// 
+			this.toolStripSeparator7.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator7.DarkMode = false;
+			this.toolStripSeparator7.InsideMenu = true;
+			this.toolStripSeparator7.Margin = new System.Windows.Forms.Padding(4);
+			this.toolStripSeparator7.Name = "toolStripSeparator7";
+			resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
+			// 
+			// cropBtn
+			// 
+			this.cropBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cropBtn.ForeColor = System.Drawing.Color.Black;
+			this.cropBtn.Image = global::quick_picture_viewer.Properties.Resources.black_crop;
+			this.cropBtn.Name = "cropBtn";
+			resources.ApplyResources(this.cropBtn, "cropBtn");
+			this.cropBtn.Click += new System.EventHandler(this.cropBtn_Click);
 			// 
 			// effectsBtn
 			// 
@@ -1073,5 +1107,8 @@
 		private System.Windows.Forms.ToolStripMenuItem openFileBtn;
 		private System.Windows.Forms.ToolStripMenuItem openRecursive;
 		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+		private System.Windows.Forms.ToolStripButton selectionBtn;
+		private QuickLibrary.QlibToolsep qlibToolsep4;
+		private System.Windows.Forms.ToolStripMenuItem cropBtn;
 	}
 }
