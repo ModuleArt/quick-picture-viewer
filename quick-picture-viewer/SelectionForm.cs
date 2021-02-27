@@ -11,20 +11,7 @@ namespace quick_picture_viewer
 		[DllImport("user32.dll", SetLastError = true)]
 		public static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
-		[DllImport("user32.dll", SetLastError = true)]
-		internal static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
-
-		[DllImport("user32.dll", SetLastError = true)]
-		static extern UInt32 GetWindowLong(IntPtr hWnd, int nIndex);
-
-		[DllImport("user32.dll")]
-		static extern int SetWindowLong(IntPtr hWnd, int nIndex, UInt32 dwNewLong);
-
-
-		//private Size ContainerSize;
-		//private Point ContainerLocation;
-
-		private int gripSize = 12;
+		private int gripSize = 14;
 		private Pen borderPen = new Pen(new SolidBrush(ThemeMan.AccentColor), 1);
 		private Brush gripBrush;
 
@@ -34,17 +21,24 @@ namespace quick_picture_viewer
 		private enum DragGrip
 		{
 			NoGrip = 0,
-			BottomRight = 1
-			//TopRight = 2
+			BottomRight = 1,
+			TopLeft = 2
 		}
 
 		private DragGrip CurGrip = DragGrip.NoGrip;
 		private bool dragging = false;
 		private Point dragStart;
 		private Size sizeStart;
+		private Point locationStart;
 
-		public SelectionForm(bool darkMode)
+		private Panel picturePanel;
+
+		public SelectionForm(Panel srcPanel, bool darkMode)
 		{
+			picturePanel = srcPanel;
+
+			MinimumSize = new Size(gripSize * 2, gripSize * 2);
+
 			whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
 			blackPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
 			blackPen.DashOffset = 1;
@@ -54,28 +48,43 @@ namespace quick_picture_viewer
 			InitializeComponent();
 		}
 
-		public void UpdateContainerRect(int x, int y, int w, int h)
+		public void UpdateContainerRect()
 		{
-			//ContainerLocation = new Point(x, y);
-			SetLocation(x, y);
-			//ContainerSize = s;
-			SetSize(w, h);
+			SetSize(Width, Height);
+			SetLocation(
+				Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X - picturePanel.Location.X, 
+				Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y - picturePanel.Location.Y
+			);
+		}
+
+		public void SelectAll()
+		{
+			SetLocation(0, 0);
+			SetSize(picturePanel.Width, picturePanel.Height);
 		}
 
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			base.OnPaint(e);
 			e.Graphics.DrawRectangle(whitePen, new Rectangle(0, 0, Width - 1, Height - 1));			
 			e.Graphics.DrawRectangle(blackPen, new Rectangle(0, 0, Width - 1, Height - 1));
-
 			e.Graphics.DrawRectangle(whitePen, new Rectangle(1, 1, Width - 3, Height - 3));
 			e.Graphics.DrawRectangle(blackPen, new Rectangle(1, 1, Width - 3, Height - 3));
 
-			e.Graphics.FillRectangle(gripBrush, Width - gripSize - 1, Height - gripSize - 1, gripSize, gripSize);
-			e.Graphics.DrawRectangle(borderPen, Width - gripSize - 1, Height - gripSize - 1, gripSize, gripSize);
+			// BottomRight
+			DrawGrip(e.Graphics, Width - 1, Height - 1);
+			e.Graphics.DrawLine(borderPen, Width - 1, Height - gripSize, Width - 1, Height - 1);
+			e.Graphics.DrawLine(borderPen, Width - gripSize, Height - 1, Width - 1, Height - 1);
 
-			//e.Graphics.FillRectangle(gripBrush, Width - gripSize - 1, 0, gripSize, gripSize);
-			//e.Graphics.DrawRectangle(borderPen, Width - gripSize - 1, 0, gripSize, gripSize);
+			// TopLeft
+			DrawGrip(e.Graphics, 0, 0);
+			e.Graphics.DrawLine(borderPen, 0, 0, gripSize, 0);
+			e.Graphics.DrawLine(borderPen, 0, 0, 0, gripSize);
+		}
+
+		private void DrawGrip(Graphics g, int x, int y)
+		{
+			g.FillEllipse(gripBrush, x - gripSize, y - gripSize, gripSize * 2, gripSize * 2);
+			g.DrawEllipse(borderPen, x - gripSize, y - gripSize, gripSize * 2, gripSize * 2);
 		}
 
 		private DragGrip CheckGrip(Point pos)
@@ -84,10 +93,10 @@ namespace quick_picture_viewer
 			{
 				return DragGrip.BottomRight;
 			}
-			//else if (pos.X >= Width - gripSize && pos.Y <= gripSize)
-			//{
-			//	return DragGrip.TopRight;
-			//}
+			else if (pos.X <= gripSize && pos.Y <= gripSize)
+			{
+				return DragGrip.TopLeft;
+			}
 			else
 			{
 				return DragGrip.NoGrip;
@@ -99,11 +108,8 @@ namespace quick_picture_viewer
 			dragging = true;
 			dragStart = e.Location;
 			sizeStart = Size;
+			locationStart = Location;
 			CurGrip = CheckGrip(e.Location);
-			if (CurGrip == DragGrip.NoGrip)
-			{
-				NativeMan.DragWindow(Handle);
-			}
 		}
 
 		protected override void OnMouseUp(MouseEventArgs e)
@@ -120,14 +126,27 @@ namespace quick_picture_viewer
 				switch (CurGrip)
 				{
 					case DragGrip.NoGrip:
-						//SetLocation(e.X + Location.X - dragStart.X, e.Y + Location.Y - dragStart.Y);
+						SetLocation(
+							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X - picturePanel.Location.X,
+							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y - picturePanel.Location.Y
+						);
 						break;
 					case DragGrip.BottomRight:
-						SetSize(sizeStart.Width + e.X - dragStart.X, sizeStart.Height + e.Y - dragStart.Y);
+						SetSize(
+							sizeStart.Width + e.X - dragStart.X,
+							sizeStart.Height + e.Y - dragStart.Y
+						);
 						break;
-					//case DragGrip.TopRight:
-					//	SetLocation(0, e.Y);
-					//	break;
+					case DragGrip.TopLeft:
+						SetLocation(
+							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X - picturePanel.Location.X,
+							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y - picturePanel.Location.Y
+						);
+						SetSize(
+							sizeStart.Width + locationStart.X - Location.X,
+							sizeStart.Height + locationStart.Y - Location.Y
+						);
+						break;
 				}
 			}
 
@@ -139,37 +158,29 @@ namespace quick_picture_viewer
 				case DragGrip.BottomRight:
 					Cursor = Cursors.SizeNWSE;
 					break;
-				//case DragGrip.TopRight:
-				//	Cursor = Cursors.SizeNESW;
-				//	break;
+				case DragGrip.TopLeft:
+					Cursor = Cursors.SizeNWSE;
+					break;
 			}
 		}
 
 		private void SetSize(int w, int h)
 		{
-			//if (w > ContainerSize.Width - ContainerLocation.X)
-			//{
-			//	w = ContainerSize.Width - ContainerLocation.X;
-			//}
-			//if (h > ContainerSize.Height - ContainerLocation.Y)
-			//{
-			//	h = ContainerSize.Height - ContainerLocation.Y;
-			//}
+			if (w > picturePanel.Width) w = picturePanel.Width;
+			if (h > picturePanel.Height) h = picturePanel.Height;
+
 			Size = new Size(w, h);
 			Refresh();
 		}
 
-		private void SetLocation(int x, int y)
+		private void SetLocation(int newX, int newY)
 		{
-			//if (x > ContainerLocation.X + ContainerSize.Width - MinimumSize.Width)
-			//{
-			//	x = ContainerLocation.X + ContainerSize.Width - MinimumSize.Width;
-			//}
-			//if (y > ContainerLocation.Y + ContainerSize.Height - MinimumSize.Height)
-			//{
-			//	y = ContainerLocation.Y + ContainerSize.Height - MinimumSize.Height;
-			//}
-			Location = new Point(Owner.ClientRectangle.Location.X + x, ClientRectangle.Location.Y + y);
+			if (newX < 0) newX = 0;
+			if (newY < 0) newY = 0;
+			if (newX > picturePanel.Width - Width) newX = picturePanel.Width - Width;
+			if (newY > picturePanel.Height - Height) newY = picturePanel.Height - Height;
+
+			Location = new Point(newX, newY);
 		}
 	}
 }

@@ -431,7 +431,6 @@
 			resources.ApplyResources(this.zoomTextBox, "zoomTextBox");
 			this.zoomTextBox.Margin = new System.Windows.Forms.Padding(7, -1, 7, -1);
 			this.zoomTextBox.Name = "zoomTextBox";
-			this.zoomTextBox.ShortcutsEnabled = false;
 			this.zoomTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zoomTextBox_KeyPress);
 			this.zoomTextBox.MouseEnter += new System.EventHandler(this.zoomTextBox_MouseEnter);
 			this.zoomTextBox.MouseLeave += new System.EventHandler(this.zoomTextBox_MouseLeave);

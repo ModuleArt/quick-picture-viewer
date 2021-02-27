@@ -773,7 +773,7 @@
     <value>240, 6</value>
   </data>
   <data name="cropBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+R</value>
+    <value>Ctrl+Shift+X</value>
   </data>
   <data name="cropBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 24</value>
@@ -4094,9 +4094,6 @@
         AAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAIABAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOAHAAA=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>320, 320</value>

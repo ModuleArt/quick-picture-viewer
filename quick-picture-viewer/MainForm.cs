@@ -692,11 +692,6 @@ namespace quick_picture_viewer
 				pictureBox.Width < picturePanel.Width ? (picturePanel.Width - pictureBox.Width) / 2 : -picturePanel.HorizontalScroll.Value,
 				pictureBox.Height < picturePanel.Height ? (picturePanel.Height - pictureBox.Height) / 2 : -picturePanel.VerticalScroll.Value
 			);
-
-			if (selForm != null)
-			{
-				selForm.UpdateContainerRect(pictureBox.Location.X, pictureBox.Location.Y + picturePanel.Location.Y, pictureBox.Width, pictureBox.Height);
-			}
 		}
 
 		private void setZoomText(string text)
@@ -2109,6 +2104,8 @@ namespace quick_picture_viewer
 					navPanel.Location = new Point(navPanel.Location.X, ClientRectangle.Height - navPanel.borderSpacing - navPanel.Height - navPanel.extraBottomMargin);
 				}
 			}
+
+			UpdateSelectionRect();
 		}
 
 		private void actualSizeBtn_Click(object sender, EventArgs e)
@@ -2444,13 +2441,12 @@ namespace quick_picture_viewer
 			{
 				if (selForm == null || selForm.IsDisposed)
 				{
-					selForm = new SelectionForm(darkMode);
+					selForm = new SelectionForm(picturePanel, darkMode);
 					selForm.Owner = this;
 					selForm.Show();
-					SelectionForm.SetParent(selForm.Handle, Handle);
-					//Console.WriteLine(selForm.Location.Y);
-					//SelectionForm.MoveWindow(selForm.Handle, 0, 0, selForm.Width, selForm.Height, true);
-					selForm.UpdateContainerRect(pictureBox.Location.X, pictureBox.Location.Y + picturePanel.Location.Y, pictureBox.Width, pictureBox.Height);
+					SelectionForm.SetParent(selForm.Handle, picturePanel.Handle);
+					UpdateSelectionRect();
+					selForm.SelectAll();
 				}
 			}
 			else
@@ -2468,17 +2464,31 @@ namespace quick_picture_viewer
 			if (selForm != null)
 			{
 				float scale = (float)originalImage.Width / (float)pictureBox.Width;
-
+				Point loc = PointToScreen(ClientRectangle.Location);
 				Rectangle r = new Rectangle()
 				{
 					Width = (int)(selForm.Width * scale),
 					Height = (int)(selForm.Height * scale),
-					X = selForm.Location.X - ClientRectangle.Location.X,
-					Y = selForm.Location.Y - ClientRectangle.Location.Y
+					X = (int)((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale),
+					Y = (int)((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale)
 				};
 				Bitmap croppedImage = originalImage.Clone(r, originalImage.PixelFormat);
 				openImage(croppedImage, null, null);
 			}
+			else
+			{
+				selectionBtn.Checked = true;
+			}
+		}
+
+		private void UpdateSelectionRect()
+		{
+			if (selForm != null)
+			{
+				Point loc = PointToScreen(ClientRectangle.Location);
+				selForm.UpdateContainerRect();
+			}
+				
 		}
 	}
 }
