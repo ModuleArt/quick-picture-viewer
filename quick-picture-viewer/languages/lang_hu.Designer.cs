@@ -1052,15 +1052,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows beállítások megnyitása.
-        /// </summary>
-        public static string open_windows_settings {
-            get {
-                return ResourceManager.GetString("open-windows-settings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Társítás.
         /// </summary>
         public static string open_with {

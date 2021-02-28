@@ -241,7 +241,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rechercher les mises à jour automatiquement.
+        ///   Looks up a localized string similar to Rechercher les mises à jour.
         /// </summary>
         public static string check_for_app_updates {
             get {
@@ -1047,15 +1047,6 @@ namespace quick_picture_viewer.languages {
         public static string open_recursive {
             get {
                 return ResourceManager.GetString("open-recursive", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ouvrir les paramètres de Windows.
-        /// </summary>
-        public static string open_windows_settings {
-            get {
-                return ResourceManager.GetString("open-windows-settings", resourceCulture);
             }
         }
         

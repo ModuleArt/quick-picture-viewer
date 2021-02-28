@@ -198,7 +198,7 @@
     <comment>Picture in picture</comment>
   </data>
   <data name="check-for-app-updates" xml:space="preserve">
-    <value>Rechercher les mises à jour automatiquement</value>
+    <value>Rechercher les mises à jour</value>
     <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
@@ -556,10 +556,6 @@
   <data name="open-recursive" xml:space="preserve">
     <value>Ouvrir le dossier de manière récursive</value>
     <comment>Menu</comment>
-  </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Ouvrir les paramètres de Windows</value>
-    <comment>About</comment>
   </data>
   <data name="open-with" xml:space="preserve">
     <value>Ouvrir avec</value>

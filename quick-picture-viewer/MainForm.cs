@@ -827,14 +827,42 @@ namespace quick_picture_viewer
 
 		private void flipVerticalButton_Click(object sender, EventArgs e)
 		{
-			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
+			if (selForm != null)
+			{
+				Rectangle r = GetSelectionRect();
+				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
+				cropped.RotateFlip(RotateFlipType.RotateNoneFlipX);
+				using (Graphics g = Graphics.FromImage(originalImage))
+				{
+					g.DrawImage(cropped, r);
+				}
+				selectionBtn.Checked = false;
+			}
+			else
+			{
+				originalImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
+			}
 			pictureBox.Image = originalImage;
 			setImageChanged(true);
 		}
 
 		private void flipHorizontalButton_Click(object sender, EventArgs e)
 		{
-			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
+			if (selForm != null)
+			{
+				Rectangle r = GetSelectionRect();
+				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
+				cropped.RotateFlip(RotateFlipType.RotateNoneFlipY);
+				using (Graphics g = Graphics.FromImage(originalImage))
+				{
+					g.DrawImage(cropped, r);
+				}
+				selectionBtn.Checked = false;
+			}
+			else
+			{
+				originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
+			}
 			pictureBox.Image = originalImage;
 			setImageChanged(true);
 		}
@@ -1935,7 +1963,21 @@ namespace quick_picture_viewer
 
 		private void rotate180Button_Click(object sender, EventArgs e)
 		{
-			originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
+			if (selForm != null)
+			{
+				Rectangle r = GetSelectionRect();
+				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
+				cropped.RotateFlip(RotateFlipType.Rotate180FlipNone);
+				using (Graphics g = Graphics.FromImage(originalImage))
+				{
+					g.DrawImage(cropped, r);
+				}
+				selectionBtn.Checked = false;
+			}
+			else
+			{
+				originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);	
+			}
 			pictureBox.Image = originalImage;
 			setImageChanged(true);
 		}

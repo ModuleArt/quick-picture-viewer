@@ -558,10 +558,6 @@
     <value>Rekurzívan nyissa meg a mappát</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Windows beállítások megnyitása</value>
-    <comment>About</comment>
-  </data>
   <data name="open-with" xml:space="preserve">
     <value>Társítás</value>
     <comment>Menu</comment>

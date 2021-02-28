@@ -49,7 +49,7 @@
 			this.productLabel.Location = new System.Drawing.Point(10, 170);
 			this.productLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.productLabel.Name = "productLabel";
-			this.productLabel.Size = new System.Drawing.Size(270, 19);
+			this.productLabel.Size = new System.Drawing.Size(280, 19);
 			this.productLabel.TabIndex = 27;
 			this.productLabel.Text = "Quick Picture Viewer";
 			this.productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,7 +63,7 @@
 			this.versionLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.versionLabel.Name = "versionLabel";
 			this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.versionLabel.Size = new System.Drawing.Size(270, 19);
+			this.versionLabel.Size = new System.Drawing.Size(280, 19);
 			this.versionLabel.TabIndex = 28;
 			this.versionLabel.Text = "version";
 			this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -80,7 +80,7 @@
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(258, 0);
+			this.closeBtn.Location = new System.Drawing.Point(268, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
@@ -97,10 +97,10 @@
 			this.developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
 			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
-			this.developerBtn.Location = new System.Drawing.Point(150, 376);
+			this.developerBtn.Location = new System.Drawing.Point(155, 376);
 			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.developerBtn.Name = "developerBtn";
-			this.developerBtn.Size = new System.Drawing.Size(130, 32);
+			this.developerBtn.Size = new System.Drawing.Size(135, 32);
 			this.developerBtn.TabIndex = 4;
 			this.developerBtn.Text = " Module Art";
 			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -120,7 +120,7 @@
 			this.githubBtn.Location = new System.Drawing.Point(10, 376);
 			this.githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.githubBtn.Name = "githubBtn";
-			this.githubBtn.Size = new System.Drawing.Size(130, 32);
+			this.githubBtn.Size = new System.Drawing.Size(135, 32);
 			this.githubBtn.TabIndex = 3;
 			this.githubBtn.Text = " GitHub";
 			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,12 +133,12 @@
 			// 
 			this.descTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(205)))), ((int)(((byte)(126)))));
 			this.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.descTextBox.Location = new System.Drawing.Point(10, 228);
+			this.descTextBox.Location = new System.Drawing.Point(20, 228);
 			this.descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.descTextBox.Multiline = true;
 			this.descTextBox.Name = "descTextBox";
 			this.descTextBox.ReadOnly = true;
-			this.descTextBox.Size = new System.Drawing.Size(270, 96);
+			this.descTextBox.Size = new System.Drawing.Size(260, 96);
 			this.descTextBox.TabIndex = 1;
 			this.descTextBox.Text = "description";
 			this.descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -154,7 +154,7 @@
 			this.makeDefaultBtn.Location = new System.Drawing.Point(10, 418);
 			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.makeDefaultBtn.Name = "makeDefaultBtn";
-			this.makeDefaultBtn.Size = new System.Drawing.Size(270, 32);
+			this.makeDefaultBtn.Size = new System.Drawing.Size(280, 32);
 			this.makeDefaultBtn.TabIndex = 5;
 			this.makeDefaultBtn.Text = "set as default photo viewer";
 			this.makeDefaultBtn.UseVisualStyleBackColor = false;
@@ -169,7 +169,7 @@
 			this.copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.copyrightLabel.Name = "copyrightLabel";
 			this.copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.copyrightLabel.Size = new System.Drawing.Size(270, 19);
+			this.copyrightLabel.Size = new System.Drawing.Size(280, 19);
 			this.copyrightLabel.TabIndex = 44;
 			this.copyrightLabel.Text = "Copyright © 2021 Module Art";
 			this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,7 +185,7 @@
 			this.updatesBtn.Location = new System.Drawing.Point(10, 334);
 			this.updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.updatesBtn.Name = "updatesBtn";
-			this.updatesBtn.Size = new System.Drawing.Size(270, 32);
+			this.updatesBtn.Size = new System.Drawing.Size(280, 32);
 			this.updatesBtn.TabIndex = 2;
 			this.updatesBtn.Text = " check for updates";
 			this.updatesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,7 +199,7 @@
 			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
 			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
 			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(290, 128);
+			this.logoPictureBox.Size = new System.Drawing.Size(300, 128);
 			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.logoPictureBox.TabIndex = 41;
 			this.logoPictureBox.TabStop = false;
@@ -207,7 +207,7 @@
 			// AboutForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(290, 509);
+			this.ClientSize = new System.Drawing.Size(300, 509);
 			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.developerBtn);
 			this.Controls.Add(this.githubBtn);
