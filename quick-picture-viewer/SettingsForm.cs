@@ -29,6 +29,11 @@ namespace quick_picture_viewer
 			},
 			new Language
 			{
+				Code = "fr",
+				Authors = new string[] { "b0bdN" }
+			},
+			new Language
+			{
 				Code = "hu",
 				Authors = new string[] { "KristofKekesi" }
 			},

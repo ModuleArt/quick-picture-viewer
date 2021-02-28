@@ -17,8 +17,6 @@ namespace quick_picture_viewer
 	{
 		private string openPath = null;
 		private int zoomFactor = 100;
-		private int width = 0;
-		private int height = 0;
 		private Bitmap originalImage = null;
 		private bool autoZoom = true;
 		private Point panelMouseDownLocation;
@@ -147,9 +145,11 @@ namespace quick_picture_viewer
 				switch (CultureInfo.CurrentCulture.TwoLetterISOLanguageName)
 				{
 					case "en":
-					case "es":
-					case "ru":
 					case "cn":
+					case "es":
+					case "fr":
+					case "hu":
+					case "ru":
 						LangMan.Init("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 						Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 						break;
@@ -184,12 +184,15 @@ namespace quick_picture_viewer
 			deleteBtn.Text = LangMan.Get("move-to-trash") + " ...";
 			reloadButton.Text = LangMan.Get("reload-file");
 
+			selectionBtn.Text = LangMan.Get("selection-tool");
+
 			editButton.Text = LangMan.Get("edit-image");
 			flipHorizontalButton.Text = LangMan.Get("flip-horizontal");
 			flipVerticalButton.Text = LangMan.Get("flip-vertical");
 			rotateRightButton.Text = LangMan.Get("rotate-right");
 			rotateLeftButton.Text = LangMan.Get("rotate-left");
 			rotate180Button.Text = LangMan.Get("rotate-180");
+			cropBtn.Text = LangMan.Get("crop");
 
 			externalBtn.Text = LangMan.Get("open-external");
 			externalRunBtn.Text = LangMan.Get("open-with-default");
@@ -482,6 +485,7 @@ namespace quick_picture_viewer
 					}
 				}
 
+				selectionBtn.Checked = false;
 				setImageChanged(false);
 
 				if (originalImage != null)
@@ -516,8 +520,8 @@ namespace quick_picture_viewer
 				originalImage = bitmap;
 				pictureBox.Image = originalImage;
 
-				width = pictureBox.Image.Size.Width;
-				height = pictureBox.Image.Size.Height;
+				//width = pictureBox.Image.Size.Width;
+				//height = pictureBox.Image.Size.Height;
 				fileLabel.Text = " " + LangMan.Get("file") + ": " + fileName;
 
 				if (directoryName == null)
@@ -525,7 +529,6 @@ namespace quick_picture_viewer
 					currentFolder = null;
 					currentFile = null;
 					directoryLabel.Visible = false;
-					sizeLabel.Text = " " + LangMan.Get("size") + ": " + width.ToString() + " x " + height.ToString() + " px";
 				}
 				else
 				{
@@ -545,11 +548,11 @@ namespace quick_picture_viewer
 					}
 
 					directoryLabel.Text = " " + LangMan.Get("folder") + ": " + directoryName;
-					sizeLabel.Text = " " + LangMan.Get("size") + ": " + width.ToString() + " x " + height.ToString() + " px (" + Converter.PathToSize(path) + ")";
 
 					dateCreatedLabel.Text = " " + LangMan.Get("created") + ": " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
 					dateModifiedLabel.Text = " " + LangMan.Get("modified") + ": " + File.GetLastWriteTime(path).ToShortDateString() + " - " + File.GetLastWriteTime(path).ToLongTimeString();
 				}
+				UpdateSizeLabel();
 
 				nextButton.Enabled = directoryName != null;
 				prevButton.Enabled = directoryName != null;
@@ -575,9 +578,11 @@ namespace quick_picture_viewer
 				rotateLeftButton.Enabled = true;
 				rotateRightButton.Enabled = true;
 				rotate180Button.Enabled = true;
+				cropBtn.Enabled = true;
 				saveAsButton.Enabled = true;
 				copyImageBtn.Enabled = true;
 				autoZoomButton.Enabled = true;
+				selectionBtn.Enabled = true;
 				setAsDesktopButton.Enabled = true;
 				infoButton.Enabled = true;
 				printButton.Enabled = true;
@@ -588,6 +593,15 @@ namespace quick_picture_viewer
 				pleaseOpenLabel.Invoke((MethodInvoker)(() => pleaseOpenLabel.Visible = false));
 
 				CheckAutoZoomNeeded();
+			}
+		}
+
+		private void UpdateSizeLabel()
+		{
+			sizeLabel.Text = " " + LangMan.Get("size") + ": " + originalImage.Width.ToString() + " x " + originalImage.Height.ToString();
+			if (currentFolder != null)
+			{
+				sizeLabel.Text += " (" + Converter.PathToSize(Path.Combine(currentFolder, currentFile)) + ")";
 			}
 		}
 
@@ -674,8 +688,8 @@ namespace quick_picture_viewer
 
 			setAutoZoom(false);
 
-			int newWidth = Convert.ToInt32(width * zoomFactor / 100);
-			int newHeight = Convert.ToInt32(height * zoomFactor / 100);
+			int newWidth = Convert.ToInt32(originalImage.Width * zoomFactor / 100);
+			int newHeight = Convert.ToInt32(originalImage.Height * zoomFactor / 100);
 
 			Size newSize = new Size(newWidth, newHeight);
 
@@ -705,14 +719,12 @@ namespace quick_picture_viewer
 		private void setAutoZoom(bool b)
 		{
 			autoZoom = b;
-
 			autoZoomButton.Checked = b;
-
 			if (b)
 			{
 				pictureBox.Dock = DockStyle.Fill;
-
 				zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + LangMan.Get("auto");
+				selectionBtn.Checked = false;
 			}
 			else
 			{
@@ -833,6 +845,7 @@ namespace quick_picture_viewer
 			pictureBox.Image = originalImage;
 			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
+			UpdateSizeLabel();
 		}
 
 		private void rotateRightButton_Click(object sender, EventArgs e)
@@ -841,6 +854,7 @@ namespace quick_picture_viewer
 			pictureBox.Image = originalImage;
 			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
+			UpdateSizeLabel();
 		}
 
 		private void saveAsButton_Click(object sender, EventArgs e)
@@ -1494,12 +1508,14 @@ namespace quick_picture_viewer
 			nextButton.Enabled = false;
 			slideshowButton.Enabled = false;
 			autoZoomButton.Enabled = false;
+			selectionBtn.Enabled = false;
 			zoomInButton.Enabled = false;
 			zoomOutButton.Enabled = false;
 			actualSizeBtn.Enabled = false;
 			rotateLeftButton.Enabled = false;
 			rotateRightButton.Enabled = false;
 			rotate180Button.Enabled = false;
+			cropBtn.Enabled = false;
 			flipHorizontalButton.Enabled = false;
 			flipVerticalButton.Enabled = false;
 			copyImageBtn.Enabled = false;
@@ -1521,7 +1537,7 @@ namespace quick_picture_viewer
 
 			directoryLabel.Visible = false;
 			fileLabel.Text = " " + LangMan.Get("no-file");
-			sizeLabel.Text = " " + LangMan.Get("size") + ": 0 x 0 px";
+			sizeLabel.Text = " " + LangMan.Get("size") + ": 0 x 0";
 			dateCreatedLabel.Visible = false;
 			dateModifiedLabel.Visible = false;
 
@@ -1618,6 +1634,7 @@ namespace quick_picture_viewer
 				backCustomBtn.Image = Properties.Resources.white_palette;
 				framelessBtn.Image = Properties.Resources.white_frame;
 
+				selectionLabel.Image = Properties.Resources.white_selection;
 				directoryLabel.Image = Properties.Resources.white_picfolder;
 				fileLabel.Image = Properties.Resources.white_imgfile;
 				sizeLabel.Image = Properties.Resources.white_size;
@@ -1920,14 +1937,12 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
 		private void miniViewButton_Click(object sender, EventArgs e)
 		{
 			Hide();
-
 			MiniViewForm mvf = new MiniViewForm(originalImage, Text, checkboardBackground);
 			mvf.Owner = this;
 			mvf.Show();
@@ -1936,7 +1951,6 @@ namespace quick_picture_viewer
 		private void settingsButton_Click(object sender, EventArgs e)
 		{
 			setSlideshow(false);
-
 			SettingsForm settingsBox = new SettingsForm();
 			settingsBox.Owner = this;
 			settingsBox.TopMost = alwaysOnTop;
@@ -2019,12 +2033,14 @@ namespace quick_picture_viewer
 		private void externalBtn_DropDownOpened(object sender, EventArgs e)
 		{
 			int lastSlashIndex = Properties.Settings.Default.FavoriteExternalApp.LastIndexOf('/');
-			if (lastSlashIndex == -1)
-				lastSlashIndex = Properties.Settings.Default.FavoriteExternalApp.LastIndexOf('\\');
+			if (lastSlashIndex == -1) lastSlashIndex = Properties.Settings.Default.FavoriteExternalApp.LastIndexOf('\\');
 
 			if (lastSlashIndex >= 0)
 			{
-				string appName = Properties.Settings.Default.FavoriteExternalApp.Substring(lastSlashIndex + 1, Properties.Settings.Default.FavoriteExternalApp.Length - lastSlashIndex - 1);
+				string appName = Properties.Settings.Default.FavoriteExternalApp.Substring(
+					lastSlashIndex + 1, 
+					Properties.Settings.Default.FavoriteExternalApp.Length - lastSlashIndex - 1
+				);
 				externalFavoriteBtn.Text = LangMan.Get("open-with") + " \"" + appName + "\"";
 			}
 			else
@@ -2084,8 +2100,6 @@ namespace quick_picture_viewer
 					navPanel.Location = new Point(navPanel.Location.X, ClientRectangle.Height - navPanel.borderSpacing - navPanel.Height - navPanel.extraBottomMargin);
 				}
 			}
-
-			UpdateSelectionRect();
 		}
 
 		private void actualSizeBtn_Click(object sender, EventArgs e)
@@ -2136,7 +2150,6 @@ namespace quick_picture_viewer
 			toolsBtn.DropDownItems.Clear();
 
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
-			PluginMan.apiVer = 3;
 			PluginMan.inputType = "bitmap";
 
 			PluginInfo[] plugins = PluginMan.GetPlugins(true);
@@ -2424,14 +2437,22 @@ namespace quick_picture_viewer
 		{
 			if (selectionBtn.Checked)
 			{
+				if (zoomTextBox.Text == LangMan.Get("auto"))
+				{
+					zoomToFit();
+					setZoomText(zoomFactor + "%");
+				}
+
 				if (selForm == null || selForm.IsDisposed)
 				{
 					selForm = new SelectionForm(picturePanel, darkMode);
+					selForm.SizeChanged += SelForm_SizeChanged;
+					selForm.LocationChanged += SelForm_SizeChanged;
+					selForm.DoubleClick += SelForm_DoubleClick;
 					selForm.Owner = this;
 					selForm.Show();
-					SelectionForm.SetParent(selForm.Handle, picturePanel.Handle);
-					UpdateSelectionRect();
-					selForm.SelectAll();
+					NativeMan.SetParent(selForm.Handle, Handle);
+					selForm.Select(pictureBox.Location.X, pictureBox.Location.Y, pictureBox.Width, pictureBox.Height);
 				}
 			}
 			else
@@ -2442,26 +2463,28 @@ namespace quick_picture_viewer
 					selForm = null;
 				}
 			}
+			selectionLabel.Visible = selectionBtn.Checked;
+		}
+
+		private void SelForm_DoubleClick(object sender, EventArgs e)
+		{
+			selForm.Select(pictureBox.Location.X, pictureBox.Location.Y, pictureBox.Width, pictureBox.Height);
+		}
+
+		private void SelForm_SizeChanged(object sender, EventArgs e)
+		{
+			Rectangle r = GetSelectionRect();
+			selectionLabel.Text = " X: " + r.X + " Y: " + r.Y + " (" + r.Width + " x " + r.Height + ")";
 		}
 
 		private void cropBtn_Click(object sender, EventArgs e)
 		{
 			if (selForm != null && originalImage != null)
 			{
-				float scale = (float)originalImage.Width / (float)pictureBox.Width;
-				Point loc = PointToScreen(ClientRectangle.Location);
-				Rectangle r = new Rectangle()
-				{
-					Width = (int)(selForm.Width * scale),
-					Height = (int)(selForm.Height * scale),
-					X = (int)((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale),
-					Y = (int)((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale)
-				};
-
-				originalImage = originalImage.Clone(r, originalImage.PixelFormat);
+				originalImage = originalImage.Clone(GetSelectionRect(), originalImage.PixelFormat);
 				pictureBox.Image = originalImage;
-				setZoomText(LangMan.Get("auto"));
 				setImageChanged(true);
+				UpdateSizeLabel();
 
 				selectionBtn.Checked = false;
 			}
@@ -2471,9 +2494,45 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void UpdateSelectionRect()
+		private Rectangle GetSelectionRect()
 		{
-			if (selForm != null) selForm.UpdateContainerRect();
+			double scale = (double)originalImage.Width / (double)pictureBox.Width;
+			Point loc = PointToScreen(ClientRectangle.Location);
+			Rectangle result = new Rectangle()
+			{
+				Width = (int)(selForm.Width * scale),
+				Height = (int)(selForm.Height * scale),
+				X = (int)((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale),
+				Y = (int)((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale)
+			};
+
+			if (result.X < 0)
+			{
+				result.Width += result.X;
+				result.X = 0;
+			}
+			else if (result.Width > originalImage.Width - result.X) result.Width = originalImage.Width - result.X;
+
+			if (result.Y < 0) 
+			{
+				result.Height += result.Y;
+				result.Y = 0; 
+			}
+			else if (result.Height > originalImage.Height - result.Y) result.Height = originalImage.Height - result.Y;
+
+			if (result.Width > originalImage.Width) result.Width = originalImage.Width;
+			if (result.Height > originalImage.Height) result.Height = originalImage.Height;
+
+			return result;
+		}
+
+		private void MainForm_SizeChanged(object sender, EventArgs e)
+		{
+			if (selForm != null && WindowState != FormWindowState.Minimized)
+			{
+				selForm.UpdateContainerRect();
+				SelForm_SizeChanged(selForm, EventArgs.Empty);
+			}
 		}
 	}
 }

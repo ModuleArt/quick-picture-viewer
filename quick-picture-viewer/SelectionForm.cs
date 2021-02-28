@@ -1,16 +1,11 @@
 ﻿using QuickLibrary;
-using System;
 using System.Drawing;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
 	public partial class SelectionForm : Form
 	{
-		[DllImport("user32.dll", SetLastError = true)]
-		public static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
-
 		private int gripSize = 14;
 		private Pen borderPen = new Pen(new SolidBrush(ThemeMan.AccentColor), 1);
 		private Brush gripBrush;
@@ -52,15 +47,18 @@ namespace quick_picture_viewer
 		{
 			SetSize(Width, Height);
 			SetLocation(
-				Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X - picturePanel.Location.X, 
-				Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y - picturePanel.Location.Y
+				Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X,
+				Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y
 			);
 		}
 
-		public void SelectAll()
+		public void Select(int x, int y, int w, int h)
 		{
-			SetLocation(0, 0);
-			SetSize(picturePanel.Width, picturePanel.Height);
+			SetLocation(
+				picturePanel.Location.X + x, 
+				picturePanel.Location.Y + y
+			);
+			SetSize(w, h);
 		}
 
 		protected override void OnPaint(PaintEventArgs e)
@@ -128,8 +126,8 @@ namespace quick_picture_viewer
 				{
 					case DragGrip.NoGrip:
 						SetLocation(
-							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X - picturePanel.Location.X,
-							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y - picturePanel.Location.Y
+							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X,
+							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y
 						);
 						break;
 					case DragGrip.BottomRight:
@@ -139,13 +137,14 @@ namespace quick_picture_viewer
 						);
 						break;
 					case DragGrip.TopLeft:
-						SetLocation(
-							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X - picturePanel.Location.X,
-							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y - picturePanel.Location.Y
-						);
 						SetSize(
 							sizeStart.Width + locationStart.X - Location.X,
 							sizeStart.Height + locationStart.Y - Location.Y
+						);
+						SetLocation(
+							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X,
+							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y,
+							true
 						);
 						break;
 				}
@@ -167,19 +166,30 @@ namespace quick_picture_viewer
 
 		private void SetSize(int w, int h)
 		{
-			if (w > picturePanel.Width) w = picturePanel.Width;
-			if (h > picturePanel.Height) h = picturePanel.Height;
+			int curX = Location.X - Owner.PointToScreen(ClientRectangle.Location).X - picturePanel.Location.X;
+			int curY = Location.Y - Owner.PointToScreen(ClientRectangle.Location).Y - picturePanel.Location.Y;
+
+			if (w > picturePanel.Width - curX) w = picturePanel.Width - curX;
+			if (h > picturePanel.Height - curY) h = picturePanel.Height - curY;
 
 			Size = new Size(w, h);
 			Refresh();
 		}
 
-		private void SetLocation(int newX, int newY)
+		private void SetLocation(int newX, int newY, bool collapse = false)
 		{
-			if (newX < 0) newX = 0;
-			if (newY < 0) newY = 0;
-			if (newX > picturePanel.Width - Width) newX = picturePanel.Width - Width;
-			if (newY > picturePanel.Height - Height) newY = picturePanel.Height - Height;
+			if (newX < picturePanel.Location.X) newX = picturePanel.Location.X;
+			if (newY < picturePanel.Location.Y) newY = picturePanel.Location.Y;
+			if (newX > picturePanel.Location.X + picturePanel.Width - Width) 
+			{
+				if (collapse) SetSize(picturePanel.Width - newX + picturePanel.Location.X, Height);
+				newX = picturePanel.Location.X + picturePanel.Width - Width;
+			}
+			if (newY > picturePanel.Location.Y + picturePanel.Height - Height)
+			{
+				if (collapse) SetSize(Width, picturePanel.Height - newY + picturePanel.Location.Y);
+				newY = picturePanel.Location.Y + picturePanel.Height - Height;
+			}
 
 			Location = new Point(newX, newY);
 		}

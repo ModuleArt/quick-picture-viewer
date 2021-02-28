@@ -34,11 +34,12 @@
 			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.selectionLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.fileLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.hasChangesLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.sizeLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.zoomLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.hasChangesLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateCreatedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
@@ -150,17 +151,26 @@
 			resources.ApplyResources(this.statusStrip1, "statusStrip1");
 			this.statusStrip1.GripMargin = new System.Windows.Forms.Padding(0);
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selectionLabel,
             this.directoryLabel,
             this.fileLabel,
+            this.hasChangesLabel,
             this.sizeLabel,
             this.zoomLabel,
-            this.hasChangesLabel,
             this.dateCreatedLabel,
             this.dateModifiedLabel});
 			this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.ShowItemToolTips = true;
 			this.statusStrip1.VisibleChanged += new System.EventHandler(this.statusStrip1_VisibleChanged);
+			// 
+			// selectionLabel
+			// 
+			this.selectionLabel.BackColor = System.Drawing.Color.Transparent;
+			this.selectionLabel.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
+			this.selectionLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
+			this.selectionLabel.Name = "selectionLabel";
+			resources.ApplyResources(this.selectionLabel, "selectionLabel");
 			// 
 			// directoryLabel
 			// 
@@ -178,6 +188,13 @@
 			this.fileLabel.Name = "fileLabel";
 			resources.ApplyResources(this.fileLabel, "fileLabel");
 			// 
+			// hasChangesLabel
+			// 
+			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.hasChangesLabel, "hasChangesLabel");
+			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
+			this.hasChangesLabel.Name = "hasChangesLabel";
+			// 
 			// sizeLabel
 			// 
 			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
@@ -191,13 +208,6 @@
 			resources.ApplyResources(this.zoomLabel, "zoomLabel");
 			this.zoomLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
 			this.zoomLabel.Name = "zoomLabel";
-			// 
-			// hasChangesLabel
-			// 
-			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.hasChangesLabel, "hasChangesLabel");
-			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.hasChangesLabel.Name = "hasChangesLabel";
 			// 
 			// dateCreatedLabel
 			// 
@@ -999,6 +1009,7 @@
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.ResizeBegin += new System.EventHandler(this.MainForm_ResizeBegin);
 			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
+			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
@@ -1109,5 +1120,6 @@
 		private System.Windows.Forms.ToolStripButton selectionBtn;
 		private QuickLibrary.QlibToolsep qlibToolsep4;
 		private System.Windows.Forms.ToolStripMenuItem cropBtn;
+		private System.Windows.Forms.ToolStripStatusLabel selectionLabel;
 	}
 }

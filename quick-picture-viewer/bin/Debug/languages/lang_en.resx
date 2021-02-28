@@ -253,6 +253,10 @@
     <value>Created by</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="crop" xml:space="preserve">
+    <value>Crop</value>
+    <comment>Menu</comment>
+  </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Current file could not be found</value>
     <comment>Message box</comment>
@@ -712,6 +716,10 @@
   <data name="seconds" xml:space="preserve">
     <value>seconds</value>
     <comment>Settings</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Selection tool</value>
+    <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Set as default image viewer</value>

@@ -196,6 +196,15 @@
   <data name="statusStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
+  <data name="selectionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 17</value>
+  </data>
+  <data name="selectionLabel.Text" xml:space="preserve">
+    <value> selection</value>
+  </data>
+  <data name="selectionLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="directoryLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 17</value>
   </data>
@@ -210,6 +219,25 @@
   </data>
   <data name="fileLabel.Text" xml:space="preserve">
     <value> file</value>
+  </data>
+  <data name="hasChangesLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
+        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
+        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
+        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
+        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="hasChangesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="hasChangesLabel.Text" xml:space="preserve">
+    <value> not-saved</value>
+  </data>
+  <data name="hasChangesLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="sizeLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -239,25 +267,6 @@
   </data>
   <data name="zoomLabel.Text" xml:space="preserve">
     <value> zoom</value>
-  </data>
-  <data name="hasChangesLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAO5JREFUOE/N0j1qAlEYheEPiYJgq5B0UQT3YKULsNQuixAxVUSxdAsWNoFoYmGb
-        1h3YmFjZBxHSpUre84k4OOOgjeTAA3MuzJ25P3aNPGKDKdIauCQdfKCEF7zj7EkGWCDrzSyBEebIaCAu
-        +vISt94OucEYr95ORC//ou4tnCK2u8dwnrDCA75QQTB3+ETL21H2a855MytDk9S8md1jjaa3o7Sh3dYX
-        gqlCk+iP9GddROYbhd1jKA1oT06+rLxhCB1VMDoFnUbPW0xSmGGCpAbIfs2RGxYV3TDdtGfkoT3p46Jo
-        Et35H2jdcf5FzP4AA64vkKyV2q0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="hasChangesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="hasChangesLabel.Text" xml:space="preserve">
-    <value> not-saved</value>
-  </data>
-  <data name="hasChangesLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="dateCreatedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -605,6 +614,9 @@
   </data>
   <data name="zoomTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="zoomTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="zoomTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 24</value>
@@ -1411,7 +1423,7 @@
     <value>picturePanel</value>
   </data>
   <data name="&gt;&gt;picturePanel.Type" xml:space="preserve">
-    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=3.0.5.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>quick_picture_viewer.CustomPanel, quick-picture-viewer, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;picturePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -4119,6 +4131,12 @@
   <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;selectionLabel.Name" xml:space="preserve">
+    <value>selectionLabel</value>
+  </data>
+  <data name="&gt;&gt;selectionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;directoryLabel.Name" xml:space="preserve">
     <value>directoryLabel</value>
   </data>
@@ -4131,6 +4149,12 @@
   <data name="&gt;&gt;fileLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;hasChangesLabel.Name" xml:space="preserve">
+    <value>hasChangesLabel</value>
+  </data>
+  <data name="&gt;&gt;hasChangesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;sizeLabel.Name" xml:space="preserve">
     <value>sizeLabel</value>
   </data>
@@ -4141,12 +4165,6 @@
     <value>zoomLabel</value>
   </data>
   <data name="&gt;&gt;zoomLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hasChangesLabel.Name" xml:space="preserve">
-    <value>hasChangesLabel</value>
-  </data>
-  <data name="&gt;&gt;hasChangesLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dateCreatedLabel.Name" xml:space="preserve">

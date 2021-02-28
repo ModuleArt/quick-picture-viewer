@@ -253,6 +253,10 @@
     <value>Разработчик</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="crop" xml:space="preserve">
+    <value>Обрезать</value>
+    <comment>Menu</comment>
+  </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Текущий файл не найден</value>
     <comment>Message box</comment>
@@ -708,6 +712,10 @@
   <data name="seconds" xml:space="preserve">
     <value>секунд</value>
     <comment>Settings</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Инструмент выделения</value>
+    <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Сделать приложением по умолчанию</value>

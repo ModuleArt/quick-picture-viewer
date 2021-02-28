@@ -367,6 +367,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Обрезать.
+        /// </summary>
+        public static string crop {
+            get {
+                return ResourceManager.GetString("crop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Текущий файл не найден.
         /// </summary>
         public static string cur_file_not_found {
@@ -1389,6 +1398,15 @@ namespace quick_picture_viewer.languages {
         public static string seconds {
             get {
                 return ResourceManager.GetString("seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Инструмент выделения.
+        /// </summary>
+        public static string selection_tool {
+            get {
+                return ResourceManager.GetString("selection-tool", resourceCulture);
             }
         }
         

@@ -60,7 +60,6 @@ namespace quick_picture_viewer
 			}
 
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
-			PluginMan.apiVer = 3;
 			PluginMan.inputType = "bitmap";
 
 			PluginInfo[] plugins = PluginMan.GetPlugins(true);

@@ -254,6 +254,10 @@
     <value>创建者</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="crop" xml:space="preserve">
+    <value>庄稼</value>
+    <comment>Menu</comment>
+  </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>当前文件无法找到</value>
     <comment>Message box</comment>
@@ -709,6 +713,10 @@
   <data name="seconds" xml:space="preserve">
     <value>秒</value>
     <comment>Settings</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>选择工具</value>
+    <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>设置为默认图像查看器</value>

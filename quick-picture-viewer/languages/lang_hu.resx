@@ -254,6 +254,10 @@
     <value>Készítette</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="crop" xml:space="preserve">
+    <value>Vág</value>
+    <comment>Menu</comment>
+  </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Jelenlegi fájl nem található</value>
     <comment>Message box</comment>
@@ -713,6 +717,10 @@
   <data name="seconds" xml:space="preserve">
     <value>másodpercenként</value>
     <comment>Settings</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Kiválasztó eszköz</value>
+    <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Beállítás alapértelmezett képnézegetőként</value>

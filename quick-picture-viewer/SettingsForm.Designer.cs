@@ -774,6 +774,7 @@
 			this.langComboBox.Items.AddRange(new object[] {
             "English",
             "Chinese (中文)",
+            "French (Français)",
             "Hungarian (Magyar)",
             "Russian (Русский)",
             "[Beta] Spanish (Española)"});
