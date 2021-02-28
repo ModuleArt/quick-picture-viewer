@@ -65,20 +65,21 @@ namespace quick_picture_viewer
 
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			e.Graphics.DrawRectangle(whitePen, new Rectangle(0, 0, Width - 1, Height - 1));			
+			// BottomRight
+			DrawGrip(e.Graphics, Width - 3, Height - 3);
+			e.Graphics.DrawLine(borderPen, Width - 3, Height - gripSize - 2, Width - 3, Height - 3);
+			e.Graphics.DrawLine(borderPen, Width - gripSize - 2, Height - 3, Width - 3, Height - 3);
+
+			// TopLeft
+			DrawGrip(e.Graphics, 2, 2);
+			e.Graphics.DrawLine(borderPen, 2, 2, gripSize + 2, 2);
+			e.Graphics.DrawLine(borderPen, 2, 2, 2, gripSize + 2);
+
+			// Frame
+			e.Graphics.DrawRectangle(whitePen, new Rectangle(0, 0, Width - 1, Height - 1));
 			e.Graphics.DrawRectangle(blackPen, new Rectangle(0, 0, Width - 1, Height - 1));
 			e.Graphics.DrawRectangle(whitePen, new Rectangle(1, 1, Width - 3, Height - 3));
 			e.Graphics.DrawRectangle(blackPen, new Rectangle(1, 1, Width - 3, Height - 3));
-
-			// BottomRight
-			DrawGrip(e.Graphics, Width - 1, Height - 1);
-			e.Graphics.DrawLine(borderPen, Width - 1, Height - gripSize, Width - 1, Height - 1);
-			e.Graphics.DrawLine(borderPen, Width - gripSize, Height - 1, Width - 1, Height - 1);
-
-			// TopLeft
-			DrawGrip(e.Graphics, 0, 0);
-			e.Graphics.DrawLine(borderPen, 0, 0, gripSize, 0);
-			e.Graphics.DrawLine(borderPen, 0, 0, 0, gripSize);
 		}
 
 		private void DrawGrip(Graphics g, int x, int y)

@@ -817,7 +817,6 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
@@ -825,7 +824,6 @@ namespace quick_picture_viewer
 		{
 			originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
 			pictureBox.Image = originalImage;
-			setZoomText(LangMan.Get("auto"));
 			setImageChanged(true);
 		}
 
@@ -931,97 +929,76 @@ namespace quick_picture_viewer
 		{
 			if (e.Button == MouseButtons.Left)
 			{
-				if (selForm != null)
+				if (autoZoom)
 				{
-
+					AllowDrop = false;
+					if (currentFile != null || originalImage != null)
+					{
+						dragImage = true;
+					}
 				}
 				else
 				{
-					if (autoZoom)
-					{
-						AllowDrop = false;
-						if (currentFile != null || originalImage != null)
-						{
-							dragImage = true;
-						}
-					}
-					else
-					{
-						Cursor.Current = Cursors.SizeAll;
+					Cursor.Current = Cursors.SizeAll;
 
-						panelMouseDownLocation = new Point(
-							PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
-							PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
-						);
-					}
+					panelMouseDownLocation = new Point(
+						PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
+						PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
+					);
 				}
 			}
 		}
 
 		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
 		{
-			if (selForm != null)
-			{
-
-			}
-			else
-			{
-				AllowDrop = true;
-				Cursor.Current = Cursors.Default;
-			}
+			AllowDrop = true;
+			Cursor.Current = Cursors.Default;
 		}
 
 		private void picturePanel_MouseMove(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
 			{
-				if (selForm != null)
+				if (autoZoom)
 				{
-
+					if (dragImage)
+					{
+						if (currentFile != null)
+						{
+							string[] paths = { Path.Combine(currentFolder, currentFile) };
+							DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
+						}
+						else if (originalImage != null)
+						{
+							DoDragDrop(originalImage, DragDropEffects.Copy);
+						}
+						dragImage = false;
+					}
 				}
 				else
 				{
-					if (autoZoom)
+					int newX = panelMouseDownLocation.X - PointToClient(Cursor.Position).X;
+					int newY = panelMouseDownLocation.Y - PointToClient(Cursor.Position).Y;
+
+					if (newX > picturePanel.HorizontalScroll.Minimum)
 					{
-						if (dragImage)
-						{
-							if (currentFile != null)
-							{
-								string[] paths = { Path.Combine(currentFolder, currentFile) };
-								DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
-							}
-							else if (originalImage != null)
-							{
-								DoDragDrop(originalImage, DragDropEffects.Copy);
-							}
-							dragImage = false;
-						}
+						picturePanel.HorizontalScroll.Value = newX < picturePanel.HorizontalScroll.Maximum ? newX : picturePanel.HorizontalScroll.Maximum;
 					}
 					else
 					{
-						int newX = panelMouseDownLocation.X - PointToClient(Cursor.Position).X;
-						int newY = panelMouseDownLocation.Y - PointToClient(Cursor.Position).Y;
-
-						if (newX > picturePanel.HorizontalScroll.Minimum)
-						{
-							picturePanel.HorizontalScroll.Value = newX < picturePanel.HorizontalScroll.Maximum ? newX : picturePanel.HorizontalScroll.Maximum;
-						}
-						else
-						{
-							picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
-						}
-
-						if (newY > picturePanel.VerticalScroll.Minimum)
-						{
-							picturePanel.VerticalScroll.Value = newY < picturePanel.VerticalScroll.Maximum ? newY : picturePanel.VerticalScroll.Maximum;
-						}
-						else
-						{
-							picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
-						}
-
-						picturePanel.Update();
+						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Minimum;
 					}
+
+					if (newY > picturePanel.VerticalScroll.Minimum)
+					{
+						picturePanel.VerticalScroll.Value = newY < picturePanel.VerticalScroll.Maximum ? newY : picturePanel.VerticalScroll.Maximum;
+					}
+					else
+					{
+						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
+					}
+
+					picturePanel.Update();
 				}
 			}
 		}
@@ -1612,6 +1589,8 @@ namespace quick_picture_viewer
 				zoomOutButton.Image = Properties.Resources.white_zoomout;
 				actualSizeBtn.Image = Properties.Resources.white_actualsize;
 
+				selectionBtn.Image = Properties.Resources.white_selection;
+
 				editButton.Image = Properties.Resources.white_edit;
 				rotateLeftButton.Image = Properties.Resources.white_rotatel;
 				rotateRightButton.Image = Properties.Resources.white_rotater;
@@ -1619,6 +1598,7 @@ namespace quick_picture_viewer
 				flipVerticalButton.Image = Properties.Resources.white_flipv;
 				rotate180Button.Image = Properties.Resources.white_degree;
 				customAngleBtn.Image = Properties.Resources.white_angle;
+				cropBtn.Image = Properties.Resources.white_crop;
 
 				infoButton.Image = Properties.Resources.white_info;
 
@@ -2209,10 +2189,15 @@ namespace quick_picture_viewer
 
 				if((sender as PluginMenuItem).OwnerItem.Name == "effectsBtn")
 				{
-					setImageChanged(false);
+					originalImage = e.input as Bitmap;
+					pictureBox.Image = originalImage;
+					setImageChanged(true);
 				}
-				openImage(e.input as Bitmap, null, title);
-				setImageChanged(true, title);
+				else
+				{
+					openImage(e.input as Bitmap, null, title);
+					setImageChanged(true, title);
+				}
 			}
 		}
 
@@ -2461,7 +2446,7 @@ namespace quick_picture_viewer
 
 		private void cropBtn_Click(object sender, EventArgs e)
 		{
-			if (selForm != null)
+			if (selForm != null && originalImage != null)
 			{
 				float scale = (float)originalImage.Width / (float)pictureBox.Width;
 				Point loc = PointToScreen(ClientRectangle.Location);
@@ -2472,8 +2457,13 @@ namespace quick_picture_viewer
 					X = (int)((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale),
 					Y = (int)((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale)
 				};
-				Bitmap croppedImage = originalImage.Clone(r, originalImage.PixelFormat);
-				openImage(croppedImage, null, null);
+
+				originalImage = originalImage.Clone(r, originalImage.PixelFormat);
+				pictureBox.Image = originalImage;
+				setZoomText(LangMan.Get("auto"));
+				setImageChanged(true);
+
+				selectionBtn.Checked = false;
 			}
 			else
 			{
@@ -2483,12 +2473,7 @@ namespace quick_picture_viewer
 
 		private void UpdateSelectionRect()
 		{
-			if (selForm != null)
-			{
-				Point loc = PointToScreen(ClientRectangle.Location);
-				selForm.UpdateContainerRect();
-			}
-				
+			if (selForm != null) selForm.UpdateContainerRect();
 		}
 	}
 }
