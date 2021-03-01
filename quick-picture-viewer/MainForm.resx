@@ -4197,12 +4197,6 @@
   <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
-    <value>folderBrowserDialog1</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;openBtn.Name" xml:space="preserve">
     <value>openBtn</value>
   </data>
@@ -4625,8 +4619,5 @@
   </metadata>
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1038, 17</value>
-  </metadata>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
   </metadata>
 </root>

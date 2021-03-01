@@ -4253,7 +4253,7 @@
         </member>
         <member name="M:Octokit.ICheckSuitesClient.UpdatePreferences(System.String,System.String,Octokit.CheckSuitePreferences)">
             <summary>
-            Updates Check Suites prefrences on a repository, such as disabling automatic creation when code is pushed
+            Updates Check Suites preferences on a repository, such as disabling automatic creation when code is pushed
             </summary>
             <remarks>
             See the <a href="https://developer.github.com/v3/checks/suites/#set-preferences-for-check-suites-on-a-repository">Check Suites API documentation</a> for more information.
@@ -4264,7 +4264,7 @@
         </member>
         <member name="M:Octokit.ICheckSuitesClient.UpdatePreferences(System.Int64,Octokit.CheckSuitePreferences)">
             <summary>
-            Updates Check Suites prefrences on a repository, such as disabling automatic creation when code is pushed
+            Updates Check Suites preferences on a repository, such as disabling automatic creation when code is pushed
             </summary>
             <remarks>
             See the <a href="https://developer.github.com/v3/checks/suites/#set-preferences-for-check-suites-on-a-repository">Check Suites API documentation</a> for more information.
@@ -9572,7 +9572,7 @@
             <param name="options">Options for changing the API response</param>
             <exception cref="T:Octokit.ApiException">Thrown when a general API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IReleasesClient.UploadAsset(Octokit.Release,Octokit.ReleaseAssetUpload)">
+        <member name="M:Octokit.IReleasesClient.UploadAsset(Octokit.Release,Octokit.ReleaseAssetUpload,System.Threading.CancellationToken)">
             <summary>
             Uploads a <see cref="T:Octokit.ReleaseAsset"/> for the specified release.
             </summary>
@@ -9581,6 +9581,7 @@
             </remarks>
             <param name="release">The <see cref="T:Octokit.Release"/> to attach the uploaded asset to</param>
             <param name="data">Description of the asset with its data</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <exception cref="T:Octokit.ApiException">Thrown when a general API error occurs.</exception>
         </member>
         <member name="M:Octokit.IReleasesClient.GetAsset(System.String,System.String,System.Int32)">
@@ -12178,7 +12179,7 @@
             </remarks>
             <param name="repositoryId">The id of the repository</param>
             <param name="invitationId">The id of the invitation</param>
-            <param name="permissions">The permission for the collsborator</param>
+            <param name="permissions">The permission for the collaborator</param>
             <exception cref="T:Octokit.ApiException">Thrown when a general API error occurs.</exception>
         </member>
         <member name="T:Octokit.IRepositoryPagesClient">
@@ -14890,7 +14891,7 @@
         </member>
         <member name="M:Octokit.MigrationsClient.GetAll(System.String)">
             <summary>
-            Gets the list of the most recent migrations of the the organization.
+            Gets the list of the most recent migrations of the organization.
             </summary>
             <remarks>
             https://developer.github.com/v3/migration/migrations/#get-a-list-of-migrations
@@ -14900,7 +14901,7 @@
         </member>
         <member name="M:Octokit.MigrationsClient.GetAll(System.String,Octokit.ApiOptions)">
             <summary>
-            Gets the list of the most recent migrations of the the organization.
+            Gets the list of the most recent migrations of the organization.
             </summary>
             <remarks>
             https://developer.github.com/v3/migration/migrations/#get-a-list-of-migrations
@@ -17715,7 +17716,7 @@
             <param name="options">Options for changing the API response</param>
             <exception cref="T:Octokit.ApiException">Thrown when a general API error occurs.</exception>
         </member>
-        <member name="M:Octokit.ReleasesClient.UploadAsset(Octokit.Release,Octokit.ReleaseAssetUpload)">
+        <member name="M:Octokit.ReleasesClient.UploadAsset(Octokit.Release,Octokit.ReleaseAssetUpload,System.Threading.CancellationToken)">
             <summary>
             Uploads a <see cref="T:Octokit.ReleaseAsset"/> for the specified release.
             </summary>
@@ -17724,6 +17725,7 @@
             </remarks>
             <param name="release">The <see cref="T:Octokit.Release"/> to attach the uploaded asset to</param>
             <param name="data">Description of the asset with its data</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <exception cref="T:Octokit.ApiException">Thrown when a general API error occurs.</exception>
         </member>
         <member name="M:Octokit.ReleasesClient.GetAsset(System.String,System.String,System.Int32)">
@@ -18195,7 +18197,7 @@
             </remarks>
             <exception cref="T:Octokit.AuthorizationException">Thrown if the client is not authenticated.</exception>
             <exception cref="T:Octokit.ApiException">Thrown when a general API error occurs.</exception>
-            <returns>A <see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of <see cref="T:Octokit.Repository"/>.</returns>
+            <returns>A <see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of <see cref="T:Octokit.Repository"/>.</returns>        
         </member>
         <member name="M:Octokit.RepositoriesClient.GetAllPublic(Octokit.PublicRepositoryRequest)">
             <summary>
@@ -20347,7 +20349,7 @@
             </remarks>
             <param name="repositoryId">The id of the repository</param>
             <param name="invitationId">The id of the invitation</param>
-            <param name="permissions">The permission for the collsborator</param>
+            <param name="permissions">The permission for the collaborator</param>
             <exception cref="T:Octokit.ApiException">Thrown when a general API error occurs.</exception>
         </member>
         <member name="T:Octokit.RepositoryPagesClient">
@@ -21534,7 +21536,7 @@
         </member>
         <member name="M:Octokit.UserGpgKeysClient.#ctor(Octokit.IApiConnection)">
             <summary>
-            Instatiates a new GitHub User GPG Keys API client.
+            Instantiates a new GitHub User GPG Keys API client.
             </summary>
             <param name="apiConnection">The API connection.</param>
         </member>
@@ -21632,7 +21634,7 @@
             <remarks>
             https://developer.github.com/v3/users/keys/#list-your-public-keys
             </remarks>
-            <param name="options">Options to chagne API's behavior.</param>
+            <param name="options">Options to change API's behavior.</param>
             <returns>Lists the current user's keys.</returns>
         </member>
         <member name="M:Octokit.UserKeysClient.Get(System.Int32)">
@@ -22373,7 +22375,7 @@
             <remarks>
             The return value is calculated using server time data from the 
             response in order to provide a best-effort estimate that is 
-            independant from eventual inaccuracies in the client's clock.
+            independent from eventual inaccuracies in the client's clock.
             </remarks>
         </member>
         <member name="M:Octokit.RateLimitExceededException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
@@ -22971,7 +22973,7 @@
             <typeparam name="T">Type of the API resource in the list.</typeparam>
             <param name="connection">The connection to use</param>
             <param name="uri">URI of the API resource to get</param>
-            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the The API resources in the list.</returns>
+            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
         <member name="M:Octokit.ApiExtensions.GetHtml(Octokit.IApiConnection,System.Uri)">
@@ -25566,7 +25568,7 @@
         </member>
         <member name="M:Octokit.ApiUrls.RepositoryTrafficReferrers(System.String,System.String)">
             <summary>
-            Returns the <see cref="T:System.Uri"/> for repository traffice referrers.
+            Returns the <see cref="T:System.Uri"/> for repository traffic referrers.
             </summary>
             <param name="owner">The owner of repo</param>
             <param name="repo">The name of repo</param>
@@ -26171,7 +26173,7 @@
             Initializes a new instance of the <see cref="T:Octokit.ApiConnection"/> class.
             </summary>
             <param name="connection">A connection for making HTTP requests</param>
-            <param name="pagination">A paginator for paging API responses</param>
+            <param name="pagination">A pagination for paging API responses</param>
         </member>
         <member name="P:Octokit.ApiConnection.Connection">
             <summary>
@@ -26232,7 +26234,7 @@
             </summary>
             <typeparam name="T">Type of the API resource in the list.</typeparam>
             <param name="uri">URI of the API resource to get</param>
-            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the The API resources in the list.</returns>
+            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
         <member name="M:Octokit.ApiConnection.GetAll``1(System.Uri,Octokit.ApiOptions)">
@@ -26242,7 +26244,7 @@
             <typeparam name="T">Type of the API resource in the list.</typeparam>
             <param name="uri">URI of the API resource to get</param>
             <param name="options">Options for changing the API response</param>
-            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the The API resources in the list.</returns>
+            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
         <member name="M:Octokit.ApiConnection.GetAll``1(System.Uri,System.Collections.Generic.IDictionary{System.String,System.String})">
@@ -26252,7 +26254,7 @@
             <typeparam name="T">Type of the API resource in the list.</typeparam>
             <param name="uri">URI of the API resource to get</param>
             <param name="parameters">Parameters to add to the API request</param>
-            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the The API resources in the list.</returns>
+            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
         <member name="M:Octokit.ApiConnection.GetAll``1(System.Uri,System.String)">
@@ -26262,7 +26264,7 @@
             <typeparam name="T">Type of the API resource in the list.</typeparam>
             <param name="uri">URI of the API resource to get</param>
             <param name="accepts">Accept header to use for the API request</param>
-            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the The API resources in the list.</returns>
+            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
         <member name="M:Octokit.ApiConnection.GetAll``1(System.Uri,System.Collections.Generic.IDictionary{System.String,System.String},Octokit.ApiOptions)">
@@ -26273,7 +26275,7 @@
             <param name="uri">URI of the API resource to get</param>
             <param name="parameters">Parameters to add to the API request</param>
             <param name="options">Options for changing the API response</param>
-            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the The API resources in the list.</returns>
+            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
         <member name="M:Octokit.ApiConnection.GetAll``1(System.Uri,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
@@ -26284,37 +26286,40 @@
             <param name="uri">URI of the API resource to get</param>
             <param name="parameters">Parameters to add to the API request</param>
             <param name="accepts">Accept header to use for the API request</param>
-            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the The API resources in the list.</returns>
+            <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.ApiConnection.Post(System.Uri)">
+        <member name="M:Octokit.ApiConnection.Post(System.Uri,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
             <param name="uri">URI endpoint to send request to</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:System.Net.HttpStatusCode"/>Representing the received HTTP response</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.ApiConnection.Post``1(System.Uri)">
+        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
             <typeparam name="T">The API resource's type.</typeparam>
             <param name="uri">URI of the API resource to get</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object)">
+        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
             <typeparam name="T">The API resource's type.</typeparam>
             <param name="uri">URI of the API resource to get</param>
             <param name="data">Object that describes the new API resource; this will be serialized and used as the request's body</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object,System.String)">
+        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object,System.String,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
@@ -26322,10 +26327,11 @@
             <param name="uri">URI of the API resource to get</param>
             <param name="data">Object that describes the new API resource; this will be serialized and used as the request's body</param>
             <param name="accepts">Accept header to use for the API request</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object,System.String,System.String)">
+        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
@@ -26334,10 +26340,11 @@
             <param name="data">Object that describes the new API resource; this will be serialized and used as the request's body</param>
             <param name="accepts">Accept header to use for the API request</param>
             <param name="contentType">Content type of the API request</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.String)">
+        <member name="M:Octokit.ApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
@@ -26347,6 +26354,7 @@
             <param name="accepts">Accept header to use for the API request</param>
             <param name="contentType">Content type of the API request</param>
             <param name="twoFactorAuthenticationCode">Two Factor Authentication Code</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
@@ -26501,7 +26509,7 @@
         </member>
         <member name="T:Octokit.ApiInfo">
             <summary>
-            Extra information returned as part of each api response.
+            Extra information returned as part of each API response.
             </summary>
         </member>
         <member name="P:Octokit.ApiInfo.OauthScopes">
@@ -26663,14 +26671,15 @@
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
             <remarks>The <see cref="P:Octokit.IResponse.Body"/> property will be <c>null</c> if the <paramref name="uri"/> points to a directory instead of a file</remarks>
         </member>
-        <member name="M:Octokit.Connection.Post(System.Uri)">
+        <member name="M:Octokit.Connection.Post(System.Uri,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             </summary>
             <param name="uri">URI endpoint to send request to</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
-        <member name="M:Octokit.Connection.Post``1(System.Uri,System.Object,System.String,System.String,System.String)">
+        <member name="M:Octokit.Connection.Post``1(System.Uri,System.Object,System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             Attempts to map the response body to an object of type <typeparamref name="T"/>
@@ -26681,6 +26690,7 @@
             <param name="accepts">Specifies accepted response media types.</param>
             <param name="contentType">Specifies the media type of the request body</param>
             <param name="twoFactorAuthenticationCode">Two Factor Authentication Code</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
         <member name="M:Octokit.Connection.Patch(System.Uri)">
@@ -26922,34 +26932,37 @@
             <returns><see cref="T:System.Collections.Generic.IReadOnlyList`1"/> of the API resources in the list.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IApiConnection.Post(System.Uri)">
+        <member name="M:Octokit.IApiConnection.Post(System.Uri,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
             <param name="uri">URI endpoint to send request to</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:System.Net.HttpStatusCode"/>Representing the received HTTP response</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IApiConnection.Post``1(System.Uri)">
+        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
             <typeparam name="T">The API resource's type.</typeparam>
             <param name="uri">URI endpoint to send request to</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object)">
+        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
             <typeparam name="T">The API resource's type.</typeparam>
             <param name="uri">URI of the API resource to get</param>
             <param name="data">Object that describes the new API resource; this will be serialized and used as the request's body</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String)">
+        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
@@ -26957,10 +26970,11 @@
             <param name="uri">URI of the API resource to get</param>
             <param name="data">Object that describes the new API resource; this will be serialized and used as the request's body</param>
             <param name="accepts">Accept header to use for the API request</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String,System.String)">
+        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
@@ -26969,10 +26983,11 @@
             <param name="data">Object that describes the new API resource; this will be serialized and used as the request's body</param>
             <param name="accepts">Accept header to use for the API request</param>
             <param name="contentType">Content type of the API request</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.String)">
+        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
@@ -26982,10 +26997,11 @@
             <param name="accepts">Accept header to use for the API request</param>
             <param name="contentType">Content type of the API request</param>
             <param name="twoFactorAuthenticationCode">Two Factor Authentication Code</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
-        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.TimeSpan)">
+        <member name="M:Octokit.IApiConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)">
             <summary>
             Creates a new API resource in the list at the specified URI.
             </summary>
@@ -26995,6 +27011,7 @@
             <param name="accepts">Accept header to use for the API request</param>
             <param name="contentType">Content type of the API request</param>
             <param name="timeout">Timeout for the request</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The created API resource.</returns>
             <exception cref="T:Octokit.ApiException">Thrown when an API error occurs.</exception>
         </member>
@@ -27250,32 +27267,35 @@
             <param name="accepts">Specifies accepted response media types.</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
-        <member name="M:Octokit.IConnection.Post(System.Uri)">
+        <member name="M:Octokit.IConnection.Post(System.Uri,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             </summary>
             <param name="uri">URI endpoint to send request to</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The returned <seealso cref="T:System.Net.HttpStatusCode"/></returns>
         </member>
-        <member name="M:Octokit.IConnection.Post(System.Uri,System.Object,System.String)">
+        <member name="M:Octokit.IConnection.Post(System.Uri,System.Object,System.String,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             </summary>
             <param name="uri">URI endpoint to send request to</param>
             <param name="body">The object to serialize as the body of the request</param>
             <param name="accepts">Specifies accepted response media types.</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns>The returned <seealso cref="T:System.Net.HttpStatusCode"/></returns>
         </member>
-        <member name="M:Octokit.IConnection.Post``1(System.Uri)">
+        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             Attempts to map the response body to an object of type <typeparamref name="T"/>
             </summary>
             <typeparam name="T">The type to map the response to</typeparam>
             <param name="uri">URI endpoint to send request to</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
-        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             Attempts to map the response body to an object of type <typeparamref name="T"/>
@@ -27286,9 +27306,10 @@
             <param name="accepts">Specifies accepted response media types.</param>
             <param name="contentType">Specifies the media type of the request body</param>
             <param name="parameters">Extra parameters for authentication.</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
-        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.String)">
+        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             Attempts to map the response body to an object of type <typeparamref name="T"/>
@@ -27299,9 +27320,10 @@
             <param name="accepts">Specifies accepted response media types.</param>
             <param name="contentType">Specifies the media type of the request body</param>
             <param name="twoFactorAuthenticationCode">Two Factor Authentication Code</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
-        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.TimeSpan)">
+        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             Attempts to map the response body to an object of type <typeparamref name="T"/>
@@ -27312,9 +27334,10 @@
             <param name="accepts">Specifies accepted response media types.</param>
             <param name="contentType">Specifies the media type of the request body</param>
             <param name="timeout"></param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
-        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.Uri)">
+        <member name="M:Octokit.IConnection.Post``1(System.Uri,System.Object,System.String,System.String,System.Uri,System.Threading.CancellationToken)">
             <summary>
             Performs an asynchronous HTTP POST request.
             Attempts to map the response body to an object of type <typeparamref name="T"/>
@@ -27329,6 +27352,7 @@
             <param name="accepts">Specifies accepted response media types.</param>
             <param name="contentType">Specifies the media type of the request body</param>
             <param name="baseAddress">Allows overriding the base address for a post.</param>
+            <param name="cancellationToken">An optional token to monitor for cancellation requests</param>
             <returns><seealso cref="T:Octokit.IResponse"/> representing the received HTTP response</returns>
         </member>
         <member name="M:Octokit.IConnection.Put``1(System.Uri,System.Object)">
@@ -29109,7 +29133,7 @@
         </member>
         <member name="M:Octokit.IssueUpdate.AddAssignee(System.String)">
             <summary>
-            Adds the specified assigness to the issue.
+            Adds the specified assignees to the issue.
             </summary>
             <param name="name">The login of the assignee.</param>
         </member>
@@ -29275,7 +29299,7 @@
         </member>
         <member name="T:Octokit.NewArbitraryMarkdown">
             <summary>
-            Used to create anarbitrary markdown
+            Used to create an arbitrary markdown
             </summary>
             <remarks>
             API: https://developer.github.com/v3/markdown/#render-an-arbitrary-markdown-document
@@ -30549,7 +30573,7 @@
         </member>
         <member name="P:Octokit.NewRepository.LicenseTemplate">
             <summary>
-            Optional. Gets or sets the desired Desired LICENSE template to apply. Use the name of the template without
+            Optional. Gets or sets the desired LICENSE template to apply. Use the name of the template without
             the extension. For example, “mit” or “mozilla”.
             </summary>
             <remarks>
@@ -30570,6 +30594,31 @@
         <member name="P:Octokit.NewRepository.TeamId">
             <summary>
             Optional. Gets or sets the Id of the team to grant access to this repository. This is only valid when creating a repository for an organization.
+            </summary>
+        </member>
+        <member name="P:Octokit.NewRepository.Visibility">
+            <summary>
+            Optional. Gets or sets whether the new repository is public, private, or internal. A value provided here overrides any value set in the existing private field.
+            </summary>
+        </member>
+        <member name="T:Octokit.RepositoryVisibility">
+            <summary>
+            The properties that repositories can be visible by.
+            </summary>
+        </member>
+        <member name="F:Octokit.RepositoryVisibility.Public">
+            <summary>
+            Sets repository visibility to public
+            </summary>
+        </member>
+        <member name="F:Octokit.RepositoryVisibility.Private">
+            <summary>
+            Sets repository visibility to private
+            </summary>
+        </member>
+        <member name="F:Octokit.RepositoryVisibility.Internal">
+            <summary>
+            Sets repository visibility to internal
             </summary>
         </member>
         <member name="T:Octokit.NewRepositoryFork">
@@ -30968,7 +31017,7 @@
         </member>
         <member name="P:Octokit.NewTreeItem.Content">
             <summary>
-            Gets or sets the The content you want this file to have. GitHub will write this blob out and use that SHA 
+            Gets or sets the content you want this file to have. GitHub will write this blob out and use that SHA 
             for this entry. Use either this, or tree.sha.
             </summary>
             <value>
@@ -31943,24 +31992,29 @@
             Sort by the repository name.
             </summary>
         </member>
-        <member name="T:Octokit.RepositoryVisibility">
+        <member name="T:Octokit.RepositoryRequestVisibility">
             <summary>
             The properties that repositories can be visible by.
             </summary>
         </member>
-        <member name="F:Octokit.RepositoryVisibility.Public">
+        <member name="F:Octokit.RepositoryRequestVisibility.Public">
             <summary>
             Returns only public repositories
-            </summary>     
+            </summary>
         </member>
-        <member name="F:Octokit.RepositoryVisibility.Private">
+        <member name="F:Octokit.RepositoryRequestVisibility.Private">
             <summary>
             Returns only private repositories
-            </summary> 
+            </summary>
         </member>
-        <member name="F:Octokit.RepositoryVisibility.All">
+        <member name="F:Octokit.RepositoryRequestVisibility.All">
             <summary>
             Return both public and private repositories
+            </summary>
+        </member>
+        <member name="F:Octokit.RepositoryRequestVisibility.Internal">
+            <summary>
+            Returns only internal repositories
             </summary>
         </member>
         <member name="T:Octokit.RepositoryAffiliation">
@@ -32104,6 +32158,11 @@
             Optional. True to archive this repository.  Note: you cannot unarchive repositories through the API.
             </summary>
         </member>
+        <member name="P:Octokit.RepositoryUpdate.Visibility">
+            <summary>
+            Optional. Gets or sets whether the new repository is public, private, or internal. A value provided here overrides any value set in the existing private field.
+            </summary>
+        </member>
         <member name="T:Octokit.RequestParameters">
             <summary>
             Base class for classes which represent query string parameters to certain API endpoints.
@@ -32195,7 +32254,7 @@
         </member>
         <member name="P:Octokit.SearchCodeRequest.Extensions">
             <summary>
-            Matches files with a certain extensions.
+            Matches files with certain extensions.
             </summary>
             <remarks>
             https://help.github.com/articles/searching-code#extension
@@ -32209,17 +32268,17 @@
             https://help.github.com/articles/searching-code/#search-by-filename
             </remarks>
         </member>
-        <member name="P:Octokit.SearchCodeRequest.User">
+        <member name="P:Octokit.SearchCodeRequest.Users">
             <summary>
-            Limits searches to a specific user.
+            Limits searches to specific users.
             </summary>
             <remarks>
             https://help.github.com/articles/searching-code#users-organizations-and-repositories
             </remarks>
         </member>
-        <member name="P:Octokit.SearchCodeRequest.Organization">
+        <member name="P:Octokit.SearchCodeRequest.Organizations">
             <summary>
-            Limits searches to a specific organization.
+            Limits searches to specific organizations.
             </summary>
             <remarks>
             https://help.github.com/articles/searching-code/#search-within-a-users-or-organizations-repositories
@@ -32251,7 +32310,7 @@
         </member>
         <member name="P:Octokit.SearchIssuesRequest.SortField">
             <summary>
-            Optional Sort field. One of comments, created, updated or merged 
+            Optional Sort field. One of comments, created, updated or merged
             If not provided, results are sorted by best match.
             </summary>
             <remarks>
@@ -32268,7 +32327,7 @@
         </member>
         <member name="F:Octokit.SearchIssuesRequest._inQualifier">
             <summary>
-            Qualifies which fields are searched. With this qualifier you can restrict 
+            Qualifies which fields are searched. With this qualifier you can restrict
             the search to just the title, body, comments, or any combination of these.
             </summary>
             <remarks>
@@ -32309,7 +32368,7 @@
         </member>
         <member name="P:Octokit.SearchIssuesRequest.Involves">
             <summary>
-            Finds issues that were either created by a certain user, assigned to that user, 
+            Finds issues that were either created by a certain user, assigned to that user,
             mention that user, or were commented on by that user.
             </summary>
             <remarks>
@@ -32716,6 +32775,12 @@
             https://help.github.com/articles/searching-repositories#created-and-last-updated
             </summary>
         </member>
+        <member name="P:Octokit.SearchRepositoriesRequest.License">
+            <summary>
+            Filters repositories based on license
+            https://help.github.com/articles/searching-repositories#search-by-license
+            </summary>
+        </member>
         <member name="P:Octokit.SearchRepositoriesRequest.Archived">
             <summary>
             Filters whether archived repositories should be included (true) or not (false).
@@ -32730,7 +32795,7 @@
         </member>
         <member name="T:Octokit.Range">
             <summary>
-            Helper class in generating the range values for a qualifer e.g. In or Size qualifiers
+            Helper class in generating the range values for a qualifier e.g. In or Size qualifiers
             </summary>
         </member>
         <member name="M:Octokit.Range.#ctor(System.Int32)">
@@ -32881,8 +32946,14 @@
         </member>
         <member name="T:Octokit.Language">
             <summary>
-            lanuages that can be searched on in github
+            Languages that can be searched on in GitHub
             https://help.github.com/articles/searching-repositories#languages
+            </summary>
+        </member>
+        <member name="T:Octokit.RepoSearchLicense">
+            <summary>
+            Licenses than can be searched on GitHub
+            https://help.github.com/articles/searching-repositories#search-by-license
             </summary>
         </member>
         <member name="T:Octokit.RepoSearchSort">
@@ -33330,7 +33401,7 @@
             <summary>
             Indicates whether the account is currently hireable.
             </summary>
-            <value>True if the account is hirable; otherwise, false.</value>
+            <value>True if the account is hireable; otherwise, false.</value>
         </member>
         <member name="P:Octokit.Account.HtmlUrl">
             <summary>
@@ -33874,7 +33945,7 @@
         </member>
         <member name="P:Octokit.CheckRun.Url">
             <summary>
-            The GitHub Api URL of the check run
+            The GitHub API URL of the check run
             </summary>
         </member>
         <member name="P:Octokit.CheckRun.HtmlUrl">
@@ -34049,7 +34120,7 @@
         </member>
         <member name="P:Octokit.CheckSuite.Url">
             <summary>
-            The GitHub Api URL of the check suite
+            The GitHub API URL of the check suite
             </summary>
         </member>
         <member name="P:Octokit.CheckSuite.Before">
@@ -36305,6 +36376,11 @@
             The URL for this projects repository.
             </summary>
         </member>
+        <member name="P:Octokit.Project.HtmlUrl">
+            <summary>
+            The HTML URL for this project.
+            </summary>
+        </member>
         <member name="P:Octokit.Project.Url">
             <summary>
             The URL for this project.
@@ -36578,7 +36654,7 @@
         <member name="P:Octokit.PullRequest.MergeCommitSha">
             <summary>
             The value of this field changes depending on the state of the pull request.
-            Not Merged - the hash of the test commit used to determine mergability.
+            Not Merged - the hash of the test commit used to determine mergeability.
             Merged with merge commit - the hash of said merge commit.
             Merged via squashing - the hash of the squashed commit added to the base branch.
             Merged via rebase - the hash of the commit that the base branch was updated to.
@@ -37135,6 +37211,11 @@
             url for this team
             </summary>
         </member>
+        <member name="P:Octokit.Team.HtmlUrl">
+            <summary>
+            The HTML URL for this team.
+            </summary>
+        </member>
         <member name="P:Octokit.Team.Id">
             <summary>
             team id
@@ -37395,7 +37476,7 @@
         </member>
         <member name="P:Octokit.UserRenameResponse.Message">
             <summary>
-            Message indiating if the Rename request was queued
+            Message indicating if the Rename request was queued
             </summary>
         </member>
         <member name="P:Octokit.UserRenameResponse.Url">
@@ -37638,7 +37719,7 @@
              This class encodes and decodes JSON strings.
              Spec. details, see http://www.json.org/
             
-             JSON uses Arrays and Objects. These correspond here to the datatypes JsonArray(IList&lt;object>) and JsonObject(IDictionary&lt;string,object>).
+             JSON uses Arrays and Objects. These correspond here to the data types JsonArray(IList&lt;object>) and JsonObject(IDictionary&lt;string,object>).
              All numbers are parsed to doubles.
              </summary>
         </member>

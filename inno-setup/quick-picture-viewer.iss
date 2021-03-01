@@ -1,5 +1,5 @@
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "3.0.4"
+#define MyAppVersion "3.1.0"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io/quick-picture-viewer"
 #define MyAppExeName "quick-picture-viewer.exe"
@@ -47,17 +47,26 @@ Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Releas
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\quick-picture-viewer.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
-; Libraries
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Utf8Json.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll"; DestDir: "{app}"; Flags: ignoreversion
+; Local libraries
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\SimplePsd.dll"; DestDir: "{app}"; Flags: ignoreversion
+; Nuget libraries
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Utf8Json.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Pfim.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.dll"; DestDir: "{app}"; Flags: ignoreversion
+; Dependencies
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Buffers.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Memory.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Numerics.Vectors.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; Place plugins from Debug folder
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\*"; DestDir: "{app}\plugins"; Flags: ignoreversion recursesubdirs
 ; Ico files for different formats

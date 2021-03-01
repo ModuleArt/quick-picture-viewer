@@ -53,6 +53,7 @@
     value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
+
     mimetype: application/x-microsoft.net.object.bytearray.base64
     value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
@@ -253,6 +254,10 @@
     <value>Készítette</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="crop" xml:space="preserve">
+    <value>Vág</value>
+    <comment>Menu</comment>
+  </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Jelenlegi fájl nem található</value>
     <comment>Message box</comment>
@@ -389,6 +394,10 @@
     <value>Magasság</value>
     <comment>SVG options</comment>
   </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Segítsen nekünk az alkalmazás lefordításában</value>
+    <comment>Settings</comment>
+  </data>
   <data name="image" xml:space="preserve">
     <value>Kép</value>
     <comment>Print</comment>
@@ -478,7 +487,6 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="mouse-wheel-action" xml:space="preserve">
-    <value>Mouse wheel scroll action</value>
     <value>Egérgörgő művelete</value>
     <comment>Settings</comment>
   </data>
@@ -534,6 +542,10 @@
     <value>Nem mentett</value>
     <comment>Status bar</comment>
   </data>
+  <data name="open" xml:space="preserve">
+    <value>Nyisd ki</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-external" xml:space="preserve">
     <value>Fájl megnyitása külső alkalmazással</value>
     <comment>Menu</comment>
@@ -542,9 +554,9 @@
     <value>Fájl megnyitása</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Windows beállítások megnyitása</value>
-    <comment>About</comment>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Rekurzívan nyissa meg a mappát</value>
+    <comment>Menu</comment>
   </data>
   <data name="open-with" xml:space="preserve">
     <value>Társítás</value>
@@ -555,7 +567,6 @@
     <comment>Menu</comment>
   </data>
   <data name="open-with-custom" xml:space="preserve">
-    <value>Open with custom app</value>
     <value>Megyitás másik alkalmazással</value>
     <comment>Menu</comment>
   </data>
@@ -702,6 +713,10 @@
   <data name="seconds" xml:space="preserve">
     <value>másodpercenként</value>
     <comment>Settings</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Kiválasztó eszköz</value>
+    <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Beállítás alapértelmezett képnézegetőként</value>

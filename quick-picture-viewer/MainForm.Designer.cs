@@ -45,7 +45,6 @@
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.toolStrip1 = new QuickLibrary.QlibToolbar();
 			this.openBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -1116,7 +1115,6 @@
 		private System.Windows.Forms.ToolStripDropDownButton openBtn;
 		private System.Windows.Forms.ToolStripMenuItem openFileBtn;
 		private System.Windows.Forms.ToolStripMenuItem openRecursive;
-		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
 		private System.Windows.Forms.ToolStripButton selectionBtn;
 		private QuickLibrary.QlibToolsep qlibToolsep4;
 		private System.Windows.Forms.ToolStripMenuItem cropBtn;

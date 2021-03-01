@@ -289,12 +289,12 @@
             <returns>A new <see cref="T:System.Drawing.Region"/> containing the <see cref="T:System.Drawing.Region"/> to be used for clipping.</returns>
         </member>
         <member name="M:Svg.SvgClipPath.CombinePaths(System.Drawing.Drawing2D.GraphicsPath,Svg.SvgElement,Svg.ISvgRenderer)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="path"></param>
-            <param name="element"></param>
-            <param name="renderer"></param>
+             </summary>
+             <param name="path"></param>
+             <param name="element"></param>
+             <param name="renderer"></param>
         </member>
         <member name="M:Svg.SvgClipPath.AddElement(Svg.SvgElement,System.Int32)">
             <summary>
@@ -926,22 +926,6 @@
             </summary>
             <param name="renderer">The <see cref="T:Svg.ISvgRenderer"/> object to render to.</param>
         </member>
-        <member name="T:Svg.SvgDocumentMetadata">
-            <summary>
-            Represents a list of re-usable SVG components.
-            </summary>
-        </member>
-        <member name="M:Svg.SvgDocumentMetadata.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Svg.SvgDocumentMetadata"/> class.
-            </summary>
-        </member>
-        <member name="M:Svg.SvgDocumentMetadata.Render(Svg.ISvgRenderer)">
-            <summary>
-            Renders the <see cref="T:Svg.SvgElement"/> and contents to the specified <see cref="T:Svg.ISvgRenderer"/> object.
-            </summary>
-            <param name="renderer">The <see cref="T:Svg.ISvgRenderer"/> object to render to.</param>
-        </member>
         <member name="T:Svg.SvgFragment">
             <summary>
             An <see cref="T:Svg.SvgFragment"/> represents an SVG fragment that can be the root element or an embedded fragment of an SVG document.
@@ -1123,7 +1107,7 @@
         </member>
         <member name="M:Svg.SvgUse.HasRecursiveReference">
             <summary>
-            Checks for any direct or indirect recursions in referenced elements, 
+            Checks for any direct or indirect recursions in referenced elements,
             including recursions via groups.
             </summary>
             <returns>True if any recursions are found.</returns>
@@ -1190,7 +1174,7 @@
         <member name="P:Svg.FilterEffects.SvgColourMatrix.Values">
             <summary>
             list of numbers
-            The contents of ?values? depends on the value of attribute ?type?: 
+            The contents of ?values? depends on the value of attribute ?type?:
             Note: this is not used in calculations to bitmap - used only to allow for svg xml output
             </summary>
         </member>
@@ -1249,6 +1233,22 @@
             </summary>
         </member>
         <member name="M:Svg.FilterEffects.SvgFilter.Render(Svg.ISvgRenderer)">
+            <summary>
+            Renders the <see cref="T:Svg.SvgElement"/> and contents to the specified <see cref="T:Svg.ISvgRenderer"/> object.
+            </summary>
+            <param name="renderer">The <see cref="T:Svg.ISvgRenderer"/> object to render to.</param>
+        </member>
+        <member name="T:Svg.SvgDocumentMetadata">
+            <summary>
+            Represents a list of re-usable SVG components.
+            </summary>
+        </member>
+        <member name="M:Svg.SvgDocumentMetadata.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Svg.SvgDocumentMetadata"/> class.
+            </summary>
+        </member>
+        <member name="M:Svg.SvgDocumentMetadata.Render(Svg.ISvgRenderer)">
             <summary>
             Renders the <see cref="T:Svg.SvgElement"/> and contents to the specified <see cref="T:Svg.ISvgRenderer"/> object.
             </summary>
@@ -1589,7 +1589,7 @@
         </member>
         <member name="P:Svg.SvgPatternServer.ViewBox">
             <summary>
-            Specifies a supplemental transformation which is applied on top of any 
+            Specifies a supplemental transformation which is applied on top of any
             transformations necessary to create a new pattern coordinate system.
             </summary>
         </member>
@@ -1650,11 +1650,24 @@
         <member name="F:Svg.SvgStrokeLineJoin.Miter">
             <summary>The corners of the paths are joined sharply.</summary>
         </member>
+        <member name="F:Svg.SvgStrokeLineJoin.MiterClip">
+            <summary>
+            The corners of the paths are joined sharply, but clipped at the miter limit instead of
+            falling back to SvgStrokeLineJoin.Bevel. This is a new value that might not be supported by
+            most browsers.
+            </summary>
+        </member>
         <member name="F:Svg.SvgStrokeLineJoin.Round">
             <summary>The corners of the paths are rounded off.</summary>
         </member>
         <member name="F:Svg.SvgStrokeLineJoin.Bevel">
             <summary>The corners of the paths are "flattened".</summary>
+        </member>
+        <member name="F:Svg.SvgStrokeLineJoin.Arcs">
+            <summary>
+            The corners of the paths are joined by arcs that have the same curvature as the curves they
+            join. This is a new value that might not be supported by most browsers.
+            </summary>
         </member>
         <member name="T:Svg.SvgPath">
             <summary>
@@ -1840,16 +1853,6 @@
             Specifies the SVG attribute name of the associated property.
             </summary>
         </member>
-        <member name="F:Svg.SvgAttributeAttribute.SvgNamespace">
-            <summary>
-            Gets a <see cref="T:System.String"/> containing the XLink namespace (http://www.w3.org/1999/xlink).
-            </summary>
-        </member>
-        <member name="P:Svg.SvgAttributeAttribute.NamespaceAndName">
-            <summary>
-            Gets the name of the SVG attribute.
-            </summary>
-        </member>
         <member name="P:Svg.SvgAttributeAttribute.Name">
             <summary>
             Gets the name of the SVG attribute.
@@ -1962,6 +1965,12 @@
             Set to true on systems that do not support GDI+ like UWP.
             </remarks>
         </member>
+        <member name="P:Svg.SvgDocument.DisableDtdProcessing">
+            <summary>
+            Skip the Dtd Processing for faster loading of svgs that have a DTD specified.
+            For Example Adobe Illustrator svgs.
+            </summary>
+        </member>
         <member name="M:Svg.SvgDocument.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:Svg.SvgDocument"/> class.
@@ -1974,7 +1983,7 @@
         </member>
         <member name="M:Svg.SvgDocument.OverwriteIdManager(Svg.SvgElementIdManager)">
             <summary>
-            Overwrites the current IdManager with a custom implementation. 
+            Overwrites the current IdManager with a custom implementation.
             Be careful with this: If elements have been inserted into the document before,
             you have to take care that the new IdManager also knows of them.
             </summary>
@@ -2018,7 +2027,7 @@
         </member>
         <member name="M:Svg.SvgDocument.ExceptionCaughtIsGdiPlusRelated(System.Exception)">
             <summary>
-            Check if the current exception or one of its children is the targeted GDI+ exception. 
+            Check if the current exception or one of its children is the targeted GDI+ exception.
             It can be hidden in one of the InnerExceptions, so we need to iterate over them.
             </summary>
             <param name="e">The exception to validate against the GDI+ check</param>
@@ -2161,6 +2170,11 @@
             </summary>
             <param name="children">If true, flush styles to the children.</param>
         </member>
+        <member name="P:Svg.SvgElement.ElementNamespace">
+            <summary>
+            Gets the elements namespace as a string.
+            </summary>
+        </member>
         <member name="P:Svg.SvgElement.ElementName">
             <summary>
             Gets the name of the element.
@@ -2250,7 +2264,7 @@
         <member name="M:Svg.SvgElement.TransformedBounds(System.Drawing.RectangleF)">
             <summary>
             Transforms the given rectangle with the set transformation, if any.
-            Can be applied to bounds calculated without considering the element transformation. 
+            Can be applied to bounds calculated without considering the element transformation.
             </summary>
             <param name="bounds">The rectangle to be transformed.</param>
             <returns>The transformed rectangle, or the original rectangle if no transformation exists.</returns>
@@ -2372,7 +2386,7 @@
         </member>
         <member name="M:Svg.SvgElement.RegisterEvents(Svg.ISvgEventCaller)">
             <summary>
-            Use this method to provide your implementation ISvgEventCaller which can register Actions 
+            Use this method to provide your implementation ISvgEventCaller which can register Actions
             and call them if one of the events occurs. Make sure, that your SvgElement has a unique ID.
             The SvgTextElement overwrites this and regsiters the Change event tor its text content.
             </summary>
@@ -2509,7 +2523,7 @@
             Set all font information.
             </summary>
         </member>
-        <member name="M:Svg.SvgElement.GetFont(Svg.ISvgRenderer)">
+        <member name="M:Svg.SvgElement.GetFont(Svg.ISvgRenderer,Svg.SvgFontManager)">
             <summary>
             Get the font information based on data stored with the text object or inherited from the parent.
             </summary>
@@ -2654,6 +2668,11 @@
             Gets a list of available types that can be used when creating an <see cref="T:Svg.SvgElement"/>.
             </summary>
         </member>
+        <member name="P:Svg.SvgElementFactory.AvailableElementsDictionary">
+            <summary>
+            Gets a list of available types that can be used when creating an <see cref="T:Svg.SvgElement"/>.
+            </summary>
+        </member>
         <member name="M:Svg.SvgElementFactory.CreateDocument``1(System.Xml.XmlReader)">
             <summary>
             Creates an <see cref="T:Svg.SvgDocument"/> from the current node in the specified <see cref="T:System.Xml.XmlTextReader"/>.
@@ -2683,6 +2702,11 @@
         <member name="P:Svg.SvgElementFactory.ElementInfo.ElementType">
             <summary>
             Gets the <see cref="T:System.Type"/> of the <see cref="T:Svg.SvgElement"/> subclass.
+            </summary>
+        </member>
+        <member name="P:Svg.SvgElementFactory.ElementInfo.CreateInstance">
+            <summary>
+            Creates a new instance based on <see cref="P:Svg.SvgElementFactory.ElementInfo.ElementType"/> type.
             </summary>
         </member>
         <member name="M:Svg.SvgElementFactory.ElementInfo.#ctor(System.String,System.Type)">
@@ -2755,17 +2779,10 @@
         </member>
         <member name="T:Svg.SvgFontManager">
             <summary>
-            Manages access to <see cref="F:Svg.SvgFontManager.SystemFonts"/> and any privately loaded fonts.
+            Manages access to <see cref="T:System.Drawing.SystemFonts"/> and any privately loaded fonts.
             When a font is requested in the render process, if the font is not found as an embedded SvgFont, the render
             process will SvgFontManager.FindFont method.
             </summary>
-        </member>
-        <member name="M:Svg.SvgFontManager.LoadFontFamily(System.String)">
-            <summary>
-            Loads a font from the given path.
-            </summary>
-            <param name="path">A <see cref="T:System.String"/> containing the full path to the font file.</param>
-            <returns>An <see cref="T:System.Drawing.FontFamily"/> of the loaded font.</returns>
         </member>
         <member name="M:Svg.SvgFontManager.FindFont(System.String)">
             <summary>
@@ -2848,11 +2865,6 @@
         <member name="M:Svg.SvgTextReader.ResolveEntity">
             <summary>
             Resolves the entity reference for EntityReference nodes.
-            </summary>
-        </member>
-        <member name="T:Svg.Text.FontFamily">
-            <summary>
-            http://stackoverflow.com/questions/3633000/net-enumerate-winforms-font-styles
             </summary>
         </member>
         <member name="M:Svg.PathStatistics.CubicBezierSegment.GaussianQuadrature(System.Func{System.Double,System.Double},System.Double,System.Double,System.Int32)">

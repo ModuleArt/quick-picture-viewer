@@ -253,6 +253,10 @@
     <value>Разработчик</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="crop" xml:space="preserve">
+    <value>Обрезать</value>
+    <comment>Menu</comment>
+  </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Текущий файл не найден</value>
     <comment>Message box</comment>
@@ -388,6 +392,10 @@
   <data name="height" xml:space="preserve">
     <value>Высота</value>
     <comment>SVG options</comment>
+  </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Помогите нам перевести это приложение</value>
+    <comment>Settings</comment>
   </data>
   <data name="image" xml:space="preserve">
     <value>Изображение</value>
@@ -533,12 +541,20 @@
     <value>Не сохранено</value>
     <comment>Status bar</comment>
   </data>
+  <data name="open" xml:space="preserve">
+    <value>Открыть</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-external" xml:space="preserve">
     <value>Открыть файл с помощью стороннего приложения</value>
     <comment>Menu</comment>
   </data>
   <data name="open-file" xml:space="preserve">
     <value>Открыть файл</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Открыть папку рекурсивно</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with" xml:space="preserve">
@@ -696,6 +712,10 @@
   <data name="seconds" xml:space="preserve">
     <value>секунд</value>
     <comment>Settings</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Инструмент выделения</value>
+    <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Сделать приложением по умолчанию</value>

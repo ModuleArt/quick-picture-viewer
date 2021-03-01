@@ -253,6 +253,10 @@
     <value>Created by</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="crop" xml:space="preserve">
+    <value>Crop</value>
+    <comment>Menu</comment>
+  </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Current file could not be found</value>
     <comment>Message box</comment>
@@ -388,6 +392,10 @@
   <data name="height" xml:space="preserve">
     <value>Height</value>
     <comment>SVG options</comment>
+  </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Help us translate this app</value>
+    <comment>Settings</comment>
   </data>
   <data name="image" xml:space="preserve">
     <value>Image</value>
@@ -533,6 +541,10 @@
     <value>Not saved</value>
     <comment>Status bar</comment>
   </data>
+  <data name="open" xml:space="preserve">
+    <value>Open</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-external" xml:space="preserve">
     <value>Open file with external app</value>
     <comment>Menu</comment>
@@ -541,9 +553,9 @@
     <value>Open file</value>
     <comment>Menu</comment>
   </data>
-  <data name="open-windows-settings" xml:space="preserve">
-    <value>Open Windows settings</value>
-    <comment>About</comment>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Open folder recursively</value>
+    <comment>Menu</comment>
   </data>
   <data name="open-with" xml:space="preserve">
     <value>Open with</value>
@@ -700,6 +712,10 @@
   <data name="seconds" xml:space="preserve">
     <value>seconds</value>
     <comment>Settings</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Selection tool</value>
+    <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
     <value>Set as default image viewer</value>

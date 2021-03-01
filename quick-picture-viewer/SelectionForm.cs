@@ -1,4 +1,5 @@
 ﻿using QuickLibrary;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -104,11 +105,14 @@ namespace quick_picture_viewer
 
 		protected override void OnMouseDown(MouseEventArgs e)
 		{
-			dragging = true;
-			dragStart = e.Location;
-			sizeStart = Size;
-			locationStart = Location;
-			CurGrip = CheckGrip(e.Location);
+			if (e.Button == MouseButtons.Left)
+			{
+				dragging = true;
+				dragStart = e.Location;
+				sizeStart = Size;
+				locationStart = Location;
+				CurGrip = CheckGrip(e.Location);
+			}
 		}
 
 		protected override void OnMouseUp(MouseEventArgs e)
@@ -120,7 +124,7 @@ namespace quick_picture_viewer
 
 		protected override void OnMouseMove(MouseEventArgs e)
 		{
-			if (dragging)
+			if (e.Button == MouseButtons.Left && dragging)
 			{
 				switch (CurGrip)
 				{
@@ -192,6 +196,17 @@ namespace quick_picture_viewer
 			}
 
 			Location = new Point(newX, newY);
+		}
+
+		protected override void OnKeyDown(KeyEventArgs e)
+		{
+			(Owner as MainForm).MainForm_KeyDown(this, e);
+		}
+
+		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+		{
+			if (Owner != null && (Owner as MainForm).ProcessArrowKeys(keyData)) return true;
+			else return base.ProcessCmdKey(ref msg, keyData);
 		}
 	}
 }
