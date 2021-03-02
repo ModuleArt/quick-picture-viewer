@@ -111,6 +111,7 @@ namespace quick_picture_viewer
 			catch
 			{
 				DialogMan.ShowInfo(
+					this,
 					LangMan.Get("plugin-not-found"),
 					LangMan.Get("print-margins-error"),
 					DarkMode

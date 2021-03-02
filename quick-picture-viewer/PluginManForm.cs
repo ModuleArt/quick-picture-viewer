@@ -157,6 +157,7 @@ namespace quick_picture_viewer
 		private void deletePlugin(int numberInList)
 		{
 			DialogResult window = DialogMan.ShowConfirm(
+				this,
 				LangMan.Get("delete-plugin-warning"),
 				windowTitle: LangMan.Get("warning"),
 				yesBtnText: LangMan.Get("delete-plugin"),
@@ -177,6 +178,7 @@ namespace quick_picture_viewer
 				else
 				{
 					DialogMan.ShowInfo(
+						this,
 						LangMan.Get("plugin-not-found"),
 						LangMan.Get("error"),
 						DarkMode

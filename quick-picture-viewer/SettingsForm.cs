@@ -421,6 +421,7 @@ namespace quick_picture_viewer
 				{
 					settingsStarted = false;
 					DialogMan.ShowInfo(
+						this,
 						LangMan.Get("context-menu-notice"),
 						LangMan.Get("error"),
 						DarkMode
@@ -459,6 +460,7 @@ namespace quick_picture_viewer
 				{
 					settingsStarted = false;
 					DialogMan.ShowInfo(
+						this,
 						LangMan.Get("context-menu-notice"),
 						LangMan.Get("error"),
 						DarkMode

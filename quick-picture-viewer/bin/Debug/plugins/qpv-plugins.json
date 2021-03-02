@@ -1,10 +1,11 @@
 {
   "name": "qpv-plugins",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "title": "QPV Plugins",
   "description": {
     "en": "Set of preinstalled plugins",
     "cn": "一组预装的插件",
+    "fr": "Un ensemble de plugins préinstallés",
     "hu": "Előre telepített bővítmények készlete",
     "ru": "Набор предустановленных плагинов",
     "es": "Conjunto de complementos preinstalados"
@@ -16,7 +17,7 @@
       "link": "https://github.com/Beelink"
     }
   ],
-  "apiVer": 3,
+  "apiVer": 4,
   "inputType": "bitmap",
   "dllType": "csharp",
   "functions": [
@@ -25,6 +26,7 @@
       "title": {
         "en": "Blur",
         "cn": "模糊",
+        "fr": "Se brouiller",
         "hu": "Elhomályosít",
         "ru": "Размытие",
         "es": "Difuminar"
@@ -39,6 +41,7 @@
       "title": {
         "en": "Grayscale",
         "cn": "灰阶",
+        "fr": "Niveaux de gris",
         "hu": "Szürkeárnyalatos",
         "ru": "Оттенки серого",
         "es": "Escala de grises"
@@ -53,6 +56,7 @@
       "title": {
         "en": "Invert colors",
         "cn": "反转颜色",
+        "fr": "Inverser les couleurs",
         "hu": "Invert színek",
         "ru": "Инвертировать цвета",
         "es": "Captura de pantalla"
@@ -67,6 +71,7 @@
       "title": {
         "en": "Rainbow",
         "cn": "彩虹",
+        "fr": "Arc-en-ciel",
         "hu": "Szivárvány",
         "ru": "Радуга",
         "es": "Arcoíris"
@@ -81,6 +86,7 @@
       "title": {
         "en": "Screenshot",
         "cn": "截屏",
+        "fr": "Capture d'écran",
         "hu": "Pillanatkép",
         "ru": "Скриншот",
         "es": "Captura de pantalla"

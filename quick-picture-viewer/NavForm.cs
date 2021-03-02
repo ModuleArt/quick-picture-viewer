@@ -26,10 +26,11 @@ namespace quick_picture_viewer
 
 		private Point LocRelToSrcPanel()
 		{
-			return new Point(
-				Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X,
-				Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y
+			if (owner != null) return new Point(
+				Location.X - owner.RectangleToScreen(picturePanel.ClientRectangle).X,
+				Location.Y - owner.RectangleToScreen(picturePanel.ClientRectangle).Y
 			);
+			else return Point.Empty;
 		}
 
 		private void navPrevBtn_Click(object sender, EventArgs e)
@@ -59,8 +60,8 @@ namespace quick_picture_viewer
 			if (e.Button == MouseButtons.Left)
 			{
 				SetLocation(
-					Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X,
-					Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y
+					Location.X + e.X - dragStart.X - owner.PointToScreen(ClientRectangle.Location).X,
+					Location.Y + e.Y - dragStart.Y - owner.PointToScreen(ClientRectangle.Location).Y
 				);
 			}
 		}

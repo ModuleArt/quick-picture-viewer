@@ -468,6 +468,7 @@ namespace quick_picture_viewer
 				if (imageChanged)
 				{
 					DialogResult window = DialogMan.ShowConfirm(
+						this,
 						LangMan.Get("unsaved-changes-question"),
 						windowTitle: LangMan.Get("unsaved-changes"),
 						yesBtnText: LangMan.Get("save-as"),
@@ -661,7 +662,7 @@ namespace quick_picture_viewer
 		{
 			if (autoZoom)
 			{
-				zoomToFit();
+				ZoomToFit();
 			}
 			setZoomText((zoomFactor + 5).ToString() + "%");
 		}
@@ -670,17 +671,16 @@ namespace quick_picture_viewer
 		{
 			if (autoZoom)
 			{
-				zoomToFit();
+				ZoomToFit();
 			}
 			setZoomText((zoomFactor - 5).ToString() + "%");
 		}
 
-		private void zoomToFit()
+		private void ZoomToFit()
 		{
 			double zoomFactorX = picturePanel.Width / (double)originalImage.Width;
 			double zoomFactorY = picturePanel.Height / (double)originalImage.Height;
-
-			zoomFactor = zoomFactorX > zoomFactorY ? Convert.ToInt32(zoomFactorY * 100) : Convert.ToInt32(zoomFactorX * 100);
+			zoomFactor = zoomFactorX > zoomFactorY ? (int)(zoomFactorY * 100) : (int)(zoomFactorX * 100);
 		}
 
 		private void setZoomFactor(int newZoomFactor)
@@ -739,7 +739,7 @@ namespace quick_picture_viewer
 		{
 			if (zoomTextBox.Text == LangMan.Get("auto"))
 			{
-				zoomToFit();
+				ZoomToFit();
 				setZoomText(zoomFactor + "%");
 			}
 			else
@@ -1481,6 +1481,7 @@ namespace quick_picture_viewer
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
 			DialogResult d = DialogMan.ShowConfirm(
+				this,
 				LangMan.Get("sure-move-to-trash"),
 				yesBtnImage: deleteBtn.Image,
 				windowTitle: LangMan.Get("delete-file"),
@@ -1781,6 +1782,7 @@ namespace quick_picture_viewer
 			if (imageChanged)
 			{
 				DialogResult window = DialogMan.ShowConfirm(
+					this,
 					LangMan.Get("unsaved-changes-question"),
 					windowTitle: LangMan.Get("unsaved-changes"),
 					yesBtnText: LangMan.Get("save-as"),
@@ -2168,6 +2170,8 @@ namespace quick_picture_viewer
 
 			PluginInfo[] plugins = PluginMan.GetPlugins(true);
 
+			Rectangle selRect = selForm != null ? GetSelectionRect() : Rectangle.Empty;
+
 			for (int i = 0; i < plugins.Length; i++)
 			{
 				for (int j = 0; j < plugins[i].functions.Length; j++)
@@ -2185,7 +2189,8 @@ namespace quick_picture_viewer
 						plugins[i].functions[j],
 						alwaysOnTop,
 						Properties.Settings.Default.Language,
-						this
+						this,
+						selRect
 					);
 					tsmi.Output += Tsmi_Output;
 
@@ -2416,7 +2421,7 @@ namespace quick_picture_viewer
 			{
 				if (zoomTextBox.Text == LangMan.Get("auto"))
 				{
-					zoomToFit();
+					ZoomToFit();
 					setZoomText(zoomFactor + "%");
 				}
 
@@ -2477,10 +2482,10 @@ namespace quick_picture_viewer
 			Point loc = PointToScreen(ClientRectangle.Location);
 			Rectangle result = new Rectangle()
 			{
-				Width = (int)(selForm.Width * scale),
-				Height = (int)(selForm.Height * scale),
-				X = (int)((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale),
-				Y = (int)((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale)
+				Width = (int)(Math.Round(selForm.Width * scale)),
+				Height = (int)(Math.Round(selForm.Height * scale)),
+				X = (int)(Math.Round((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale)),
+				Y = (int)(Math.Round((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale))
 			};
 
 			if (result.X < 0)
