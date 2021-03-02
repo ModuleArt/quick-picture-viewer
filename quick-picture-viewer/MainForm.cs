@@ -2388,7 +2388,7 @@ namespace quick_picture_viewer
 			setSlideshow(false);
 			openFileDialog1.Title = LangMan.Get("open-file");
 			openFileDialog1.Filter = LangMan.Get("all-image-formats") +
-				" (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.exif, *.gif, *.bmp, *.dib, *.rle, *.tiff, *.tif, *.ico, *.webp, *.svg, *.dds, *.tga, *.psd, *.cr2) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif; *.exif; *.gif; *.bmp, *.dib; *.rle; *.tiff; *.tif; *.ico; *.webp; *.svg; *.dds; *.tga; *.psd; |PNG (*.png)|*.png|JPG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg; *.jpeg; *.jpe; *.jfif; *.exif|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp; *.dib; *.rle|TIF (*.tiff, *.tif)|*.tiff; *.tif|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp|SVG (*.svg)|*.svg|DirectDraw Surface (*.dds)|*.dds|Targa (*.tga)|*.tga|Photoshop Document (*.psd)|*.psd|Canon Digital Camera Raw (*.cr2)|*.cr2|" +
+				" (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.exif, *.gif, *.bmp, *.dib, *.rle, *.tiff, *.tif, *.ico, *.webp, *.svg, *.dds, *.tga, *.psd, *.cr2) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif; *.exif; *.gif; *.bmp, *.dib; *.rle; *.tiff; *.tif; *.ico; *.webp; *.svg; *.dds; *.tga; *.psd; *.cr2; |PNG (*.png)|*.png|JPG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg; *.jpeg; *.jpe; *.jfif; *.exif|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp; *.dib; *.rle|TIF (*.tiff, *.tif)|*.tiff; *.tif|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp|SVG (*.svg)|*.svg|DirectDraw Surface (*.dds)|*.dds|Targa (*.tga)|*.tga|Photoshop Document (*.psd)|*.psd|Canon Digital Camera Raw (*.cr2)|*.cr2|" +
 				LangMan.Get("all-files") + " (*.*)|*.*";
 
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
