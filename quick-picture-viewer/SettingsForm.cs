@@ -58,35 +58,17 @@ namespace quick_picture_viewer
 			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
 
 			int theme = Properties.Settings.Default.Theme;
-			if (theme == 0)
-			{
-				systemThemeRadio.Checked = true;
-			}
-			else if (theme == 1)
-			{
-				lightThemeRadio.Checked = true;
-			}
-			else
-			{
-				darkThemeRadio.Checked = true;
-			}
+			if (theme == 0) systemThemeRadio.Checked = true;
+			else if (theme == 1) lightThemeRadio.Checked = true;
+			else darkThemeRadio.Checked = true;
 
 			fullscrCursorCheckBox.Checked = Properties.Settings.Default.ShowCursorInFullscreen;
 			escToExitCheckBox.Checked = Properties.Settings.Default.EscToExit;
 
 			int mouseWheelAction = Properties.Settings.Default.MouseWheelScrollAction;
-			if (mouseWheelAction == 0)
-			{
-				mouseWheelActionRadio1.Checked = true;
-			}
-			else if (mouseWheelAction == 1)
-			{
-				mouseWheelActionRadio2.Checked = true;
-			}
-			else if (mouseWheelAction == 2)
-			{
-				mouseWheelActionRadio3.Checked = true;
-			}
+			if (mouseWheelAction == 0) mouseWheelActionRadio1.Checked = true;
+			else if (mouseWheelAction == 1) mouseWheelActionRadio2.Checked = true;
+			else if (mouseWheelAction == 2) mouseWheelActionRadio3.Checked = true;
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
 			startupPasteCheckBox.Checked = Properties.Settings.Default.StartupPaste;
@@ -115,10 +97,7 @@ namespace quick_picture_viewer
 			themeRestart.LinkColor = ThemeMan.AccentColor;
 			localizationRestart.LinkColor = ThemeMan.AccentColor;
 
-			if (ThemeMan.isWindows10())
-			{
-				makeDefaultBtn.Enabled = true;
-			}
+			if (ThemeMan.isWindows10()) makeDefaultBtn.Enabled = true;
 		}
 
 		private void InitLanguage()
@@ -205,10 +184,7 @@ namespace quick_picture_viewer
 
 		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Escape)
-			{
-				Close();
-			}
+			if (e.KeyCode == Keys.Escape) Close();
 		}
 
 		private void updatesCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -492,10 +468,7 @@ namespace quick_picture_viewer
 				const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer";
 				string browseWithValue1 = (string)Registry.GetValue(browseWithKey1, string.Empty, string.Empty);
 				string browseWithValue2 = (string)Registry.GetValue(browseWithKey2, string.Empty, string.Empty);
-				if (browseWithValue1.Length > 0 && browseWithValue2.Length > 0)
-				{
-					return true;
-				}
+				if (browseWithValue1.Length > 0 && browseWithValue2.Length > 0) return true;
 				return false;
 			}
 			catch

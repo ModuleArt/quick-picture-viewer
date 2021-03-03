@@ -19,7 +19,6 @@ namespace quick_picture_viewer
 				order++;
 				len = len / 1024;
 			}
-
 			return String.Format("{0:0.##} {1}", len, sizes[order]);
 		}
 	}

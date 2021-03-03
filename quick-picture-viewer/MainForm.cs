@@ -94,19 +94,13 @@ namespace quick_picture_viewer
 				}
 
 			}
-			if (Properties.Settings.Default.StartupMaximize)
-			{
-				WindowState = FormWindowState.Maximized;
-			}
+			if (Properties.Settings.Default.StartupMaximize) WindowState = FormWindowState.Maximized;
 		}
 
 		protected override void WndProc(ref Message m)
 		{
 			base.WndProc(ref m);
-			if (m.Msg == NativeMan.WM_SYSCOMMAND)
-			{
-				if (m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE) OnResizeEnd(EventArgs.Empty);
-			}
+			if (m.Msg == NativeMan.WM_SYSCOMMAND && m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE) OnResizeEnd(EventArgs.Empty);
 		}
 
 		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -283,14 +277,8 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					if (File.GetAttributes(openPath).HasFlag(FileAttributes.Directory))
-					{
-						openFirstFileInFolder(openPath);
-					}
-					else
-					{
-						openFile(openPath);
-					}
+					if (File.GetAttributes(openPath).HasFlag(FileAttributes.Directory)) openFirstFileInFolder(openPath);
+					else openFile(openPath);
 					ShowNavForm(Properties.Settings.Default.NavPanel, Properties.Settings.Default.NavPanel);
 				}
 			}
@@ -323,10 +311,7 @@ namespace quick_picture_viewer
 			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
 			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
 			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;
-			if (Properties.Settings.Default.CheckForUpdates)
-			{
-				UpdateMan.CheckForUpdates(false, TopMost, Handle);
-			}
+			if (Properties.Settings.Default.CheckForUpdates) UpdateMan.CheckForUpdates(false, TopMost, Handle);
 		}
 
 		private void UpdateMan_UpdateSkipped(object sender, UpdateSkippedEventArgs e)
@@ -349,7 +334,6 @@ namespace quick_picture_viewer
 			typeOpsButton.Invoke((MethodInvoker)(() =>
 			{
 				typeOpsButton.Visible = show;
-
 				if (show)
 				{
 					typeOpsButton.Text = " " + type + " " + LangMan.Get("type-options");
@@ -479,14 +463,8 @@ namespace quick_picture_viewer
 						darkMode: darkMode
 					);
 
-					if (window == DialogResult.Yes)
-					{
-						saveAsButton.PerformClick();
-					}
-					else if (window != DialogResult.No)
-					{
-						return;
-					}
+					if (window == DialogResult.Yes) saveAsButton.PerformClick();
+					else if (window != DialogResult.No) return;
 				}
 
 				selectionBtn.Checked = false;
@@ -500,32 +478,23 @@ namespace quick_picture_viewer
 					pictureBox.Image = null;
 				}
 
-				const int exifOrientationID = 0x112; // 274
+				const int exifOrientationID = 0x112; 
 				if (bitmap.PropertyIdList.Contains(exifOrientationID))
 				{
 					var prop = bitmap.GetPropertyItem(exifOrientationID);
 					int val = BitConverter.ToUInt16(prop.Value, 0);
 					var rot = RotateFlipType.RotateNoneFlipNone;
 
-					if (val == 3 || val == 4)
-						rot = RotateFlipType.Rotate180FlipNone;
-					else if (val == 5 || val == 6)
-						rot = RotateFlipType.Rotate90FlipNone;
-					else if (val == 7 || val == 8)
-						rot = RotateFlipType.Rotate270FlipNone;
-
-					if (val == 2 || val == 4 || val == 5 || val == 7)
-						rot |= RotateFlipType.RotateNoneFlipX;
-
-					if (rot != RotateFlipType.RotateNoneFlipNone)
-						bitmap.RotateFlip(rot);
+					if (val == 3 || val == 4) rot = RotateFlipType.Rotate180FlipNone;
+					else if (val == 5 || val == 6) rot = RotateFlipType.Rotate90FlipNone;
+					else if (val == 7 || val == 8) rot = RotateFlipType.Rotate270FlipNone;
+					if (val == 2 || val == 4 || val == 5 || val == 7) rot |= RotateFlipType.RotateNoneFlipX;
+					if (rot != RotateFlipType.RotateNoneFlipNone) bitmap.RotateFlip(rot);
 				}
 
 				originalImage = bitmap;
 				pictureBox.Image = originalImage;
 
-				//width = pictureBox.Image.Size.Width;
-				//height = pictureBox.Image.Size.Height;
 				fileLabel.Text = " " + LangMan.Get("file") + ": " + fileName;
 
 				if (directoryName == null)
@@ -542,15 +511,8 @@ namespace quick_picture_viewer
 					currentFile = fileName;
 
 					directoryLabel.Visible = true;
-					if (recursiveFolder != null)
-					{
-						directoryLabel.Image = darkMode ? Properties.Resources.white_recursive : Properties.Resources.black_recursive;
-					}
-					else
-					{
-						directoryLabel.Image = darkMode ? Properties.Resources.white_picfolder : Properties.Resources.black_picfolder;
-					}
-
+					if (recursiveFolder != null) directoryLabel.Image = darkMode ? Properties.Resources.white_recursive : Properties.Resources.black_recursive;
+					else directoryLabel.Image = darkMode ? Properties.Resources.white_picfolder : Properties.Resources.black_picfolder;
 					directoryLabel.Text = " " + LangMan.Get("folder") + ": " + directoryName;
 
 					dateCreatedLabel.Text = " " + LangMan.Get("created") + ": " + File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
@@ -603,10 +565,7 @@ namespace quick_picture_viewer
 		private void UpdateSizeLabel()
 		{
 			sizeLabel.Text = " " + LangMan.Get("size") + ": " + originalImage.Width.ToString() + " x " + originalImage.Height.ToString();
-			if (currentFolder != null)
-			{
-				sizeLabel.Text += " (" + Converter.PathToSize(Path.Combine(currentFolder, currentFile)) + ")";
-			}
+			if (currentFolder != null) sizeLabel.Text += " (" + Converter.PathToSize(Path.Combine(currentFolder, currentFile)) + ")";
 		}
 
 		private void CheckAutoZoomNeeded()
@@ -615,14 +574,8 @@ namespace quick_picture_viewer
 			{
 				if (!fullscreen && (originalImage.Width < picturePanel.Width - 32) && (originalImage.Height < picturePanel.Height - 32))
 				{
-					if (zoomTextBox.Text == "100%")
-					{
-						setZoomFactor(100);
-					}
-					else
-					{
-						setZoomText("100%");
-					}
+					if (zoomTextBox.Text == "100%") setZoomFactor(100);
+					else setZoomText("100%");
 				}
 				else
 				{
@@ -642,10 +595,7 @@ namespace quick_picture_viewer
 
 			Text = string.IsNullOrEmpty(fakeName) ? currentFile + " - Quick Picture Viewer" : fakeName + " - Quick Picture Viewer";
 
-			if (b)
-			{
-				Text = "* " + Text;
-			}
+			if (b) Text = "* " + Text;
 		}
 
 		private void zoomInButton_Click(object sender, EventArgs e)
@@ -660,19 +610,13 @@ namespace quick_picture_viewer
 
 		private void zoomIn()
 		{
-			if (autoZoom)
-			{
-				ZoomToFit();
-			}
+			if (autoZoom) ZoomToFit();
 			setZoomText((zoomFactor + 5).ToString() + "%");
 		}
 
 		private void zoomOut()
 		{
-			if (autoZoom)
-			{
-				ZoomToFit();
-			}
+			if (autoZoom) ZoomToFit();
 			setZoomText((zoomFactor - 5).ToString() + "%");
 		}
 
@@ -713,10 +657,7 @@ namespace quick_picture_viewer
 
 		private void setZoomText(string text)
 		{
-			if (!string.IsNullOrEmpty(text) && !zoomTextBox.IsDisposed)
-			{
-				zoomTextBox.TextBox.Invoke((MethodInvoker)(() => zoomTextBox.Text = text));
-			}
+			if (!string.IsNullOrEmpty(text) && !zoomTextBox.IsDisposed) zoomTextBox.TextBox.Invoke((MethodInvoker)(() => zoomTextBox.Text = text));
 		}
 
 		private void setAutoZoom(bool b)
@@ -785,10 +726,7 @@ namespace quick_picture_viewer
 			TopMost = b;
 			onTopButton.Checked = b;
 
-			if (b)
-			{
-				setFullscreen(false);
-			}
+			if (b) setFullscreen(false);
 
 			if (saveToDisk)
 			{
@@ -832,10 +770,7 @@ namespace quick_picture_viewer
 				Rectangle r = GetSelectionRect();
 				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
 				cropped.RotateFlip(RotateFlipType.RotateNoneFlipX);
-				using (Graphics g = Graphics.FromImage(originalImage))
-				{
-					g.DrawImage(cropped, r);
-				}
+				using (Graphics g = Graphics.FromImage(originalImage)) g.DrawImage(cropped, r);
 				selectionBtn.Checked = false;
 			}
 			else
@@ -853,10 +788,7 @@ namespace quick_picture_viewer
 				Rectangle r = GetSelectionRect();
 				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
 				cropped.RotateFlip(RotateFlipType.RotateNoneFlipY);
-				using (Graphics g = Graphics.FromImage(originalImage))
-				{
-					g.DrawImage(cropped, r);
-				}
+				using (Graphics g = Graphics.FromImage(originalImage)) g.DrawImage(cropped, r);
 				selectionBtn.Checked = false;
 			}
 			else
@@ -974,15 +906,11 @@ namespace quick_picture_viewer
 				if (autoZoom)
 				{
 					AllowDrop = false;
-					if (currentFile != null || originalImage != null)
-					{
-						dragImage = true;
-					}
+					if (currentFile != null || originalImage != null) dragImage = true;
 				}
 				else
 				{
 					Cursor.Current = Cursors.SizeAll;
-
 					panelMouseDownLocation = new Point(
 						PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
 						PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
@@ -1010,10 +938,7 @@ namespace quick_picture_viewer
 							string[] paths = { Path.Combine(currentFolder, currentFile) };
 							DoDragDrop(new DataObject(DataFormats.FileDrop, paths), DragDropEffects.Copy);
 						}
-						else if (originalImage != null)
-						{
-							DoDragDrop(originalImage, DragDropEffects.Copy);
-						}
+						else if (originalImage != null) DoDragDrop(originalImage, DragDropEffects.Copy);
 						dragImage = false;
 					}
 				}
@@ -1039,7 +964,6 @@ namespace quick_picture_viewer
 					{
 						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Minimum;
 					}
-
 					picturePanel.Update();
 				}
 			}
@@ -1051,25 +975,13 @@ namespace quick_picture_viewer
 			{
 				if (Control.ModifierKeys == Keys.Control || Properties.Settings.Default.MouseWheelScrollAction == 1)
 				{
-					if (e.Delta > 0)
-					{
-						zoomIn();
-					}
-					else if (e.Delta < 0)
-					{
-						zoomOut();
-					}
+					if (e.Delta > 0) zoomIn();
+					else if (e.Delta < 0) zoomOut();
 				}
 				else if (Properties.Settings.Default.MouseWheelScrollAction == 2)
 				{
-					if (e.Delta > 0)
-					{
-						PrevFile();
-					}
-					else if (e.Delta < 0)
-					{
-						NextFile();
-					}
+					if (e.Delta > 0) PrevFile();
+					else if (e.Delta < 0) NextFile();
 				}
 			}
 		}
@@ -1078,14 +990,8 @@ namespace quick_picture_viewer
 		{
 			if (originalImage != null)
 			{
-				if (e.Delta > 0)
-				{
-					zoomIn();
-				}
-				else if (e.Delta < 0)
-				{
-					zoomOut();
-				}
+				if (e.Delta > 0) zoomIn();
+				else if (e.Delta < 0) zoomOut();
 			}
 		}
 
@@ -1097,16 +1003,10 @@ namespace quick_picture_viewer
 		private void UpdatePicturePanelHeight()
 		{
 			int topMargin = 0;
-			if (toolStrip1.Visible)
-			{
-				topMargin += toolStrip1.Height;
-			}
+			if (toolStrip1.Visible) topMargin += toolStrip1.Height;
 
 			int bottomMargin = 0;
-			if (statusStrip1.Visible)
-			{
-				bottomMargin += statusStrip1.Height;
-			}
+			if (statusStrip1.Visible) bottomMargin += statusStrip1.Height;
 
 			picturePanel.Top = topMargin;
 			picturePanel.Height = ClientSize.Height - topMargin - bottomMargin;
@@ -1115,9 +1015,7 @@ namespace quick_picture_viewer
 		private void setFullscreen(bool b)
 		{
 			OnResizeBegin(EventArgs.Empty);
-
 			fullscreen = b;
-
 			WindowState = FormWindowState.Normal;
 
 			if (b)
@@ -1156,10 +1054,7 @@ namespace quick_picture_viewer
 				typeOpsButton.Left = ClientRectangle.Width - typeOpsButton.Width - 27;
 				pleaseOpenLabel.ForeColor = ForeColor;
 
-				if (!framelessMode)
-				{
-					FormBorderStyle = FormBorderStyle.Sizable;
-				}
+				if (!framelessMode) FormBorderStyle = FormBorderStyle.Sizable;
 
 				if (checkboardBackground)
 				{
@@ -1168,14 +1063,8 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					if (Properties.Settings.Default.BackColor.Length > 0)
-					{
-						picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
-					}
-					else
-					{
-						picturePanel.BackColor = Color.Transparent;
-					}
+					if (Properties.Settings.Default.BackColor.Length > 0) picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
+					else picturePanel.BackColor = Color.Transparent;
 				}
 
 				if (navForm != null) navForm.Show();
@@ -1232,57 +1121,24 @@ namespace quick_picture_viewer
 				{
 					if (e.Shift)
 					{
-						if (e.KeyCode == Keys.L)
-						{
-							showFileButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.S)
-						{
-							toggleSlideshow();
-						}
-						else if (e.KeyCode == Keys.P)
-						{
-							miniViewButton.PerformClick();
-						}
+						if (e.KeyCode == Keys.L) showFileButton.PerformClick();
+						else if (e.KeyCode == Keys.S) toggleSlideshow();
+						else if (e.KeyCode == Keys.P) miniViewButton.PerformClick();
 					}
 					else
 					{
-						if (e.KeyCode == Keys.B)
-						{
-							checkboardButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.S)
-						{
-							saveAsButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.A)
-						{
-							autoZoomButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.Oemplus)
-						{
-							zoomInButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.OemMinus)
-						{
-							zoomOutButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.T)
-						{
-							onTopButton.PerformClick();
-						}
-						else if (e.KeyCode == Keys.I)
-						{
-							infoButton.PerformClick();
-						}
+						if (e.KeyCode == Keys.B) checkboardButton.PerformClick();
+						else if (e.KeyCode == Keys.S) saveAsButton.PerformClick();
+						else if (e.KeyCode == Keys.A) autoZoomButton.PerformClick();
+						else if (e.KeyCode == Keys.Oemplus) zoomInButton.PerformClick();
+						else if (e.KeyCode == Keys.OemMinus) zoomOutButton.PerformClick();
+						else if (e.KeyCode == Keys.T) onTopButton.PerformClick();
+						else if (e.KeyCode == Keys.I) infoButton.PerformClick();
 					}
 				}
 				else if (e.Alt)
 				{
-					if (e.KeyCode == Keys.Enter)
-					{
-						fullscreenBtn.PerformClick();
-					}
+					if (e.KeyCode == Keys.Enter) fullscreenBtn.PerformClick();
 					else if (e.KeyCode == Keys.Down)
 					{
 						int newVerticalValue = picturePanel.VerticalScroll.Value + picturePanel.VerticalScroll.LargeChange;
@@ -1306,22 +1162,13 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					if (e.KeyCode == Keys.F || e.KeyCode == Keys.F11)
-					{
-						fullscreenBtn.PerformClick();
-					}
+					if (e.KeyCode == Keys.F || e.KeyCode == Keys.F11) fullscreenBtn.PerformClick();
 					else if (e.KeyCode == Keys.Escape)
 					{
-						if (!fullscreen && Properties.Settings.Default.EscToExit)
-						{
-							Close();
-						}
+						if (!fullscreen && Properties.Settings.Default.EscToExit) Close();
 						setFullscreen(false);
 					}
-					else if (e.KeyCode == Keys.S)
-					{
-						selectionBtn.PerformClick();
-					}
+					else if (e.KeyCode == Keys.S) selectionBtn.PerformClick();
 				}
 			}
 		}
@@ -1352,11 +1199,7 @@ namespace quick_picture_viewer
 
 		private void MainForm_DragEnter(object sender, DragEventArgs e)
 		{
-			if (
-				e.Data.GetDataPresent(DataFormats.FileDrop) || 
-				e.Data.GetDataPresent(DataFormats.Bitmap) || 
-				e.Data.GetDataPresent(DataFormats.Dib)
-			)
+			if (e.Data.GetDataPresent(DataFormats.FileDrop) || e.Data.GetDataPresent(DataFormats.Bitmap) || e.Data.GetDataPresent(DataFormats.Dib))
 			{
 				e.Effect = DragDropEffects.All;
 			}
@@ -1417,14 +1260,8 @@ namespace quick_picture_viewer
 				}
 			}
 
-			if (currentIndex == -1)
-			{
-				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
-			}
-			else
-			{
-				openFile(currentIndex == 0 ? filePaths[filePaths.Length - 1] : filePaths[currentIndex - 1]);
-			}
+			if (currentIndex == -1) showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
+			else openFile(currentIndex == 0 ? filePaths[filePaths.Length - 1] : filePaths[currentIndex - 1]);
 		}
 
 		private void prevButton_Click(object sender, EventArgs e)
@@ -1443,30 +1280,18 @@ namespace quick_picture_viewer
 				for (int i = 0; i < allFiles.Length; i++)
 				{
 					string ext = Path.GetExtension(allFiles[i]).ToLower();
-					if (exts.Contains(ext))
-					{
-						arlist.Add(allFiles[i]);
-					}
+					if (exts.Contains(ext)) arlist.Add(allFiles[i]);
 				}
 			}
-
 			return arlist.ToArray();
 		}
 
 		private void openFirstFileInFolder(string folderPath)
 		{
 			currentFolder = folderPath;
-
 			string[] filePaths = GetCurrentFiles();
-
-			if (filePaths.Length > 0)
-			{
-				openFile(filePaths[0]);
-			}
-			else
-			{
-				showSuggestion(LangMan.Get("no-files-to-open"), SuggestionIcon.Warning);
-			}
+			if (filePaths.Length > 0) openFile(filePaths[0]);
+			else showSuggestion(LangMan.Get("no-files-to-open"), SuggestionIcon.Warning);
 		}
 
 		private void setAsDesktopButton_Click(object sender, EventArgs e)
@@ -1498,10 +1323,7 @@ namespace quick_picture_viewer
 					pictureBox.Image.Dispose();
 					pictureBox.Image = null;
 
-					if (NextFile() <= 1)
-					{
-						closeFile();
-					}
+					if (NextFile() <= 1) closeFile();
 					FileSystem.DeleteFile(path, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin, UICancelOption.DoNothing);
 				}
 				else
@@ -1518,7 +1340,6 @@ namespace quick_picture_viewer
 				originalImage.Dispose();
 				originalImage = null;
 			}
-
 			if (pictureBox.Image != null)
 			{
 				pictureBox.Image.Dispose();
@@ -1697,10 +1518,7 @@ namespace quick_picture_viewer
 			setSlideshow(false);
 
 			string docTitle = LangMan.Get("image") + " 1";
-			if (currentFile != null)
-			{
-				docTitle = currentFile;
-			}
+			if (currentFile != null) docTitle = currentFile;
 
 			printDocument1.DocumentName = docTitle;
 			printDocument1.PrinterSettings.PrintFileName = docTitle;
@@ -1710,13 +1528,7 @@ namespace quick_picture_viewer
 			pf.TopMost = alwaysOnTop;
 			pf.DarkMode = darkMode;
 
-			if (pf.ShowDialog() == DialogResult.OK)
-			{
-				if (printDialog1.ShowDialog() == DialogResult.OK)
-				{
-					printDocument1.Print();
-				}
-			}
+			if (pf.ShowDialog() == DialogResult.OK && printDialog1.ShowDialog() == DialogResult.OK) printDocument1.Print();
 		}
 
 		private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -1793,14 +1605,8 @@ namespace quick_picture_viewer
 					darkMode: darkMode
 				);
 
-				if (window == DialogResult.Yes)
-				{
-					saveAsButton.PerformClick();
-				}
-				else if (window != DialogResult.No)
-				{
-					e.Cancel = true;
-				}
+				if (window == DialogResult.Yes) saveAsButton.PerformClick();
+				else if (window != DialogResult.No) e.Cancel = true;
 			}
 
 			if (Properties.Settings.Default.StartupRestoreBounds)
@@ -1863,26 +1669,12 @@ namespace quick_picture_viewer
 			{
 				suggestionLabel.Text = text;
 				suggestionLabel.Visible = true;
-				if (icon == SuggestionIcon.Info)
-				{
-					suggestionIcon.Image = Properties.Resources.white_info;
-				}
-				else if (icon == SuggestionIcon.Check)
-				{
-					suggestionIcon.Image = Properties.Resources.white_check;
-				}
-				else if (icon == SuggestionIcon.Warning)
-				{
-					suggestionIcon.Image = Properties.Resources.white_warning;
-				}
-				else if (icon == SuggestionIcon.Slideshow)
-				{
-					suggestionIcon.Image = Properties.Resources.white_slideshow;
-				}
-				else
-				{
-					suggestionIcon.Image = Properties.Resources.white_fullscreen;
-				}
+				if (icon == SuggestionIcon.Info) suggestionIcon.Image = Properties.Resources.white_info;
+				else if (icon == SuggestionIcon.Check) suggestionIcon.Image = Properties.Resources.white_check;
+				else if (icon == SuggestionIcon.Warning) suggestionIcon.Image = Properties.Resources.white_warning;
+				else if (icon == SuggestionIcon.Slideshow) suggestionIcon.Image = Properties.Resources.white_slideshow;
+				else suggestionIcon.Image = Properties.Resources.white_fullscreen;
+
 				suggestionIcon.Height = suggestionLabel.Height;
 				suggestionIcon.Visible = true;
 			}));
@@ -1964,10 +1756,7 @@ namespace quick_picture_viewer
 				Rectangle r = GetSelectionRect();
 				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
 				cropped.RotateFlip(RotateFlipType.Rotate180FlipNone);
-				using (Graphics g = Graphics.FromImage(originalImage))
-				{
-					g.DrawImage(cropped, r);
-				}
+				using (Graphics g = Graphics.FromImage(originalImage)) g.DrawImage(cropped, r);
 				selectionBtn.Checked = false;
 			}
 			else
@@ -2000,10 +1789,7 @@ namespace quick_picture_viewer
 		{
 			Console.WriteLine(typeOpsButton.Location.X);
 			Console.WriteLine(ClientRectangle.Width);
-			if (typeOpsButton.Visible)
-			{
-				typeOpsButton.Focus();
-			}
+			if (typeOpsButton.Visible) typeOpsButton.Focus();
 		}
 
 		private void zoomOutButton_MouseLeave(object sender, EventArgs e)
@@ -2043,11 +1829,7 @@ namespace quick_picture_viewer
 			try
 			{
 				string ext = "bmp";
-				if (currentFile != null)
-				{
-					ext = Path.GetExtension(currentFile).Substring(1, Path.GetExtension(currentFile).Length - 1);
-				}
-
+				if (currentFile != null) ext = Path.GetExtension(currentFile).Substring(1, Path.GetExtension(currentFile).Length - 1);
 				Process.Start(FileAssociation.GetExecFileAssociatedToExtension(ext), Path.Combine(currentFolder, currentFile));
 			}
 			catch
@@ -2145,14 +1927,8 @@ namespace quick_picture_viewer
 			framelessBtn.Checked = b;
 			framelessCloseBtn.Visible = b;
 
-			if (b)
-			{
-				FormBorderStyle = FormBorderStyle.None;
-			}
-			else if (!fullscreen)
-			{
-				FormBorderStyle = FormBorderStyle.Sizable;
-			}
+			if (b) FormBorderStyle = FormBorderStyle.None;
+			else if (!fullscreen) FormBorderStyle = FormBorderStyle.Sizable;
 		}
 
 		private void framelessBtn_Click(object sender, EventArgs e)
@@ -2177,10 +1953,7 @@ namespace quick_picture_viewer
 				for (int j = 0; j < plugins[i].functions.Length; j++)
 				{
 					string path = null;
-					if (currentFile != null && currentFolder != null)
-					{
-						path = Path.Combine(currentFolder, currentFile);
-					}
+					if (currentFile != null && currentFolder != null) path = Path.Combine(currentFolder, currentFile);
 					PluginMenuItem tsmi = new PluginMenuItem(
 						originalImage,
 						path,
@@ -2194,14 +1967,8 @@ namespace quick_picture_viewer
 					);
 					tsmi.Output += Tsmi_Output;
 
-					if (plugins[i].functions[j].type == "effect")
-					{
-						effectsBtn.DropDownItems.Add(tsmi);
-					}
-					else if (plugins[i].functions[j].type == "tool")
-					{
-						toolsBtn.DropDownItems.Add(tsmi);
-					}
+					if (plugins[i].functions[j].type == "effect") effectsBtn.DropDownItems.Add(tsmi);
+					else if (plugins[i].functions[j].type == "tool") toolsBtn.DropDownItems.Add(tsmi);
 				}
 			}
 		}
@@ -2213,10 +1980,7 @@ namespace quick_picture_viewer
 			{
 				directoryLabel.Visible = false;
 				string title = sender.ToString();
-				if (title.Length > 4 && title.Substring(title.Length - 4, 4) == " ...")
-				{
-					title = title.Substring(0, title.Length - 4);
-				}
+				if (title.Length > 4 && title.Substring(title.Length - 4, 4) == " ...") title = title.Substring(0, title.Length - 4);
 				title = string.Format(LangMan.Get("from-format"), title);
 
 				if((sender as PluginMenuItem).OwnerItem.Name == "effectsBtn")
@@ -2240,10 +2004,7 @@ namespace quick_picture_viewer
 
 		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			if (restartApp)
-			{
-				NewWindow();
-			}
+			if (restartApp) NewWindow();
 		}
 
 		private void MainForm_ResizeBegin(object sender, EventArgs e)
@@ -2284,46 +2045,28 @@ namespace quick_picture_viewer
 
 		private void statusStrip1_VisibleChanged(object sender, EventArgs e)
 		{
-			if (navForm != null)
-			{
-				//navForm.SetExtraBottomMargin(statusStrip1.Visible ? statusStrip1.Height : 0);
-			}
-
 			showStatusBarBtn.Checked = statusStrip1.Visible;
-
 			UpdatePicturePanelHeight();
 			UpdatePictureBoxLocation();
 		}
 
 		private void toolStrip1_VisibleChanged(object sender, EventArgs e)
 		{
-			if (navForm != null)
-			{
-				//navForm.SetExtraTopMargin(toolStrip1.Visible ? toolStrip1.Height : 0);
-			}
-
 			showToolbarBtn.Checked = toolStrip1.Visible;
-
 			UpdatePicturePanelHeight();
 			UpdatePictureBoxLocation();
 		}
 
 		private void showStatusBarBtn_Click(object sender, EventArgs e)
 		{
-			if (!fullscreen)
-			{
-				statusStrip1.Visible = !Properties.Settings.Default.ShowStatusBar;
-			}
+			if (!fullscreen) statusStrip1.Visible = !Properties.Settings.Default.ShowStatusBar;
 			Properties.Settings.Default.ShowStatusBar = !Properties.Settings.Default.ShowStatusBar;
 			Properties.Settings.Default.Save();
 		}
 
 		private void showToolbarBtn_Click(object sender, EventArgs e)
 		{
-			if (!fullscreen)
-			{
-				toolStrip1.Visible = !Properties.Settings.Default.ShowToolbar;
-			}
+			if (!fullscreen) toolStrip1.Visible = !Properties.Settings.Default.ShowToolbar;
 			Properties.Settings.Default.ShowToolbar = !Properties.Settings.Default.ShowToolbar;
 			Properties.Settings.Default.Save();
 		}
@@ -2437,13 +2180,10 @@ namespace quick_picture_viewer
 					selForm.Select(pictureBox.Location.X, pictureBox.Location.Y, pictureBox.Width, pictureBox.Height);
 				}
 			}
-			else
+			else if (selForm != null && !selForm.IsDisposed)
 			{
-				if (selForm != null && !selForm.IsDisposed)
-				{
-					selForm.Dispose();
-					selForm = null;
-				}
+				selForm.Dispose();
+				selForm = null;
 			}
 			selectionLabel.Visible = selectionBtn.Checked;
 		}
@@ -2512,10 +2252,8 @@ namespace quick_picture_viewer
 		{
 			if (WindowState != FormWindowState.Minimized)
 			{
-				if (navForm != null)
-				{
-					navForm.UpdateContainerRect();
-				}
+				if (navForm != null) navForm.UpdateContainerRect();
+
 				if (selForm != null)
 				{
 					selForm.UpdateContainerRect();

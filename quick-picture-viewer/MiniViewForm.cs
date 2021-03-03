@@ -10,7 +10,7 @@ namespace quick_picture_viewer
 	{
 		private Point startPos;
 		private Size curSize;
-		private float ratio;
+		private double ratio;
 		private bool checkboardBackground = false;
 		private bool autoZoom = true;
 		private int zoomFactor = 100;
@@ -33,13 +33,10 @@ namespace quick_picture_viewer
 				Convert.ToInt32(Screen.FromHandle(Handle).WorkingArea.Height / 1.25f)
 			);
 
-			ratio = (float)image.Width / (float)image.Height;
+			ratio = (double)image.Width / (double)image.Height;
 
 			Height = Convert.ToInt32(Width / ratio);
-			if (Height == MaximumSize.Height)
-			{
-				Width = Convert.ToInt32(Height * ratio);
-			}
+			if (Height == MaximumSize.Height) Width = Convert.ToInt32(Height * ratio);
 
 			pictureBox.Image = image;
 			width = image.Width;
@@ -47,47 +44,28 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
-			if (ThemeMan.isWindows10())
-			{
-				ThemeMan.setDarkModeToControl(picturePanel.Handle);
-			}
-
-			if (Properties.Settings.Default.PipOpacity == 0.25 || Properties.Settings.Default.PipOpacity == 0.75)
-			{
-				Opacity = Properties.Settings.Default.PipOpacity;
-			}
+			if (ThemeMan.isWindows10()) ThemeMan.setDarkModeToControl(picturePanel.Handle);
+			if (Properties.Settings.Default.PipOpacity == 0.25 || Properties.Settings.Default.PipOpacity == 0.75) Opacity = Properties.Settings.Default.PipOpacity;
 		}
 
 		private void picturePanel_MouseWheel(object sender, MouseEventArgs e)
 		{
 			if (ModifierKeys == Keys.Control || Properties.Settings.Default.MouseWheelScrollAction == 1)
 			{
-				if (e.Delta > 0)
-				{
-					zoomIn();
-				}
-				else if (e.Delta < 0)
-				{
-					zoomOut();
-				}
+				if (e.Delta > 0) zoomIn();
+				else if (e.Delta < 0) zoomOut();
 			}
 		}
 
 		private void zoomIn()
 		{
-			if (autoZoom)
-			{
-				zoomToFit();
-			}
+			if (autoZoom) ZoomToFit();
 			setZoomFactor(zoomFactor + 5);
 		}
 
 		private void zoomOut()
 		{
-			if (autoZoom)
-			{
-				zoomToFit();
-			}
+			if (autoZoom) ZoomToFit();
 			setZoomFactor(zoomFactor - 5);
 		}
 
@@ -109,44 +87,23 @@ namespace quick_picture_viewer
 
 				pictureBox.Size = new Size(newWidth, newHeight);
 
-				updatePictureBoxLocation();
+				UpdatePictureBoxLocation();
 			}
 		}
 
-		private void updatePictureBoxLocation()
+		private void UpdatePictureBoxLocation()
 		{
-			if (pictureBox.Width < picturePanel.Width)
-			{
-				pictureBox.Left = (picturePanel.Width - pictureBox.Width) / 2;
-			}
-			else
-			{
-				pictureBox.Left = -picturePanel.HorizontalScroll.Value;
-			}
-
-			if (pictureBox.Height < picturePanel.Height)
-			{
-				pictureBox.Top = (picturePanel.Height - pictureBox.Height) / 2;
-			}
-			else
-			{
-				pictureBox.Top = -picturePanel.VerticalScroll.Value;
-			}
+			pictureBox.Location = new Point(
+				pictureBox.Width < picturePanel.Width ? (picturePanel.Width - pictureBox.Width) / 2 : -picturePanel.HorizontalScroll.Value,
+				pictureBox.Height < picturePanel.Height ? (picturePanel.Height - pictureBox.Height) / 2 : -picturePanel.VerticalScroll.Value
+			);
 		}
 
-		private void zoomToFit()
+		private void ZoomToFit()
 		{
 			double zoomFactorX = picturePanel.Width / (double)width;
 			double zoomFactorY = picturePanel.Height / (double)height;
-
-			if (zoomFactorX > zoomFactorY)
-			{
-				zoomFactor = Convert.ToInt32(zoomFactorY * 100);
-			}
-			else
-			{
-				zoomFactor = Convert.ToInt32(zoomFactorX * 100);
-			}
+			zoomFactor = zoomFactorX > zoomFactorY ? (int)(zoomFactorY * 100) : (int)(zoomFactorX * 100);
 		}
 
 		private void MiniViewForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -163,13 +120,7 @@ namespace quick_picture_viewer
 		private void MiniViewForm_MouseLeave(object sender, EventArgs e)
 		{
 			Point relativePoint = PointToClient(Cursor.Position);
-			if (relativePoint.Y > 32)
-			{
-				if (!(relativePoint.Y > ClientSize.Height - 32 && relativePoint.X > ClientSize.Width - 32))
-				{
-					showUI(false);
-				}
-			}
+			if (relativePoint.Y > 32 && !(relativePoint.Y > ClientSize.Height - 32 && relativePoint.X > ClientSize.Width - 32)) showUI(false);
 		}
 
 		private void showUI(bool b)
@@ -212,15 +163,7 @@ namespace quick_picture_viewer
 		{
 			checkboardBackground = b;
 			checkboardBtn.Checked = b;
-
-			if (b)
-			{
-				picturePanel.BackgroundImage = Properties.Resources.checkboard_dark;
-			}
-			else
-			{
-				picturePanel.BackgroundImage = null;
-			}
+			picturePanel.BackgroundImage = b ? Properties.Resources.checkboard_dark : null;
 		}
 
 		private void MiniViewForm_KeyDown(object sender, KeyEventArgs e)
@@ -229,46 +172,25 @@ namespace quick_picture_viewer
 			{
 				if (e.Shift)
 				{
-					if (e.KeyCode == Keys.P)
-					{
-						Close();
-					}
+					if (e.KeyCode == Keys.P) Close();
 				}
 				else
 				{
-					if (e.KeyCode == Keys.N)
-					{
-						owner.NewWindow();
-					}
+					if (e.KeyCode == Keys.N) owner.NewWindow();
 					else if (e.KeyCode == Keys.B)
 					{
 						owner.setCheckboardBackground(!checkboardBackground, true);
 						setCheckboardBackground(!checkboardBackground);
 					}
-					else if (e.KeyCode == Keys.O)
-					{
-						opacityBtn.PerformClick();
-					}
-					else if (e.KeyCode == Keys.OemMinus)
-					{
-						zoomOut();
-					}
-					else if (e.KeyCode == Keys.Oemplus)
-					{
-						zoomIn();
-					}
-					else if (e.KeyCode == Keys.A)
-					{
-						autoZoomBtn.PerformClick();
-					}
+					else if (e.KeyCode == Keys.O) opacityBtn.PerformClick();
+					else if (e.KeyCode == Keys.OemMinus) zoomOut();
+					else if (e.KeyCode == Keys.Oemplus) zoomIn();
+					else if (e.KeyCode == Keys.A) autoZoomBtn.PerformClick();
 				}
 			}
 			else
 			{
-				if (e.KeyCode == Keys.Escape)
-				{
-					Close();
-				}
+				if (e.KeyCode == Keys.Escape) Close();
 			}
 		}
 
@@ -309,17 +231,11 @@ namespace quick_picture_viewer
 			if (e.Button == MouseButtons.Left)
 			{
 				Cursor.Current = Cursors.SizeAll;
-				if (autoZoom)
-				{
-					NativeMan.DragWindow(Handle);
-				}
-				else
-				{
-					panelMouseDownLocation = new Point(
-						PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
-						PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
-					);
-				}
+				if (autoZoom) NativeMan.DragWindow(Handle);
+				else panelMouseDownLocation = new Point(
+					PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
+					PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value
+				);
 			}
 		}
 
@@ -339,14 +255,7 @@ namespace quick_picture_viewer
 
 				if (newX > picturePanel.HorizontalScroll.Minimum)
 				{
-					if (newX < picturePanel.HorizontalScroll.Maximum)
-					{
-						picturePanel.HorizontalScroll.Value = newX;
-					}
-					else
-					{
-						picturePanel.HorizontalScroll.Value = picturePanel.HorizontalScroll.Maximum;
-					}
+					picturePanel.HorizontalScroll.Value = newX < picturePanel.HorizontalScroll.Maximum ? newX : picturePanel.HorizontalScroll.Maximum;
 				}
 				else
 				{
@@ -355,14 +264,7 @@ namespace quick_picture_viewer
 
 				if (newY > picturePanel.VerticalScroll.Minimum)
 				{
-					if (newY < picturePanel.VerticalScroll.Maximum)
-					{
-						picturePanel.VerticalScroll.Value = newY;
-					}
-					else
-					{
-						picturePanel.VerticalScroll.Value = picturePanel.VerticalScroll.Maximum;
-					}
+					picturePanel.VerticalScroll.Value = newY < picturePanel.VerticalScroll.Maximum ? newY : picturePanel.VerticalScroll.Maximum;
 				}
 				else
 				{
@@ -375,19 +277,8 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_ResizeEnd(object sender, EventArgs e)
 		{
-			if (!autoZoom)
-			{
-				updatePictureBoxLocation();
-			}
-
-			if (Width > 240)
-			{
-				zoomLabel.ForeColor = Color.White;
-			}
-			else
-			{
-				zoomLabel.ForeColor = Color.Black;
-			}
+			if (!autoZoom) UpdatePictureBoxLocation();
+			zoomLabel.ForeColor = Width > 240 ? Color.White : Color.Black;
 		}
 
 		private void MiniViewForm_Deactivate(object sender, EventArgs e)
@@ -420,51 +311,26 @@ namespace quick_picture_viewer
 				Point curPos = PointToClient(Cursor.Position);
 
 				int newWidth = curSize.Width + curPos.X - startPos.X;
-
-				if (newWidth < MinimumSize.Width)
-				{
-					newWidth = MinimumSize.Width;
-				}
+				if (newWidth < MinimumSize.Width) newWidth = MinimumSize.Width;
 
 				int newHeight;
-				if (autoZoom)
-				{
-					newHeight = Convert.ToInt32(newWidth / ratio);
-				}
-				else
-				{
-					newHeight = curSize.Height + curPos.Y - startPos.Y;
-				}
+				if (autoZoom) newHeight = Convert.ToInt32(newWidth / ratio);
+				else newHeight = curSize.Height + curPos.Y - startPos.Y;
 
-				if (newHeight == MaximumSize.Height)
-				{
-					newWidth = Convert.ToInt32(newHeight * ratio);
-				}
+				if (newHeight == MaximumSize.Height) newWidth = Convert.ToInt32(newHeight * ratio);
 
 				Size = new Size(newWidth, newHeight);
-
 				Update();
 			}
 		}
 
 		private void opacityBtn_Click(object sender, EventArgs e)
 		{
-			if (Opacity == 1)
-			{
-				Opacity = 0.75;
-			}
-			else if (Opacity == 0.75)
-			{
-				Opacity = 0.5;
-			}
-			else if (Opacity == 0.5)
-			{
-				Opacity = 0.25;
-			}
-			else if (Opacity == 0.25)
-			{
-				Opacity = 1;
-			}
+			if (Opacity == 1) Opacity = 0.75;
+			else if (Opacity == 0.75) Opacity = 0.5;
+			else if (Opacity == 0.5) Opacity = 0.25;
+			else if (Opacity == 0.25) Opacity = 1;
+
 			Properties.Settings.Default.PipOpacity = Opacity;
 			Properties.Settings.Default.Save();
 		}

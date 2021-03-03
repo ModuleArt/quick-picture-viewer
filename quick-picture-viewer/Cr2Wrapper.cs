@@ -66,10 +66,8 @@ namespace quick_picture_viewer
 				{
 					if (_jpgImageCodec != null && (orientation == 8 || orientation == 6))
 					{
-						if (orientation == 8)
-							bitmap.RotateFlip(RotateFlipType.Rotate270FlipNone);
-						else
-							bitmap.RotateFlip(RotateFlipType.Rotate90FlipNone);
+						if (orientation == 8) bitmap.RotateFlip(RotateFlipType.Rotate270FlipNone);
+						else bitmap.RotateFlip(RotateFlipType.Rotate90FlipNone);
 					}
 				}
 				catch
@@ -107,7 +105,6 @@ namespace quick_picture_viewer
         private FileStream m_f;
 
         private int m_length;
-
         private uint m_start;
 
         internal PartialStream(FileStream p_f, uint p_start, int p_length)
@@ -220,10 +217,8 @@ namespace quick_picture_viewer
 
         public override int ReadByte()
         {
-            if (Position < Length)
-                return m_f.ReadByte();
-            else
-                return 0;
+            if (Position < Length) return m_f.ReadByte();
+            else return 0;
         }
 
         public override long Seek(long offset, SeekOrigin origin)

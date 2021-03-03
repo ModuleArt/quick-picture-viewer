@@ -22,27 +22,15 @@ namespace quick_picture_viewer
 			int lastDotIndex = fullVer.LastIndexOf('.');
 			versionLabel.Text = String.Format("v{0}", fullVer.Substring(0, lastDotIndex));
 
-			if (IntPtr.Size == 4)
-			{
-				versionLabel.Text += " (x32)";
-			}
-			else if (IntPtr.Size == 8)
-			{
-				versionLabel.Text += " (x64)";
-			}
+			if (IntPtr.Size == 4) versionLabel.Text += " (x32)";
+			else if (IntPtr.Size == 8) versionLabel.Text += " (x64)";
 
-			if (ThemeMan.isWindows10())
-			{
-				makeDefaultBtn.Enabled = true;
-			}
+			if (ThemeMan.isWindows10()) makeDefaultBtn.Enabled = true;
 		}
 
 		private void AboutForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Escape)
-			{
-				Close();
-			}
+			if (e.KeyCode == Keys.Escape) Close();
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)

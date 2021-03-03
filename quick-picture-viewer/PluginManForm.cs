@@ -50,14 +50,8 @@ namespace quick_picture_viewer
 
 		private void RefreshPluginsList()
 		{
-			if (listView1.Items != null && listView1.Items.Count > 0)
-			{
-				listView1.Items.Clear();
-			}
-			if (imageList1.Images != null && imageList1.Images.Count > 0)
-			{
-				imageList1.Images.Clear();
-			}
+			if (listView1.Items != null && listView1.Items.Count > 0) listView1.Items.Clear();
+			if (imageList1.Images != null && imageList1.Images.Count > 0) imageList1.Images.Clear();
 
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 			PluginMan.inputType = "bitmap";
@@ -74,11 +68,7 @@ namespace quick_picture_viewer
 				for (int j = 0; j < plugins[i].authors.Length; j++)
 				{
 					authors += plugins[i].authors[j].name;
-
-					if (j != plugins[i].authors.Length - 1)
-					{
-						authors += ", ";
-					}
+					if (j != plugins[i].authors.Length - 1) authors += ", ";
 				}
 
 				var listViewItem = new ListViewItem(new string[] {
@@ -117,10 +107,7 @@ namespace quick_picture_viewer
 
 		private void PluginManForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Escape)
-			{
-				Close();
-			}
+			if (e.KeyCode == Keys.Escape) Close();
 		}
 
 		private void closeBtn_Click(object sender, EventArgs e)
@@ -130,10 +117,7 @@ namespace quick_picture_viewer
 
 		private void addPluginBtn_Click(object sender, EventArgs e)
 		{
-			if (openFileDialog1.ShowDialog() == DialogResult.OK)
-			{
-				installZip(openFileDialog1.FileName);
-			}
+			if (openFileDialog1.ShowDialog() == DialogResult.OK) installZip(openFileDialog1.FileName);
 			openFileDialog1.Dispose();
 		}
 
@@ -148,10 +132,7 @@ namespace quick_picture_viewer
 
 		private void deleteBtn_Click(object sender, EventArgs e)
 		{
-			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0)
-			{
-				deletePlugin(listView1.SelectedIndices[0]);
-			}
+			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0) deletePlugin(listView1.SelectedIndices[0]);
 		}
 
 		private void deletePlugin(int numberInList)
@@ -195,16 +176,12 @@ namespace quick_picture_viewer
 
 		private void pluginWebsiteBtn_Click(object sender, EventArgs e)
 		{
-			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0)
-			{
-				Process.Start(pluginsLinks[listView1.SelectedIndices[0]]);
-			}
+			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0) Process.Start(pluginsLinks[listView1.SelectedIndices[0]]);
 		}
 
 		private void AutoSizeColumns()
 		{
 			float x = listView1.Width / 100f;
-			
 			listView1.Columns[0].Width = (int)(x * 20);
 			listView1.Columns[1].Width = (int)(x * 40);
 			listView1.Columns[2].Width = (int)(x * 30);
@@ -220,10 +197,7 @@ namespace quick_picture_viewer
 		private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
 		{
 			bool status = false;
-			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0)
-			{
-				status = true;
-			}
+			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0) status = true;
 			deleteBtn.Enabled = status;
 			pluginWebsiteBtn.Enabled = status;
 		}
@@ -236,14 +210,7 @@ namespace quick_picture_viewer
 
 		private void PluginManForm_DragEnter(object sender, DragEventArgs e)
 		{
-			if (e.Data.GetDataPresent(DataFormats.FileDrop))
-			{
-				e.Effect = DragDropEffects.All;
-			}
-			else
-			{
-				e.Effect = DragDropEffects.None;
-			}
+			e.Effect = e.Data.GetDataPresent(DataFormats.FileDrop) ? DragDropEffects.All : DragDropEffects.None;
 		}
 	}
 }

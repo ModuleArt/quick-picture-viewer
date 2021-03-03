@@ -4,10 +4,7 @@ namespace quick_picture_viewer
 {
 	class CustomPanel : Panel
 	{
-		public CustomPanel() 
-		{
-
-		}
+		public CustomPanel() { }
 
 		protected override void OnMouseWheel(MouseEventArgs e)
 		{

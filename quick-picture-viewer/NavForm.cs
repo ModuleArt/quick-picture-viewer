@@ -77,10 +77,7 @@ namespace quick_picture_viewer
 
 		protected override void OnMouseDown(MouseEventArgs e)
 		{
-			if (e.Button == MouseButtons.Left)
-			{
-				dragStart = e.Location;
-			}
+			if (e.Button == MouseButtons.Left) dragStart = e.Location;
 		}
 
 		public void SetSlideshowChecked(bool b)

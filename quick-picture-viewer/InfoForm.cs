@@ -63,73 +63,33 @@ namespace quick_picture_viewer
 		private int GCD(int a, int b)
 		{
 			int Remainder;
-
 			while (b != 0)
 			{
 				Remainder = a % b;
 				a = b;
 				b = Remainder;
 			}
-
 			return a;
-		}
-
-		private string bytesToSize(string path)
-		{
-			string[] sizes = { "B", "KB", "MB", "GB", "TB" };
-			double len = new FileInfo(path).Length;
-			int order = 0;
-			while (len >= 1024 && order < sizes.Length - 1)
-			{
-				order++;
-				len = len / 1024;
-			}
-
-			return String.Format("{0:0.##} {1}", len, sizes[order]);
 		}
 
 		private string getImageCompression(Bitmap bitmap)
 		{
 			string result = "N/A";
 
-			if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Png))
-			{
-				result = "PNG";
-			}
-			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Jpeg))
-			{
-				result = "JPG";
-			}
-			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Exif))
-			{
-				result = "EXIF";
-			}
-			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Gif))
-			{
-				result = "GIF";
-			}
-			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Bmp))
-			{
-				result = "BMP";
-			}
-			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Tiff))
-			{
-				result = "TIFF";
-			}
-			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Icon))
-			{
-				result = "ICO";
-			}
+			if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Png)) result = "PNG";
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Jpeg)) result = "JPG";
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Exif)) result = "EXIF";
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Gif)) result = "GIF";
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Bmp)) result = "BMP";
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Tiff)) result = "TIF";
+			else if (bitmap.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Icon)) result = "ICO";
 
 			return result;
 		}
 
 		private void InfoForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Escape)
-			{
-				this.Close();
-			}
+			if (e.KeyCode == Keys.Escape) Close();
 		}
 
 		private void propertiesButton_Click(object sender, EventArgs e)
@@ -165,7 +125,7 @@ namespace quick_picture_viewer
 				folderTextBox.Text = directoryName;
 				fullPathTextBox.Text = path;
 
-				diskSizeTextBox.Text = bytesToSize(path);
+				diskSizeTextBox.Text = Converter.PathToSize(path);
 				extensionTextBox.Text = Path.GetExtension(path).Substring(1, Path.GetExtension(path).Length - 1).ToUpper();
 
 				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();
@@ -190,18 +150,9 @@ namespace quick_picture_viewer
 			int firstRatio = bitmap.Width / GCD(bitmap.Width, bitmap.Height);
 			int secondRatio = bitmap.Height / GCD(bitmap.Width, bitmap.Height);
 			ratioTextBox.Text = string.Format("{0} : {1} (", firstRatio, secondRatio);
-			if (firstRatio == secondRatio)
-			{
-				ratioTextBox.Text += LangMan.Get("square");
-			}
-			else if (firstRatio > secondRatio)
-			{
-				ratioTextBox.Text += LangMan.Get("landscape");
-			}
-			else
-			{
-				ratioTextBox.Text += LangMan.Get("portrait");
-			}
+			if (firstRatio == secondRatio) ratioTextBox.Text += LangMan.Get("square");
+			else if (firstRatio > secondRatio) ratioTextBox.Text += LangMan.Get("landscape");
+			else ratioTextBox.Text += LangMan.Get("portrait");
 			ratioTextBox.Text += ")";
 
 			fileNameTextBox.Focus();

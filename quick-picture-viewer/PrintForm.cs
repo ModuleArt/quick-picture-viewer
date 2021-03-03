@@ -86,10 +86,7 @@ namespace quick_picture_viewer
 
 		private void PrintForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Escape)
-			{
-				Close();
-			}
+			if (e.KeyCode == Keys.Escape) Close();
 		}
 
 		private void centerCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -125,14 +122,8 @@ namespace quick_picture_viewer
 			{
 				Button btn = (Button)sender;
 
-				if (btn.Enabled)
-				{
-					btn.BackColor = ThemeMan.DarkSecondColor;
-				}
-				else
-				{
-					btn.BackColor = ThemeMan.DarkSecondColor;
-				}
+				if (btn.Enabled) btn.BackColor = ThemeMan.DarkSecondColor;
+				else btn.BackColor = ThemeMan.DarkSecondColor;
 			}
 		}
 

@@ -10,14 +10,14 @@ namespace quick_picture_viewer
 	public partial class SvgOpsForm : QlibFixedForm
 	{
 		private string path;
-		private float aspectRatio;
+		private double aspectRatio;
 		private int panelWidth;
 		private int panelHeight;
 
 		public SvgOpsForm(string path, int imageWidth, int imageHeight, int panelWidth, int panelHeight)
 		{
 			this.path = path;
-			aspectRatio = imageWidth / (float)imageHeight;
+			aspectRatio = imageWidth / (double)imageHeight;
 			this.panelWidth = panelWidth;
 			this.panelHeight = panelHeight;
 
@@ -70,18 +70,12 @@ namespace quick_picture_viewer
 
 		private void widthNumeric_ValueChanged(object sender, EventArgs e)
 		{
-			if (aspectRatioCheckbox.Checked)
-			{
-				heightNumeric.Value = (decimal)((float)widthNumeric.Value / aspectRatio);
-			}
+			if (aspectRatioCheckbox.Checked) heightNumeric.Value = (decimal)((float)widthNumeric.Value / aspectRatio);
 		}
 
 		private void heightNumeric_ValueChanged(object sender, EventArgs e)
 		{
-			if (aspectRatioCheckbox.Checked)
-			{
-				widthNumeric.Value = (decimal)((float)heightNumeric.Value * aspectRatio);
-			}
+			if (aspectRatioCheckbox.Checked) widthNumeric.Value = (decimal)((float)heightNumeric.Value * aspectRatio);
 		}
 
 		private void size256Button_Click(object sender, EventArgs e)
@@ -97,27 +91,17 @@ namespace quick_picture_viewer
 		private void setPreset(int size)
 		{
 			widthNumeric.Value = size;
-
-			if (!aspectRatioCheckbox.Checked)
-			{
-				heightNumeric.Value = size;
-			}
+			if (!aspectRatioCheckbox.Checked) heightNumeric.Value = size;
 		}
 
 		private void aspectRatioCheckbox_CheckedChanged(object sender, EventArgs e)
 		{
-			if (aspectRatioCheckbox.Checked)
-			{
-				aspectRatio = (float)widthNumeric.Value / (float)heightNumeric.Value;
-			}
+			if (aspectRatioCheckbox.Checked) aspectRatio = (double)widthNumeric.Value / (double)heightNumeric.Value;
 		}
 
 		private void SvgOpsForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Escape)
-			{
-				Close();
-			}
+			if (e.KeyCode == Keys.Escape) Close();
 		}
 
 		private void defaultSizeButton_Click(object sender, EventArgs e)
@@ -164,14 +148,7 @@ namespace quick_picture_viewer
 		private void autoSizeBtn_Click(object sender, EventArgs e)
 		{
 			double f;
-			if (panelWidth < panelHeight)
-			{
-				f = panelWidth;
-			}
-			else
-			{
-				f = panelHeight;
-			}
+			f = panelWidth < panelHeight ? panelWidth : panelHeight;
 			int k = (int)(8 * (Math.Round(f / 8.0)));
 			setPreset(k);
 		}

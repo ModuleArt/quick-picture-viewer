@@ -47,11 +47,7 @@ namespace quick_picture_viewer
 
 					try
 					{
-						if (TmpGcHandle != null && TmpGcHandle.IsAllocated)
-						{
-							TmpGcHandle.Free();
-						}
-
+						if (TmpGcHandle != null && TmpGcHandle.IsAllocated) TmpGcHandle.Free();
 						TmpGcHandle = GCHandle.Alloc(image.Data, GCHandleType.Pinned);
 						var data = Marshal.UnsafeAddrOfPinnedArrayElement(image.Data, 0);
 

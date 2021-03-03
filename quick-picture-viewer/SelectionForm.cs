@@ -89,18 +89,9 @@ namespace quick_picture_viewer
 
 		private DragGrip CheckGrip(Point pos)
 		{
-			if (pos.X >= Width - gripSize && pos.Y >= Height - gripSize)
-			{
-				return DragGrip.BottomRight;
-			}
-			else if (pos.X <= gripSize && pos.Y <= gripSize)
-			{
-				return DragGrip.TopLeft;
-			}
-			else
-			{
-				return DragGrip.NoGrip;
-			}
+			if (pos.X >= Width - gripSize && pos.Y >= Height - gripSize) return DragGrip.BottomRight;
+			else if (pos.X <= gripSize && pos.Y <= gripSize) return DragGrip.TopLeft;
+			else return DragGrip.NoGrip;
 		}
 
 		protected override void OnMouseDown(MouseEventArgs e)
