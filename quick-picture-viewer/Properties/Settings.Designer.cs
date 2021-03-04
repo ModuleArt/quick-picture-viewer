@@ -229,30 +229,6 @@ namespace quick_picture_viewer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool NavPanel {
-            get {
-                return ((bool)(this["NavPanel"]));
-            }
-            set {
-                this["NavPanel"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool NavPanelInFullscreen {
-            get {
-                return ((bool)(this["NavPanelInFullscreen"]));
-            }
-            set {
-                this["NavPanelInFullscreen"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public double PipOpacity {
             get {

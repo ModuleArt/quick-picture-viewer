@@ -484,15 +484,6 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Freie Navigationsleiste einschalten.
-        /// </summary>
-        public static string enable_navigation_bar {
-            get {
-                return ResourceManager.GetString("enable-navigation-bar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Fehler.
         /// </summary>
         public static string error {
@@ -903,24 +894,6 @@ namespace quick_picture_viewer.languages {
         public static string move_to_trash {
             get {
                 return ResourceManager.GetString("move-to-trash", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Navigationsleiste im Vollbildmodus anzeigen.
-        /// </summary>
-        public static string nav_bar_fullscreen {
-            get {
-                return ResourceManager.GetString("nav-bar-fullscreen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Navigationsleiste .
-        /// </summary>
-        public static string navigation_bar {
-            get {
-                return ResourceManager.GetString("navigation-bar", resourceCulture);
             }
         }
         

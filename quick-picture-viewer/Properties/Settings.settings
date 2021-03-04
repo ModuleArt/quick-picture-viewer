@@ -53,12 +53,6 @@
     <Setting Name="StartupWindowLocation" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">100, 100</Value>
     </Setting>
-    <Setting Name="NavPanel" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="NavPanelInFullscreen" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
     <Setting Name="PipOpacity" Type="System.Double" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>

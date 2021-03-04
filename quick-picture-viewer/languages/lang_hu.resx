@@ -306,10 +306,6 @@
     <value>Hatások</value>
     <comment>Menu</comment>
   </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>Lebegő navigációs sáv engedélyezése</value>
-    <comment>Settings</comment>
-  </data>
   <data name="error" xml:space="preserve">
     <value>Hiba</value>
     <comment>Message box</comment>
@@ -493,14 +489,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>Fájl áthelyezése a lomtárba</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>Show navigation bar in fullscreen</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>Navigációs sáv</value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>Új verzió elérhető!</value>

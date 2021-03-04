@@ -305,10 +305,6 @@
     <value>Effekte</value>
     <comment>Menu</comment>
   </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>Freie Navigationsleiste einschalten</value>
-    <comment>Settings</comment>
-  </data>
   <data name="error" xml:space="preserve">
     <value>Fehler</value>
     <comment>Message box</comment>
@@ -492,14 +488,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>Datei löschen</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>Navigationsleiste im Vollbildmodus anzeigen</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>Navigationsleiste </value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>Eine neue Version von "Quick Picture Viewer" ist verfügbar.</value>

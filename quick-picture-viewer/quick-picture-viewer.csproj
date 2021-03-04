@@ -204,12 +204,6 @@
     <Compile Include="MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NavForm.Designer.cs">
-      <DependentUpon>NavForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="SelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,9 +302,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MiniViewForm.resx">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NavForm.resx">
-      <DependentUpon>NavForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectionForm.resx">
       <DependentUpon>SelectionForm.cs</DependentUpon>

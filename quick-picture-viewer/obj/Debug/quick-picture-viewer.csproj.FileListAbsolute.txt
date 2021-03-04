@@ -43,7 +43,6 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_pic
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.SelectionForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_fr.resx
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.languages.lang_fr.resources
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.NavForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Microsoft.WindowsAPICodePack.dll

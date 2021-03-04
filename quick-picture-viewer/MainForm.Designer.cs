@@ -1023,7 +1023,6 @@
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
-			this.ResizeBegin += new System.EventHandler(this.MainForm_ResizeBegin);
 			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();

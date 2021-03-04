@@ -34,7 +34,6 @@ namespace quick_picture_viewer
 		private System.Threading.Timer suggestionTimer;
 		private bool framelessMode = false;
 
-		private NavForm navForm = null;
 		private SelectionForm selForm = null;
 
 		private string currentFolder;
@@ -93,15 +92,12 @@ namespace quick_picture_viewer
 				{
 					Properties.Settings.Default.StartupWindowSize = new Size(700, 485);
 				}
-
 			}
 			if (Properties.Settings.Default.StartupMaximize) WindowState = FormWindowState.Maximized;
 		}
 
 		protected override void WndProc(ref Message m)
 		{
-			if (m.Msg == NativeMan.WM_SYSCOMMAND && 
-				(m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE || m.WParam == (IntPtr)NativeMan.SC_RESTORE)) OnResizeBegin(EventArgs.Empty);
 			base.WndProc(ref m);
 			if (m.Msg == NativeMan.WM_SYSCOMMAND &&
 				(m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE || m.WParam == (IntPtr)NativeMan.SC_RESTORE)) OnResizeEnd(EventArgs.Empty);
@@ -273,7 +269,7 @@ namespace quick_picture_viewer
 			{
 				if (string.IsNullOrEmpty(openPath))
 				{
-					ShowNavForm(false, Properties.Settings.Default.NavPanel);
+
 					if (Properties.Settings.Default.StartupPaste && Clipboard.ContainsImage())
 					{
 						pasteBtn.PerformClick();
@@ -284,7 +280,6 @@ namespace quick_picture_viewer
 				{
 					if (File.GetAttributes(openPath).HasFlag(FileAttributes.Directory)) openFirstFileInFolder(openPath);
 					else openFile(openPath);
-					ShowNavForm(Properties.Settings.Default.NavPanel, Properties.Settings.Default.NavPanel);
 				}
 			}
 			catch
@@ -539,7 +534,6 @@ namespace quick_picture_viewer
 				reloadButton.Enabled = directoryName != null;
 				dateCreatedLabel.Visible = directoryName != null;
 				dateModifiedLabel.Visible = directoryName != null;
-				ShowNavForm(directoryName != null && Properties.Settings.Default.NavPanel, Properties.Settings.Default.NavPanel);
 
 				Invoke((MethodInvoker)(() => Text = fileName + " - Quick Picture Viewer"));
 
@@ -713,8 +707,6 @@ namespace quick_picture_viewer
 		{
 			slideshow = b;
 			slideshowButton.GetCurrentParent().Invoke((MethodInvoker)(() => slideshowButton.Checked = b));
-
-			if (navForm != null) navForm.SetSlideshowChecked(b);
 
 			if (b)
 			{
@@ -1045,8 +1037,6 @@ namespace quick_picture_viewer
 				FormBorderStyle = FormBorderStyle.None;
 				WindowState = FormWindowState.Maximized;
 
-				if (!Properties.Settings.Default.NavPanelInFullscreen && navForm != null) navForm.Hide();
-
 				setAlwaysOnTop(false, true);
 
 				showSuggestion(string.Format(LangMan.Get("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
@@ -1073,8 +1063,6 @@ namespace quick_picture_viewer
 					if (Properties.Settings.Default.BackColor.Length > 0) picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
 					else picturePanel.BackColor = Color.Transparent;
 				}
-
-				if (navForm != null) navForm.Show();
 			}
 
 			CheckAutoZoomNeeded();
@@ -1385,7 +1373,6 @@ namespace quick_picture_viewer
 			printButton.Enabled = false;
 			showFileButton.Enabled = false;
 			miniViewButton.Enabled = false;
-			ShowNavForm(false, Properties.Settings.Default.NavPanel);
 
 			zoomTextBox.Enabled = false;
 
@@ -1906,8 +1893,6 @@ namespace quick_picture_viewer
 		private void MainForm_ResizeEnd(object sender, EventArgs e)
 		{
 			if (!autoZoom) UpdatePictureBoxLocation();
-
-			if (navForm != null) navForm.OwnerResizeEnd();
 		}
 
 		private void actualSizeBtn_Click(object sender, EventArgs e)
@@ -2017,38 +2002,6 @@ namespace quick_picture_viewer
 			if (restartApp) NewWindow();
 		}
 
-		private void MainForm_ResizeBegin(object sender, EventArgs e)
-		{
-			if (navForm != null) navForm.OwnerResizeBegin();
-		}
-
-		public void ShowNavForm(bool showPanel, bool hideToolstripBtns)
-		{
-			if (showPanel)
-			{
-				if (navForm == null || navForm.IsDisposed)
-				{
-					navForm = new NavForm(picturePanel);
-					navForm.Owner = this;
-					navForm.Show();
-					NativeMan.SetParent(navForm.Handle, Handle);
-				}
-			}
-			else
-			{
-				if (navForm != null && !navForm.IsDisposed)
-				{
-					navForm.Dispose();
-					navForm = null;
-				}
-			}
-
-			nextButton.Visible = !hideToolstripBtns;
-			prevButton.Visible = !hideToolstripBtns;
-			slideshowButton.Visible = !hideToolstripBtns;
-			toolStripSeparator4.Visible = !hideToolstripBtns;
-		}
-
 		private void framelessCloseBtn_Click(object sender, EventArgs e)
 		{
 			Close();
@@ -2056,20 +2009,16 @@ namespace quick_picture_viewer
 
 		private void statusStrip1_VisibleChanged(object sender, EventArgs e)
 		{
-			if (navForm != null) navForm.OwnerResizeBegin();
 			showStatusBarBtn.Checked = statusStrip1.Visible;
 			UpdatePicturePanelHeight();
 			UpdatePictureBoxLocation();
-			if (navForm != null) navForm.OwnerResizeEnd();
 		}
 
 		private void toolStrip1_VisibleChanged(object sender, EventArgs e)
 		{
-			if (navForm != null) navForm.OwnerResizeBegin();
 			showToolbarBtn.Checked = toolStrip1.Visible;
 			UpdatePicturePanelHeight();
 			UpdatePictureBoxLocation();
-			if (navForm != null) navForm.OwnerResizeEnd();
 		}
 
 		private void showStatusBarBtn_Click(object sender, EventArgs e)
@@ -2265,12 +2214,8 @@ namespace quick_picture_viewer
 
 		private void picturePanel_SizeChanged(object sender, EventArgs e)
 		{
-			if (navForm != null) navForm.UpdateContainerRect();
-
 			if (WindowState != FormWindowState.Minimized)
 			{
-				
-
 				if (selForm != null)
 				{
 					selForm.UpdateContainerRect();

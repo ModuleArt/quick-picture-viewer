@@ -305,10 +305,6 @@
     <value>Effects</value>
     <comment>Menu</comment>
   </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>Enable floating navigation bar</value>
-    <comment>Settings</comment>
-  </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
     <comment>Message box</comment>
@@ -492,14 +488,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>Move file to the Recycle Bin</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>Show navigation bar in fullscreen</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>Navigation bar</value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>New version available!</value>

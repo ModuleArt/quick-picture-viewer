@@ -43,9 +43,6 @@
 			this.mouseWheelActionLabel = new System.Windows.Forms.Label();
 			this.escToExitCheckBox = new QuickLibrary.QlibCheckBox();
 			this.fullscrCursorCheckBox = new QuickLibrary.QlibCheckBox();
-			this.navBarPage = new System.Windows.Forms.TabPage();
-			this.navBarFullscreenCheckBox = new QuickLibrary.QlibCheckBox();
-			this.navBarCheckBox = new QuickLibrary.QlibCheckBox();
 			this.slideshowPage = new System.Windows.Forms.TabPage();
 			this.slideshowSecondsLabel = new System.Windows.Forms.Label();
 			this.slideshowTimeLabel = new System.Windows.Forms.Label();
@@ -80,7 +77,6 @@
 			this.settingsTabs.SuspendLayout();
 			this.themePage.SuspendLayout();
 			this.mousePage.SuspendLayout();
-			this.navBarPage.SuspendLayout();
 			this.slideshowPage.SuspendLayout();
 			this.startupPage.SuspendLayout();
 			this.externalPage.SuspendLayout();
@@ -92,7 +88,6 @@
 			// 
 			this.settingsTabs.Controls.Add(this.themePage);
 			this.settingsTabs.Controls.Add(this.mousePage);
-			this.settingsTabs.Controls.Add(this.navBarPage);
 			this.settingsTabs.Controls.Add(this.slideshowPage);
 			this.settingsTabs.Controls.Add(this.startupPage);
 			this.settingsTabs.Controls.Add(this.externalPage);
@@ -220,11 +215,11 @@
 			this.mousePage.Controls.Add(this.mouseWheelActionLabel);
 			this.mousePage.Controls.Add(this.escToExitCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
-			this.mousePage.Location = new System.Drawing.Point(4, 60);
+			this.mousePage.Location = new System.Drawing.Point(4, 32);
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
-			this.mousePage.Size = new System.Drawing.Size(392, 226);
+			this.mousePage.Size = new System.Drawing.Size(392, 254);
 			this.mousePage.TabIndex = 2;
 			this.mousePage.Text = "mouse & keyboard";
 			this.mousePage.ToolTipText = "Cursor options";
@@ -341,59 +336,6 @@
 			this.fullscrCursorCheckBox.UseVisualStyleBackColor = true;
 			this.fullscrCursorCheckBox.CheckedChanged += new System.EventHandler(this.fullscrCursorCheckBox_CheckedChanged);
 			// 
-			// navBarPage
-			// 
-			this.navBarPage.BackColor = System.Drawing.SystemColors.Control;
-			this.navBarPage.Controls.Add(this.navBarFullscreenCheckBox);
-			this.navBarPage.Controls.Add(this.navBarCheckBox);
-			this.navBarPage.Location = new System.Drawing.Point(4, 60);
-			this.navBarPage.Margin = new System.Windows.Forms.Padding(0);
-			this.navBarPage.Name = "navBarPage";
-			this.navBarPage.Padding = new System.Windows.Forms.Padding(10);
-			this.navBarPage.Size = new System.Drawing.Size(392, 226);
-			this.navBarPage.TabIndex = 7;
-			this.navBarPage.Text = "navigation bar";
-			// 
-			// navBarFullscreenCheckBox
-			// 
-			this.navBarFullscreenCheckBox.BackColor = System.Drawing.SystemColors.Control;
-			this.navBarFullscreenCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.navBarFullscreenCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
-			this.navBarFullscreenCheckBox.DarkMode = false;
-			this.navBarFullscreenCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.navBarFullscreenCheckBox.ForeColor = System.Drawing.Color.Black;
-			this.navBarFullscreenCheckBox.Image = null;
-			this.navBarFullscreenCheckBox.ImageIndex = 0;
-			this.navBarFullscreenCheckBox.Location = new System.Drawing.Point(10, 42);
-			this.navBarFullscreenCheckBox.Margin = new System.Windows.Forms.Padding(0);
-			this.navBarFullscreenCheckBox.Name = "navBarFullscreenCheckBox";
-			this.navBarFullscreenCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.navBarFullscreenCheckBox.Size = new System.Drawing.Size(372, 32);
-			this.navBarFullscreenCheckBox.TabIndex = 1;
-			this.navBarFullscreenCheckBox.Text = "show nav bar in fullscreen";
-			this.navBarFullscreenCheckBox.UseVisualStyleBackColor = true;
-			this.navBarFullscreenCheckBox.CheckedChanged += new System.EventHandler(this.navBarFullscreenCheckBox_CheckedChanged);
-			// 
-			// navBarCheckBox
-			// 
-			this.navBarCheckBox.BackColor = System.Drawing.SystemColors.Control;
-			this.navBarCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.navBarCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
-			this.navBarCheckBox.DarkMode = false;
-			this.navBarCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.navBarCheckBox.ForeColor = System.Drawing.Color.Black;
-			this.navBarCheckBox.Image = null;
-			this.navBarCheckBox.ImageIndex = 0;
-			this.navBarCheckBox.Location = new System.Drawing.Point(10, 10);
-			this.navBarCheckBox.Margin = new System.Windows.Forms.Padding(0);
-			this.navBarCheckBox.Name = "navBarCheckBox";
-			this.navBarCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.navBarCheckBox.Size = new System.Drawing.Size(372, 32);
-			this.navBarCheckBox.TabIndex = 0;
-			this.navBarCheckBox.Text = "enable nav bar";
-			this.navBarCheckBox.UseVisualStyleBackColor = true;
-			this.navBarCheckBox.CheckedChanged += new System.EventHandler(this.navBarCheckBox_CheckedChanged);
-			// 
 			// slideshowPage
 			// 
 			this.slideshowPage.BackColor = System.Drawing.SystemColors.Control;
@@ -401,11 +343,11 @@
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
 			this.slideshowPage.Controls.Add(this.slideshowCounterCheckBox);
-			this.slideshowPage.Location = new System.Drawing.Point(4, 60);
+			this.slideshowPage.Location = new System.Drawing.Point(4, 32);
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
-			this.slideshowPage.Size = new System.Drawing.Size(392, 226);
+			this.slideshowPage.Size = new System.Drawing.Size(392, 254);
 			this.slideshowPage.TabIndex = 5;
 			this.slideshowPage.Text = "slideshow";
 			// 
@@ -487,11 +429,11 @@
 			this.startupPage.Controls.Add(this.updatesCheckBox);
 			this.startupPage.Controls.Add(this.startupPasteCheckBox);
 			this.startupPage.Controls.Add(this.startupLabel);
-			this.startupPage.Location = new System.Drawing.Point(4, 60);
+			this.startupPage.Location = new System.Drawing.Point(4, 32);
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
-			this.startupPage.Size = new System.Drawing.Size(392, 226);
+			this.startupPage.Size = new System.Drawing.Size(392, 254);
 			this.startupPage.TabIndex = 3;
 			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
@@ -576,11 +518,11 @@
 			this.externalPage.Controls.Add(this.browseBtn);
 			this.externalPage.Controls.Add(this.favExtTextBox);
 			this.externalPage.Controls.Add(this.favExtLabel);
-			this.externalPage.Location = new System.Drawing.Point(4, 60);
+			this.externalPage.Location = new System.Drawing.Point(4, 32);
 			this.externalPage.Margin = new System.Windows.Forms.Padding(0);
 			this.externalPage.Name = "externalPage";
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
-			this.externalPage.Size = new System.Drawing.Size(392, 226);
+			this.externalPage.Size = new System.Drawing.Size(392, 254);
 			this.externalPage.TabIndex = 4;
 			this.externalPage.Text = "Windows";
 			// 
@@ -869,7 +811,6 @@
 			this.themePage.PerformLayout();
 			this.mousePage.ResumeLayout(false);
 			this.mousePage.PerformLayout();
-			this.navBarPage.ResumeLayout(false);
 			this.slideshowPage.ResumeLayout(false);
 			this.slideshowPage.PerformLayout();
 			this.startupPage.ResumeLayout(false);
@@ -929,9 +870,6 @@
 		private System.Windows.Forms.Label contextMenuLabel;
 		private QuickLibrary.QlibCheckBox browseWithCheckBox;
 		private System.Windows.Forms.Button makeDefaultBtn;
-		private System.Windows.Forms.TabPage navBarPage;
-		private QuickLibrary.QlibCheckBox navBarCheckBox;
-		private QuickLibrary.QlibCheckBox navBarFullscreenCheckBox;
 		private System.Windows.Forms.Button helpTranslateBtn;
 	}
 }
