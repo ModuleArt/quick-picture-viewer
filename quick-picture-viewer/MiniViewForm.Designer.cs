@@ -172,6 +172,7 @@
 			// resizeBtn
 			// 
 			this.resizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.resizeBtn.BackColor = System.Drawing.Color.Black;
 			this.resizeBtn.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
 			this.resizeBtn.DarkImage = null;
 			this.resizeBtn.DarkMode = true;

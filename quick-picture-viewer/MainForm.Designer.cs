@@ -50,16 +50,16 @@
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openRecursive = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
+			this.showFileButton = new System.Windows.Forms.ToolStripButton();
+			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.externalBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalFavoriteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalChooseBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator4 = new QuickLibrary.QlibToolsep();
-			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
 			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
 			this.nextButton = new System.Windows.Forms.ToolStripButton();
-			this.showFileButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new QuickLibrary.QlibToolsep();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
@@ -115,6 +115,7 @@
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeOpsButton = new System.Windows.Forms.Button();
+			this.prevBtn = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
@@ -165,11 +166,15 @@
 			// 
 			// selectionLabel
 			// 
+			this.selectionLabel.ActiveLinkColor = System.Drawing.Color.Black;
 			this.selectionLabel.BackColor = System.Drawing.Color.Transparent;
 			this.selectionLabel.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
+			this.selectionLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+			this.selectionLabel.LinkColor = System.Drawing.Color.Black;
 			this.selectionLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
 			this.selectionLabel.Name = "selectionLabel";
 			resources.ApplyResources(this.selectionLabel, "selectionLabel");
+			this.selectionLabel.VisitedLinkColor = System.Drawing.Color.Black;
 			// 
 			// directoryLabel
 			// 
@@ -250,13 +255,13 @@
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openBtn,
             this.saveAsButton,
+            this.showFileButton,
+            this.infoButton,
             this.externalBtn,
             this.toolStripSeparator4,
-            this.infoButton,
             this.prevButton,
             this.slideshowButton,
             this.nextButton,
-            this.showFileButton,
             this.toolStripSeparator1,
             this.autoZoomButton,
             this.zoomOutButton,
@@ -317,6 +322,22 @@
 			this.saveAsButton.Name = "saveAsButton";
 			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
 			// 
+			// showFileButton
+			// 
+			resources.ApplyResources(this.showFileButton, "showFileButton");
+			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
+			this.showFileButton.Name = "showFileButton";
+			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
+			// 
+			// infoButton
+			// 
+			resources.ApplyResources(this.infoButton, "infoButton");
+			this.infoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.infoButton.Margin = new System.Windows.Forms.Padding(0);
+			this.infoButton.Name = "infoButton";
+			this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
+			// 
 			// externalBtn
 			// 
 			resources.ApplyResources(this.externalBtn, "externalBtn");
@@ -363,14 +384,6 @@
 			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
 			this.toolStripSeparator4.Name = "toolStripSeparator4";
 			// 
-			// infoButton
-			// 
-			resources.ApplyResources(this.infoButton, "infoButton");
-			this.infoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.infoButton.Margin = new System.Windows.Forms.Padding(0);
-			this.infoButton.Name = "infoButton";
-			this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
-			// 
 			// prevButton
 			// 
 			resources.ApplyResources(this.prevButton, "prevButton");
@@ -394,14 +407,6 @@
 			this.nextButton.Margin = new System.Windows.Forms.Padding(0);
 			this.nextButton.Name = "nextButton";
 			this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-			// 
-			// showFileButton
-			// 
-			resources.ApplyResources(this.showFileButton, "showFileButton");
-			this.showFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.showFileButton.Margin = new System.Windows.Forms.Padding(0);
-			this.showFileButton.Name = "showFileButton";
-			this.showFileButton.Click += new System.EventHandler(this.showFileButton_Click);
 			// 
 			// toolStripSeparator1
 			// 
@@ -942,6 +947,17 @@
 			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
 			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
 			// 
+			// prevBtn
+			// 
+			resources.ApplyResources(this.prevBtn, "prevBtn");
+			this.prevBtn.BackColor = System.Drawing.Color.Black;
+			this.prevBtn.FlatAppearance.BorderSize = 0;
+			this.prevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.prevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
+			this.prevBtn.Name = "prevBtn";
+			this.prevBtn.TabStop = false;
+			this.prevBtn.UseVisualStyleBackColor = false;
+			// 
 			// picturePanel
 			// 
 			resources.ApplyResources(this.picturePanel, "picturePanel");
@@ -952,6 +968,7 @@
 			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Name = "picturePanel";
+			this.picturePanel.SizeChanged += new System.EventHandler(this.picturePanel_SizeChanged);
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
@@ -996,6 +1013,7 @@
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.Control;
+			this.Controls.Add(this.prevBtn);
 			this.Controls.Add(this.typeOpsButton);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.toolStrip1);
@@ -1004,13 +1022,9 @@
 			this.Name = "MainForm";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.ResizeBegin += new System.EventHandler(this.MainForm_ResizeBegin);
 			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
-			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
-			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
-			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
@@ -1119,5 +1133,6 @@
 		private QuickLibrary.QlibToolsep qlibToolsep4;
 		private System.Windows.Forms.ToolStripMenuItem cropBtn;
 		private System.Windows.Forms.ToolStripStatusLabel selectionLabel;
+		private System.Windows.Forms.Button prevBtn;
 	}
 }

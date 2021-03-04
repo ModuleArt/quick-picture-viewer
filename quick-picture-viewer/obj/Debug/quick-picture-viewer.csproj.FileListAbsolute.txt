@@ -59,3 +59,5 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Me
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Numerics.Vectors.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.ValueTuple.xml
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_de.resx
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.languages.lang_de.resources

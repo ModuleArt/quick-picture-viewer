@@ -9,7 +9,7 @@ namespace quick_picture_viewer
 
         public CustomJumplist(string newWindowTitle, string newWindowDesc)
         {
-            JumpItem[] jumpItems = { new JumpTask() { 
+            JumpItem[] jumpItems = { new JumpTask() {
                 Title = newWindowTitle,
                 Description = newWindowDesc,
                 ApplicationPath = Assembly.GetEntryAssembly().Location,

@@ -23,6 +23,8 @@
   v3.0.4 (Stable) - Feb 19, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.0.4/QuickPictureViewer-Setup.exe">Download (3.0 MB)</a>
   <br>
   v2.2.6 (Stable) - Nov 4, 2020 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a>
+  <br><br>
+  <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Older versions and release notes</a>
 </p>
 
 ## 😃 Features:
@@ -41,10 +43,6 @@
 * 🕶️ Dark mode
 
 Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
-
-## 📋 Release notes:
-
-<a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Over here!</a>
 
 ## 🧩 Built-in plugins:
 
@@ -74,6 +72,7 @@ Translation contributors:
 
 - <a href="https://github.com/jiwangyihao">jiwangyihao</a> - Chinese
 - <a href="https://github.com/b0bdN">b0bdN</a> - French
+- <a href="https://github.com/l-33ter">l-33ter</a> - German
 - <a href="https://github.com/KristofKekesi">KristofKekesi</a> - Hungarian
 - <a href="https://github.com/Beelink">Beelink</a> - Russian
 - <a href="https://github.com/asluppiter">asluppiter</a> - Spanish

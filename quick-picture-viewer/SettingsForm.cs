@@ -34,6 +34,11 @@ namespace quick_picture_viewer
 			},
 			new Language
 			{
+				Code = "de",
+				Authors = new string[] { "l-33ter" }
+			},
+			new Language
+			{
 				Code = "hu",
 				Authors = new string[] { "KristofKekesi" }
 			},
@@ -290,6 +295,7 @@ namespace quick_picture_viewer
 				for (int i = 0; i < languages[langComboBox.SelectedIndex].Authors.Length; i++)
 				{
 					LinkLabel ll = new LinkLabel();
+					ll.LinkBehavior = LinkBehavior.HoverUnderline;
 					ll.AutoSize = true;
 					ll.Text = languages[langComboBox.SelectedIndex].Authors[i];
 					ll.LinkColor = ThemeMan.AccentColor;

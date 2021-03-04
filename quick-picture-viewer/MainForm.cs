@@ -70,6 +70,7 @@ namespace quick_picture_viewer
 			zoomTextBox.TextBox.AutoSize = false;
 			zoomTextBox.Height = 21;
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
+			zoomTextBox.TextBox.ContextMenu = new ContextMenu();
 
 			SetDarkMode(darkMode);
 			InitLanguage();
@@ -99,8 +100,11 @@ namespace quick_picture_viewer
 
 		protected override void WndProc(ref Message m)
 		{
+			if (m.Msg == NativeMan.WM_SYSCOMMAND && 
+				(m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE || m.WParam == (IntPtr)NativeMan.SC_RESTORE)) OnResizeBegin(EventArgs.Empty);
 			base.WndProc(ref m);
-			if (m.Msg == NativeMan.WM_SYSCOMMAND && m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE) OnResizeEnd(EventArgs.Empty);
+			if (m.Msg == NativeMan.WM_SYSCOMMAND &&
+				(m.WParam == (IntPtr)NativeMan.SC_MAXIMIZE || m.WParam == (IntPtr)NativeMan.SC_RESTORE)) OnResizeEnd(EventArgs.Empty);
 		}
 
 		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -143,6 +147,7 @@ namespace quick_picture_viewer
 				{
 					case "en":
 					case "cn":
+					case "de":
 					case "es":
 					case "fr":
 					case "hu":
@@ -262,7 +267,7 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void MainForm_Load(object sender, EventArgs e)
+		protected override void OnLoad(EventArgs e)
 		{
 			try
 			{
@@ -297,9 +302,9 @@ namespace quick_picture_viewer
 
 			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe", darkMode, Properties.Settings.Default.SkippedVersion);
 			UpdateMan.InitLang(
-				LangMan.Get("new-version-available"), 
-				LangMan.Get("update-text"), 
-				LangMan.Get("install-now"), 
+				LangMan.Get("new-version-available"),
+				LangMan.Get("update-text"),
+				LangMan.Get("install-now"),
 				LangMan.Get("skip-this-version"),
 				LangMan.Get("whats-new"),
 
@@ -312,6 +317,8 @@ namespace quick_picture_viewer
 			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
 			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;
 			if (Properties.Settings.Default.CheckForUpdates) UpdateMan.CheckForUpdates(false, TopMost, Handle);
+
+			base.OnLoad(e);
 		}
 
 		private void UpdateMan_UpdateSkipped(object sender, UpdateSkippedEventArgs e)
@@ -1173,10 +1180,10 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void MainForm_DragDrop(object sender, DragEventArgs e)
+		protected override void OnDragDrop(DragEventArgs drgevent)
 		{
-			Bitmap bitmap = e.Data.GetData(DataFormats.Bitmap) as Bitmap;
-			string[] files = e.Data.GetData(DataFormats.FileDrop) as string[];
+			Bitmap bitmap = drgevent.Data.GetData(DataFormats.Bitmap) as Bitmap;
+			string[] files = drgevent.Data.GetData(DataFormats.FileDrop) as string[];
 
 			if (bitmap != null)
 			{
@@ -1194,19 +1201,24 @@ namespace quick_picture_viewer
 					CheckRecursiveFolder(files[0]);
 					openFile(files[0]);
 				}
+
 			}
+			base.OnDragDrop(drgevent);
 		}
 
-		private void MainForm_DragEnter(object sender, DragEventArgs e)
+		protected override void OnDragEnter(DragEventArgs drgevent)
 		{
-			if (e.Data.GetDataPresent(DataFormats.FileDrop) || e.Data.GetDataPresent(DataFormats.Bitmap) || e.Data.GetDataPresent(DataFormats.Dib))
+			if (drgevent.Data.GetDataPresent(DataFormats.FileDrop) ||
+				drgevent.Data.GetDataPresent(DataFormats.Bitmap) ||
+				drgevent.Data.GetDataPresent(DataFormats.Dib))
 			{
-				e.Effect = DragDropEffects.All;
+				drgevent.Effect = DragDropEffects.All;
 			}
 			else
 			{
-				e.Effect = DragDropEffects.None;
+				drgevent.Effect = DragDropEffects.None;
 			}
+			base.OnDragEnter(drgevent);
 		}
 
 		private void onTopButton_Click(object sender, EventArgs e)
@@ -1787,8 +1799,6 @@ namespace quick_picture_viewer
 
 		private void typeOpsButton_VisibleChanged(object sender, EventArgs e)
 		{
-			Console.WriteLine(typeOpsButton.Location.X);
-			Console.WriteLine(ClientRectangle.Width);
 			if (typeOpsButton.Visible) typeOpsButton.Focus();
 		}
 
@@ -2036,6 +2046,7 @@ namespace quick_picture_viewer
 			nextButton.Visible = !hideToolstripBtns;
 			prevButton.Visible = !hideToolstripBtns;
 			slideshowButton.Visible = !hideToolstripBtns;
+			toolStripSeparator4.Visible = !hideToolstripBtns;
 		}
 
 		private void framelessCloseBtn_Click(object sender, EventArgs e)
@@ -2045,16 +2056,20 @@ namespace quick_picture_viewer
 
 		private void statusStrip1_VisibleChanged(object sender, EventArgs e)
 		{
+			if (navForm != null) navForm.OwnerResizeBegin();
 			showStatusBarBtn.Checked = statusStrip1.Visible;
 			UpdatePicturePanelHeight();
 			UpdatePictureBoxLocation();
+			if (navForm != null) navForm.OwnerResizeEnd();
 		}
 
 		private void toolStrip1_VisibleChanged(object sender, EventArgs e)
 		{
+			if (navForm != null) navForm.OwnerResizeBegin();
 			showToolbarBtn.Checked = toolStrip1.Visible;
 			UpdatePicturePanelHeight();
 			UpdatePictureBoxLocation();
+			if (navForm != null) navForm.OwnerResizeEnd();
 		}
 
 		private void showStatusBarBtn_Click(object sender, EventArgs e)
@@ -2248,11 +2263,13 @@ namespace quick_picture_viewer
 			return result;
 		}
 
-		private void MainForm_SizeChanged(object sender, EventArgs e)
+		private void picturePanel_SizeChanged(object sender, EventArgs e)
 		{
+			if (navForm != null) navForm.UpdateContainerRect();
+
 			if (WindowState != FormWindowState.Minimized)
 			{
-				if (navForm != null) navForm.UpdateContainerRect();
+				
 
 				if (selForm != null)
 				{

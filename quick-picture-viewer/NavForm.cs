@@ -19,11 +19,6 @@ namespace quick_picture_viewer
 			InitializeComponent();
 		}
 
-		public void UpdateContainerRect()
-		{
-			SetLocation(LocRelToSrcPanel().X, LocRelToSrcPanel().Y);
-		}
-
 		private Point LocRelToSrcPanel()
 		{
 			if (owner != null) return new Point(
@@ -100,25 +95,36 @@ namespace quick_picture_viewer
 		{
 			Point curLoc = LocRelToSrcPanel();
 			Anchor = AnchorStyles.None;
-			if (curLoc.X == borderSpacing) Anchor |= AnchorStyles.Left;
-			if (curLoc.Y == picturePanel.Location.Y + borderSpacing) Anchor |= AnchorStyles.Top;
-			if (curLoc.X + Width == owner.ClientRectangle.Width - borderSpacing) Anchor |= AnchorStyles.Right;
+			if (curLoc.X <= borderSpacing) Anchor |= AnchorStyles.Left;
+			if (curLoc.X + Width >= owner.ClientRectangle.Width - borderSpacing) Anchor |= AnchorStyles.Right;
 
+			if (curLoc.Y <= picturePanel.Location.Y + borderSpacing) Anchor |= AnchorStyles.Top;
+			
 			int extraBottomMargin = owner.ClientRectangle.Height - picturePanel.Height - picturePanel.Location.Y;
-			if (curLoc.Y + Height == owner.ClientRectangle.Height - borderSpacing - extraBottomMargin) Anchor |= AnchorStyles.Bottom;
-			if (Anchor == AnchorStyles.None) Anchor = AnchorStyles.Top | AnchorStyles.Left;
+			if (curLoc.Y + Height >= owner.ClientRectangle.Height - borderSpacing - extraBottomMargin) Anchor |= AnchorStyles.Bottom;
+		}
+
+		public void UpdateContainerRect()
+		{
+			Point curLoc = LocRelToSrcPanel();
+			Point newLoc = curLoc;
+
+			if (Anchor.HasFlag(AnchorStyles.Left)) newLoc.X = borderSpacing;
+			if (Anchor.HasFlag(AnchorStyles.Right)) newLoc.X = owner.ClientRectangle.Width - borderSpacing - Width;
+
+			if (Anchor.HasFlag(AnchorStyles.Top)) newLoc.Y = picturePanel.Location.Y + borderSpacing;
+			if (Anchor.HasFlag(AnchorStyles.Bottom))
+			{
+				int extraBottomMargin = owner.ClientRectangle.Height - picturePanel.Height - picturePanel.Location.Y;
+				newLoc.Y = owner.ClientRectangle.Height - borderSpacing - Height - extraBottomMargin;
+			}
+
+			SetLocation(newLoc.X, newLoc.Y);
 		}
 
 		public void OwnerResizeEnd()
 		{
-			Point curLoc = LocRelToSrcPanel();
-			Anchor = AnchorStyles.Top | AnchorStyles.Left;
-			if (curLoc.X < borderSpacing) SetLocation(borderSpacing, curLoc.Y);
-			if (curLoc.Y < borderSpacing + picturePanel.Location.Y) SetLocation(curLoc.X, borderSpacing + picturePanel.Location.Y);
-			if (curLoc.X + Width > owner.ClientRectangle.Width - borderSpacing) SetLocation(owner.ClientRectangle.Width - borderSpacing - Width, curLoc.Y);
-
-			int extraBottomMargin = owner.ClientRectangle.Height - picturePanel.Height - picturePanel.Location.Y;
-			if (curLoc.Y + Height > owner.ClientRectangle.Height - borderSpacing - extraBottomMargin) SetLocation(curLoc.X, owner.ClientRectangle.Height - borderSpacing - Height - extraBottomMargin);
+			Anchor = AnchorStyles.None;
 		}
 
 		protected override void OnKeyDown(KeyEventArgs e)

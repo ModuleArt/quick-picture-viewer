@@ -167,6 +167,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang_cn.resx</DependentUpon>
     </Compile>
+    <Compile Include="languages\lang_de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang_de.resx</DependentUpon>
+    </Compile>
     <Compile Include="languages\lang_en.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -267,6 +272,11 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_cn.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="languages\lang_de.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_de.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="languages\lang_es.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
