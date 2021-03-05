@@ -729,6 +729,10 @@
     <value>Datei im Explorer zeigen</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Navigationspfeile anzeigen</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Diashowzähler anzeigen</value>
     <comment>Settings</comment>

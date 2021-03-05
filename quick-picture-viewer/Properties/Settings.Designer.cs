@@ -286,5 +286,17 @@ namespace quick_picture_viewer.Properties {
                 this["SkippedVersion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowNavArrows {
+            get {
+                return ((bool)(this["ShowNavArrows"]));
+            }
+            set {
+                this["ShowNavArrows"] = value;
+            }
+        }
     }
 }

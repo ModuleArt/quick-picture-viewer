@@ -1439,6 +1439,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 显示导航箭头.
+        /// </summary>
+        public static string show_nav_arrows {
+            get {
+                return ResourceManager.GetString("show-nav-arrows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 显示幻灯片倒计时.
         /// </summary>
         public static string show_slideshow_counter {

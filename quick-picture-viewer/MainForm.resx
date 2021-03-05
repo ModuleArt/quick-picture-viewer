@@ -134,42 +134,84 @@
     <value>684, 446</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="prevBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+  <data name="navNextBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
   </data>
-  <data name="prevBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="navNextBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="prevBtn.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="navNextBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
-  <data name="prevBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="navNextBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="prevBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 193</value>
+  <data name="navNextBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 193</value>
   </data>
-  <data name="prevBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="navNextBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>27, 27, 27, 27</value>
   </data>
-  <data name="prevBtn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="navNextBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 64</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="prevBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="navNextBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;prevBtn.Name" xml:space="preserve">
-    <value>prevBtn</value>
+  <data name="navNextBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;prevBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;navNextBtn.Name" xml:space="preserve">
+    <value>navNextBtn</value>
+  </data>
+  <data name="&gt;&gt;navNextBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;prevBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;navNextBtn.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;prevBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;navNextBtn.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="navPrevBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="navPrevBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="navPrevBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="navPrevBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="navPrevBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 193</value>
+  </data>
+  <data name="navPrevBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>27, 27, 27, 27</value>
+  </data>
+  <data name="navPrevBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 64</value>
+  </data>
+  <data name="navPrevBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="navPrevBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;navPrevBtn.Name" xml:space="preserve">
+    <value>navPrevBtn</value>
+  </data>
+  <data name="&gt;&gt;navPrevBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;navPrevBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;navPrevBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="typeOpsButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -224,7 +266,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;typeOpsButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>390, 17</value>
@@ -364,7 +406,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>506, 17</value>
@@ -1198,7 +1240,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="picturePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1215,35 +1257,44 @@
   <data name="rmbMenu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
   </data>
+  <data name="showNavArrowsBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F6</value>
+  </data>
+  <data name="showNavArrowsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="showNavArrowsBtn.Text" xml:space="preserve">
+    <value>show nav arrows</value>
+  </data>
   <data name="showToolbarBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F7</value>
   </data>
   <data name="showToolbarBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 24</value>
+    <value>195, 24</value>
   </data>
   <data name="showToolbarBtn.Text" xml:space="preserve">
     <value>show toolbar</value>
   </data>
-  <data name="showStatusBarBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+  <data name="showStatusbarBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F8</value>
   </data>
-  <data name="showStatusBarBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 24</value>
+  <data name="showStatusbarBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
   </data>
-  <data name="showStatusBarBtn.Text" xml:space="preserve">
+  <data name="showStatusbarBtn.Text" xml:space="preserve">
     <value>show status bar</value>
   </data>
   <data name="showMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="showMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 26</value>
+    <value>180, 26</value>
   </data>
   <data name="showMenuItem.Text" xml:space="preserve">
     <value>view</value>
   </data>
   <data name="qlibToolsep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 6</value>
+    <value>177, 6</value>
   </data>
   <data name="copyImageBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+C</value>
@@ -1264,7 +1315,7 @@
     <value>copy file</value>
   </data>
   <data name="copyBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 26</value>
+    <value>180, 26</value>
   </data>
   <data name="copyBtn.Text" xml:space="preserve">
     <value>copy</value>
@@ -1273,13 +1324,13 @@
     <value>Ctrl+V</value>
   </data>
   <data name="pasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 26</value>
+    <value>180, 26</value>
   </data>
   <data name="pasteBtn.Text" xml:space="preserve">
     <value>paste</value>
   </data>
   <data name="rmbMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 96</value>
+    <value>181, 118</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Name" xml:space="preserve">
     <value>rmbMenu</value>
@@ -1465,7 +1516,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picturePanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
@@ -4143,9 +4194,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOAHAAA=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>420, 320</value>
   </data>
@@ -4602,10 +4650,16 @@
   <data name="&gt;&gt;showToolbarBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showStatusBarBtn.Name" xml:space="preserve">
-    <value>showStatusBarBtn</value>
+  <data name="&gt;&gt;showStatusbarBtn.Name" xml:space="preserve">
+    <value>showStatusbarBtn</value>
   </data>
-  <data name="&gt;&gt;showStatusBarBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;showStatusbarBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showNavArrowsBtn.Name" xml:space="preserve">
+    <value>showNavArrowsBtn</value>
+  </data>
+  <data name="&gt;&gt;showNavArrowsBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;qlibToolsep3.Name" xml:space="preserve">

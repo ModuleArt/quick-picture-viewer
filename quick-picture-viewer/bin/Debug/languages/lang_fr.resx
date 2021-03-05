@@ -729,6 +729,10 @@
     <value>Ouvrir l'emplacement de l'image</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Afficher les flèches de navigation</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Afficher le compteur du diaporama</value>
     <comment>Settings</comment>

@@ -729,6 +729,10 @@
     <value>Show file in explorer</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Show navigation arrows</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Show slideshow counter</value>
     <comment>Settings</comment>

@@ -222,7 +222,8 @@ namespace quick_picture_viewer
 
 			showMenuItem.Text = LangMan.Get("view");
 			showToolbarBtn.Text = LangMan.Get("show-toolbar");
-			showStatusBarBtn.Text = LangMan.Get("show-status-bar");
+			showStatusbarBtn.Text = LangMan.Get("show-status-bar");
+			showNavArrowsBtn.Text = LangMan.Get("show-nav-arrows");
 			pasteBtn.Text = LangMan.Get("paste-image");
 			copyBtn.Text = LangMan.Get("copy");
 			copyImageBtn.Text = LangMan.Get("copy-image");
@@ -289,6 +290,7 @@ namespace quick_picture_viewer
 
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
 			setCheckboardBackground(Properties.Settings.Default.CheckboardBackground, false);
+			nextButton.Visible = !Properties.Settings.Default.ShowNavArrows;
 
 			if (Properties.Settings.Default.BackColor.Length > 0)
 			{
@@ -1501,7 +1503,8 @@ namespace quick_picture_viewer
 
 				showMenuItem.Image = Properties.Resources.white_show;
 				showToolbarBtn.Image = Properties.Resources.white_toolbar;
-				showStatusBarBtn.Image = Properties.Resources.white_statusbar;
+				showStatusbarBtn.Image = Properties.Resources.white_statusbar;
+				showNavArrowsBtn.Image = Properties.Resources.white_arrows;
 				pasteBtn.Image = Properties.Resources.white_paste;
 				copyBtn.Image = Properties.Resources.white_copy;
 				copyImageBtn.Image = Properties.Resources.white_image;
@@ -1786,7 +1789,7 @@ namespace quick_picture_viewer
 
 		private void typeOpsButton_VisibleChanged(object sender, EventArgs e)
 		{
-			if (typeOpsButton.Visible) typeOpsButton.Focus();
+			if ((sender as Control).Visible) (sender as Control).Focus();
 		}
 
 		private void zoomOutButton_MouseLeave(object sender, EventArgs e)
@@ -2009,7 +2012,7 @@ namespace quick_picture_viewer
 
 		private void statusStrip1_VisibleChanged(object sender, EventArgs e)
 		{
-			showStatusBarBtn.Checked = statusStrip1.Visible;
+			showStatusbarBtn.Checked = statusStrip1.Visible;
 			UpdatePicturePanelHeight();
 			UpdatePictureBoxLocation();
 		}
@@ -2222,6 +2225,39 @@ namespace quick_picture_viewer
 					SelForm_SizeChanged(selForm, EventArgs.Empty);
 				}
 			}
+		}
+
+		private void nextButton_EnabledChanged(object sender, EventArgs e)
+		{
+			if (!prevButton.Visible) navNextBtn.Visible = nextButton.Enabled;
+			navPrevBtn.Visible = navNextBtn.Visible;
+		}
+
+		private void navNextBtn_Click(object sender, EventArgs e)
+		{
+			NextFile();
+		}
+
+		private void navPrevBtn_Click(object sender, EventArgs e)
+		{
+			PrevFile();
+		}
+
+		private void nextButton_VisibleChanged(object sender, EventArgs e)
+		{
+			prevButton.Visible = nextButton.Visible;
+
+			navNextBtn.Visible = !nextButton.Visible && nextButton.Enabled;
+			navPrevBtn.Visible = navNextBtn.Visible;
+			
+			Properties.Settings.Default.ShowNavArrows = !nextButton.Visible;
+			Properties.Settings.Default.Save();
+			showNavArrowsBtn.Checked = Properties.Settings.Default.ShowNavArrows;
+		}
+
+		private void showNavArrowsBtn_Click(object sender, EventArgs e)
+		{
+			nextButton.Visible = !nextButton.Visible;
 		}
 	}
 }

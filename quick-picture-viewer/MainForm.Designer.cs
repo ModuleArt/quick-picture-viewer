@@ -108,14 +108,16 @@
 			this.rmbMenu = new QuickLibrary.QlibContextMenuStrip(this.components);
 			this.showMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.showStatusBarBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.showStatusbarBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.showNavArrowsBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.qlibToolsep3 = new QuickLibrary.QlibToolsep();
 			this.copyBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyImageBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeOpsButton = new System.Windows.Forms.Button();
-			this.prevBtn = new System.Windows.Forms.Button();
+			this.navPrevBtn = new System.Windows.Forms.Button();
+			this.navNextBtn = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
@@ -407,6 +409,8 @@
 			this.nextButton.Margin = new System.Windows.Forms.Padding(0);
 			this.nextButton.Name = "nextButton";
 			this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+			this.nextButton.EnabledChanged += new System.EventHandler(this.nextButton_EnabledChanged);
+			this.nextButton.VisibleChanged += new System.EventHandler(this.nextButton_VisibleChanged);
 			// 
 			// toolStripSeparator1
 			// 
@@ -854,8 +858,9 @@
 			// 
 			this.showMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.showMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showNavArrowsBtn,
             this.showToolbarBtn,
-            this.showStatusBarBtn});
+            this.showStatusbarBtn});
 			resources.ApplyResources(this.showMenuItem, "showMenuItem");
 			this.showMenuItem.ForeColor = System.Drawing.Color.Black;
 			this.showMenuItem.Image = global::quick_picture_viewer.Properties.Resources.black_show;
@@ -872,15 +877,25 @@
 			resources.ApplyResources(this.showToolbarBtn, "showToolbarBtn");
 			this.showToolbarBtn.Click += new System.EventHandler(this.showToolbarBtn_Click);
 			// 
-			// showStatusBarBtn
+			// showStatusbarBtn
 			// 
-			this.showStatusBarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.showStatusBarBtn.ForeColor = System.Drawing.Color.Black;
-			this.showStatusBarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
-			this.showStatusBarBtn.Name = "showStatusBarBtn";
-			this.showStatusBarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			resources.ApplyResources(this.showStatusBarBtn, "showStatusBarBtn");
-			this.showStatusBarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
+			this.showStatusbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showStatusbarBtn.ForeColor = System.Drawing.Color.Black;
+			this.showStatusbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
+			this.showStatusbarBtn.Name = "showStatusbarBtn";
+			this.showStatusbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.showStatusbarBtn, "showStatusbarBtn");
+			this.showStatusbarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
+			// 
+			// showNavArrowsBtn
+			// 
+			this.showNavArrowsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showNavArrowsBtn.ForeColor = System.Drawing.Color.Black;
+			this.showNavArrowsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_arrows;
+			this.showNavArrowsBtn.Name = "showNavArrowsBtn";
+			this.showNavArrowsBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.showNavArrowsBtn, "showNavArrowsBtn");
+			this.showNavArrowsBtn.Click += new System.EventHandler(this.showNavArrowsBtn_Click);
 			// 
 			// qlibToolsep3
 			// 
@@ -947,16 +962,35 @@
 			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
 			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
 			// 
-			// prevBtn
+			// navPrevBtn
 			// 
-			resources.ApplyResources(this.prevBtn, "prevBtn");
-			this.prevBtn.BackColor = System.Drawing.Color.Black;
-			this.prevBtn.FlatAppearance.BorderSize = 0;
-			this.prevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.prevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
-			this.prevBtn.Name = "prevBtn";
-			this.prevBtn.TabStop = false;
-			this.prevBtn.UseVisualStyleBackColor = false;
+			resources.ApplyResources(this.navPrevBtn, "navPrevBtn");
+			this.navPrevBtn.BackColor = System.Drawing.Color.Black;
+			this.navPrevBtn.FlatAppearance.BorderSize = 0;
+			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.navPrevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
+			this.navPrevBtn.Name = "navPrevBtn";
+			this.navPrevBtn.TabStop = false;
+			this.navPrevBtn.UseVisualStyleBackColor = false;
+			this.navPrevBtn.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.navPrevBtn.Click += new System.EventHandler(this.navPrevBtn_Click);
+			// 
+			// navNextBtn
+			// 
+			resources.ApplyResources(this.navNextBtn, "navNextBtn");
+			this.navNextBtn.BackColor = System.Drawing.Color.Black;
+			this.navNextBtn.FlatAppearance.BorderSize = 0;
+			this.navNextBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.navNextBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.navNextBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.navNextBtn.Image = global::quick_picture_viewer.Properties.Resources.white_next;
+			this.navNextBtn.Name = "navNextBtn";
+			this.navNextBtn.TabStop = false;
+			this.navNextBtn.UseVisualStyleBackColor = false;
+			this.navNextBtn.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.navNextBtn.Click += new System.EventHandler(this.navNextBtn_Click);
 			// 
 			// picturePanel
 			// 
@@ -1013,7 +1047,8 @@
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.Controls.Add(this.prevBtn);
+			this.Controls.Add(this.navNextBtn);
+			this.Controls.Add(this.navPrevBtn);
 			this.Controls.Add(this.typeOpsButton);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.toolStrip1);
@@ -1116,7 +1151,7 @@
 		private System.Windows.Forms.ToolStripButton fullscreenBtn;
 		private QuickLibrary.QlibContextMenuStrip rmbMenu;
 		private System.Windows.Forms.ToolStripMenuItem showMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem showStatusBarBtn;
+		private System.Windows.Forms.ToolStripMenuItem showStatusbarBtn;
 		private System.Windows.Forms.ToolStripMenuItem showToolbarBtn;
 		private System.Windows.Forms.ToolStripMenuItem pasteBtn;
 		private System.Windows.Forms.ToolStripMenuItem pluginManBtn;
@@ -1132,6 +1167,8 @@
 		private QuickLibrary.QlibToolsep qlibToolsep4;
 		private System.Windows.Forms.ToolStripMenuItem cropBtn;
 		private System.Windows.Forms.ToolStripStatusLabel selectionLabel;
-		private System.Windows.Forms.Button prevBtn;
+		private System.Windows.Forms.Button navPrevBtn;
+		private System.Windows.Forms.Button navNextBtn;
+		private System.Windows.Forms.ToolStripMenuItem showNavArrowsBtn;
 	}
 }

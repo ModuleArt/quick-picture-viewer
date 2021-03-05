@@ -1438,6 +1438,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Показывать стрелки навигации.
+        /// </summary>
+        public static string show_nav_arrows {
+            get {
+                return ResourceManager.GetString("show-nav-arrows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Показать счётчик слайдшоу.
         /// </summary>
         public static string show_slideshow_counter {

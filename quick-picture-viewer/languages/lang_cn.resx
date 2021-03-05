@@ -730,6 +730,10 @@
     <value>在文件管理器中显示</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>显示导航箭头</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>显示幻灯片倒计时</value>
     <comment>Settings</comment>

@@ -729,6 +729,10 @@
     <value>Показать файл в папке</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Показывать стрелки навигации</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Показать счётчик слайдшоу</value>
     <comment>Settings</comment>

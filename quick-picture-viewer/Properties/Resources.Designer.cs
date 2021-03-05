@@ -73,6 +73,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_arrows {
+            get {
+                object obj = ResourceManager.GetObject("black_arrows", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_check {
             get {
                 object obj = ResourceManager.GetObject("black_check", resourceCulture);
@@ -416,6 +426,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_angle {
             get {
                 object obj = ResourceManager.GetObject("white_angle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_arrows {
+            get {
+                object obj = ResourceManager.GetObject("white_arrows", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

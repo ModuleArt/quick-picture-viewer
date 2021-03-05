@@ -730,6 +730,10 @@
     <value>Fájl megnyitása fájlkezelőben</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Navigációs nyilak megjelenítése</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Diavetítés visszaszámláló megjelenítése</value>
     <comment>Settings</comment>
