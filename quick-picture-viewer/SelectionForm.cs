@@ -1,5 +1,4 @@
 ﻿using QuickLibrary;
-using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -136,11 +135,13 @@ namespace quick_picture_viewer
 							sizeStart.Width + locationStart.X - Location.X,
 							sizeStart.Height + locationStart.Y - Location.Y
 						);
-						SetLocation(
-							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X,
-							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y,
-							true
-						);
+						int maxX = Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X + Width - MinimumSize.Width;
+						int maxY = Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y + Height - MinimumSize.Height;
+						int x = Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X;
+						int y = Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y;
+						if (x > maxX) x = maxX;
+						if (y > maxY) y = maxY;
+						SetLocation(x, y, true);
 						break;
 				}
 			}
@@ -166,6 +167,9 @@ namespace quick_picture_viewer
 
 			if (w > picturePanel.Width - curX) w = picturePanel.Width - curX;
 			if (h > picturePanel.Height - curY) h = picturePanel.Height - curY;
+
+			if (w > picturePanel.Width) w = picturePanel.Width;
+			if (h > picturePanel.Height) h = picturePanel.Height;
 
 			Size = new Size(w, h);
 			Refresh();

@@ -2212,18 +2212,21 @@ namespace quick_picture_viewer
 			if (result.Width > originalImage.Width) result.Width = originalImage.Width;
 			if (result.Height > originalImage.Height) result.Height = originalImage.Height;
 
+			if (result.X > originalImage.Width - 1) result.X = originalImage.Width - 1;
+			if (result.Y > originalImage.Height - 1) result.Y = originalImage.Height - 1;
+
+			if (result.Width < 1) result.Width = 1;
+			if (result.Height < 1) result.Height = 1;
+
 			return result;
 		}
 
 		private void picturePanel_SizeChanged(object sender, EventArgs e)
 		{
-			if (WindowState != FormWindowState.Minimized)
+			if (WindowState != FormWindowState.Minimized && selForm != null)
 			{
-				if (selForm != null)
-				{
-					selForm.UpdateContainerRect();
-					SelForm_SizeChanged(selForm, EventArgs.Empty);
-				}
+				selForm.UpdateContainerRect();
+				SelForm_SizeChanged(selForm, EventArgs.Empty);
 			}
 		}
 
