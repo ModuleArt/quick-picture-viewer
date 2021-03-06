@@ -30,7 +30,7 @@
 ## 😃 Features:
 
 * 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
-* ✍️ Basic image editing: Rotate, Flip, Change file type ...
+* ✍️ Basic image editing: Rotate, flip, crop, change file type ...
 * 🧩 Plugins ready
 * ↗️ Open image with external app or show in file explorer
 * 🖽 Picture in picture mode
@@ -44,10 +44,11 @@
 
 Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
 
-## 🧩 Built-in plugins:
+## 🧩 Built-in effects & tools:
 
-- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur region [blur]</a> - Blur or pixelate some area of the picture.<br>
-- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot [screenshot]</a> - Take a screen capture.
+<a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur / Pixelate</a> | <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> | <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> | <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a>
+
+Coming soon: Sepia | Color picker | Hue / Saturation | Vignette | Drop shadow
 
 <a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a>
 
