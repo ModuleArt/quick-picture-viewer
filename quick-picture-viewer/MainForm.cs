@@ -45,10 +45,7 @@ namespace quick_picture_viewer
 
 		public MainForm(string openPath, bool darkMode)
 		{
-			if (darkMode)
-			{
-				HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-			}
+			if (darkMode) HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
 
 			this.darkMode = darkMode;
 			this.openPath = openPath;
@@ -69,6 +66,7 @@ namespace quick_picture_viewer
 			zoomTextBox.TextBox.AutoSize = false;
 			zoomTextBox.Height = 21;
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
+			zoomTextBox.LostFocus += PicturePanel_LostFocus;
 			zoomTextBox.TextBox.ContextMenu = new ContextMenu();
 
 			SetDarkMode(darkMode);
@@ -94,6 +92,14 @@ namespace quick_picture_viewer
 				}
 			}
 			if (Properties.Settings.Default.StartupMaximize) WindowState = FormWindowState.Maximized;
+
+			ActiveControl = picturePanel;
+			picturePanel.LostFocus += PicturePanel_LostFocus;
+		}
+
+		private void PicturePanel_LostFocus(object sender, EventArgs e)
+		{
+			if (ActiveControl != zoomTextBox.TextBox) ActiveControl = picturePanel;
 		}
 
 		protected override void WndProc(ref Message m)
@@ -105,13 +111,6 @@ namespace quick_picture_viewer
 
 		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
 		{
-			if (ProcessArrowKeys(keyData)) return true;
-			else return base.ProcessCmdKey(ref msg, keyData);
-		}
-
-		public bool ProcessArrowKeys(Keys keyData)
-		{
-			Focus();
 			if (keyData == Keys.Left)
 			{
 				PrevFile();
@@ -132,7 +131,7 @@ namespace quick_picture_viewer
 				zoomIn();
 				return true;
 			}
-			return false;
+			return base.ProcessCmdKey(ref msg, keyData);
 		}
 
 		private void InitLanguage()
@@ -176,7 +175,6 @@ namespace quick_picture_viewer
 			backColorBtn.Text = LangMan.Get("background-color");
 			backClearBtn.Text = LangMan.Get("clear");
 			backCustomBtn.Text = LangMan.Get("choose-color") + " ...";
-			actualSizeBtn.Text = LangMan.Get("zoom-to-actual-size") + " (100%)";
 			setAsDesktopButton.Text = LangMan.Get("set-as-desktop-background") + " ...";
 			printButton.Text = LangMan.Get("print") + " ...";
 			deleteBtn.Text = LangMan.Get("move-to-trash") + " ...";
@@ -207,6 +205,7 @@ namespace quick_picture_viewer
 			autoZoomButton.Text = LangMan.Get("auto-zoom") + " | Ctrl+Shift+A";
 			zoomInButton.Text = LangMan.Get("zoom-in") + " | Ctrl+" + LangMan.Get("plus");
 			zoomOutButton.Text = LangMan.Get("zoom-out") + " | Ctrl+" + LangMan.Get("minus");
+			zoom100Btn.Text = LangMan.Get("zoom-to-actual-size") + " (100%) | Ctrl+0";
 			infoButton.Text = LangMan.Get("image-info") + " | Ctrl+I";
 			slideshowButton.Text = LangMan.Get("slideshow") + " | Ctrl+Shift+S";
 			showFileButton.Text = LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L";
@@ -339,11 +338,7 @@ namespace quick_picture_viewer
 			typeOpsButton.Invoke((MethodInvoker)(() =>
 			{
 				typeOpsButton.Visible = show;
-				if (show)
-				{
-					typeOpsButton.Text = " " + type + " " + LangMan.Get("type-options");
-					typeOpsButton.Focus();
-				}
+				if (show) typeOpsButton.Text = " " + type + " " + LangMan.Get("type-options");
 			}));
 		}
 
@@ -443,10 +438,9 @@ namespace quick_picture_viewer
 					}
 				}
 			}
-			catch (Exception ex)
+			catch
 			{
 				showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-				Console.WriteLine(ex);
 			}
 		}
 
@@ -542,7 +536,7 @@ namespace quick_picture_viewer
 
 				zoomInButton.Enabled = true;
 				zoomOutButton.Enabled = true;
-				actualSizeBtn.Enabled = true;
+				zoom100Btn.Enabled = true;
 				flipVerticalButton.Enabled = true;
 				flipHorizontalButton.Enabled = true;
 				rotateLeftButton.Enabled = true;
@@ -654,15 +648,15 @@ namespace quick_picture_viewer
 
 		private void UpdatePictureBoxLocation()
 		{
-			int w, h;
+			int x, y;
 
-			if (pictureBox.Width < picturePanel.Width) w = (int)((double)(picturePanel.Width - pictureBox.Width) / (double)2);
-			else w = -picturePanel.HorizontalScroll.Value;
+			if (pictureBox.Width < picturePanel.Width) x = (int)((double)(picturePanel.Width - pictureBox.Width) / (double)2);
+			else x = -picturePanel.HorizontalScroll.Value;
 
-			if (pictureBox.Height < picturePanel.Height) h = (int)((double)(picturePanel.Height - pictureBox.Height) / (double)2);
-			else h = -picturePanel.VerticalScroll.Value;
+			if (pictureBox.Height < picturePanel.Height) y = (int)((double)(picturePanel.Height - pictureBox.Height) / (double)2);
+			else y = -picturePanel.VerticalScroll.Value;
 
-			pictureBox.Location = new Point(w, h);
+			pictureBox.Location = new Point(x, y);
 		}
 
 		private void setZoomText(string text)
@@ -1119,7 +1113,7 @@ namespace quick_picture_viewer
 
 		public void MainForm_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (!zoomTextBox.Focused)
+			if (ActiveControl != zoomTextBox.TextBox)
 			{
 				if (e.Control)
 				{
@@ -1138,6 +1132,7 @@ namespace quick_picture_viewer
 						else if (e.KeyCode == Keys.OemMinus) zoomOutButton.PerformClick();
 						else if (e.KeyCode == Keys.T) onTopButton.PerformClick();
 						else if (e.KeyCode == Keys.I) infoButton.PerformClick();
+						else if (e.KeyCode == Keys.D0) zoom100Btn.PerformClick();
 					}
 				}
 				else if (e.Alt)
@@ -1364,7 +1359,7 @@ namespace quick_picture_viewer
 			selectionBtn.Enabled = false;
 			zoomInButton.Enabled = false;
 			zoomOutButton.Enabled = false;
-			actualSizeBtn.Enabled = false;
+			zoom100Btn.Enabled = false;
 			rotateLeftButton.Enabled = false;
 			rotateRightButton.Enabled = false;
 			rotate180Button.Enabled = false;
@@ -1456,7 +1451,7 @@ namespace quick_picture_viewer
 				autoZoomButton.Image = Properties.Resources.white_autozoom;
 				zoomInButton.Image = Properties.Resources.white_zoomin;
 				zoomOutButton.Image = Properties.Resources.white_zoomout;
-				actualSizeBtn.Image = Properties.Resources.white_actualsize;
+				zoom100Btn.Image = Properties.Resources.white_actualsize;
 
 				selectionBtn.Image = Properties.Resources.white_selection;
 
@@ -1789,11 +1784,6 @@ namespace quick_picture_viewer
 			settingsBox.ShowDialog();
 		}
 
-		private void typeOpsButton_VisibleChanged(object sender, EventArgs e)
-		{
-			if ((sender as Control).Visible) (sender as Control).Focus();
-		}
-
 		private void zoomOutButton_MouseLeave(object sender, EventArgs e)
 		{
 			zoomOutTimer.Stop();
@@ -1873,7 +1863,6 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
-			picturePanel.Focus();
 			AllowDrop = true;
 		}
 
@@ -1900,14 +1889,9 @@ namespace quick_picture_viewer
 			if (!autoZoom) UpdatePictureBoxLocation();
 		}
 
-		private void actualSizeBtn_Click(object sender, EventArgs e)
-		{
-			setZoomText("100%");
-		}
-
 		private void zoomTextBox_MouseEnter(object sender, EventArgs e)
 		{
-			zoomTextBox.Focus();
+			ActiveControl = zoomTextBox.TextBox;
 			zoomTextBox.TextBox.SelectAll();
 		}
 
@@ -1999,7 +1983,7 @@ namespace quick_picture_viewer
 
 		private void zoomTextBox_MouseLeave(object sender, EventArgs e)
 		{
-			picturePanel.Focus();
+			ActiveControl = picturePanel;
 		}
 
 		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -2168,7 +2152,7 @@ namespace quick_picture_viewer
 			selectionLabel.Text = " X: " + r.X + " Y: " + r.Y + " (" + r.Width + " x " + r.Height + ")";
 		}
 
-		private void cropBtn_Click(object sender, EventArgs e)
+		public void cropBtn_Click(object sender, EventArgs e)
 		{
 			if (selForm != null && originalImage != null)
 			{
@@ -2176,6 +2160,7 @@ namespace quick_picture_viewer
 				pictureBox.Image = originalImage;
 				setImageChanged(true);
 				UpdateSizeLabel();
+				UpdatePictureBoxLocation();
 
 				selectionBtn.Checked = false;
 			}
@@ -2265,10 +2250,25 @@ namespace quick_picture_viewer
 			nextButton.Visible = !nextButton.Visible;
 		}
 
-		private void selectAllBtn_Click(object sender, EventArgs e)
+		public void selectAllBtn_Click(object sender, EventArgs e)
 		{
 			if (selForm != null) selForm.Select(pictureBox.Location.X, pictureBox.Location.Y, pictureBox.Width, pictureBox.Height);
 			else selectionBtn.PerformClick();
+		}
+
+		public void CopySelection()
+		{
+			if (selForm != null && originalImage != null)
+			{
+				Bitmap cropped = originalImage.Clone(GetSelectionRect(), originalImage.PixelFormat);
+				Clipboard.SetImage(cropped);
+				showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
+			}
+		}
+
+		private void zoom100Btn_Click(object sender, EventArgs e)
+		{
+			setZoomText("100%");
 		}
 	}
 }

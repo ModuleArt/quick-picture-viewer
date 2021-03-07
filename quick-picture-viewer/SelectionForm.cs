@@ -38,9 +38,14 @@ namespace quick_picture_viewer
 			blackPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
 			blackPen.DashOffset = 1;
 
-			gripBrush = new SolidBrush(darkMode ? ThemeMan.DarkPaleColor : ThemeMan.LightPaleColor);
-
 			InitializeComponent();
+
+			gripBrush = new SolidBrush(darkMode ? ThemeMan.DarkPaleColor : ThemeMan.LightPaleColor);
+			selectionMenu.DarkMode = darkMode;
+
+			cropBtn.Text = LangMan.Get("crop");
+			selectionCopyBtn.Text = LangMan.Get("copy");
+			selectionSelectAllBtn.Text = LangMan.Get("select-all");
 		}
 
 		public void UpdateContainerRect()
@@ -189,7 +194,6 @@ namespace quick_picture_viewer
 				if (collapse) SetSize(Width, picturePanel.Height - newY + picturePanel.Location.Y);
 				newY = picturePanel.Location.Y + picturePanel.Height - Height;
 			}
-
 			Location = new Point(newX, newY);
 		}
 
@@ -200,8 +204,54 @@ namespace quick_picture_viewer
 
 		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
 		{
-			if (Owner != null && (Owner as MainForm).ProcessArrowKeys(keyData)) return true;
-			else return base.ProcessCmdKey(ref msg, keyData);
+			if (keyData == Keys.Left)
+			{
+				SetLocation(
+					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X - 1,
+					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y
+				);
+				return true;
+			}
+			else if (keyData == Keys.Right)
+			{
+				SetLocation(
+					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X + 1,
+					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y
+				);
+				return true;
+			}
+			else if (keyData == Keys.Down)
+			{
+				SetLocation(
+					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X,
+					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y + 1
+				);
+				return true;
+			}
+			else if (keyData == Keys.Up)
+			{
+				SetLocation(
+					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X,
+					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y - 1
+				);
+				return true;
+			}
+			return base.ProcessCmdKey(ref msg, keyData);
+		}
+
+		private void selectionCopyBtn_Click(object sender, System.EventArgs e)
+		{
+			if (Owner != null) (Owner as MainForm).CopySelection();
+		}
+
+		private void selectionSelectAllBtn_Click(object sender, System.EventArgs e)
+		{
+			if (Owner != null) (Owner as MainForm).selectAllBtn_Click(sender, e);
+		}
+
+		private void cropBtn_Click(object sender, System.EventArgs e)
+		{
+			if (Owner != null) (Owner as MainForm).cropBtn_Click(sender, e);
 		}
 	}
 }

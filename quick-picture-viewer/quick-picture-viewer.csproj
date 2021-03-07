@@ -456,6 +456,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-actualsize.png" />
     <None Include="resources\imgs\dark\black-selectall.png" />
     <None Include="resources\imgs\light\white-selectall.png" />
     <None Include="resources\imgs\dark\black-arrows.png" />

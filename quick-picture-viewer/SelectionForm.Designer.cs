@@ -28,8 +28,74 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectionForm));
+			this.selectionMenu = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.qlibToolsep5 = new QuickLibrary.QlibToolsep();
+			this.selectionCopyBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.selectionSelectAllBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.cropBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.selectionMenu.SuspendLayout();
 			this.SuspendLayout();
+			// 
+			// selectionMenu
+			// 
+			this.selectionMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.selectionMenu.DarkMode = false;
+			this.selectionMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.selectionMenu.ForeColor = System.Drawing.Color.Black;
+			this.selectionMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cropBtn,
+            this.qlibToolsep5,
+            this.selectionCopyBtn,
+            this.selectionSelectAllBtn});
+			this.selectionMenu.Name = "rmbMenu";
+			this.selectionMenu.Size = new System.Drawing.Size(192, 116);
+			// 
+			// qlibToolsep5
+			// 
+			this.qlibToolsep5.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep5.DarkMode = false;
+			this.qlibToolsep5.InsideMenu = true;
+			this.qlibToolsep5.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibToolsep5.Name = "qlibToolsep5";
+			this.qlibToolsep5.Size = new System.Drawing.Size(188, 6);
+			// 
+			// selectionCopyBtn
+			// 
+			this.selectionCopyBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.selectionCopyBtn.ForeColor = System.Drawing.Color.Black;
+			this.selectionCopyBtn.Image = global::quick_picture_viewer.Properties.Resources.black_copy;
+			this.selectionCopyBtn.Name = "selectionCopyBtn";
+			this.selectionCopyBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.selectionCopyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+			this.selectionCopyBtn.Size = new System.Drawing.Size(191, 26);
+			this.selectionCopyBtn.Text = "copy";
+			this.selectionCopyBtn.Click += new System.EventHandler(this.selectionCopyBtn_Click);
+			// 
+			// selectionSelectAllBtn
+			// 
+			this.selectionSelectAllBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.selectionSelectAllBtn.ForeColor = System.Drawing.Color.Black;
+			this.selectionSelectAllBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selectall;
+			this.selectionSelectAllBtn.Name = "selectionSelectAllBtn";
+			this.selectionSelectAllBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.selectionSelectAllBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+			this.selectionSelectAllBtn.Size = new System.Drawing.Size(191, 26);
+			this.selectionSelectAllBtn.Text = "select all";
+			this.selectionSelectAllBtn.Click += new System.EventHandler(this.selectionSelectAllBtn_Click);
+			// 
+			// cropBtn
+			// 
+			this.cropBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cropBtn.ForeColor = System.Drawing.Color.Black;
+			this.cropBtn.Image = global::quick_picture_viewer.Properties.Resources.black_crop;
+			this.cropBtn.Name = "cropBtn";
+			this.cropBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.X)));
+			this.cropBtn.Size = new System.Drawing.Size(191, 24);
+			this.cropBtn.Text = "crop";
+			this.cropBtn.Click += new System.EventHandler(this.cropBtn_Click);
 			// 
 			// SelectionForm
 			// 
@@ -38,6 +104,7 @@
 			this.BackColor = System.Drawing.Color.Red;
 			this.CausesValidation = false;
 			this.ClientSize = new System.Drawing.Size(128, 128);
+			this.ContextMenuStrip = this.selectionMenu;
 			this.ControlBox = false;
 			this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -52,10 +119,17 @@
 			this.Text = "SelectionForm";
 			this.TransparencyKey = System.Drawing.Color.Red;
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.selectionMenu.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
+
+		private QuickLibrary.QlibContextMenuStrip selectionMenu;
+		private QuickLibrary.QlibToolsep qlibToolsep5;
+		private System.Windows.Forms.ToolStripMenuItem selectionCopyBtn;
+		private System.Windows.Forms.ToolStripMenuItem selectionSelectAllBtn;
+		private System.Windows.Forms.ToolStripMenuItem cropBtn;
 	}
 }

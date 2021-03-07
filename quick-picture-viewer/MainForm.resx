@@ -725,6 +725,18 @@
   <data name="zoomInButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 25</value>
   </data>
+  <data name="zoom100Btn.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="zoom100Btn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="zoom100Btn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="zoom100Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 25</value>
+  </data>
   <data name="toolStripSeparator2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1024,30 +1036,6 @@
   <data name="setAsDesktopButton.Text" xml:space="preserve">
     <value>set as desktop background</value>
   </data>
-  <data name="qlibMenuSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 6</value>
-  </data>
-  <data name="actualSizeBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="actualSizeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALxJREFUOE/V0r8OAUEQx/Et/InSWwiF0FG4gkTheYRK4U1UEpUoUJ94CURLFGoK
-        4Tu7tpBjLojCL/lkZ3KZ7GV3zS+TQAdrHLFCDxnERoYXmKKE7H0dYgn5rqaLsSsjmaDtytfZIoer7R7X
-        PDa2U3JGCn7QR/o0TrZTIjsU8OwPipCDVdPHyJWRzBB7Bi3Ibv4WkihjjhDqLQQ4oAn/Di6QdyA7q8MN
-        7FG13Zv5ariOHSq2+yAD1Fz5XzHmBoGEJ8a7fZeNAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="actualSizeBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+0</value>
-  </data>
-  <data name="actualSizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
-  </data>
-  <data name="actualSizeBtn.Text" xml:space="preserve">
-    <value>zoom to actual size</value>
-  </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 6</value>
   </data>
@@ -1062,7 +1050,7 @@
 </value>
   </data>
   <data name="backClearBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+F6</value>
+    <value>Ctrl+F3</value>
   </data>
   <data name="backClearBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 24</value>
@@ -1074,7 +1062,7 @@
     <value>176, 6</value>
   </data>
   <data name="backCustomBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F6</value>
+    <value>F3</value>
   </data>
   <data name="backCustomBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 24</value>
@@ -1284,13 +1272,13 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="showMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="showMenuItem.Text" xml:space="preserve">
     <value>view</value>
   </data>
   <data name="qlibToolsep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>176, 6</value>
   </data>
   <data name="copyImageBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+C</value>
@@ -1311,7 +1299,7 @@
     <value>copy file</value>
   </data>
   <data name="copyBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="copyBtn.Text" xml:space="preserve">
     <value>copy</value>
@@ -1320,7 +1308,7 @@
     <value>Ctrl+V</value>
   </data>
   <data name="pasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="pasteBtn.Text" xml:space="preserve">
     <value>paste</value>
@@ -1332,13 +1320,13 @@
     <value>Ctrl+A</value>
   </data>
   <data name="selectAllBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="selectAllBtn.Text" xml:space="preserve">
     <value>select all</value>
   </data>
   <data name="rmbMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 144</value>
+    <value>180, 122</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Name" xml:space="preserve">
     <value>rmbMenu</value>
@@ -4202,9 +4190,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOAHAAA=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>420, 320</value>
   </data>
@@ -4228,66 +4213,6 @@
   </data>
   <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;printDialog1.Name" xml:space="preserve">
-    <value>printDialog1</value>
-  </data>
-  <data name="&gt;&gt;printDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;printDocument1.Name" xml:space="preserve">
-    <value>printDocument1</value>
-  </data>
-  <data name="&gt;&gt;printDocument1.Type" xml:space="preserve">
-    <value>System.Drawing.Printing.PrintDocument, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;colorDialog1.Name" xml:space="preserve">
-    <value>colorDialog1</value>
-  </data>
-  <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
-    <value>toolStripSeparator4</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;zoomTextBox.Name" xml:space="preserve">
-    <value>zoomTextBox</value>
-  </data>
-  <data name="&gt;&gt;zoomTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep1.Name" xml:space="preserve">
-    <value>qlibToolsep1</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep3.Name" xml:space="preserve">
-    <value>qlibToolsep3</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep3.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;selectionLabel.Name" xml:space="preserve">
     <value>selectionLabel</value>
@@ -4336,6 +4261,24 @@
   </data>
   <data name="&gt;&gt;dateModifiedLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDialog1.Name" xml:space="preserve">
+    <value>printDialog1</value>
+  </data>
+  <data name="&gt;&gt;printDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Name" xml:space="preserve">
+    <value>printDocument1</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Type" xml:space="preserve">
+    <value>System.Drawing.Printing.PrintDocument, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;colorDialog1.Name" xml:space="preserve">
+    <value>colorDialog1</value>
+  </data>
+  <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openBtn.Name" xml:space="preserve">
     <value>openBtn</value>
@@ -4397,6 +4340,12 @@
   <data name="&gt;&gt;externalChooseBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;prevButton.Name" xml:space="preserve">
     <value>prevButton</value>
   </data>
@@ -4415,6 +4364,12 @@
   <data name="&gt;&gt;nextButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;autoZoomButton.Name" xml:space="preserve">
     <value>autoZoomButton</value>
   </data>
@@ -4427,11 +4382,29 @@
   <data name="&gt;&gt;zoomOutButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;zoomTextBox.Name" xml:space="preserve">
+    <value>zoomTextBox</value>
+  </data>
+  <data name="&gt;&gt;zoomTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;zoomInButton.Name" xml:space="preserve">
     <value>zoomInButton</value>
   </data>
   <data name="&gt;&gt;zoomInButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoom100Btn.Name" xml:space="preserve">
+    <value>zoom100Btn</value>
+  </data>
+  <data name="&gt;&gt;zoom100Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;selectionBtn.Name" xml:space="preserve">
     <value>selectionBtn</value>
@@ -4511,6 +4484,12 @@
   <data name="&gt;&gt;toolsBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;checkboardButton.Name" xml:space="preserve">
     <value>checkboardButton</value>
   </data>
@@ -4528,6 +4507,12 @@
   </data>
   <data name="&gt;&gt;miniViewButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep1.Name" xml:space="preserve">
+    <value>qlibToolsep1</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep1.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;moreButton.Name" xml:space="preserve">
     <value>moreButton</value>
@@ -4557,18 +4542,6 @@
     <value>setAsDesktopButton</value>
   </data>
   <data name="&gt;&gt;setAsDesktopButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;qlibMenuSeparator2.Name" xml:space="preserve">
-    <value>qlibMenuSeparator2</value>
-  </data>
-  <data name="&gt;&gt;qlibMenuSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;actualSizeBtn.Name" xml:space="preserve">
-    <value>actualSizeBtn</value>
-  </data>
-  <data name="&gt;&gt;actualSizeBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator9.Name" xml:space="preserve">
@@ -4678,6 +4651,12 @@
   </data>
   <data name="&gt;&gt;showStatusbarBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep3.Name" xml:space="preserve">
+    <value>qlibToolsep3</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep3.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;copyBtn.Name" xml:space="preserve">
     <value>copyBtn</value>
