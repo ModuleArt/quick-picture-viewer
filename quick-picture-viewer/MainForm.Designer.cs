@@ -34,6 +34,24 @@
 			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.printDialog1 = new System.Windows.Forms.PrintDialog();
+			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.toolStrip1 = new QuickLibrary.QlibToolbar();
+			this.toolStripSeparator4 = new QuickLibrary.QlibToolsep();
+			this.toolStripSeparator1 = new QuickLibrary.QlibToolsep();
+			this.zoomTextBox = new System.Windows.Forms.ToolStripTextBox();
+			this.toolStripSeparator2 = new QuickLibrary.QlibToolsep();
+			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
+			this.qlibToolsep1 = new QuickLibrary.QlibToolsep();
+			this.rmbMenu = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.qlibToolsep3 = new QuickLibrary.QlibToolsep();
+			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.suggestionLabel = new System.Windows.Forms.Label();
+			this.pleaseOpenLabel = new System.Windows.Forms.Label();
+			this.navNextBtn = new System.Windows.Forms.Button();
+			this.navPrevBtn = new System.Windows.Forms.Button();
+			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.selectionLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.directoryLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.fileLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -42,10 +60,6 @@
 			this.zoomLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateCreatedLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dateModifiedLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.printDialog1 = new System.Windows.Forms.PrintDialog();
-			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-			this.toolStrip1 = new QuickLibrary.QlibToolbar();
 			this.openBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openRecursive = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,16 +70,12 @@
 			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalFavoriteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalChooseBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator4 = new QuickLibrary.QlibToolsep();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
 			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
 			this.nextButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator1 = new QuickLibrary.QlibToolsep();
 			this.autoZoomButton = new System.Windows.Forms.ToolStripButton();
 			this.zoomOutButton = new System.Windows.Forms.ToolStripButton();
-			this.zoomTextBox = new System.Windows.Forms.ToolStripTextBox();
 			this.zoomInButton = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator2 = new QuickLibrary.QlibToolsep();
 			this.selectionBtn = new System.Windows.Forms.ToolStripButton();
 			this.editButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.flipHorizontalButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,11 +89,9 @@
 			this.cropBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.effectsBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.toolsBtn = new System.Windows.Forms.ToolStripDropDownButton();
-			this.toolStripSeparator3 = new QuickLibrary.QlibToolsep();
 			this.checkboardButton = new System.Windows.Forms.ToolStripButton();
 			this.fullscreenBtn = new System.Windows.Forms.ToolStripButton();
 			this.miniViewButton = new System.Windows.Forms.ToolStripButton();
-			this.qlibToolsep1 = new QuickLibrary.QlibToolsep();
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,24 +113,17 @@
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.framelessCloseBtn = new System.Windows.Forms.ToolStripButton();
-			this.rmbMenu = new QuickLibrary.QlibContextMenuStrip(this.components);
 			this.showMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.showNavArrowsBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.showStatusbarBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.showNavArrowsBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.qlibToolsep3 = new QuickLibrary.QlibToolsep();
 			this.copyBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyImageBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.typeOpsButton = new System.Windows.Forms.Button();
-			this.navPrevBtn = new System.Windows.Forms.Button();
-			this.navNextBtn = new System.Windows.Forms.Button();
-			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
-			this.suggestionLabel = new System.Windows.Forms.Label();
-			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.selectAllBtn = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -165,69 +166,6 @@
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.ShowItemToolTips = true;
 			this.statusStrip1.VisibleChanged += new System.EventHandler(this.statusStrip1_VisibleChanged);
-			// 
-			// selectionLabel
-			// 
-			this.selectionLabel.ActiveLinkColor = System.Drawing.Color.Black;
-			this.selectionLabel.BackColor = System.Drawing.Color.Transparent;
-			this.selectionLabel.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
-			this.selectionLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-			this.selectionLabel.LinkColor = System.Drawing.Color.Black;
-			this.selectionLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.selectionLabel.Name = "selectionLabel";
-			resources.ApplyResources(this.selectionLabel, "selectionLabel");
-			this.selectionLabel.VisitedLinkColor = System.Drawing.Color.Black;
-			// 
-			// directoryLabel
-			// 
-			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
-			this.directoryLabel.Image = global::quick_picture_viewer.Properties.Resources.black_picfolder;
-			this.directoryLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.directoryLabel.Name = "directoryLabel";
-			resources.ApplyResources(this.directoryLabel, "directoryLabel");
-			// 
-			// fileLabel
-			// 
-			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
-			this.fileLabel.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
-			this.fileLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.fileLabel.Name = "fileLabel";
-			resources.ApplyResources(this.fileLabel, "fileLabel");
-			// 
-			// hasChangesLabel
-			// 
-			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.hasChangesLabel, "hasChangesLabel");
-			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.hasChangesLabel.Name = "hasChangesLabel";
-			// 
-			// sizeLabel
-			// 
-			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.sizeLabel, "sizeLabel");
-			this.sizeLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.sizeLabel.Name = "sizeLabel";
-			// 
-			// zoomLabel
-			// 
-			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.zoomLabel, "zoomLabel");
-			this.zoomLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.zoomLabel.Name = "zoomLabel";
-			// 
-			// dateCreatedLabel
-			// 
-			this.dateCreatedLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.dateCreatedLabel, "dateCreatedLabel");
-			this.dateCreatedLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.dateCreatedLabel.Name = "dateCreatedLabel";
-			// 
-			// dateModifiedLabel
-			// 
-			this.dateModifiedLabel.BackColor = System.Drawing.Color.Transparent;
-			resources.ApplyResources(this.dateModifiedLabel, "dateModifiedLabel");
-			this.dateModifiedLabel.Margin = new System.Windows.Forms.Padding(6, 6, 0, 6);
-			this.dateModifiedLabel.Name = "dateModifiedLabel";
 			// 
 			// printDialog1
 			// 
@@ -284,6 +222,225 @@
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.VisibleChanged += new System.EventHandler(this.toolStrip1_VisibleChanged);
+			// 
+			// toolStripSeparator4
+			// 
+			resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+			this.toolStripSeparator4.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator4.DarkMode = false;
+			this.toolStripSeparator4.InsideMenu = false;
+			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			// 
+			// toolStripSeparator1
+			// 
+			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+			this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator1.DarkMode = false;
+			this.toolStripSeparator1.InsideMenu = false;
+			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			// 
+			// zoomTextBox
+			// 
+			this.zoomTextBox.BackColor = System.Drawing.Color.White;
+			this.zoomTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			resources.ApplyResources(this.zoomTextBox, "zoomTextBox");
+			this.zoomTextBox.Margin = new System.Windows.Forms.Padding(7, -1, 7, -1);
+			this.zoomTextBox.Name = "zoomTextBox";
+			this.zoomTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zoomTextBox_KeyPress);
+			this.zoomTextBox.MouseEnter += new System.EventHandler(this.zoomTextBox_MouseEnter);
+			this.zoomTextBox.MouseLeave += new System.EventHandler(this.zoomTextBox_MouseLeave);
+			this.zoomTextBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
+			// 
+			// toolStripSeparator2
+			// 
+			resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+			this.toolStripSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator2.DarkMode = false;
+			this.toolStripSeparator2.InsideMenu = false;
+			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			// 
+			// toolStripSeparator3
+			// 
+			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+			this.toolStripSeparator3.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.toolStripSeparator3.DarkMode = false;
+			this.toolStripSeparator3.InsideMenu = false;
+			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			// 
+			// qlibToolsep1
+			// 
+			resources.ApplyResources(this.qlibToolsep1, "qlibToolsep1");
+			this.qlibToolsep1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep1.DarkMode = false;
+			this.qlibToolsep1.InsideMenu = false;
+			this.qlibToolsep1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.qlibToolsep1.Name = "qlibToolsep1";
+			// 
+			// rmbMenu
+			// 
+			this.rmbMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.rmbMenu.DarkMode = false;
+			resources.ApplyResources(this.rmbMenu, "rmbMenu");
+			this.rmbMenu.ForeColor = System.Drawing.Color.Black;
+			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showMenuItem,
+            this.qlibToolsep3,
+            this.copyBtn,
+            this.pasteBtn,
+            this.selectAllBtn});
+			this.rmbMenu.Name = "rmbMenu";
+			this.rmbMenu.Opening += new System.ComponentModel.CancelEventHandler(this.rmbMenu_Opening);
+			// 
+			// qlibToolsep3
+			// 
+			this.qlibToolsep3.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep3.DarkMode = false;
+			this.qlibToolsep3.InsideMenu = true;
+			this.qlibToolsep3.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibToolsep3.Name = "qlibToolsep3";
+			resources.ApplyResources(this.qlibToolsep3, "qlibToolsep3");
+			// 
+			// picturePanel
+			// 
+			resources.ApplyResources(this.picturePanel, "picturePanel");
+			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+			this.picturePanel.ContextMenuStrip = this.rmbMenu;
+			this.picturePanel.Controls.Add(this.suggestionIcon);
+			this.picturePanel.Controls.Add(this.suggestionLabel);
+			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
+			this.picturePanel.Controls.Add(this.pictureBox);
+			this.picturePanel.Name = "picturePanel";
+			this.picturePanel.SizeChanged += new System.EventHandler(this.picturePanel_SizeChanged);
+			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
+			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
+			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
+			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// suggestionLabel
+			// 
+			resources.ApplyResources(this.suggestionLabel, "suggestionLabel");
+			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
+			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
+			this.suggestionLabel.Name = "suggestionLabel";
+			// 
+			// pleaseOpenLabel
+			// 
+			resources.ApplyResources(this.pleaseOpenLabel, "pleaseOpenLabel");
+			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
+			this.pleaseOpenLabel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			// 
+			// navNextBtn
+			// 
+			resources.ApplyResources(this.navNextBtn, "navNextBtn");
+			this.navNextBtn.BackColor = System.Drawing.Color.Black;
+			this.navNextBtn.FlatAppearance.BorderSize = 0;
+			this.navNextBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.navNextBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.navNextBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.navNextBtn.Image = global::quick_picture_viewer.Properties.Resources.white_next;
+			this.navNextBtn.Name = "navNextBtn";
+			this.navNextBtn.TabStop = false;
+			this.navNextBtn.UseVisualStyleBackColor = false;
+			this.navNextBtn.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.navNextBtn.Click += new System.EventHandler(this.navNextBtn_Click);
+			// 
+			// navPrevBtn
+			// 
+			resources.ApplyResources(this.navPrevBtn, "navPrevBtn");
+			this.navPrevBtn.BackColor = System.Drawing.Color.Black;
+			this.navPrevBtn.FlatAppearance.BorderSize = 0;
+			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.navPrevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
+			this.navPrevBtn.Name = "navPrevBtn";
+			this.navPrevBtn.TabStop = false;
+			this.navPrevBtn.UseVisualStyleBackColor = false;
+			this.navPrevBtn.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.navPrevBtn.Click += new System.EventHandler(this.navPrevBtn_Click);
+			// 
+			// typeOpsButton
+			// 
+			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
+			this.typeOpsButton.BackColor = System.Drawing.Color.Black;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.typeOpsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.typeOpsButton.ForeColor = System.Drawing.Color.White;
+			this.typeOpsButton.Image = global::quick_picture_viewer.Properties.Resources.white_options;
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
+			// 
+			// selectionLabel
+			// 
+			this.selectionLabel.ActiveLinkColor = System.Drawing.Color.Black;
+			this.selectionLabel.BackColor = System.Drawing.Color.Transparent;
+			this.selectionLabel.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
+			this.selectionLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+			this.selectionLabel.LinkColor = System.Drawing.Color.Black;
+			this.selectionLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.selectionLabel.Name = "selectionLabel";
+			resources.ApplyResources(this.selectionLabel, "selectionLabel");
+			this.selectionLabel.VisitedLinkColor = System.Drawing.Color.Black;
+			// 
+			// directoryLabel
+			// 
+			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
+			this.directoryLabel.Image = global::quick_picture_viewer.Properties.Resources.black_picfolder;
+			this.directoryLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.directoryLabel.Name = "directoryLabel";
+			resources.ApplyResources(this.directoryLabel, "directoryLabel");
+			// 
+			// fileLabel
+			// 
+			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
+			this.fileLabel.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.fileLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.fileLabel.Name = "fileLabel";
+			resources.ApplyResources(this.fileLabel, "fileLabel");
+			// 
+			// hasChangesLabel
+			// 
+			this.hasChangesLabel.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.hasChangesLabel, "hasChangesLabel");
+			this.hasChangesLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.hasChangesLabel.Name = "hasChangesLabel";
+			// 
+			// sizeLabel
+			// 
+			this.sizeLabel.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.sizeLabel, "sizeLabel");
+			this.sizeLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.sizeLabel.Name = "sizeLabel";
+			// 
+			// zoomLabel
+			// 
+			this.zoomLabel.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.zoomLabel, "zoomLabel");
+			this.zoomLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.zoomLabel.Name = "zoomLabel";
+			// 
+			// dateCreatedLabel
+			// 
+			this.dateCreatedLabel.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.dateCreatedLabel, "dateCreatedLabel");
+			this.dateCreatedLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.dateCreatedLabel.Name = "dateCreatedLabel";
+			// 
+			// dateModifiedLabel
+			// 
+			this.dateModifiedLabel.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.dateModifiedLabel, "dateModifiedLabel");
+			this.dateModifiedLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
+			this.dateModifiedLabel.Name = "dateModifiedLabel";
 			// 
 			// openBtn
 			// 
@@ -377,15 +534,6 @@
 			this.externalChooseBtn.Name = "externalChooseBtn";
 			this.externalChooseBtn.Click += new System.EventHandler(this.externalButton_Click);
 			// 
-			// toolStripSeparator4
-			// 
-			resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
-			this.toolStripSeparator4.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.toolStripSeparator4.DarkMode = false;
-			this.toolStripSeparator4.InsideMenu = false;
-			this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator4.Name = "toolStripSeparator4";
-			// 
 			// prevButton
 			// 
 			resources.ApplyResources(this.prevButton, "prevButton");
@@ -412,15 +560,6 @@
 			this.nextButton.EnabledChanged += new System.EventHandler(this.nextButton_EnabledChanged);
 			this.nextButton.VisibleChanged += new System.EventHandler(this.nextButton_VisibleChanged);
 			// 
-			// toolStripSeparator1
-			// 
-			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-			this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.toolStripSeparator1.DarkMode = false;
-			this.toolStripSeparator1.InsideMenu = false;
-			this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			// 
 			// autoZoomButton
 			// 
 			resources.ApplyResources(this.autoZoomButton, "autoZoomButton");
@@ -442,18 +581,6 @@
 			this.zoomOutButton.MouseLeave += new System.EventHandler(this.zoomOutButton_MouseLeave);
 			this.zoomOutButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.zoomOutButton_MouseUp);
 			// 
-			// zoomTextBox
-			// 
-			this.zoomTextBox.BackColor = System.Drawing.Color.White;
-			this.zoomTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			resources.ApplyResources(this.zoomTextBox, "zoomTextBox");
-			this.zoomTextBox.Margin = new System.Windows.Forms.Padding(7, -1, 7, -1);
-			this.zoomTextBox.Name = "zoomTextBox";
-			this.zoomTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zoomTextBox_KeyPress);
-			this.zoomTextBox.MouseEnter += new System.EventHandler(this.zoomTextBox_MouseEnter);
-			this.zoomTextBox.MouseLeave += new System.EventHandler(this.zoomTextBox_MouseLeave);
-			this.zoomTextBox.TextChanged += new System.EventHandler(this.zoomComboBox_TextChanged);
-			// 
 			// zoomInButton
 			// 
 			resources.ApplyResources(this.zoomInButton, "zoomInButton");
@@ -464,15 +591,6 @@
 			this.zoomInButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.zoomInButton_MouseDown);
 			this.zoomInButton.MouseLeave += new System.EventHandler(this.zoomInButton_MouseLeave);
 			this.zoomInButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.zoomInButton_MouseUp);
-			// 
-			// toolStripSeparator2
-			// 
-			resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-			this.toolStripSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.toolStripSeparator2.DarkMode = false;
-			this.toolStripSeparator2.InsideMenu = false;
-			this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			// 
 			// selectionBtn
 			// 
@@ -597,15 +715,6 @@
 			this.toolsBtn.Name = "toolsBtn";
 			this.toolsBtn.DropDownOpening += new System.EventHandler(this.effectsBtn_DropDownOpening);
 			// 
-			// toolStripSeparator3
-			// 
-			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-			this.toolStripSeparator3.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.toolStripSeparator3.DarkMode = false;
-			this.toolStripSeparator3.InsideMenu = false;
-			this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			// 
 			// checkboardButton
 			// 
 			resources.ApplyResources(this.checkboardButton, "checkboardButton");
@@ -630,15 +739,6 @@
 			this.miniViewButton.Margin = new System.Windows.Forms.Padding(0);
 			this.miniViewButton.Name = "miniViewButton";
 			this.miniViewButton.Click += new System.EventHandler(this.miniViewButton_Click);
-			// 
-			// qlibToolsep1
-			// 
-			resources.ApplyResources(this.qlibToolsep1, "qlibToolsep1");
-			this.qlibToolsep1.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.qlibToolsep1.DarkMode = false;
-			this.qlibToolsep1.InsideMenu = false;
-			this.qlibToolsep1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.qlibToolsep1.Name = "qlibToolsep1";
 			// 
 			// moreButton
 			// 
@@ -840,20 +940,6 @@
 			this.framelessCloseBtn.Name = "framelessCloseBtn";
 			this.framelessCloseBtn.Click += new System.EventHandler(this.framelessCloseBtn_Click);
 			// 
-			// rmbMenu
-			// 
-			this.rmbMenu.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.rmbMenu.DarkMode = false;
-			resources.ApplyResources(this.rmbMenu, "rmbMenu");
-			this.rmbMenu.ForeColor = System.Drawing.Color.Black;
-			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showMenuItem,
-            this.qlibToolsep3,
-            this.copyBtn,
-            this.pasteBtn});
-			this.rmbMenu.Name = "rmbMenu";
-			this.rmbMenu.Opening += new System.ComponentModel.CancelEventHandler(this.rmbMenu_Opening);
-			// 
 			// showMenuItem
 			// 
 			this.showMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -866,6 +952,16 @@
 			this.showMenuItem.Image = global::quick_picture_viewer.Properties.Resources.black_show;
 			this.showMenuItem.Name = "showMenuItem";
 			this.showMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			// 
+			// showNavArrowsBtn
+			// 
+			this.showNavArrowsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.showNavArrowsBtn.ForeColor = System.Drawing.Color.Black;
+			this.showNavArrowsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_arrows;
+			this.showNavArrowsBtn.Name = "showNavArrowsBtn";
+			this.showNavArrowsBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			resources.ApplyResources(this.showNavArrowsBtn, "showNavArrowsBtn");
+			this.showNavArrowsBtn.Click += new System.EventHandler(this.showNavArrowsBtn_Click);
 			// 
 			// showToolbarBtn
 			// 
@@ -886,25 +982,6 @@
 			this.showStatusbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			resources.ApplyResources(this.showStatusbarBtn, "showStatusbarBtn");
 			this.showStatusbarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
-			// 
-			// showNavArrowsBtn
-			// 
-			this.showNavArrowsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.showNavArrowsBtn.ForeColor = System.Drawing.Color.Black;
-			this.showNavArrowsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_arrows;
-			this.showNavArrowsBtn.Name = "showNavArrowsBtn";
-			this.showNavArrowsBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			resources.ApplyResources(this.showNavArrowsBtn, "showNavArrowsBtn");
-			this.showNavArrowsBtn.Click += new System.EventHandler(this.showNavArrowsBtn_Click);
-			// 
-			// qlibToolsep3
-			// 
-			this.qlibToolsep3.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.qlibToolsep3.DarkMode = false;
-			this.qlibToolsep3.InsideMenu = true;
-			this.qlibToolsep3.Margin = new System.Windows.Forms.Padding(4);
-			this.qlibToolsep3.Name = "qlibToolsep3";
-			resources.ApplyResources(this.qlibToolsep3, "qlibToolsep3");
 			// 
 			// copyBtn
 			// 
@@ -950,84 +1027,12 @@
 			resources.ApplyResources(this.pasteBtn, "pasteBtn");
 			this.pasteBtn.Click += new System.EventHandler(this.pasteBtn_Click);
 			// 
-			// typeOpsButton
-			// 
-			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
-			this.typeOpsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			// 
-			// navPrevBtn
-			// 
-			resources.ApplyResources(this.navPrevBtn, "navPrevBtn");
-			this.navPrevBtn.BackColor = System.Drawing.Color.Black;
-			this.navPrevBtn.FlatAppearance.BorderSize = 0;
-			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.navPrevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
-			this.navPrevBtn.Name = "navPrevBtn";
-			this.navPrevBtn.TabStop = false;
-			this.navPrevBtn.UseVisualStyleBackColor = false;
-			this.navPrevBtn.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.navPrevBtn.Click += new System.EventHandler(this.navPrevBtn_Click);
-			// 
-			// navNextBtn
-			// 
-			resources.ApplyResources(this.navNextBtn, "navNextBtn");
-			this.navNextBtn.BackColor = System.Drawing.Color.Black;
-			this.navNextBtn.FlatAppearance.BorderSize = 0;
-			this.navNextBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-			this.navNextBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-			this.navNextBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.navNextBtn.Image = global::quick_picture_viewer.Properties.Resources.white_next;
-			this.navNextBtn.Name = "navNextBtn";
-			this.navNextBtn.TabStop = false;
-			this.navNextBtn.UseVisualStyleBackColor = false;
-			this.navNextBtn.VisibleChanged += new System.EventHandler(this.typeOpsButton_VisibleChanged);
-			this.navNextBtn.Click += new System.EventHandler(this.navNextBtn_Click);
-			// 
-			// picturePanel
-			// 
-			resources.ApplyResources(this.picturePanel, "picturePanel");
-			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-			this.picturePanel.ContextMenuStrip = this.rmbMenu;
-			this.picturePanel.Controls.Add(this.suggestionIcon);
-			this.picturePanel.Controls.Add(this.suggestionLabel);
-			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
-			this.picturePanel.Controls.Add(this.pictureBox);
-			this.picturePanel.Name = "picturePanel";
-			this.picturePanel.SizeChanged += new System.EventHandler(this.picturePanel_SizeChanged);
-			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
-			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
-			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
-			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
-			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
 			// suggestionIcon
 			// 
 			this.suggestionIcon.BackColor = System.Drawing.Color.Black;
 			resources.ApplyResources(this.suggestionIcon, "suggestionIcon");
 			this.suggestionIcon.Name = "suggestionIcon";
 			this.suggestionIcon.TabStop = false;
-			// 
-			// suggestionLabel
-			// 
-			resources.ApplyResources(this.suggestionLabel, "suggestionLabel");
-			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
-			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
-			this.suggestionLabel.Name = "suggestionLabel";
-			// 
-			// pleaseOpenLabel
-			// 
-			resources.ApplyResources(this.pleaseOpenLabel, "pleaseOpenLabel");
-			this.pleaseOpenLabel.Name = "pleaseOpenLabel";
-			this.pleaseOpenLabel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
 			// 
 			// pictureBox
 			// 
@@ -1040,6 +1045,16 @@
 			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// selectAllBtn
+			// 
+			this.selectAllBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			resources.ApplyResources(this.selectAllBtn, "selectAllBtn");
+			this.selectAllBtn.ForeColor = System.Drawing.Color.Black;
+			this.selectAllBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selectall;
+			this.selectAllBtn.Name = "selectAllBtn";
+			this.selectAllBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.selectAllBtn.Click += new System.EventHandler(this.selectAllBtn_Click);
 			// 
 			// MainForm
 			// 
@@ -1170,5 +1185,6 @@
 		private System.Windows.Forms.Button navPrevBtn;
 		private System.Windows.Forms.Button navNextBtn;
 		private System.Windows.Forms.ToolStripMenuItem showNavArrowsBtn;
+		private System.Windows.Forms.ToolStripMenuItem selectAllBtn;
 	}
 }

@@ -172,13 +172,13 @@
 			// resizeBtn
 			// 
 			this.resizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.resizeBtn.BackColor = System.Drawing.Color.Black;
+			this.resizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
 			this.resizeBtn.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
 			this.resizeBtn.DarkImage = null;
 			this.resizeBtn.DarkMode = true;
 			this.resizeBtn.FlatAppearance.BorderSize = 0;
-			this.resizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-			this.resizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+			this.resizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+			this.resizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
 			this.resizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.resizeBtn.ForeColor = System.Drawing.Color.Black;
 			this.resizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("resizeBtn.Image")));

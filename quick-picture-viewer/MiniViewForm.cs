@@ -150,7 +150,7 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
-			infoTooltip.SetToolTip(autoZoomBtn, LangMan.Get("auto-zoom") + " | Ctrl+A");
+			infoTooltip.SetToolTip(autoZoomBtn, LangMan.Get("auto-zoom") + " | Ctrl+Shift+A");
 			infoTooltip.SetToolTip(opacityBtn, LangMan.Get("change-window-opacity") + " | Ctrl+O");
 			zoomLabel.Text = LangMan.Get("zoom") + ": " + LangMan.Get("auto");
 			checkboardBtn.Text = LangMan.Get("checkboard-background");
@@ -173,6 +173,7 @@ namespace quick_picture_viewer
 				if (e.Shift)
 				{
 					if (e.KeyCode == Keys.P) Close();
+					else if (e.KeyCode == Keys.A) autoZoomBtn.PerformClick();
 				}
 				else
 				{
@@ -185,7 +186,6 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.O) opacityBtn.PerformClick();
 					else if (e.KeyCode == Keys.OemMinus) zoomOut();
 					else if (e.KeyCode == Keys.Oemplus) zoomIn();
-					else if (e.KeyCode == Keys.A) autoZoomBtn.PerformClick();
 				}
 			}
 			else

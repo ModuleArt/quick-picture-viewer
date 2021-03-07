@@ -222,13 +222,6 @@
   <data name="typeOpsButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
-  <data name="typeOpsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAD5JREFUOE9j
-        oBfoBuJ3QNwO5uEA/wlgKzQ+SaALiH8AMV4XDB5AVIBhA8gBhB5g2DBOMMQCjFgwmhJxAgYGACc3LamZ
-        QPrjAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="typeOpsButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
@@ -275,28 +268,28 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="selectionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>75, 17</value>
   </data>
   <data name="selectionLabel.Text" xml:space="preserve">
-    <value> selection</value>
+    <value>selection</value>
   </data>
   <data name="selectionLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="directoryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
+    <value>59, 17</value>
   </data>
   <data name="directoryLabel.Text" xml:space="preserve">
-    <value> folder</value>
+    <value>folder</value>
   </data>
   <data name="directoryLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="fileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
+    <value>41, 17</value>
   </data>
   <data name="fileLabel.Text" xml:space="preserve">
-    <value> file</value>
+    <value>file</value>
   </data>
   <data name="hasChangesLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -309,10 +302,10 @@
 </value>
   </data>
   <data name="hasChangesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
+    <value>82, 17</value>
   </data>
   <data name="hasChangesLabel.Text" xml:space="preserve">
-    <value> not-saved</value>
+    <value>not-saved</value>
   </data>
   <data name="hasChangesLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -326,10 +319,10 @@
 </value>
   </data>
   <data name="sizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
+    <value>46, 17</value>
   </data>
   <data name="sizeLabel.Text" xml:space="preserve">
-    <value> size</value>
+    <value>size</value>
   </data>
   <data name="zoomLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -341,10 +334,10 @@
 </value>
   </data>
   <data name="zoomLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
+    <value>57, 17</value>
   </data>
   <data name="zoomLabel.Text" xml:space="preserve">
-    <value> zoom</value>
+    <value>zoom</value>
   </data>
   <data name="dateCreatedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -357,13 +350,16 @@
 </value>
   </data>
   <data name="dateCreatedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
+    <value>68, 17</value>
   </data>
   <data name="dateCreatedLabel.Text" xml:space="preserve">
-    <value> created</value>
+    <value>created</value>
   </data>
   <data name="dateCreatedLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="dateModifiedLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="dateModifiedLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -376,19 +372,19 @@
 </value>
   </data>
   <data name="dateModifiedLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>76, 17</value>
   </data>
   <data name="dateModifiedLabel.Text" xml:space="preserve">
-    <value> modified</value>
+    <value>modified</value>
   </data>
   <data name="dateModifiedLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 417</value>
+    <value>0, 419</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 29</value>
+    <value>684, 27</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1329,8 +1325,20 @@
   <data name="pasteBtn.Text" xml:space="preserve">
     <value>paste</value>
   </data>
+  <data name="selectAllBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="selectAllBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+A</value>
+  </data>
+  <data name="selectAllBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="selectAllBtn.Text" xml:space="preserve">
+    <value>select all</value>
+  </data>
   <data name="rmbMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 118</value>
+    <value>181, 144</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Name" xml:space="preserve">
     <value>rmbMenu</value>
@@ -4194,6 +4202,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOAHAAA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>420, 320</value>
   </data>
@@ -4217,6 +4228,66 @@
   </data>
   <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDialog1.Name" xml:space="preserve">
+    <value>printDialog1</value>
+  </data>
+  <data name="&gt;&gt;printDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Name" xml:space="preserve">
+    <value>printDocument1</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Type" xml:space="preserve">
+    <value>System.Drawing.Printing.PrintDocument, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;colorDialog1.Name" xml:space="preserve">
+    <value>colorDialog1</value>
+  </data>
+  <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;zoomTextBox.Name" xml:space="preserve">
+    <value>zoomTextBox</value>
+  </data>
+  <data name="&gt;&gt;zoomTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep1.Name" xml:space="preserve">
+    <value>qlibToolsep1</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep1.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep3.Name" xml:space="preserve">
+    <value>qlibToolsep3</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep3.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;selectionLabel.Name" xml:space="preserve">
     <value>selectionLabel</value>
@@ -4265,24 +4336,6 @@
   </data>
   <data name="&gt;&gt;dateModifiedLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;printDialog1.Name" xml:space="preserve">
-    <value>printDialog1</value>
-  </data>
-  <data name="&gt;&gt;printDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;printDocument1.Name" xml:space="preserve">
-    <value>printDocument1</value>
-  </data>
-  <data name="&gt;&gt;printDocument1.Type" xml:space="preserve">
-    <value>System.Drawing.Printing.PrintDocument, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;colorDialog1.Name" xml:space="preserve">
-    <value>colorDialog1</value>
-  </data>
-  <data name="&gt;&gt;colorDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openBtn.Name" xml:space="preserve">
     <value>openBtn</value>
@@ -4344,12 +4397,6 @@
   <data name="&gt;&gt;externalChooseBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
-    <value>toolStripSeparator4</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;prevButton.Name" xml:space="preserve">
     <value>prevButton</value>
   </data>
@@ -4368,12 +4415,6 @@
   <data name="&gt;&gt;nextButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;autoZoomButton.Name" xml:space="preserve">
     <value>autoZoomButton</value>
   </data>
@@ -4386,23 +4427,11 @@
   <data name="&gt;&gt;zoomOutButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;zoomTextBox.Name" xml:space="preserve">
-    <value>zoomTextBox</value>
-  </data>
-  <data name="&gt;&gt;zoomTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;zoomInButton.Name" xml:space="preserve">
     <value>zoomInButton</value>
   </data>
   <data name="&gt;&gt;zoomInButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;selectionBtn.Name" xml:space="preserve">
     <value>selectionBtn</value>
@@ -4482,12 +4511,6 @@
   <data name="&gt;&gt;toolsBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;checkboardButton.Name" xml:space="preserve">
     <value>checkboardButton</value>
   </data>
@@ -4505,12 +4528,6 @@
   </data>
   <data name="&gt;&gt;miniViewButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep1.Name" xml:space="preserve">
-    <value>qlibToolsep1</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;moreButton.Name" xml:space="preserve">
     <value>moreButton</value>
@@ -4644,6 +4661,12 @@
   <data name="&gt;&gt;showMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;showNavArrowsBtn.Name" xml:space="preserve">
+    <value>showNavArrowsBtn</value>
+  </data>
+  <data name="&gt;&gt;showNavArrowsBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;showToolbarBtn.Name" xml:space="preserve">
     <value>showToolbarBtn</value>
   </data>
@@ -4655,18 +4678,6 @@
   </data>
   <data name="&gt;&gt;showStatusbarBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showNavArrowsBtn.Name" xml:space="preserve">
-    <value>showNavArrowsBtn</value>
-  </data>
-  <data name="&gt;&gt;showNavArrowsBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep3.Name" xml:space="preserve">
-    <value>qlibToolsep3</value>
-  </data>
-  <data name="&gt;&gt;qlibToolsep3.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;copyBtn.Name" xml:space="preserve">
     <value>copyBtn</value>
@@ -4690,6 +4701,12 @@
     <value>pasteBtn</value>
   </data>
   <data name="&gt;&gt;pasteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selectAllBtn.Name" xml:space="preserve">
+    <value>selectAllBtn</value>
+  </data>
+  <data name="&gt;&gt;selectAllBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

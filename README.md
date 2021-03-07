@@ -32,13 +32,14 @@
 * 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
 * ✍️ Basic image editing: Rotate, flip, crop, change file type ...
 * 🧩 Plugins ready
-* ↗️ Open image with external app or show in file explorer
-* 🖽 Picture in picture mode
+* ↗️ Open image with external app or show file in explorer
+* 🖽 Picture-in-Picture mode
 * ♟️ Checkerboard background
-* 🗔 Window can be always on top, frameless and fullscreen
 * 🖥️ Set image as desktop background
 * 🖨️ Print image or export to PDF
 * ℹ️ View image details
+* 🗔 Frameless mode
+* 🔝 Always on top
 * 🎞️ Slideshow
 * 🕶️ Dark mode
 
@@ -46,7 +47,7 @@ Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/iss
 
 ## 🧩 Built-in effects & tools:
 
-<a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur / Pixelate</a> | <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> | <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> | <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a>
+<a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> | <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> | <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> | <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a>
 
 Coming soon: Sepia | Color picker | Hue / Saturation | Vignette | Drop shadow
 
@@ -76,7 +77,7 @@ Translation contributors:
 - <a href="https://github.com/l-33ter">l-33ter</a> - German
 - <a href="https://github.com/KristofKekesi">KristofKekesi</a> - Hungarian
 - <a href="https://github.com/Beelink">Beelink</a> - Russian
-- <a href="https://github.com/asluppiter">asluppiter</a> - Spanish
+- <a href="https://github.com/asluppiter">asluppiter</a> - Spanish [Help needed]
 
 <a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
 

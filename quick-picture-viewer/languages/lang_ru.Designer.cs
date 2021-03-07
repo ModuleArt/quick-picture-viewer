@@ -1375,6 +1375,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Выделить все.
+        /// </summary>
+        public static string select_all {
+            get {
+                return ResourceManager.GetString("select-all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Инструмент выделения.
         /// </summary>
         public static string selection_tool {

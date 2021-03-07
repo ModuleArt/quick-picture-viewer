@@ -702,6 +702,10 @@
     <value>másodpercenként</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Mindet kiválaszt</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>Kiválasztó eszköz</value>
     <comment>Menu</comment>

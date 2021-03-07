@@ -701,6 +701,10 @@
     <value>секунд</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Выделить все</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>Инструмент выделения</value>
     <comment>Menu</comment>

@@ -204,7 +204,7 @@ namespace quick_picture_viewer
 			checkboardButton.Text = LangMan.Get("checkboard-background") + " | Ctrl+B";
 			fullscreenBtn.Text = LangMan.Get("fullscreen") + " | F";
 			miniViewButton.Text = LangMan.Get("picture-in-picture") + " | Ctrl+Shift+P";
-			autoZoomButton.Text = LangMan.Get("auto-zoom") + " | Ctrl+A";
+			autoZoomButton.Text = LangMan.Get("auto-zoom") + " | Ctrl+Shift+A";
 			zoomInButton.Text = LangMan.Get("zoom-in") + " | Ctrl+" + LangMan.Get("plus");
 			zoomOutButton.Text = LangMan.Get("zoom-out") + " | Ctrl+" + LangMan.Get("minus");
 			infoButton.Text = LangMan.Get("image-info") + " | Ctrl+I";
@@ -228,6 +228,7 @@ namespace quick_picture_viewer
 			copyBtn.Text = LangMan.Get("copy");
 			copyImageBtn.Text = LangMan.Get("copy-image");
 			copyFileBtn.Text = LangMan.Get("copy-file");
+			selectAllBtn.Text = LangMan.Get("select-all");
 
 			framelessCloseBtn.Text = NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4";
 		}
@@ -550,6 +551,7 @@ namespace quick_picture_viewer
 				cropBtn.Enabled = true;
 				saveAsButton.Enabled = true;
 				copyImageBtn.Enabled = true;
+				selectAllBtn.Enabled = true;
 				autoZoomButton.Enabled = true;
 				selectionBtn.Enabled = true;
 				setAsDesktopButton.Enabled = true;
@@ -652,10 +654,15 @@ namespace quick_picture_viewer
 
 		private void UpdatePictureBoxLocation()
 		{
-			pictureBox.Location = new Point(
-				pictureBox.Width < picturePanel.Width ? (picturePanel.Width - pictureBox.Width) / 2 : -picturePanel.HorizontalScroll.Value,
-				pictureBox.Height < picturePanel.Height ? (picturePanel.Height - pictureBox.Height) / 2 : -picturePanel.VerticalScroll.Value
-			);
+			int w, h;
+
+			if (pictureBox.Width < picturePanel.Width) w = (int)((double)(picturePanel.Width - pictureBox.Width) / (double)2);
+			else w = -picturePanel.HorizontalScroll.Value;
+
+			if (pictureBox.Height < picturePanel.Height) h = (int)((double)(picturePanel.Height - pictureBox.Height) / (double)2);
+			else h = -picturePanel.VerticalScroll.Value;
+
+			pictureBox.Location = new Point(w, h);
 		}
 
 		private void setZoomText(string text)
@@ -1121,12 +1128,12 @@ namespace quick_picture_viewer
 						if (e.KeyCode == Keys.L) showFileButton.PerformClick();
 						else if (e.KeyCode == Keys.S) toggleSlideshow();
 						else if (e.KeyCode == Keys.P) miniViewButton.PerformClick();
+						else if (e.KeyCode == Keys.A) autoZoomButton.PerformClick();
 					}
 					else
 					{
 						if (e.KeyCode == Keys.B) checkboardButton.PerformClick();
 						else if (e.KeyCode == Keys.S) saveAsButton.PerformClick();
-						else if (e.KeyCode == Keys.A) autoZoomButton.PerformClick();
 						else if (e.KeyCode == Keys.Oemplus) zoomInButton.PerformClick();
 						else if (e.KeyCode == Keys.OemMinus) zoomOutButton.PerformClick();
 						else if (e.KeyCode == Keys.T) onTopButton.PerformClick();
@@ -1365,6 +1372,7 @@ namespace quick_picture_viewer
 			flipHorizontalButton.Enabled = false;
 			flipVerticalButton.Enabled = false;
 			copyImageBtn.Enabled = false;
+			selectAllBtn.Enabled = false;
 			copyFileBtn.Enabled = false;
 			setAsDesktopButton.Enabled = false;
 			reloadButton.Enabled = false;
@@ -1488,10 +1496,6 @@ namespace quick_picture_viewer
 				dateModifiedLabel.Image = Properties.Resources.white_history;
 				hasChangesLabel.Image = Properties.Resources.white_erase;
 
-				typeOpsButton.Image = Properties.Resources.white_options;
-				typeOpsButton.BackColor = ThemeMan.DarkSecondColor;
-				typeOpsButton.ForeColor = Color.White;
-
 				effectsBtn.Image = Properties.Resources.white_effects;
 				toolsBtn.Image = Properties.Resources.white_tools;
 				pluginManBtn.Image = Properties.Resources.white_plugin;
@@ -1509,6 +1513,7 @@ namespace quick_picture_viewer
 				copyBtn.Image = Properties.Resources.white_copy;
 				copyImageBtn.Image = Properties.Resources.white_image;
 				copyFileBtn.Image = Properties.Resources.white_imgfile;
+				selectAllBtn.Image = Properties.Resources.white_selectall;
 			}
 
 			rmbMenu.DarkMode = dark;
@@ -1552,8 +1557,7 @@ namespace quick_picture_viewer
 
 			if (availableWidth > originalImage.Width && availableHeight > originalImage.Height)
 			{
-				int x = 0;
-				int y = 0;
+				int x = 0, y = 0;
 				if (printCenterImage)
 				{
 					x = (availableWidth - originalImage.Width) / 2;
@@ -1568,8 +1572,7 @@ namespace quick_picture_viewer
 
 				if (scaleW < scaleH)
 				{
-					int x = 0;
-					int y = 0;
+					int x = 0, y = 0;
 					if (printCenterImage)
 					{
 						x = (availableWidth - Convert.ToInt32(originalImage.Width * scaleW)) / 2;
@@ -1579,8 +1582,7 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					int x = 0;
-					int y = 0;
+					int x = 0, y = 0;
 					if (printCenterImage)
 					{
 						x = (availableWidth - Convert.ToInt32(originalImage.Width * scaleH)) / 2;
@@ -2261,6 +2263,12 @@ namespace quick_picture_viewer
 		private void showNavArrowsBtn_Click(object sender, EventArgs e)
 		{
 			nextButton.Visible = !nextButton.Visible;
+		}
+
+		private void selectAllBtn_Click(object sender, EventArgs e)
+		{
+			if (selForm != null) selForm.Select(pictureBox.Location.X, pictureBox.Location.Y, pictureBox.Width, pictureBox.Height);
+			else selectionBtn.PerformClick();
 		}
 	}
 }

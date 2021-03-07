@@ -702,6 +702,10 @@
     <value>秒</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>全选</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>选择工具</value>
     <comment>Menu</comment>
