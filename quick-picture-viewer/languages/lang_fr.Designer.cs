@@ -475,6 +475,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modifier la zone de sélection.
+        /// </summary>
+        public static string edit_selection {
+            get {
+                return ResourceManager.GetString("edit-selection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Effets.
         /// </summary>
         public static string effects {

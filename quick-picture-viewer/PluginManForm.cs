@@ -18,7 +18,7 @@ namespace quick_picture_viewer
 		public PluginManForm()
 		{
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
+			SetDraggableControls(new List<Control>() { titleLabel });
 		}
 
 		private void SetDarkMode(bool dark)

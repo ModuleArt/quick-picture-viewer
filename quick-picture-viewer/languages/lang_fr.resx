@@ -301,6 +301,10 @@
     <value>Modifier l'image</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Modifier la zone de sélection</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>Effets</value>
     <comment>Menu</comment>

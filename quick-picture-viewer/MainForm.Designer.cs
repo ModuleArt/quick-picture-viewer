@@ -171,12 +171,14 @@
 			this.selectionLabel.ActiveLinkColor = System.Drawing.Color.Black;
 			this.selectionLabel.BackColor = System.Drawing.Color.Transparent;
 			this.selectionLabel.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
+			this.selectionLabel.IsLink = true;
 			this.selectionLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.selectionLabel.LinkColor = System.Drawing.Color.Black;
 			this.selectionLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
 			this.selectionLabel.Name = "selectionLabel";
 			resources.ApplyResources(this.selectionLabel, "selectionLabel");
 			this.selectionLabel.VisitedLinkColor = System.Drawing.Color.Black;
+			this.selectionLabel.Click += new System.EventHandler(this.selectionLabel_Click);
 			// 
 			// directoryLabel
 			// 

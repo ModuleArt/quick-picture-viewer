@@ -62,10 +62,8 @@
 			this.createdTextBox = new QuickLibrary.QlibTextBox();
 			this.propertiesButton = new System.Windows.Forms.Button();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// fileNameLabel
@@ -94,7 +92,7 @@
 			this.extensionTextBox.ReadOnly = true;
 			this.extensionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.extensionTextBox.Size = new System.Drawing.Size(70, 32);
-			this.extensionTextBox.TabIndex = 9;
+			this.extensionTextBox.TabIndex = 7;
 			this.extensionTextBox.Text = "N/A";
 			this.extensionTextBox.WordWrap = true;
 			// 
@@ -121,7 +119,7 @@
 			this.copyPathButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyPathButton.Name = "copyPathButton";
 			this.copyPathButton.Size = new System.Drawing.Size(32, 32);
-			this.copyPathButton.TabIndex = 7;
+			this.copyPathButton.TabIndex = 5;
 			this.copyPathButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyPathButton.UseVisualStyleBackColor = false;
 			this.copyPathButton.Click += new System.EventHandler(this.copyPathButton_Click);
@@ -137,7 +135,7 @@
 			this.copyFolderButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyFolderButton.Name = "copyFolderButton";
 			this.copyFolderButton.Size = new System.Drawing.Size(32, 32);
-			this.copyFolderButton.TabIndex = 5;
+			this.copyFolderButton.TabIndex = 3;
 			this.copyFolderButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyFolderButton.UseVisualStyleBackColor = false;
 			this.copyFolderButton.Click += new System.EventHandler(this.copyFolderButton_Click);
@@ -153,7 +151,7 @@
 			this.copyNameButton.Margin = new System.Windows.Forms.Padding(0);
 			this.copyNameButton.Name = "copyNameButton";
 			this.copyNameButton.Size = new System.Drawing.Size(32, 32);
-			this.copyNameButton.TabIndex = 3;
+			this.copyNameButton.TabIndex = 1;
 			this.copyNameButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.copyNameButton.UseVisualStyleBackColor = false;
 			this.copyNameButton.Click += new System.EventHandler(this.copyNameButton_Click);
@@ -172,7 +170,7 @@
 			this.compressionTextBox.ReadOnly = true;
 			this.compressionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.compressionTextBox.Size = new System.Drawing.Size(70, 32);
-			this.compressionTextBox.TabIndex = 8;
+			this.compressionTextBox.TabIndex = 6;
 			this.compressionTextBox.WordWrap = true;
 			// 
 			// compressionLabel
@@ -201,7 +199,7 @@
 			this.fullPathTextBox.ReadOnly = true;
 			this.fullPathTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fullPathTextBox.Size = new System.Drawing.Size(220, 32);
-			this.fullPathTextBox.TabIndex = 6;
+			this.fullPathTextBox.TabIndex = 4;
 			this.fullPathTextBox.Text = "N/A";
 			this.fullPathTextBox.WordWrap = false;
 			// 
@@ -231,7 +229,7 @@
 			this.folderTextBox.ReadOnly = true;
 			this.folderTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.folderTextBox.Size = new System.Drawing.Size(220, 32);
-			this.folderTextBox.TabIndex = 4;
+			this.folderTextBox.TabIndex = 2;
 			this.folderTextBox.Text = "N/A";
 			this.folderTextBox.WordWrap = true;
 			// 
@@ -249,7 +247,7 @@
 			this.fileNameTextBox.ReadOnly = true;
 			this.fileNameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fileNameTextBox.Size = new System.Drawing.Size(220, 32);
-			this.fileNameTextBox.TabIndex = 2;
+			this.fileNameTextBox.TabIndex = 0;
 			this.fileNameTextBox.Text = "N/A";
 			this.fileNameTextBox.WordWrap = true;
 			// 
@@ -279,7 +277,7 @@
 			this.sizeTextBox.ReadOnly = true;
 			this.sizeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.sizeTextBox.Size = new System.Drawing.Size(199, 32);
-			this.sizeTextBox.TabIndex = 13;
+			this.sizeTextBox.TabIndex = 11;
 			this.sizeTextBox.WordWrap = true;
 			// 
 			// sizeLabel
@@ -308,7 +306,7 @@
 			this.megapixelsTextBox.ReadOnly = true;
 			this.megapixelsTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.megapixelsTextBox.Size = new System.Drawing.Size(199, 32);
-			this.megapixelsTextBox.TabIndex = 14;
+			this.megapixelsTextBox.TabIndex = 12;
 			this.megapixelsTextBox.WordWrap = true;
 			// 
 			// megapixelsLabel
@@ -337,7 +335,7 @@
 			this.resolutionTextBox.ReadOnly = true;
 			this.resolutionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.resolutionTextBox.Size = new System.Drawing.Size(199, 32);
-			this.resolutionTextBox.TabIndex = 15;
+			this.resolutionTextBox.TabIndex = 13;
 			this.resolutionTextBox.WordWrap = true;
 			// 
 			// resolutionLabel
@@ -366,7 +364,7 @@
 			this.inchesTextBox.ReadOnly = true;
 			this.inchesTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.inchesTextBox.Size = new System.Drawing.Size(199, 32);
-			this.inchesTextBox.TabIndex = 16;
+			this.inchesTextBox.TabIndex = 14;
 			this.inchesTextBox.WordWrap = true;
 			// 
 			// inchesLabel
@@ -395,7 +393,7 @@
 			this.cmTextBox.ReadOnly = true;
 			this.cmTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.cmTextBox.Size = new System.Drawing.Size(199, 32);
-			this.cmTextBox.TabIndex = 17;
+			this.cmTextBox.TabIndex = 15;
 			this.cmTextBox.WordWrap = true;
 			// 
 			// cmLabel
@@ -436,7 +434,7 @@
 			this.ratioTextBox.ReadOnly = true;
 			this.ratioTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.ratioTextBox.Size = new System.Drawing.Size(199, 32);
-			this.ratioTextBox.TabIndex = 19;
+			this.ratioTextBox.TabIndex = 17;
 			this.ratioTextBox.WordWrap = true;
 			// 
 			// diskSizeTextBox
@@ -453,7 +451,7 @@
 			this.diskSizeTextBox.ReadOnly = true;
 			this.diskSizeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.diskSizeTextBox.Size = new System.Drawing.Size(199, 32);
-			this.diskSizeTextBox.TabIndex = 18;
+			this.diskSizeTextBox.TabIndex = 16;
 			this.diskSizeTextBox.Text = "N/A";
 			this.diskSizeTextBox.WordWrap = true;
 			// 
@@ -495,7 +493,7 @@
 			this.modifiedTextBox.ReadOnly = true;
 			this.modifiedTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.modifiedTextBox.Size = new System.Drawing.Size(252, 32);
-			this.modifiedTextBox.TabIndex = 11;
+			this.modifiedTextBox.TabIndex = 9;
 			this.modifiedTextBox.Text = "N/A";
 			this.modifiedTextBox.WordWrap = true;
 			// 
@@ -525,7 +523,7 @@
 			this.createdTextBox.ReadOnly = true;
 			this.createdTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.createdTextBox.Size = new System.Drawing.Size(252, 32);
-			this.createdTextBox.TabIndex = 10;
+			this.createdTextBox.TabIndex = 8;
 			this.createdTextBox.Text = "N/A";
 			this.createdTextBox.WordWrap = true;
 			// 
@@ -539,23 +537,13 @@
 			this.propertiesButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.propertiesButton.Name = "propertiesButton";
 			this.propertiesButton.Size = new System.Drawing.Size(252, 32);
-			this.propertiesButton.TabIndex = 12;
+			this.propertiesButton.TabIndex = 10;
 			this.propertiesButton.Text = " File properties";
 			this.propertiesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.propertiesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.propertiesButton.UseVisualStyleBackColor = false;
 			this.propertiesButton.Visible = false;
 			this.propertiesButton.Click += new System.EventHandler(this.propertiesButton_Click);
-			// 
-			// titlePanel
-			// 
-			this.titlePanel.Controls.Add(this.titleLabel);
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(730, 32);
-			this.titlePanel.TabIndex = 0;
 			// 
 			// titleLabel
 			// 
@@ -583,7 +571,7 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
+			this.closeBtn.TabIndex = 18;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			// 
 			// InfoForm
@@ -591,6 +579,8 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(730, 336);
 			this.CloseButton = this.closeBtn;
+			this.Controls.Add(this.closeBtn);
+			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.modifiedLabel);
 			this.Controls.Add(this.copyPathButton);
 			this.Controls.Add(this.modifiedTextBox);
@@ -604,7 +594,6 @@
 			this.Controls.Add(this.extensionTextBox);
 			this.Controls.Add(this.diskSizeLabel);
 			this.Controls.Add(this.diskSizeTextBox);
-			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.propertiesButton);
 			this.Controls.Add(this.cmTextBox);
 			this.Controls.Add(this.inchesTextBox);
@@ -636,9 +625,8 @@
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.InfoForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InfoForm_KeyDown);
-			this.titlePanel.ResumeLayout(false);
-			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -676,7 +664,6 @@
 		private QuickLibrary.QlibTextBox extensionTextBox;
 		private System.Windows.Forms.Label extensionLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 	}

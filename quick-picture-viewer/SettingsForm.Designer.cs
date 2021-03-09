@@ -69,7 +69,6 @@
 			this.restartLabel2 = new System.Windows.Forms.Label();
 			this.langComboBox = new QuickLibrary.QlibComboBox();
 			this.localizationRestart = new System.Windows.Forms.LinkLabel();
-			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
@@ -81,7 +80,6 @@
 			this.startupPage.SuspendLayout();
 			this.externalPage.SuspendLayout();
 			this.langPage.SuspendLayout();
-			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// settingsTabs
@@ -102,7 +100,7 @@
 			this.settingsTabs.Padding = new System.Drawing.Point(0, 0);
 			this.settingsTabs.SelectedIndex = 0;
 			this.settingsTabs.Size = new System.Drawing.Size(400, 290);
-			this.settingsTabs.TabIndex = 2;
+			this.settingsTabs.TabIndex = 0;
 			// 
 			// themePage
 			// 
@@ -215,11 +213,11 @@
 			this.mousePage.Controls.Add(this.mouseWheelActionLabel);
 			this.mousePage.Controls.Add(this.escToExitCheckBox);
 			this.mousePage.Controls.Add(this.fullscrCursorCheckBox);
-			this.mousePage.Location = new System.Drawing.Point(4, 32);
+			this.mousePage.Location = new System.Drawing.Point(4, 60);
 			this.mousePage.Margin = new System.Windows.Forms.Padding(0);
 			this.mousePage.Name = "mousePage";
 			this.mousePage.Padding = new System.Windows.Forms.Padding(10);
-			this.mousePage.Size = new System.Drawing.Size(392, 254);
+			this.mousePage.Size = new System.Drawing.Size(392, 226);
 			this.mousePage.TabIndex = 2;
 			this.mousePage.Text = "mouse & keyboard";
 			this.mousePage.ToolTipText = "Cursor options";
@@ -343,11 +341,11 @@
 			this.slideshowPage.Controls.Add(this.slideshowTimeLabel);
 			this.slideshowPage.Controls.Add(this.slideshowTimeNumeric);
 			this.slideshowPage.Controls.Add(this.slideshowCounterCheckBox);
-			this.slideshowPage.Location = new System.Drawing.Point(4, 32);
+			this.slideshowPage.Location = new System.Drawing.Point(4, 60);
 			this.slideshowPage.Margin = new System.Windows.Forms.Padding(0);
 			this.slideshowPage.Name = "slideshowPage";
 			this.slideshowPage.Padding = new System.Windows.Forms.Padding(10);
-			this.slideshowPage.Size = new System.Drawing.Size(392, 254);
+			this.slideshowPage.Size = new System.Drawing.Size(392, 226);
 			this.slideshowPage.TabIndex = 5;
 			this.slideshowPage.Text = "slideshow";
 			// 
@@ -429,11 +427,11 @@
 			this.startupPage.Controls.Add(this.updatesCheckBox);
 			this.startupPage.Controls.Add(this.startupPasteCheckBox);
 			this.startupPage.Controls.Add(this.startupLabel);
-			this.startupPage.Location = new System.Drawing.Point(4, 32);
+			this.startupPage.Location = new System.Drawing.Point(4, 60);
 			this.startupPage.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPage.Name = "startupPage";
 			this.startupPage.Padding = new System.Windows.Forms.Padding(10);
-			this.startupPage.Size = new System.Drawing.Size(392, 254);
+			this.startupPage.Size = new System.Drawing.Size(392, 226);
 			this.startupPage.TabIndex = 3;
 			this.startupPage.Text = "startup";
 			this.startupPage.ToolTipText = "App startup action";
@@ -518,11 +516,11 @@
 			this.externalPage.Controls.Add(this.browseBtn);
 			this.externalPage.Controls.Add(this.favExtTextBox);
 			this.externalPage.Controls.Add(this.favExtLabel);
-			this.externalPage.Location = new System.Drawing.Point(4, 32);
+			this.externalPage.Location = new System.Drawing.Point(4, 60);
 			this.externalPage.Margin = new System.Windows.Forms.Padding(0);
 			this.externalPage.Name = "externalPage";
 			this.externalPage.Padding = new System.Windows.Forms.Padding(10);
-			this.externalPage.Size = new System.Drawing.Size(392, 254);
+			this.externalPage.Size = new System.Drawing.Size(392, 226);
 			this.externalPage.TabIndex = 4;
 			this.externalPage.Text = "Windows";
 			// 
@@ -742,16 +740,6 @@
 			this.localizationRestart.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			this.localizationRestart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.restartLink_LinkClicked);
 			// 
-			// titlePanel
-			// 
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Controls.Add(this.titleLabel);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(420, 32);
-			this.titlePanel.TabIndex = 0;
-			// 
 			// closeBtn
 			// 
 			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
@@ -775,7 +763,7 @@
 			// titleLabel
 			// 
 			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(9, 7);
+			this.titleLabel.Location = new System.Drawing.Point(10, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
 			this.titleLabel.Size = new System.Drawing.Size(90, 19);
@@ -792,7 +780,8 @@
 			this.AlternativeAppearance = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(420, 342);
-			this.Controls.Add(this.titlePanel);
+			this.Controls.Add(this.closeBtn);
+			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.settingsTabs);
 			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -819,9 +808,8 @@
 			this.externalPage.PerformLayout();
 			this.langPage.ResumeLayout(false);
 			this.langPage.PerformLayout();
-			this.titlePanel.ResumeLayout(false);
-			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -834,7 +822,6 @@
 		private QuickLibrary.QlibTabs settingsTabs;
 		private System.Windows.Forms.TabPage themePage;
 		private System.Windows.Forms.TabPage mousePage;
-		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;

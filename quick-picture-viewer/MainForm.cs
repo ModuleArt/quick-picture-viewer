@@ -34,7 +34,8 @@ namespace quick_picture_viewer
 		private System.Threading.Timer suggestionTimer;
 		private bool framelessMode = false;
 
-		private SelectionForm selForm = null;
+		public SelectionForm selForm = null;
+		private EditSelForm editSelForm = null;
 
 		private string currentFolder;
 		private string recursiveFolder;
@@ -155,7 +156,6 @@ namespace quick_picture_viewer
 						Properties.Settings.Default.Language = LangMan.defaultLang;
 						break;
 				}
-
 				Properties.Settings.Default.Save();
 			}
 			else
@@ -214,6 +214,7 @@ namespace quick_picture_viewer
 
 			hasChangesLabel.Text = " " + LangMan.Get("not-saved");
 			zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + LangMan.Get("auto");
+			selectionLabel.ToolTipText = LangMan.Get("edit-selection") + " | Alt+S";
 
 			effectsBtn.Text = LangMan.Get("effects");
 			toolsBtn.Text = LangMan.Get("tools");
@@ -699,6 +700,7 @@ namespace quick_picture_viewer
 			aboutBox.Owner = this;
 			aboutBox.TopMost = alwaysOnTop;
 			aboutBox.ShowDialog();
+			aboutBox.Dispose();
 		}
 
 		public void toggleSlideshow()
@@ -1158,6 +1160,7 @@ namespace quick_picture_viewer
 						int newHorizontalValue = picturePanel.HorizontalScroll.Value + picturePanel.HorizontalScroll.LargeChange;
 						picturePanel.HorizontalScroll.Value = newHorizontalValue >= picturePanel.HorizontalScroll.Maximum ? picturePanel.HorizontalScroll.Maximum : newHorizontalValue;
 					}
+					else if (e.KeyCode == Keys.S) selectionLabel_Click(null, EventArgs.Empty);
 				}
 				else
 				{
@@ -1305,6 +1308,7 @@ namespace quick_picture_viewer
 			wallpaperForm.TopMost = alwaysOnTop;
 			wallpaperForm.DarkMode = darkMode;
 			wallpaperForm.ShowDialog();
+			wallpaperForm.Dispose();
 		}
 
 		private void deleteButton_Click(object sender, EventArgs e)
@@ -1401,6 +1405,7 @@ namespace quick_picture_viewer
 			infoForm.TopMost = alwaysOnTop;
 			infoForm.DarkMode = darkMode;
 			infoForm.ShowDialog();
+			infoForm.Dispose();
 		}
 
 		private void picturePanel_DoubleClick(object sender, EventArgs e)
@@ -1429,6 +1434,9 @@ namespace quick_picture_viewer
 				ForeColor = Color.White;
 				BackColor = ThemeMan.DarkBackColor;
 				statusStrip1.BackColor = ThemeMan.DarkSecondColor;
+
+				selectionLabel.LinkColor = Color.White;
+				selectionLabel.ActiveLinkColor = Color.White;
 
 				openBtn.Image = Properties.Resources.white_open;
 				openFileBtn.Image = Properties.Resources.white_imgfile;
@@ -1531,6 +1539,7 @@ namespace quick_picture_viewer
 			pf.DarkMode = darkMode;
 
 			if (pf.ShowDialog() == DialogResult.OK && printDialog1.ShowDialog() == DialogResult.OK) printDocument1.Print();
+			pf.Dispose();
 		}
 
 		private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -1723,6 +1732,7 @@ namespace quick_picture_viewer
 				sof.Owner = this;
 				sof.DarkMode = darkMode;
 				sof.ShowDialog();
+				sof.Dispose();
 			}
 		}
 
@@ -1782,6 +1792,7 @@ namespace quick_picture_viewer
 			settingsBox.TopMost = alwaysOnTop;
 			settingsBox.DarkMode = darkMode;
 			settingsBox.ShowDialog();
+			settingsBox.Dispose();
 		}
 
 		private void zoomOutButton_MouseLeave(object sender, EventArgs e)
@@ -1882,6 +1893,7 @@ namespace quick_picture_viewer
 				Properties.Settings.Default.BackColor = colorDialog1.Color.ToArgb().ToString();
 				Properties.Settings.Default.Save();
 			}
+			colorDialog1.Dispose();
 		}
 
 		private void MainForm_ResizeEnd(object sender, EventArgs e)
@@ -2046,6 +2058,7 @@ namespace quick_picture_viewer
 			pmf.TopMost = alwaysOnTop;
 			pmf.DarkMode = darkMode;
 			pmf.ShowDialog();
+			pmf.Dispose();
 		}
 
 		private void copyImageBtn_Click(object sender, EventArgs e)
@@ -2176,10 +2189,10 @@ namespace quick_picture_viewer
 			Point loc = PointToScreen(ClientRectangle.Location);
 			Rectangle result = new Rectangle()
 			{
-				Width = (int)(Math.Round(selForm.Width * scale)),
-				Height = (int)(Math.Round(selForm.Height * scale)),
-				X = (int)(Math.Round((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale)),
-				Y = (int)(Math.Round((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale))
+				Width = (int)Math.Round(selForm.Width * scale),
+				Height = (int)Math.Round(selForm.Height * scale),
+				X = (int)Math.Round((selForm.Location.X - loc.X - pictureBox.Location.X - picturePanel.Location.X) * scale),
+				Y = (int)Math.Round((selForm.Location.Y - loc.Y - pictureBox.Location.Y - picturePanel.Location.Y) * scale)
 			};
 
 			if (result.X < 0)
@@ -2269,6 +2282,32 @@ namespace quick_picture_viewer
 		private void zoom100Btn_Click(object sender, EventArgs e)
 		{
 			setZoomText("100%");
+		}
+
+		public void selectionLabel_Click(object sender, EventArgs e)
+		{
+			if (selForm != null && (editSelForm == null || editSelForm.IsDisposed))
+			{
+				editSelForm = new EditSelForm(GetSelectionRect());
+				editSelForm.Owner = this;
+				editSelForm.TopMost = alwaysOnTop;
+				editSelForm.DarkMode = darkMode;
+				editSelForm.ShowDialog();
+				editSelForm.Dispose();
+			}
+		}
+
+		public void SelectSelection(int x, int y, int w, int h)
+		{
+			double scale = (double)originalImage.Width / (double)pictureBox.Width;
+			Rectangle r = new Rectangle()
+			{
+				Width = (int)Math.Round((double)w / (double)scale),
+				Height = (int)Math.Round((double)h / (double)scale),
+				X = pictureBox.Location.X + (int)Math.Round((double)x / (double)scale),
+				Y = pictureBox.Location.Y + (int)Math.Round((double)y / (double)scale)
+			};
+			selForm.Select(r.X, r.Y, r.Width, r.Height);
 		}
 	}
 }

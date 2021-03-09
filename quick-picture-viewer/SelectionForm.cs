@@ -46,23 +46,40 @@ namespace quick_picture_viewer
 			cropBtn.Text = LangMan.Get("crop");
 			selectionCopyBtn.Text = LangMan.Get("copy");
 			selectionSelectAllBtn.Text = LangMan.Get("select-all");
+			editSelectionBtn.Text = LangMan.Get("edit-selection");
+
+			if (darkMode)
+			{
+				cropBtn.Image = Properties.Resources.white_crop;
+				selectionCopyBtn.Image = Properties.Resources.white_copy;
+				selectionSelectAllBtn.Image = Properties.Resources.white_selectall;
+				editSelectionBtn.Image = Properties.Resources.white_editsel;
+			}
 		}
 
 		public void UpdateContainerRect()
 		{
 			SetSize(Width, Height);
-			SetLocation(
+			Point curLoc = GetCurLoc();
+			SetLocation(curLoc.X, curLoc.Y);
+		}
+
+		private Point GetCurLoc()
+		{
+			return new Point(
 				Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X,
 				Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y
 			);
 		}
 
-		public void Select(int x, int y, int w, int h)
+		public void Select(int x = -1, int y = -1, int w = -1, int h = -1)
 		{
-			SetLocation(
-				picturePanel.Location.X + x, 
-				picturePanel.Location.Y + y
-			);
+			Point curLoc = GetCurLoc();
+			if (x == -1) x = curLoc.X;
+			if (y == -1) y = curLoc.Y;
+			if (w == -1) w = Width;
+			if (h == -1) h = Height;
+			SetLocation(picturePanel.Location.X + x, picturePanel.Location.Y + y);
 			SetSize(w, h);
 		}
 
@@ -140,8 +157,9 @@ namespace quick_picture_viewer
 							sizeStart.Width + locationStart.X - Location.X,
 							sizeStart.Height + locationStart.Y - Location.Y
 						);
-						int maxX = Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X + Width - MinimumSize.Width;
-						int maxY = Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y + Height - MinimumSize.Height;
+						Point curLoc = GetCurLoc();
+						int maxX = curLoc.X + Width - MinimumSize.Width;
+						int maxY = curLoc.Y + Height - MinimumSize.Height;
 						int x = Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X;
 						int y = Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y;
 						if (x > maxX) x = maxX;
@@ -204,36 +222,25 @@ namespace quick_picture_viewer
 
 		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
 		{
+			Point curLoc = GetCurLoc();
 			if (keyData == Keys.Left)
 			{
-				SetLocation(
-					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X - 1,
-					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y
-				);
+				SetLocation(curLoc.X - 1, curLoc.Y);
 				return true;
 			}
 			else if (keyData == Keys.Right)
 			{
-				SetLocation(
-					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X + 1,
-					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y
-				);
+				SetLocation(curLoc.X + 1, curLoc.Y);
 				return true;
 			}
 			else if (keyData == Keys.Down)
 			{
-				SetLocation(
-					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X,
-					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y + 1
-				);
+				SetLocation(curLoc.X, curLoc.Y + 1);
 				return true;
 			}
 			else if (keyData == Keys.Up)
 			{
-				SetLocation(
-					Location.X - Owner.RectangleToScreen(picturePanel.ClientRectangle).X,
-					Location.Y - Owner.RectangleToScreen(picturePanel.ClientRectangle).Y - 1
-				);
+				SetLocation(curLoc.X, curLoc.Y - 1);
 				return true;
 			}
 			return base.ProcessCmdKey(ref msg, keyData);
@@ -252,6 +259,11 @@ namespace quick_picture_viewer
 		private void cropBtn_Click(object sender, System.EventArgs e)
 		{
 			if (Owner != null) (Owner as MainForm).cropBtn_Click(sender, e);
+		}
+
+		private void editSelectionBtn_Click(object sender, System.EventArgs e)
+		{
+			if (Owner != null) (Owner as MainForm).selectionLabel_Click(sender, e);
 		}
 	}
 }

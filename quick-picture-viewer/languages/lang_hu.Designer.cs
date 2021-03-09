@@ -476,6 +476,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kijelölési terület szerkesztése.
+        /// </summary>
+        public static string edit_selection {
+            get {
+                return ResourceManager.GetString("edit-selection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hatások.
         /// </summary>
         public static string effects {

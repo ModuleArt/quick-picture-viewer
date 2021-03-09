@@ -60,7 +60,7 @@ namespace quick_picture_viewer
 		public SettingsForm()
 		{
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titlePanel, titleLabel });
+			SetDraggableControls(new List<Control>() { titleLabel });
 
 			int theme = Properties.Settings.Default.Theme;
 			if (theme == 0) systemThemeRadio.Checked = true;

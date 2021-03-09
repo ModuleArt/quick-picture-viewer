@@ -42,14 +42,12 @@
 			this.size256Button = new System.Windows.Forms.Button();
 			this.presetsLabel = new System.Windows.Forms.Label();
 			this.size512Button = new System.Windows.Forms.Button();
-			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.size32Button = new System.Windows.Forms.Button();
 			this.size16Button = new System.Windows.Forms.Button();
 			this.autoSizeBtn = new System.Windows.Forms.Button();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// okButton
@@ -62,7 +60,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(236, 32);
-			this.okButton.TabIndex = 13;
+			this.okButton.TabIndex = 11;
 			this.okButton.Text = " resize svg";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -112,7 +110,7 @@
 			this.widthNumeric.Name = "widthNumeric";
 			this.widthNumeric.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.widthNumeric.Size = new System.Drawing.Size(113, 32);
-			this.widthNumeric.TabIndex = 11;
+			this.widthNumeric.TabIndex = 9;
 			this.widthNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -143,7 +141,7 @@
 			this.heightNumeric.Name = "heightNumeric";
 			this.heightNumeric.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.heightNumeric.Size = new System.Drawing.Size(113, 32);
-			this.heightNumeric.TabIndex = 12;
+			this.heightNumeric.TabIndex = 10;
 			this.heightNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -168,7 +166,7 @@
 			this.aspectRatioCheckbox.Name = "aspectRatioCheckbox";
 			this.aspectRatioCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.aspectRatioCheckbox.Size = new System.Drawing.Size(236, 23);
-			this.aspectRatioCheckbox.TabIndex = 10;
+			this.aspectRatioCheckbox.TabIndex = 8;
 			this.aspectRatioCheckbox.Text = "maintain aspect ratio";
 			this.aspectRatioCheckbox.UseVisualStyleBackColor = true;
 			this.aspectRatioCheckbox.CheckedChanged += new System.EventHandler(this.aspectRatioCheckbox_CheckedChanged);
@@ -182,7 +180,7 @@
 			this.size128Button.Margin = new System.Windows.Forms.Padding(0);
 			this.size128Button.Name = "size128Button";
 			this.size128Button.Size = new System.Drawing.Size(72, 32);
-			this.size128Button.TabIndex = 7;
+			this.size128Button.TabIndex = 5;
 			this.size128Button.Text = "128 px";
 			this.size128Button.UseVisualStyleBackColor = false;
 			this.size128Button.Click += new System.EventHandler(this.size128Button_Click);
@@ -196,7 +194,7 @@
 			this.size64Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size64Button.Name = "size64Button";
 			this.size64Button.Size = new System.Drawing.Size(72, 32);
-			this.size64Button.TabIndex = 6;
+			this.size64Button.TabIndex = 4;
 			this.size64Button.Text = "64 px";
 			this.size64Button.UseVisualStyleBackColor = false;
 			this.size64Button.Click += new System.EventHandler(this.size64Button_Click);
@@ -210,7 +208,7 @@
 			this.defaultSizeButton.Margin = new System.Windows.Forms.Padding(0);
 			this.defaultSizeButton.Name = "defaultSizeButton";
 			this.defaultSizeButton.Size = new System.Drawing.Size(113, 32);
-			this.defaultSizeButton.TabIndex = 2;
+			this.defaultSizeButton.TabIndex = 0;
 			this.defaultSizeButton.Text = "original size";
 			this.defaultSizeButton.UseVisualStyleBackColor = false;
 			this.defaultSizeButton.Click += new System.EventHandler(this.defaultSizeButton_Click);
@@ -224,7 +222,7 @@
 			this.size256Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size256Button.Name = "size256Button";
 			this.size256Button.Size = new System.Drawing.Size(72, 32);
-			this.size256Button.TabIndex = 8;
+			this.size256Button.TabIndex = 6;
 			this.size256Button.Text = "256 px";
 			this.size256Button.UseVisualStyleBackColor = false;
 			this.size256Button.Click += new System.EventHandler(this.size256Button_Click);
@@ -248,20 +246,10 @@
 			this.size512Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size512Button.Name = "size512Button";
 			this.size512Button.Size = new System.Drawing.Size(72, 32);
-			this.size512Button.TabIndex = 9;
+			this.size512Button.TabIndex = 7;
 			this.size512Button.Text = "512 px";
 			this.size512Button.UseVisualStyleBackColor = false;
 			this.size512Button.Click += new System.EventHandler(this.size512Button_Click);
-			// 
-			// titlePanel
-			// 
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Controls.Add(this.titleLabel);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(256, 32);
-			this.titlePanel.TabIndex = 0;
 			// 
 			// closeBtn
 			// 
@@ -279,14 +267,14 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
+			this.closeBtn.TabIndex = 12;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// titleLabel
 			// 
 			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(9, 7);
+			this.titleLabel.Location = new System.Drawing.Point(10, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
 			this.titleLabel.Size = new System.Drawing.Size(88, 19);
@@ -302,7 +290,7 @@
 			this.size32Button.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.size32Button.Name = "size32Button";
 			this.size32Button.Size = new System.Drawing.Size(72, 32);
-			this.size32Button.TabIndex = 5;
+			this.size32Button.TabIndex = 3;
 			this.size32Button.Text = "32 px";
 			this.size32Button.UseVisualStyleBackColor = false;
 			this.size32Button.Click += new System.EventHandler(this.size32Button_Click);
@@ -316,7 +304,7 @@
 			this.size16Button.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.size16Button.Name = "size16Button";
 			this.size16Button.Size = new System.Drawing.Size(72, 32);
-			this.size16Button.TabIndex = 4;
+			this.size16Button.TabIndex = 2;
 			this.size16Button.Text = "16 px";
 			this.size16Button.UseVisualStyleBackColor = false;
 			this.size16Button.Click += new System.EventHandler(this.size16Button_Click);
@@ -330,7 +318,7 @@
 			this.autoSizeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.autoSizeBtn.Name = "autoSizeBtn";
 			this.autoSizeBtn.Size = new System.Drawing.Size(113, 32);
-			this.autoSizeBtn.TabIndex = 3;
+			this.autoSizeBtn.TabIndex = 1;
 			this.autoSizeBtn.Text = "auto size";
 			this.autoSizeBtn.UseVisualStyleBackColor = false;
 			this.autoSizeBtn.Click += new System.EventHandler(this.autoSizeBtn_Click);
@@ -339,7 +327,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(256, 343);
+			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.autoSizeBtn);
+			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.size16Button);
 			this.Controls.Add(this.heightNumeric);
 			this.Controls.Add(this.widthLabel);
@@ -350,7 +340,6 @@
 			this.Controls.Add(this.size256Button);
 			this.Controls.Add(this.size512Button);
 			this.Controls.Add(this.size128Button);
-			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.size64Button);
 			this.Controls.Add(this.defaultSizeButton);
 			this.Controls.Add(this.okButton);
@@ -366,8 +355,6 @@
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.SvgOpsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SvgOpsForm_KeyDown);
-			this.titlePanel.ResumeLayout(false);
-			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -386,7 +373,6 @@
 		private System.Windows.Forms.Button defaultSizeButton;
 		private System.Windows.Forms.Button size128Button;
 		private System.Windows.Forms.Button size64Button;
-		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.Button size32Button;
 		private System.Windows.Forms.Button size16Button;

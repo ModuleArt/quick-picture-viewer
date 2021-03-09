@@ -43,12 +43,10 @@
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.morePluginsBtn = new System.Windows.Forms.Button();
-			this.titlePanel = new System.Windows.Forms.Panel();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.addPluginBtn = new System.Windows.Forms.Button();
 			this.contextMenuStrip1.SuspendLayout();
-			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// listView1
@@ -73,7 +71,7 @@
 			this.listView1.ShowItemToolTips = true;
 			this.listView1.Size = new System.Drawing.Size(680, 306);
 			this.listView1.SmallImageList = this.imageList1;
-			this.listView1.TabIndex = 2;
+			this.listView1.TabIndex = 0;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
 			this.listView1.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listView1_ColumnWidthChanging);
@@ -168,7 +166,7 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
+			this.closeBtn.TabIndex = 3;
 			this.infoTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
@@ -183,23 +181,13 @@
 			this.morePluginsBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.morePluginsBtn.Name = "morePluginsBtn";
 			this.morePluginsBtn.Size = new System.Drawing.Size(200, 32);
-			this.morePluginsBtn.TabIndex = 4;
+			this.morePluginsBtn.TabIndex = 2;
 			this.morePluginsBtn.Text = " more plugins";
 			this.morePluginsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.morePluginsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.infoTooltip.SetToolTip(this.morePluginsBtn, "github.com/ModuleArt/qpv-plugins");
 			this.morePluginsBtn.UseVisualStyleBackColor = false;
 			this.morePluginsBtn.Click += new System.EventHandler(this.morePluginsBtn_Click);
-			// 
-			// titlePanel
-			// 
-			this.titlePanel.Controls.Add(this.titleLabel);
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(700, 32);
-			this.titlePanel.TabIndex = 0;
 			// 
 			// titleLabel
 			// 
@@ -226,7 +214,7 @@
 			this.addPluginBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.addPluginBtn.Name = "addPluginBtn";
 			this.addPluginBtn.Size = new System.Drawing.Size(200, 32);
-			this.addPluginBtn.TabIndex = 3;
+			this.addPluginBtn.TabIndex = 1;
 			this.addPluginBtn.Text = " browse for plugins";
 			this.addPluginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.addPluginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,9 +226,10 @@
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(700, 400);
+			this.Controls.Add(this.closeBtn);
+			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.morePluginsBtn);
 			this.Controls.Add(this.addPluginBtn);
-			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.listView1);
 			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -256,9 +245,8 @@
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.PluginManForm_DragEnter);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PluginManForm_KeyDown);
 			this.contextMenuStrip1.ResumeLayout(false);
-			this.titlePanel.ResumeLayout(false);
-			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -269,7 +257,6 @@
 		private System.Windows.Forms.ColumnHeader pluginNameColumn;
 		private System.Windows.Forms.ColumnHeader descColumn;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.Button addPluginBtn;

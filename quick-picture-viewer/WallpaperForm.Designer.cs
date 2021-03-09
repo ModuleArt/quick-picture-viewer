@@ -30,13 +30,11 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WallpaperForm));
 			this.okButton = new System.Windows.Forms.Button();
-			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.fitLabel = new System.Windows.Forms.Label();
 			this.fitComboBox = new QuickLibrary.QlibComboBox();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// okButton
@@ -50,22 +48,12 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(300, 32);
-			this.okButton.TabIndex = 3;
+			this.okButton.TabIndex = 1;
 			this.okButton.Text = " set background";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.okButton.UseVisualStyleBackColor = false;
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
-			// 
-			// titlePanel
-			// 
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Controls.Add(this.titleLabel);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(320, 32);
-			this.titlePanel.TabIndex = 0;
 			// 
 			// closeBtn
 			// 
@@ -83,7 +71,7 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
+			this.closeBtn.TabIndex = 2;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
@@ -117,15 +105,16 @@
 			this.fitComboBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fitComboBox.Name = "fitComboBox";
 			this.fitComboBox.Size = new System.Drawing.Size(300, 32);
-			this.fitComboBox.TabIndex = 2;
+			this.fitComboBox.TabIndex = 0;
 			// 
 			// WallpaperForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(320, 155);
+			this.Controls.Add(this.titleLabel);
+			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.fitLabel);
 			this.Controls.Add(this.fitComboBox);
-			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.okButton);
 			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -139,8 +128,6 @@
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.WallpaperForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WallpaperForm_KeyDown);
-			this.titlePanel.ResumeLayout(false);
-			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -148,7 +135,6 @@
 
 		#endregion
 		private System.Windows.Forms.Button okButton;
-		private System.Windows.Forms.Panel titlePanel;
 		private QuickLibrary.QlibComboBox fitComboBox;
 		private System.Windows.Forms.Label fitLabel;
 		private System.Windows.Forms.Label titleLabel;

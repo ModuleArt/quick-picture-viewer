@@ -143,6 +143,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_editsel {
+            get {
+                object obj = ResourceManager.GetObject("black_editsel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_effects {
             get {
                 object obj = ResourceManager.GetObject("black_effects", resourceCulture);
@@ -556,6 +566,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_edit {
             get {
                 object obj = ResourceManager.GetObject("white_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_editsel {
+            get {
+                object obj = ResourceManager.GetObject("white_editsel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

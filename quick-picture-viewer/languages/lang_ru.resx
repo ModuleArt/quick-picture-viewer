@@ -301,6 +301,10 @@
     <value>Редактировать</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Редактировать область выделения</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>Эффекты</value>
     <comment>Menu</comment>

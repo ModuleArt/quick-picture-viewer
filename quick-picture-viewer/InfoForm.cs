@@ -21,7 +21,7 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { 
-				titlePanel, titleLabel,
+				titleLabel,
 				fileNameLabel, folderLabel, fullPathLabel, compressionLabel, extensionLabel, createdLabel, modifiedLabel,
 				sizeLabel, megapixelsLabel, resolutionLabel, inchesLabel, cmLabel, diskSizeLabel, ratioLabel
 			});
@@ -154,8 +154,6 @@ namespace quick_picture_viewer
 			else if (firstRatio > secondRatio) ratioTextBox.Text += LangMan.Get("landscape");
 			else ratioTextBox.Text += LangMan.Get("portrait");
 			ratioTextBox.Text += ")";
-
-			fileNameTextBox.Focus();
 		}
 
 		private void InitLanguage()

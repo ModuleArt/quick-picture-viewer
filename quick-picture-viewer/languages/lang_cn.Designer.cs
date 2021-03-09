@@ -476,6 +476,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 编辑选择区域.
+        /// </summary>
+        public static string edit_selection {
+            get {
+                return ResourceManager.GetString("edit-selection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 特效.
         /// </summary>
         public static string effects {

@@ -302,6 +302,10 @@
     <value>Kép szerkeztése</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Kijelölési terület szerkesztése</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>Hatások</value>
     <comment>Menu</comment>

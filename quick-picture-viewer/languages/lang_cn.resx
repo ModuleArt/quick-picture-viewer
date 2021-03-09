@@ -302,6 +302,10 @@
     <value>编辑图像</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>编辑选择区域</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>特效</value>
     <comment>Menu</comment>

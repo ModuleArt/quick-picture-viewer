@@ -46,11 +46,9 @@
 			this.horizontalCheckBox = new QuickLibrary.QlibCheckBox();
 			this.marginsCheckBox = new QuickLibrary.QlibCheckBox();
 			this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-			this.titlePanel = new System.Windows.Forms.Panel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.titlePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// okButton
@@ -64,7 +62,7 @@
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(294, 32);
-			this.okButton.TabIndex = 12;
+			this.okButton.TabIndex = 10;
 			this.okButton.Text = "print";
 			this.okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -81,7 +79,7 @@
 			this.setMarginsButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.setMarginsButton.Name = "setMarginsButton";
 			this.setMarginsButton.Size = new System.Drawing.Size(294, 32);
-			this.setMarginsButton.TabIndex = 10;
+			this.setMarginsButton.TabIndex = 8;
 			this.setMarginsButton.Text = "set margins";
 			this.setMarginsButton.UseVisualStyleBackColor = false;
 			this.setMarginsButton.EnabledChanged += new System.EventHandler(this.setMarginsButton_EnabledChanged);
@@ -134,7 +132,7 @@
 			this.centerCheckbox.Name = "centerCheckbox";
 			this.centerCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.centerCheckbox.Size = new System.Drawing.Size(294, 32);
-			this.centerCheckbox.TabIndex = 4;
+			this.centerCheckbox.TabIndex = 2;
 			this.centerCheckbox.Text = "center image";
 			this.centerCheckbox.UseVisualStyleBackColor = true;
 			this.centerCheckbox.CheckedChanged += new System.EventHandler(this.centerCheckbox_CheckedChanged);
@@ -172,7 +170,7 @@
 			this.bottomMarginTextBox.Name = "bottomMarginTextBox";
 			this.bottomMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.bottomMarginTextBox.Size = new System.Drawing.Size(66, 32);
-			this.bottomMarginTextBox.TabIndex = 9;
+			this.bottomMarginTextBox.TabIndex = 7;
 			this.bottomMarginTextBox.Value = new decimal(new int[] {
             1,
             0,
@@ -202,7 +200,7 @@
 			this.rightMarginTextBox.Name = "rightMarginTextBox";
 			this.rightMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.rightMarginTextBox.Size = new System.Drawing.Size(66, 32);
-			this.rightMarginTextBox.TabIndex = 8;
+			this.rightMarginTextBox.TabIndex = 6;
 			this.rightMarginTextBox.Value = new decimal(new int[] {
             1,
             0,
@@ -232,7 +230,7 @@
 			this.topMarginTextBox.Name = "topMarginTextBox";
 			this.topMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.topMarginTextBox.Size = new System.Drawing.Size(66, 32);
-			this.topMarginTextBox.TabIndex = 7;
+			this.topMarginTextBox.TabIndex = 5;
 			this.topMarginTextBox.Value = new decimal(new int[] {
             1,
             0,
@@ -272,7 +270,7 @@
 			this.leftMarginTextBox.Name = "leftMarginTextBox";
 			this.leftMarginTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.leftMarginTextBox.Size = new System.Drawing.Size(66, 32);
-			this.leftMarginTextBox.TabIndex = 6;
+			this.leftMarginTextBox.TabIndex = 4;
 			this.leftMarginTextBox.Value = new decimal(new int[] {
             1,
             0,
@@ -303,7 +301,7 @@
 			this.titleTextBox.ReadOnly = false;
 			this.titleTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.titleTextBox.Size = new System.Drawing.Size(200, 32);
-			this.titleTextBox.TabIndex = 2;
+			this.titleTextBox.TabIndex = 0;
 			this.titleTextBox.WordWrap = true;
 			// 
 			// horizontalCheckBox
@@ -322,7 +320,7 @@
 			this.horizontalCheckBox.Name = "horizontalCheckBox";
 			this.horizontalCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.horizontalCheckBox.Size = new System.Drawing.Size(294, 32);
-			this.horizontalCheckBox.TabIndex = 3;
+			this.horizontalCheckBox.TabIndex = 1;
 			this.horizontalCheckBox.Text = "landscape";
 			this.horizontalCheckBox.UseVisualStyleBackColor = true;
 			this.horizontalCheckBox.CheckedChanged += new System.EventHandler(this.horizontalCheckBox_CheckedChanged);
@@ -344,7 +342,7 @@
 			this.marginsCheckBox.Name = "marginsCheckBox";
 			this.marginsCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.marginsCheckBox.Size = new System.Drawing.Size(294, 32);
-			this.marginsCheckBox.TabIndex = 5;
+			this.marginsCheckBox.TabIndex = 3;
 			this.marginsCheckBox.Text = "margin bounds";
 			this.marginsCheckBox.UseVisualStyleBackColor = true;
 			this.marginsCheckBox.CheckedChanged += new System.EventHandler(this.marginsCheckBox_CheckedChanged);
@@ -356,18 +354,8 @@
 			this.printPreviewControl1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.printPreviewControl1.Name = "printPreviewControl1";
 			this.printPreviewControl1.Size = new System.Drawing.Size(309, 252);
-			this.printPreviewControl1.TabIndex = 11;
+			this.printPreviewControl1.TabIndex = 9;
 			this.printPreviewControl1.TabStop = false;
-			// 
-			// titlePanel
-			// 
-			this.titlePanel.Controls.Add(this.closeBtn);
-			this.titlePanel.Controls.Add(this.titleLabel);
-			this.titlePanel.Location = new System.Drawing.Point(0, 0);
-			this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
-			this.titlePanel.Name = "titlePanel";
-			this.titlePanel.Size = new System.Drawing.Size(618, 32);
-			this.titlePanel.TabIndex = 0;
 			// 
 			// closeBtn
 			// 
@@ -385,14 +373,14 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 1;
+			this.closeBtn.TabIndex = 11;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// titleLabel
 			// 
 			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(9, 7);
+			this.titleLabel.Location = new System.Drawing.Point(10, 7);
 			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
 			this.titleLabel.Name = "titleLabel";
 			this.titleLabel.Size = new System.Drawing.Size(70, 19);
@@ -403,9 +391,10 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(618, 332);
+			this.Controls.Add(this.titleLabel);
+			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.setMarginsButton);
-			this.Controls.Add(this.titlePanel);
 			this.Controls.Add(this.bottomLabel);
 			this.Controls.Add(this.printPreviewControl1);
 			this.Controls.Add(this.rightLabel);
@@ -433,8 +422,6 @@
 			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.PrintForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrintForm_KeyDown);
-			this.titlePanel.ResumeLayout(false);
-			this.titlePanel.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -458,7 +445,6 @@
 		private System.Windows.Forms.Label rightLabel;
 		private System.Windows.Forms.Label topLabel;
 		private System.Windows.Forms.Button setMarginsButton;
-		private System.Windows.Forms.Panel titlePanel;
 		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;

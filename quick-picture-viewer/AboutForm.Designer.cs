@@ -84,7 +84,7 @@
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 0;
+			this.closeBtn.TabIndex = 4;
 			this.infoTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
@@ -101,7 +101,7 @@
 			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.developerBtn.Name = "developerBtn";
 			this.developerBtn.Size = new System.Drawing.Size(135, 32);
-			this.developerBtn.TabIndex = 4;
+			this.developerBtn.TabIndex = 2;
 			this.developerBtn.Text = " Module Art";
 			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -121,7 +121,7 @@
 			this.githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.githubBtn.Name = "githubBtn";
 			this.githubBtn.Size = new System.Drawing.Size(135, 32);
-			this.githubBtn.TabIndex = 3;
+			this.githubBtn.TabIndex = 1;
 			this.githubBtn.Text = " GitHub";
 			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -139,7 +139,7 @@
 			this.descTextBox.Name = "descTextBox";
 			this.descTextBox.ReadOnly = true;
 			this.descTextBox.Size = new System.Drawing.Size(260, 96);
-			this.descTextBox.TabIndex = 1;
+			this.descTextBox.TabIndex = 5;
 			this.descTextBox.Text = "description";
 			this.descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -155,7 +155,7 @@
 			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.makeDefaultBtn.Name = "makeDefaultBtn";
 			this.makeDefaultBtn.Size = new System.Drawing.Size(280, 32);
-			this.makeDefaultBtn.TabIndex = 5;
+			this.makeDefaultBtn.TabIndex = 3;
 			this.makeDefaultBtn.Text = "set as default photo viewer";
 			this.makeDefaultBtn.UseVisualStyleBackColor = false;
 			this.makeDefaultBtn.Click += new System.EventHandler(this.makeDefaultBtn_Click);
@@ -186,7 +186,7 @@
 			this.updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.updatesBtn.Name = "updatesBtn";
 			this.updatesBtn.Size = new System.Drawing.Size(280, 32);
-			this.updatesBtn.TabIndex = 2;
+			this.updatesBtn.TabIndex = 0;
 			this.updatesBtn.Text = " check for updates";
 			this.updatesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.updatesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

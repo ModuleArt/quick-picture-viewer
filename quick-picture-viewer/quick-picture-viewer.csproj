@@ -237,6 +237,12 @@
     <Compile Include="PrintForm.Designer.cs">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditSelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSelForm.Designer.cs">
+      <DependentUpon>EditSelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WallpaperForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SvgOpsForm.resx">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSelForm.resx">
+      <DependentUpon>EditSelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WallpaperForm.resx">
       <DependentUpon>WallpaperForm.cs</DependentUpon>
@@ -456,6 +465,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\light\white-editsel.png" />
+    <None Include="resources\imgs\dark\black-editsel.png" />
     <None Include="resources\imgs\dark\black-actualsize.png" />
     <None Include="resources\imgs\dark\black-selectall.png" />
     <None Include="resources\imgs\light\white-selectall.png" />
