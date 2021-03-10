@@ -2297,7 +2297,7 @@ namespace quick_picture_viewer
 			}
 		}
 
-		public void SelectSelection(int x, int y, int w, int h)
+		public Rectangle SelectSelection(int x, int y, int w, int h)
 		{
 			double scale = (double)originalImage.Width / (double)pictureBox.Width;
 			Rectangle r = new Rectangle()
@@ -2308,6 +2308,7 @@ namespace quick_picture_viewer
 				Y = pictureBox.Location.Y + (int)Math.Round((double)y / (double)scale)
 			};
 			selForm.Select(r.X, r.Y, r.Width, r.Height);
+			return GetSelectionRect();
 		}
 	}
 }

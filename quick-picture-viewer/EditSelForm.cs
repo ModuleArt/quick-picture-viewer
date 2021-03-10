@@ -75,12 +75,20 @@ namespace quick_picture_viewer
 
 		private void xNumeric_ValueChanged(object sender, EventArgs e)
 		{
-			if (Owner != null) (Owner as MainForm).SelectSelection(
-				(int)xNumeric.Value,
-				(int)yNumeric.Value,
-				(int)widthNumeric.Value,
-				(int)heightNumeric.Value
-			);
+			if (Owner != null)
+			{
+				Rectangle r = (Owner as MainForm).SelectSelection(
+					(int)xNumeric.Value,
+					(int)yNumeric.Value,
+					(int)widthNumeric.Value,
+					(int)heightNumeric.Value
+				);
+
+				if (xNumeric.Value != r.X) xNumeric.Value = r.X;
+				if (yNumeric.Value != r.Y) yNumeric.Value = r.Y;
+				if (widthNumeric.Value != r.Width) widthNumeric.Value = r.Width;
+				if (heightNumeric.Value != r.Height) heightNumeric.Value = r.Height;
+			}
 		}
 	}
 }

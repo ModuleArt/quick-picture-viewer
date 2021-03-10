@@ -1,6 +1,6 @@
 {
   "name": "qpv-plugins",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "title": "QPV Plugins",
   "description": {
     "en": "Set of preinstalled plugins",
@@ -24,12 +24,12 @@
     {
       "name": "blur",
       "title": {
-        "en": "Blur",
-        "cn": "模糊",
-        "fr": "Se brouiller",
-        "hu": "Elhomályosít",
-        "ru": "Размытие",
-        "es": "Difuminar"
+        "en": "Blur or pixelate",
+        "cn": "模糊或像素化",
+        "fr": "Flou ou pixeliser",
+        "hu": "Elmosódott vagy pixeles",
+        "ru": "Размытие или пикселизация",
+        "es": "Desenfocar o pixelar"
       },
       "type": "effect",
       "inputRequired": true,

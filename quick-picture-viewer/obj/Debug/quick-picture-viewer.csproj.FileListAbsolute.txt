@@ -33,7 +33,6 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Utf8Json.
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Threading.Tasks.Extensions.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\Utf8Json.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\SimplePsd.dll
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\QuickLibrary.pdb
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.languages.lang_cn.resources
@@ -61,3 +60,4 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\System.Va
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages\lang_de.resx
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.languages.lang_de.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.EditSelForm.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
