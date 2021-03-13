@@ -89,7 +89,6 @@
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.printButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.setAsDesktopButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator9 = new QuickLibrary.QlibToolsep();
 			this.backColorBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.backClearBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,20 +108,23 @@
 			this.showNavArrowsBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.showStatusbarBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibToolsep5 = new QuickLibrary.QlibToolsep();
+			this.wallpaperBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.qlibToolsep3 = new QuickLibrary.QlibToolsep();
 			this.copyBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyImageBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.pasteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.selectAllBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.navNextBtn = new System.Windows.Forms.Button();
-			this.navPrevBtn = new System.Windows.Forms.Button();
-			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.navNextBtn = new System.Windows.Forms.Button();
+			this.navPrevBtn = new System.Windows.Forms.Button();
+			this.typeOpsButton = new System.Windows.Forms.Button();
+			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -255,6 +257,7 @@
 			this.toolStrip1.DarkMode = false;
 			this.toolStrip1.DragForm = true;
 			this.toolStrip1.ForeColor = System.Drawing.Color.Black;
+			this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openBtn,
@@ -667,7 +670,6 @@
             this.reloadButton,
             this.deleteBtn,
             this.printButton,
-            this.setAsDesktopButton,
             this.toolStripSeparator9,
             this.backColorBtn,
             this.onTopButton,
@@ -706,14 +708,6 @@
 			this.printButton.ForeColor = System.Drawing.Color.Black;
 			this.printButton.Name = "printButton";
 			this.printButton.Click += new System.EventHandler(this.printButton_Click);
-			// 
-			// setAsDesktopButton
-			// 
-			this.setAsDesktopButton.BackColor = System.Drawing.SystemColors.ControlLight;
-			resources.ApplyResources(this.setAsDesktopButton, "setAsDesktopButton");
-			this.setAsDesktopButton.ForeColor = System.Drawing.Color.Black;
-			this.setAsDesktopButton.Name = "setAsDesktopButton";
-			this.setAsDesktopButton.Click += new System.EventHandler(this.setAsDesktopButton_Click);
 			// 
 			// toolStripSeparator9
 			// 
@@ -852,6 +846,8 @@
 			this.rmbMenu.ForeColor = System.Drawing.Color.Black;
 			this.rmbMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showMenuItem,
+            this.qlibToolsep5,
+            this.wallpaperBtn,
             this.qlibToolsep3,
             this.copyBtn,
             this.pasteBtn,
@@ -901,6 +897,26 @@
 			this.showStatusbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			resources.ApplyResources(this.showStatusbarBtn, "showStatusbarBtn");
 			this.showStatusbarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
+			// 
+			// qlibToolsep5
+			// 
+			resources.ApplyResources(this.qlibToolsep5, "qlibToolsep5");
+			this.qlibToolsep5.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.qlibToolsep5.DarkMode = false;
+			this.qlibToolsep5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+			this.qlibToolsep5.InsideMenu = true;
+			this.qlibToolsep5.Margin = new System.Windows.Forms.Padding(4);
+			this.qlibToolsep5.Name = "qlibToolsep5";
+			// 
+			// wallpaperBtn
+			// 
+			this.wallpaperBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			resources.ApplyResources(this.wallpaperBtn, "wallpaperBtn");
+			this.wallpaperBtn.ForeColor = System.Drawing.Color.Black;
+			this.wallpaperBtn.Image = global::quick_picture_viewer.Properties.Resources.black_desktop;
+			this.wallpaperBtn.Name = "wallpaperBtn";
+			this.wallpaperBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.wallpaperBtn.Click += new System.EventHandler(this.wallpaperBtn_Click);
 			// 
 			// qlibToolsep3
 			// 
@@ -966,48 +982,6 @@
 			this.selectAllBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.selectAllBtn.Click += new System.EventHandler(this.selectAllBtn_Click);
 			// 
-			// navNextBtn
-			// 
-			resources.ApplyResources(this.navNextBtn, "navNextBtn");
-			this.navNextBtn.BackColor = System.Drawing.Color.Black;
-			this.navNextBtn.FlatAppearance.BorderSize = 0;
-			this.navNextBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-			this.navNextBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-			this.navNextBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.navNextBtn.Image = global::quick_picture_viewer.Properties.Resources.white_next;
-			this.navNextBtn.Name = "navNextBtn";
-			this.navNextBtn.TabStop = false;
-			this.navNextBtn.UseVisualStyleBackColor = false;
-			this.navNextBtn.Click += new System.EventHandler(this.navNextBtn_Click);
-			// 
-			// navPrevBtn
-			// 
-			resources.ApplyResources(this.navPrevBtn, "navPrevBtn");
-			this.navPrevBtn.BackColor = System.Drawing.Color.Black;
-			this.navPrevBtn.FlatAppearance.BorderSize = 0;
-			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.navPrevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
-			this.navPrevBtn.Name = "navPrevBtn";
-			this.navPrevBtn.TabStop = false;
-			this.navPrevBtn.UseVisualStyleBackColor = false;
-			this.navPrevBtn.Click += new System.EventHandler(this.navPrevBtn_Click);
-			// 
-			// typeOpsButton
-			// 
-			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
-			this.typeOpsButton.BackColor = System.Drawing.Color.Black;
-			this.typeOpsButton.FlatAppearance.BorderSize = 0;
-			this.typeOpsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-			this.typeOpsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-			this.typeOpsButton.ForeColor = System.Drawing.Color.White;
-			this.typeOpsButton.Image = global::quick_picture_viewer.Properties.Resources.white_options;
-			this.typeOpsButton.Name = "typeOpsButton";
-			this.typeOpsButton.TabStop = false;
-			this.typeOpsButton.UseVisualStyleBackColor = false;
-			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
-			// 
 			// picturePanel
 			// 
 			resources.ApplyResources(this.picturePanel, "picturePanel");
@@ -1056,6 +1030,48 @@
 			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// navNextBtn
+			// 
+			resources.ApplyResources(this.navNextBtn, "navNextBtn");
+			this.navNextBtn.BackColor = System.Drawing.Color.Black;
+			this.navNextBtn.FlatAppearance.BorderSize = 0;
+			this.navNextBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.navNextBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.navNextBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.navNextBtn.Image = global::quick_picture_viewer.Properties.Resources.white_next;
+			this.navNextBtn.Name = "navNextBtn";
+			this.navNextBtn.TabStop = false;
+			this.navNextBtn.UseVisualStyleBackColor = false;
+			this.navNextBtn.Click += new System.EventHandler(this.navNextBtn_Click);
+			// 
+			// navPrevBtn
+			// 
+			resources.ApplyResources(this.navPrevBtn, "navPrevBtn");
+			this.navPrevBtn.BackColor = System.Drawing.Color.Black;
+			this.navPrevBtn.FlatAppearance.BorderSize = 0;
+			this.navPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.navPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.navPrevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
+			this.navPrevBtn.Name = "navPrevBtn";
+			this.navPrevBtn.TabStop = false;
+			this.navPrevBtn.UseVisualStyleBackColor = false;
+			this.navPrevBtn.Click += new System.EventHandler(this.navPrevBtn_Click);
+			// 
+			// typeOpsButton
+			// 
+			resources.ApplyResources(this.typeOpsButton, "typeOpsButton");
+			this.typeOpsButton.BackColor = System.Drawing.Color.Black;
+			this.typeOpsButton.FlatAppearance.BorderSize = 0;
+			this.typeOpsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.typeOpsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+			this.typeOpsButton.ForeColor = System.Drawing.Color.White;
+			this.typeOpsButton.Image = global::quick_picture_viewer.Properties.Resources.white_options;
+			this.typeOpsButton.Name = "typeOpsButton";
+			this.typeOpsButton.TabStop = false;
+			this.typeOpsButton.UseVisualStyleBackColor = false;
+			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
 			// 
 			// MainForm
 			// 
@@ -1125,7 +1141,6 @@
 		private System.Windows.Forms.Label suggestionLabel;
 		private System.Windows.Forms.ToolStripButton slideshowButton;
 		private System.Windows.Forms.ToolStripDropDownButton moreButton;
-		private System.Windows.Forms.ToolStripMenuItem setAsDesktopButton;
 		private System.Windows.Forms.Button typeOpsButton;
 		private System.Windows.Forms.ToolStripMenuItem reloadButton;
 		private System.Windows.Forms.ToolStripDropDownButton editButton;
@@ -1186,5 +1201,8 @@
 		private System.Windows.Forms.ToolStripMenuItem showNavArrowsBtn;
 		private System.Windows.Forms.ToolStripMenuItem selectAllBtn;
 		private System.Windows.Forms.ToolStripButton zoom100Btn;
+		private QuickLibrary.QlibToolsep qlibToolsep5;
+		private System.Windows.Forms.ToolStripMenuItem wallpaperBtn;
+		private System.Windows.Forms.ToolTip infoTooltip;
 	}
 }

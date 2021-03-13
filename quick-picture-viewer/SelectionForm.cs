@@ -46,7 +46,7 @@ namespace quick_picture_viewer
 			cropBtn.Text = LangMan.Get("crop");
 			selectionCopyBtn.Text = LangMan.Get("copy");
 			selectionSelectAllBtn.Text = LangMan.Get("select-all");
-			editSelectionBtn.Text = LangMan.Get("edit-selection");
+			editSelectionBtn.Text = LangMan.Get("edit-selection") + " ...";
 
 			if (darkMode)
 			{

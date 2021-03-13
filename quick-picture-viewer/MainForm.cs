@@ -176,7 +176,7 @@ namespace quick_picture_viewer
 			backColorBtn.Text = LangMan.Get("background-color");
 			backClearBtn.Text = LangMan.Get("clear");
 			backCustomBtn.Text = LangMan.Get("choose-color") + " ...";
-			setAsDesktopButton.Text = LangMan.Get("set-as-desktop-background") + " ...";
+			wallpaperBtn.Text = LangMan.Get("set-as-desktop-background") + " ...";
 			printButton.Text = LangMan.Get("print") + " ...";
 			deleteBtn.Text = LangMan.Get("move-to-trash") + " ...";
 			reloadButton.Text = LangMan.Get("reload-file");
@@ -211,11 +211,13 @@ namespace quick_picture_viewer
 			slideshowButton.Text = LangMan.Get("slideshow") + " | Ctrl+Shift+S";
 			showFileButton.Text = LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L";
 			prevButton.Text = LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow");
+			infoTooltip.SetToolTip(navPrevBtn, LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow"));
 			nextButton.Text = LangMan.Get("next-image") + " | " + LangMan.Get("right-arrow");
+			infoTooltip.SetToolTip(navNextBtn, LangMan.Get("next-image") + " | " + LangMan.Get("right-arrow"));
 
 			hasChangesLabel.Text = " " + LangMan.Get("not-saved");
 			zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + LangMan.Get("auto");
-			selectionLabel.ToolTipText = LangMan.Get("edit-selection") + " | Alt+S";
+			selectionLabel.ToolTipText = LangMan.Get("edit-selection") + " ... | Alt+S";
 
 			effectsBtn.Text = LangMan.Get("effects");
 			toolsBtn.Text = LangMan.Get("tools");
@@ -551,7 +553,7 @@ namespace quick_picture_viewer
 				selectAllBtn.Enabled = true;
 				autoZoomButton.Enabled = true;
 				selectionBtn.Enabled = true;
-				setAsDesktopButton.Enabled = true;
+				wallpaperBtn.Enabled = true;
 				infoButton.Enabled = true;
 				printButton.Enabled = true;
 				miniViewButton.Enabled = true;
@@ -1303,16 +1305,6 @@ namespace quick_picture_viewer
 			else showSuggestion(LangMan.Get("no-files-to-open"), SuggestionIcon.Warning);
 		}
 
-		private void setAsDesktopButton_Click(object sender, EventArgs e)
-		{
-			WallpaperForm wallpaperForm = new WallpaperForm(originalImage);
-			wallpaperForm.Owner = this;
-			wallpaperForm.TopMost = alwaysOnTop;
-			wallpaperForm.DarkMode = darkMode;
-			wallpaperForm.ShowDialog();
-			wallpaperForm.Dispose();
-		}
-
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
 			DialogResult d = DialogMan.ShowConfirm(
@@ -1374,7 +1366,7 @@ namespace quick_picture_viewer
 			copyImageBtn.Enabled = false;
 			selectAllBtn.Enabled = false;
 			copyFileBtn.Enabled = false;
-			setAsDesktopButton.Enabled = false;
+			wallpaperBtn.Enabled = false;
 			reloadButton.Enabled = false;
 			infoButton.Enabled = false;
 			externalRunBtn.Enabled = false;
@@ -1481,7 +1473,7 @@ namespace quick_picture_viewer
 				miniViewButton.Image = Properties.Resources.white_miniview;
 
 				moreButton.Image = Properties.Resources.white_more;
-				setAsDesktopButton.Image = Properties.Resources.white_desktop;
+				wallpaperBtn.Image = Properties.Resources.white_desktop;
 				aboutBtn.Image = Properties.Resources.white_about;
 				reloadButton.Image = Properties.Resources.white_sync;
 				newWindowButton.Image = Properties.Resources.white_newwindow;
@@ -2339,6 +2331,16 @@ namespace quick_picture_viewer
 		private void effectsBtn_DropDownOpening(object sender, EventArgs e)
 		{
 			CheckPluginsEnable();
+		}
+
+		private void wallpaperBtn_Click(object sender, EventArgs e)
+		{
+			WallpaperForm wallpaperForm = new WallpaperForm(originalImage);
+			wallpaperForm.Owner = this;
+			wallpaperForm.TopMost = alwaysOnTop;
+			wallpaperForm.DarkMode = darkMode;
+			wallpaperForm.ShowDialog();
+			wallpaperForm.Dispose();
 		}
 	}
 }

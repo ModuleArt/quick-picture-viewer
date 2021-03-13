@@ -83,6 +83,7 @@
 			// 
 			// settingsTabs
 			// 
+			this.settingsTabs.CausesValidation = false;
 			this.settingsTabs.Controls.Add(this.themePage);
 			this.settingsTabs.Controls.Add(this.mousePage);
 			this.settingsTabs.Controls.Add(this.slideshowPage);
@@ -90,6 +91,7 @@
 			this.settingsTabs.Controls.Add(this.externalPage);
 			this.settingsTabs.Controls.Add(this.langPage);
 			this.settingsTabs.DarkMode = false;
+			this.settingsTabs.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.settingsTabs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.settingsTabs.ItemSize = new System.Drawing.Size(28, 28);
 			this.settingsTabs.Location = new System.Drawing.Point(10, 42);
@@ -97,6 +99,7 @@
 			this.settingsTabs.Multiline = true;
 			this.settingsTabs.Name = "settingsTabs";
 			this.settingsTabs.Padding = new System.Drawing.Point(0, 0);
+			this.settingsTabs.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.settingsTabs.SelectedIndex = 0;
 			this.settingsTabs.Size = new System.Drawing.Size(400, 290);
 			this.settingsTabs.TabIndex = 0;
@@ -132,13 +135,13 @@
 			// 
 			this.systemThemeRadio.BackColor = System.Drawing.SystemColors.Control;
 			this.systemThemeRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.systemThemeRadio.CausesValidation = false;
 			this.systemThemeRadio.Checked = true;
 			this.systemThemeRadio.Cursor = System.Windows.Forms.Cursors.Default;
 			this.systemThemeRadio.DarkMode = false;
 			this.systemThemeRadio.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.systemThemeRadio.ForeColor = System.Drawing.Color.Black;
 			this.systemThemeRadio.Image = null;
-			this.systemThemeRadio.ImageIndex = 0;
 			this.systemThemeRadio.Location = new System.Drawing.Point(10, 10);
 			this.systemThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.systemThemeRadio.Name = "systemThemeRadio";
@@ -147,6 +150,7 @@
 			this.systemThemeRadio.TabIndex = 0;
 			this.systemThemeRadio.TabStop = true;
 			this.systemThemeRadio.Text = "system";
+			this.systemThemeRadio.UseMnemonic = false;
 			this.systemThemeRadio.UseVisualStyleBackColor = true;
 			this.systemThemeRadio.CheckedChanged += new System.EventHandler(this.systemThemeRadio_CheckedChanged);
 			// 
@@ -154,12 +158,12 @@
 			// 
 			this.darkThemeRadio.BackColor = System.Drawing.SystemColors.Control;
 			this.darkThemeRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.darkThemeRadio.CausesValidation = false;
 			this.darkThemeRadio.Cursor = System.Windows.Forms.Cursors.Default;
 			this.darkThemeRadio.DarkMode = false;
 			this.darkThemeRadio.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.darkThemeRadio.ForeColor = System.Drawing.Color.Black;
 			this.darkThemeRadio.Image = null;
-			this.darkThemeRadio.ImageIndex = 0;
 			this.darkThemeRadio.Location = new System.Drawing.Point(10, 74);
 			this.darkThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.darkThemeRadio.Name = "darkThemeRadio";
@@ -167,6 +171,7 @@
 			this.darkThemeRadio.Size = new System.Drawing.Size(372, 32);
 			this.darkThemeRadio.TabIndex = 2;
 			this.darkThemeRadio.Text = "dark";
+			this.darkThemeRadio.UseMnemonic = false;
 			this.darkThemeRadio.UseVisualStyleBackColor = true;
 			this.darkThemeRadio.CheckedChanged += new System.EventHandler(this.darkThemeRadio_CheckedChanged);
 			// 
@@ -174,12 +179,12 @@
 			// 
 			this.lightThemeRadio.BackColor = System.Drawing.SystemColors.Control;
 			this.lightThemeRadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.lightThemeRadio.CausesValidation = false;
 			this.lightThemeRadio.Cursor = System.Windows.Forms.Cursors.Default;
 			this.lightThemeRadio.DarkMode = false;
 			this.lightThemeRadio.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.lightThemeRadio.ForeColor = System.Drawing.Color.Black;
 			this.lightThemeRadio.Image = null;
-			this.lightThemeRadio.ImageIndex = 0;
 			this.lightThemeRadio.Location = new System.Drawing.Point(10, 42);
 			this.lightThemeRadio.Margin = new System.Windows.Forms.Padding(0);
 			this.lightThemeRadio.Name = "lightThemeRadio";
@@ -187,6 +192,7 @@
 			this.lightThemeRadio.Size = new System.Drawing.Size(372, 32);
 			this.lightThemeRadio.TabIndex = 1;
 			this.lightThemeRadio.Text = "light";
+			this.lightThemeRadio.UseMnemonic = false;
 			this.lightThemeRadio.UseVisualStyleBackColor = true;
 			this.lightThemeRadio.CheckedChanged += new System.EventHandler(this.lightThemeRadio_CheckedChanged);
 			// 
@@ -225,12 +231,12 @@
 			// 
 			this.mouseWheelActionRadio3.BackColor = System.Drawing.SystemColors.Control;
 			this.mouseWheelActionRadio3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.mouseWheelActionRadio3.CausesValidation = false;
 			this.mouseWheelActionRadio3.Cursor = System.Windows.Forms.Cursors.Default;
 			this.mouseWheelActionRadio3.DarkMode = false;
 			this.mouseWheelActionRadio3.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.mouseWheelActionRadio3.ForeColor = System.Drawing.Color.Black;
 			this.mouseWheelActionRadio3.Image = null;
-			this.mouseWheelActionRadio3.ImageIndex = 0;
 			this.mouseWheelActionRadio3.Location = new System.Drawing.Point(10, 177);
 			this.mouseWheelActionRadio3.Margin = new System.Windows.Forms.Padding(0);
 			this.mouseWheelActionRadio3.Name = "mouseWheelActionRadio3";
@@ -238,6 +244,7 @@
 			this.mouseWheelActionRadio3.Size = new System.Drawing.Size(372, 32);
 			this.mouseWheelActionRadio3.TabIndex = 4;
 			this.mouseWheelActionRadio3.Text = "next / previous image";
+			this.mouseWheelActionRadio3.UseMnemonic = false;
 			this.mouseWheelActionRadio3.UseVisualStyleBackColor = true;
 			this.mouseWheelActionRadio3.CheckedChanged += new System.EventHandler(this.mouseWheelActionRadio3_CheckedChanged);
 			// 
@@ -245,12 +252,12 @@
 			// 
 			this.mouseWheelActionRadio2.BackColor = System.Drawing.SystemColors.Control;
 			this.mouseWheelActionRadio2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.mouseWheelActionRadio2.CausesValidation = false;
 			this.mouseWheelActionRadio2.Cursor = System.Windows.Forms.Cursors.Default;
 			this.mouseWheelActionRadio2.DarkMode = false;
 			this.mouseWheelActionRadio2.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.mouseWheelActionRadio2.ForeColor = System.Drawing.Color.Black;
 			this.mouseWheelActionRadio2.Image = null;
-			this.mouseWheelActionRadio2.ImageIndex = 0;
 			this.mouseWheelActionRadio2.Location = new System.Drawing.Point(10, 145);
 			this.mouseWheelActionRadio2.Margin = new System.Windows.Forms.Padding(0);
 			this.mouseWheelActionRadio2.Name = "mouseWheelActionRadio2";
@@ -258,6 +265,7 @@
 			this.mouseWheelActionRadio2.Size = new System.Drawing.Size(372, 32);
 			this.mouseWheelActionRadio2.TabIndex = 3;
 			this.mouseWheelActionRadio2.Text = "zoom in / out";
+			this.mouseWheelActionRadio2.UseMnemonic = false;
 			this.mouseWheelActionRadio2.UseVisualStyleBackColor = true;
 			this.mouseWheelActionRadio2.CheckedChanged += new System.EventHandler(this.mouseWheelActionRadio2_CheckedChanged);
 			// 
@@ -265,13 +273,13 @@
 			// 
 			this.mouseWheelActionRadio1.BackColor = System.Drawing.SystemColors.Control;
 			this.mouseWheelActionRadio1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.mouseWheelActionRadio1.CausesValidation = false;
 			this.mouseWheelActionRadio1.Checked = true;
 			this.mouseWheelActionRadio1.Cursor = System.Windows.Forms.Cursors.Default;
 			this.mouseWheelActionRadio1.DarkMode = false;
 			this.mouseWheelActionRadio1.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.mouseWheelActionRadio1.ForeColor = System.Drawing.Color.Black;
 			this.mouseWheelActionRadio1.Image = null;
-			this.mouseWheelActionRadio1.ImageIndex = 0;
 			this.mouseWheelActionRadio1.Location = new System.Drawing.Point(10, 113);
 			this.mouseWheelActionRadio1.Margin = new System.Windows.Forms.Padding(0);
 			this.mouseWheelActionRadio1.Name = "mouseWheelActionRadio1";
@@ -280,6 +288,7 @@
 			this.mouseWheelActionRadio1.TabIndex = 2;
 			this.mouseWheelActionRadio1.TabStop = true;
 			this.mouseWheelActionRadio1.Text = "scroll up / down";
+			this.mouseWheelActionRadio1.UseMnemonic = false;
 			this.mouseWheelActionRadio1.UseVisualStyleBackColor = true;
 			this.mouseWheelActionRadio1.CheckedChanged += new System.EventHandler(this.mouseWheelActionRadio1_CheckedChanged);
 			// 
@@ -297,12 +306,13 @@
 			// 
 			this.escToExitCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.escToExitCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.escToExitCheckBox.CausesValidation = false;
 			this.escToExitCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.escToExitCheckBox.DarkMode = false;
 			this.escToExitCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.escToExitCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.escToExitCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.escToExitCheckBox.Image = null;
-			this.escToExitCheckBox.ImageIndex = 0;
 			this.escToExitCheckBox.Location = new System.Drawing.Point(10, 42);
 			this.escToExitCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.escToExitCheckBox.Name = "escToExitCheckBox";
@@ -310,6 +320,7 @@
 			this.escToExitCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.escToExitCheckBox.TabIndex = 1;
 			this.escToExitCheckBox.Text = "press esc to exit";
+			this.escToExitCheckBox.UseMnemonic = false;
 			this.escToExitCheckBox.UseVisualStyleBackColor = true;
 			this.escToExitCheckBox.CheckedChanged += new System.EventHandler(this.escToExitCheckBox_CheckedChanged);
 			// 
@@ -317,12 +328,13 @@
 			// 
 			this.fullscrCursorCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.fullscrCursorCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.fullscrCursorCheckBox.CausesValidation = false;
 			this.fullscrCursorCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.fullscrCursorCheckBox.DarkMode = false;
 			this.fullscrCursorCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.fullscrCursorCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.fullscrCursorCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.fullscrCursorCheckBox.Image = null;
-			this.fullscrCursorCheckBox.ImageIndex = 0;
 			this.fullscrCursorCheckBox.Location = new System.Drawing.Point(10, 10);
 			this.fullscrCursorCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fullscrCursorCheckBox.Name = "fullscrCursorCheckBox";
@@ -330,6 +342,7 @@
 			this.fullscrCursorCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.fullscrCursorCheckBox.TabIndex = 0;
 			this.fullscrCursorCheckBox.Text = "show cursor in fullscreen";
+			this.fullscrCursorCheckBox.UseMnemonic = false;
 			this.fullscrCursorCheckBox.UseVisualStyleBackColor = true;
 			this.fullscrCursorCheckBox.CheckedChanged += new System.EventHandler(this.fullscrCursorCheckBox_CheckedChanged);
 			// 
@@ -370,8 +383,11 @@
 			// 
 			// slideshowTimeNumeric
 			// 
+			this.slideshowTimeNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.slideshowTimeNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.slideshowTimeNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.slideshowTimeNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.slideshowTimeNumeric.CausesValidation = false;
 			this.slideshowTimeNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.slideshowTimeNumeric.DarkMode = false;
 			this.slideshowTimeNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -403,12 +419,13 @@
 			// 
 			this.slideshowCounterCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.slideshowCounterCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.slideshowCounterCheckBox.CausesValidation = false;
 			this.slideshowCounterCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.slideshowCounterCheckBox.DarkMode = false;
 			this.slideshowCounterCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.slideshowCounterCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.slideshowCounterCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.slideshowCounterCheckBox.Image = null;
-			this.slideshowCounterCheckBox.ImageIndex = 0;
 			this.slideshowCounterCheckBox.Location = new System.Drawing.Point(10, 81);
 			this.slideshowCounterCheckBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.slideshowCounterCheckBox.Name = "slideshowCounterCheckBox";
@@ -416,6 +433,7 @@
 			this.slideshowCounterCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.slideshowCounterCheckBox.TabIndex = 1;
 			this.slideshowCounterCheckBox.Text = "show slideshow counter";
+			this.slideshowCounterCheckBox.UseMnemonic = false;
 			this.slideshowCounterCheckBox.UseVisualStyleBackColor = true;
 			this.slideshowCounterCheckBox.CheckedChanged += new System.EventHandler(this.slideshowCounterCheckBox_CheckedChanged);
 			// 
@@ -439,12 +457,13 @@
 			// 
 			this.startupBoundsCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.startupBoundsCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.startupBoundsCheckBox.CausesValidation = false;
 			this.startupBoundsCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.startupBoundsCheckBox.DarkMode = false;
 			this.startupBoundsCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.startupBoundsCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.startupBoundsCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.startupBoundsCheckBox.Image = null;
-			this.startupBoundsCheckBox.ImageIndex = 0;
 			this.startupBoundsCheckBox.Location = new System.Drawing.Point(10, 71);
 			this.startupBoundsCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupBoundsCheckBox.Name = "startupBoundsCheckBox";
@@ -452,6 +471,7 @@
 			this.startupBoundsCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.startupBoundsCheckBox.TabIndex = 1;
 			this.startupBoundsCheckBox.Text = "bounds";
+			this.startupBoundsCheckBox.UseMnemonic = false;
 			this.startupBoundsCheckBox.UseVisualStyleBackColor = true;
 			this.startupBoundsCheckBox.CheckedChanged += new System.EventHandler(this.startupBoundsCheckBox_CheckedChanged);
 			// 
@@ -459,12 +479,13 @@
 			// 
 			this.updatesCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.updatesCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.updatesCheckBox.CausesValidation = false;
 			this.updatesCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.updatesCheckBox.DarkMode = false;
 			this.updatesCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.updatesCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.updatesCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.updatesCheckBox.Image = null;
-			this.updatesCheckBox.ImageIndex = 0;
 			this.updatesCheckBox.Location = new System.Drawing.Point(10, 39);
 			this.updatesCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.updatesCheckBox.Name = "updatesCheckBox";
@@ -472,6 +493,7 @@
 			this.updatesCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.updatesCheckBox.TabIndex = 0;
 			this.updatesCheckBox.Text = "check for app updates";
+			this.updatesCheckBox.UseMnemonic = false;
 			this.updatesCheckBox.UseVisualStyleBackColor = true;
 			this.updatesCheckBox.CheckedChanged += new System.EventHandler(this.updatesCheckBox_CheckedChanged);
 			// 
@@ -479,12 +501,13 @@
 			// 
 			this.startupPasteCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.startupPasteCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.startupPasteCheckBox.CausesValidation = false;
 			this.startupPasteCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.startupPasteCheckBox.DarkMode = false;
 			this.startupPasteCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.startupPasteCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.startupPasteCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.startupPasteCheckBox.Image = null;
-			this.startupPasteCheckBox.ImageIndex = 0;
 			this.startupPasteCheckBox.Location = new System.Drawing.Point(10, 103);
 			this.startupPasteCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.startupPasteCheckBox.Name = "startupPasteCheckBox";
@@ -492,6 +515,7 @@
 			this.startupPasteCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.startupPasteCheckBox.TabIndex = 2;
 			this.startupPasteCheckBox.Text = "paste";
+			this.startupPasteCheckBox.UseMnemonic = false;
 			this.startupPasteCheckBox.UseVisualStyleBackColor = true;
 			this.startupPasteCheckBox.CheckedChanged += new System.EventHandler(this.startupPasteCheckBox_CheckedChanged);
 			// 
@@ -542,12 +566,13 @@
 			// 
 			this.browseWithCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.browseWithCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.browseWithCheckBox.CausesValidation = false;
 			this.browseWithCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.browseWithCheckBox.DarkMode = false;
 			this.browseWithCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.browseWithCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.browseWithCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.browseWithCheckBox.Image = null;
-			this.browseWithCheckBox.ImageIndex = 0;
 			this.browseWithCheckBox.Location = new System.Drawing.Point(10, 113);
 			this.browseWithCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.browseWithCheckBox.Name = "browseWithCheckBox";
@@ -555,6 +580,7 @@
 			this.browseWithCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.browseWithCheckBox.TabIndex = 2;
 			this.browseWithCheckBox.Text = "browse folder with qpv";
+			this.browseWithCheckBox.UseMnemonic = false;
 			this.browseWithCheckBox.UseVisualStyleBackColor = true;
 			this.browseWithCheckBox.CheckedChanged += new System.EventHandler(this.browseWithCheckBox_CheckedChanged);
 			// 
@@ -572,12 +598,13 @@
 			// 
 			this.openWithCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.openWithCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.openWithCheckBox.CausesValidation = false;
 			this.openWithCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.openWithCheckBox.DarkMode = false;
 			this.openWithCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.openWithCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.openWithCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.openWithCheckBox.Image = null;
-			this.openWithCheckBox.ImageIndex = 0;
 			this.openWithCheckBox.Location = new System.Drawing.Point(10, 81);
 			this.openWithCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.openWithCheckBox.Name = "openWithCheckBox";
@@ -585,6 +612,7 @@
 			this.openWithCheckBox.Size = new System.Drawing.Size(372, 32);
 			this.openWithCheckBox.TabIndex = 1;
 			this.openWithCheckBox.Text = "open with qpv";
+			this.openWithCheckBox.UseMnemonic = false;
 			this.openWithCheckBox.UseVisualStyleBackColor = true;
 			this.openWithCheckBox.CheckedChanged += new System.EventHandler(this.openWithCheckBox_CheckedChanged);
 			// 
@@ -609,8 +637,11 @@
 			// 
 			// favExtTextBox
 			// 
+			this.favExtTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.favExtTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.favExtTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.favExtTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.favExtTextBox.CausesValidation = false;
 			this.favExtTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.favExtTextBox.DarkMode = false;
 			this.favExtTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

@@ -51,8 +51,8 @@
 			this.okButton.Location = new System.Drawing.Point(10, 177);
 			this.okButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.okButton.Name = "okButton";
-			this.okButton.Size = new System.Drawing.Size(236, 32);
-			this.okButton.TabIndex = 1;
+			this.okButton.Size = new System.Drawing.Size(276, 32);
+			this.okButton.TabIndex = 4;
 			this.okButton.Text = "ok";
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.okButton.UseVisualStyleBackColor = false;
@@ -70,23 +70,26 @@
 			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
 			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(224, 0);
+			this.closeBtn.Location = new System.Drawing.Point(264, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
 			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 2;
+			this.closeBtn.TabIndex = 5;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
 			// heightNumeric
 			// 
+			this.heightNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.heightNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.heightNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.heightNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.heightNumeric.CausesValidation = false;
 			this.heightNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.heightNumeric.DarkMode = false;
 			this.heightNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.heightNumeric.ForeColor = System.Drawing.Color.Black;
-			this.heightNumeric.Location = new System.Drawing.Point(133, 135);
+			this.heightNumeric.Location = new System.Drawing.Point(153, 135);
 			this.heightNumeric.Margin = new System.Windows.Forms.Padding(0);
 			this.heightNumeric.Maximum = new decimal(new int[] {
             10000,
@@ -100,8 +103,8 @@
             0});
 			this.heightNumeric.Name = "heightNumeric";
 			this.heightNumeric.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.heightNumeric.Size = new System.Drawing.Size(113, 32);
-			this.heightNumeric.TabIndex = 20;
+			this.heightNumeric.Size = new System.Drawing.Size(133, 32);
+			this.heightNumeric.TabIndex = 3;
 			this.heightNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -122,7 +125,7 @@
 			// heightLabel
 			// 
 			this.heightLabel.AutoSize = true;
-			this.heightLabel.Location = new System.Drawing.Point(125, 106);
+			this.heightLabel.Location = new System.Drawing.Point(145, 106);
 			this.heightLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.heightLabel.Name = "heightLabel";
 			this.heightLabel.Size = new System.Drawing.Size(51, 19);
@@ -131,8 +134,11 @@
 			// 
 			// widthNumeric
 			// 
+			this.widthNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.widthNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.widthNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.widthNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.widthNumeric.CausesValidation = false;
 			this.widthNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.widthNumeric.DarkMode = false;
 			this.widthNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -151,8 +157,8 @@
             0});
 			this.widthNumeric.Name = "widthNumeric";
 			this.widthNumeric.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.widthNumeric.Size = new System.Drawing.Size(113, 32);
-			this.widthNumeric.TabIndex = 19;
+			this.widthNumeric.Size = new System.Drawing.Size(133, 32);
+			this.widthNumeric.TabIndex = 2;
 			this.widthNumeric.Value = new decimal(new int[] {
             1,
             0,
@@ -162,13 +168,16 @@
 			// 
 			// yNumeric
 			// 
+			this.yNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.yNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.yNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.yNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.yNumeric.CausesValidation = false;
 			this.yNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.yNumeric.DarkMode = false;
 			this.yNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.yNumeric.ForeColor = System.Drawing.Color.Black;
-			this.yNumeric.Location = new System.Drawing.Point(133, 64);
+			this.yNumeric.Location = new System.Drawing.Point(153, 64);
 			this.yNumeric.Margin = new System.Windows.Forms.Padding(0);
 			this.yNumeric.Maximum = new decimal(new int[] {
             10000,
@@ -182,8 +191,8 @@
             0});
 			this.yNumeric.Name = "yNumeric";
 			this.yNumeric.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.yNumeric.Size = new System.Drawing.Size(113, 32);
-			this.yNumeric.TabIndex = 24;
+			this.yNumeric.Size = new System.Drawing.Size(133, 32);
+			this.yNumeric.TabIndex = 1;
 			this.yNumeric.Value = new decimal(new int[] {
             0,
             0,
@@ -204,7 +213,7 @@
 			// yLabel
 			// 
 			this.yLabel.AutoSize = true;
-			this.yLabel.Location = new System.Drawing.Point(129, 35);
+			this.yLabel.Location = new System.Drawing.Point(149, 35);
 			this.yLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.yLabel.Name = "yLabel";
 			this.yLabel.Size = new System.Drawing.Size(20, 19);
@@ -213,8 +222,11 @@
 			// 
 			// xNumeric
 			// 
+			this.xNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.xNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.xNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.xNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.xNumeric.CausesValidation = false;
 			this.xNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.xNumeric.DarkMode = false;
 			this.xNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -233,8 +245,8 @@
             0});
 			this.xNumeric.Name = "xNumeric";
 			this.xNumeric.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.xNumeric.Size = new System.Drawing.Size(113, 32);
-			this.xNumeric.TabIndex = 23;
+			this.xNumeric.Size = new System.Drawing.Size(133, 32);
+			this.xNumeric.TabIndex = 0;
 			this.xNumeric.Value = new decimal(new int[] {
             0,
             0,
@@ -245,7 +257,7 @@
 			// EditSelForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(256, 220);
+			this.ClientSize = new System.Drawing.Size(296, 220);
 			this.Controls.Add(this.yNumeric);
 			this.Controls.Add(this.xLabel);
 			this.Controls.Add(this.yLabel);

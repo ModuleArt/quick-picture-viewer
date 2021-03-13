@@ -573,6 +573,9 @@
   <data name="toolStripSeparator4.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="toolStripSeparator4.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 24</value>
   </data>
@@ -638,6 +641,9 @@
   </data>
   <data name="toolStripSeparator1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="toolStripSeparator1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 24</value>
@@ -740,6 +746,9 @@
   <data name="toolStripSeparator2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="toolStripSeparator2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 24</value>
   </data>
@@ -797,6 +806,9 @@
   </data>
   <data name="qlibToolsep4.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="qlibToolsep4.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
   <data name="qlibToolsep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -873,6 +885,9 @@
   <data name="toolStripSeparator7.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="toolStripSeparator7.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
   </data>
@@ -927,6 +942,9 @@
   <data name="toolStripSeparator3.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="toolStripSeparator3.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 24</value>
   </data>
@@ -978,6 +996,9 @@
   <data name="qlibToolsep1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="qlibToolsep1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="qlibToolsep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 24</value>
   </data>
@@ -991,7 +1012,7 @@
     <value>F5</value>
   </data>
   <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="reloadButton.Text" xml:space="preserve">
     <value>reload file</value>
@@ -1003,7 +1024,7 @@
     <value>Del</value>
   </data>
   <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="deleteBtn.Text" xml:space="preserve">
     <value>move to trash</value>
@@ -1023,36 +1044,19 @@
     <value>Ctrl+P</value>
   </data>
   <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="printButton.Text" xml:space="preserve">
     <value>print</value>
   </data>
-  <data name="setAsDesktopButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="setAsDesktopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAGRJREFUOE9jGDSgC4i/A/F/IjFIbTsQw8FPIBaFMIkCYkD8A8KEAJCpMBrGJgRQ
-        1FHNAFIAVgNANLGG0cYAUgCGAeRgOAClAyEIkyggDMQo6QCUEn8DMTZbsGGQWpSUOGQBAwMANztAA2Yw
-        a0EAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="setAsDesktopButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+W</value>
-  </data>
-  <data name="setAsDesktopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
-  </data>
-  <data name="setAsDesktopButton.Text" xml:space="preserve">
-    <value>set as desktop background</value>
-  </data>
   <data name="toolStripSeparator9.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="toolStripSeparator9.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 6</value>
+    <value>208, 6</value>
   </data>
   <data name="backClearBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1076,6 +1080,9 @@
   <data name="qlibMenuSeparator1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="qlibMenuSeparator1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="qlibMenuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 6</value>
   </data>
@@ -1089,7 +1096,7 @@
     <value>choose color</value>
   </data>
   <data name="backColorBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="backColorBtn.Text" xml:space="preserve">
     <value>background color</value>
@@ -1106,7 +1113,7 @@
     <value>Ctrl+T</value>
   </data>
   <data name="onTopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="onTopButton.Text" xml:space="preserve">
     <value>always on top</value>
@@ -1123,7 +1130,7 @@
     <value>F10</value>
   </data>
   <data name="framelessBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="framelessBtn.Text" xml:space="preserve">
     <value>frameless mode</value>
@@ -1132,7 +1139,7 @@
     <value>Ctrl+N</value>
   </data>
   <data name="newWindowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="newWindowButton.Text" xml:space="preserve">
     <value>new window</value>
@@ -1140,14 +1147,17 @@
   <data name="qlibToolsep2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="qlibToolsep2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="qlibToolsep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 6</value>
+    <value>208, 6</value>
   </data>
   <data name="pluginManBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F2</value>
   </data>
   <data name="pluginManBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="pluginManBtn.Text" xml:space="preserve">
     <value>plugin manager</value>
@@ -1155,14 +1165,17 @@
   <data name="toolStripSeparator10.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="toolStripSeparator10.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 6</value>
+    <value>208, 6</value>
   </data>
   <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="aboutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 24</value>
+    <value>211, 24</value>
   </data>
   <data name="moreButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1262,16 +1275,40 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="showMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
+    <value>287, 26</value>
   </data>
   <data name="showMenuItem.Text" xml:space="preserve">
     <value>view</value>
   </data>
+  <data name="qlibToolsep5.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="qlibToolsep5.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="qlibToolsep5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 6</value>
+  </data>
+  <data name="wallpaperBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="wallpaperBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+B</value>
+  </data>
+  <data name="wallpaperBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 26</value>
+  </data>
+  <data name="wallpaperBtn.Text" xml:space="preserve">
+    <value>set as desktop background</value>
+  </data>
   <data name="qlibToolsep3.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="qlibToolsep3.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <data name="qlibToolsep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 6</value>
+    <value>284, 6</value>
   </data>
   <data name="copyImageBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+C</value>
@@ -1292,7 +1329,7 @@
     <value>copy file</value>
   </data>
   <data name="copyBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
+    <value>287, 26</value>
   </data>
   <data name="copyBtn.Text" xml:space="preserve">
     <value>copy</value>
@@ -1301,7 +1338,7 @@
     <value>Ctrl+V</value>
   </data>
   <data name="pasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
+    <value>287, 26</value>
   </data>
   <data name="pasteBtn.Text" xml:space="preserve">
     <value>paste</value>
@@ -1313,13 +1350,13 @@
     <value>Ctrl+A</value>
   </data>
   <data name="selectAllBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
+    <value>287, 26</value>
   </data>
   <data name="selectAllBtn.Text" xml:space="preserve">
     <value>select all</value>
   </data>
   <data name="rmbMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 122</value>
+    <value>288, 162</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Name" xml:space="preserve">
     <value>rmbMenu</value>
@@ -4531,12 +4568,6 @@
   <data name="&gt;&gt;printButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;setAsDesktopButton.Name" xml:space="preserve">
-    <value>setAsDesktopButton</value>
-  </data>
-  <data name="&gt;&gt;setAsDesktopButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripSeparator9.Name" xml:space="preserve">
     <value>toolStripSeparator9</value>
   </data>
@@ -4645,6 +4676,18 @@
   <data name="&gt;&gt;showStatusbarBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;qlibToolsep5.Name" xml:space="preserve">
+    <value>qlibToolsep5</value>
+  </data>
+  <data name="&gt;&gt;qlibToolsep5.Type" xml:space="preserve">
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;wallpaperBtn.Name" xml:space="preserve">
+    <value>wallpaperBtn</value>
+  </data>
+  <data name="&gt;&gt;wallpaperBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;qlibToolsep3.Name" xml:space="preserve">
     <value>qlibToolsep3</value>
   </data>
@@ -4681,6 +4724,12 @@
   <data name="&gt;&gt;selectAllBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;infoTooltip.Name" xml:space="preserve">
+    <value>infoTooltip</value>
+  </data>
+  <data name="&gt;&gt;infoTooltip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
@@ -4701,5 +4750,8 @@
   </metadata>
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1038, 17</value>
+  </metadata>
+  <metadata name="infoTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1159, 17</value>
   </metadata>
 </root>
