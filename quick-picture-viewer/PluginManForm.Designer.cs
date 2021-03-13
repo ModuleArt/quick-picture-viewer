@@ -43,9 +43,9 @@
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.morePluginsBtn = new System.Windows.Forms.Button();
-			this.titleLabel = new System.Windows.Forms.Label();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.addPluginBtn = new System.Windows.Forms.Button();
+			this.refreshBtn = new System.Windows.Forms.Button();
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -125,11 +125,14 @@
 			// 
 			// qlibMenuSeparator2
 			// 
+			this.qlibMenuSeparator2.AutoSize = false;
 			this.qlibMenuSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.qlibMenuSeparator2.DarkMode = false;
+			this.qlibMenuSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibMenuSeparator2.InsideMenu = true;
 			this.qlibMenuSeparator2.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
+			this.qlibMenuSeparator2.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.qlibMenuSeparator2.Size = new System.Drawing.Size(207, 6);
 			// 
 			// deleteBtn
@@ -189,16 +192,6 @@
 			this.morePluginsBtn.UseVisualStyleBackColor = false;
 			this.morePluginsBtn.Click += new System.EventHandler(this.morePluginsBtn_Click);
 			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(10, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(107, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "PluginManForm";
-			// 
 			// openFileDialog1
 			// 
 			this.openFileDialog1.Filter = "QuickPlugins|*.qp.zip";
@@ -221,13 +214,29 @@
 			this.addPluginBtn.UseVisualStyleBackColor = false;
 			this.addPluginBtn.Click += new System.EventHandler(this.addPluginBtn_Click);
 			// 
+			// refreshBtn
+			// 
+			this.refreshBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.refreshBtn.FlatAppearance.BorderSize = 0;
+			this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.refreshBtn.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
+			this.refreshBtn.Location = new System.Drawing.Point(220, 358);
+			this.refreshBtn.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.refreshBtn.Name = "refreshBtn";
+			this.refreshBtn.Size = new System.Drawing.Size(32, 32);
+			this.refreshBtn.TabIndex = 17;
+			this.refreshBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.refreshBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.refreshBtn.UseVisualStyleBackColor = false;
+			this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+			// 
 			// PluginManForm
 			// 
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(700, 400);
+			this.Controls.Add(this.refreshBtn);
 			this.Controls.Add(this.closeBtn);
-			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.morePluginsBtn);
 			this.Controls.Add(this.addPluginBtn);
 			this.Controls.Add(this.listView1);
@@ -237,9 +246,9 @@
 			this.MinimizeBox = false;
 			this.Name = "PluginManForm";
 			this.ShowInTaskbar = false;
+			this.ShowTitle = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "PluginManForm";
-			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.PluginManForm_Load);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.PluginManForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.PluginManForm_DragEnter);
@@ -257,7 +266,6 @@
 		private System.Windows.Forms.ColumnHeader pluginNameColumn;
 		private System.Windows.Forms.ColumnHeader descColumn;
 		private System.Windows.Forms.ToolTip infoTooltip;
-		private System.Windows.Forms.Label titleLabel;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.Button addPluginBtn;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -268,5 +276,6 @@
 		private System.Windows.Forms.Button morePluginsBtn;
 		private System.Windows.Forms.ToolStripMenuItem pluginWebsiteBtn;
 		private QuickLibrary.QlibToolsep qlibMenuSeparator2;
+		private System.Windows.Forms.Button refreshBtn;
 	}
 }

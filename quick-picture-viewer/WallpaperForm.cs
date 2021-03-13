@@ -15,7 +15,7 @@ namespace quick_picture_viewer
 			this.bmp = bmp;
 
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titleLabel, fitLabel });
+			SetDraggableControls(new List<Control>() { fitLabel });
 		}
 
 		private void SetDarkMode(bool dark)
@@ -26,7 +26,7 @@ namespace quick_picture_viewer
 				okButton.Image = Properties.Resources.white_desktop;
 			}
 			DarkMode = dark;
-			fitComboBox.SetDarkMode(dark);
+			fitComboBox.DarkMode = dark;
 			closeBtn.DarkMode = dark;
 		}
 

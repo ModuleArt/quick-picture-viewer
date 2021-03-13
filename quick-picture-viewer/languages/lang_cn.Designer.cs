@@ -1268,6 +1268,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 重新加载插件列表.
+        /// </summary>
+        public static string reload_plugins {
+            get {
+                return ResourceManager.GetString("reload-plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 更改大小.
         /// </summary>
         public static string resize_svg {

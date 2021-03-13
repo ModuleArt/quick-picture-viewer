@@ -17,7 +17,7 @@ namespace quick_picture_viewer
 	{
 		private string openPath = null;
 		private int zoomFactor = 100;
-		private Bitmap originalImage = null;
+		public Bitmap originalImage = null;
 		private bool autoZoom = true;
 		private Point panelMouseDownLocation;
 		private bool fullscreen = false;
@@ -132,6 +132,7 @@ namespace quick_picture_viewer
 				zoomIn();
 				return true;
 			}
+
 			return base.ProcessCmdKey(ref msg, keyData);
 		}
 
@@ -316,6 +317,8 @@ namespace quick_picture_viewer
 			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;
 			if (Properties.Settings.Default.CheckForUpdates) UpdateMan.CheckForUpdates(false, TopMost, Handle);
 
+			ReloadPlugins();
+
 			base.OnLoad(e);
 		}
 
@@ -462,7 +465,6 @@ namespace quick_picture_viewer
 						noBtnImage: deleteBtn.Image,
 						darkMode: darkMode
 					);
-
 					if (window == DialogResult.Yes) saveAsButton.PerformClick();
 					else if (window != DialogResult.No) return;
 				}
@@ -1320,7 +1322,6 @@ namespace quick_picture_viewer
 				windowTitle: LangMan.Get("delete-file"),
 				darkMode: darkMode
 			);
-
 			if (d == DialogResult.Yes)
 			{
 				string path = Path.Combine(currentFolder, currentFile);
@@ -1612,7 +1613,6 @@ namespace quick_picture_viewer
 					noBtnImage: deleteBtn.Image,
 					darkMode: darkMode
 				);
-
 				if (window == DialogResult.Yes) saveAsButton.PerformClick();
 				else if (window != DialogResult.No) e.Cancel = true;
 			}
@@ -1932,7 +1932,31 @@ namespace quick_picture_viewer
 			SetFramelessMode(!framelessMode);
 		}
 
-		private void effectsBtn_DropDownOpening(object sender, EventArgs eventArgs)
+		public void CheckPluginsEnable()
+		{
+			PluginInfo[] plugins = PluginMan.GetPluginsCache(Properties.Settings.Default.PluginsCache);
+
+			List<PluginInfo.Function> toEffects = new List<PluginInfo.Function>();
+			List<PluginInfo.Function> toTools = new List<PluginInfo.Function>();
+			for (int i = 0; i < plugins.Length; i++)
+			{
+				for (int j = 0; j < plugins[i].functions.Length; j++)
+				{
+					if (plugins[i].functions[j].type == "effect") toEffects.Add(plugins[i].functions[j]);
+					else if (plugins[i].functions[j].type == "tool") toTools.Add(plugins[i].functions[j]);
+				}
+			}
+			for (int i = 0; i < toEffects.Count; i++)
+			{
+				if (toEffects[i].inputRequired) effectsBtn.DropDownItems[i].Enabled = originalImage != null;
+			}
+			for (int i = 0; i < toTools.Count; i++)
+			{
+				if (toTools[i].inputRequired) toolsBtn.DropDownItems[i].Enabled = originalImage != null;
+			}
+		}
+
+		public void ReloadPlugins()
 		{
 			effectsBtn.DropDownItems.Clear();
 			toolsBtn.DropDownItems.Clear();
@@ -1940,10 +1964,10 @@ namespace quick_picture_viewer
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 			PluginMan.inputType = "bitmap";
 
-			PluginInfo[] plugins = PluginMan.GetPlugins(true);
+			PluginInfo[] plugins = PluginMan.GetPluginsCache(Properties.Settings.Default.PluginsCache);
 
-			Rectangle selRect = selForm != null ? GetSelectionRect() : Rectangle.Empty;
-
+			List<PluginMenuItem> toEffects = new List<PluginMenuItem>();
+			List<PluginMenuItem> toTools = new List<PluginMenuItem>();
 			for (int i = 0; i < plugins.Length; i++)
 			{
 				for (int j = 0; j < plugins[i].functions.Length; j++)
@@ -1951,22 +1975,23 @@ namespace quick_picture_viewer
 					string path = null;
 					if (currentFile != null && currentFolder != null) path = Path.Combine(currentFolder, currentFile);
 					PluginMenuItem tsmi = new PluginMenuItem(
-						originalImage,
-						path,
-						darkMode,
 						plugins[i],
 						plugins[i].functions[j],
-						alwaysOnTop,
 						Properties.Settings.Default.Language,
-						this,
-						selRect
+						darkMode
 					);
 					tsmi.Output += Tsmi_Output;
+					tsmi.Click += (s, e) => tsmi.ProcessPlugin(originalImage, path, alwaysOnTop, selForm != null ? GetSelectionRect() : Rectangle.Empty, this);
 
-					if (plugins[i].functions[j].type == "effect") effectsBtn.DropDownItems.Add(tsmi);
-					else if (plugins[i].functions[j].type == "tool") toolsBtn.DropDownItems.Add(tsmi);
+					if (plugins[i].functions[j].type == "effect") toEffects.Add(tsmi);
+					else if (plugins[i].functions[j].type == "tool") toTools.Add(tsmi);
 				}
 			}
+			effectsBtn.DropDownItems.AddRange(toEffects.ToArray());
+			toolsBtn.DropDownItems.AddRange(toTools.ToArray());
+
+			effectsBtn.Visible = effectsBtn.DropDownItems.Count != 0;
+			toolsBtn.Visible = toolsBtn.DropDownItems.Count != 0;
 		}
 
 		private void Tsmi_Output(object sender, PluginMan.OutputEventArgs e)
@@ -2309,6 +2334,11 @@ namespace quick_picture_viewer
 			};
 			selForm.Select(r.X, r.Y, r.Width, r.Height);
 			return GetSelectionRect();
+		}
+
+		private void effectsBtn_DropDownOpening(object sender, EventArgs e)
+		{
+			CheckPluginsEnable();
 		}
 	}
 }

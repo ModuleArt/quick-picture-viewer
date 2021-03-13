@@ -1,6 +1,6 @@
 {
   "name": "qpv-plugins",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "title": "QPV Plugins",
   "description": {
     "en": "Set of preinstalled plugins",
@@ -34,7 +34,13 @@
       "type": "effect",
       "inputRequired": true,
       "dialog": true,
-      "hideMainForm":  false
+      "hideMainForm":  false,
+      "hotkey": {
+        "ctrl": true,
+        "shift": true,
+        "alt": false,
+        "key": 66
+      }
     },
 	  {
       "name": "grayscale",
@@ -49,7 +55,13 @@
       "type": "effect",
       "inputRequired": true,
       "dialog": false,
-      "hideMainForm":  false
+      "hideMainForm":  false,
+      "hotkey": {
+        "ctrl": false,
+        "shift": false,
+        "alt": true,
+        "key": 71
+      }
     },
 	  {
       "name": "invert",
@@ -64,7 +76,13 @@
       "type": "effect",
       "inputRequired": true,
       "dialog": false,
-      "hideMainForm":  false
+      "hideMainForm":  false,
+      "hotkey": {
+        "ctrl": true,
+        "shift": true,
+        "alt": false,
+        "key": 73
+      }
     },
 	  {
       "name": "rainbow",
@@ -79,7 +97,13 @@
       "type": "effect",
       "inputRequired": true,
       "dialog": false,
-      "hideMainForm":  false
+      "hideMainForm":  false,
+      "hotkey": {
+        "ctrl": false,
+        "shift": false,
+        "alt": true,
+        "key": 82
+      }
     },
     {
       "name": "screenshot",
@@ -94,7 +118,13 @@
       "type": "tool",
       "inputRequired": false,
       "dialog": false,
-      "hideMainForm":  true
+      "hideMainForm":  true,
+      "hotkey": {
+        "ctrl": false,
+        "shift": false,
+        "alt": false,
+        "key": 123
+      }
     }
   ]
 }

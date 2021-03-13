@@ -14,7 +14,6 @@ namespace quick_picture_viewer
 		{
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { 
-				titleLabel, 
 				printPreviewControl1, 
 				documentLabel, marginsLabel, leftLabel, rightLabel, topLabel, bottomLabel
 			});

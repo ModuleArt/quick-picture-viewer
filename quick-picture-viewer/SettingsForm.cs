@@ -1,7 +1,6 @@
 ﻿using Microsoft.Win32;
 using QuickLibrary;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -60,7 +59,6 @@ namespace quick_picture_viewer
 		public SettingsForm()
 		{
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titleLabel });
 
 			int theme = Properties.Settings.Default.Theme;
 			if (theme == 0) systemThemeRadio.Checked = true;
@@ -167,7 +165,7 @@ namespace quick_picture_viewer
 			closeBtn.DarkMode = dark;
 			slideshowTimeNumeric.DarkMode = dark;
 			slideshowCounterCheckBox.DarkMode = dark;
-			langComboBox.SetDarkMode(dark);
+			langComboBox.DarkMode = dark;
 			favExtTextBox.DarkMode = dark;
 			escToExitCheckBox.DarkMode = dark;
 			mouseWheelActionRadio1.DarkMode = dark;

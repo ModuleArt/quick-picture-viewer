@@ -22,7 +22,7 @@ namespace quick_picture_viewer
 			this.panelHeight = panelHeight;
 
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titleLabel, presetsLabel, widthLabel, heightLabel });
+			SetDraggableControls(new List<Control>() { presetsLabel, widthLabel, heightLabel });
 
 			widthNumeric.Value = imageWidth;
 			heightNumeric.Value = imageHeight;

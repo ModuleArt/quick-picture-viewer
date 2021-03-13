@@ -301,13 +301,13 @@
     <value>Modifier l'image</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Modifier la zone de sélection</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>Effets</value>
     <comment>Menu</comment>
-  </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>Activer la barre de navigation flottante</value>
-    <comment>Settings</comment>
   </data>
   <data name="error" xml:space="preserve">
     <value>Erreur</value>
@@ -492,14 +492,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>Déplacer le fichier dans la corbeille</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>Afficher la barre de navigation en plein écran</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>Barre de navigation</value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>Nouvelle version disponible !</value>
@@ -713,6 +705,10 @@
     <value>secondes</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Tout sélectionner</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>Outil de sélection</value>
     <comment>Menu</comment>
@@ -740,6 +736,10 @@
   <data name="show-file-explorer" xml:space="preserve">
     <value>Ouvrir l'emplacement de l'image</value>
     <comment>Menu</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Afficher les flèches de navigation</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Afficher le compteur du diaporama</value>

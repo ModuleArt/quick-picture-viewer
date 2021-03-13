@@ -301,13 +301,13 @@
     <value>Редактировать</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Редактировать область выделения</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>Эффекты</value>
     <comment>Menu</comment>
-  </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>Включить плавающую панель навигации</value>
-    <comment>Settings</comment>
   </data>
   <data name="error" xml:space="preserve">
     <value>Ошибка</value>
@@ -492,14 +492,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>Переместить файл в Корзину</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>Показывать в полноэкранном режиме</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>Панель навигации</value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>Доступно новое обновление!</value>
@@ -713,6 +705,10 @@
     <value>секунд</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Выделить все</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>Инструмент выделения</value>
     <comment>Menu</comment>
@@ -740,6 +736,10 @@
   <data name="show-file-explorer" xml:space="preserve">
     <value>Показать файл в папке</value>
     <comment>Menu</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Показывать стрелки навигации</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Показать счётчик слайдшоу</value>

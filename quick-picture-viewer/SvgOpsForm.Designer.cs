@@ -43,7 +43,6 @@
 			this.presetsLabel = new System.Windows.Forms.Label();
 			this.size512Button = new System.Windows.Forms.Button();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.titleLabel = new System.Windows.Forms.Label();
 			this.size32Button = new System.Windows.Forms.Button();
 			this.size16Button = new System.Windows.Forms.Button();
 			this.autoSizeBtn = new System.Windows.Forms.Button();
@@ -271,16 +270,6 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(10, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(88, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "SvgOpsForm";
-			// 
 			// size32Button
 			// 
 			this.size32Button.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -329,7 +318,6 @@
 			this.ClientSize = new System.Drawing.Size(256, 343);
 			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.autoSizeBtn);
-			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.size16Button);
 			this.Controls.Add(this.heightNumeric);
 			this.Controls.Add(this.widthLabel);
@@ -350,9 +338,9 @@
 			this.MinimizeBox = false;
 			this.Name = "SvgOpsForm";
 			this.ShowInTaskbar = false;
+			this.ShowTitle = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "SvgOpsForm";
-			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.SvgOpsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SvgOpsForm_KeyDown);
 			this.ResumeLayout(false);
@@ -373,7 +361,6 @@
 		private System.Windows.Forms.Button defaultSizeButton;
 		private System.Windows.Forms.Button size128Button;
 		private System.Windows.Forms.Button size64Button;
-		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.Button size32Button;
 		private System.Windows.Forms.Button size16Button;
 		private QuickLibrary.QlibTitlebarButton closeBtn;

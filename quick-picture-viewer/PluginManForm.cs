@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using QuickLibrary;
@@ -18,7 +17,6 @@ namespace quick_picture_viewer
 		public PluginManForm()
 		{
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titleLabel });
 		}
 
 		private void SetDarkMode(bool dark)
@@ -31,8 +29,9 @@ namespace quick_picture_viewer
 				morePluginsBtn.Image = Properties.Resources.white_plugin;
 				deleteBtn.Image = Properties.Resources.white_trash;
 				pluginWebsiteBtn.Image = Properties.Resources.white_website;
+				refreshBtn.BackColor = ThemeMan.DarkSecondColor;
+				refreshBtn.Image = Properties.Resources.white_sync;
 			}
-
 			DarkMode = dark;
 			closeBtn.DarkMode = dark;
 			contextMenuStrip1.DarkMode = dark;
@@ -56,7 +55,7 @@ namespace quick_picture_viewer
 			PluginMan.pluginsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins");
 			PluginMan.inputType = "bitmap";
 
-			PluginInfo[] plugins = PluginMan.GetPlugins(true);
+			PluginInfo[] plugins = PluginMan.GetPluginsCache(Properties.Settings.Default.PluginsCache);
 			codenames = new string[plugins.Length];
 			pluginsLinks = new string[plugins.Length];
 			for (int i = 0; i < plugins.Length; i++)
@@ -102,6 +101,7 @@ namespace quick_picture_viewer
 			openFileDialog1.Title = LangMan.Get("browse-for-plugins");
 			morePluginsBtn.Text = " " + LangMan.Get("more-plugins");
 			pluginWebsiteBtn.Text = LangMan.Get("plugin-website");
+			infoTooltip.SetToolTip(refreshBtn, LangMan.Get("reload-plugins"));
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
 
@@ -211,6 +211,14 @@ namespace quick_picture_viewer
 		private void PluginManForm_DragEnter(object sender, DragEventArgs e)
 		{
 			e.Effect = e.Data.GetDataPresent(DataFormats.FileDrop) ? DragDropEffects.All : DragDropEffects.None;
+		}
+
+		private void refreshBtn_Click(object sender, EventArgs e)
+		{
+			Properties.Settings.Default.PluginsCache = PluginMan.GenerateCacheStr();
+			Properties.Settings.Default.Save();
+			RefreshPluginsList();
+			(Owner as MainForm).ReloadPlugins();
 		}
 	}
 }

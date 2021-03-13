@@ -47,7 +47,6 @@
 			this.marginsCheckBox = new QuickLibrary.QlibCheckBox();
 			this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.titleLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
@@ -377,21 +376,10 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(10, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(70, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "PrintForm";
-			// 
 			// PrintForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(618, 332);
-			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.setMarginsButton);
@@ -419,7 +407,6 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "PrintForm";
-			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.PrintForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrintForm_KeyDown);
 			this.ResumeLayout(false);
@@ -445,7 +432,6 @@
 		private System.Windows.Forms.Label rightLabel;
 		private System.Windows.Forms.Label topLabel;
 		private System.Windows.Forms.Button setMarginsButton;
-		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 	}

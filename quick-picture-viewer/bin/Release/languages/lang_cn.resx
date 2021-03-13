@@ -302,13 +302,13 @@
     <value>编辑图像</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>编辑选择区域</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>特效</value>
     <comment>Menu</comment>
-  </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>启用浮动导航栏</value>
-    <comment>Settings</comment>
   </data>
   <data name="error" xml:space="preserve">
     <value>草屋</value>
@@ -493,14 +493,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>移动文件至回收站</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>在全屏模式下显示导航栏</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>  导航栏  </value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>新版本可用！</value>
@@ -714,6 +706,10 @@
     <value>秒</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>全选</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>选择工具</value>
     <comment>Menu</comment>
@@ -741,6 +737,10 @@
   <data name="show-file-explorer" xml:space="preserve">
     <value>在文件管理器中显示</value>
     <comment>Menu</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>显示导航箭头</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>显示幻灯片倒计时</value>

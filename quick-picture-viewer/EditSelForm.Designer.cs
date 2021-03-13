@@ -31,7 +31,6 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditSelForm));
 			this.okButton = new System.Windows.Forms.Button();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.titleLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.heightNumeric = new QuickLibrary.QlibNumeric();
 			this.widthLabel = new System.Windows.Forms.Label();
@@ -78,16 +77,6 @@
 			this.closeBtn.TabIndex = 2;
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(10, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(81, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "EditSelForm";
 			// 
 			// heightNumeric
 			// 
@@ -265,7 +254,6 @@
 			this.Controls.Add(this.widthLabel);
 			this.Controls.Add(this.heightLabel);
 			this.Controls.Add(this.widthNumeric);
-			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.okButton);
 			this.Draggable = true;
@@ -275,9 +263,9 @@
 			this.Name = "EditSelForm";
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
+			this.ShowTitle = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "WallpaperForm";
-			this.TitleLabel = this.titleLabel;
+			this.Text = "EditSelForm";
 			this.Load += new System.EventHandler(this.WallpaperForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WallpaperForm_KeyDown);
 			this.ResumeLayout(false);
@@ -287,7 +275,6 @@
 
 		#endregion
 		private System.Windows.Forms.Button okButton;
-		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private QuickLibrary.QlibNumeric heightNumeric;

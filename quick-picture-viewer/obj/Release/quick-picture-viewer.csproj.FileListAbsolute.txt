@@ -57,5 +57,8 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.ValueTuple.xml
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.languages.lang_fr.resources
-D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.NavForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.SelectionForm.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\languages\lang_de.resx
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.languages.lang_de.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick_picture_viewer.EditSelForm.resources
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Release\quick-picture-viewer.csproj.CoreCompileInputs.cache

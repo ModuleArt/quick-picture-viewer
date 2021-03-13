@@ -653,6 +653,10 @@
     <value>Переоткрыть файл</value>
     <comment>Menu</comment>
   </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Обновить список плагинов</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="resize-svg" xml:space="preserve">
     <value>Изменить размер SVG</value>
     <comment>SVG options</comment>
@@ -718,7 +722,7 @@
     <comment>About</comment>
   </data>
   <data name="set-as-desktop-background" xml:space="preserve">
-    <value>Установить как фон рабочего стола</value>
+    <value>Сделать фоновым изображением рабочего стола</value>
     <comment>Menu</comment>
   </data>
   <data name="set-background" xml:space="preserve">

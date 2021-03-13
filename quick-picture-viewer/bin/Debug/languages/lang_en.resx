@@ -653,6 +653,10 @@
     <value>Reload file</value>
     <comment>Menu</comment>
   </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Reload plugin list</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="resize-svg" xml:space="preserve">
     <value>Resize SVG</value>
     <comment>SVG options</comment>

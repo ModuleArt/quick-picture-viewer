@@ -61,3 +61,4 @@ D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\languages
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.languages.lang_de.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick_picture_viewer.EditSelForm.resources
 D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csprojAssemblyReference.cache
+D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\obj\Debug\quick-picture-viewer.csproj.CoreCompileInputs.cache

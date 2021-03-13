@@ -1267,6 +1267,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Обновить список плагинов.
+        /// </summary>
+        public static string reload_plugins {
+            get {
+                return ResourceManager.GetString("reload-plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Изменить размер SVG.
         /// </summary>
         public static string resize_svg {
@@ -1411,7 +1420,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Установить как фон рабочего стола.
+        ///   Looks up a localized string similar to Сделать фоновым изображением рабочего стола.
         /// </summary>
         public static string set_as_desktop_background {
             get {

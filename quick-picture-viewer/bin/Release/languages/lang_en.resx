@@ -301,13 +301,13 @@
     <value>Edit image</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Edit selection area</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>Effects</value>
     <comment>Menu</comment>
-  </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>Enable floating navigation bar</value>
-    <comment>Settings</comment>
   </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
@@ -492,14 +492,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>Move file to the Recycle Bin</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>Show navigation bar in fullscreen</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>Navigation bar</value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>New version available!</value>
@@ -713,6 +705,10 @@
     <value>seconds</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Select all</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>Selection tool</value>
     <comment>Menu</comment>
@@ -740,6 +736,10 @@
   <data name="show-file-explorer" xml:space="preserve">
     <value>Show file in explorer</value>
     <comment>Menu</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Show navigation arrows</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Show slideshow counter</value>

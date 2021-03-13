@@ -31,7 +31,6 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WallpaperForm));
 			this.okButton = new System.Windows.Forms.Button();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.titleLabel = new System.Windows.Forms.Label();
 			this.fitLabel = new System.Windows.Forms.Label();
 			this.fitComboBox = new QuickLibrary.QlibComboBox();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
@@ -75,16 +74,6 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(10, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(101, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "WallpaperForm";
-			// 
 			// fitLabel
 			// 
 			this.fitLabel.AutoSize = true;
@@ -97,13 +86,21 @@
 			// 
 			// fitComboBox
 			// 
+			this.fitComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.fitComboBox.CausesValidation = false;
+			this.fitComboBox.DarkMode = false;
 			this.fitComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
 			this.fitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.fitComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.fitComboBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.fitComboBox.ForeColor = System.Drawing.Color.Black;
 			this.fitComboBox.FormattingEnabled = true;
+			this.fitComboBox.IntegralHeight = false;
 			this.fitComboBox.ItemHeight = 26;
 			this.fitComboBox.Location = new System.Drawing.Point(10, 71);
 			this.fitComboBox.Margin = new System.Windows.Forms.Padding(0);
 			this.fitComboBox.Name = "fitComboBox";
+			this.fitComboBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.fitComboBox.Size = new System.Drawing.Size(300, 32);
 			this.fitComboBox.TabIndex = 0;
 			// 
@@ -111,7 +108,6 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(320, 155);
-			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.fitLabel);
 			this.Controls.Add(this.fitComboBox);
@@ -123,9 +119,9 @@
 			this.Name = "WallpaperForm";
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
+			this.ShowTitle = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "WallpaperForm";
-			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.WallpaperForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WallpaperForm_KeyDown);
 			this.ResumeLayout(false);
@@ -137,7 +133,6 @@
 		private System.Windows.Forms.Button okButton;
 		private QuickLibrary.QlibComboBox fitComboBox;
 		private System.Windows.Forms.Label fitLabel;
-		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 	}

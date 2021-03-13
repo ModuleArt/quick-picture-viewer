@@ -70,7 +70,6 @@
 			this.langComboBox = new QuickLibrary.QlibComboBox();
 			this.localizationRestart = new System.Windows.Forms.LinkLabel();
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.titleLabel = new System.Windows.Forms.Label();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.settingsTabs.SuspendLayout();
@@ -708,9 +707,16 @@
 			// 
 			// langComboBox
 			// 
+			this.langComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.langComboBox.CausesValidation = false;
+			this.langComboBox.DarkMode = false;
 			this.langComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
 			this.langComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.langComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.langComboBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.langComboBox.ForeColor = System.Drawing.Color.Black;
 			this.langComboBox.FormattingEnabled = true;
+			this.langComboBox.IntegralHeight = false;
 			this.langComboBox.ItemHeight = 26;
 			this.langComboBox.Items.AddRange(new object[] {
             "English",
@@ -723,6 +729,7 @@
 			this.langComboBox.Location = new System.Drawing.Point(10, 39);
 			this.langComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.langComboBox.Name = "langComboBox";
+			this.langComboBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.langComboBox.Size = new System.Drawing.Size(372, 32);
 			this.langComboBox.TabIndex = 0;
 			this.langComboBox.SelectedIndexChanged += new System.EventHandler(this.langComboBox_SelectedIndexChanged);
@@ -760,16 +767,6 @@
 			this.closeBtn.UseVisualStyleBackColor = true;
 			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
 			// 
-			// titleLabel
-			// 
-			this.titleLabel.AutoSize = true;
-			this.titleLabel.Location = new System.Drawing.Point(10, 7);
-			this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 9, 0, 9);
-			this.titleLabel.Name = "titleLabel";
-			this.titleLabel.Size = new System.Drawing.Size(90, 19);
-			this.titleLabel.TabIndex = 16;
-			this.titleLabel.Text = "SettingsForm";
-			// 
 			// openFileDialog1
 			// 
 			this.openFileDialog1.FileName = "openFileDialog1";
@@ -781,7 +778,6 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(420, 342);
 			this.Controls.Add(this.closeBtn);
-			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.settingsTabs);
 			this.Draggable = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -790,9 +786,9 @@
 			this.Name = "SettingsForm";
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
+			this.ShowTitle = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "SettingsForm";
-			this.TitleLabel = this.titleLabel;
 			this.Load += new System.EventHandler(this.SettingsForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SettingsForm_KeyDown);
 			this.settingsTabs.ResumeLayout(false);
@@ -822,7 +818,6 @@
 		private QuickLibrary.QlibTabs settingsTabs;
 		private System.Windows.Forms.TabPage themePage;
 		private System.Windows.Forms.TabPage mousePage;
-		private System.Windows.Forms.Label titleLabel;
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private QuickLibrary.QlibTitlebarButton closeBtn;
 		private System.Windows.Forms.TabPage startupPage;

@@ -654,6 +654,10 @@
     <value>刷新文件</value>
     <comment>Menu</comment>
   </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>重新加载插件列表</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="resize-svg" xml:space="preserve">
     <value>更改大小</value>
     <comment>SVG options</comment>

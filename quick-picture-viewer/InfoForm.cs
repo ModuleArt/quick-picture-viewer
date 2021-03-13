@@ -21,7 +21,6 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { 
-				titleLabel,
 				fileNameLabel, folderLabel, fullPathLabel, compressionLabel, extensionLabel, createdLabel, modifiedLabel,
 				sizeLabel, megapixelsLabel, resolutionLabel, inchesLabel, cmLabel, diskSizeLabel, ratioLabel
 			});

@@ -302,13 +302,13 @@
     <value>Kép szerkeztése</value>
     <comment>Menu</comment>
   </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Kijelölési terület szerkesztése</value>
+    <comment>Status bar</comment>
+  </data>
   <data name="effects" xml:space="preserve">
     <value>Hatások</value>
     <comment>Menu</comment>
-  </data>
-  <data name="enable-navigation-bar" xml:space="preserve">
-    <value>Lebegő navigációs sáv engedélyezése</value>
-    <comment>Settings</comment>
   </data>
   <data name="error" xml:space="preserve">
     <value>Hiba</value>
@@ -493,14 +493,6 @@
   <data name="move-to-trash" xml:space="preserve">
     <value>Fájl áthelyezése a lomtárba</value>
     <comment>Menu</comment>
-  </data>
-  <data name="nav-bar-fullscreen" xml:space="preserve">
-    <value>Show navigation bar in fullscreen</value>
-    <comment>Settings</comment>
-  </data>
-  <data name="navigation-bar" xml:space="preserve">
-    <value>Navigációs sáv</value>
-    <comment>Settings</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
     <value>Új verzió elérhető!</value>
@@ -714,6 +706,10 @@
     <value>másodpercenként</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Mindet kiválaszt</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="selection-tool" xml:space="preserve">
     <value>Kiválasztó eszköz</value>
     <comment>Menu</comment>
@@ -741,6 +737,10 @@
   <data name="show-file-explorer" xml:space="preserve">
     <value>Fájl megnyitása fájlkezelőben</value>
     <comment>Menu</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Navigációs nyilak megjelenítése</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Diavetítés visszaszámláló megjelenítése</value>

@@ -1,6 +1,5 @@
 ﻿using QuickLibrary;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,7 +10,6 @@ namespace quick_picture_viewer
 		public EditSelForm(Rectangle r)
 		{
 			InitializeComponent();
-			SetDraggableControls(new List<Control>() { titleLabel });
 			SetSelection(r.X, r.Y, r.Width, r.Height);
 		}
 

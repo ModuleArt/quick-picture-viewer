@@ -1267,6 +1267,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Recharger la liste des plugins.
+        /// </summary>
+        public static string reload_plugins {
+            get {
+                return ResourceManager.GetString("reload-plugins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Redimensionner SVG.
         /// </summary>
         public static string resize_svg {
