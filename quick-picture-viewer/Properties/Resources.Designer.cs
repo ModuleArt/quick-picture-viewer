@@ -63,6 +63,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_about {
+            get {
+                object obj = ResourceManager.GetObject("black-about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_actualsize {
             get {
                 object obj = ResourceManager.GetObject("black_actualsize", resourceCulture);
@@ -343,6 +353,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_settings {
+            get {
+                object obj = ResourceManager.GetObject("black-settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_show {
             get {
                 object obj = ResourceManager.GetObject("black_show", resourceCulture);
@@ -556,16 +576,6 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_desktop {
             get {
                 object obj = ResourceManager.GetObject("white-desktop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap white_docfolder {
-            get {
-                object obj = ResourceManager.GetObject("white-docfolder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

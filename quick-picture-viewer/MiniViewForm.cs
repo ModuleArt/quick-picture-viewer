@@ -93,10 +93,20 @@ namespace quick_picture_viewer
 
 		private void UpdatePictureBoxLocation()
 		{
-			pictureBox.Location = new Point(
-				pictureBox.Width < picturePanel.Width ? (picturePanel.Width - pictureBox.Width) / 2 : -picturePanel.HorizontalScroll.Value,
-				pictureBox.Height < picturePanel.Height ? (picturePanel.Height - pictureBox.Height) / 2 : -picturePanel.VerticalScroll.Value
-			);
+			int x, y;
+
+			if (pictureBox.Width < picturePanel.Width) x = (int)((double)(picturePanel.Width - pictureBox.Width) / (double)2);
+			else x = -picturePanel.HorizontalScroll.Value;
+
+			if (pictureBox.Height < picturePanel.Height) y = (int)((double)(picturePanel.Height - pictureBox.Height) / (double)2);
+			else y = -picturePanel.VerticalScroll.Value;
+
+			pictureBox.Location = new Point(x, y);
+
+			if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
+			else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
+			else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
+			else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
 		}
 
 		private void ZoomToFit()
@@ -231,7 +241,7 @@ namespace quick_picture_viewer
 			if (e.Button == MouseButtons.Left)
 			{
 				Cursor.Current = Cursors.SizeAll;
-				if (autoZoom) NativeMan.DragWindow(Handle);
+				if (autoZoom || (pictureBox.Width <= picturePanel.Width && pictureBox.Height <= picturePanel.Height)) NativeMan.DragWindow(Handle);
 				else panelMouseDownLocation = new Point(
 					PointToClient(Cursor.Position).X + picturePanel.HorizontalScroll.Value,
 					PointToClient(Cursor.Position).Y + picturePanel.VerticalScroll.Value

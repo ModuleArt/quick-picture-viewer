@@ -458,27 +458,6 @@
   <data name="saveAsButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 25</value>
   </data>
-  <data name="showFileButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="showFileButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="showFileButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVDhPzZJBCoMwEEWz6L5gsafxeiL0GF6jILT3KYIb
-        LS3Y9w1RIyLjorQPHs4M5ieQuL/hgi32+MYrHtHME1NfugOWmA+dEe28R522wBEN93DGzpeetYAKNX9g
-        psGCaM1aQJjp2+AyxBygE6iuh27CHBDY7L8ScEfNgzecE63RQ0p8aeKE0TXqKb9wvuOW+jd6SL/CuQ8s
-        sUNuvTC3+wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="showFileButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="showFileButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 25</value>
-  </data>
   <data name="infoButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1012,7 +991,7 @@
     <value>F5</value>
   </data>
   <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="reloadButton.Text" xml:space="preserve">
     <value>reload file</value>
@@ -1024,7 +1003,7 @@
     <value>Del</value>
   </data>
   <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="deleteBtn.Text" xml:space="preserve">
     <value>move to trash</value>
@@ -1044,7 +1023,7 @@
     <value>Ctrl+P</value>
   </data>
   <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="printButton.Text" xml:space="preserve">
     <value>print</value>
@@ -1056,7 +1035,7 @@
     <value>No</value>
   </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 6</value>
+    <value>239, 6</value>
   </data>
   <data name="backClearBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1096,7 +1075,7 @@
     <value>choose color</value>
   </data>
   <data name="backColorBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="backColorBtn.Text" xml:space="preserve">
     <value>background color</value>
@@ -1113,7 +1092,7 @@
     <value>Ctrl+T</value>
   </data>
   <data name="onTopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="onTopButton.Text" xml:space="preserve">
     <value>always on top</value>
@@ -1130,7 +1109,7 @@
     <value>F10</value>
   </data>
   <data name="framelessBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="framelessBtn.Text" xml:space="preserve">
     <value>frameless mode</value>
@@ -1139,7 +1118,7 @@
     <value>Ctrl+N</value>
   </data>
   <data name="newWindowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="newWindowButton.Text" xml:space="preserve">
     <value>new window</value>
@@ -1151,13 +1130,13 @@
     <value>No</value>
   </data>
   <data name="qlibToolsep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 6</value>
+    <value>239, 6</value>
   </data>
   <data name="pluginManBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F2</value>
   </data>
   <data name="pluginManBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
   </data>
   <data name="pluginManBtn.Text" xml:space="preserve">
     <value>plugin manager</value>
@@ -1169,13 +1148,25 @@
     <value>No</value>
   </data>
   <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 6</value>
+    <value>239, 6</value>
+  </data>
+  <data name="settingsButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Oemcomma</value>
   </data>
   <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
+  </data>
+  <data name="settingsButton.Text" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="aboutBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F1</value>
   </data>
   <data name="aboutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 24</value>
+    <value>242, 24</value>
+  </data>
+  <data name="aboutBtn.Text" xml:space="preserve">
+    <value>about</value>
   </data>
   <data name="moreButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4332,12 +4323,6 @@
     <value>saveAsButton</value>
   </data>
   <data name="&gt;&gt;saveAsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showFileButton.Name" xml:space="preserve">
-    <value>showFileButton</value>
-  </data>
-  <data name="&gt;&gt;showFileButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;infoButton.Name" xml:space="preserve">

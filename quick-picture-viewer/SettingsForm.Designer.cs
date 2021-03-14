@@ -198,6 +198,7 @@
 			// 
 			// themeRestart
 			// 
+			this.themeRestart.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.themeRestart.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.themeRestart.Location = new System.Drawing.Point(10, 197);
 			this.themeRestart.Margin = new System.Windows.Forms.Padding(0);
@@ -767,6 +768,7 @@
 			// 
 			// localizationRestart
 			// 
+			this.localizationRestart.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.localizationRestart.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.localizationRestart.Location = new System.Drawing.Point(10, 197);
 			this.localizationRestart.Margin = new System.Windows.Forms.Padding(0);

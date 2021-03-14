@@ -10,26 +10,26 @@ namespace quick_picture_viewer
 		public EditSelForm(Rectangle r)
 		{
 			InitializeComponent();
-			SetSelection(r.X, r.Y, r.Width, r.Height);
+			SetSelection(r);
 		}
 
-		public void SetSelection(int x, int y, int w, int h)
+		public void SetSelection(Rectangle r)
 		{
-			if (x < xNumeric.Minimum) x = (int)xNumeric.Minimum;
-			if (x > xNumeric.Maximum) x = (int)xNumeric.Maximum;
-			xNumeric.Value = x;
+			if (r.X < xNumeric.Minimum) r.X = (int)xNumeric.Minimum;
+			if (r.X > xNumeric.Maximum) r.X = (int)xNumeric.Maximum;
+			xNumeric.Value = r.X;
 
-			if (y < yNumeric.Minimum) y = (int)yNumeric.Minimum;
-			if (y > yNumeric.Maximum) y = (int)yNumeric.Maximum;
-			yNumeric.Value = y;
+			if (r.Y < yNumeric.Minimum) r.Y = (int)yNumeric.Minimum;
+			if (r.Y > yNumeric.Maximum) r.Y = (int)yNumeric.Maximum;
+			yNumeric.Value = r.Y;
 
-			if (w < widthNumeric.Minimum) w = (int)widthNumeric.Minimum;
-			if (w > widthNumeric.Maximum) w = (int)widthNumeric.Maximum;
-			widthNumeric.Value = w;
+			if (r.Width < widthNumeric.Minimum) r.Width = (int)widthNumeric.Minimum;
+			if (r.Width > widthNumeric.Maximum) r.Width = (int)widthNumeric.Maximum;
+			widthNumeric.Value = r.Width;
 
-			if (h < heightNumeric.Minimum) h = (int)heightNumeric.Minimum;
-			if (h > heightNumeric.Maximum) h = (int)heightNumeric.Maximum;
-			heightNumeric.Value = h;
+			if (r.Height < heightNumeric.Minimum) r.Height = (int)heightNumeric.Minimum;
+			if (r.Height > heightNumeric.Maximum) r.Height = (int)heightNumeric.Maximum;
+			heightNumeric.Value = r.Height;
 		}
 
 		private void SetDarkMode(bool dark)
@@ -73,20 +73,12 @@ namespace quick_picture_viewer
 
 		private void xNumeric_ValueChanged(object sender, EventArgs e)
 		{
-			if (Owner != null)
-			{
-				Rectangle r = (Owner as MainForm).SelectSelection(
-					(int)xNumeric.Value,
-					(int)yNumeric.Value,
-					(int)widthNumeric.Value,
-					(int)heightNumeric.Value
-				);
-
-				if (xNumeric.Value != r.X) xNumeric.Value = r.X;
-				if (yNumeric.Value != r.Y) yNumeric.Value = r.Y;
-				if (widthNumeric.Value != r.Width) widthNumeric.Value = r.Width;
-				if (heightNumeric.Value != r.Height) heightNumeric.Value = r.Height;
-			}
+			if (Owner != null) (Owner as MainForm).SelectSelection(
+				(int)xNumeric.Value,
+				(int)yNumeric.Value,
+				(int)widthNumeric.Value,
+				(int)heightNumeric.Value
+			);
 		}
 	}
 }

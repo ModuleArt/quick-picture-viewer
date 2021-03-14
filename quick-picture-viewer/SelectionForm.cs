@@ -72,13 +72,8 @@ namespace quick_picture_viewer
 			);
 		}
 
-		public void Select(int x = -1, int y = -1, int w = -1, int h = -1)
+		public void Select(int x, int y, int w, int h)
 		{
-			Point curLoc = GetCurLoc();
-			if (x == -1) x = curLoc.X;
-			if (y == -1) y = curLoc.Y;
-			if (w == -1) w = Width;
-			if (h == -1) h = Height;
 			SetLocation(picturePanel.Location.X + x, picturePanel.Location.Y + y);
 			SetSize(w, h);
 		}

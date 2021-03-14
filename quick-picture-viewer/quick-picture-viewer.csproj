@@ -465,6 +465,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-about.png" />
+    <None Include="resources\imgs\dark\black-settings.png" />
     <None Include="resources\imgs\dark\black-desktop.png" />
     <None Include="resources\imgs\light\white-editsel.png" />
     <None Include="resources\imgs\dark\black-editsel.png" />

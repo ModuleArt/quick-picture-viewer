@@ -133,9 +133,6 @@
   <data name="white_tools" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-tools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white_toolbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\light\white-toolbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="white-autozoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-autozoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,9 +202,6 @@
   <data name="white_sync" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-sync.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-docfolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\light\white-docfolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="checkboard_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\checkboard-dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -262,11 +256,17 @@
   <data name="white_exe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-exe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black_angle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-angle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="white_actualsize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-actualsize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-grid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white_line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,6 +289,9 @@
   <data name="black-square" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black-settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="white-history" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-history.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -304,8 +307,8 @@
   <data name="white_restore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-restore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black_angle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\dark\black-angle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white_toolbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-toolbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white_list" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,8 +382,8 @@
   <data name="black-rotater" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-rotater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\light\white-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-desktop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-desktop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-print" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -433,7 +436,7 @@
   <data name="black_arrows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\dark\black-arrows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-desktop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\imgs\dark\black-desktop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

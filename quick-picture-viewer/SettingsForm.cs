@@ -289,6 +289,7 @@ namespace quick_picture_viewer
 					ll.AutoSize = true;
 					ll.Text = languages[langComboBox.SelectedIndex].Authors[i];
 					ll.LinkColor = ThemeMan.AccentColor;
+					ll.ActiveLinkColor = ThemeMan.BorderColor;
 					ll.Margin = new Padding(0, 0, 0, 0);
 					ll.Click += Ll_Click;
 					translateAuthorsPanel.Controls.Add(ll);

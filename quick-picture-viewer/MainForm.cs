@@ -209,7 +209,6 @@ namespace quick_picture_viewer
 			zoom100Btn.Text = LangMan.Get("zoom-to-actual-size") + " (100%) | Ctrl+0";
 			infoButton.Text = LangMan.Get("image-info") + " | Ctrl+I";
 			slideshowButton.Text = LangMan.Get("slideshow") + " | Ctrl+Shift+S";
-			showFileButton.Text = LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L";
 			prevButton.Text = LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow");
 			infoTooltip.SetToolTip(navPrevBtn, LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow"));
 			nextButton.Text = LangMan.Get("next-image") + " | " + LangMan.Get("right-arrow");
@@ -218,6 +217,7 @@ namespace quick_picture_viewer
 			hasChangesLabel.Text = " " + LangMan.Get("not-saved");
 			zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + LangMan.Get("auto");
 			selectionLabel.ToolTipText = LangMan.Get("edit-selection") + " ... | Alt+S";
+			directoryLabel.ToolTipText = LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L";
 
 			effectsBtn.Text = LangMan.Get("effects");
 			toolsBtn.Text = LangMan.Get("tools");
@@ -531,7 +531,6 @@ namespace quick_picture_viewer
 				externalRunBtn.Enabled = directoryName != null;
 				externalChooseBtn.Enabled = directoryName != null;
 				externalFavoriteBtn.Enabled = directoryName != null;
-				showFileButton.Enabled = directoryName != null;
 				copyFileBtn.Enabled = directoryName != null;
 				reloadButton.Enabled = directoryName != null;
 				dateCreatedLabel.Visible = directoryName != null;
@@ -662,6 +661,11 @@ namespace quick_picture_viewer
 			else y = -picturePanel.VerticalScroll.Value;
 
 			pictureBox.Location = new Point(x, y);
+
+			if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
+			else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
+			else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
+			else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
 		}
 
 		private void setZoomText(string text)
@@ -911,7 +915,7 @@ namespace quick_picture_viewer
 		{
 			if (e.Button == MouseButtons.Left)
 			{
-				if (autoZoom)
+				if (autoZoom || (pictureBox.Width <= picturePanel.Width && pictureBox.Height <= picturePanel.Height))
 				{
 					AllowDrop = false;
 					if (currentFile != null || originalImage != null) dragImage = true;
@@ -937,7 +941,7 @@ namespace quick_picture_viewer
 		{
 			if (e.Button == MouseButtons.Left)
 			{
-				if (autoZoom)
+				if (autoZoom || (pictureBox.Width <= picturePanel.Width && pictureBox.Height <= picturePanel.Height))
 				{
 					if (dragImage)
 					{
@@ -1125,7 +1129,7 @@ namespace quick_picture_viewer
 				{
 					if (e.Shift)
 					{
-						if (e.KeyCode == Keys.L) showFileButton.PerformClick();
+						if (e.KeyCode == Keys.L) directoryLabel.PerformClick();
 						else if (e.KeyCode == Keys.S) toggleSlideshow();
 						else if (e.KeyCode == Keys.P) miniViewButton.PerformClick();
 						else if (e.KeyCode == Keys.A) autoZoomButton.PerformClick();
@@ -1373,7 +1377,6 @@ namespace quick_picture_viewer
 			externalChooseBtn.Enabled = false;
 			externalFavoriteBtn.Enabled = false;
 			printButton.Enabled = false;
-			showFileButton.Enabled = false;
 			miniViewButton.Enabled = false;
 
 			zoomTextBox.Enabled = false;
@@ -1429,7 +1432,9 @@ namespace quick_picture_viewer
 				statusStrip1.BackColor = ThemeMan.DarkSecondColor;
 
 				selectionLabel.LinkColor = Color.White;
-				selectionLabel.ActiveLinkColor = Color.White;
+				selectionLabel.VisitedLinkColor = Color.White;
+				directoryLabel.LinkColor = Color.White;
+				directoryLabel.VisitedLinkColor = Color.White;
 
 				openBtn.Image = Properties.Resources.white_open;
 				openFileBtn.Image = Properties.Resources.white_imgfile;
@@ -1445,7 +1450,6 @@ namespace quick_picture_viewer
 				externalFavoriteBtn.Image = Properties.Resources.white_paint;
 
 				prevButton.Image = Properties.Resources.white_prev;
-				showFileButton.Image = Properties.Resources.white_picfolder;
 				nextButton.Image = Properties.Resources.white_next;
 				slideshowButton.Image = Properties.Resources.white_slideshow;
 
@@ -1622,20 +1626,6 @@ namespace quick_picture_viewer
 					Properties.Settings.Default.StartupWindowSize = Size;
 				}
 				Properties.Settings.Default.Save();
-			}
-		}
-
-		private void showFileButton_Click(object sender, EventArgs e)
-		{
-			string path = Path.Combine(currentFolder, currentFile);
-			if (FileSystem.FileExists(path))
-			{
-				string argument = "/select, \"" + path + "\"";
-				Process.Start("explorer.exe", argument);
-			}
-			else
-			{
-				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -2180,6 +2170,7 @@ namespace quick_picture_viewer
 		{
 			Rectangle r = GetSelectionRect();
 			selectionLabel.Text = " X: " + r.X + " Y: " + r.Y + " (" + r.Width + " x " + r.Height + ")";
+			if (editSelForm != null) editSelForm.SetSelection(r);
 		}
 
 		public void cropBtn_Click(object sender, EventArgs e)
@@ -2314,7 +2305,7 @@ namespace quick_picture_viewer
 			}
 		}
 
-		public Rectangle SelectSelection(int x, int y, int w, int h)
+		public void SelectSelection(int x, int y, int w, int h)
 		{
 			double scale = (double)originalImage.Width / (double)pictureBox.Width;
 			Rectangle r = new Rectangle()
@@ -2325,7 +2316,6 @@ namespace quick_picture_viewer
 				Y = pictureBox.Location.Y + (int)Math.Round((double)y / (double)scale)
 			};
 			selForm.Select(r.X, r.Y, r.Width, r.Height);
-			return GetSelectionRect();
 		}
 
 		private void effectsBtn_DropDownOpening(object sender, EventArgs e)
@@ -2341,6 +2331,20 @@ namespace quick_picture_viewer
 			wallpaperForm.DarkMode = darkMode;
 			wallpaperForm.ShowDialog();
 			wallpaperForm.Dispose();
+		}
+
+		private void directoryLabel_Click(object sender, EventArgs e)
+		{
+			string path = Path.Combine(currentFolder, currentFile);
+			if (FileSystem.FileExists(path))
+			{
+				string argument = "/select, \"" + path + "\"";
+				Process.Start("explorer.exe", argument);
+			}
+			else
+			{
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
+			}
 		}
 	}
 }
