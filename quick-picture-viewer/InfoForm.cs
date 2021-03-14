@@ -124,7 +124,7 @@ namespace quick_picture_viewer
 				folderTextBox.Text = directoryName;
 				fullPathTextBox.Text = path;
 
-				diskSizeTextBox.Text = Converter.PathToSize(path);
+				diskSizeTextBox.Text = FileMan.GetFileSizeStr(path);
 				extensionTextBox.Text = Path.GetExtension(path).Substring(1, Path.GetExtension(path).Length - 1).ToUpper();
 
 				createdTextBox.Text = File.GetCreationTime(path).ToShortDateString() + " - " + File.GetCreationTime(path).ToLongTimeString();

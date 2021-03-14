@@ -147,7 +147,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converter.cs" />
     <Compile Include="Cr2Wrapper.cs" />
     <Compile Include="CustomJumplist.cs" />
     <Compile Include="CustomOpenFolderDialog.cs" />

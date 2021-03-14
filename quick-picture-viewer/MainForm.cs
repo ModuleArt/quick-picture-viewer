@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.FileIO;
-using QuickLibrary;
+﻿using QuickLibrary;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -568,7 +567,7 @@ namespace quick_picture_viewer
 		private void UpdateSizeLabel()
 		{
 			sizeLabel.Text = " " + LangMan.Get("size") + ": " + originalImage.Width.ToString() + " x " + originalImage.Height.ToString();
-			if (currentFolder != null) sizeLabel.Text += " (" + Converter.PathToSize(Path.Combine(currentFolder, currentFile)) + ")";
+			if (currentFolder != null) sizeLabel.Text += " (" + FileMan.GetFileSizeStr(Path.Combine(currentFolder, currentFile)) + ")";
 		}
 
 		private void CheckAutoZoomNeeded()
@@ -1321,7 +1320,7 @@ namespace quick_picture_viewer
 			if (d == DialogResult.Yes)
 			{
 				string path = Path.Combine(currentFolder, currentFile);
-				if (FileSystem.FileExists(path))
+				if (File.Exists(path))
 				{
 					originalImage.Dispose();
 					originalImage = null;
@@ -1329,7 +1328,7 @@ namespace quick_picture_viewer
 					pictureBox.Image = null;
 
 					if (NextFile() <= 1) closeFile();
-					FileSystem.DeleteFile(path, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin, UICancelOption.DoNothing);
+					FileMan.MoveFileOrFolderToRecycleBin(path);
 				}
 				else
 				{
@@ -2336,7 +2335,7 @@ namespace quick_picture_viewer
 		private void directoryLabel_Click(object sender, EventArgs e)
 		{
 			string path = Path.Combine(currentFolder, currentFile);
-			if (FileSystem.FileExists(path))
+			if (File.Exists(path))
 			{
 				string argument = "/select, \"" + path + "\"";
 				Process.Start("explorer.exe", argument);
