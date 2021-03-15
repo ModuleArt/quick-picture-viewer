@@ -20,7 +20,7 @@
     <img src="/docs/screenshots/main.png">
   </a>
   <br>
-  v3.0.4 (Stable) - Feb 19, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.0.4/QuickPictureViewer-Setup.exe">Download (3.0 MB)</a>
+  v3.1.0 (Stable) - Mar 16, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.0/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a>
   <br>
   v2.2.6 (Stable) - Nov 4, 2020 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v2.2.6/QuickPictureViewer-Setup.exe">Download (3.8 MB)</a>
   <br><br>
@@ -45,13 +45,21 @@
 
 Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
 
-## 🧩 Built-in effects & tools:
+## 🧩 Built-in plugins:
 
-<a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> | <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> | <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> | <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> | <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a>
+Effects:
+- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- Vignette - by Module Art - Soon...
+- Drop shadow - by Module Art - Soon...
+- Photo filter - by Community - Soon...
+- Hue and saturation - by Community - Soon...
 
-Coming soon: Sepia | Color picker | Hue / Saturation | Vignette | Drop shadow
-
-<a href="https://github.com/ModuleArt/qpv-plugins/releases/">Releases</a>
+Tools:
+- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- Color picker - by Module Art - Soon...
 
 ## 🐞 Bug report:
 
