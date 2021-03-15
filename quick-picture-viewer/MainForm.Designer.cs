@@ -124,6 +124,7 @@
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.permDeleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -665,6 +666,7 @@
 			this.moreButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reloadButton,
             this.deleteBtn,
+            this.permDeleteBtn,
             this.printButton,
             this.toolStripSeparator9,
             this.backColorBtn,
@@ -1071,6 +1073,15 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
+			// permDeleteBtn
+			// 
+			this.permDeleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			resources.ApplyResources(this.permDeleteBtn, "permDeleteBtn");
+			this.permDeleteBtn.ForeColor = System.Drawing.Color.Black;
+			this.permDeleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
+			this.permDeleteBtn.Name = "permDeleteBtn";
+			this.permDeleteBtn.Click += new System.EventHandler(this.permDeleteBtn_Click);
+			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -1201,5 +1212,6 @@
 		private QuickLibrary.QlibToolsep qlibToolsep5;
 		private System.Windows.Forms.ToolStripMenuItem wallpaperBtn;
 		private System.Windows.Forms.ToolTip infoTooltip;
+		private System.Windows.Forms.ToolStripMenuItem permDeleteBtn;
 	}
 }

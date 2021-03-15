@@ -177,7 +177,8 @@ namespace quick_picture_viewer
 			backCustomBtn.Text = LangMan.Get("choose-color") + " ...";
 			wallpaperBtn.Text = LangMan.Get("set-as-desktop-background") + " ...";
 			printButton.Text = LangMan.Get("print") + " ...";
-			deleteBtn.Text = LangMan.Get("move-to-trash") + " ...";
+			deleteBtn.Text = LangMan.Get("move-to-trash");
+			permDeleteBtn.Text = LangMan.Get("perm-delete") + " ...";
 			reloadButton.Text = LangMan.Get("reload-file");
 
 			selectionBtn.Text = LangMan.Get("selection-tool") + " | S";
@@ -448,7 +449,8 @@ namespace quick_picture_viewer
 			}
 			catch
 			{
-				showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+				if (NextFile(true) > 1) showSuggestion(LangMan.Get("unable-open-file-skipped") + ": " + Path.GetFileName(path), SuggestionIcon.Next);
+				else showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
 			}
 		}
 
@@ -466,7 +468,7 @@ namespace quick_picture_viewer
 						yesBtnImage: saveAsButton.Image,
 						showNoBtn: true,
 						noBtnText: LangMan.Get("dont-save"),
-						noBtnImage: deleteBtn.Image,
+						noBtnImage: permDeleteBtn.Image,
 						darkMode: darkMode
 					);
 					if (window == DialogResult.Yes) saveAsButton.PerformClick();
@@ -530,6 +532,7 @@ namespace quick_picture_viewer
 				prevButton.Enabled = directoryName != null;
 				slideshowButton.Enabled = directoryName != null;
 				deleteBtn.Enabled = directoryName != null;
+				permDeleteBtn.Enabled = directoryName != null;
 				externalRunBtn.Enabled = directoryName != null;
 				externalChooseBtn.Enabled = directoryName != null;
 				externalFavoriteBtn.Enabled = directoryName != null;
@@ -664,10 +667,13 @@ namespace quick_picture_viewer
 
 			pictureBox.Location = new Point(x, y);
 
-			if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
-			else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
-			else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
-			else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
+			if (picturePanel != null && pictureBox != null)
+			{
+				if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
+				else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
+				else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
+				else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
+			}
 		}
 
 		private void setZoomText(string text)
@@ -1206,7 +1212,6 @@ namespace quick_picture_viewer
 					CheckRecursiveFolder(files[0]);
 					openFile(files[0]);
 				}
-
 			}
 			base.OnDragDrop(drgevent);
 		}
@@ -1231,17 +1236,20 @@ namespace quick_picture_viewer
 			setAlwaysOnTop(!alwaysOnTop, true);
 		}
 
-		public int NextFile()
+		public int NextFile(bool skipNextFile = false)
 		{
 			string[] filePaths = GetCurrentFiles();
 
 			int currentIndex = -1;
-			for (int i = 0; i < filePaths.Length; i++)
+			if (currentFile != null)
 			{
-				if (filePaths[i].ToLower() == Path.Combine(currentFolder, currentFile).ToLower())
+				for (int i = 0; i < filePaths.Length; i++)
 				{
-					currentIndex = i;
-					break;
+					if (filePaths[i].ToLower() == Path.Combine(currentFolder, currentFile).ToLower())
+					{
+						currentIndex = i;
+						break;
+					}
 				}
 			}
 
@@ -1253,6 +1261,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
+				if (skipNextFile) currentIndex++;
 				openFile(currentIndex == filePaths.Length - 1 ? filePaths[0] : filePaths[currentIndex + 1]);
 				return filePaths.Length;
 			}
@@ -1313,30 +1322,21 @@ namespace quick_picture_viewer
 
 		private void deleteButton_Click(object sender, EventArgs e)
 		{
-			DialogResult d = DialogMan.ShowConfirm(
-				this,
-				LangMan.Get("sure-move-to-trash"),
-				yesBtnImage: deleteBtn.Image,
-				windowTitle: LangMan.Get("delete-file"),
-				darkMode: darkMode
-			);
-			if (d == DialogResult.Yes)
+			string path = Path.Combine(currentFolder, currentFile);
+			if (File.Exists(path))
 			{
-				string path = Path.Combine(currentFolder, currentFile);
-				if (File.Exists(path))
-				{
-					originalImage.Dispose();
-					originalImage = null;
-					pictureBox.Image.Dispose();
-					pictureBox.Image = null;
+				originalImage.Dispose();
+				originalImage = null;
+				pictureBox.Image.Dispose();
+				pictureBox.Image = null;
 
-					if (NextFile() <= 1) closeFile();
-					FileMan.MoveFileOrFolderToRecycleBin(path);
-				}
-				else
-				{
-					showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
-				}
+				if (NextFile() <= 1) closeFile();
+				FileMan.MoveFileOrFolderToRecycleBin(path);
+				showSuggestion(LangMan.Get("file-moved-to-trash") + ": " + Path.GetFileName(path), SuggestionIcon.Trash);
+			}
+			else
+			{
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 			}
 		}
 
@@ -1355,6 +1355,7 @@ namespace quick_picture_viewer
 
 			saveAsButton.Enabled = false;
 			deleteBtn.Enabled = false;
+			permDeleteBtn.Enabled = false;
 			prevButton.Enabled = false;
 			nextButton.Enabled = false;
 			slideshowButton.Enabled = false;
@@ -1445,6 +1446,7 @@ namespace quick_picture_viewer
 				saveAsButton.Image = Properties.Resources.white_saveas;
 				printButton.Image = Properties.Resources.white_print;
 				deleteBtn.Image = Properties.Resources.white_trash;
+				permDeleteBtn.Image = Properties.Resources.white_permdel;
 
 				externalBtn.Image = Properties.Resources.white_popup;
 				externalRunBtn.Image = Properties.Resources.white_exe;
@@ -1608,7 +1610,7 @@ namespace quick_picture_viewer
 					yesBtnImage: saveAsButton.Image,
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
-					noBtnImage: deleteBtn.Image,
+					noBtnImage: permDeleteBtn.Image,
 					darkMode: darkMode
 				);
 				if (window == DialogResult.Yes) saveAsButton.PerformClick();
@@ -1652,7 +1654,9 @@ namespace quick_picture_viewer
 			Check = 1,
 			Warning = 2,
 			Slideshow = 3,
-			Fullscreen = 4
+			Fullscreen = 4,
+			Next = 5,
+			Trash = 6
 		}
 
 		public void showSuggestion(string text, SuggestionIcon icon)
@@ -1661,12 +1665,30 @@ namespace quick_picture_viewer
 			{
 				suggestionLabel.Text = text;
 				suggestionLabel.Visible = true;
-				if (icon == SuggestionIcon.Info) suggestionIcon.Image = Properties.Resources.white_info;
-				else if (icon == SuggestionIcon.Check) suggestionIcon.Image = Properties.Resources.white_check;
-				else if (icon == SuggestionIcon.Warning) suggestionIcon.Image = Properties.Resources.white_warning;
-				else if (icon == SuggestionIcon.Slideshow) suggestionIcon.Image = Properties.Resources.white_slideshow;
-				else suggestionIcon.Image = Properties.Resources.white_fullscreen;
-
+				switch (icon)
+				{
+					case SuggestionIcon.Check:
+						suggestionIcon.Image = Properties.Resources.white_check;
+						break;
+					case SuggestionIcon.Warning:
+						suggestionIcon.Image = Properties.Resources.white_warning;
+						break;
+					case SuggestionIcon.Slideshow:
+						suggestionIcon.Image = Properties.Resources.white_slideshow;
+						break;
+					case SuggestionIcon.Fullscreen:
+						suggestionIcon.Image = Properties.Resources.white_fullscreen;
+						break;
+					case SuggestionIcon.Next:
+						suggestionIcon.Image = Properties.Resources.white_next;
+						break;
+					case SuggestionIcon.Trash:
+						suggestionIcon.Image = Properties.Resources.white_trash;
+						break;
+					default:
+						suggestionIcon.Image = Properties.Resources.white_info;
+						break;
+				}
 				suggestionIcon.Height = suggestionLabel.Height;
 				suggestionIcon.Visible = true;
 			}));
@@ -2346,6 +2368,35 @@ namespace quick_picture_viewer
 			else
 			{
 				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
+			}
+		}
+
+		private void permDeleteBtn_Click(object sender, EventArgs e)
+		{
+			DialogResult d = DialogMan.ShowConfirm(
+				this,
+				LangMan.Get("sure-perm-delete"),
+				yesBtnImage: permDeleteBtn.Image,
+				windowTitle: LangMan.Get("delete-file"),
+				darkMode: darkMode
+			);
+			if (d == DialogResult.Yes)
+			{
+				string path = Path.Combine(currentFolder, currentFile);
+				if (File.Exists(path))
+				{
+					originalImage.Dispose();
+					originalImage = null;
+					pictureBox.Image.Dispose();
+					pictureBox.Image = null;
+
+					if (NextFile() <= 1) closeFile();
+					File.Delete(path);
+				}
+				else
+				{
+					showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
+				}
 			}
 		}
 	}

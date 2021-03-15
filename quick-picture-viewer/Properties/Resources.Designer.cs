@@ -283,6 +283,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_permdel {
+            get {
+                object obj = ResourceManager.GetObject("black_permdel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_picfolder {
             get {
                 object obj = ResourceManager.GetObject("black-picfolder", resourceCulture);
@@ -856,6 +866,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_paste {
             get {
                 object obj = ResourceManager.GetObject("white-paste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_permdel {
+            get {
+                object obj = ResourceManager.GetObject("white_permdel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -557,6 +557,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 文件已移到回收站.
+        /// </summary>
+        public static string file_moved_to_trash {
+            get {
+                return ResourceManager.GetString("file-moved-to-trash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 文件属性.
         /// </summary>
         public static string file_properties {
@@ -1106,6 +1115,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 永久删除文件.
+        /// </summary>
+        public static string perm_delete {
+            get {
+                return ResourceManager.GetString("perm-delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 画中画（小窗）模式.
         /// </summary>
         public static string picture_in_picture {
@@ -1574,11 +1592,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 你确定要将这个文件移动到回收站吗？.
+        ///   Looks up a localized string similar to 您确定要永久删除此文件吗？.
         /// </summary>
-        public static string sure_move_to_trash {
+        public static string sure_perm_delete {
             get {
-                return ResourceManager.GetString("sure-move-to-trash", resourceCulture);
+                return ResourceManager.GetString("sure-perm-delete", resourceCulture);
             }
         }
         
@@ -1669,6 +1687,15 @@ namespace quick_picture_viewer.languages {
         public static string unable_open_file {
             get {
                 return ResourceManager.GetString("unable-open-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 无法打开文件，文件已跳过.
+        /// </summary>
+        public static string unable_open_file_skipped {
+            get {
+                return ResourceManager.GetString("unable-open-file-skipped", resourceCulture);
             }
         }
         

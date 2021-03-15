@@ -556,6 +556,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Файл перемещен в корзину.
+        /// </summary>
+        public static string file_moved_to_trash {
+            get {
+                return ResourceManager.GetString("file-moved-to-trash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Свойства файла.
         /// </summary>
         public static string file_properties {
@@ -1105,6 +1114,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Удалить файл безвозвратно.
+        /// </summary>
+        public static string perm_delete {
+            get {
+                return ResourceManager.GetString("perm-delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Режим &quot;Картинка в картинке&quot;.
         /// </summary>
         public static string picture_in_picture {
@@ -1564,6 +1582,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?.
         /// </summary>
         public static string sure_close_app {
@@ -1573,11 +1600,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы уверены, что хотите переместить файл в Корзину?.
+        ///   Looks up a localized string similar to Вы действительно хотите безвозвратно удалить этот файл?.
         /// </summary>
-        public static string sure_move_to_trash {
+        public static string sure_perm_delete {
             get {
-                return ResourceManager.GetString("sure-move-to-trash", resourceCulture);
+                return ResourceManager.GetString("sure-perm-delete", resourceCulture);
             }
         }
         
@@ -1668,6 +1695,15 @@ namespace quick_picture_viewer.languages {
         public static string unable_open_file {
             get {
                 return ResourceManager.GetString("unable-open-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Невозможно открыть файл, файл пропущен.
+        /// </summary>
+        public static string unable_open_file_skipped {
+            get {
+                return ResourceManager.GetString("unable-open-file-skipped", resourceCulture);
             }
         }
         

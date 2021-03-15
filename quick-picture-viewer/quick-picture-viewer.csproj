@@ -463,6 +463,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="picture.ico" />
+    <None Include="resources\imgs\dark\black-permdel.png" />
+    <None Include="resources\imgs\light\white-permdel.png" />
     <None Include="resources\imgs\dark\black-about.png" />
     <None Include="resources\imgs\dark\black-settings.png" />
     <None Include="resources\imgs\dark\black-desktop.png" />

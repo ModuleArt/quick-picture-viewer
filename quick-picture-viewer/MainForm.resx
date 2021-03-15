@@ -991,7 +991,7 @@
     <value>F5</value>
   </data>
   <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="reloadButton.Text" xml:space="preserve">
     <value>reload file</value>
@@ -1003,10 +1003,22 @@
     <value>Del</value>
   </data>
   <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="deleteBtn.Text" xml:space="preserve">
     <value>move to trash</value>
+  </data>
+  <data name="permDeleteBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="permDeleteBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Shift+Del</value>
+  </data>
+  <data name="permDeleteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 24</value>
+  </data>
+  <data name="permDeleteBtn.Text" xml:space="preserve">
+    <value>permanently delete</value>
   </data>
   <data name="printButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1023,7 +1035,7 @@
     <value>Ctrl+P</value>
   </data>
   <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="printButton.Text" xml:space="preserve">
     <value>print</value>
@@ -1035,7 +1047,7 @@
     <value>No</value>
   </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 6</value>
+    <value>259, 6</value>
   </data>
   <data name="backClearBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1075,7 +1087,7 @@
     <value>choose color</value>
   </data>
   <data name="backColorBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="backColorBtn.Text" xml:space="preserve">
     <value>background color</value>
@@ -1092,7 +1104,7 @@
     <value>Ctrl+T</value>
   </data>
   <data name="onTopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="onTopButton.Text" xml:space="preserve">
     <value>always on top</value>
@@ -1109,7 +1121,7 @@
     <value>F10</value>
   </data>
   <data name="framelessBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="framelessBtn.Text" xml:space="preserve">
     <value>frameless mode</value>
@@ -1118,7 +1130,7 @@
     <value>Ctrl+N</value>
   </data>
   <data name="newWindowButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="newWindowButton.Text" xml:space="preserve">
     <value>new window</value>
@@ -1130,13 +1142,13 @@
     <value>No</value>
   </data>
   <data name="qlibToolsep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 6</value>
+    <value>259, 6</value>
   </data>
   <data name="pluginManBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F2</value>
   </data>
   <data name="pluginManBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="pluginManBtn.Text" xml:space="preserve">
     <value>plugin manager</value>
@@ -1148,13 +1160,13 @@
     <value>No</value>
   </data>
   <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 6</value>
+    <value>259, 6</value>
   </data>
   <data name="settingsButton.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Oemcomma</value>
   </data>
   <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="settingsButton.Text" xml:space="preserve">
     <value>settings</value>
@@ -1163,7 +1175,7 @@
     <value>F1</value>
   </data>
   <data name="aboutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 24</value>
+    <value>262, 24</value>
   </data>
   <data name="aboutBtn.Text" xml:space="preserve">
     <value>about</value>
@@ -1212,7 +1224,7 @@
     <value>toolStrip1</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolbar, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolbar, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1353,7 +1365,7 @@
     <value>rmbMenu</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibContextMenuStrip, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibContextMenuStrip, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="suggestionIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4359,7 +4371,7 @@
     <value>toolStripSeparator4</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;prevButton.Name" xml:space="preserve">
     <value>prevButton</value>
@@ -4383,7 +4395,7 @@
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;autoZoomButton.Name" xml:space="preserve">
     <value>autoZoomButton</value>
@@ -4419,7 +4431,7 @@
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;selectionBtn.Name" xml:space="preserve">
     <value>selectionBtn</value>
@@ -4449,7 +4461,7 @@
     <value>qlibToolsep4</value>
   </data>
   <data name="&gt;&gt;qlibToolsep4.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rotateRightButton.Name" xml:space="preserve">
     <value>rotateRightButton</value>
@@ -4479,7 +4491,7 @@
     <value>toolStripSeparator7</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;cropBtn.Name" xml:space="preserve">
     <value>cropBtn</value>
@@ -4503,7 +4515,7 @@
     <value>toolStripSeparator3</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkboardButton.Name" xml:space="preserve">
     <value>checkboardButton</value>
@@ -4527,7 +4539,7 @@
     <value>qlibToolsep1</value>
   </data>
   <data name="&gt;&gt;qlibToolsep1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;moreButton.Name" xml:space="preserve">
     <value>moreButton</value>
@@ -4557,7 +4569,7 @@
     <value>toolStripSeparator9</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backColorBtn.Name" xml:space="preserve">
     <value>backColorBtn</value>
@@ -4575,7 +4587,7 @@
     <value>qlibMenuSeparator1</value>
   </data>
   <data name="&gt;&gt;qlibMenuSeparator1.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backCustomBtn.Name" xml:space="preserve">
     <value>backCustomBtn</value>
@@ -4605,7 +4617,7 @@
     <value>qlibToolsep2</value>
   </data>
   <data name="&gt;&gt;qlibToolsep2.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pluginManBtn.Name" xml:space="preserve">
     <value>pluginManBtn</value>
@@ -4617,7 +4629,7 @@
     <value>toolStripSeparator10</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator10.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
     <value>settingsButton</value>
@@ -4665,7 +4677,7 @@
     <value>qlibToolsep5</value>
   </data>
   <data name="&gt;&gt;qlibToolsep5.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;wallpaperBtn.Name" xml:space="preserve">
     <value>wallpaperBtn</value>
@@ -4677,7 +4689,7 @@
     <value>qlibToolsep3</value>
   </data>
   <data name="&gt;&gt;qlibToolsep3.Type" xml:space="preserve">
-    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickLibrary.QlibToolsep, QuickLibrary, Version=2.5.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;copyBtn.Name" xml:space="preserve">
     <value>copyBtn</value>
@@ -4714,6 +4726,12 @@
   </data>
   <data name="&gt;&gt;infoTooltip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;permDeleteBtn.Name" xml:space="preserve">
+    <value>permDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;permDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

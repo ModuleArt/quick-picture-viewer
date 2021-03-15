@@ -556,6 +556,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fichier déplacé vers la corbeille.
+        /// </summary>
+        public static string file_moved_to_trash {
+            get {
+                return ResourceManager.GetString("file-moved-to-trash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Propriétés de l&apos;image.
         /// </summary>
         public static string file_properties {
@@ -1105,6 +1114,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Supprimer définitivement le fichier.
+        /// </summary>
+        public static string perm_delete {
+            get {
+                return ResourceManager.GetString("perm-delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mode image dans l&apos;image.
         /// </summary>
         public static string picture_in_picture {
@@ -1573,11 +1591,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Êtes-vous sûr de vouloir déplacer ce dossier dans la corbeille ?.
+        ///   Looks up a localized string similar to Êtes-vous sûr de vouloir supprimer définitivement ce fichier?.
         /// </summary>
-        public static string sure_move_to_trash {
+        public static string sure_perm_delete {
             get {
-                return ResourceManager.GetString("sure-move-to-trash", resourceCulture);
+                return ResourceManager.GetString("sure-perm-delete", resourceCulture);
             }
         }
         
@@ -1668,6 +1686,15 @@ namespace quick_picture_viewer.languages {
         public static string unable_open_file {
             get {
                 return ResourceManager.GetString("unable-open-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Impossible d&apos;ouvrir le fichier, fichier ignoré.
+        /// </summary>
+        public static string unable_open_file_skipped {
+            get {
+                return ResourceManager.GetString("unable-open-file-skipped", resourceCulture);
             }
         }
         

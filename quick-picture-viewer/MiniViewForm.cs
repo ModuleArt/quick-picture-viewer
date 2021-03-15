@@ -103,10 +103,13 @@ namespace quick_picture_viewer
 
 			pictureBox.Location = new Point(x, y);
 
-			if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
-			else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
-			else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
-			else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
+			if (picturePanel != null && pictureBox != null)
+			{
+				if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
+				else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
+				else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
+				else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
+			}
 		}
 
 		private void ZoomToFit()

@@ -337,6 +337,10 @@
     <value>Fichier copié dans le presse-papiers</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>Fichier déplacé vers la corbeille</value>
+    <comment>Message box</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Propriétés de l'image</value>
     <comment>Image info</comment>
@@ -581,6 +585,10 @@
     <value>Coller l'image</value>
     <comment>Menu</comment>
   </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>Supprimer définitivement le fichier</value>
+    <comment>Menu</comment>
+  </data>
   <data name="picture-in-picture" xml:space="preserve">
     <value>Mode image dans l'image</value>
     <comment>Menu</comment>
@@ -789,8 +797,8 @@
     <value>Toutes les données non sauvegardées seront perdues. Êtes-vous sûr de vouloir fermer l'application ?</value>
     <comment>Message box</comment>
   </data>
-  <data name="sure-move-to-trash" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir déplacer ce dossier dans la corbeille ?</value>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer définitivement ce fichier?</value>
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
@@ -831,6 +839,10 @@
   </data>
   <data name="unable-open-file" xml:space="preserve">
     <value>Impossible d'ouvrir le fichier</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>Impossible d'ouvrir le fichier, fichier ignoré</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">

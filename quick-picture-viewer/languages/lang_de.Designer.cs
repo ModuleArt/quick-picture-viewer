@@ -556,6 +556,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Datei in den Papierkorb verschoben.
+        /// </summary>
+        public static string file_moved_to_trash {
+            get {
+                return ResourceManager.GetString("file-moved-to-trash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Datei Eigenschaften.
         /// </summary>
         public static string file_properties {
@@ -1105,6 +1114,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Datei dauerhaft löschen.
+        /// </summary>
+        public static string perm_delete {
+            get {
+                return ResourceManager.GetString("perm-delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bild-in-Bild-Modus.
         /// </summary>
         public static string picture_in_picture {
@@ -1573,11 +1591,11 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sind Sie sicher, dass Sie diese Datei in den Papierkorb verschieben wollen?.
+        ///   Looks up a localized string similar to Möchten Sie diese Datei wirklich dauerhaft löschen?.
         /// </summary>
-        public static string sure_move_to_trash {
+        public static string sure_perm_delete {
             get {
-                return ResourceManager.GetString("sure-move-to-trash", resourceCulture);
+                return ResourceManager.GetString("sure-perm-delete", resourceCulture);
             }
         }
         
@@ -1668,6 +1686,15 @@ namespace quick_picture_viewer.languages {
         public static string unable_open_file {
             get {
                 return ResourceManager.GetString("unable-open-file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datei kann nicht geöffnet werden, Datei übersprungen.
+        /// </summary>
+        public static string unable_open_file_skipped {
+            get {
+                return ResourceManager.GetString("unable-open-file-skipped", resourceCulture);
             }
         }
         
