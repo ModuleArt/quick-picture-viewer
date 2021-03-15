@@ -351,7 +351,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				showTypeOpsButton(false);
+				bool showTypeOps = false;
 				string ext = Path.GetExtension(path);
 				if (ext == ".webp")
 				{
@@ -376,6 +376,7 @@ namespace quick_picture_viewer
 					{
 						case SvgWrapper.Error.NoError:
 							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+							showTypeOps = true;
 							showTypeOpsButton(true, SvgWrapper.TypeName);
 							break;
 						case SvgWrapper.Error.UnableToOpen:
@@ -442,6 +443,8 @@ namespace quick_picture_viewer
 						}
 					}
 				}
+
+				if (!showTypeOps) showTypeOpsButton(false);
 			}
 			catch
 			{
@@ -1814,7 +1817,7 @@ namespace quick_picture_viewer
 			{
 				string ext = "bmp";
 				if (currentFile != null) ext = Path.GetExtension(currentFile).Substring(1, Path.GetExtension(currentFile).Length - 1);
-				Process.Start(FileAssociation.GetExecFileAssociatedToExtension(ext), Path.Combine(currentFolder, currentFile));
+				Process.Start(FileAssociation.GetExecFileAssociatedToExtension(ext), '"' + Path.Combine(currentFolder, currentFile) + '"');
 			}
 			catch
 			{
@@ -1826,7 +1829,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				Process.Start(Properties.Settings.Default.FavoriteExternalApp, Path.Combine(currentFolder, currentFile));
+				Process.Start(Properties.Settings.Default.FavoriteExternalApp, '"' + Path.Combine(currentFolder, currentFile) + '"');
 			}
 			catch
 			{

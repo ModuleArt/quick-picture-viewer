@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using QuickLibrary;
 using System.IO.Compression;
 using System.IO;
-using Microsoft.VisualBasic.FileIO;
 using System.Diagnostics;
 
 namespace quick_picture_viewer
@@ -152,9 +151,9 @@ namespace quick_picture_viewer
 				imageList1.Images[numberInList].Dispose();
 				
 				string pluginFolder = Path.Combine(PluginMan.pluginsFolder, codenames[numberInList]);
-				if (FileSystem.DirectoryExists(pluginFolder))
+				if (File.Exists(pluginFolder))
 				{
-					FileSystem.DeleteDirectory(pluginFolder, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin, UICancelOption.DoNothing);
+					FileMan.MoveFileOrFolderToRecycleBin(pluginFolder);
 				}
 				else
 				{
