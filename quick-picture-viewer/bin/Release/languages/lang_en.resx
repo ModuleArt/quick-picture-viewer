@@ -337,6 +337,10 @@
     <value>File copied to clipboard</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>File moved to the Recycle Bin</value>
+    <comment>Message box</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>File properties</value>
     <comment>Image info</comment>
@@ -581,6 +585,10 @@
     <value>Paste image</value>
     <comment>Menu</comment>
   </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>Delete file permanently</value>
+    <comment>Menu</comment>
+  </data>
   <data name="picture-in-picture" xml:space="preserve">
     <value>Picture-in-Picture mode</value>
     <comment>Menu</comment>
@@ -652,6 +660,10 @@
   <data name="reload-file" xml:space="preserve">
     <value>Reload file</value>
     <comment>Menu</comment>
+  </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Reload plugin list</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="resize-svg" xml:space="preserve">
     <value>Resize SVG</value>
@@ -785,8 +797,8 @@
     <value>All unsaved data will be lost. Are you sure you want to close the application?</value>
     <comment>Message box</comment>
   </data>
-  <data name="sure-move-to-trash" xml:space="preserve">
-    <value>Are you sure you want to move this file to the Recyble Bin?</value>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>Are you sure you want to permanently delete this file?</value>
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
@@ -827,6 +839,10 @@
   </data>
   <data name="unable-open-file" xml:space="preserve">
     <value>Unable to open file</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>Unable to open the file, file skipped</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">

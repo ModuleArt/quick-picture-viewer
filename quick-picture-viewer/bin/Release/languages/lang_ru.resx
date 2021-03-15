@@ -337,6 +337,10 @@
     <value>Файл скопирован в буфер обмена</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>Файл перемещен в корзину</value>
+    <comment>Message box</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Свойства файла</value>
     <comment>Image info</comment>
@@ -581,6 +585,10 @@
     <value>Вставить</value>
     <comment>Menu</comment>
   </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>Удалить файл безвозвратно</value>
+    <comment>Menu</comment>
+  </data>
   <data name="picture-in-picture" xml:space="preserve">
     <value>Режим "Картинка в картинке"</value>
     <comment>Menu</comment>
@@ -653,6 +661,10 @@
     <value>Переоткрыть файл</value>
     <comment>Menu</comment>
   </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Обновить список плагинов</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="resize-svg" xml:space="preserve">
     <value>Изменить размер SVG</value>
     <comment>SVG options</comment>
@@ -718,7 +730,7 @@
     <comment>About</comment>
   </data>
   <data name="set-as-desktop-background" xml:space="preserve">
-    <value>Установить как фон рабочего стола</value>
+    <value>Сделать фоновым изображением рабочего стола</value>
     <comment>Menu</comment>
   </data>
   <data name="set-background" xml:space="preserve">
@@ -781,12 +793,15 @@
     <value>Разтянуть</value>
     <comment>Wallpaper</comment>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
   <data name="sure-close-app" xml:space="preserve">
     <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?</value>
     <comment>Message box</comment>
   </data>
-  <data name="sure-move-to-trash" xml:space="preserve">
-    <value>Вы уверены, что хотите переместить файл в Корзину?</value>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>Вы действительно хотите безвозвратно удалить этот файл?</value>
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
@@ -827,6 +842,10 @@
   </data>
   <data name="unable-open-file" xml:space="preserve">
     <value>Невозможно открыть файл</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>Невозможно открыть файл, файл пропущен</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">

@@ -338,6 +338,10 @@
     <value>文件已复制到剪贴板</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>文件已移到回收站</value>
+    <comment>Message box</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>文件属性</value>
     <comment>Image info</comment>
@@ -582,6 +586,10 @@
     <value>粘贴图像</value>
     <comment>Menu</comment>
   </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>永久删除文件</value>
+    <comment>Menu</comment>
+  </data>
   <data name="picture-in-picture" xml:space="preserve">
     <value>画中画（小窗）模式</value>
     <comment>Menu</comment>
@@ -653,6 +661,10 @@
   <data name="reload-file" xml:space="preserve">
     <value>刷新文件</value>
     <comment>Menu</comment>
+  </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>重新加载插件列表</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="resize-svg" xml:space="preserve">
     <value>更改大小</value>
@@ -786,8 +798,8 @@
     <value>所有未保存的数据都将丢失，你确定要关闭应用吗？</value>
     <comment>Message box</comment>
   </data>
-  <data name="sure-move-to-trash" xml:space="preserve">
-    <value>你确定要将这个文件移动到回收站吗？</value>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>您确定要永久删除此文件吗？</value>
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
@@ -828,6 +840,10 @@
   </data>
   <data name="unable-open-file" xml:space="preserve">
     <value>无法打开文件</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>无法打开文件，文件已跳过</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">

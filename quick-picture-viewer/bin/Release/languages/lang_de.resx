@@ -337,6 +337,10 @@
     <value>Datei in die Zwischenablage kopiert</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>Datei in den Papierkorb verschoben</value>
+    <comment>Message box</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
     <value>Datei Eigenschaften</value>
     <comment>Image info</comment>
@@ -581,6 +585,10 @@
     <value>Bild einfügen</value>
     <comment>Menu</comment>
   </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>Datei dauerhaft löschen</value>
+    <comment>Menu</comment>
+  </data>
   <data name="picture-in-picture" xml:space="preserve">
     <value>Bild-in-Bild-Modus</value>
     <comment>Menu</comment>
@@ -652,6 +660,10 @@
   <data name="reload-file" xml:space="preserve">
     <value>Datei neu laden</value>
     <comment>Menu</comment>
+  </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Plugin-Liste neu laden</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="resize-svg" xml:space="preserve">
     <value>Größe der SVG ändern </value>
@@ -785,8 +797,8 @@
     <value>Alle nicht gespeicherten Daten gehen verloren. Sind Sie sicher, dass Sie diese Anwendung schließen wollen?</value>
     <comment>Message box</comment>
   </data>
-  <data name="sure-move-to-trash" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie diese Datei in den Papierkorb verschieben wollen?</value>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>Möchten Sie diese Datei wirklich dauerhaft löschen?</value>
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
@@ -827,6 +839,10 @@
   </data>
   <data name="unable-open-file" xml:space="preserve">
     <value>Datei kann nicht geöffnet werden</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>Datei kann nicht geöffnet werden, Datei übersprungen</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">
