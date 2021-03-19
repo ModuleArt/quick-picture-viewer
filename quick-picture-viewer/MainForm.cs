@@ -45,8 +45,6 @@ namespace quick_picture_viewer
 
 		public MainForm(string openPath, bool darkMode)
 		{
-			if (darkMode) HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-
 			this.darkMode = darkMode;
 			this.openPath = openPath;
 
@@ -97,6 +95,11 @@ namespace quick_picture_viewer
 			picturePanel.LostFocus += PicturePanel_LostFocus;
 		}
 
+		protected override void OnHandleCreated(EventArgs e)
+		{
+			ThemeMan.EnableDarkTitlebar(Handle, darkMode);
+			base.OnHandleCreated(e);
+		}
 		private void PicturePanel_LostFocus(object sender, EventArgs e)
 		{
 			if (ActiveControl != zoomTextBox.TextBox) ActiveControl = picturePanel;

@@ -13,6 +13,7 @@
   <a href="https://moduleart.github.io">
     <img alt="Module Art website" src="https://img.shields.io/badge/www-moduleart-%2300BCD4">
   </a>
+  <a title="Crowdin" target="_blank" href="https://crowdin.com/project/quick-picture-viewer"><img src="https://badges.crowdin.net/quick-picture-viewer/localized.svg"></a>
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF" />
   </a>

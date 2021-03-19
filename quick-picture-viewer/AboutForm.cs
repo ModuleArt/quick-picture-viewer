@@ -11,8 +11,6 @@ namespace quick_picture_viewer
 	{
 		public AboutForm()
 		{
-			HandleCreated += new EventHandler(ThemeMan.formHandleCreated);
-
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { logoPictureBox, productLabel, versionLabel, copyrightLabel });
 
@@ -26,6 +24,12 @@ namespace quick_picture_viewer
 			else if (IntPtr.Size == 8) versionLabel.Text += " (x64)";
 
 			if (ThemeMan.isWindows10()) makeDefaultBtn.Enabled = true;
+		}
+
+		protected override void OnHandleCreated(EventArgs e)
+		{
+			ThemeMan.EnableDarkTitlebar(Handle, DarkMode);
+			base.OnHandleCreated(e);
 		}
 
 		private void AboutForm_KeyDown(object sender, KeyEventArgs e)
