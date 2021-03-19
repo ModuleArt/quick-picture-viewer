@@ -143,6 +143,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_cut {
+            get {
+                object obj = ResourceManager.GetObject("black_cut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_desktop {
             get {
                 object obj = ResourceManager.GetObject("black-desktop", resourceCulture);
@@ -566,6 +576,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_crop {
             get {
                 object obj = ResourceManager.GetObject("white_crop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_cut {
+            get {
+                object obj = ResourceManager.GetObject("white_cut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

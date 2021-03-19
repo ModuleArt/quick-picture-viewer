@@ -133,7 +133,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatikus.
+        ///   Looks up a localized string similar to Auto.
         /// </summary>
         public static string auto {
             get {
@@ -386,6 +386,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vágott.
+        /// </summary>
+        public static string cut {
+            get {
+                return ResourceManager.GetString("cut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sötét.
         /// </summary>
         public static string dark {
@@ -602,7 +611,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flip horizontal.
+        ///   Looks up a localized string similar to Vízszintesen megfordít.
         /// </summary>
         public static string flip_horizontal {
             get {
@@ -881,7 +890,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Több opció.
+        ///   Looks up a localized string similar to További lehetőségek.
         /// </summary>
         public static string more_options {
             get {
@@ -890,7 +899,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Több plugin.
+        ///   Looks up a localized string similar to További pluginok.
         /// </summary>
         public static string more_plugins {
             get {
@@ -1151,7 +1160,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugin.
+        ///   Looks up a localized string similar to Csatlakoztat.
         /// </summary>
         public static string plugin {
             get {

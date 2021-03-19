@@ -106,7 +106,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to App ist auf dem neuesten Stand.
+        ///   Looks up a localized string similar to App ist auf dem neuesten Stand!.
         /// </summary>
         public static string app_is_up_to_date {
             get {
@@ -367,7 +367,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crop.
+        ///   Looks up a localized string similar to Zuschneiden.
         /// </summary>
         public static string crop {
             get {
@@ -381,6 +381,15 @@ namespace quick_picture_viewer.languages {
         public static string cur_file_not_found {
             get {
                 return ResourceManager.GetString("cur-file-not-found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schnitt.
+        /// </summary>
+        public static string cut {
+            get {
+                return ResourceManager.GetString("cut", resourceCulture);
             }
         }
         
@@ -1609,7 +1618,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Theme.
+        ///   Looks up a localized string similar to Thema.
         /// </summary>
         public static string theme {
             get {
@@ -1627,7 +1636,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Title.
+        ///   Looks up a localized string similar to Titel.
         /// </summary>
         public static string title {
             get {
@@ -1771,7 +1780,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version.
+        ///   Looks up a localized string similar to Ausführung.
         /// </summary>
         public static string version {
             get {

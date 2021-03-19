@@ -794,6 +794,7 @@ namespace quick_picture_viewer
 				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
 				cropped.RotateFlip(RotateFlipType.RotateNoneFlipX);
 				using (Graphics g = Graphics.FromImage(originalImage)) g.DrawImage(cropped, r);
+				cropped.Dispose();
 				selectionBtn.Checked = false;
 			}
 			else
@@ -812,6 +813,7 @@ namespace quick_picture_viewer
 				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
 				cropped.RotateFlip(RotateFlipType.RotateNoneFlipY);
 				using (Graphics g = Graphics.FromImage(originalImage)) g.DrawImage(cropped, r);
+				cropped.Dispose();
 				selectionBtn.Checked = false;
 			}
 			else
@@ -1186,8 +1188,12 @@ namespace quick_picture_viewer
 					if (e.KeyCode == Keys.F || e.KeyCode == Keys.F11) fullscreenBtn.PerformClick();
 					else if (e.KeyCode == Keys.Escape)
 					{
-						if (!fullscreen && Properties.Settings.Default.EscToExit) Close();
-						setFullscreen(false);
+						if (fullscreen) setFullscreen(false);
+						else
+						{
+							if (selForm != null) selectionBtn.Checked = false;
+							else if (Properties.Settings.Default.EscToExit) Close();
+						}
 					}
 					else if (e.KeyCode == Keys.S) selectionBtn.PerformClick();
 				}
@@ -1775,6 +1781,7 @@ namespace quick_picture_viewer
 				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
 				cropped.RotateFlip(RotateFlipType.Rotate180FlipNone);
 				using (Graphics g = Graphics.FromImage(originalImage)) g.DrawImage(cropped, r);
+				cropped.Dispose();
 				selectionBtn.Checked = false;
 			}
 			else
@@ -2310,7 +2317,51 @@ namespace quick_picture_viewer
 			{
 				Bitmap cropped = originalImage.Clone(GetSelectionRect(), originalImage.PixelFormat);
 				Clipboard.SetImage(cropped);
+				cropped.Dispose();
 				showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
+			}
+		}
+
+		public void CutSelection()
+		{
+			if (selForm != null && originalImage != null)
+			{
+				Rectangle r = GetSelectionRect();
+
+				Bitmap cropped = originalImage.Clone(r, originalImage.PixelFormat);
+				Clipboard.SetImage(cropped);
+				cropped.Dispose();
+				showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
+
+				Rectangle topRect = new Rectangle(0, 0, originalImage.Width, r.Y);
+				Bitmap topPart = topRect.Width > 0 && topRect.Height > 0 ? originalImage.Clone(topRect, originalImage.PixelFormat) : null; 
+
+				Rectangle leftRect = new Rectangle(0, r.Y, r.X, r.Height);
+				Bitmap leftPart = leftRect.Width > 0 && leftRect.Height > 0 ? originalImage.Clone(leftRect, originalImage.PixelFormat) : null;
+
+				Rectangle rightRect = new Rectangle(r.X + r.Width, r.Y, originalImage.Width - r.X - r.Width, r.Height);
+				Bitmap rightPart = rightRect.Width > 0 && rightRect.Height > 0 ? originalImage.Clone(rightRect, originalImage.PixelFormat) : null;
+
+				Rectangle bottomRect = new Rectangle(0, r.Y + r.Height, originalImage.Width, originalImage.Height - r.Y - r.Height);
+				Bitmap bottomPart = bottomRect.Width > 0 && bottomRect.Height > 0 ? originalImage.Clone(bottomRect, originalImage.PixelFormat) : null;
+
+				originalImage.MakeTransparent();
+				using (Graphics g = Graphics.FromImage(originalImage))
+				{
+					g.Clear(Color.Transparent);
+					if (topPart != null) g.DrawImage(topPart, topRect);
+					if (leftPart != null) g.DrawImage(leftPart, leftRect);
+					if (rightPart != null) g.DrawImage(rightPart, rightRect);
+					if (bottomPart != null) g.DrawImage(bottomPart, bottomRect);
+				}
+				if (topPart != null) topPart.Dispose();
+				if (leftPart != null) leftPart.Dispose();
+				if (rightPart != null) rightPart.Dispose();
+				if (bottomPart != null) bottomPart.Dispose();
+
+				pictureBox.Image = originalImage;
+				selectionBtn.Checked = false;
+				setImageChanged(true);
 			}
 		}
 

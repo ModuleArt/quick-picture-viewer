@@ -36,6 +36,7 @@
 			this.selectionSelectAllBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.editSelectionBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.selectionMenu = new QuickLibrary.QlibContextMenuStrip(this.components);
+			this.cutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.selectionMenu.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -53,11 +54,14 @@
 			// 
 			// qlibToolsep5
 			// 
+			this.qlibToolsep5.AutoSize = false;
 			this.qlibToolsep5.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.qlibToolsep5.DarkMode = false;
+			this.qlibToolsep5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibToolsep5.InsideMenu = true;
 			this.qlibToolsep5.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibToolsep5.Name = "qlibToolsep5";
+			this.qlibToolsep5.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.qlibToolsep5.Size = new System.Drawing.Size(198, 6);
 			// 
 			// selectionCopyBtn
@@ -104,11 +108,24 @@
 			this.selectionMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cropBtn,
             this.qlibToolsep5,
+            this.cutBtn,
             this.selectionCopyBtn,
             this.selectionSelectAllBtn,
             this.editSelectionBtn});
 			this.selectionMenu.Name = "rmbMenu";
-			this.selectionMenu.Size = new System.Drawing.Size(202, 140);
+			this.selectionMenu.Size = new System.Drawing.Size(202, 166);
+			// 
+			// cutBtn
+			// 
+			this.cutBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.cutBtn.ForeColor = System.Drawing.Color.Black;
+			this.cutBtn.Image = global::quick_picture_viewer.Properties.Resources.black_cut;
+			this.cutBtn.Name = "cutBtn";
+			this.cutBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.cutBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+			this.cutBtn.Size = new System.Drawing.Size(201, 26);
+			this.cutBtn.Text = "cut";
+			this.cutBtn.Click += new System.EventHandler(this.cutBtn_Click);
 			// 
 			// SelectionForm
 			// 
@@ -144,5 +161,6 @@
 		private System.Windows.Forms.ToolStripMenuItem selectionSelectAllBtn;
 		private System.Windows.Forms.ToolStripMenuItem editSelectionBtn;
 		private QuickLibrary.QlibContextMenuStrip selectionMenu;
+		private System.Windows.Forms.ToolStripMenuItem cutBtn;
 	}
 }

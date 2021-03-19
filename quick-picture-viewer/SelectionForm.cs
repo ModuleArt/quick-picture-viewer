@@ -43,6 +43,7 @@ namespace quick_picture_viewer
 			gripBrush = new SolidBrush(darkMode ? ThemeMan.DarkPaleColor : ThemeMan.LightPaleColor);
 			selectionMenu.DarkMode = darkMode;
 
+			cutBtn.Text = LangMan.Get("cut");
 			cropBtn.Text = LangMan.Get("crop");
 			selectionCopyBtn.Text = LangMan.Get("copy");
 			selectionSelectAllBtn.Text = LangMan.Get("select-all");
@@ -50,6 +51,7 @@ namespace quick_picture_viewer
 
 			if (darkMode)
 			{
+				cutBtn.Image = Properties.Resources.white_cut;
 				cropBtn.Image = Properties.Resources.white_crop;
 				selectionCopyBtn.Image = Properties.Resources.white_copy;
 				selectionSelectAllBtn.Image = Properties.Resources.white_selectall;
@@ -259,6 +261,11 @@ namespace quick_picture_viewer
 		private void editSelectionBtn_Click(object sender, System.EventArgs e)
 		{
 			if (Owner != null) (Owner as MainForm).selectionLabel_Click(sender, e);
+		}
+
+		private void cutBtn_Click(object sender, System.EventArgs e)
+		{
+			if (Owner != null) (Owner as MainForm).CutSelection();
 		}
 	}
 }
