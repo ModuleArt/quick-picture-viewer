@@ -97,7 +97,7 @@ namespace quick_picture_viewer
 
 		protected override void OnHandleCreated(EventArgs e)
 		{
-			ThemeMan.EnableDarkTitlebar(Handle, darkMode);
+			if (darkMode) ThemeMan.ApplyDarkTitlebar(Handle, darkMode);
 			base.OnHandleCreated(e);
 		}
 		private void PicturePanel_LostFocus(object sender, EventArgs e)
@@ -653,29 +653,8 @@ namespace quick_picture_viewer
 			pictureBox.Invoke((MethodInvoker)(() =>
 			{
 				pictureBox.Size = newSize;
-				UpdatePictureBoxLocation();
+				MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 			}));
-		}
-
-		private void UpdatePictureBoxLocation()
-		{
-			int x, y;
-
-			if (pictureBox.Width < picturePanel.Width) x = (int)((double)(picturePanel.Width - pictureBox.Width) / (double)2);
-			else x = -picturePanel.HorizontalScroll.Value;
-
-			if (pictureBox.Height < picturePanel.Height) y = (int)((double)(picturePanel.Height - pictureBox.Height) / (double)2);
-			else y = -picturePanel.VerticalScroll.Value;
-
-			pictureBox.Location = new Point(x, y);
-
-			if (picturePanel != null && pictureBox != null)
-			{
-				if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
-				else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
-				else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
-				else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
-			}
 		}
 
 		private void setZoomText(string text)
@@ -769,13 +748,12 @@ namespace quick_picture_viewer
 					picturePanel.BackColor = Color.Transparent;
 					Properties.Settings.Default.BackColor = "";
 					Properties.Settings.Default.Save();
-
-					picturePanel.BackgroundImage = darkMode ? Properties.Resources.checkboard_dark : Properties.Resources.checkboard_light;
+					MainHelper.ApplyCheckerboardBackground(pictureBox, true, darkMode);
 				}
 			}
 			else
 			{
-				picturePanel.BackgroundImage = null;
+				MainHelper.ApplyCheckerboardBackground(pictureBox, false);
 			}
 
 			if (saveToDisk)
@@ -1077,6 +1055,7 @@ namespace quick_picture_viewer
 				}
 
 				picturePanel.BackColor = Color.Black;
+				MainHelper.ApplyCheckerboardBackground(pictureBox, false, darkMode);
 
 				typeOpsButton.Left = ClientRectangle.Width + 27;
 				pleaseOpenLabel.ForeColor = Color.White;
@@ -1086,7 +1065,7 @@ namespace quick_picture_viewer
 
 				setAlwaysOnTop(false, true);
 
-				showSuggestion(string.Format(LangMan.Get("press-to-exit-fullscreen"), "Esc"), SuggestionIcon.Fullscreen);
+				showSuggestion(string.Format(LangMan.Get("press-to-exit-fullscreen"), "[Esc]"), SuggestionIcon.Fullscreen);
 			}
 			else
 			{
@@ -1103,7 +1082,7 @@ namespace quick_picture_viewer
 				if (checkboardBackground)
 				{
 					picturePanel.BackColor = Color.Transparent;
-					setCheckboardBackground(true, true);
+					MainHelper.ApplyCheckerboardBackground(pictureBox, true, darkMode);
 				}
 				else
 				{
@@ -1954,7 +1933,7 @@ namespace quick_picture_viewer
 
 		private void MainForm_ResizeEnd(object sender, EventArgs e)
 		{
-			if (!autoZoom) UpdatePictureBoxLocation();
+			if (!autoZoom) MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 		}
 
 		private void zoomTextBox_MouseEnter(object sender, EventArgs e)
@@ -2093,14 +2072,14 @@ namespace quick_picture_viewer
 		{
 			showStatusbarBtn.Checked = statusStrip1.Visible;
 			UpdatePicturePanelHeight();
-			UpdatePictureBoxLocation();
+			MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 		}
 
 		private void toolStrip1_VisibleChanged(object sender, EventArgs e)
 		{
 			showToolbarBtn.Checked = toolStrip1.Visible;
 			UpdatePicturePanelHeight();
-			UpdatePictureBoxLocation();
+			MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 		}
 
 		private void showStatusBarBtn_Click(object sender, EventArgs e)
@@ -2255,7 +2234,7 @@ namespace quick_picture_viewer
 				pictureBox.Image = originalImage;
 				setImageChanged(true);
 				UpdateSizeLabel();
-				UpdatePictureBoxLocation();
+				MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 
 				selectionBtn.Checked = false;
 			}

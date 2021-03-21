@@ -31,7 +31,7 @@ namespace quick_picture_viewer
 			else if (theme == 1) darkMode = false;
 			else darkMode = true;
 
-			if (darkMode) ThemeMan.allowDarkModeForApp(true);
+			if (darkMode) ThemeMan.AllowAppDarkMode(true);
 
 			Application.Run(new MainForm(param, darkMode));
 		}

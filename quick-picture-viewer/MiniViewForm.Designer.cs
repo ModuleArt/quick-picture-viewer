@@ -77,7 +77,7 @@
             this.newWindowBtn,
             this.quitPipBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(296, 96);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(296, 118);
 			// 
 			// checkboardBtn
 			// 
@@ -93,11 +93,14 @@
 			// 
 			// qlibMenuSeparator2
 			// 
+			this.qlibMenuSeparator2.AutoSize = false;
 			this.qlibMenuSeparator2.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.qlibMenuSeparator2.DarkMode = false;
+			this.qlibMenuSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.qlibMenuSeparator2.InsideMenu = true;
 			this.qlibMenuSeparator2.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator2.Name = "qlibMenuSeparator2";
+			this.qlibMenuSeparator2.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.qlibMenuSeparator2.Size = new System.Drawing.Size(292, 6);
 			// 
 			// newWindowBtn
@@ -172,13 +175,13 @@
 			// resizeBtn
 			// 
 			this.resizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.resizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+			this.resizeBtn.BackColor = System.Drawing.Color.Black;
 			this.resizeBtn.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
 			this.resizeBtn.DarkImage = null;
 			this.resizeBtn.DarkMode = true;
 			this.resizeBtn.FlatAppearance.BorderSize = 0;
-			this.resizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-			this.resizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+			this.resizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+			this.resizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
 			this.resizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.resizeBtn.ForeColor = System.Drawing.Color.Black;
 			this.resizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("resizeBtn.Image")));

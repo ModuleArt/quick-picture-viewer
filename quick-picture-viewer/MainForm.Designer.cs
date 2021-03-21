@@ -891,11 +891,11 @@
 			// showNavArrowsBtn
 			// 
 			this.showNavArrowsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			resources.ApplyResources(this.showNavArrowsBtn, "showNavArrowsBtn");
 			this.showNavArrowsBtn.ForeColor = System.Drawing.Color.Black;
 			this.showNavArrowsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_arrows;
 			this.showNavArrowsBtn.Name = "showNavArrowsBtn";
 			this.showNavArrowsBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			resources.ApplyResources(this.showNavArrowsBtn, "showNavArrowsBtn");
 			this.showNavArrowsBtn.Click += new System.EventHandler(this.showNavArrowsBtn_Click);
 			// 
 			// showToolbarBtn

@@ -28,7 +28,7 @@ namespace quick_picture_viewer
 
 		protected override void OnHandleCreated(EventArgs e)
 		{
-			ThemeMan.EnableDarkTitlebar(Handle, DarkMode);
+			ThemeMan.ApplyDarkTitlebar(Handle, DarkMode);
 			base.OnHandleCreated(e);
 		}
 

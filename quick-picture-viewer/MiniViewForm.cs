@@ -95,28 +95,7 @@ namespace quick_picture_viewer
 
 				pictureBox.Size = new Size(newWidth, newHeight);
 
-				UpdatePictureBoxLocation();
-			}
-		}
-
-		private void UpdatePictureBoxLocation()
-		{
-			int x, y;
-
-			if (pictureBox.Width < picturePanel.Width) x = (int)((double)(picturePanel.Width - pictureBox.Width) / (double)2);
-			else x = -picturePanel.HorizontalScroll.Value;
-
-			if (pictureBox.Height < picturePanel.Height) y = (int)((double)(picturePanel.Height - pictureBox.Height) / (double)2);
-			else y = -picturePanel.VerticalScroll.Value;
-
-			pictureBox.Location = new Point(x, y);
-
-			if (picturePanel != null && pictureBox != null)
-			{
-				if (pictureBox.Width > picturePanel.Width && pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, true);
-				else if (pictureBox.Width > picturePanel.Width) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_HORZ, true);
-				else if (pictureBox.Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
-				else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
+				MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 			}
 		}
 
@@ -178,7 +157,8 @@ namespace quick_picture_viewer
 		{
 			checkboardBackground = b;
 			checkboardBtn.Checked = b;
-			picturePanel.BackgroundImage = b ? Properties.Resources.checkboard_dark : null;
+			pictureBox.BackColor = checkboardBackground ? ThemeMan.DarkBackColor : Color.Black;
+			MainHelper.ApplyCheckerboardBackground(pictureBox, b, true);
 		}
 
 		private void MiniViewForm_KeyDown(object sender, KeyEventArgs e)
@@ -292,7 +272,7 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_ResizeEnd(object sender, EventArgs e)
 		{
-			if (!autoZoom) UpdatePictureBoxLocation();
+			if (!autoZoom) MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 			zoomLabel.ForeColor = Width > 240 ? Color.White : Color.Black;
 		}
 
