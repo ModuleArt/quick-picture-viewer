@@ -261,6 +261,10 @@
     <value>Le fichier actuel n'a pas été trouvé</value>
     <comment>Message box</comment>
   </data>
+  <data name="cut" xml:space="preserve">
+    <value>Couper</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="dark" xml:space="preserve">
     <value>Sombre</value>
     <comment>Settings</comment>
@@ -547,6 +551,10 @@
   </data>
   <data name="open-file" xml:space="preserve">
     <value>Ouvrir un fichier</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Dossier ouvert</value>
     <comment>Menu</comment>
   </data>
   <data name="open-recursive" xml:space="preserve">

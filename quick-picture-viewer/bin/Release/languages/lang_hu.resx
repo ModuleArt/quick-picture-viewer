@@ -150,7 +150,7 @@
     <comment>Image info</comment>
   </data>
   <data name="auto" xml:space="preserve">
-    <value>Automatikus</value>
+    <value>Auto</value>
     <comment>Status bar, zoom text field</comment>
   </data>
   <data name="auto-size" xml:space="preserve">
@@ -262,6 +262,10 @@
     <value>Jelenlegi fájl nem található</value>
     <comment>Message box</comment>
   </data>
+  <data name="cut" xml:space="preserve">
+    <value>Vágott</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="dark" xml:space="preserve">
     <value>Sötét</value>
     <comment>Settings</comment>
@@ -359,7 +363,7 @@
     <comment>Wallpaper</comment>
   </data>
   <data name="flip-horizontal" xml:space="preserve">
-    <value>Flip horizontal</value>
+    <value>Vízszintesen megfordít</value>
     <comment>Menu</comment>
   </data>
   <data name="flip-vertical" xml:space="preserve">
@@ -550,6 +554,10 @@
     <value>Fájl megnyitása</value>
     <comment>Menu</comment>
   </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Nyitott mappa</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-recursive" xml:space="preserve">
     <value>Rekurzívan nyissa meg a mappát</value>
     <comment>Menu</comment>
@@ -603,7 +611,7 @@
     <comment>Picture panel</comment>
   </data>
   <data name="plugin" xml:space="preserve">
-    <value>Plugin</value>
+    <value>Csatlakoztat</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-manager" xml:space="preserve">

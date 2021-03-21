@@ -48,6 +48,7 @@
 			this.toolStrip1 = new QuickLibrary.QlibToolbar();
 			this.openBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.openFolderBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openRecursive = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
@@ -87,6 +88,7 @@
 			this.moreButton = new System.Windows.Forms.ToolStripDropDownButton();
 			this.reloadButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.permDeleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.printButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator9 = new QuickLibrary.QlibToolsep();
 			this.backColorBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,7 +126,6 @@
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.permDeleteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -302,6 +303,7 @@
 			this.openBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.openBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openFileBtn,
+            this.openFolderBtn,
             this.openRecursive});
 			this.openBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
 			this.openBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -315,6 +317,15 @@
 			this.openFileBtn.Name = "openFileBtn";
 			resources.ApplyResources(this.openFileBtn, "openFileBtn");
 			this.openFileBtn.Click += new System.EventHandler(this.openFileBtn_Click);
+			// 
+			// openFolderBtn
+			// 
+			this.openFolderBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.openFolderBtn.ForeColor = System.Drawing.Color.Black;
+			this.openFolderBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.openFolderBtn.Name = "openFolderBtn";
+			resources.ApplyResources(this.openFolderBtn, "openFolderBtn");
+			this.openFolderBtn.Click += new System.EventHandler(this.openFolderBtn_Click);
 			// 
 			// openRecursive
 			// 
@@ -699,6 +710,15 @@
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
+			// permDeleteBtn
+			// 
+			this.permDeleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			resources.ApplyResources(this.permDeleteBtn, "permDeleteBtn");
+			this.permDeleteBtn.ForeColor = System.Drawing.Color.Black;
+			this.permDeleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
+			this.permDeleteBtn.Name = "permDeleteBtn";
+			this.permDeleteBtn.Click += new System.EventHandler(this.permDeleteBtn_Click);
+			// 
 			// printButton
 			// 
 			this.printButton.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -1073,15 +1093,6 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
-			// permDeleteBtn
-			// 
-			this.permDeleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			resources.ApplyResources(this.permDeleteBtn, "permDeleteBtn");
-			this.permDeleteBtn.ForeColor = System.Drawing.Color.Black;
-			this.permDeleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
-			this.permDeleteBtn.Name = "permDeleteBtn";
-			this.permDeleteBtn.Click += new System.EventHandler(this.permDeleteBtn_Click);
-			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -1213,5 +1224,6 @@
 		private System.Windows.Forms.ToolStripMenuItem wallpaperBtn;
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private System.Windows.Forms.ToolStripMenuItem permDeleteBtn;
+		private System.Windows.Forms.ToolStripMenuItem openFolderBtn;
 	}
 }

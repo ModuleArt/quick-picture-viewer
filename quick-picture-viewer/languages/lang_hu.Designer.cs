@@ -1043,6 +1043,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nyitott mappa.
+        /// </summary>
+        public static string open_folder {
+            get {
+                return ResourceManager.GetString("open-folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rekurzívan nyissa meg a mappát.
         /// </summary>
         public static string open_recursive {

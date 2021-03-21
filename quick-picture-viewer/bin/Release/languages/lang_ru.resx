@@ -139,7 +139,7 @@
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
     <value>Приложение использует актуальную версию!</value>
-    <comment>Update manager</comment>
+    <comment>Update Manager</comment>
   </data>
   <data name="app-startup-actions" xml:space="preserve">
     <value>Действия при запуске приложения</value>
@@ -199,7 +199,7 @@
   </data>
   <data name="check-for-app-updates" xml:space="preserve">
     <value>Проверить наличие обновлений</value>
-    <comment>About</comment>
+    <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
     <value>Фон шахматной доски</value>
@@ -260,6 +260,10 @@
   <data name="cur-file-not-found" xml:space="preserve">
     <value>Текущий файл не найден</value>
     <comment>Message box</comment>
+  </data>
+  <data name="cut" xml:space="preserve">
+    <value>Вырезать</value>
+    <comment>RMB menu</comment>
   </data>
   <data name="dark" xml:space="preserve">
     <value>Тёмная</value>
@@ -549,6 +553,10 @@
     <value>Открыть файл</value>
     <comment>Menu</comment>
   </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Открыть папку</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-recursive" xml:space="preserve">
     <value>Открыть папку рекурсивно</value>
     <comment>Menu</comment>
@@ -792,9 +800,6 @@
   <data name="stretch" xml:space="preserve">
     <value>Разтянуть</value>
     <comment>Wallpaper</comment>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
   <data name="sure-close-app" xml:space="preserve">
     <value>Все несохраненные изменения будут утеряны. Вы уверены, что хотите закрыть приложение?</value>

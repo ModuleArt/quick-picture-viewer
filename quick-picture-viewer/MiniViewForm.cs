@@ -57,6 +57,14 @@ namespace quick_picture_viewer
 			}
 		}
 
+		protected override void OnFormClosed(FormClosedEventArgs e)
+		{
+			Owner.Show();
+			Owner.Refresh();
+			Dispose();
+			base.OnFormClosed(e);
+		}
+
 		private void zoomIn()
 		{
 			if (autoZoom) ZoomToFit();
@@ -117,12 +125,6 @@ namespace quick_picture_viewer
 			double zoomFactorX = picturePanel.Width / (double)width;
 			double zoomFactorY = picturePanel.Height / (double)height;
 			zoomFactor = zoomFactorX > zoomFactorY ? (int)(zoomFactorY * 100) : (int)(zoomFactorX * 100);
-		}
-
-		private void MiniViewForm_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			Owner.Show();
-			Owner.Refresh();
 		}
 
 		private void MiniViewForm_MouseEnter(object sender, EventArgs e)

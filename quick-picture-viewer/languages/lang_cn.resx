@@ -554,6 +554,10 @@
     <value>打开</value>
     <comment>Menu</comment>
   </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>打开文件夹</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-recursive" xml:space="preserve">
     <value>递归打开文件夹</value>
     <comment>Menu</comment>

@@ -1042,6 +1042,15 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Открыть папку.
+        /// </summary>
+        public static string open_folder {
+            get {
+                return ResourceManager.GetString("open-folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Открыть папку рекурсивно.
         /// </summary>
         public static string open_recursive {

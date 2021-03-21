@@ -277,7 +277,6 @@
 			this.Text = "Quick Picture Viewer";
 			this.TopMost = true;
 			this.Deactivate += new System.EventHandler(this.MiniViewForm_Deactivate);
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MiniViewForm_FormClosed);
 			this.Load += new System.EventHandler(this.MiniViewForm_Load);
 			this.SizeChanged += new System.EventHandler(this.MiniViewForm_ResizeEnd);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MiniViewForm_KeyDown);

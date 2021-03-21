@@ -1,5 +1,5 @@
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "3.1.0"
+#define MyAppVersion "3.1.1"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io/quick-picture-viewer"
 #define MyAppExeName "quick-picture-viewer.exe"
@@ -197,13 +197,3 @@ Root: HKCR; Subkey: ".cr2"; ValueType: string; ValueName: ""; ValueData: "Cr2Img
 Root: HKCR; Subkey: "Cr2Img"; ValueType: string; ValueName: ""; ValueData: "CR2 image (Canon Digital Camera Raw)"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "Cr2Img\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\icons\cr2.ico"
 Root: HKCR; Subkey: "Cr2Img\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
-
-
-
-
-
-; ICO fix
-Root: HKCR; Subkey: ".ico"; ValueType: none; ValueName: ""; ValueData: "IcoImg"; Flags: deletevalue
-Root: HKCR; Subkey: "IcoImg"; ValueType: none; ValueName: ""; ValueData: "ICO image (Icons file)"; Flags: deletevalue
-Root: HKCR; Subkey: "IcoImg\DefaultIcon"; ValueType: none; ValueName: ""; ValueData: "{app}\icons\ico.ico"; Flags: deletevalue;
-Root: HKCR; Subkey: "IcoImg\shell\open\command"; ValueType: none; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""; Flags: deletevalue

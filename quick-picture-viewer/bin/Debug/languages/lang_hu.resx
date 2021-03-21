@@ -554,6 +554,10 @@
     <value>Fájl megnyitása</value>
     <comment>Menu</comment>
   </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Nyitott mappa</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-recursive" xml:space="preserve">
     <value>Rekurzívan nyissa meg a mappát</value>
     <comment>Menu</comment>

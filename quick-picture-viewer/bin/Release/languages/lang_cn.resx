@@ -262,6 +262,10 @@
     <value>当前文件无法找到</value>
     <comment>Message box</comment>
   </data>
+  <data name="cut" xml:space="preserve">
+    <value>切</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="dark" xml:space="preserve">
     <value>暗色模式</value>
     <comment>Settings</comment>
@@ -548,6 +552,10 @@
   </data>
   <data name="open-file" xml:space="preserve">
     <value>打开</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>打开文件夹</value>
     <comment>Menu</comment>
   </data>
   <data name="open-recursive" xml:space="preserve">

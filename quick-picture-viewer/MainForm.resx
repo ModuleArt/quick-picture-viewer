@@ -423,16 +423,25 @@
     <value>Ctrl+O</value>
   </data>
   <data name="openFileBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 24</value>
+    <value>237, 24</value>
   </data>
   <data name="openFileBtn.Text" xml:space="preserve">
     <value>open file</value>
   </data>
-  <data name="openRecursive.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+  <data name="openFolderBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+O</value>
   </data>
+  <data name="openFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 24</value>
+  </data>
+  <data name="openFolderBtn.Text" xml:space="preserve">
+    <value>open folder</value>
+  </data>
+  <data name="openRecursive.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+O</value>
+  </data>
   <data name="openRecursive.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 24</value>
+    <value>237, 24</value>
   </data>
   <data name="openRecursive.Text" xml:space="preserve">
     <value>open recursive</value>
@@ -4223,6 +4232,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOAHAAA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>420, 320</value>
   </data>
@@ -4323,6 +4335,12 @@
     <value>openFileBtn</value>
   </data>
   <data name="&gt;&gt;openFileBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFolderBtn.Name" xml:space="preserve">
+    <value>openFolderBtn</value>
+  </data>
+  <data name="&gt;&gt;openFolderBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openRecursive.Name" xml:space="preserve">
@@ -4559,6 +4577,12 @@
   <data name="&gt;&gt;deleteBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;permDeleteBtn.Name" xml:space="preserve">
+    <value>permDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;permDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;printButton.Name" xml:space="preserve">
     <value>printButton</value>
   </data>
@@ -4727,12 +4751,6 @@
   <data name="&gt;&gt;infoTooltip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;permDeleteBtn.Name" xml:space="preserve">
-    <value>permDeleteBtn</value>
-  </data>
-  <data name="&gt;&gt;permDeleteBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
@@ -4743,7 +4761,7 @@
     <value>642, 17</value>
   </metadata>
   <data name="saveFileDialog1.Filter" xml:space="preserve">
-    <value>PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIFF (*.tiff, *.tif)|*.tiff|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp</value>
+    <value>PNG (*.png)|*.png|JPG (*.jpg, *.jpeg, *.jpe, *.jfif, *.exif)|*.jpg|GIF (*.gif)|*.gif|BMP (*.bmp, *.dib, *.rle)|*.bmp|TIF (*.tiff, *.tif)|*.tiff|ICO (*.ico)|*.ico|WEBP (*.webp)|*.webp</value>
   </data>
   <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>778, 17</value>

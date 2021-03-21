@@ -200,6 +200,7 @@ namespace quick_picture_viewer
 
 			openBtn.Text = LangMan.Get("open");
 			openFileBtn.Text = LangMan.Get("open-file");
+			openFolderBtn.Text = LangMan.Get("open-folder");
 			openRecursive.Text = LangMan.Get("open-recursive");
 
 			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+S";
@@ -351,7 +352,7 @@ namespace quick_picture_viewer
 			}));
 		}
 
-		private void openFile(string path)
+		private void openFile(string path, bool goPrev = false)
 		{
 			try
 			{
@@ -435,25 +436,23 @@ namespace quick_picture_viewer
 				}
 				else
 				{
-					if (ext == ".gif")
-					{
-						openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
-					}
-					else
-					{
-						using (Image img = Image.FromFile(path, true))
-						{
-							openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
-						}
-					}
+					openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
 				}
 
 				if (!showTypeOps) showTypeOpsButton(false);
 			}
 			catch
 			{
-				if (NextFile(true) > 1) showSuggestion(LangMan.Get("unable-open-file-skipped") + ": " + Path.GetFileName(path), SuggestionIcon.Next);
-				else showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+				if (goPrev)
+				{
+					if (PrevFile(true) > 1) showSuggestion(LangMan.Get("unable-open-file-skipped") + ": " + Path.GetFileName(path), SuggestionIcon.Prev);
+					else showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+				}
+				else
+				{
+					if (NextFile(true) > 1) showSuggestion(LangMan.Get("unable-open-file-skipped") + ": " + Path.GetFileName(path), SuggestionIcon.Next);
+					else showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+				}
 			}
 		}
 
@@ -886,37 +885,59 @@ namespace quick_picture_viewer
 
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
-				FileStream fs = (FileStream)saveFileDialog1.OpenFile();
-				switch (saveFileDialog1.FilterIndex)
+				using (Bitmap bmpToSave = new Bitmap(originalImage))
 				{
-					case 1:
-						originalImage.Save(fs, ImageFormat.Png);
-						break;
-					case 2:
-						originalImage.Save(fs, ImageFormat.Jpeg);
-						break;
-					case 3:
-						originalImage.Save(fs, ImageFormat.Gif);
-						break;
-					case 4:
-						originalImage.Save(fs, ImageFormat.Bmp);
-						break;
-					case 5:
-						originalImage.Save(fs, ImageFormat.Tiff);
-						break;
-					case 6:
-						IcoWrapper.ConvertToIcon(originalImage, fs);
-						break;
-					case 7:
-						using (WebP webp = new WebP())
-						{
-							byte[] rawWebP = webp.EncodeLossy(originalImage);
-							fs.Write(rawWebP, 0, rawWebP.Length);
-						}
-						break;
-				}
-				fs.Close();
+					originalImage.Dispose();
+					originalImage = null;
+					pictureBox.Image.Dispose();
+					pictureBox.Image = null;
 
+					using (MemoryStream memory = new MemoryStream())
+					{
+						using (FileStream fs = new FileStream(saveFileDialog1.FileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+						{
+							byte[] bytes;
+							switch (saveFileDialog1.FilterIndex)
+							{
+								case 1:
+									bmpToSave.Save(memory, ImageFormat.Png);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case 2:
+									bmpToSave.Save(memory, ImageFormat.Jpeg);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case 3:
+									bmpToSave.Save(memory, ImageFormat.Gif);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case 4:
+									bmpToSave.Save(memory, ImageFormat.Bmp);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case 5:
+									bmpToSave.Save(memory, ImageFormat.Tiff);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case 6:
+									IcoWrapper.ConvertToIcon(bmpToSave, memory);
+									break;
+								case 7:
+									using (WebP webp = new WebP())
+									{
+										bytes = webp.EncodeLossy(bmpToSave);
+										fs.Write(bytes, 0, bytes.Length);
+									}
+									break;
+							}
+						}
+					}
+				}
 				setImageChanged(false);
 				CheckRecursiveFolder(saveFileDialog1.FileName);
 				openFile(saveFileDialog1.FileName);
@@ -1271,6 +1292,8 @@ namespace quick_picture_viewer
 			else
 			{
 				if (skipNextFile) currentIndex++;
+				if (currentIndex > filePaths.Length - 1) currentIndex = 0;
+				if (skipNextFile) currentFile = Path.GetFileName(filePaths[currentIndex]);
 				openFile(currentIndex == filePaths.Length - 1 ? filePaths[0] : filePaths[currentIndex + 1]);
 				return filePaths.Length;
 			}
@@ -1281,7 +1304,7 @@ namespace quick_picture_viewer
 			NextFile();
 		}
 
-		public void PrevFile()
+		public int PrevFile(bool skipPrevFile = false)
 		{
 			string[] filePaths = GetCurrentFiles();
 
@@ -1295,8 +1318,20 @@ namespace quick_picture_viewer
 				}
 			}
 
-			if (currentIndex == -1) showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
-			else openFile(currentIndex == 0 ? filePaths[filePaths.Length - 1] : filePaths[currentIndex - 1]);
+			if (currentIndex == -1)
+			{
+				setSlideshow(false);
+				showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
+				return 0;
+			}
+			else
+			{
+				if (skipPrevFile) currentIndex--;
+				if (currentIndex < 0) currentIndex = filePaths.Length - 1;
+				if (skipPrevFile) currentFile = Path.GetFileName(filePaths[currentIndex]);
+				openFile(currentIndex == 0 ? filePaths[filePaths.Length - 1] : filePaths[currentIndex - 1], true);
+				return filePaths.Length;
+			}
 		}
 
 		private void prevButton_Click(object sender, EventArgs e)
@@ -1450,6 +1485,7 @@ namespace quick_picture_viewer
 
 				openBtn.Image = Properties.Resources.white_open;
 				openFileBtn.Image = Properties.Resources.white_imgfile;
+				openFolderBtn.Image = Properties.Resources.white_picfolder;
 				openRecursive.Image = Properties.Resources.white_recursive;
 
 				saveAsButton.Image = Properties.Resources.white_saveas;
@@ -1665,7 +1701,8 @@ namespace quick_picture_viewer
 			Slideshow = 3,
 			Fullscreen = 4,
 			Next = 5,
-			Trash = 6
+			Prev = 6,
+			Trash = 7
 		}
 
 		public void showSuggestion(string text, SuggestionIcon icon)
@@ -1690,6 +1727,9 @@ namespace quick_picture_viewer
 						break;
 					case SuggestionIcon.Next:
 						suggestionIcon.Image = Properties.Resources.white_next;
+						break;
+					case SuggestionIcon.Prev:
+						suggestionIcon.Image = Properties.Resources.white_prev;
 						break;
 					case SuggestionIcon.Trash:
 						suggestionIcon.Image = Properties.Resources.white_trash;
@@ -2152,7 +2192,7 @@ namespace quick_picture_viewer
 		private void openRecursive_Click(object sender, EventArgs e)
 		{
 			setSlideshow(false);
-			string p = CustomOpenFolderDialog.GetFolder();
+			string p = CustomOpenFolderDialog.GetFolder(LangMan.Get("open-recursive"));
 			if (p != null)
 			{
 				recursiveFolder = p;
@@ -2451,6 +2491,17 @@ namespace quick_picture_viewer
 				{
 					showSuggestion(LangMan.Get("cur-file-not-found"), SuggestionIcon.Warning);
 				}
+			}
+		}
+
+		private void openFolderBtn_Click(object sender, EventArgs e)
+		{
+			setSlideshow(false);
+			string p = CustomOpenFolderDialog.GetFolder(LangMan.Get("open-folder"));
+			if (p != null) 
+			{
+				recursiveFolder = null;
+				openFirstFileInFolder(p); 
 			}
 		}
 	}

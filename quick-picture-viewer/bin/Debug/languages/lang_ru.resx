@@ -553,6 +553,10 @@
     <value>Открыть файл</value>
     <comment>Menu</comment>
   </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Открыть папку</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-recursive" xml:space="preserve">
     <value>Открыть папку рекурсивно</value>
     <comment>Menu</comment>
