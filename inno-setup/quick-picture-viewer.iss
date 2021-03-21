@@ -1,5 +1,5 @@
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "3.1.1"
+#define MyAppVersion "3.1.2"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io/quick-picture-viewer"
 #define MyAppExeName "quick-picture-viewer.exe"
@@ -25,8 +25,8 @@ SolidCompression=yes
 WizardStyle=modern
 UninstallDisplayIcon={app}\{#MyAppExeName}
 UninstallDisplayName={#MyAppName}
-WizardImageFile=164x314.bmp,192x386.bmp,246x459.bmp,273x556.bmp,328x604.bmp,355x700.bmp,410x797.bmp
-WizardSmallImageFile=small-55x55.bmp,small-64x68.bmp,small-83x80.bmp,small-92x97.bmp,small-110x106.bmp,small-119x123.bmp,small-138x140.bmp
+WizardImageFile=WizardImageFile.bmp
+WizardSmallImageFile=WizardSmallImageFile.bmp
 ChangesAssociations=yes
 VersionInfoVersion={#MyAppVersion}
 
@@ -35,7 +35,13 @@ SetupWindowTitle=Setup - {#MyAppName} v{#MyAppVersion}
 SetupAppTitle=Setup - {#MyAppName} v{#MyAppVersion}
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
+Name: "de"; MessagesFile: "compiler:Languages\German.isl"
+Name: "en"; MessagesFile: "compiler:Default.isl"
+Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
+Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
+Name: "hu"; MessagesFile: "compiler:Languages\Hungarian.isl"
+Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
