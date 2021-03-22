@@ -713,6 +713,10 @@
     <value>Im Uhrzeigersinn drehen</value>
     <comment>Menu</comment>
   </data>
+  <data name="save" xml:space="preserve">
+    <value>Speichern</value>
+    <comment>Menu</comment>
+  </data>
   <data name="save-as" xml:space="preserve">
     <value>Speichern unter</value>
     <comment>Menu</comment>

@@ -713,6 +713,10 @@
     <value>Rotate clockwise</value>
     <comment>Menu</comment>
   </data>
+  <data name="save" xml:space="preserve">
+    <value>Save</value>
+    <comment>Menu</comment>
+  </data>
   <data name="save-as" xml:space="preserve">
     <value>Save as</value>
     <comment>Menu</comment>

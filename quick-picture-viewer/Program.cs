@@ -9,7 +9,7 @@ namespace quick_picture_viewer
 		[STAThread]
 		static void Main(string[] args)
 		{
-			if (Environment.OSVersion.Version.Major >= 6) NativeMan.SetProcessDPIAware();
+			NativeMan.SetProcessDpiAwarenessContext(NativeMan.DPI_AWARENESS_CONTEXT.DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);

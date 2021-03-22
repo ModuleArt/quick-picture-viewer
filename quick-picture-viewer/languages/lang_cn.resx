@@ -714,6 +714,10 @@
     <value>顺时针旋转90°</value>
     <comment>Menu</comment>
   </data>
+  <data name="save" xml:space="preserve">
+    <value>救</value>
+    <comment>Menu</comment>
+  </data>
   <data name="save-as" xml:space="preserve">
     <value>另存为</value>
     <comment>Menu</comment>

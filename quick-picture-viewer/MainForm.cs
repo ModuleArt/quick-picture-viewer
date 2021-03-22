@@ -361,13 +361,16 @@ namespace quick_picture_viewer
 				string ext = Path.GetExtension(path);
 				if (ext == ".webp")
 				{
-					byte[] rawWebP = File.ReadAllBytes(path);
-					using (WebP webp = new WebP())
+					Bitmap bmp = WebpWrapper.ParseWebp(path);
+					switch (WebpWrapper.CurrentError)
 					{
-						WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
-						decoderOptions.use_threads = 1;
-						decoderOptions.alpha_dithering_strength = 100;
-						openImage(webp.Decode(rawWebP, decoderOptions), Path.GetDirectoryName(path), Path.GetFileName(path));
+						case WebpWrapper.Error.NoError:
+							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+							break;
+						case WebpWrapper.Error.UnableToOpen:
+							closeFile();
+							showSuggestion(WebpWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+							break;
 					}
 				}
 				else if (ext == ".ico")
@@ -864,7 +867,7 @@ namespace quick_picture_viewer
 					case ".tiff":
 					case ".tif":
 						saveFileDialog1.FilterIndex = 5;
-						ext = ".tif";
+						ext = ".tiff";
 						break;
 					case ".ico":
 						saveFileDialog1.FilterIndex = 6;
@@ -2544,11 +2547,7 @@ namespace quick_picture_viewer
 								IcoWrapper.ConvertToIcon(bmpToSave, memory);
 								break;
 							case ".webp":
-								using (WebP webp = new WebP())
-								{
-									bytes = webp.EncodeLossy(bmpToSave);
-									fs.Write(bytes, 0, bytes.Length);
-								}
+								WebpWrapper.Save(bmpToSave, path);
 								break;
 						}
 					}

@@ -84,6 +84,7 @@
 			this.checkboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
 			this.checkboardBtn.ForeColor = System.Drawing.Color.White;
 			this.checkboardBtn.Image = global::quick_picture_viewer.Properties.Resources.white_grid;
+			this.checkboardBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.checkboardBtn.Name = "checkboardBtn";
 			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
 			this.checkboardBtn.Size = new System.Drawing.Size(295, 24);
@@ -107,6 +108,7 @@
 			this.newWindowBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
 			this.newWindowBtn.ForeColor = System.Drawing.Color.White;
 			this.newWindowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_newwindow;
+			this.newWindowBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.newWindowBtn.Name = "newWindowBtn";
 			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
 			this.newWindowBtn.Size = new System.Drawing.Size(295, 24);
@@ -118,6 +120,7 @@
 			this.quitPipBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
 			this.quitPipBtn.ForeColor = System.Drawing.Color.White;
 			this.quitPipBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.quitPipBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.quitPipBtn.Name = "quitPipBtn";
 			this.quitPipBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.P)));

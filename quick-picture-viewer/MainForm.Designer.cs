@@ -50,6 +50,7 @@
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openFolderBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openRecursive = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveBtn = new System.Windows.Forms.ToolStripButton();
 			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.externalBtn = new System.Windows.Forms.ToolStripDropDownButton();
@@ -126,7 +127,6 @@
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.saveBtn = new System.Windows.Forms.ToolStripButton();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -337,6 +337,16 @@
 			this.openRecursive.Name = "openRecursive";
 			resources.ApplyResources(this.openRecursive, "openRecursive");
 			this.openRecursive.Click += new System.EventHandler(this.openRecursive_Click);
+			// 
+			// saveBtn
+			// 
+			resources.ApplyResources(this.saveBtn, "saveBtn");
+			this.saveBtn.BackColor = System.Drawing.Color.Transparent;
+			this.saveBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.saveBtn.Name = "saveBtn";
+			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
 			// 
 			// saveAsButton
 			// 
@@ -953,16 +963,16 @@
             this.copyFileBtn});
 			this.copyBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyBtn.Image = global::quick_picture_viewer.Properties.Resources.black_copy;
-			this.copyBtn.Name = "copyBtn";
 			resources.ApplyResources(this.copyBtn, "copyBtn");
+			this.copyBtn.Name = "copyBtn";
 			// 
 			// copyImageBtn
 			// 
 			this.copyImageBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.copyImageBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyImageBtn.Image = global::quick_picture_viewer.Properties.Resources.black_image;
-			this.copyImageBtn.Name = "copyImageBtn";
 			resources.ApplyResources(this.copyImageBtn, "copyImageBtn");
+			this.copyImageBtn.Name = "copyImageBtn";
 			this.copyImageBtn.Click += new System.EventHandler(this.copyImageBtn_Click);
 			this.copyImageBtn.EnabledChanged += new System.EventHandler(this.copyImageBtn_EnabledChanged);
 			// 
@@ -971,8 +981,8 @@
 			this.copyFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.copyFileBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyFileBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
-			this.copyFileBtn.Name = "copyFileBtn";
 			resources.ApplyResources(this.copyFileBtn, "copyFileBtn");
+			this.copyFileBtn.Name = "copyFileBtn";
 			this.copyFileBtn.Click += new System.EventHandler(this.copyFileBtn_Click_1);
 			this.copyFileBtn.EnabledChanged += new System.EventHandler(this.copyImageBtn_EnabledChanged);
 			// 
@@ -981,8 +991,8 @@
 			this.pasteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.pasteBtn.ForeColor = System.Drawing.Color.Black;
 			this.pasteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_paste;
-			this.pasteBtn.Name = "pasteBtn";
 			resources.ApplyResources(this.pasteBtn, "pasteBtn");
+			this.pasteBtn.Name = "pasteBtn";
 			this.pasteBtn.Click += new System.EventHandler(this.pasteBtn_Click);
 			// 
 			// selectAllBtn
@@ -1084,16 +1094,6 @@
 			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// saveBtn
-			// 
-			resources.ApplyResources(this.saveBtn, "saveBtn");
-			this.saveBtn.BackColor = System.Drawing.Color.Transparent;
-			this.saveBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
-			this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.saveBtn.Name = "saveBtn";
-			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
 			// 
 			// MainForm
 			// 

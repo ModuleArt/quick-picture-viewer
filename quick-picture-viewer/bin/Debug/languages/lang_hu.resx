@@ -714,6 +714,10 @@
     <value>Forgatás jobbra</value>
     <comment>Menu</comment>
   </data>
+  <data name="save" xml:space="preserve">
+    <value>Mentés</value>
+    <comment>Menu</comment>
+  </data>
   <data name="save-as" xml:space="preserve">
     <value>Mentés másként</value>
     <comment>Menu</comment>
