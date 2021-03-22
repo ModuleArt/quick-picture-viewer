@@ -455,6 +455,18 @@
   <data name="openBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 25</value>
   </data>
+  <data name="saveBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="saveBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="saveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="saveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 25</value>
+  </data>
   <data name="saveAsButton.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1257,40 +1269,46 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="showNavArrowsBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="showNavArrowsBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F6</value>
   </data>
   <data name="showNavArrowsBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 24</value>
+    <value>205, 24</value>
   </data>
   <data name="showNavArrowsBtn.Text" xml:space="preserve">
     <value>show nav arrows</value>
+  </data>
+  <data name="showToolbarBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="showToolbarBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F7</value>
   </data>
   <data name="showToolbarBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 24</value>
+    <value>205, 24</value>
   </data>
   <data name="showToolbarBtn.Text" xml:space="preserve">
     <value>show toolbar</value>
+  </data>
+  <data name="showStatusbarBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="showStatusbarBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F8</value>
   </data>
   <data name="showStatusbarBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 24</value>
+    <value>205, 24</value>
   </data>
   <data name="showStatusbarBtn.Text" xml:space="preserve">
     <value>show status bar</value>
   </data>
   <data name="showMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="showMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 26</value>
+    <value>287, 24</value>
   </data>
   <data name="showMenuItem.Text" xml:space="preserve">
     <value>view</value>
@@ -1311,7 +1329,7 @@
     <value>Alt+B</value>
   </data>
   <data name="wallpaperBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 26</value>
+    <value>287, 24</value>
   </data>
   <data name="wallpaperBtn.Text" xml:space="preserve">
     <value>set as desktop background</value>
@@ -1329,7 +1347,7 @@
     <value>Ctrl+C</value>
   </data>
   <data name="copyImageBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 26</value>
+    <value>215, 24</value>
   </data>
   <data name="copyImageBtn.Text" xml:space="preserve">
     <value>copy image</value>
@@ -1338,13 +1356,13 @@
     <value>Ctrl+Shift+C</value>
   </data>
   <data name="copyFileBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 26</value>
+    <value>215, 24</value>
   </data>
   <data name="copyFileBtn.Text" xml:space="preserve">
     <value>copy file</value>
   </data>
   <data name="copyBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 26</value>
+    <value>287, 24</value>
   </data>
   <data name="copyBtn.Text" xml:space="preserve">
     <value>copy</value>
@@ -1353,7 +1371,7 @@
     <value>Ctrl+V</value>
   </data>
   <data name="pasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 26</value>
+    <value>287, 24</value>
   </data>
   <data name="pasteBtn.Text" xml:space="preserve">
     <value>paste</value>
@@ -1365,13 +1383,13 @@
     <value>Ctrl+A</value>
   </data>
   <data name="selectAllBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 26</value>
+    <value>287, 24</value>
   </data>
   <data name="selectAllBtn.Text" xml:space="preserve">
     <value>select all</value>
   </data>
   <data name="rmbMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 184</value>
+    <value>288, 152</value>
   </data>
   <data name="&gt;&gt;rmbMenu.Name" xml:space="preserve">
     <value>rmbMenu</value>
@@ -1464,7 +1482,7 @@
     <value>False</value>
   </data>
   <data name="pleaseOpenLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="pleaseOpenLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4750,6 +4768,12 @@
   </data>
   <data name="&gt;&gt;infoTooltip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveBtn.Name" xml:space="preserve">
+    <value>saveBtn</value>
+  </data>
+  <data name="&gt;&gt;saveBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

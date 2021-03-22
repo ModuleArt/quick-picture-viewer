@@ -343,6 +343,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_save {
+            get {
+                object obj = ResourceManager.GetObject("black_save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_saveas {
             get {
                 object obj = ResourceManager.GetObject("black-saveas", resourceCulture);
@@ -966,6 +976,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_rotater {
             get {
                 object obj = ResourceManager.GetObject("white-rotater", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_save {
+            get {
+                object obj = ResourceManager.GetObject("white_save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

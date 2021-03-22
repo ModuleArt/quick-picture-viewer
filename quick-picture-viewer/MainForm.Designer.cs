@@ -126,6 +126,7 @@
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.saveBtn = new System.Windows.Forms.ToolStripButton();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -268,6 +269,7 @@
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openBtn,
+            this.saveBtn,
             this.saveAsButton,
             this.infoButton,
             this.externalBtn,
@@ -715,7 +717,7 @@
 			this.permDeleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.permDeleteBtn, "permDeleteBtn");
 			this.permDeleteBtn.ForeColor = System.Drawing.Color.Black;
-			this.permDeleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
+			this.permDeleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_permdel;
 			this.permDeleteBtn.Name = "permDeleteBtn";
 			this.permDeleteBtn.Click += new System.EventHandler(this.permDeleteBtn_Click);
 			// 
@@ -886,7 +888,6 @@
 			this.showMenuItem.ForeColor = System.Drawing.Color.Black;
 			this.showMenuItem.Image = global::quick_picture_viewer.Properties.Resources.black_show;
 			this.showMenuItem.Name = "showMenuItem";
-			this.showMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			// 
 			// showNavArrowsBtn
 			// 
@@ -895,27 +896,24 @@
 			this.showNavArrowsBtn.ForeColor = System.Drawing.Color.Black;
 			this.showNavArrowsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_arrows;
 			this.showNavArrowsBtn.Name = "showNavArrowsBtn";
-			this.showNavArrowsBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.showNavArrowsBtn.Click += new System.EventHandler(this.showNavArrowsBtn_Click);
 			// 
 			// showToolbarBtn
 			// 
 			this.showToolbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			resources.ApplyResources(this.showToolbarBtn, "showToolbarBtn");
 			this.showToolbarBtn.ForeColor = System.Drawing.Color.Black;
 			this.showToolbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_toolbar;
 			this.showToolbarBtn.Name = "showToolbarBtn";
-			this.showToolbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			resources.ApplyResources(this.showToolbarBtn, "showToolbarBtn");
 			this.showToolbarBtn.Click += new System.EventHandler(this.showToolbarBtn_Click);
 			// 
 			// showStatusbarBtn
 			// 
 			this.showStatusbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			resources.ApplyResources(this.showStatusbarBtn, "showStatusbarBtn");
 			this.showStatusbarBtn.ForeColor = System.Drawing.Color.Black;
 			this.showStatusbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
 			this.showStatusbarBtn.Name = "showStatusbarBtn";
-			this.showStatusbarBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			resources.ApplyResources(this.showStatusbarBtn, "showStatusbarBtn");
 			this.showStatusbarBtn.Click += new System.EventHandler(this.showStatusBarBtn_Click);
 			// 
 			// qlibToolsep5
@@ -935,7 +933,6 @@
 			this.wallpaperBtn.ForeColor = System.Drawing.Color.Black;
 			this.wallpaperBtn.Image = global::quick_picture_viewer.Properties.Resources.black_desktop;
 			this.wallpaperBtn.Name = "wallpaperBtn";
-			this.wallpaperBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.wallpaperBtn.Click += new System.EventHandler(this.wallpaperBtn_Click);
 			// 
 			// qlibToolsep3
@@ -957,7 +954,6 @@
 			this.copyBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyBtn.Image = global::quick_picture_viewer.Properties.Resources.black_copy;
 			this.copyBtn.Name = "copyBtn";
-			this.copyBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			resources.ApplyResources(this.copyBtn, "copyBtn");
 			// 
 			// copyImageBtn
@@ -966,7 +962,6 @@
 			this.copyImageBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyImageBtn.Image = global::quick_picture_viewer.Properties.Resources.black_image;
 			this.copyImageBtn.Name = "copyImageBtn";
-			this.copyImageBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			resources.ApplyResources(this.copyImageBtn, "copyImageBtn");
 			this.copyImageBtn.Click += new System.EventHandler(this.copyImageBtn_Click);
 			this.copyImageBtn.EnabledChanged += new System.EventHandler(this.copyImageBtn_EnabledChanged);
@@ -977,7 +972,6 @@
 			this.copyFileBtn.ForeColor = System.Drawing.Color.Black;
 			this.copyFileBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
 			this.copyFileBtn.Name = "copyFileBtn";
-			this.copyFileBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			resources.ApplyResources(this.copyFileBtn, "copyFileBtn");
 			this.copyFileBtn.Click += new System.EventHandler(this.copyFileBtn_Click_1);
 			this.copyFileBtn.EnabledChanged += new System.EventHandler(this.copyImageBtn_EnabledChanged);
@@ -988,7 +982,6 @@
 			this.pasteBtn.ForeColor = System.Drawing.Color.Black;
 			this.pasteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_paste;
 			this.pasteBtn.Name = "pasteBtn";
-			this.pasteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			resources.ApplyResources(this.pasteBtn, "pasteBtn");
 			this.pasteBtn.Click += new System.EventHandler(this.pasteBtn_Click);
 			// 
@@ -999,7 +992,6 @@
 			this.selectAllBtn.ForeColor = System.Drawing.Color.Black;
 			this.selectAllBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selectall;
 			this.selectAllBtn.Name = "selectAllBtn";
-			this.selectAllBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.selectAllBtn.Click += new System.EventHandler(this.selectAllBtn_Click);
 			// 
 			// navNextBtn
@@ -1092,6 +1084,16 @@
 			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
+			// 
+			// saveBtn
+			// 
+			resources.ApplyResources(this.saveBtn, "saveBtn");
+			this.saveBtn.BackColor = System.Drawing.Color.Transparent;
+			this.saveBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.saveBtn.Name = "saveBtn";
+			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
 			// 
 			// MainForm
 			// 
@@ -1225,5 +1227,6 @@
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private System.Windows.Forms.ToolStripMenuItem permDeleteBtn;
 		private System.Windows.Forms.ToolStripMenuItem openFolderBtn;
+		private System.Windows.Forms.ToolStripButton saveBtn;
 	}
 }

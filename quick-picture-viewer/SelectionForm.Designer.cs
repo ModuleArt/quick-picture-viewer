@@ -70,9 +70,8 @@
 			this.selectionCopyBtn.ForeColor = System.Drawing.Color.Black;
 			this.selectionCopyBtn.Image = global::quick_picture_viewer.Properties.Resources.black_copy;
 			this.selectionCopyBtn.Name = "selectionCopyBtn";
-			this.selectionCopyBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.selectionCopyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-			this.selectionCopyBtn.Size = new System.Drawing.Size(201, 26);
+			this.selectionCopyBtn.Size = new System.Drawing.Size(201, 24);
 			this.selectionCopyBtn.Text = "copy";
 			this.selectionCopyBtn.Click += new System.EventHandler(this.selectionCopyBtn_Click);
 			// 
@@ -82,9 +81,8 @@
 			this.selectionSelectAllBtn.ForeColor = System.Drawing.Color.Black;
 			this.selectionSelectAllBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selectall;
 			this.selectionSelectAllBtn.Name = "selectionSelectAllBtn";
-			this.selectionSelectAllBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.selectionSelectAllBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-			this.selectionSelectAllBtn.Size = new System.Drawing.Size(201, 26);
+			this.selectionSelectAllBtn.Size = new System.Drawing.Size(201, 24);
 			this.selectionSelectAllBtn.Text = "select all";
 			this.selectionSelectAllBtn.Click += new System.EventHandler(this.selectionSelectAllBtn_Click);
 			// 
@@ -113,7 +111,7 @@
             this.selectionSelectAllBtn,
             this.editSelectionBtn});
 			this.selectionMenu.Name = "rmbMenu";
-			this.selectionMenu.Size = new System.Drawing.Size(202, 166);
+			this.selectionMenu.Size = new System.Drawing.Size(202, 160);
 			// 
 			// cutBtn
 			// 
@@ -121,9 +119,8 @@
 			this.cutBtn.ForeColor = System.Drawing.Color.Black;
 			this.cutBtn.Image = global::quick_picture_viewer.Properties.Resources.black_cut;
 			this.cutBtn.Name = "cutBtn";
-			this.cutBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.cutBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-			this.cutBtn.Size = new System.Drawing.Size(201, 26);
+			this.cutBtn.Size = new System.Drawing.Size(201, 24);
 			this.cutBtn.Text = "cut";
 			this.cutBtn.Click += new System.EventHandler(this.cutBtn_Click);
 			// 

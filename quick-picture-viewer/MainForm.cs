@@ -203,7 +203,8 @@ namespace quick_picture_viewer
 			openFolderBtn.Text = LangMan.Get("open-folder");
 			openRecursive.Text = LangMan.Get("open-recursive");
 
-			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+S";
+			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+Shift+S";
+			saveBtn.Text = LangMan.Get("save") + " | Ctrl+S";
 			checkboardButton.Text = LangMan.Get("checkboard-background") + " | Ctrl+B";
 			fullscreenBtn.Text = LangMan.Get("fullscreen") + " | F";
 			miniViewButton.Text = LangMan.Get("picture-in-picture") + " | Ctrl+Shift+P";
@@ -212,7 +213,7 @@ namespace quick_picture_viewer
 			zoomOutButton.Text = LangMan.Get("zoom-out") + " | Ctrl+" + LangMan.Get("minus");
 			zoom100Btn.Text = LangMan.Get("zoom-to-actual-size") + " (100%) | Ctrl+0";
 			infoButton.Text = LangMan.Get("image-info") + " | Ctrl+I";
-			slideshowButton.Text = LangMan.Get("slideshow") + " | Ctrl+Shift+S";
+			slideshowButton.Text = LangMan.Get("slideshow") + " | Shift+F5";
 			prevButton.Text = LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow");
 			infoTooltip.SetToolTip(navPrevBtn, LangMan.Get("prev-image") + " | " + LangMan.Get("left-arrow"));
 			nextButton.Text = LangMan.Get("next-image") + " | " + LangMan.Get("right-arrow");
@@ -463,17 +464,21 @@ namespace quick_picture_viewer
 				if (imageChanged)
 				{
 					DialogResult window = DialogMan.ShowConfirm(
-						this,
-						LangMan.Get("unsaved-changes-question"),
-						windowTitle: LangMan.Get("unsaved-changes"),
-						yesBtnText: LangMan.Get("save-as"),
-						yesBtnImage: saveAsButton.Image,
-						showNoBtn: true,
-						noBtnText: LangMan.Get("dont-save"),
-						noBtnImage: permDeleteBtn.Image,
-						darkMode: darkMode
-					);
-					if (window == DialogResult.Yes) saveAsButton.PerformClick();
+					this,
+					LangMan.Get("unsaved-changes-question"),
+					windowTitle: LangMan.Get("unsaved-changes"),
+					yesBtnText: currentFile != null ? LangMan.Get("save-as") : LangMan.Get("save"),
+					yesBtnImage: currentFile != null ? saveAsButton.Image : saveBtn.Image,
+					showNoBtn: true,
+					noBtnText: LangMan.Get("dont-save"),
+					noBtnImage: permDeleteBtn.Image,
+					darkMode: darkMode
+				);
+					if (window == DialogResult.Yes)
+					{
+						if (currentFile != null) saveAsButton.PerformClick();
+						else saveBtn.PerformClick();
+					}
 					else if (window != DialogResult.No) return;
 				}
 
@@ -606,6 +611,8 @@ namespace quick_picture_viewer
 			Text = string.IsNullOrEmpty(fakeName) ? currentFile + " - Quick Picture Viewer" : fakeName + " - Quick Picture Viewer";
 
 			if (b) Text = "* " + Text;
+
+			saveBtn.Enabled = b;
 		}
 
 		private void zoomInButton_Click(object sender, EventArgs e)
@@ -823,15 +830,18 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
+			string ext = ".png";
 			if (currentFile != null)
 			{
 				saveFileDialog1.FileName = Path.GetFileNameWithoutExtension(currentFile);
 				saveFileDialog1.InitialDirectory = currentFolder;
 
-				switch (Path.GetExtension(currentFile))
+				ext = Path.GetExtension(currentFile);
+				switch (ext)
 				{
 					case ".png":
 						saveFileDialog1.FilterIndex = 1;
+						ext = ".png";
 						break;
 					case ".jpg":
 					case ".jpeg":
@@ -839,87 +849,38 @@ namespace quick_picture_viewer
 					case ".jfif":
 					case ".exif":
 						saveFileDialog1.FilterIndex = 2;
+						ext = ".jpg";
 						break;
 					case ".gif":
 						saveFileDialog1.FilterIndex = 3;
+						ext = ".gif";
 						break;
 					case ".bmp":
 					case ".dib":
 					case ".rle":
 						saveFileDialog1.FilterIndex = 4;
+						ext = ".bmp";
 						break;
 					case ".tiff":
 					case ".tif":
 						saveFileDialog1.FilterIndex = 5;
+						ext = ".tif";
 						break;
 					case ".ico":
 						saveFileDialog1.FilterIndex = 6;
+						ext = ".ico";
 						break;
 					case ".webp":
 						saveFileDialog1.FilterIndex = 7;
+						ext = ".webp";
 						break;
 				}
 			}
 
-			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-			{
-				using (Bitmap bmpToSave = new Bitmap(originalImage))
-				{
-					originalImage.Dispose();
-					originalImage = null;
-					pictureBox.Image.Dispose();
-					pictureBox.Image = null;
-
-					using (MemoryStream memory = new MemoryStream())
-					{
-						using (FileStream fs = new FileStream(saveFileDialog1.FileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
-						{
-							byte[] bytes;
-							switch (saveFileDialog1.FilterIndex)
-							{
-								case 1:
-									bmpToSave.Save(memory, ImageFormat.Png);
-									bytes = memory.ToArray();
-									fs.Write(bytes, 0, bytes.Length);
-									break;
-								case 2:
-									bmpToSave.Save(memory, ImageFormat.Jpeg);
-									bytes = memory.ToArray();
-									fs.Write(bytes, 0, bytes.Length);
-									break;
-								case 3:
-									bmpToSave.Save(memory, ImageFormat.Gif);
-									bytes = memory.ToArray();
-									fs.Write(bytes, 0, bytes.Length);
-									break;
-								case 4:
-									bmpToSave.Save(memory, ImageFormat.Bmp);
-									bytes = memory.ToArray();
-									fs.Write(bytes, 0, bytes.Length);
-									break;
-								case 5:
-									bmpToSave.Save(memory, ImageFormat.Tiff);
-									bytes = memory.ToArray();
-									fs.Write(bytes, 0, bytes.Length);
-									break;
-								case 6:
-									IcoWrapper.ConvertToIcon(bmpToSave, memory);
-									break;
-								case 7:
-									using (WebP webp = new WebP())
-									{
-										bytes = webp.EncodeLossy(bmpToSave);
-										fs.Write(bytes, 0, bytes.Length);
-									}
-									break;
-							}
-						}
-					}
-				}
-				setImageChanged(false);
-				CheckRecursiveFolder(saveFileDialog1.FileName);
-				openFile(saveFileDialog1.FileName);
-			}
+			if (saveFileDialog1.ShowDialog() == DialogResult.OK) SaveFile(saveFileDialog1.FileName, ext, true);
+			setImageChanged(false);
+			CheckRecursiveFolder(saveFileDialog1.FileName);
+			openFile(saveFileDialog1.FileName);
 			saveFileDialog1.Dispose();
 		}
 
@@ -1143,20 +1104,24 @@ namespace quick_picture_viewer
 					if (e.Shift)
 					{
 						if (e.KeyCode == Keys.L) directoryLabel.PerformClick();
-						else if (e.KeyCode == Keys.S) toggleSlideshow();
+						else if (e.KeyCode == Keys.S) saveAsButton.PerformClick();
 						else if (e.KeyCode == Keys.P) miniViewButton.PerformClick();
 						else if (e.KeyCode == Keys.A) autoZoomButton.PerformClick();
 					}
 					else
 					{
 						if (e.KeyCode == Keys.B) checkboardButton.PerformClick();
-						else if (e.KeyCode == Keys.S) saveAsButton.PerformClick();
+						else if (e.KeyCode == Keys.S) saveBtn.PerformClick();
 						else if (e.KeyCode == Keys.Oemplus) zoomInButton.PerformClick();
 						else if (e.KeyCode == Keys.OemMinus) zoomOutButton.PerformClick();
 						else if (e.KeyCode == Keys.T) onTopButton.PerformClick();
 						else if (e.KeyCode == Keys.I) infoButton.PerformClick();
 						else if (e.KeyCode == Keys.D0) zoom100Btn.PerformClick();
 					}
+				}
+				else if (e.Shift)
+				{
+					if (e.KeyCode == Keys.F5) toggleSlideshow();
 				}
 				else if (e.Alt)
 				{
@@ -1377,6 +1342,7 @@ namespace quick_picture_viewer
 			}
 
 			saveAsButton.Enabled = false;
+			saveBtn.Enabled = false;
 			deleteBtn.Enabled = false;
 			permDeleteBtn.Enabled = false;
 			prevButton.Enabled = false;
@@ -1468,6 +1434,7 @@ namespace quick_picture_viewer
 				openRecursive.Image = Properties.Resources.white_recursive;
 
 				saveAsButton.Image = Properties.Resources.white_saveas;
+				saveBtn.Image = Properties.Resources.white_save;
 				printButton.Image = Properties.Resources.white_print;
 				deleteBtn.Image = Properties.Resources.white_trash;
 				permDeleteBtn.Image = Properties.Resources.white_permdel;
@@ -1630,14 +1597,18 @@ namespace quick_picture_viewer
 					this,
 					LangMan.Get("unsaved-changes-question"),
 					windowTitle: LangMan.Get("unsaved-changes"),
-					yesBtnText: LangMan.Get("save-as"),
-					yesBtnImage: saveAsButton.Image,
+					yesBtnText: currentFile != null ? LangMan.Get("save-as") : LangMan.Get("save"),
+					yesBtnImage: currentFile != null ? saveAsButton.Image : saveBtn.Image,
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: permDeleteBtn.Image,
 					darkMode: darkMode
 				);
-				if (window == DialogResult.Yes) saveAsButton.PerformClick();
+				if (window == DialogResult.Yes)
+				{
+					if (currentFile != null) saveAsButton.PerformClick();
+					else saveBtn.PerformClick();
+				}
 				else if (window != DialogResult.No) e.Cancel = true;
 			}
 
@@ -2481,6 +2452,107 @@ namespace quick_picture_viewer
 			{
 				recursiveFolder = null;
 				openFirstFileInFolder(p); 
+			}
+		}
+
+		private void saveBtn_Click(object sender, EventArgs e)
+		{
+			setSlideshow(false);
+
+			bool needSaveAs = true;
+			string ext = Path.GetExtension(currentFile);
+			switch (ext)
+			{
+				case ".png":
+				case ".jpg":
+				case ".jpeg":
+				case ".jpe":
+				case ".jfif":
+				case ".exif":
+				case ".gif":
+				case ".bmp":
+				case ".dib":
+				case ".rle":
+				case ".tiff":
+				case ".tif":
+				case ".ico":
+				case ".webp":
+					needSaveAs = false;
+					break;
+			}
+			if (needSaveAs) 
+			{
+				saveAsButton.PerformClick();
+				return;
+			}
+			SaveFile(Path.Combine(currentFolder, currentFile), ext, false);
+			setImageChanged(false);
+		}
+
+		private void SaveFile(string path, string ext, bool dispose)
+		{
+			using (Bitmap bmpToSave = new Bitmap(originalImage))
+			{
+				if (dispose)
+				{
+					originalImage.Dispose();
+					originalImage = null;
+					pictureBox.Image.Dispose();
+					pictureBox.Image = null;
+				}
+				
+				using (MemoryStream memory = new MemoryStream())
+				{
+					using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+					{
+						byte[] bytes;
+						switch (ext)
+						{
+							case ".png":
+								bmpToSave.Save(memory, ImageFormat.Png);
+								bytes = memory.ToArray();
+								fs.Write(bytes, 0, bytes.Length);
+								break;
+							case ".jpg":
+							case ".jpeg":
+							case ".jpe":
+							case ".jfif":
+							case ".exif":
+								bmpToSave.Save(memory, ImageFormat.Jpeg);
+								bytes = memory.ToArray();
+								fs.Write(bytes, 0, bytes.Length);
+								break;
+							case ".gif":
+								bmpToSave.Save(memory, ImageFormat.Gif);
+								bytes = memory.ToArray();
+								fs.Write(bytes, 0, bytes.Length);
+								break;
+							case ".bmp":
+							case ".dib":
+							case ".rle":
+								bmpToSave.Save(memory, ImageFormat.Bmp);
+								bytes = memory.ToArray();
+								fs.Write(bytes, 0, bytes.Length);
+								break;
+							case ".tiff":
+							case ".tif":
+								bmpToSave.Save(memory, ImageFormat.Tiff);
+								bytes = memory.ToArray();
+								fs.Write(bytes, 0, bytes.Length);
+								break;
+							case ".ico":
+								IcoWrapper.ConvertToIcon(bmpToSave, memory);
+								break;
+							case ".webp":
+								using (WebP webp = new WebP())
+								{
+									bytes = webp.EncodeLossy(bmpToSave);
+									fs.Write(bytes, 0, bytes.Length);
+								}
+								break;
+						}
+					}
+				}
 			}
 		}
 	}

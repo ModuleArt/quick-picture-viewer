@@ -77,7 +77,7 @@
             this.newWindowBtn,
             this.quitPipBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(296, 118);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(296, 112);
 			// 
 			// checkboardBtn
 			// 
@@ -85,9 +85,8 @@
 			this.checkboardBtn.ForeColor = System.Drawing.Color.White;
 			this.checkboardBtn.Image = global::quick_picture_viewer.Properties.Resources.white_grid;
 			this.checkboardBtn.Name = "checkboardBtn";
-			this.checkboardBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-			this.checkboardBtn.Size = new System.Drawing.Size(295, 26);
+			this.checkboardBtn.Size = new System.Drawing.Size(295, 24);
 			this.checkboardBtn.Text = "checkboard background";
 			this.checkboardBtn.Click += new System.EventHandler(this.checkerboardBackgroundToolStripMenuItem_Click);
 			// 
@@ -109,9 +108,8 @@
 			this.newWindowBtn.ForeColor = System.Drawing.Color.White;
 			this.newWindowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_newwindow;
 			this.newWindowBtn.Name = "newWindowBtn";
-			this.newWindowBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-			this.newWindowBtn.Size = new System.Drawing.Size(295, 26);
+			this.newWindowBtn.Size = new System.Drawing.Size(295, 24);
 			this.newWindowBtn.Text = "new window";
 			this.newWindowBtn.Click += new System.EventHandler(this.newWindowBtn_Click);
 			// 
@@ -121,10 +119,9 @@
 			this.quitPipBtn.ForeColor = System.Drawing.Color.White;
 			this.quitPipBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
 			this.quitPipBtn.Name = "quitPipBtn";
-			this.quitPipBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.quitPipBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.P)));
-			this.quitPipBtn.Size = new System.Drawing.Size(295, 26);
+			this.quitPipBtn.Size = new System.Drawing.Size(295, 24);
 			this.quitPipBtn.Text = "quit picture in picture";
 			this.quitPipBtn.Click += new System.EventHandler(this.quitPipBtn_Click);
 			// 
