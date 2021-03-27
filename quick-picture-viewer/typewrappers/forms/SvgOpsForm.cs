@@ -1,7 +1,6 @@
 ﻿using QuickLibrary;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -55,16 +54,9 @@ namespace quick_picture_viewer
 		private void okButton_Click(object sender, EventArgs e)
 		{
 			MainForm mf = Owner as MainForm;
-			Bitmap bmp = SvgWrapper.ParseSvg(path, (int)widthNumeric.Value, (int)heightNumeric.Value);
-			switch (SvgWrapper.CurrentError)
-			{
-				case SvgWrapper.Error.NoError:
-					mf.openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-					break;
-				case SvgWrapper.Error.UnableToOpen:
-					mf.showSuggestion(SvgWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), MainForm.SuggestionIcon.Warning);
-					break;
-			}
+			FileTypeMan.OpenResult res = SvgWrapper.CustomSizeOpen(path, (int)widthNumeric.Value, (int)heightNumeric.Value);
+			if (string.IsNullOrEmpty(res.ErrorMessage)) mf.openImage(res.Bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
+			else mf.showSuggestion(res.ErrorMessage, MainForm.SuggestionIcon.Warning);
 			Close();
 		}
 
@@ -97,11 +89,6 @@ namespace quick_picture_viewer
 		private void aspectRatioCheckbox_CheckedChanged(object sender, EventArgs e)
 		{
 			if (aspectRatioCheckbox.Checked) aspectRatio = (double)widthNumeric.Value / (double)heightNumeric.Value;
-		}
-
-		private void SvgOpsForm_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Escape) Close();
 		}
 
 		private void defaultSizeButton_Click(object sender, EventArgs e)

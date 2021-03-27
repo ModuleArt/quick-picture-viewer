@@ -77,7 +77,7 @@
             this.newWindowBtn,
             this.quitPipBtn});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(296, 112);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(296, 90);
 			// 
 			// checkboardBtn
 			// 
@@ -270,11 +270,12 @@
 			this.Controls.Add(this.resizeBtn);
 			this.Controls.Add(this.picturePanel);
 			this.DarkMode = true;
+			this.EscToClose = true;
 			this.ForeColor = System.Drawing.Color.White;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(160, 160);
+			this.MinimumSize = new System.Drawing.Size(128, 128);
 			this.Name = "MiniViewForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Quick Picture Viewer";

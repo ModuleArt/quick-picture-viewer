@@ -241,6 +241,7 @@
 			this.Controls.Add(this.addPluginBtn);
 			this.Controls.Add(this.listView1);
 			this.Draggable = true;
+			this.EscToClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -252,7 +253,6 @@
 			this.Load += new System.EventHandler(this.PluginManForm_Load);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.PluginManForm_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.PluginManForm_DragEnter);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PluginManForm_KeyDown);
 			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();

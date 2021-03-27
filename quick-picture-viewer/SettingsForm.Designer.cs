@@ -813,6 +813,7 @@
 			this.Controls.Add(this.closeBtn);
 			this.Controls.Add(this.settingsTabs);
 			this.Draggable = true;
+			this.EscToClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -823,7 +824,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "SettingsForm";
 			this.Load += new System.EventHandler(this.SettingsForm_Load);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SettingsForm_KeyDown);
 			this.settingsTabs.ResumeLayout(false);
 			this.themePage.ResumeLayout(false);
 			this.themePage.PerformLayout();

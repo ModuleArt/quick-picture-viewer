@@ -88,8 +88,11 @@
 			// 
 			// widthNumeric
 			// 
+			this.widthNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.widthNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.widthNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.widthNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.widthNumeric.CausesValidation = false;
 			this.widthNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.widthNumeric.DarkMode = false;
 			this.widthNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -119,8 +122,11 @@
 			// 
 			// heightNumeric
 			// 
+			this.heightNumeric.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.heightNumeric.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.heightNumeric.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.heightNumeric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.heightNumeric.CausesValidation = false;
 			this.heightNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.heightNumeric.DarkMode = false;
 			this.heightNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -152,14 +158,15 @@
 			// 
 			this.aspectRatioCheckbox.BackColor = System.Drawing.SystemColors.Control;
 			this.aspectRatioCheckbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.aspectRatioCheckbox.CausesValidation = false;
 			this.aspectRatioCheckbox.Checked = true;
 			this.aspectRatioCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.aspectRatioCheckbox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.aspectRatioCheckbox.DarkMode = false;
 			this.aspectRatioCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.aspectRatioCheckbox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.aspectRatioCheckbox.ForeColor = System.Drawing.Color.Black;
 			this.aspectRatioCheckbox.Image = null;
-			this.aspectRatioCheckbox.ImageIndex = 0;
 			this.aspectRatioCheckbox.Location = new System.Drawing.Point(10, 197);
 			this.aspectRatioCheckbox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.aspectRatioCheckbox.Name = "aspectRatioCheckbox";
@@ -167,6 +174,7 @@
 			this.aspectRatioCheckbox.Size = new System.Drawing.Size(236, 23);
 			this.aspectRatioCheckbox.TabIndex = 8;
 			this.aspectRatioCheckbox.Text = "maintain aspect ratio";
+			this.aspectRatioCheckbox.UseMnemonic = false;
 			this.aspectRatioCheckbox.UseVisualStyleBackColor = true;
 			this.aspectRatioCheckbox.CheckedChanged += new System.EventHandler(this.aspectRatioCheckbox_CheckedChanged);
 			// 
@@ -333,6 +341,7 @@
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.presetsLabel);
 			this.Draggable = true;
+			this.EscToClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -342,7 +351,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "SvgOpsForm";
 			this.Load += new System.EventHandler(this.SvgOpsForm_Load);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SvgOpsForm_KeyDown);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

@@ -1,5 +1,7 @@
 ﻿using QuickLibrary;
+using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -79,6 +81,12 @@ namespace quick_picture_viewer
 			SetLocation(picturePanel.Location.X + x, picturePanel.Location.Y + y);
 			SetSize(w, h);
 		}
+
+		//protected override void OnPaintBackground(PaintEventArgs e)
+		//{
+		//	var hb = new HatchBrush(HatchStyle.Percent80, this.TransparencyKey);
+		//	e.Graphics.FillRectangle(hb, this.DisplayRectangle);
+		//}
 
 		protected override void OnPaint(PaintEventArgs e)
 		{

@@ -113,6 +113,7 @@
 			this.Controls.Add(this.fitComboBox);
 			this.Controls.Add(this.okButton);
 			this.Draggable = true;
+			this.EscToClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -123,7 +124,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "WallpaperForm";
 			this.Load += new System.EventHandler(this.WallpaperForm_Load);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WallpaperForm_KeyDown);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

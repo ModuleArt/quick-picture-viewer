@@ -18,15 +18,15 @@ namespace quick_picture_viewer
 		private int height = 0;
 		private Point panelMouseDownLocation;
 		private MainForm owner;
-		private string title;
 
-		public MiniViewForm(Image image, string title, bool checkboardBackground)
+		public MiniViewForm(Bitmap image, string title, bool checkboardBackground)
 		{
-			this.title = title;
 			this.checkboardBackground = checkboardBackground;
 
 			InitializeComponent();
 			SetDraggableControls(new List<Control>() { zoomLabel });
+
+			Text = title;
 
 			MaximumSize = new Size(
 				Convert.ToInt32(Screen.FromHandle(Handle).WorkingArea.Width / 1.25f),
@@ -34,6 +34,8 @@ namespace quick_picture_viewer
 			);
 
 			ratio = (double)image.Width / (double)image.Height;
+
+			if (image.Width < Width) Width = image.Width;
 
 			Height = Convert.ToInt32(Width / ratio);
 			if (Height == MaximumSize.Height) Width = Convert.ToInt32(Height * ratio);
@@ -130,8 +132,6 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_Load(object sender, EventArgs e)
 		{
-			Text = title;
-
 			Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
 			Left = workingArea.Left + workingArea.Width - Size.Width - 32;
 			Top = workingArea.Top + 32;
@@ -182,10 +182,6 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.OemMinus) zoomOut();
 					else if (e.KeyCode == Keys.Oemplus) zoomIn();
 				}
-			}
-			else
-			{
-				if (e.KeyCode == Keys.Escape) Close();
 			}
 		}
 

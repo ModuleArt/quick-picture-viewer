@@ -79,8 +79,11 @@
 			// 
 			// extensionTextBox
 			// 
+			this.extensionTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.extensionTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.extensionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.extensionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.extensionTextBox.CausesValidation = false;
 			this.extensionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.extensionTextBox.DarkMode = false;
 			this.extensionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -157,8 +160,11 @@
 			// 
 			// compressionTextBox
 			// 
+			this.compressionTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.compressionTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.compressionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.compressionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.compressionTextBox.CausesValidation = false;
 			this.compressionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.compressionTextBox.DarkMode = false;
 			this.compressionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -186,8 +192,11 @@
 			// 
 			// fullPathTextBox
 			// 
+			this.fullPathTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.fullPathTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.fullPathTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.fullPathTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.fullPathTextBox.CausesValidation = false;
 			this.fullPathTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fullPathTextBox.DarkMode = false;
 			this.fullPathTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -216,8 +225,11 @@
 			// 
 			// folderTextBox
 			// 
+			this.folderTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.folderTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.folderTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.folderTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.folderTextBox.CausesValidation = false;
 			this.folderTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.folderTextBox.DarkMode = false;
 			this.folderTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -234,8 +246,11 @@
 			// 
 			// fileNameTextBox
 			// 
+			this.fileNameTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.fileNameTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.fileNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.fileNameTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.fileNameTextBox.CausesValidation = false;
 			this.fileNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.fileNameTextBox.DarkMode = false;
 			this.fileNameTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -264,8 +279,11 @@
 			// 
 			// sizeTextBox
 			// 
+			this.sizeTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.sizeTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.sizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.sizeTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.sizeTextBox.CausesValidation = false;
 			this.sizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.sizeTextBox.DarkMode = false;
 			this.sizeTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -293,8 +311,11 @@
 			// 
 			// megapixelsTextBox
 			// 
+			this.megapixelsTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.megapixelsTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.megapixelsTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.megapixelsTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.megapixelsTextBox.CausesValidation = false;
 			this.megapixelsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.megapixelsTextBox.DarkMode = false;
 			this.megapixelsTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -322,8 +343,11 @@
 			// 
 			// resolutionTextBox
 			// 
+			this.resolutionTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.resolutionTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.resolutionTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.resolutionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.resolutionTextBox.CausesValidation = false;
 			this.resolutionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.resolutionTextBox.DarkMode = false;
 			this.resolutionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -351,8 +375,11 @@
 			// 
 			// inchesTextBox
 			// 
+			this.inchesTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.inchesTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.inchesTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.inchesTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.inchesTextBox.CausesValidation = false;
 			this.inchesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.inchesTextBox.DarkMode = false;
 			this.inchesTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -380,8 +407,11 @@
 			// 
 			// cmTextBox
 			// 
+			this.cmTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.cmTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.cmTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.cmTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.cmTextBox.CausesValidation = false;
 			this.cmTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.cmTextBox.DarkMode = false;
 			this.cmTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -421,8 +451,11 @@
 			// 
 			// ratioTextBox
 			// 
+			this.ratioTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.ratioTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.ratioTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.ratioTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.ratioTextBox.CausesValidation = false;
 			this.ratioTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.ratioTextBox.DarkMode = false;
 			this.ratioTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -438,8 +471,11 @@
 			// 
 			// diskSizeTextBox
 			// 
+			this.diskSizeTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.diskSizeTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.diskSizeTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.diskSizeTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.diskSizeTextBox.CausesValidation = false;
 			this.diskSizeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.diskSizeTextBox.DarkMode = false;
 			this.diskSizeTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -480,8 +516,11 @@
 			// 
 			// modifiedTextBox
 			// 
+			this.modifiedTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.modifiedTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.modifiedTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.modifiedTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.modifiedTextBox.CausesValidation = false;
 			this.modifiedTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.modifiedTextBox.DarkMode = false;
 			this.modifiedTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -510,8 +549,11 @@
 			// 
 			// createdTextBox
 			// 
+			this.createdTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.createdTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.createdTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.createdTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.createdTextBox.CausesValidation = false;
 			this.createdTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.createdTextBox.DarkMode = false;
 			this.createdTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -602,6 +644,7 @@
 			this.Controls.Add(this.folderTextBox);
 			this.Controls.Add(this.fileNameTextBox);
 			this.Draggable = true;
+			this.EscToClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -612,7 +655,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "InfoForm";
 			this.Load += new System.EventHandler(this.InfoForm_Load);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InfoForm_KeyDown);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

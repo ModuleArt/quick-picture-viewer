@@ -10,7 +10,7 @@ namespace quick_picture_viewer
     /// Adapted from this gist: https://gist.github.com/darkfall/1656050
     /// Provides helper methods for imaging
     /// </summary>
-    public static class IcoWrapper
+    public static class IcoEngine
     {
         /// <summary>
         /// Converts a PNG image to a icon (ico) with all the sizes windows likes

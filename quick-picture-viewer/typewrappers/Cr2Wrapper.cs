@@ -1,46 +1,50 @@
-﻿using System;
+﻿using QuickLibrary;
+using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
 namespace quick_picture_viewer
 {
-	class Cr2Wrapper
+	public class Cr2Wrapper : TypeWrapper
 	{
-		public static string TypeName = "CR2";
-		public static Error CurrentError = 0;
-
 		private static int _bufferSize = 512 * 1024;
 		private static ImageCodecInfo _jpgImageCodec = GetJpegCodec();
 
-		public enum Error
-		{
-			NoError = 0,
-			UnableToOpen = 1
-		}
+        public Cr2Wrapper()
+        {
+            TypeName = "CR2";
+            ShowTypeOps = false;
+        }
 
-		public static Bitmap ParseCr2(string path)
-		{
-			try
-			{
-                string tempJpg = ConvertImage(path); 
+        public override FileTypeMan.OpenResult Open(string path) 
+        {
+            try
+            {
+                string tempJpg = ConvertImage(path);
                 if (tempJpg == null)
                 {
-                    CurrentError = Error.UnableToOpen;
-                    return null;
+                    return new FileTypeMan.OpenResult
+                    {
+                        ErrorMessage = TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path)
+                    };
                 }
                 else
                 {
-                    CurrentError = Error.NoError;
-                    return new Bitmap(tempJpg);
+                    return new FileTypeMan.OpenResult
+                    {
+                        Bmp = new Bitmap(tempJpg)
+                    };
                 }
-			}
-			catch
-			{
-				CurrentError = Error.UnableToOpen;
-				return null;
-			}
-		}
+            }
+            catch
+            {
+                return new FileTypeMan.OpenResult
+                {
+                    ErrorMessage = TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path)
+                };
+            }
+        }
 
 		private static string ConvertImage(string path)
 		{

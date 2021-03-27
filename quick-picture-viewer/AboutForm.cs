@@ -32,11 +32,6 @@ namespace quick_picture_viewer
 			base.OnHandleCreated(e);
 		}
 
-		private void AboutForm_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Escape) Close();
-		}
-
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			Close();

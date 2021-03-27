@@ -113,8 +113,7 @@ Powershell $> scoop install quick-picture-viewer
 Powershell [Admin] $> Get-AppxPackage *photos* | Remove-AppxPackage
 ```
 
-- <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a><br>
-- <a href="https://github.com/kov-serg/ai-extension/">Adobe Illustrator thumnails preview for windows explorer</a>
+- <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a>
 
 ## 🧰 Other great apps:
 

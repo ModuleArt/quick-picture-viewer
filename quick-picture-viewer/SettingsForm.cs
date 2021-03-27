@@ -177,11 +177,6 @@ namespace quick_picture_viewer
 			browseWithCheckBox.DarkMode = dark;
 		}
 
-		private void SettingsForm_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Escape) Close();
-		}
-
 		private void updatesCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
 			if (settingsStarted)

@@ -118,14 +118,15 @@
 			// 
 			this.centerCheckbox.BackColor = System.Drawing.SystemColors.Control;
 			this.centerCheckbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.centerCheckbox.CausesValidation = false;
 			this.centerCheckbox.Checked = true;
 			this.centerCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.centerCheckbox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.centerCheckbox.DarkMode = false;
 			this.centerCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.centerCheckbox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.centerCheckbox.ForeColor = System.Drawing.Color.Black;
 			this.centerCheckbox.Image = null;
-			this.centerCheckbox.ImageIndex = 0;
 			this.centerCheckbox.Location = new System.Drawing.Point(10, 116);
 			this.centerCheckbox.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.centerCheckbox.Name = "centerCheckbox";
@@ -133,6 +134,7 @@
 			this.centerCheckbox.Size = new System.Drawing.Size(294, 32);
 			this.centerCheckbox.TabIndex = 2;
 			this.centerCheckbox.Text = "center image";
+			this.centerCheckbox.UseMnemonic = false;
 			this.centerCheckbox.UseVisualStyleBackColor = true;
 			this.centerCheckbox.CheckedChanged += new System.EventHandler(this.centerCheckbox_CheckedChanged);
 			// 
@@ -148,8 +150,11 @@
 			// 
 			// bottomMarginTextBox
 			// 
+			this.bottomMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.bottomMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.bottomMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.bottomMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.bottomMarginTextBox.CausesValidation = false;
 			this.bottomMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.bottomMarginTextBox.DarkMode = false;
 			this.bottomMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -178,8 +183,11 @@
 			// 
 			// rightMarginTextBox
 			// 
+			this.rightMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.rightMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.rightMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.rightMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.rightMarginTextBox.CausesValidation = false;
 			this.rightMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.rightMarginTextBox.DarkMode = false;
 			this.rightMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -208,8 +216,11 @@
 			// 
 			// topMarginTextBox
 			// 
+			this.topMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.topMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.topMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.topMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.topMarginTextBox.CausesValidation = false;
 			this.topMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.topMarginTextBox.DarkMode = false;
 			this.topMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -248,8 +259,11 @@
 			// 
 			// leftMarginTextBox
 			// 
+			this.leftMarginTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.leftMarginTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.leftMarginTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.leftMarginTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.leftMarginTextBox.CausesValidation = false;
 			this.leftMarginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.leftMarginTextBox.DarkMode = false;
 			this.leftMarginTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -288,8 +302,11 @@
 			// 
 			// titleTextBox
 			// 
+			this.titleTextBox.AutoScrollMargin = new System.Drawing.Size(0, 0);
+			this.titleTextBox.AutoScrollMinSize = new System.Drawing.Size(0, 0);
 			this.titleTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.titleTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.titleTextBox.CausesValidation = false;
 			this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.titleTextBox.DarkMode = false;
 			this.titleTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -307,13 +324,14 @@
 			// 
 			this.horizontalCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.horizontalCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.horizontalCheckBox.CausesValidation = false;
 			this.horizontalCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.horizontalCheckBox.DarkMode = false;
 			this.horizontalCheckBox.FlatAppearance.BorderSize = 0;
 			this.horizontalCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.horizontalCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.horizontalCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.horizontalCheckBox.Image = null;
-			this.horizontalCheckBox.ImageIndex = 0;
 			this.horizontalCheckBox.Location = new System.Drawing.Point(10, 84);
 			this.horizontalCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.horizontalCheckBox.Name = "horizontalCheckBox";
@@ -321,6 +339,7 @@
 			this.horizontalCheckBox.Size = new System.Drawing.Size(294, 32);
 			this.horizontalCheckBox.TabIndex = 1;
 			this.horizontalCheckBox.Text = "landscape";
+			this.horizontalCheckBox.UseMnemonic = false;
 			this.horizontalCheckBox.UseVisualStyleBackColor = true;
 			this.horizontalCheckBox.CheckedChanged += new System.EventHandler(this.horizontalCheckBox_CheckedChanged);
 			// 
@@ -328,14 +347,15 @@
 			// 
 			this.marginsCheckBox.BackColor = System.Drawing.SystemColors.Control;
 			this.marginsCheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.marginsCheckBox.CausesValidation = false;
 			this.marginsCheckBox.Checked = true;
 			this.marginsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.marginsCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
 			this.marginsCheckBox.DarkMode = false;
 			this.marginsCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.marginsCheckBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.marginsCheckBox.ForeColor = System.Drawing.Color.Black;
 			this.marginsCheckBox.Image = null;
-			this.marginsCheckBox.ImageIndex = 0;
 			this.marginsCheckBox.Location = new System.Drawing.Point(10, 148);
 			this.marginsCheckBox.Margin = new System.Windows.Forms.Padding(0);
 			this.marginsCheckBox.Name = "marginsCheckBox";
@@ -343,6 +363,7 @@
 			this.marginsCheckBox.Size = new System.Drawing.Size(294, 32);
 			this.marginsCheckBox.TabIndex = 3;
 			this.marginsCheckBox.Text = "margin bounds";
+			this.marginsCheckBox.UseMnemonic = false;
 			this.marginsCheckBox.UseVisualStyleBackColor = true;
 			this.marginsCheckBox.CheckedChanged += new System.EventHandler(this.marginsCheckBox_CheckedChanged);
 			// 
@@ -399,6 +420,7 @@
 			this.Controls.Add(this.leftMarginTextBox);
 			this.Controls.Add(this.marginsCheckBox);
 			this.Draggable = true;
+			this.EscToClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -408,7 +430,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "PrintForm";
 			this.Load += new System.EventHandler(this.PrintForm_Load);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrintForm_KeyDown);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

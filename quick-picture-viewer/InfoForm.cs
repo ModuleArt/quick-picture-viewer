@@ -86,11 +86,6 @@ namespace quick_picture_viewer
 			return result;
 		}
 
-		private void InfoForm_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Escape) Close();
-		}
-
 		private void propertiesButton_Click(object sender, EventArgs e)
 		{
 			ShellManager.ShowFileProperties(Path.Combine(directoryName, fileName));

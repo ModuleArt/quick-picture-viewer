@@ -83,11 +83,6 @@ namespace quick_picture_viewer
 			DialogResult = DialogResult.OK;
 		}
 
-		private void PrintForm_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Escape) Close();
-		}
-
 		private void centerCheckbox_CheckedChanged(object sender, EventArgs e)
 		{
 			owner.printCenterImage = centerCheckbox.Checked;

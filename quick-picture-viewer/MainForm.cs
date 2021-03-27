@@ -70,8 +70,6 @@ namespace quick_picture_viewer
 			SetDarkMode(darkMode);
 			InitLanguage();
 
-			closeFile();
-
 			toolStrip1.Visible = Properties.Settings.Default.ShowToolbar;
 			statusStrip1.Visible = Properties.Settings.Default.ShowStatusBar;
 
@@ -89,7 +87,6 @@ namespace quick_picture_viewer
 					Properties.Settings.Default.StartupWindowSize = new Size(700, 485);
 				}
 			}
-			if (Properties.Settings.Default.StartupMaximize) WindowState = FormWindowState.Maximized;
 
 			ActiveControl = picturePanel;
 			picturePanel.LostFocus += PicturePanel_LostFocus;
@@ -98,6 +95,7 @@ namespace quick_picture_viewer
 		protected override void OnHandleCreated(EventArgs e)
 		{
 			if (darkMode) ThemeMan.ApplyDarkTitlebar(Handle, darkMode);
+			closeFile();
 			base.OnHandleCreated(e);
 		}
 		private void PicturePanel_LostFocus(object sender, EventArgs e)
@@ -289,7 +287,7 @@ namespace quick_picture_viewer
 				else
 				{
 					if (File.GetAttributes(openPath).HasFlag(FileAttributes.Directory)) openFirstFileInFolder(openPath);
-					else openFile(openPath);
+					else OpenFile(openPath);
 				}
 			}
 			catch
@@ -300,6 +298,8 @@ namespace quick_picture_viewer
 			setAlwaysOnTop(Properties.Settings.Default.AlwaysOnTop, false);
 			setCheckboardBackground(Properties.Settings.Default.CheckboardBackground, false);
 			nextButton.Visible = !Properties.Settings.Default.ShowNavArrows;
+
+			if (Properties.Settings.Default.StartupMaximize) WindowState = FormWindowState.Maximized;
 
 			if (Properties.Settings.Default.BackColor.Length > 0)
 			{
@@ -353,109 +353,27 @@ namespace quick_picture_viewer
 			}));
 		}
 
-		private void openFile(string path, bool goPrev = false)
+		public void OpenFile(string path, bool goPrev = false, bool skipIfError = false)
 		{
-			try
+			FileTypeMan.OpenResult res = FileTypeMan.Open(path);
+			showTypeOpsButton(res.ShowTypeOps, res.TypeName);
+			if (string.IsNullOrEmpty(res.ErrorMessage))
 			{
-				bool showTypeOps = false;
-				string ext = Path.GetExtension(path);
-				if (ext == ".webp")
-				{
-					Bitmap bmp = WebpWrapper.ParseWebp(path);
-					switch (WebpWrapper.CurrentError)
-					{
-						case WebpWrapper.Error.NoError:
-							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-							break;
-						case WebpWrapper.Error.UnableToOpen:
-							closeFile();
-							showSuggestion(WebpWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-							break;
-					}
-				}
-				else if (ext == ".ico")
-				{
-					Bitmap bmp = new Icon(path, 128, 128).ToBitmap();
-					openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-				}
-				else if (ext == ".svg")
-				{
-					Bitmap bmp = SvgWrapper.ParseSvg(path);
-					switch (SvgWrapper.CurrentError)
-					{
-						case SvgWrapper.Error.NoError:
-							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-							showTypeOps = true;
-							showTypeOpsButton(true, SvgWrapper.TypeName);
-							break;
-						case SvgWrapper.Error.UnableToOpen:
-							showSuggestion(SvgWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-							break;
-					}
-				}
-				else if (ext == ".dds" || ext == ".tga")
-				{
-					Bitmap bmp = DdsWrapper.ParseDdsOrTga(path);
-					switch (DdsWrapper.CurrentError)
-					{
-						case DdsWrapper.Error.NoError:
-							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-							break;
-						case DdsWrapper.Error.MemoryError:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("memory-error") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-							break;
-						case DdsWrapper.Error.UnableToOpen:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-							break;
-						case DdsWrapper.Error.UnsupportedPixelFormat:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("unsupported-pixel-format") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-							break;
-					}
-				}
-				else if (ext == ".psd")
-				{
-					Bitmap bmp = PsdWrapper.ParsePsd(path);
-					switch (PsdWrapper.CurrentError)
-					{
-						case PsdWrapper.Error.NoError:
-							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-							break;
-						case PsdWrapper.Error.UnableToOpen:
-							showSuggestion(PsdWrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-							break;
-					}
-				}
-				else if (ext == ".cr2")
-				{
-					Bitmap bmp = Cr2Wrapper.ParseCr2(path);
-					switch (Cr2Wrapper.CurrentError)
-					{
-						case Cr2Wrapper.Error.NoError:
-							openImage(bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
-							break;
-						case Cr2Wrapper.Error.UnableToOpen:
-							showSuggestion(Cr2Wrapper.TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
-							break;
-					}
-				}
-				else
-				{
-					openImage(new Bitmap(path), Path.GetDirectoryName(path), Path.GetFileName(path));
-				}
-
-				if (!showTypeOps) showTypeOpsButton(false);
+				openImage(res.Bmp, Path.GetDirectoryName(path), Path.GetFileName(path));
 			}
-			catch
+			else
 			{
-				if (goPrev)
+				if (skipIfError)
 				{
-					if (PrevFile(true) > 1) showSuggestion(LangMan.Get("unable-open-file-skipped") + ": " + Path.GetFileName(path), SuggestionIcon.Prev);
-					else showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+					if (goPrev ? PrevFile(true) > 0 : NextFile(true) > 0) showSuggestion(
+						LangMan.Get("unable-open-file-skipped") + ": " + Path.GetFileName(path),
+						goPrev ? SuggestionIcon.Prev : SuggestionIcon.Next
+					);
+					else showSuggestion(res.ErrorMessage, SuggestionIcon.Warning);
 				}
 				else
 				{
-					if (NextFile(true) > 1) showSuggestion(LangMan.Get("unable-open-file-skipped") + ": " + Path.GetFileName(path), SuggestionIcon.Next);
-					else showSuggestion(LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path), SuggestionIcon.Warning);
+					showSuggestion(res.ErrorMessage, SuggestionIcon.Warning);
 				}
 			}
 		}
@@ -883,7 +801,7 @@ namespace quick_picture_viewer
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK) SaveFile(saveFileDialog1.FileName, ext, true);
 			setImageChanged(false);
 			CheckRecursiveFolder(saveFileDialog1.FileName);
-			openFile(saveFileDialog1.FileName);
+			OpenFile(saveFileDialog1.FileName);
 			saveFileDialog1.Dispose();
 		}
 
@@ -1187,7 +1105,7 @@ namespace quick_picture_viewer
 				else
 				{
 					CheckRecursiveFolder(files[0]);
-					openFile(files[0]);
+					OpenFile(files[0]);
 				}
 			}
 			base.OnDragDrop(drgevent);
@@ -1239,9 +1157,9 @@ namespace quick_picture_viewer
 			else
 			{
 				if (skipNextFile) currentIndex++;
-				if (currentIndex > filePaths.Length - 1) currentIndex = 0;
+				if (currentIndex > filePaths.Length - 1) currentIndex = filePaths.Length - currentIndex;
 				if (skipNextFile) currentFile = Path.GetFileName(filePaths[currentIndex]);
-				openFile(currentIndex == filePaths.Length - 1 ? filePaths[0] : filePaths[currentIndex + 1]);
+				OpenFile(currentIndex == filePaths.Length - 1 ? filePaths[0] : filePaths[currentIndex + 1], skipIfError: true);
 				return filePaths.Length;
 			}
 		}
@@ -1274,9 +1192,9 @@ namespace quick_picture_viewer
 			else
 			{
 				if (skipPrevFile) currentIndex--;
-				if (currentIndex < 0) currentIndex = filePaths.Length - 1;
+				if (currentIndex < 0) currentIndex = filePaths.Length + currentIndex;
 				if (skipPrevFile) currentFile = Path.GetFileName(filePaths[currentIndex]);
-				openFile(currentIndex == 0 ? filePaths[filePaths.Length - 1] : filePaths[currentIndex - 1], true);
+				OpenFile(currentIndex == 0 ? filePaths[filePaths.Length - 1] : filePaths[currentIndex - 1], true, skipIfError: true);
 				return filePaths.Length;
 			}
 		}
@@ -1288,12 +1206,12 @@ namespace quick_picture_viewer
 
 		private string[] GetCurrentFiles()
 		{
-			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".ico", ".webp", ".svg", ".dds", ".tga", ".psd", ".cr2" };
+			string[] exts = { ".png", ".jpg", ".jpeg", ".jpe", ".jfif", ".exif", ".gif", ".bmp", ".dib", ".rle", ".tiff", ".tif", ".ico", ".webp", ".svg", ".dds", ".tga", ".psd", ".cr2" };
 			List<string> arlist = new List<string>();
 
 			if (currentFolder != null)
 			{
-				string[] allFiles = recursiveFolder != null ? Directory.GetFiles(recursiveFolder, "*", System.IO.SearchOption.AllDirectories) : Directory.GetFiles(currentFolder);
+				string[] allFiles = recursiveFolder != null ? Directory.GetFiles(recursiveFolder, "*", SearchOption.AllDirectories) : Directory.GetFiles(currentFolder);
 				for (int i = 0; i < allFiles.Length; i++)
 				{
 					string ext = Path.GetExtension(allFiles[i]).ToLower();
@@ -1307,7 +1225,11 @@ namespace quick_picture_viewer
 		{
 			currentFolder = folderPath;
 			string[] filePaths = GetCurrentFiles();
-			if (filePaths.Length > 0) openFile(filePaths[0]);
+			if (filePaths.Length > 0)
+			{
+				currentFile = filePaths[0];
+				OpenFile(filePaths[0], skipIfError: true);
+			}
 			else showSuggestion(LangMan.Get("no-files-to-open"), SuggestionIcon.Warning);
 		}
 
@@ -1383,6 +1305,10 @@ namespace quick_picture_viewer
 			sizeLabel.Text = " " + LangMan.Get("size") + ": 0 x 0";
 			dateCreatedLabel.Visible = false;
 			dateModifiedLabel.Visible = false;
+
+			showTypeOpsButton(false);
+
+			Text = "Quick Picture Viewer";
 
 			setZoomText(LangMan.Get("auto"));
 			setSlideshow(false);
@@ -1746,7 +1672,7 @@ namespace quick_picture_viewer
 
 		private void reloadButton_Click(object sender, EventArgs e)
 		{
-			openFile(Path.Combine(currentFolder, currentFile));
+			OpenFile(Path.Combine(currentFolder, currentFile));
 			showSuggestion(LangMan.Get("file-reloaded"), SuggestionIcon.Check);
 		}
 
@@ -2081,7 +2007,7 @@ namespace quick_picture_viewer
 			{
 				string path = ((string[])Clipboard.GetData(DataFormats.FileDrop))[0];
 				CheckRecursiveFolder(path);
-				openFile(path);
+				OpenFile(path);
 			}
 		}
 
@@ -2137,7 +2063,7 @@ namespace quick_picture_viewer
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
 				CheckRecursiveFolder(openFileDialog1.FileName);
-				openFile(openFileDialog1.FileName);
+				OpenFile(openFileDialog1.FileName);
 			}
 			openFileDialog1.Dispose();
 		}
@@ -2544,7 +2470,7 @@ namespace quick_picture_viewer
 								fs.Write(bytes, 0, bytes.Length);
 								break;
 							case ".ico":
-								IcoWrapper.ConvertToIcon(bmpToSave, memory);
+								IcoEngine.ConvertToIcon(bmpToSave, memory);
 								break;
 							case ".webp":
 								WebpWrapper.Save(bmpToSave, path);

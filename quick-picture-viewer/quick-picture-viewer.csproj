@@ -149,16 +149,20 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cr2Wrapper.cs" />
+    <Compile Include="typewrappers\BitmapWrapper.cs" />
+    <Compile Include="typewrappers\Cr2Wrapper.cs" />
     <Compile Include="CustomJumplist.cs" />
     <Compile Include="CustomOpenFolderDialog.cs" />
     <Compile Include="CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WebpWrapper.cs" />
-    <Compile Include="DdsWrapper.cs" />
+    <Compile Include="typewrappers\DdsTgaWrapper.cs" />
+    <Compile Include="typewrappers\IcoWrapper.cs" />
+    <Compile Include="typewrappers\system\FileTypeMan.cs" />
+    <Compile Include="typewrappers\system\TypeWrapper.cs" />
+    <Compile Include="typewrappers\WebpWrapper.cs" />
     <Compile Include="MainHelper.cs" />
-    <Compile Include="IcoWrapper.cs" />
+    <Compile Include="typewrappers\engines\IcoEngine.cs" />
     <Compile Include="InfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,8 +228,8 @@
     <Compile Include="PluginManForm.Designer.cs">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SvgWrapper.cs" />
-    <Compile Include="PsdWrapper.cs" />
+    <Compile Include="typewrappers\SvgWrapper.cs" />
+    <Compile Include="typewrappers\PsdWrapper.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,10 +237,10 @@
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ShellManager.cs" />
-    <Compile Include="SvgOpsForm.cs">
+    <Compile Include="typewrappers\forms\SvgOpsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SvgOpsForm.Designer.cs">
+    <Compile Include="typewrappers\forms\SvgOpsForm.Designer.cs">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintForm.cs">
@@ -271,7 +275,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebpEngine.cs" />
+    <Compile Include="typewrappers\engines\WebpEngine.cs" />
     <EmbeddedResource Include="InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,7 +333,7 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SvgOpsForm.resx">
+    <EmbeddedResource Include="typewrappers\forms\SvgOpsForm.resx">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditSelForm.resx">

@@ -55,11 +55,6 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void WallpaperForm_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.Escape) Close();
-		}
-
 		private void closeBtn_Click(object sender, EventArgs e)
 		{
 			Close();

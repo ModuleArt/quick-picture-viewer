@@ -221,6 +221,7 @@
 			this.CustomBack = true;
 			this.CustomBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(205)))), ((int)(((byte)(126)))));
 			this.Draggable = true;
+			this.EscToClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -230,7 +231,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "AboutForm";
 			this.Load += new System.EventHandler(this.AboutForm_Load);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AboutForm_KeyDown);
 			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

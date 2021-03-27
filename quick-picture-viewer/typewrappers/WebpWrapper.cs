@@ -1,21 +1,18 @@
-﻿using System;
+﻿using QuickLibrary;
 using System.Drawing;
 using System.IO;
 
 namespace quick_picture_viewer
 {
-	public static class WebpWrapper
+	public class WebpWrapper : TypeWrapper
 	{
-		public static string TypeName = "WEBP";
-		public static Error CurrentError = 0;
-		public enum Error : int
+		public WebpWrapper() 
 		{
-			NoError,
-			UnableToOpen
-			//UnableToLoadLibrary
+			TypeName = "WEBP";
+			ShowTypeOps = false;
 		}
 
-		public static Bitmap ParseWebp(string path)
+		public override FileTypeMan.OpenResult Open(string path)
 		{
 			try
 			{
@@ -25,15 +22,18 @@ namespace quick_picture_viewer
 					WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
 					decoderOptions.use_threads = 1;
 					decoderOptions.alpha_dithering_strength = 100;
-					CurrentError = Error.NoError;
-					return webp.Decode(rawWebP, decoderOptions);
+					return new FileTypeMan.OpenResult 
+					{
+						Bmp = webp.Decode(rawWebP, decoderOptions)
+					};
 				}
 			}
-			catch (Exception ex)
+			catch
 			{
-				CurrentError = Error.UnableToOpen;
-				Console.WriteLine(ex.Message);
-				return null;
+				return new FileTypeMan.OpenResult
+				{
+					ErrorMessage = TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path)
+				};
 			}
 		}
 

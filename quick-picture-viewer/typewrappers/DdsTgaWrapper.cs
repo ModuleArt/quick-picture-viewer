@@ -1,24 +1,22 @@
-﻿using System.Drawing;
+﻿using QuickLibrary;
+using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace quick_picture_viewer
 {
-	public static class DdsWrapper
+	public class DdsTgaWrapper : TypeWrapper
 	{
-		public static string TypeName = "DDS/TGA";
-		public static Error CurrentError = 0;
-		public enum Error : int
-		{
-			NoError,
-			MemoryError,
-			UnableToOpen,
-			UnsupportedPixelFormat
-		}
-
 		private static GCHandle TmpGcHandle;
 
-		public static Bitmap ParseDdsOrTga(string path)
+		public DdsTgaWrapper()
+		{
+			TypeName = "DDS/TGA";
+			ShowTypeOps = false;
+		}
+
+		public override FileTypeMan.OpenResult Open(string path)
 		{
 			try
 			{
@@ -41,8 +39,10 @@ namespace quick_picture_viewer
 							format = PixelFormat.Format8bppIndexed;
 							break;
 						default:
-							CurrentError = Error.UnsupportedPixelFormat;
-							return null;
+							return new FileTypeMan.OpenResult
+							{
+								ErrorMessage = TypeName + " - " + LangMan.Get("unsupported-pixel-format") + ": " + Path.GetFileName(path)
+							};
 					}
 
 					try
@@ -51,20 +51,26 @@ namespace quick_picture_viewer
 						TmpGcHandle = GCHandle.Alloc(image.Data, GCHandleType.Pinned);
 						var data = Marshal.UnsafeAddrOfPinnedArrayElement(image.Data, 0);
 
-						CurrentError = Error.NoError;
-						return new Bitmap(image.Width, image.Height, image.Stride, format, data);
+						return new FileTypeMan.OpenResult
+						{
+							Bmp = new Bitmap(image.Width, image.Height, image.Stride, format, data)
+						};
 					}
 					catch
 					{
-						CurrentError = Error.MemoryError;
-						return null;
+						return new FileTypeMan.OpenResult
+						{
+							ErrorMessage = TypeName + " - " + LangMan.Get("memory-error") + ": " + Path.GetFileName(path)
+						};
 					}
 				}
 			}
 			catch
 			{
-				CurrentError = Error.UnableToOpen;
-				return null;
+				return new FileTypeMan.OpenResult
+				{
+					ErrorMessage = TypeName + " - " + LangMan.Get("unable-open-file") + ": " + Path.GetFileName(path)
+				};
 			}
 		}
 	}

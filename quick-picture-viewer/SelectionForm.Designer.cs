@@ -115,7 +115,7 @@
             this.selectionSelectAllBtn,
             this.editSelectionBtn});
 			this.selectionMenu.Name = "rmbMenu";
-			this.selectionMenu.Size = new System.Drawing.Size(202, 160);
+			this.selectionMenu.Size = new System.Drawing.Size(202, 138);
 			// 
 			// cutBtn
 			// 
@@ -138,7 +138,8 @@
 			this.ClientSize = new System.Drawing.Size(128, 128);
 			this.ContextMenuStrip = this.selectionMenu;
 			this.ControlBox = false;
-			this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.DoubleBuffered = true;
+			this.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
