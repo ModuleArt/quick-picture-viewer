@@ -8,7 +8,7 @@ namespace quick_picture_viewer
 {
 	public partial class SelectionForm : Form
 	{
-		private int gripSize = 14;
+		private int gripSize = 12;
 		private Pen borderPen = new Pen(new SolidBrush(ThemeMan.AccentColor), 1);
 		private Brush gripBrush;
 
@@ -19,7 +19,8 @@ namespace quick_picture_viewer
 		{
 			NoGrip = 0,
 			BottomRight = 1,
-			TopLeft = 2
+			TopLeft = 2,
+			Center = 3
 		}
 
 		private DragGrip CurGrip = DragGrip.NoGrip;
@@ -34,10 +35,10 @@ namespace quick_picture_viewer
 		{
 			picturePanel = srcPanel;
 
-			MinimumSize = new Size(gripSize * 2, gripSize * 2);
+			MinimumSize = new Size(gripSize * 4, gripSize * 4);
 
-			whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-			blackPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+			whitePen.DashStyle = DashStyle.Dot;
+			blackPen.DashStyle = DashStyle.Dot;
 			blackPen.DashOffset = 1;
 
 			InitializeComponent();
@@ -82,12 +83,6 @@ namespace quick_picture_viewer
 			SetSize(w, h);
 		}
 
-		//protected override void OnPaintBackground(PaintEventArgs e)
-		//{
-		//	var hb = new HatchBrush(HatchStyle.Percent80, this.TransparencyKey);
-		//	e.Graphics.FillRectangle(hb, this.DisplayRectangle);
-		//}
-
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			// BottomRight
@@ -99,6 +94,9 @@ namespace quick_picture_viewer
 			DrawGrip(e.Graphics, 2, 2);
 			e.Graphics.DrawLine(borderPen, 2, 2, gripSize + 2, 2);
 			e.Graphics.DrawLine(borderPen, 2, 2, 2, gripSize + 2);
+
+			// Center
+			DrawGrip(e.Graphics, Width / 2, Height / 2);
 
 			// Frame
 			e.Graphics.DrawRectangle(whitePen, new Rectangle(0, 0, Width - 1, Height - 1));
@@ -115,8 +113,12 @@ namespace quick_picture_viewer
 
 		private DragGrip CheckGrip(Point pos)
 		{
-			if (pos.X >= Width - gripSize && pos.Y >= Height - gripSize) return DragGrip.BottomRight;
-			else if (pos.X <= gripSize && pos.Y <= gripSize) return DragGrip.TopLeft;
+			if (pos.X >= Width - gripSize - 3 && pos.Y >= Height - gripSize - 3) return DragGrip.BottomRight;
+			else if (pos.X <= gripSize + 2 && pos.Y <= gripSize + 2) return DragGrip.TopLeft;
+			else if (
+				pos.X >= (Width / 2) - gripSize && pos.X <= (Width / 2) + gripSize &&
+				pos.Y >= (Height / 2) - gripSize && pos.Y <= (Height / 2) + gripSize
+			) return DragGrip.Center;
 			else return DragGrip.NoGrip;
 		}
 
@@ -145,7 +147,7 @@ namespace quick_picture_viewer
 			{
 				switch (CurGrip)
 				{
-					case DragGrip.NoGrip:
+					case DragGrip.Center:
 						SetLocation(
 							Location.X + e.X - dragStart.X - Owner.PointToScreen(ClientRectangle.Location).X,
 							Location.Y + e.Y - dragStart.Y - Owner.PointToScreen(ClientRectangle.Location).Y
@@ -176,7 +178,7 @@ namespace quick_picture_viewer
 
 			switch (CheckGrip(e.Location))
 			{
-				case DragGrip.NoGrip:
+				case DragGrip.Center:
 					Cursor = Cursors.SizeAll;
 					break;
 				case DragGrip.BottomRight:
@@ -184,6 +186,9 @@ namespace quick_picture_viewer
 					break;
 				case DragGrip.TopLeft:
 					Cursor = Cursors.SizeNWSE;
+					break;
+				case DragGrip.NoGrip:
+					Cursor = Cursors.Default;
 					break;
 			}
 		}
@@ -251,27 +256,27 @@ namespace quick_picture_viewer
 			return base.ProcessCmdKey(ref msg, keyData);
 		}
 
-		private void selectionCopyBtn_Click(object sender, System.EventArgs e)
+		private void selectionCopyBtn_Click(object sender, EventArgs e)
 		{
 			if (Owner != null) (Owner as MainForm).CopySelection();
 		}
 
-		private void selectionSelectAllBtn_Click(object sender, System.EventArgs e)
+		private void selectionSelectAllBtn_Click(object sender, EventArgs e)
 		{
 			if (Owner != null) (Owner as MainForm).selectAllBtn_Click(sender, e);
 		}
 
-		private void cropBtn_Click(object sender, System.EventArgs e)
+		private void cropBtn_Click(object sender, EventArgs e)
 		{
 			if (Owner != null) (Owner as MainForm).cropBtn_Click(sender, e);
 		}
 
-		private void editSelectionBtn_Click(object sender, System.EventArgs e)
+		private void editSelectionBtn_Click(object sender, EventArgs e)
 		{
 			if (Owner != null) (Owner as MainForm).selectionLabel_Click(sender, e);
 		}
 
-		private void cutBtn_Click(object sender, System.EventArgs e)
+		private void cutBtn_Click(object sender, EventArgs e)
 		{
 			if (Owner != null) (Owner as MainForm).CutSelection();
 		}

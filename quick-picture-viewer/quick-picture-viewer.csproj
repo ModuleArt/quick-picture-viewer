@@ -53,7 +53,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>picture.ico</ApplicationIcon>
+    <ApplicationIcon>resources\imgs\picture.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>quick_picture_viewer.Program</StartupObject>
@@ -151,9 +151,9 @@
   <ItemGroup>
     <Compile Include="typewrappers\BitmapWrapper.cs" />
     <Compile Include="typewrappers\Cr2Wrapper.cs" />
-    <Compile Include="CustomJumplist.cs" />
-    <Compile Include="CustomOpenFolderDialog.cs" />
-    <Compile Include="CustomPanel.cs">
+    <Compile Include="helpers\CustomJumplist.cs" />
+    <Compile Include="helpers\CustomOpenFolderDialog.cs" />
+    <Compile Include="controls\CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="typewrappers\DdsTgaWrapper.cs" />
@@ -161,12 +161,12 @@
     <Compile Include="typewrappers\system\FileTypeMan.cs" />
     <Compile Include="typewrappers\system\TypeWrapper.cs" />
     <Compile Include="typewrappers\WebpWrapper.cs" />
-    <Compile Include="MainHelper.cs" />
+    <Compile Include="helpers\MainHelper.cs" />
     <Compile Include="typewrappers\engines\IcoEngine.cs" />
-    <Compile Include="InfoForm.cs">
+    <Compile Include="forms\InfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoForm.Designer.cs">
+    <Compile Include="forms\InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="languages\lang_cn.Designer.cs">
@@ -205,10 +205,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang_ru.resx</DependentUpon>
     </Compile>
-    <Compile Include="MiniViewForm.cs">
+    <Compile Include="forms\MiniViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MiniViewForm.Designer.cs">
+    <Compile Include="forms\MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -216,67 +216,67 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SelectionForm.cs">
+    <Compile Include="forms\SelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectionForm.Designer.cs">
+    <Compile Include="forms\SelectionForm.Designer.cs">
       <DependentUpon>SelectionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PluginManForm.cs">
+    <Compile Include="forms\PluginManForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PluginManForm.Designer.cs">
+    <Compile Include="forms\PluginManForm.Designer.cs">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </Compile>
     <Compile Include="typewrappers\SvgWrapper.cs" />
     <Compile Include="typewrappers\PsdWrapper.cs" />
-    <Compile Include="SettingsForm.cs">
+    <Compile Include="forms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SettingsForm.Designer.cs">
+    <Compile Include="forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShellManager.cs" />
+    <Compile Include="helpers\ShellManager.cs" />
     <Compile Include="typewrappers\forms\SvgOpsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="typewrappers\forms\SvgOpsForm.Designer.cs">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintForm.cs">
+    <Compile Include="forms\PrintForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintForm.Designer.cs">
+    <Compile Include="forms\PrintForm.Designer.cs">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditSelForm.cs">
+    <Compile Include="forms\EditSelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditSelForm.Designer.cs">
+    <Compile Include="forms\EditSelForm.Designer.cs">
       <DependentUpon>EditSelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WallpaperForm.cs">
+    <Compile Include="forms\WallpaperForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WallpaperForm.Designer.cs">
+    <Compile Include="forms\WallpaperForm.Designer.cs">
       <DependentUpon>WallpaperForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AboutForm.cs">
+    <Compile Include="forms\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutForm.Designer.cs">
+    <Compile Include="forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="typewrappers\engines\WebpEngine.cs" />
-    <EmbeddedResource Include="InfoForm.resx">
+    <EmbeddedResource Include="forms\InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="languages\lang_cn.resx">
@@ -318,34 +318,34 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiniViewForm.resx">
+    <EmbeddedResource Include="forms\MiniViewForm.resx">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectionForm.resx">
+    <EmbeddedResource Include="forms\SelectionForm.resx">
       <DependentUpon>SelectionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PluginManForm.resx">
+    <EmbeddedResource Include="forms\PluginManForm.resx">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintForm.resx">
+    <EmbeddedResource Include="forms\PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsForm.resx">
+    <EmbeddedResource Include="forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="typewrappers\forms\SvgOpsForm.resx">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditSelForm.resx">
+    <EmbeddedResource Include="forms\EditSelForm.resx">
       <DependentUpon>EditSelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WallpaperForm.resx">
+    <EmbeddedResource Include="forms\WallpaperForm.resx">
       <DependentUpon>WallpaperForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AboutForm.resx">
+    <EmbeddedResource Include="forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -467,7 +467,7 @@
     <None Include="resources\imgs\light\white-list.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="picture.ico" />
+    <Content Include="resources\imgs\picture.ico" />
     <None Include="resources\imgs\dark\black-save.png" />
     <None Include="resources\imgs\light\white-save.png" />
     <None Include="resources\imgs\light\white-cut.png" />
