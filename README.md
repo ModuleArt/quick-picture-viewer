@@ -21,7 +21,7 @@
     <img src="/docs/screenshots/main.png">
   </a>
   <br>
-  v3.1.2 (Stable) - Mar 22, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.2/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a>
+  v3.1.3 (Stable) - Mar 28, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.3/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a>
   <br><br>
   <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Older versions and release notes</a>
 </p>
