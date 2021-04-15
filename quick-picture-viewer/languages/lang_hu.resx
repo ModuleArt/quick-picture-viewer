@@ -174,7 +174,7 @@
     <comment>Settings</comment>
   </data>
   <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Megtekintés QuickPictureViewer-ben</value>
+    <value>Megtekintés Quick Picture Viewer-ben</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -578,7 +578,7 @@
     <comment>Menu</comment>
   </data>
   <data name="open-with-qpv" xml:space="preserve">
-    <value>Megnyitás QuickPictureViewer-rel</value>
+    <value>Megnyitás Quick Picture Viewer-rel</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">

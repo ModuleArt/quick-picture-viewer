@@ -1096,7 +1096,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mit QuickPictureViewer öffnen.
+        ///   Looks up a localized string similar to Mit Quick Picture Viewer öffnen.
         /// </summary>
         public static string open_with_qpv {
             get {

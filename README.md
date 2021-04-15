@@ -64,30 +64,6 @@ Tools:
 
 If you want to report a bug, first, thank you, that helps us a lot. Please open an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">issue</a> and mention your OS, your Quick Picture Viewer version, and how to reproduce it. Adding a screenshot of the issue or screen recording is a big help too.
 
-## 🔨 Contribution:
-
-Help Module Art!
-
-* Give us a star ⭐
-* Fork and Clone! Awesome
-* Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
-
-Code contributors:
-
-- <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
-- <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
-
-Translation contributors:
-
-- <a href="https://github.com/jiwangyihao">jiwangyihao</a> - Chinese
-- <a href="https://github.com/b0bdN">b0bdN</a> - French
-- <a href="https://github.com/l-33ter">l-33ter</a> - German
-- <a href="https://github.com/KristofKekesi">KristofKekesi</a> - Hungarian
-- <a href="https://github.com/Beelink">Beelink</a> - Russian
-- <a href="https://github.com/asluppiter">asluppiter</a> - Spanish [Help needed]
-
-<a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
-
 ## 💿 Another installation methods:
 
 - Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
@@ -105,6 +81,31 @@ Powershell $> scoop install mingit-busybox 7zip sudo
 Powershell $> scoop bucket add extras
 Powershell $> scoop install quick-picture-viewer
 ```
+
+## 🔨 Contribution:
+
+Help Module Art!
+
+* Give us a star ⭐
+* Fork and Clone! Awesome
+* Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
+
+Code contributors:
+
+- <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
+- <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
+
+Translation contributors:
+
+- Chinese: <a href="https://github.com/jiwangyihao">jiwangyihao</a>
+- Croatian: <a href="https://github.com/anotherus3r">anotherus3r</a>
+- French: <a href="https://github.com/b0bdN">b0bdN</a>
+- German: <a href="https://github.com/l-33ter">l-33ter</a>
+- Hungarian: <a href="https://github.com/KristofKekesi">KristofKekesi</a>
+- Russian: <a href="https://github.com/Beelink">Beelink</a>
+- Spanish: <a href="https://github.com/asluppiter">asluppiter</a>, <a href="https://github.com/Alplox">Alplox</a>
+
+<a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
 
 ## 🔗 Useful links:
 

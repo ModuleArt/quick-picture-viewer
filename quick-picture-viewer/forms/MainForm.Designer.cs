@@ -93,9 +93,9 @@
 			this.printButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator9 = new QuickLibrary.QlibToolsep();
 			this.backColorBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.backClearBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.qlibMenuSeparator1 = new QuickLibrary.QlibToolsep();
 			this.backCustomBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.qlibMenuSeparator1 = new QuickLibrary.QlibToolsep();
+			this.backClearBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.onTopButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.framelessBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.newWindowButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,17 +123,17 @@
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
-			this.suggestionIcon = new System.Windows.Forms.PictureBox();
-			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.suggestionIcon = new System.Windows.Forms.PictureBox();
+			this.suggestionLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.rmbMenu.SuspendLayout();
 			this.picturePanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// openFileDialog1
@@ -948,16 +948,16 @@
 			this.backColorBtn.Size = new System.Drawing.Size(262, 24);
 			this.backColorBtn.Text = "background color";
 			// 
-			// backClearBtn
+			// backCustomBtn
 			// 
-			this.backClearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.backClearBtn.ForeColor = System.Drawing.Color.Black;
-			this.backClearBtn.Image = ((System.Drawing.Image)(resources.GetObject("backClearBtn.Image")));
-			this.backClearBtn.Name = "backClearBtn";
-			this.backClearBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F3)));
-			this.backClearBtn.Size = new System.Drawing.Size(180, 24);
-			this.backClearBtn.Text = "clear";
-			this.backClearBtn.Click += new System.EventHandler(this.backClearBtn_Click);
+			this.backCustomBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.backCustomBtn.ForeColor = System.Drawing.Color.Black;
+			this.backCustomBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
+			this.backCustomBtn.Name = "backCustomBtn";
+			this.backCustomBtn.ShortcutKeys = System.Windows.Forms.Keys.F3;
+			this.backCustomBtn.Size = new System.Drawing.Size(179, 24);
+			this.backCustomBtn.Text = "choose color";
+			this.backCustomBtn.Click += new System.EventHandler(this.backCustomBtn_Click);
 			// 
 			// qlibMenuSeparator1
 			// 
@@ -969,18 +969,18 @@
 			this.qlibMenuSeparator1.Margin = new System.Windows.Forms.Padding(4);
 			this.qlibMenuSeparator1.Name = "qlibMenuSeparator1";
 			this.qlibMenuSeparator1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.qlibMenuSeparator1.Size = new System.Drawing.Size(177, 6);
+			this.qlibMenuSeparator1.Size = new System.Drawing.Size(176, 6);
 			// 
-			// backCustomBtn
+			// backClearBtn
 			// 
-			this.backCustomBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.backCustomBtn.ForeColor = System.Drawing.Color.Black;
-			this.backCustomBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
-			this.backCustomBtn.Name = "backCustomBtn";
-			this.backCustomBtn.ShortcutKeys = System.Windows.Forms.Keys.F3;
-			this.backCustomBtn.Size = new System.Drawing.Size(180, 24);
-			this.backCustomBtn.Text = "choose color";
-			this.backCustomBtn.Click += new System.EventHandler(this.backCustomBtn_Click);
+			this.backClearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.backClearBtn.ForeColor = System.Drawing.Color.Black;
+			this.backClearBtn.Image = ((System.Drawing.Image)(resources.GetObject("backClearBtn.Image")));
+			this.backClearBtn.Name = "backClearBtn";
+			this.backClearBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F3)));
+			this.backClearBtn.Size = new System.Drawing.Size(179, 24);
+			this.backClearBtn.Text = "clear";
+			this.backClearBtn.Click += new System.EventHandler(this.backClearBtn_Click);
 			// 
 			// onTopButton
 			// 
@@ -1336,8 +1336,6 @@
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
 			this.picturePanel.ContextMenuStrip = this.rmbMenu;
-			this.picturePanel.Controls.Add(this.suggestionIcon);
-			this.picturePanel.Controls.Add(this.suggestionLabel);
 			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 32);
@@ -1351,36 +1349,6 @@
 			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.picturePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
-			// 
-			// suggestionIcon
-			// 
-			this.suggestionIcon.BackColor = System.Drawing.Color.Black;
-			this.suggestionIcon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.suggestionIcon.Location = new System.Drawing.Point(27, 27);
-			this.suggestionIcon.Margin = new System.Windows.Forms.Padding(27, 27, 0, 0);
-			this.suggestionIcon.Name = "suggestionIcon";
-			this.suggestionIcon.Size = new System.Drawing.Size(24, 24);
-			this.suggestionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.suggestionIcon.TabIndex = 6;
-			this.suggestionIcon.TabStop = false;
-			this.suggestionIcon.Visible = false;
-			// 
-			// suggestionLabel
-			// 
-			this.suggestionLabel.AutoSize = true;
-			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
-			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
-			this.suggestionLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.suggestionLabel.Location = new System.Drawing.Point(51, 27);
-			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(0, 27, 0, 0);
-			this.suggestionLabel.Name = "suggestionLabel";
-			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 4);
-			this.suggestionLabel.Size = new System.Drawing.Size(75, 24);
-			this.suggestionLabel.TabIndex = 3;
-			this.suggestionLabel.Text = "suggestion";
-			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.suggestionLabel.Visible = false;
 			// 
 			// pleaseOpenLabel
 			// 
@@ -1416,6 +1384,36 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
+			// suggestionIcon
+			// 
+			this.suggestionIcon.BackColor = System.Drawing.Color.Black;
+			this.suggestionIcon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.suggestionIcon.Location = new System.Drawing.Point(27, 59);
+			this.suggestionIcon.Margin = new System.Windows.Forms.Padding(27, 27, 0, 0);
+			this.suggestionIcon.Name = "suggestionIcon";
+			this.suggestionIcon.Size = new System.Drawing.Size(26, 26);
+			this.suggestionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.suggestionIcon.TabIndex = 6;
+			this.suggestionIcon.TabStop = false;
+			this.suggestionIcon.Visible = false;
+			// 
+			// suggestionLabel
+			// 
+			this.suggestionLabel.AutoSize = true;
+			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
+			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
+			this.suggestionLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.suggestionLabel.Location = new System.Drawing.Point(53, 59);
+			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(0, 27, 0, 0);
+			this.suggestionLabel.Name = "suggestionLabel";
+			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 4);
+			this.suggestionLabel.Size = new System.Drawing.Size(79, 26);
+			this.suggestionLabel.TabIndex = 3;
+			this.suggestionLabel.Text = "suggestion";
+			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.suggestionLabel.Visible = false;
+			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -1423,6 +1421,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(684, 446);
+			this.Controls.Add(this.suggestionIcon);
+			this.Controls.Add(this.suggestionLabel);
 			this.Controls.Add(this.navNextBtn);
 			this.Controls.Add(this.navPrevBtn);
 			this.Controls.Add(this.typeOpsButton);
@@ -1435,7 +1435,6 @@
 			this.MinimumSize = new System.Drawing.Size(420, 320);
 			this.Name = "MainForm";
 			this.Text = "Quick Picture Viewer";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
 			this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
@@ -1447,9 +1446,8 @@
 			this.toolStrip1.PerformLayout();
 			this.rmbMenu.ResumeLayout(false);
 			this.picturePanel.ResumeLayout(false);
-			this.picturePanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

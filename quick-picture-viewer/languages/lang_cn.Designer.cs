@@ -188,7 +188,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 使用QuickPictureViewer浏览此文件夹.
+        ///   Looks up a localized string similar to 使用Quick Picture Viewer浏览此文件夹.
         /// </summary>
         public static string browse_folder_with_qpv {
             get {
@@ -1097,7 +1097,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 使用QuickPictureViewer打开.
+        ///   Looks up a localized string similar to 使用Quick Picture Viewer打开.
         /// </summary>
         public static string open_with_qpv {
             get {

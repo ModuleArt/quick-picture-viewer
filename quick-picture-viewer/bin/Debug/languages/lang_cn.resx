@@ -175,7 +175,7 @@
     <comment>Settings</comment>
   </data>
   <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>使用QuickPictureViewer浏览此文件夹</value>
+    <value>使用Quick Picture Viewer浏览此文件夹</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -579,7 +579,7 @@
     <comment>Menu</comment>
   </data>
   <data name="open-with-qpv" xml:space="preserve">
-    <value>使用QuickPictureViewer打开</value>
+    <value>使用Quick Picture Viewer打开</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">

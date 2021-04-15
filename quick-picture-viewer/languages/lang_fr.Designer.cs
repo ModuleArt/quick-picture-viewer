@@ -187,7 +187,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Naviguer avec QuickPictureViewer.
+        ///   Looks up a localized string similar to Naviguer avec Quick Picture Viewer.
         /// </summary>
         public static string browse_folder_with_qpv {
             get {
@@ -1096,7 +1096,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ouvrir avec QuickPictureViewer.
+        ///   Looks up a localized string similar to Ouvrir avec Quick Picture Viewer.
         /// </summary>
         public static string open_with_qpv {
             get {

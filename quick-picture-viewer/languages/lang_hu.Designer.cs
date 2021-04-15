@@ -187,7 +187,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Megtekintés QuickPictureViewer-ben.
+        ///   Looks up a localized string similar to Megtekintés Quick Picture Viewer-ben.
         /// </summary>
         public static string browse_folder_with_qpv {
             get {
@@ -268,8 +268,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Illesztési mód kiválasztása
-        ///	.
+        ///   Looks up a localized string similar to Illesztési mód kiválasztása.
         /// </summary>
         public static string choose_fit {
             get {
@@ -368,7 +367,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vág.
+        ///   Looks up a localized string similar to Vágás.
         /// </summary>
         public static string crop {
             get {
@@ -386,7 +385,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vágott.
+        ///   Looks up a localized string similar to Kivágás.
         /// </summary>
         public static string cut {
             get {
@@ -773,7 +772,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fekvő.
+        ///   Looks up a localized string similar to Fekvés.
         /// </summary>
         public static string landscape {
             get {
@@ -1097,7 +1096,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Megnyitás QuickPictureViewer-rel.
+        ///   Looks up a localized string similar to Megnyitás Quick Picture Viewer-rel.
         /// </summary>
         public static string open_with_qpv {
             get {
@@ -1160,7 +1159,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nyisson meg egy képet hogy szerkezthesse, vagy megnézze.
+        ///   Looks up a localized string similar to Nyisson meg egy képet hogy szerkeszthesse, vagy megnézze.
         /// </summary>
         public static string please_open_image {
             get {

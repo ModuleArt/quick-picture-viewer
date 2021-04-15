@@ -174,7 +174,7 @@
     <comment>Settings</comment>
   </data>
   <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Pregledaj s QuickPictureViewerom</value>
+    <value>Pregledaj s Quick Picture Viewerom</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -578,7 +578,7 @@
     <comment>Menu</comment>
   </data>
   <data name="open-with-qpv" xml:space="preserve">
-    <value>Otvori s QuickPictureViewerom</value>
+    <value>Otvori s Quick Picture Viewerom</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">

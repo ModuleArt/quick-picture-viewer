@@ -1,6 +1,7 @@
 ﻿using QuickLibrary;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -75,8 +76,21 @@ namespace quick_picture_viewer
 
 			if (Properties.Settings.Default.StartupRestoreBounds)
 			{
-				StartPosition = FormStartPosition.Manual;
-				Location = Properties.Settings.Default.StartupWindowLocation;
+				Screen curScreen = Screen.FromPoint(Cursor.Position);
+				if (
+					Properties.Settings.Default.StartupWindowLocation.X < curScreen.WorkingArea.X - 128 ||
+					Properties.Settings.Default.StartupWindowLocation.Y < curScreen.WorkingArea.Y - 128 ||
+					Properties.Settings.Default.StartupWindowLocation.X >= curScreen.WorkingArea.X + curScreen.WorkingArea.Width - 128 ||
+					Properties.Settings.Default.StartupWindowLocation.Y >= curScreen.WorkingArea.Y + curScreen.WorkingArea.Height - 128
+				)
+				{
+					StartPosition = FormStartPosition.WindowsDefaultLocation;
+				}
+				else
+				{
+					StartPosition = FormStartPosition.Manual;
+					Location = Properties.Settings.Default.StartupWindowLocation;
+				}
 
 				if (Properties.Settings.Default.StartupWindowSize.Width >= MinimumSize.Width && Properties.Settings.Default.StartupWindowSize.Height >= MinimumSize.Height)
 				{
@@ -339,9 +353,12 @@ namespace quick_picture_viewer
 			showSuggestion(LangMan.Get("app-is-up-to-date"), SuggestionIcon.Check);
 		}
 
-		private void UpdateMan_UpdateFailed(object sender, EventArgs e)
+		private void UpdateMan_UpdateFailed(object sender, UpdateFailedEventArgs e)
 		{
-			showSuggestion(LangMan.Get("update-failed"), SuggestionIcon.Warning);
+			showSuggestion(
+				LangMan.Get("update-failed") + ": " + (e.Exception.Message.Length > 64 ? e.Exception.Message.Substring(0, 64) + "..." : e.Exception.Message), 
+				SuggestionIcon.Warning
+			);
 		}
 
 		private void showTypeOpsButton(bool show, string type = null)
@@ -948,6 +965,8 @@ namespace quick_picture_viewer
 				setAlwaysOnTop(false, true);
 
 				showSuggestion(string.Format(LangMan.Get("press-to-exit-fullscreen"), "[Esc]"), SuggestionIcon.Fullscreen);
+
+				CheckAutoZoomNeeded();
 			}
 			else
 			{
@@ -972,8 +991,6 @@ namespace quick_picture_viewer
 					else picturePanel.BackColor = Color.Transparent;
 				}
 			}
-
-			CheckAutoZoomNeeded();
 
 			OnResizeEnd(EventArgs.Empty);
 		}
@@ -1524,7 +1541,7 @@ namespace quick_picture_viewer
 			}
 		}
 
-		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+		protected override void OnClosing(CancelEventArgs e)
 		{
 			if (imageChanged)
 			{

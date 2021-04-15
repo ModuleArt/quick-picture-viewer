@@ -753,11 +753,12 @@
 			this.langComboBox.Items.AddRange(new object[] {
             "English",
             "Chinese (中文)",
+            "Croatian (Hrvatski)",
             "French (Français)",
             "German (Deutsch)",
             "Hungarian (Magyar)",
             "Russian (Русский)",
-            "[Beta] Spanish (Española)"});
+            "Spanish (Española)"});
 			this.langComboBox.Location = new System.Drawing.Point(10, 39);
 			this.langComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.langComboBox.Name = "langComboBox";

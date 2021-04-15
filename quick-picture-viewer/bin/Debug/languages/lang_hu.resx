@@ -174,7 +174,7 @@
     <comment>Settings</comment>
   </data>
   <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Megtekintés QuickPictureViewer-ben</value>
+    <value>Megtekintés Quick Picture Viewer-ben</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
@@ -210,8 +210,7 @@
     <comment>Menu</comment>
   </data>
   <data name="choose-fit" xml:space="preserve">
-    <value>Illesztési mód kiválasztása
-	</value>
+    <value>Illesztési mód kiválasztása</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="clear" xml:space="preserve">
@@ -255,7 +254,7 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="crop" xml:space="preserve">
-    <value>Vág</value>
+    <value>Vágás</value>
     <comment>Menu</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
@@ -263,7 +262,7 @@
     <comment>Message box</comment>
   </data>
   <data name="cut" xml:space="preserve">
-    <value>Vágott</value>
+    <value>Kivágás</value>
     <comment>RMB menu</comment>
   </data>
   <data name="dark" xml:space="preserve">
@@ -435,7 +434,7 @@
     <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
-    <value>Fekvő</value>
+    <value>Fekvés</value>
     <comment>Image info</comment>
   </data>
   <data name="landscape-orientation" xml:space="preserve">
@@ -579,7 +578,7 @@
     <comment>Menu</comment>
   </data>
   <data name="open-with-qpv" xml:space="preserve">
-    <value>Megnyitás QuickPictureViewer-rel</value>
+    <value>Megnyitás Quick Picture Viewer-rel</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
@@ -607,7 +606,7 @@
     <comment>Image info</comment>
   </data>
   <data name="please-open-image" xml:space="preserve">
-    <value>Nyisson meg egy képet hogy szerkezthesse, vagy megnézze</value>
+    <value>Nyisson meg egy képet hogy szerkeszthesse, vagy megnézze</value>
     <comment>Picture panel</comment>
   </data>
   <data name="plugin" xml:space="preserve">

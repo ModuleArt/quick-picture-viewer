@@ -28,6 +28,11 @@ namespace quick_picture_viewer
 			},
 			new Language
 			{
+				Code = "hr",
+				Authors = new string[] { "anotherus3r" }
+			},
+			new Language
+			{
 				Code = "fr",
 				Authors = new string[] { "b0bdN" }
 			},
@@ -49,7 +54,7 @@ namespace quick_picture_viewer
 			new Language
 			{
 				Code = "es",
-				Authors = new string[] { "asluppiter" }
+				Authors = new string[] { "asluppiter", "Alplox" }
 			}
 		};
 
@@ -375,7 +380,7 @@ namespace quick_picture_viewer
 				{
 					if (openWithCheckBox.Checked)
 					{
-						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "", "Open with QuickPictureViewer");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "", "Open with Quick Picture Viewer");
 						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
 						Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
 					}
@@ -408,11 +413,11 @@ namespace quick_picture_viewer
 				{
 					if (browseWithCheckBox.Checked)
 					{
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "", "Browse folder with QuickPictureViewer");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "", "Browse folder with Quick Picture Viewer");
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
 
-						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "", "Browse folder with QuickPictureViewer");
+						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "", "Browse folder with Quick Picture Viewer");
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer", "Icon", string.Format("\"{0}picture.ico\"", AppDomain.CurrentDomain.BaseDirectory));
 						Registry.SetValue("HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer\\command", "", string.Format("\"{0}quick-picture-viewer.exe\" \"%V\"", AppDomain.CurrentDomain.BaseDirectory));
 					}

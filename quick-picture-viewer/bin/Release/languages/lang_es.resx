@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,31 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about" xml:space="preserve">
-    <value>Acerca de </value>
+    <value>Acerca de</value>
     <comment>Menu</comment>
   </data>
+  <data name="all-files" xml:space="preserve">
+    <value>Todos los archivos</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>Todos los formatos de imagen</value>
+    <comment>Open file dialog</comment>
+  </data>
   <data name="always-on-top" xml:space="preserve">
-    <value>Siempre sobre ventana</value>
+    <value>Siempre visible</value>
     <comment>Menu</comment>
   </data>
   <data name="app-description" xml:space="preserve">
-    <value>Ligero, visor de imagenes versátil para Windows, hecho con WinForms (C#). El mejor remplazo para el visor defualt de Windows.</value>
+    <value>Visor de imágenes ligero y versátil para Windows. El mejor sustituto para el visor de imágenes predeterminado de Windows.</value>
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
-    <value>La aplicación esta actulizada</value>
-    <comment>Message box</comment>
+    <value>Cuentas con la versión más reciente!</value>
+    <comment>Update Manager</comment>
   </data>
-  <data name="app-startup-action" xml:space="preserve">
-    <value>Acción de inicio de la aplicación</value>
+  <data name="app-startup-actions" xml:space="preserve">
+    <value>Al iniciar la aplicación:</value>
     <comment>Settings</comment>
   </data>
-  <data name="apply" xml:space="preserve">
-    <value>Aplicar</value>
-    <comment>Menu</comment>
-  </data>
   <data name="aspect-ratio" xml:space="preserve">
-    <value>Ratio de Aspecto</value>
+    <value>Relación de aspecto</value>
     <comment>Image info</comment>
   </data>
   <data name="auto" xml:space="preserve">
@@ -162,15 +166,19 @@
     <comment>Menu</comment>
   </data>
   <data name="bottom" xml:space="preserve">
-    <value>Inferioir</value>
+    <value>Inferior</value>
     <comment>Print</comment>
   </data>
   <data name="browse" xml:space="preserve">
-    <value>Navegar</value>
+    <value>Buscar</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="browse-folder-with-qpv" xml:space="preserve">
+    <value>Buscar con Quick Picture Viewer</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
-    <value>Buscar complementos</value>
+    <value>Buscar plugins</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="center" xml:space="preserve">
@@ -178,40 +186,36 @@
     <comment>Wallpaper</comment>
   </data>
   <data name="center-image" xml:space="preserve">
-    <value>Centrar Imagen</value>
+    <value>Centrar imagen</value>
     <comment>Print</comment>
   </data>
   <data name="centimeters" xml:space="preserve">
     <value>centímetros</value>
     <comment>Image info</comment>
   </data>
-  <data name="check-for-updates" xml:space="preserve">
-    <value>Buscar actualizaciones</value>
-    <comment>About</comment>
+  <data name="change-window-opacity" xml:space="preserve">
+    <value>Cambiar opacidad ventana</value>
+    <comment>Picture in picture</comment>
   </data>
-  <data name="check-for-updates-on-startup" xml:space="preserve">
-    <value>Buscar actualizaciones al iniciar la app</value>
+  <data name="check-for-app-updates" xml:space="preserve">
+    <value>Buscar por actualizaciones</value>
     <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
-    <value>Fondo de tablero de ajedrez</value>
+    <value>Fondo a cuadros</value>
     <comment>Menu</comment>
   </data>
   <data name="choose-color" xml:space="preserve">
-    <value>Escoger color</value>
+    <value>Elegir color</value>
     <comment>Menu</comment>
   </data>
   <data name="choose-fit" xml:space="preserve">
-    <value>Escoger un tamaño</value>
+    <value>Elegir un ajuste</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="clear" xml:space="preserve">
     <value>Limpiar</value>
     <comment>Menu</comment>
-  </data>
-  <data name="close" xml:space="preserve">
-    <value>Cerrar</value>
-    <comment>Titlebar</comment>
   </data>
   <data name="comma" xml:space="preserve">
     <value>Coma</value>
@@ -221,9 +225,13 @@
     <value>Compresión</value>
     <comment>Image info</comment>
   </data>
-  <data name="configure" xml:space="preserve">
-    <value>Configurar</value>
-    <comment>Menu</comment>
+  <data name="context-menu" xml:space="preserve">
+    <value>Menú contextual:</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="context-menu-notice" xml:space="preserve">
+    <value>Para cambiar las opciones del menú contextual es necesario ejecutar la aplicación como Administrador</value>
+    <comment>Settings</comment>
   </data>
   <data name="copy" xml:space="preserve">
     <value>Copiar</value>
@@ -242,20 +250,24 @@
     <comment>Status bar, image info</comment>
   </data>
   <data name="created-by" xml:space="preserve">
-    <value>Created by</value>
-    <comment>About, Plugin manager</comment>
+    <value>Creado por</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="crop" xml:space="preserve">
+    <value>Recortar</value>
+    <comment>Menu</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
     <value>No se pudo encontrar el archivo actual</value>
     <comment>Message box</comment>
   </data>
+  <data name="cut" xml:space="preserve">
+    <value>Cortar</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="dark" xml:space="preserve">
     <value>Oscuro</value>
     <comment>Settings</comment>
-  </data>
-  <data name="dds-memory-error" xml:space="preserve">
-    <value>Error de memoria DDS / TGA</value>
-    <comment>Message box</comment>
   </data>
   <data name="delete-file" xml:space="preserve">
     <value>Eliminar archivo</value>
@@ -274,16 +286,16 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="disk-size" xml:space="preserve">
-    <value>Tamaño del disco</value>
+    <value>Tamaño en disco</value>
     <comment>Image info</comment>
   </data>
-  <data name="do-nothing" xml:space="preserve">
-    <value>Hacer nada</value>
-    <comment>Settings</comment>
+  <data name="dont-save" xml:space="preserve">
+    <value>No guardar</value>
+    <comment>Main window</comment>
   </data>
-  <data name="drag-here-to-resize" xml:space="preserve">
-    <value>Arrastra aquí para cambiar el tamaño de la ventana</value>
-    <comment>Picture in picture</comment>
+  <data name="downloading-update" xml:space="preserve">
+    <value>Descargando actualización...</value>
+    <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
     <value>Imagen arrastrada</value>
@@ -291,6 +303,14 @@
   </data>
   <data name="edit-image" xml:space="preserve">
     <value>Editar imagen</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Editar el área de selección</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="effects" xml:space="preserve">
+    <value>Efectos</value>
     <comment>Menu</comment>
   </data>
   <data name="error" xml:space="preserve">
@@ -301,16 +321,16 @@
     <value>Presione {0} para salir de la aplicación</value>
     <comment>Main window</comment>
   </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>Salir del modo imagen en imagen</value>
+    <comment>Picture in picture</comment>
+  </data>
   <data name="extension" xml:space="preserve">
     <value>Extensión</value>
     <comment>Image info</comment>
   </data>
-  <data name="external" xml:space="preserve">
-    <value>Externa</value>
-    <comment>Settings</comment>
-  </data>
   <data name="fav-external-app" xml:space="preserve">
-    <value>App externa favorita</value>
+    <value>Aplicación externa favorita</value>
     <comment>Settings</comment>
   </data>
   <data name="file" xml:space="preserve">
@@ -321,8 +341,12 @@
     <value>Archivo copiado al portapapeles</value>
     <comment>Suggestion</comment>
   </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>Archivo movido a la Papelera de reciclaje</value>
+    <comment>Message box</comment>
+  </data>
   <data name="file-properties" xml:space="preserve">
-    <value>Propiedades de archivo</value>
+    <value>Propiedades</value>
     <comment>Image info</comment>
   </data>
   <data name="file-reloaded" xml:space="preserve">
@@ -330,7 +354,7 @@
     <comment>Suggestion</comment>
   </data>
   <data name="fill" xml:space="preserve">
-    <value>Llenar</value>
+    <value>Rellenar</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="fit" xml:space="preserve">
@@ -338,11 +362,11 @@
     <comment>Wallpaper</comment>
   </data>
   <data name="flip-horizontal" xml:space="preserve">
-    <value>Flip horizontal</value>
+    <value>Voltear horizontalmente</value>
     <comment>Menu</comment>
   </data>
   <data name="flip-vertical" xml:space="preserve">
-    <value>Voltear vertical</value>
+    <value>Voltear verticalmente</value>
     <comment>Menu</comment>
   </data>
   <data name="folder" xml:space="preserve">
@@ -350,11 +374,15 @@
     <comment>Status bar, image info</comment>
   </data>
   <data name="frameless-mode" xml:space="preserve">
-    <value>Modo sin marco</value>
+    <value>Modo sin marcos</value>
     <comment>Menu</comment>
   </data>
   <data name="from-clipboard" xml:space="preserve">
     <value>Del portapapeles</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>De "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">
@@ -373,6 +401,10 @@
     <value>Altura</value>
     <comment>SVG options</comment>
   </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Ayudanos a traducir Quick Picture Viewer</value>
+    <comment>Settings</comment>
+  </data>
   <data name="image" xml:space="preserve">
     <value>Imagen</value>
     <comment>Print</comment>
@@ -386,7 +418,7 @@
     <comment>Menu</comment>
   </data>
   <data name="image-pasted-from-clipboard" xml:space="preserve">
-    <value>Imagen pegada del portapapeles</value>
+    <value>Imagen pegada desde el portapapeles</value>
     <comment>Suggestion</comment>
   </data>
   <data name="inches" xml:space="preserve">
@@ -397,12 +429,16 @@
     <value>Ratón y teclado</value>
     <comment>Settings</comment>
   </data>
+  <data name="install-now" xml:space="preserve">
+    <value>Instalar ahora</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="landscape" xml:space="preserve">
-    <value>Paisaje</value>
+    <value>Panorámico</value>
     <comment>Image info</comment>
   </data>
   <data name="landscape-orientation" xml:space="preserve">
-    <value>Paisaje</value>
+    <value>Panorámico</value>
     <comment>Print</comment>
   </data>
   <data name="left" xml:space="preserve">
@@ -413,12 +449,8 @@
     <value>Flecha izquierda</value>
     <comment>Menu</comment>
   </data>
-  <data name="license" xml:space="preserve">
-    <value>Licencia</value>
-    <comment>About</comment>
-  </data>
   <data name="light" xml:space="preserve">
-    <value>Luz</value>
+    <value>Claro</value>
     <comment>Settings</comment>
   </data>
   <data name="localization" xml:space="preserve">
@@ -426,7 +458,7 @@
     <comment>Settings</comment>
   </data>
   <data name="maintain-aspect-ratio" xml:space="preserve">
-    <value>Mantener la relación de aspecto</value>
+    <value>Mantener relación de aspecto</value>
     <comment>SVG options</comment>
   </data>
   <data name="margin-bounds" xml:space="preserve">
@@ -441,8 +473,12 @@
     <value>megapíxeles</value>
     <comment>Image info</comment>
   </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>Error de memoria</value>
+    <comment>Message box</comment>
+  </data>
   <data name="minus" xml:space="preserve">
-    <value>Menos</value>
+    <value>[-]</value>
     <comment>Menu</comment>
   </data>
   <data name="modified" xml:space="preserve">
@@ -450,20 +486,32 @@
     <comment>Status bar, image info</comment>
   </data>
   <data name="more-options" xml:space="preserve">
-    <value>Mas opciones</value>
+    <value>Más opciones</value>
     <comment>Menu</comment>
   </data>
+  <data name="more-plugins" xml:space="preserve">
+    <value>Más plugins</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="mouse-wheel-action" xml:space="preserve">
-    <value>Mouse wheel scroll action</value>
+    <value>Acciones de la rueda del ratón</value>
     <comment>Settings</comment>
   </data>
   <data name="move-to-trash" xml:space="preserve">
     <value>Mover archivo a la Papelera de reciclaje</value>
     <comment>Menu</comment>
   </data>
+  <data name="new-version-available" xml:space="preserve">
+    <value>Nueva versión disponible!</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="new-window" xml:space="preserve">
     <value>Nueva ventana</value>
     <comment>Menu</comment>
+  </data>
+  <data name="new-window-desc" xml:space="preserve">
+    <value>Crear nueva ventana vacía</value>
+    <comment>Main window</comment>
   </data>
   <data name="next-image" xml:space="preserve">
     <value>Siguiente imagen en carpeta</value>
@@ -478,7 +526,7 @@
     <comment>Suggestion</comment>
   </data>
   <data name="next-prev-image" xml:space="preserve">
-    <value>Imagen siguiente / anterior en carpeta</value>
+    <value>Siguiente / anterior en carpeta</value>
     <comment>Settings</comment>
   </data>
   <data name="no-file" xml:space="preserve">
@@ -489,20 +537,28 @@
     <value>No hay archivos para abrir</value>
     <comment>Message box</comment>
   </data>
-  <data name="no-folder" xml:space="preserve">
-    <value>Sin carpeta</value>
-    <comment>Status bar</comment>
-  </data>
   <data name="not-saved" xml:space="preserve">
     <value>No guardado</value>
     <comment>Status bar</comment>
   </data>
+  <data name="open" xml:space="preserve">
+    <value>Abrir</value>
+    <comment>Menu</comment>
+  </data>
   <data name="open-external" xml:space="preserve">
-    <value>Abrir archivo con app externa</value>
+    <value>Abrir archivo con aplicación externa</value>
     <comment>Menu</comment>
   </data>
   <data name="open-file" xml:space="preserve">
-    <value>Abrir documento</value>
+    <value>Abrir archivo</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Abrir carpeta</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Abrir carpeta de forma recursiva</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with" xml:space="preserve">
@@ -510,39 +566,47 @@
     <comment>Menu</comment>
   </data>
   <data name="open-with-choose" xml:space="preserve">
-    <value>Elija la app para abrir</value>
+    <value>Abrir en otra aplicación</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-custom" xml:space="preserve">
-    <value>Abrir con app personalizada</value>
+    <value>Abrir con aplicación personalizada</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-default" xml:space="preserve">
-    <value>Abrir con la app predeterminada</value>
+    <value>Abrir con aplicación de fotos predeterminada</value>
     <comment>Menu</comment>
+  </data>
+  <data name="open-with-qpv" xml:space="preserve">
+    <value>Abrir con Quick Picture Viewer</value>
+    <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
     <value>Tamaño original</value>
     <comment>SVG options</comment>
   </data>
   <data name="paste-from-clipboard" xml:space="preserve">
-    <value>Pegar del portapapeles</value>
+    <value>Pegar desde portapapeles</value>
     <comment>Settings</comment>
   </data>
   <data name="paste-image" xml:space="preserve">
     <value>Pegar imagen</value>
     <comment>Menu</comment>
   </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>Eliminar archivo permanentemente</value>
+    <comment>Menu</comment>
+  </data>
   <data name="picture-in-picture" xml:space="preserve">
-    <value>Imagen en imagen</value>
+    <value>Modo imagen en imagen</value>
     <comment>Menu</comment>
   </data>
   <data name="pixels" xml:space="preserve">
-    <value>pixeles</value>
+    <value>píxeles</value>
     <comment>Image info</comment>
   </data>
   <data name="please-open-image" xml:space="preserve">
-    <value>Abra una imagen para verla o editarla.</value>
+    <value>Por favor abra una imagen para verla y/o editarla.</value>
     <comment>Picture panel</comment>
   </data>
   <data name="plugin" xml:space="preserve">
@@ -550,19 +614,19 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-manager" xml:space="preserve">
-    <value>Plugin manager</value>
+    <value>Gestor de Plugins</value>
     <comment>Menu, Plugin manager</comment>
   </data>
   <data name="plugin-not-found" xml:space="preserve">
-    <value>No se encontró el directorio de plugins</value>
+    <value>Directorio de Plugin no encontrado</value>
     <comment>Plugin manager</comment>
   </data>
-  <data name="plugins" xml:space="preserve">
-    <value>Plugins</value>
-    <comment>Menu</comment>
+  <data name="plugin-website" xml:space="preserve">
+    <value>Sitio web Plugin</value>
+    <comment>Plugin manager</comment>
   </data>
   <data name="plus" xml:space="preserve">
-    <value>Plus</value>
+    <value>[+]</value>
     <comment>Menu</comment>
   </data>
   <data name="portrait" xml:space="preserve">
@@ -590,19 +654,27 @@
     <comment>Print</comment>
   </data>
   <data name="print-margins-error" xml:space="preserve">
-    <value>No se pueden establecer los márgenes del documento</value>
+    <value>Incapaz de establecer los márgenes del documento</value>
     <comment>Print</comment>
   </data>
   <data name="print-size" xml:space="preserve">
     <value>Tamaño de impresión</value>
     <comment>Image info</comment>
   </data>
+  <data name="ready-to-install" xml:space="preserve">
+    <value>Listo para instalar</value>
+    <comment>Update manager</comment>
+  </data>
   <data name="reload-file" xml:space="preserve">
-    <value>Recargar archivo</value>
+    <value>Volver a cargar el archivo</value>
     <comment>Menu</comment>
   </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Refrescar lista de plugins</value>
+    <comment>Plugin manager</comment>
+  </data>
   <data name="resize-svg" xml:space="preserve">
-    <value>Cambiar el tamaño de SVG</value>
+    <value>Redimensionar SVG</value>
     <comment>SVG options</comment>
   </data>
   <data name="resolution" xml:space="preserve">
@@ -614,7 +686,11 @@
     <comment>Settings</comment>
   </data>
   <data name="restart-required" xml:space="preserve">
-    <value>Reincio de la app requerido</value>
+    <value>Se requiere reiniciar la apliación</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="restore-last-window-bounds" xml:space="preserve">
+    <value>Restaurar últimos límites de margen</value>
     <comment>Settings</comment>
   </data>
   <data name="right" xml:space="preserve">
@@ -626,15 +702,19 @@
     <comment>Menu</comment>
   </data>
   <data name="rotate-180" xml:space="preserve">
-    <value>Rotar 180°</value>
+    <value>Girar 180°</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-left" xml:space="preserve">
-    <value>Rotar en sentido contra-reloj</value>
+    <value>Girar a la izquierda</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-right" xml:space="preserve">
-    <value>Rotar en sentido reloj</value>
+    <value>Girar a la derecha</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Guardar</value>
     <comment>Menu</comment>
   </data>
   <data name="save-as" xml:space="preserve">
@@ -642,23 +722,31 @@
     <comment>Menu</comment>
   </data>
   <data name="scroll-up-down" xml:space="preserve">
-    <value>Desplazarse hacia arriba / abajo</value>
+    <value>Desplazarse verticalmente</value>
     <comment>Settings</comment>
   </data>
   <data name="seconds" xml:space="preserve">
-    <value>segundo</value>
+    <value>segundos</value>
     <comment>Settings</comment>
   </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Seleccionar todo</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Herramienta de selección</value>
+    <comment>Menu</comment>
+  </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
-    <value>Establecer como app default</value>
+    <value>Establecer como visor de imágenes predeterminado</value>
     <comment>About</comment>
   </data>
   <data name="set-as-desktop-background" xml:space="preserve">
-    <value>Establecer como fondo de pantalla</value>
+    <value>Establecer como fondo de escritorio</value>
     <comment>Menu</comment>
   </data>
   <data name="set-background" xml:space="preserve">
-    <value>Establecer fondo</value>
+    <value>Establecer como fondo</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="set-margins-btn" xml:space="preserve">
@@ -673,20 +761,36 @@
     <value>Mostrar archivo en explorador</value>
     <comment>Menu</comment>
   </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Mostrar flechas de navegación</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="show-slideshow-counter" xml:space="preserve">
     <value>Mostrar contador de diapositivas</value>
     <comment>Settings</comment>
   </data>
+  <data name="show-status-bar" xml:space="preserve">
+    <value>Mostrar barra de estado</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-toolbar" xml:space="preserve">
+    <value>Mostrar barra de herramientas</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="size" xml:space="preserve">
     <value>Tamaño</value>
     <comment>Status bar</comment>
+  </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>Saltarse esta versión</value>
+    <comment>Update manager</comment>
   </data>
   <data name="slideshow" xml:space="preserve">
     <value>Presentación</value>
     <comment>Menu</comment>
   </data>
   <data name="span" xml:space="preserve">
-    <value>Duración</value>
+    <value>Extender</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="square" xml:space="preserve">
@@ -698,15 +802,15 @@
     <comment>Settings</comment>
   </data>
   <data name="stretch" xml:space="preserve">
-    <value>Estirar</value>
+    <value>Expandir</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="sure-close-app" xml:space="preserve">
     <value>Se perderán todos los datos no guardados. ¿Estás seguro de que quieres cerrar la aplicación?</value>
     <comment>Message box</comment>
   </data>
-  <data name="sure-move-to-trash" xml:space="preserve">
-    <value>¿Está seguro de que desea mover este archivo a la Papelera de reciclaje?</value>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>¿Estás seguro de que deseas eliminar permanentemente este archivo</value>
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
@@ -718,19 +822,23 @@
     <comment>Settings</comment>
   </data>
   <data name="tile" xml:space="preserve">
-    <value>Loseta</value>
+    <value>Mosaico</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="title" xml:space="preserve">
     <value>Título</value>
     <comment>Print</comment>
   </data>
+  <data name="tools" xml:space="preserve">
+    <value>Herramientas</value>
+    <comment>Menu</comment>
+  </data>
   <data name="top" xml:space="preserve">
-    <value>Superioir</value>
+    <value>Superior</value>
     <comment>Print</comment>
   </data>
   <data name="translated-by" xml:space="preserve">
-    <value>Traducido por:</value>
+    <value>Traducido por</value>
     <comment>Settings</comment>
   </data>
   <data name="type-options" xml:space="preserve">
@@ -738,40 +846,44 @@
     <comment>Picture panel, SVG options</comment>
   </data>
   <data name="ui-lang" xml:space="preserve">
-    <value>Idioma de interfaz de usuario</value>
+    <value>Idioma para la interfaz de usuario</value>
     <comment>Settings</comment>
   </data>
-  <data name="unable-open-dds" xml:space="preserve">
-    <value>No se puede abrir el archivo DDS o TGA</value>
+  <data name="unable-open-file" xml:space="preserve">
+    <value>Incapaz de abrir el archivo</value>
     <comment>Message box</comment>
   </data>
-  <data name="unable-open-svg" xml:space="preserve">
-    <value>No se puede abrir el archivo SVG</value>
-    <comment>Message box</comment>
-  </data>
-  <data name="unable-to-open-file" xml:space="preserve">
-    <value>No se puede abrir este archivo</value>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>Incapaz de abrir el archivo, omitido</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">
-    <value>No se puede ejecutar la aplicación externa</value>
+    <value>Incapaz de ejecutar la aplicación externa</value>
     <comment>Message box</comment>
   </data>
-  <data name="unsaved-data-lost" xml:space="preserve">
-    <value>Todo los datos no guardado serán perdido. ¿ Estas seguro de abrir una nueva imágen?</value>
+  <data name="unsaved-changes" xml:space="preserve">
+    <value>Cambios sin guardar</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsaved-changes-question" xml:space="preserve">
+    <value>La imagen actual tiene cambios sin guardar. ¿Qué desea hacer?</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>Formato de pixel no soportado</value>
     <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
     <value>Actualización fallida</value>
-    <comment>Message box</comment>
+    <comment>Update manager</comment>
   </data>
-  <data name="updates" xml:space="preserve">
-    <value>Actualizaciones</value>
-    <comment>Settings</comment>
+  <data name="update-text" xml:space="preserve">
+    <value>La versión {0} de Quick Picture Viewer está disponible, estás utilizando la versión {1}, ¿actualizar ahora?</value>
+    <comment>Update manager</comment>
   </data>
-  <data name="updator" xml:space="preserve">
-    <value>Administrador de actualización</value>
-    <comment>Message box</comment>
+  <data name="updating-qpv" xml:space="preserve">
+    <value>Actualizando Quick Picture Viewer</value>
+    <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
     <value>Usar configuración del sistema</value>
@@ -781,9 +893,17 @@
     <value>Versión</value>
     <comment>Plugin manager</comment>
   </data>
+  <data name="view" xml:space="preserve">
+    <value>Vista</value>
+    <comment>RMB menu</comment>
+  </data>
   <data name="warning" xml:space="preserve">
     <value>Advertencia</value>
     <comment>Message box</comment>
+  </data>
+  <data name="whats-new" xml:space="preserve">
+    <value>¿Qué hay de nuevo?</value>
+    <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
     <value>Ancho</value>
@@ -794,19 +914,19 @@
     <comment>Status bar</comment>
   </data>
   <data name="zoom-in" xml:space="preserve">
-    <value>Enfocar Zoom</value>
+    <value>Acercar</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-in-out" xml:space="preserve">
-    <value>Zoom + / +</value>
+    <value>Acercar / Alejar</value>
     <comment>Settings</comment>
   </data>
   <data name="zoom-out" xml:space="preserve">
-    <value>Desenfocar Zoom</value>
+    <value>Alejar</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-to-actual-size" xml:space="preserve">
-    <value>Zoom al tamaño real</value>
+    <value>Tamaño real</value>
     <comment>Menu</comment>
   </data>
 </root>
