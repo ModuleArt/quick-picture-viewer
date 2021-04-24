@@ -1,5 +1,5 @@
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "3.1.3"
+#define MyAppVersion "3.1.4"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io/quick-picture-viewer"
 #define MyAppExeName "quick-picture-viewer.exe"
@@ -35,9 +35,10 @@ SetupWindowTitle=Setup - {#MyAppName} v{#MyAppVersion}
 SetupAppTitle=Setup - {#MyAppName} v{#MyAppVersion}
 
 [Languages]
-Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
-Name: "de"; MessagesFile: "compiler:Languages\German.isl"
 Name: "en"; MessagesFile: "compiler:Default.isl"
+Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
+Name: "cr"; MessagesFile: "compiler:Languages\Croatian.isl"
+Name: "de"; MessagesFile: "compiler:Languages\German.isl"
 Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
 Name: "hu"; MessagesFile: "compiler:Languages\Hungarian.isl"
@@ -45,6 +46,8 @@ Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "openwith"; Description: "Open with {#MyAppName}"; GroupDescription: "Context menu:"; Flags: checkedonce
+Name: "browsefolder"; Description: "Browse folder with {#MyAppName}"; GroupDescription: "Context menu:"; Flags: checkedonce
 
 [Files]
 Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe"; DestDir: "{app}"; Flags: ignoreversion
@@ -103,16 +106,16 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 ; Register software
 Root: HKCU; Subkey: "Software\RegisteredApplications"; ValueType: string; ValueName: "QuickPictureViewer"; ValueData: "Software\Clients\StartMenuInternet\QuickPictureViewer\Capabilities"; Flags: uninsdeletekey
 ; Open with QuickPictureViewer
-Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Open with QuickPictureViewer"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey
-Root: HKCR; Subkey: "*\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Open with {#MyAppName}"; Flags: uninsdeletekey; Tasks: "openwith"
+Root: HKCR; Subkey: "*\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey; Tasks: "openwith"
+Root: HKCR; Subkey: "*\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey; Tasks: "openwith"
 ; Browse folder with QuickPictureViewer
-Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with QuickPictureViewer"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey
-Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey
-Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with QuickPictureViewer"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey
-Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey
+Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with {#MyAppName}"; Flags: uninsdeletekey; Tasks: "browsefolder"
+Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey; Tasks: "browsefolder"
+Root: HKCR; Subkey: "Directory\Background\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey; Tasks: "browsefolder"
+Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: ""; ValueData: "Browse folder with {#MyAppName}"; Flags: uninsdeletekey; Tasks: "browsefolder"
+Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer"; ValueType: string; ValueName: "Icon"; ValueData: """{app}\picture.ico"""; Flags: uninsdeletekey; Tasks: "browsefolder"
+Root: HKCR; Subkey: "Directory\shell\QuickPictureViewer\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%V"""; Flags: uninsdeletekey; Tasks: "browsefolder"
 ; BMP
 Root: HKCR; Subkey: ".bmp"; ValueType: string; ValueName: ""; ValueData: "BmpImg"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "BmpImg"; ValueType: string; ValueName: ""; ValueData: "BMP image (Bitmap image file)"; Flags: uninsdeletekey

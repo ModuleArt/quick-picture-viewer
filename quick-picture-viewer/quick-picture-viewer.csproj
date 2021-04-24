@@ -149,6 +149,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="languages\lang_hr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang_hr.resx</DependentUpon>
+    </Compile>
     <Compile Include="typewrappers\BitmapWrapper.cs" />
     <Compile Include="typewrappers\Cr2Wrapper.cs" />
     <Compile Include="helpers\CustomJumplist.cs" />
@@ -305,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="languages\lang_hr.resx">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_hr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="languages\lang_hu.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

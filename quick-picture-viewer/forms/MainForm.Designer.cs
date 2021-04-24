@@ -50,8 +50,6 @@
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openFolderBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openRecursive = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveBtn = new System.Windows.Forms.ToolStripButton();
-			this.saveAsButton = new System.Windows.Forms.ToolStripButton();
 			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.externalBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,18 +120,21 @@
 			this.navPrevBtn = new System.Windows.Forms.Button();
 			this.typeOpsButton = new System.Windows.Forms.Button();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.suggestionIcon = new System.Windows.Forms.PictureBox();
+			this.suggestionLabel = new System.Windows.Forms.Label();
+			this.saveMenuBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.saveBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveAsBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.suggestionIcon = new System.Windows.Forms.PictureBox();
-			this.suggestionLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.rmbMenu.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).BeginInit();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// openFileDialog1
@@ -296,10 +297,9 @@
 			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openBtn,
-            this.saveBtn,
-            this.saveAsButton,
-            this.infoButton,
+            this.saveMenuBtn,
             this.externalBtn,
+            this.infoButton,
             this.toolStripSeparator4,
             this.prevButton,
             this.slideshowButton,
@@ -379,32 +379,6 @@
 			this.openRecursive.Size = new System.Drawing.Size(237, 24);
 			this.openRecursive.Text = "open recursive";
 			this.openRecursive.Click += new System.EventHandler(this.openRecursive_Click);
-			// 
-			// saveBtn
-			// 
-			this.saveBtn.AutoSize = false;
-			this.saveBtn.BackColor = System.Drawing.Color.Transparent;
-			this.saveBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.saveBtn.Enabled = false;
-			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
-			this.saveBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.saveBtn.Name = "saveBtn";
-			this.saveBtn.Size = new System.Drawing.Size(24, 25);
-			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-			// 
-			// saveAsButton
-			// 
-			this.saveAsButton.AutoSize = false;
-			this.saveAsButton.BackColor = System.Drawing.Color.Transparent;
-			this.saveAsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.saveAsButton.Enabled = false;
-			this.saveAsButton.Image = global::quick_picture_viewer.Properties.Resources.black_saveas;
-			this.saveAsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.saveAsButton.Margin = new System.Windows.Forms.Padding(0);
-			this.saveAsButton.Name = "saveAsButton";
-			this.saveAsButton.Size = new System.Drawing.Size(24, 25);
-			this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
 			// 
 			// infoButton
 			// 
@@ -1327,6 +1301,75 @@
 			this.typeOpsButton.Visible = false;
 			this.typeOpsButton.Click += new System.EventHandler(this.typeOpsButton_Click);
 			// 
+			// suggestionIcon
+			// 
+			this.suggestionIcon.BackColor = System.Drawing.Color.Black;
+			this.suggestionIcon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.suggestionIcon.Location = new System.Drawing.Point(27, 59);
+			this.suggestionIcon.Margin = new System.Windows.Forms.Padding(27, 27, 0, 0);
+			this.suggestionIcon.Name = "suggestionIcon";
+			this.suggestionIcon.Size = new System.Drawing.Size(26, 26);
+			this.suggestionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.suggestionIcon.TabIndex = 6;
+			this.suggestionIcon.TabStop = false;
+			this.suggestionIcon.Visible = false;
+			// 
+			// suggestionLabel
+			// 
+			this.suggestionLabel.AutoSize = true;
+			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
+			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
+			this.suggestionLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.suggestionLabel.Location = new System.Drawing.Point(53, 59);
+			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(0, 27, 0, 0);
+			this.suggestionLabel.Name = "suggestionLabel";
+			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 4);
+			this.suggestionLabel.Size = new System.Drawing.Size(79, 26);
+			this.suggestionLabel.TabIndex = 3;
+			this.suggestionLabel.Text = "suggestion";
+			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.suggestionLabel.Visible = false;
+			// 
+			// saveMenuBtn
+			// 
+			this.saveMenuBtn.AutoSize = false;
+			this.saveMenuBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.saveMenuBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveBtn,
+            this.saveAsBtn});
+			this.saveMenuBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveMenuBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+			this.saveMenuBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.saveMenuBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.saveMenuBtn.Name = "saveMenuBtn";
+			this.saveMenuBtn.Size = new System.Drawing.Size(30, 25);
+			// 
+			// saveBtn
+			// 
+			this.saveBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.saveBtn.Enabled = false;
+			this.saveBtn.ForeColor = System.Drawing.Color.Black;
+			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveBtn.Name = "saveBtn";
+			this.saveBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+			this.saveBtn.Size = new System.Drawing.Size(207, 24);
+			this.saveBtn.Text = "save";
+			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+			// 
+			// saveAsBtn
+			// 
+			this.saveAsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.saveAsBtn.Enabled = false;
+			this.saveAsBtn.ForeColor = System.Drawing.Color.Black;
+			this.saveAsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_saveas;
+			this.saveAsBtn.Name = "saveAsBtn";
+			this.saveAsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+			this.saveAsBtn.Size = new System.Drawing.Size(207, 24);
+			this.saveAsBtn.Text = "save as";
+			this.saveAsBtn.Click += new System.EventHandler(this.saveAsButton_Click);
+			// 
 			// picturePanel
 			// 
 			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1384,36 +1427,6 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
-			// suggestionIcon
-			// 
-			this.suggestionIcon.BackColor = System.Drawing.Color.Black;
-			this.suggestionIcon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.suggestionIcon.Location = new System.Drawing.Point(27, 59);
-			this.suggestionIcon.Margin = new System.Windows.Forms.Padding(27, 27, 0, 0);
-			this.suggestionIcon.Name = "suggestionIcon";
-			this.suggestionIcon.Size = new System.Drawing.Size(26, 26);
-			this.suggestionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.suggestionIcon.TabIndex = 6;
-			this.suggestionIcon.TabStop = false;
-			this.suggestionIcon.Visible = false;
-			// 
-			// suggestionLabel
-			// 
-			this.suggestionLabel.AutoSize = true;
-			this.suggestionLabel.BackColor = System.Drawing.Color.Black;
-			this.suggestionLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.suggestionLabel.ForeColor = System.Drawing.Color.White;
-			this.suggestionLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.suggestionLabel.Location = new System.Drawing.Point(53, 59);
-			this.suggestionLabel.Margin = new System.Windows.Forms.Padding(0, 27, 0, 0);
-			this.suggestionLabel.Name = "suggestionLabel";
-			this.suggestionLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 4);
-			this.suggestionLabel.Size = new System.Drawing.Size(79, 26);
-			this.suggestionLabel.TabIndex = 3;
-			this.suggestionLabel.Text = "suggestion";
-			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.suggestionLabel.Visible = false;
-			// 
 			// MainForm
 			// 
 			this.AllowDrop = true;
@@ -1445,9 +1458,9 @@
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.rmbMenu.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).EndInit();
 			this.picturePanel.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.suggestionIcon)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1482,7 +1495,6 @@
 		private System.Drawing.Printing.PrintDocument printDocument1;
 		private System.Windows.Forms.ToolStripStatusLabel hasChangesLabel;
 		private System.Windows.Forms.ToolStripButton checkboardButton;
-		private System.Windows.Forms.ToolStripButton saveAsButton;
 		private System.Windows.Forms.Label suggestionLabel;
 		private System.Windows.Forms.ToolStripButton slideshowButton;
 		private System.Windows.Forms.ToolStripDropDownButton moreButton;
@@ -1551,6 +1563,8 @@
 		private System.Windows.Forms.ToolTip infoTooltip;
 		private System.Windows.Forms.ToolStripMenuItem permDeleteBtn;
 		private System.Windows.Forms.ToolStripMenuItem openFolderBtn;
-		private System.Windows.Forms.ToolStripButton saveBtn;
+		private System.Windows.Forms.ToolStripDropDownButton saveMenuBtn;
+		private System.Windows.Forms.ToolStripMenuItem saveBtn;
+		private System.Windows.Forms.ToolStripMenuItem saveAsBtn;
 	}
 }

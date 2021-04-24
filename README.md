@@ -109,11 +109,7 @@ Translation contributors:
 
 ## 🔗 Useful links:
 
-- <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a><br>
-```powershell
-Powershell [Admin] $> Get-AppxPackage *photos* | Remove-AppxPackage
-```
-
+- <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a>
 - <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a>
 
 ## 🧰 Other great apps:

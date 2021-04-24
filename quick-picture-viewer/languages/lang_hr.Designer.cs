@@ -22,14 +22,14 @@ namespace quick_picture_viewer.languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class lang_en {
+    public class lang_hr {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_en() {
+        internal lang_hr() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace quick_picture_viewer.languages {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("quick_picture_viewer.languages.lang_en", typeof(lang_en).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("quick_picture_viewer.languages.lang_hr", typeof(lang_hr).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About.
+        ///   Looks up a localized string similar to O programu.
         /// </summary>
         public static string about {
             get {
@@ -70,7 +70,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All files.
+        ///   Looks up a localized string similar to Sve datoteke.
         /// </summary>
         public static string all_files {
             get {
@@ -79,7 +79,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All image formats.
+        ///   Looks up a localized string similar to Svi formati slika.
         /// </summary>
         public static string all_image_formats {
             get {
@@ -88,7 +88,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Always on top.
+        ///   Looks up a localized string similar to Uvijek na vrhu.
         /// </summary>
         public static string always_on_top {
             get {
@@ -97,7 +97,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer..
+        ///   Looks up a localized string similar to Perolaki, svestrani preglednik slika za Windows. Najbolja zamjena za zadani preglednik slika u Windowsu..
         /// </summary>
         public static string app_description {
             get {
@@ -106,7 +106,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Application is up to date!.
+        ///   Looks up a localized string similar to Aplikacija je ažurna!.
         /// </summary>
         public static string app_is_up_to_date {
             get {
@@ -115,7 +115,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to App startup actions.
+        ///   Looks up a localized string similar to Radnje kod pokretanja aplikacije.
         /// </summary>
         public static string app_startup_actions {
             get {
@@ -124,7 +124,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aspect ratio.
+        ///   Looks up a localized string similar to Omjer slike.
         /// </summary>
         public static string aspect_ratio {
             get {
@@ -133,7 +133,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Auto.
+        ///   Looks up a localized string similar to Automatski.
         /// </summary>
         public static string auto {
             get {
@@ -142,7 +142,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Auto size.
+        ///   Looks up a localized string similar to Automatska veličina.
         /// </summary>
         public static string auto_size {
             get {
@@ -151,7 +151,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Auto zoom.
+        ///   Looks up a localized string similar to Automatski zum.
         /// </summary>
         public static string auto_zoom {
             get {
@@ -160,7 +160,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Background color.
+        ///   Looks up a localized string similar to Pozadinska boja.
         /// </summary>
         public static string background_color {
             get {
@@ -169,7 +169,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bottom.
+        ///   Looks up a localized string similar to Dno.
         /// </summary>
         public static string bottom {
             get {
@@ -178,7 +178,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Browse.
+        ///   Looks up a localized string similar to Pregledaj.
         /// </summary>
         public static string browse {
             get {
@@ -187,7 +187,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Browse with Quick Picture Viewer.
+        ///   Looks up a localized string similar to Pregledaj s Quick Picture Viewerom.
         /// </summary>
         public static string browse_folder_with_qpv {
             get {
@@ -196,7 +196,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Browse for plugins.
+        ///   Looks up a localized string similar to Pregledaj priključke.
         /// </summary>
         public static string browse_for_plugins {
             get {
@@ -205,7 +205,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Center.
+        ///   Looks up a localized string similar to Sredina.
         /// </summary>
         public static string center {
             get {
@@ -214,7 +214,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Center image.
+        ///   Looks up a localized string similar to Centriraj sliku.
         /// </summary>
         public static string center_image {
             get {
@@ -223,7 +223,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to centimeters.
+        ///   Looks up a localized string similar to centimetara.
         /// </summary>
         public static string centimeters {
             get {
@@ -232,7 +232,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Change window opacity.
+        ///   Looks up a localized string similar to Promijeni transparentnost prozora.
         /// </summary>
         public static string change_window_opacity {
             get {
@@ -241,7 +241,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check for app updates.
+        ///   Looks up a localized string similar to Traži ažuriranja aplikacije.
         /// </summary>
         public static string check_for_app_updates {
             get {
@@ -250,7 +250,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Checkerboard background.
+        ///   Looks up a localized string similar to Šahovnička pozadina.
         /// </summary>
         public static string checkboard_background {
             get {
@@ -259,7 +259,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose color.
+        ///   Looks up a localized string similar to Odaberi boju.
         /// </summary>
         public static string choose_color {
             get {
@@ -268,7 +268,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a fit.
+        ///   Looks up a localized string similar to Odaberi smještaj.
         /// </summary>
         public static string choose_fit {
             get {
@@ -277,7 +277,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clear.
+        ///   Looks up a localized string similar to Očisti.
         /// </summary>
         public static string clear {
             get {
@@ -286,7 +286,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Comma.
+        ///   Looks up a localized string similar to zarez.
         /// </summary>
         public static string comma {
             get {
@@ -295,7 +295,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Compression.
+        ///   Looks up a localized string similar to Kompresija.
         /// </summary>
         public static string compression {
             get {
@@ -304,7 +304,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Context menu.
+        ///   Looks up a localized string similar to Kontekstni izbornik.
         /// </summary>
         public static string context_menu {
             get {
@@ -313,7 +313,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To change context menu options you need to run the app with Administrator.
+        ///   Looks up a localized string similar to Da biste promijenili opcije kontekstnog izbornika, morate pokrenuti aplikaciju kao administrator..
         /// </summary>
         public static string context_menu_notice {
             get {
@@ -322,7 +322,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copy.
+        ///   Looks up a localized string similar to Kopiraj.
         /// </summary>
         public static string copy {
             get {
@@ -331,7 +331,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copy original file.
+        ///   Looks up a localized string similar to Kopiraj izvornu datoteku.
         /// </summary>
         public static string copy_file {
             get {
@@ -340,7 +340,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copy this image.
+        ///   Looks up a localized string similar to Kopiraj ovu sliku.
         /// </summary>
         public static string copy_image {
             get {
@@ -349,7 +349,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Created.
+        ///   Looks up a localized string similar to Stvoreno.
         /// </summary>
         public static string created {
             get {
@@ -358,7 +358,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Created by.
+        ///   Looks up a localized string similar to Stvorio/la.
         /// </summary>
         public static string created_by {
             get {
@@ -367,7 +367,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crop.
+        ///   Looks up a localized string similar to Obreži.
         /// </summary>
         public static string crop {
             get {
@@ -376,7 +376,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Current file could not be found.
+        ///   Looks up a localized string similar to Trenutna datoteka nije pronađena.
         /// </summary>
         public static string cur_file_not_found {
             get {
@@ -385,7 +385,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cut.
+        ///   Looks up a localized string similar to Izreži.
         /// </summary>
         public static string cut {
             get {
@@ -394,7 +394,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dark.
+        ///   Looks up a localized string similar to Tamno.
         /// </summary>
         public static string dark {
             get {
@@ -403,7 +403,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete file.
+        ///   Looks up a localized string similar to Izbriši datoteku.
         /// </summary>
         public static string delete_file {
             get {
@@ -412,7 +412,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete plugin.
+        ///   Looks up a localized string similar to Izbriši priključak.
         /// </summary>
         public static string delete_plugin {
             get {
@@ -421,7 +421,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to remove the plugin?.
+        ///   Looks up a localized string similar to Sigurno želite ukloniti priključak??.
         /// </summary>
         public static string delete_plugin_warning {
             get {
@@ -430,7 +430,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Description.
+        ///   Looks up a localized string similar to Opis.
         /// </summary>
         public static string desc {
             get {
@@ -439,7 +439,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disk size.
+        ///   Looks up a localized string similar to Veličina na disku.
         /// </summary>
         public static string disk_size {
             get {
@@ -448,7 +448,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Don&apos;t save.
+        ///   Looks up a localized string similar to Nemoj spremiti.
         /// </summary>
         public static string dont_save {
             get {
@@ -457,7 +457,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Downloading update....
+        ///   Looks up a localized string similar to Preuzimanje ažuriranja....
         /// </summary>
         public static string downloading_update {
             get {
@@ -466,7 +466,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dragged image.
+        ///   Looks up a localized string similar to Povućena slika.
         /// </summary>
         public static string dragged_image {
             get {
@@ -475,7 +475,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit image.
+        ///   Looks up a localized string similar to Uredi sliku.
         /// </summary>
         public static string edit_image {
             get {
@@ -484,7 +484,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit selection area.
+        ///   Looks up a localized string similar to Uredi polje odabira.
         /// </summary>
         public static string edit_selection {
             get {
@@ -493,7 +493,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Effects.
+        ///   Looks up a localized string similar to Efekti.
         /// </summary>
         public static string effects {
             get {
@@ -502,7 +502,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error.
+        ///   Looks up a localized string similar to Greška.
         /// </summary>
         public static string error {
             get {
@@ -511,7 +511,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Press {0} to exit app.
+        ///   Looks up a localized string similar to Pritisnite {0} za izlaz iz aplikacije.
         /// </summary>
         public static string esc_to_exit {
             get {
@@ -520,7 +520,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exit Picture-in-Picture mode.
+        ///   Looks up a localized string similar to Izađi iz načina slike u slici.
         /// </summary>
         public static string exit_picture_in_picture {
             get {
@@ -529,7 +529,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Extension.
+        ///   Looks up a localized string similar to Ekstenzija.
         /// </summary>
         public static string extension {
             get {
@@ -538,7 +538,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Favorite external app.
+        ///   Looks up a localized string similar to Omiljena vanjska aplikacija.
         /// </summary>
         public static string fav_external_app {
             get {
@@ -547,7 +547,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File.
+        ///   Looks up a localized string similar to Datoteka.
         /// </summary>
         public static string file {
             get {
@@ -556,7 +556,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File copied to clipboard.
+        ///   Looks up a localized string similar to Datoteka kopirana u međuspremnik.
         /// </summary>
         public static string file_copied_to_clipboard {
             get {
@@ -565,7 +565,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File moved to the Recycle Bin.
+        ///   Looks up a localized string similar to Datoteka premještena u koš za smeće.
         /// </summary>
         public static string file_moved_to_trash {
             get {
@@ -574,7 +574,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File properties.
+        ///   Looks up a localized string similar to Svojstva datoteke.
         /// </summary>
         public static string file_properties {
             get {
@@ -583,7 +583,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File reloaded.
+        ///   Looks up a localized string similar to Datoteka ponovno učitana.
         /// </summary>
         public static string file_reloaded {
             get {
@@ -592,7 +592,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fill.
+        ///   Looks up a localized string similar to Ispuni.
         /// </summary>
         public static string fill {
             get {
@@ -601,7 +601,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fit.
+        ///   Looks up a localized string similar to Prilagodi veličinu.
         /// </summary>
         public static string fit {
             get {
@@ -610,7 +610,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flip horizontal.
+        ///   Looks up a localized string similar to Okreni horizontalno.
         /// </summary>
         public static string flip_horizontal {
             get {
@@ -619,7 +619,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flip vertical.
+        ///   Looks up a localized string similar to Okreni vertikalno.
         /// </summary>
         public static string flip_vertical {
             get {
@@ -628,7 +628,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Folder.
+        ///   Looks up a localized string similar to Mapa.
         /// </summary>
         public static string folder {
             get {
@@ -637,7 +637,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Frameless mode.
+        ///   Looks up a localized string similar to Način bez okvira.
         /// </summary>
         public static string frameless_mode {
             get {
@@ -646,7 +646,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to From clipboard.
+        ///   Looks up a localized string similar to Iz međuspremnika.
         /// </summary>
         public static string from_clipboard {
             get {
@@ -655,7 +655,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to From &quot;{0}&quot;.
+        ///   Looks up a localized string similar to Iz &quot;{0}&quot;.
         /// </summary>
         public static string from_format {
             get {
@@ -664,7 +664,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Full path.
+        ///   Looks up a localized string similar to Puna putanja.
         /// </summary>
         public static string full_path {
             get {
@@ -673,7 +673,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fullscreen.
+        ///   Looks up a localized string similar to Puni zaslon.
         /// </summary>
         public static string fullscreen {
             get {
@@ -682,7 +682,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show cursor in fullscreen.
+        ///   Looks up a localized string similar to Prikaži kursor u punom zaslonu.
         /// </summary>
         public static string fullscreen_cursor {
             get {
@@ -691,7 +691,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Height.
+        ///   Looks up a localized string similar to Visina.
         /// </summary>
         public static string height {
             get {
@@ -700,7 +700,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Help us translate this app.
+        ///   Looks up a localized string similar to Pomozite nam prevesti ovu aplikaciju.
         /// </summary>
         public static string help_us_translate_app {
             get {
@@ -709,7 +709,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Image.
+        ///   Looks up a localized string similar to Slika.
         /// </summary>
         public static string image {
             get {
@@ -718,7 +718,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Image copied to clipboard.
+        ///   Looks up a localized string similar to Slika kopirana u međuspremnik.
         /// </summary>
         public static string image_copied_to_clipboard {
             get {
@@ -727,7 +727,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Image info.
+        ///   Looks up a localized string similar to Informacije o slici.
         /// </summary>
         public static string image_info {
             get {
@@ -736,7 +736,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Image pasted from clipboard.
+        ///   Looks up a localized string similar to Slika zalijepljena iz međuspremnika.
         /// </summary>
         public static string image_pasted_from_clipboard {
             get {
@@ -745,7 +745,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to inches.
+        ///   Looks up a localized string similar to inča.
         /// </summary>
         public static string inches {
             get {
@@ -754,7 +754,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mouse and keyboard.
+        ///   Looks up a localized string similar to Miš i tipkovnica.
         /// </summary>
         public static string input {
             get {
@@ -763,7 +763,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install now.
+        ///   Looks up a localized string similar to Instaliraj sada.
         /// </summary>
         public static string install_now {
             get {
@@ -772,7 +772,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Landscape.
+        ///   Looks up a localized string similar to Horizontalno.
         /// </summary>
         public static string landscape {
             get {
@@ -781,7 +781,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Landscape.
+        ///   Looks up a localized string similar to Horizontalno.
         /// </summary>
         public static string landscape_orientation {
             get {
@@ -790,7 +790,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Left.
+        ///   Looks up a localized string similar to Lijevo.
         /// </summary>
         public static string left {
             get {
@@ -799,7 +799,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Left arrow.
+        ///   Looks up a localized string similar to Lijeva strelica.
         /// </summary>
         public static string left_arrow {
             get {
@@ -808,7 +808,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Light.
+        ///   Looks up a localized string similar to Svijestlo.
         /// </summary>
         public static string light {
             get {
@@ -817,7 +817,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Localization.
+        ///   Looks up a localized string similar to Lokalizacija.
         /// </summary>
         public static string localization {
             get {
@@ -826,7 +826,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Maintain aspect ratio.
+        ///   Looks up a localized string similar to Zadrži omjer slike.
         /// </summary>
         public static string maintain_aspect_ratio {
             get {
@@ -835,7 +835,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Margin bounds.
+        ///   Looks up a localized string similar to Granice margine.
         /// </summary>
         public static string margin_bounds {
             get {
@@ -844,7 +844,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Margins.
+        ///   Looks up a localized string similar to Margine.
         /// </summary>
         public static string margins {
             get {
@@ -853,7 +853,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to megapixels.
+        ///   Looks up a localized string similar to megapiskela.
         /// </summary>
         public static string megapixels {
             get {
@@ -862,7 +862,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Memory error.
+        ///   Looks up a localized string similar to Greška memorije.
         /// </summary>
         public static string memory_error {
             get {
@@ -880,7 +880,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modified.
+        ///   Looks up a localized string similar to Izmijenjeno.
         /// </summary>
         public static string modified {
             get {
@@ -889,7 +889,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to More options.
+        ///   Looks up a localized string similar to Više opcija.
         /// </summary>
         public static string more_options {
             get {
@@ -898,7 +898,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to More plugins.
+        ///   Looks up a localized string similar to Više priključaka.
         /// </summary>
         public static string more_plugins {
             get {
@@ -907,7 +907,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mouse wheel scroll action.
+        ///   Looks up a localized string similar to Radnja pomicanja kotačića miša.
         /// </summary>
         public static string mouse_wheel_action {
             get {
@@ -916,7 +916,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Move file to the Recycle Bin.
+        ///   Looks up a localized string similar to Premjesti datoteku u koš za smeće.
         /// </summary>
         public static string move_to_trash {
             get {
@@ -925,7 +925,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New version available!.
+        ///   Looks up a localized string similar to Dostupna je nova verzija!.
         /// </summary>
         public static string new_version_available {
             get {
@@ -934,7 +934,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New window.
+        ///   Looks up a localized string similar to Novi prozor.
         /// </summary>
         public static string new_window {
             get {
@@ -943,7 +943,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create new empty window.
+        ///   Looks up a localized string similar to Stvori novi prazni prozor.
         /// </summary>
         public static string new_window_desc {
             get {
@@ -952,7 +952,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next image in folder.
+        ///   Looks up a localized string similar to Sljedeća slika u mapi.
         /// </summary>
         public static string next_image {
             get {
@@ -961,7 +961,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next image in 1 second.
+        ///   Looks up a localized string similar to Sljedeća slika za 1 sekundu.
         /// </summary>
         public static string next_image_in_1_second {
             get {
@@ -970,7 +970,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next image in {0} seconds.
+        ///   Looks up a localized string similar to Sljedeća slika za {0} sekunde/i.
         /// </summary>
         public static string next_image_in_x_seconds {
             get {
@@ -979,7 +979,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next / previous image in folder.
+        ///   Looks up a localized string similar to Sljedeća/prethodna slika u mapi.
         /// </summary>
         public static string next_prev_image {
             get {
@@ -988,7 +988,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No file.
+        ///   Looks up a localized string similar to Nema datoteke.
         /// </summary>
         public static string no_file {
             get {
@@ -997,7 +997,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No files to open.
+        ///   Looks up a localized string similar to Nema datoteka za otvaranje.
         /// </summary>
         public static string no_files_to_open {
             get {
@@ -1006,7 +1006,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not saved.
+        ///   Looks up a localized string similar to Nije spremljeno.
         /// </summary>
         public static string not_saved {
             get {
@@ -1015,7 +1015,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open.
+        ///   Looks up a localized string similar to Otvori.
         /// </summary>
         public static string open {
             get {
@@ -1024,7 +1024,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open file with external app.
+        ///   Looks up a localized string similar to Otvori datoteku u vanjskoj aplikaciji.
         /// </summary>
         public static string open_external {
             get {
@@ -1033,7 +1033,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open file.
+        ///   Looks up a localized string similar to Otvori datoteku.
         /// </summary>
         public static string open_file {
             get {
@@ -1042,7 +1042,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open folder.
+        ///   Looks up a localized string similar to Otvori mapu.
         /// </summary>
         public static string open_folder {
             get {
@@ -1051,7 +1051,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open folder recursively.
+        ///   Looks up a localized string similar to Rekurzivno otvaraj mapu.
         /// </summary>
         public static string open_recursive {
             get {
@@ -1060,7 +1060,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open with.
+        ///   Looks up a localized string similar to Otvori s.
         /// </summary>
         public static string open_with {
             get {
@@ -1069,7 +1069,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose app to open.
+        ///   Looks up a localized string similar to Odaberite aplikaciju za otvaranje.
         /// </summary>
         public static string open_with_choose {
             get {
@@ -1078,7 +1078,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open with custom app.
+        ///   Looks up a localized string similar to Otvori prilagođenu aplikaciju.
         /// </summary>
         public static string open_with_custom {
             get {
@@ -1087,7 +1087,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open with default app.
+        ///   Looks up a localized string similar to Otvori zadanom aplikacijom.
         /// </summary>
         public static string open_with_default {
             get {
@@ -1096,7 +1096,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open with Quick Picture Viewer.
+        ///   Looks up a localized string similar to Otvori s Quick Picture Viewerom.
         /// </summary>
         public static string open_with_qpv {
             get {
@@ -1105,7 +1105,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Original size.
+        ///   Looks up a localized string similar to Izvorna veličina.
         /// </summary>
         public static string original_size {
             get {
@@ -1114,7 +1114,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paste from clipboard.
+        ///   Looks up a localized string similar to Zalijepi iz međuspremnika.
         /// </summary>
         public static string paste_from_clipboard {
             get {
@@ -1123,7 +1123,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paste image.
+        ///   Looks up a localized string similar to Zalijepi sliku.
         /// </summary>
         public static string paste_image {
             get {
@@ -1132,7 +1132,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete file permanently.
+        ///   Looks up a localized string similar to Trajno izbriši datoteku.
         /// </summary>
         public static string perm_delete {
             get {
@@ -1141,7 +1141,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picture-in-Picture mode.
+        ///   Looks up a localized string similar to Način slike u slici.
         /// </summary>
         public static string picture_in_picture {
             get {
@@ -1150,7 +1150,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to pixels.
+        ///   Looks up a localized string similar to piksela.
         /// </summary>
         public static string pixels {
             get {
@@ -1159,7 +1159,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please open an image to view or edit.
+        ///   Looks up a localized string similar to Otvorite sliku za pregledavanje ili uređivanje.
         /// </summary>
         public static string please_open_image {
             get {
@@ -1168,7 +1168,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugin.
+        ///   Looks up a localized string similar to Priključak.
         /// </summary>
         public static string plugin {
             get {
@@ -1177,7 +1177,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugin manager.
+        ///   Looks up a localized string similar to Upravitelj priključcima.
         /// </summary>
         public static string plugin_manager {
             get {
@@ -1186,7 +1186,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugin directory not found.
+        ///   Looks up a localized string similar to Nije pronađena mapa priključaka.
         /// </summary>
         public static string plugin_not_found {
             get {
@@ -1195,7 +1195,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plugin website.
+        ///   Looks up a localized string similar to Web-stranica priključka.
         /// </summary>
         public static string plugin_website {
             get {
@@ -1213,7 +1213,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Portrait.
+        ///   Looks up a localized string similar to Vertikalno.
         /// </summary>
         public static string portrait {
             get {
@@ -1222,7 +1222,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Presets.
+        ///   Looks up a localized string similar to Pretpodešene postavke.
         /// </summary>
         public static string presets {
             get {
@@ -1231,7 +1231,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Press {0} to exit fullscreen mode.
+        ///   Looks up a localized string similar to Pritisnite {0} za izlaz iz punog zaslona.
         /// </summary>
         public static string press_to_exit_fullscreen {
             get {
@@ -1240,7 +1240,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous image in folder.
+        ///   Looks up a localized string similar to Prethodna slika u mapi.
         /// </summary>
         public static string prev_image {
             get {
@@ -1249,7 +1249,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Print / Export to PDF.
+        ///   Looks up a localized string similar to Ispiši/izvezi u PDF.
         /// </summary>
         public static string print {
             get {
@@ -1258,7 +1258,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Print configuration.
+        ///   Looks up a localized string similar to Konfiguracija ispisa.
         /// </summary>
         public static string print_conf {
             get {
@@ -1267,7 +1267,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to set document margins.
+        ///   Looks up a localized string similar to Nije moguće postaviti margine dokumenta.
         /// </summary>
         public static string print_margins_error {
             get {
@@ -1276,7 +1276,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Print size.
+        ///   Looks up a localized string similar to Veličina ispisa.
         /// </summary>
         public static string print_size {
             get {
@@ -1285,7 +1285,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ready to install.
+        ///   Looks up a localized string similar to Spremno za instalaciju.
         /// </summary>
         public static string ready_to_install {
             get {
@@ -1294,7 +1294,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reload file.
+        ///   Looks up a localized string similar to Ponovno učitaj datoteku.
         /// </summary>
         public static string reload_file {
             get {
@@ -1303,7 +1303,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reload plugin list.
+        ///   Looks up a localized string similar to Ponovno učitaj popis priključaka.
         /// </summary>
         public static string reload_plugins {
             get {
@@ -1312,7 +1312,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resize SVG.
+        ///   Looks up a localized string similar to Promijeni veličinu SVG-a.
         /// </summary>
         public static string resize_svg {
             get {
@@ -1321,7 +1321,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resolution.
+        ///   Looks up a localized string similar to Rezolucija.
         /// </summary>
         public static string resolution {
             get {
@@ -1330,7 +1330,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restart.
+        ///   Looks up a localized string similar to Ponovno pokreni.
         /// </summary>
         public static string restart {
             get {
@@ -1339,7 +1339,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to App restart required.
+        ///   Looks up a localized string similar to Potrebno ponovno pokrenuti aplikaciju.
         /// </summary>
         public static string restart_required {
             get {
@@ -1348,7 +1348,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restore last window bounds.
+        ///   Looks up a localized string similar to Vrati prethodne granice prozora.
         /// </summary>
         public static string restore_last_window_bounds {
             get {
@@ -1357,7 +1357,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Right.
+        ///   Looks up a localized string similar to Desno.
         /// </summary>
         public static string right {
             get {
@@ -1366,7 +1366,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Right arrow.
+        ///   Looks up a localized string similar to Desna strelica.
         /// </summary>
         public static string right_arrow {
             get {
@@ -1375,7 +1375,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotate 180°.
+        ///   Looks up a localized string similar to Rotiraj 180°.
         /// </summary>
         public static string rotate_180 {
             get {
@@ -1384,7 +1384,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotate counter-clockwise.
+        ///   Looks up a localized string similar to Rotiraj suprotno od kazaljke na satu.
         /// </summary>
         public static string rotate_left {
             get {
@@ -1393,7 +1393,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rotate clockwise.
+        ///   Looks up a localized string similar to Rotiraj u smjeru kazaljke na satu.
         /// </summary>
         public static string rotate_right {
             get {
@@ -1402,7 +1402,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save.
+        ///   Looks up a localized string similar to Spremi.
         /// </summary>
         public static string save {
             get {
@@ -1411,7 +1411,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save as.
+        ///   Looks up a localized string similar to Spremi kao.
         /// </summary>
         public static string save_as {
             get {
@@ -1420,7 +1420,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Scroll up / down.
+        ///   Looks up a localized string similar to Pomak gore/dolje.
         /// </summary>
         public static string scroll_up_down {
             get {
@@ -1429,7 +1429,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to seconds.
+        ///   Looks up a localized string similar to sekundi.
         /// </summary>
         public static string seconds {
             get {
@@ -1438,7 +1438,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select all.
+        ///   Looks up a localized string similar to Odaberi sve.
         /// </summary>
         public static string select_all {
             get {
@@ -1447,7 +1447,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selection tool.
+        ///   Looks up a localized string similar to Alat za odabir.
         /// </summary>
         public static string selection_tool {
             get {
@@ -1456,7 +1456,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Set as default image viewer.
+        ///   Looks up a localized string similar to Postavi kao zadani preglednik slika.
         /// </summary>
         public static string set_as_default_image_viewer {
             get {
@@ -1465,7 +1465,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Set as desktop background.
+        ///   Looks up a localized string similar to Postavi kao pozadinu radne površine.
         /// </summary>
         public static string set_as_desktop_background {
             get {
@@ -1474,7 +1474,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Set background.
+        ///   Looks up a localized string similar to Postavi pozadinu.
         /// </summary>
         public static string set_background {
             get {
@@ -1483,7 +1483,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Set margins.
+        ///   Looks up a localized string similar to Postavi margine.
         /// </summary>
         public static string set_margins_btn {
             get {
@@ -1492,7 +1492,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Settings.
+        ///   Looks up a localized string similar to Postavke.
         /// </summary>
         public static string settings {
             get {
@@ -1501,7 +1501,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show file in explorer.
+        ///   Looks up a localized string similar to Prikaži datoteku u Exploreru.
         /// </summary>
         public static string show_file_explorer {
             get {
@@ -1510,7 +1510,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show navigation arrows.
+        ///   Looks up a localized string similar to Prikaži navigacijske strelice.
         /// </summary>
         public static string show_nav_arrows {
             get {
@@ -1519,7 +1519,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show slideshow counter.
+        ///   Looks up a localized string similar to Prikaži brojač prezentacije.
         /// </summary>
         public static string show_slideshow_counter {
             get {
@@ -1528,7 +1528,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show status bar.
+        ///   Looks up a localized string similar to Prikaži statusnu traku.
         /// </summary>
         public static string show_status_bar {
             get {
@@ -1537,7 +1537,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show toolbar.
+        ///   Looks up a localized string similar to Prikaži alatnu traku.
         /// </summary>
         public static string show_toolbar {
             get {
@@ -1546,7 +1546,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Size.
+        ///   Looks up a localized string similar to Veličina.
         /// </summary>
         public static string size {
             get {
@@ -1555,7 +1555,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Skip this version.
+        ///   Looks up a localized string similar to Preskoči ovu verziju.
         /// </summary>
         public static string skip_this_version {
             get {
@@ -1564,7 +1564,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Slideshow.
+        ///   Looks up a localized string similar to Prezentacija.
         /// </summary>
         public static string slideshow {
             get {
@@ -1573,7 +1573,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Span.
+        ///   Looks up a localized string similar to Obuhvati sve.
         /// </summary>
         public static string span {
             get {
@@ -1582,7 +1582,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Square.
+        ///   Looks up a localized string similar to Kvadratno.
         /// </summary>
         public static string square {
             get {
@@ -1591,7 +1591,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Startup.
+        ///   Looks up a localized string similar to Pokretanje.
         /// </summary>
         public static string startup {
             get {
@@ -1600,7 +1600,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stretch.
+        ///   Looks up a localized string similar to Razvuci.
         /// </summary>
         public static string stretch {
             get {
@@ -1609,7 +1609,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All unsaved data will be lost. Are you sure you want to close the application?.
+        ///   Looks up a localized string similar to Svi nespremljeni podatci bit će izgubljeni. Sigurno želite zatvoriti aplikaciju?.
         /// </summary>
         public static string sure_close_app {
             get {
@@ -1618,7 +1618,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to permanently delete this file?.
+        ///   Looks up a localized string similar to Sigurno želite trajno izbrisati ovu datoteku?.
         /// </summary>
         public static string sure_perm_delete {
             get {
@@ -1627,7 +1627,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Switching time.
+        ///   Looks up a localized string similar to Vrijeme prebacivanja.
         /// </summary>
         public static string switching_time {
             get {
@@ -1636,7 +1636,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Theme.
+        ///   Looks up a localized string similar to Tema.
         /// </summary>
         public static string theme {
             get {
@@ -1645,7 +1645,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tile.
+        ///   Looks up a localized string similar to Poploči.
         /// </summary>
         public static string tile {
             get {
@@ -1654,7 +1654,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Title.
+        ///   Looks up a localized string similar to Naslov.
         /// </summary>
         public static string title {
             get {
@@ -1663,7 +1663,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tools.
+        ///   Looks up a localized string similar to Alati.
         /// </summary>
         public static string tools {
             get {
@@ -1672,7 +1672,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Top.
+        ///   Looks up a localized string similar to Vrh.
         /// </summary>
         public static string top {
             get {
@@ -1681,7 +1681,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Translation by.
+        ///   Looks up a localized string similar to Preveo/la.
         /// </summary>
         public static string translated_by {
             get {
@@ -1690,7 +1690,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to options.
+        ///   Looks up a localized string similar to opcije.
         /// </summary>
         public static string type_options {
             get {
@@ -1699,7 +1699,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User interface language.
+        ///   Looks up a localized string similar to Jezik korisničkog sučelja.
         /// </summary>
         public static string ui_lang {
             get {
@@ -1708,7 +1708,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to open file.
+        ///   Looks up a localized string similar to Nije moguće otvoriti datoteku.
         /// </summary>
         public static string unable_open_file {
             get {
@@ -1717,7 +1717,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to open the file, file skipped.
+        ///   Looks up a localized string similar to Nije moguće otvoriti datoteku, datoteka je preskočena.
         /// </summary>
         public static string unable_open_file_skipped {
             get {
@@ -1726,7 +1726,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to run external app.
+        ///   Looks up a localized string similar to Nije moguće pokrenuti vanjsku aplikaciju.
         /// </summary>
         public static string unable_to_run_external_app {
             get {
@@ -1735,7 +1735,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unsaved changes.
+        ///   Looks up a localized string similar to Nespremljene promjene.
         /// </summary>
         public static string unsaved_changes {
             get {
@@ -1744,7 +1744,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The current image has unsaved changes. What would you like to do?.
+        ///   Looks up a localized string similar to Trenutna slika ima nespremljene promjene. Što želite učiniti?.
         /// </summary>
         public static string unsaved_changes_question {
             get {
@@ -1753,7 +1753,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unsupported pixel format.
+        ///   Looks up a localized string similar to Nepodržani format piksela.
         /// </summary>
         public static string unsupported_pixel_format {
             get {
@@ -1762,7 +1762,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update failed.
+        ///   Looks up a localized string similar to Ažuriranje nije uspjelo.
         /// </summary>
         public static string update_failed {
             get {
@@ -1771,7 +1771,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The version {0} for Quick Picture Viewer is available, you&apos;re using version {1}, update now?.
+        ///   Looks up a localized string similar to Verzija {0} Quick Picture Viewera je dostupna, a koristite verziju {1}. Ažurirati sada?.
         /// </summary>
         public static string update_text {
             get {
@@ -1780,7 +1780,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Updating Quick Picture Viewer.
+        ///   Looks up a localized string similar to Ažuriranje Quick Picture Viewera.
         /// </summary>
         public static string updating_qpv {
             get {
@@ -1789,7 +1789,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use system setting.
+        ///   Looks up a localized string similar to Koristi postavke sustava.
         /// </summary>
         public static string use_system_setting {
             get {
@@ -1798,7 +1798,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version.
+        ///   Looks up a localized string similar to Verzija.
         /// </summary>
         public static string version {
             get {
@@ -1807,7 +1807,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View.
+        ///   Looks up a localized string similar to Prikaz.
         /// </summary>
         public static string view {
             get {
@@ -1816,7 +1816,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning.
+        ///   Looks up a localized string similar to Upozorenje.
         /// </summary>
         public static string warning {
             get {
@@ -1825,7 +1825,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to What&apos;s new?.
+        ///   Looks up a localized string similar to Što je novo?.
         /// </summary>
         public static string whats_new {
             get {
@@ -1834,7 +1834,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Width.
+        ///   Looks up a localized string similar to Širina.
         /// </summary>
         public static string width {
             get {
@@ -1843,7 +1843,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom.
+        ///   Looks up a localized string similar to Zum.
         /// </summary>
         public static string zoom {
             get {
@@ -1852,7 +1852,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom in.
+        ///   Looks up a localized string similar to Povećaj prikaz.
         /// </summary>
         public static string zoom_in {
             get {
@@ -1861,7 +1861,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom in / out.
+        ///   Looks up a localized string similar to Povećaj/smanji prikaz.
         /// </summary>
         public static string zoom_in_out {
             get {
@@ -1870,7 +1870,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom out.
+        ///   Looks up a localized string similar to Smanji prikaz.
         /// </summary>
         public static string zoom_out {
             get {
@@ -1879,7 +1879,7 @@ namespace quick_picture_viewer.languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zoom to actual size.
+        ///   Looks up a localized string similar to Zumiraj na stvarnu veličinu.
         /// </summary>
         public static string zoom_to_actual_size {
             get {

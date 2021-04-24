@@ -118,363 +118,363 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about" xml:space="preserve">
-    <value>About</value>
+    <value>O programu</value>
     <comment>Menu</comment>
   </data>
   <data name="all-files" xml:space="preserve">
-    <value>All files</value>
+    <value>Sve datoteke</value>
     <comment>Open file dialog</comment>
   </data>
   <data name="all-image-formats" xml:space="preserve">
-    <value>All image formats</value>
+    <value>Svi formati slika</value>
     <comment>Open file dialog</comment>
   </data>
   <data name="always-on-top" xml:space="preserve">
-    <value>Always on top</value>
+    <value>Uvijek na vrhu</value>
     <comment>Menu</comment>
   </data>
   <data name="app-description" xml:space="preserve">
-    <value>Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer.</value>
+    <value>Perolaki, svestrani preglednik slika za Windows. Najbolja zamjena za zadani preglednik slika u Windowsu.</value>
     <comment>About</comment>
   </data>
   <data name="app-is-up-to-date" xml:space="preserve">
-    <value>Application is up to date!</value>
+    <value>Aplikacija je ažurna!</value>
     <comment>Update Manager</comment>
   </data>
   <data name="app-startup-actions" xml:space="preserve">
-    <value>App startup actions</value>
+    <value>Radnje kod pokretanja aplikacije</value>
     <comment>Settings</comment>
   </data>
   <data name="aspect-ratio" xml:space="preserve">
-    <value>Aspect ratio</value>
+    <value>Omjer slike</value>
     <comment>Image info</comment>
   </data>
   <data name="auto" xml:space="preserve">
-    <value>Auto</value>
+    <value>Automatski</value>
     <comment>Status bar, zoom text field</comment>
   </data>
   <data name="auto-size" xml:space="preserve">
-    <value>Auto size</value>
+    <value>Automatska veličina</value>
     <comment>SVG options</comment>
   </data>
   <data name="auto-zoom" xml:space="preserve">
-    <value>Auto zoom</value>
+    <value>Automatski zum</value>
     <comment>Menu</comment>
   </data>
   <data name="background-color" xml:space="preserve">
-    <value>Background color</value>
+    <value>Pozadinska boja</value>
     <comment>Menu</comment>
   </data>
   <data name="bottom" xml:space="preserve">
-    <value>Bottom</value>
+    <value>Dno</value>
     <comment>Print</comment>
   </data>
   <data name="browse" xml:space="preserve">
-    <value>Browse</value>
+    <value>Pregledaj</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-folder-with-qpv" xml:space="preserve">
-    <value>Browse with Quick Picture Viewer</value>
+    <value>Pregledaj s Quick Picture Viewerom</value>
     <comment>Settings</comment>
   </data>
   <data name="browse-for-plugins" xml:space="preserve">
-    <value>Browse for plugins</value>
+    <value>Pregledaj priključke</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="center" xml:space="preserve">
-    <value>Center</value>
+    <value>Sredina</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="center-image" xml:space="preserve">
-    <value>Center image</value>
+    <value>Centriraj sliku</value>
     <comment>Print</comment>
   </data>
   <data name="centimeters" xml:space="preserve">
-    <value>centimeters</value>
+    <value>centimetara</value>
     <comment>Image info</comment>
   </data>
   <data name="change-window-opacity" xml:space="preserve">
-    <value>Change window opacity</value>
+    <value>Promijeni transparentnost prozora</value>
     <comment>Picture in picture</comment>
   </data>
   <data name="check-for-app-updates" xml:space="preserve">
-    <value>Check for app updates</value>
+    <value>Traži ažuriranja aplikacije</value>
     <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
-    <value>Checkerboard background</value>
+    <value>Šahovnička pozadina</value>
     <comment>Menu</comment>
   </data>
   <data name="choose-color" xml:space="preserve">
-    <value>Choose color</value>
+    <value>Odaberi boju</value>
     <comment>Menu</comment>
   </data>
   <data name="choose-fit" xml:space="preserve">
-    <value>Choose a fit</value>
+    <value>Odaberi smještaj</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="clear" xml:space="preserve">
-    <value>Clear</value>
+    <value>Očisti</value>
     <comment>Menu</comment>
   </data>
   <data name="comma" xml:space="preserve">
-    <value>Comma</value>
+    <value>zarez</value>
     <comment>Menu</comment>
   </data>
   <data name="compression" xml:space="preserve">
-    <value>Compression</value>
+    <value>Kompresija</value>
     <comment>Image info</comment>
   </data>
   <data name="context-menu" xml:space="preserve">
-    <value>Context menu</value>
+    <value>Kontekstni izbornik</value>
     <comment>Settings</comment>
   </data>
   <data name="context-menu-notice" xml:space="preserve">
-    <value>To change context menu options you need to run the app with Administrator</value>
+    <value>Da biste promijenili opcije kontekstnog izbornika, morate pokrenuti aplikaciju kao administrator.</value>
     <comment>Settings</comment>
   </data>
   <data name="copy" xml:space="preserve">
-    <value>Copy</value>
+    <value>Kopiraj</value>
     <comment>Menu</comment>
   </data>
   <data name="copy-file" xml:space="preserve">
-    <value>Copy original file</value>
+    <value>Kopiraj izvornu datoteku</value>
     <comment>Menu</comment>
   </data>
   <data name="copy-image" xml:space="preserve">
-    <value>Copy this image</value>
+    <value>Kopiraj ovu sliku</value>
     <comment>Menu</comment>
   </data>
   <data name="created" xml:space="preserve">
-    <value>Created</value>
+    <value>Stvoreno</value>
     <comment>Status bar, image info</comment>
   </data>
   <data name="created-by" xml:space="preserve">
-    <value>Created by</value>
+    <value>Stvorio/la</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="crop" xml:space="preserve">
-    <value>Crop</value>
+    <value>Obreži</value>
     <comment>Menu</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
-    <value>Current file could not be found</value>
+    <value>Trenutna datoteka nije pronađena</value>
     <comment>Message box</comment>
   </data>
   <data name="cut" xml:space="preserve">
-    <value>Cut</value>
+    <value>Izreži</value>
     <comment>RMB menu</comment>
   </data>
   <data name="dark" xml:space="preserve">
-    <value>Dark</value>
+    <value>Tamno</value>
     <comment>Settings</comment>
   </data>
   <data name="delete-file" xml:space="preserve">
-    <value>Delete file</value>
+    <value>Izbriši datoteku</value>
     <comment>Message box</comment>
   </data>
   <data name="delete-plugin" xml:space="preserve">
-    <value>Delete plugin</value>
+    <value>Izbriši priključak</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="delete-plugin-warning" xml:space="preserve">
-    <value>Are you sure you want to remove the plugin?</value>
+    <value>Sigurno želite ukloniti priključak??</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="desc" xml:space="preserve">
-    <value>Description</value>
+    <value>Opis</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="disk-size" xml:space="preserve">
-    <value>Disk size</value>
+    <value>Veličina na disku</value>
     <comment>Image info</comment>
   </data>
   <data name="dont-save" xml:space="preserve">
-    <value>Don't save</value>
+    <value>Nemoj spremiti</value>
     <comment>Main window</comment>
   </data>
   <data name="downloading-update" xml:space="preserve">
-    <value>Downloading update...</value>
+    <value>Preuzimanje ažuriranja...</value>
     <comment>Update manager</comment>
   </data>
   <data name="dragged-image" xml:space="preserve">
-    <value>Dragged image</value>
+    <value>Povućena slika</value>
     <comment>Status bar</comment>
   </data>
   <data name="edit-image" xml:space="preserve">
-    <value>Edit image</value>
+    <value>Uredi sliku</value>
     <comment>Menu</comment>
   </data>
   <data name="edit-selection" xml:space="preserve">
-    <value>Edit selection area</value>
+    <value>Uredi polje odabira</value>
     <comment>Status bar</comment>
   </data>
   <data name="effects" xml:space="preserve">
-    <value>Effects</value>
+    <value>Efekti</value>
     <comment>Menu</comment>
   </data>
   <data name="error" xml:space="preserve">
-    <value>Error</value>
+    <value>Greška</value>
     <comment>Message box</comment>
   </data>
   <data name="esc-to-exit" xml:space="preserve">
-    <value>Press {0} to exit app</value>
+    <value>Pritisnite {0} za izlaz iz aplikacije</value>
     <comment>Main window</comment>
   </data>
   <data name="exit-picture-in-picture" xml:space="preserve">
-    <value>Exit Picture-in-Picture mode</value>
+    <value>Izađi iz načina slike u slici</value>
     <comment>Picture in picture</comment>
   </data>
   <data name="extension" xml:space="preserve">
-    <value>Extension</value>
+    <value>Ekstenzija</value>
     <comment>Image info</comment>
   </data>
   <data name="fav-external-app" xml:space="preserve">
-    <value>Favorite external app</value>
+    <value>Omiljena vanjska aplikacija</value>
     <comment>Settings</comment>
   </data>
   <data name="file" xml:space="preserve">
-    <value>File</value>
+    <value>Datoteka</value>
     <comment>Status bar, image info</comment>
   </data>
   <data name="file-copied-to-clipboard" xml:space="preserve">
-    <value>File copied to clipboard</value>
+    <value>Datoteka kopirana u međuspremnik</value>
     <comment>Suggestion</comment>
   </data>
   <data name="file-moved-to-trash" xml:space="preserve">
-    <value>File moved to the Recycle Bin</value>
+    <value>Datoteka premještena u koš za smeće</value>
     <comment>Message box</comment>
   </data>
   <data name="file-properties" xml:space="preserve">
-    <value>File properties</value>
+    <value>Svojstva datoteke</value>
     <comment>Image info</comment>
   </data>
   <data name="file-reloaded" xml:space="preserve">
-    <value>File reloaded</value>
+    <value>Datoteka ponovno učitana</value>
     <comment>Suggestion</comment>
   </data>
   <data name="fill" xml:space="preserve">
-    <value>Fill</value>
+    <value>Ispuni</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="fit" xml:space="preserve">
-    <value>Fit</value>
+    <value>Prilagodi veličinu</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="flip-horizontal" xml:space="preserve">
-    <value>Flip horizontal</value>
+    <value>Okreni horizontalno</value>
     <comment>Menu</comment>
   </data>
   <data name="flip-vertical" xml:space="preserve">
-    <value>Flip vertical</value>
+    <value>Okreni vertikalno</value>
     <comment>Menu</comment>
   </data>
   <data name="folder" xml:space="preserve">
-    <value>Folder</value>
+    <value>Mapa</value>
     <comment>Status bar, image info</comment>
   </data>
   <data name="frameless-mode" xml:space="preserve">
-    <value>Frameless mode</value>
+    <value>Način bez okvira</value>
     <comment>Menu</comment>
   </data>
   <data name="from-clipboard" xml:space="preserve">
-    <value>From clipboard</value>
+    <value>Iz međuspremnika</value>
     <comment>Status bar</comment>
   </data>
   <data name="from-format" xml:space="preserve">
-    <value>From "{0}"</value>
+    <value>Iz "{0}"</value>
     <comment>Status bar</comment>
   </data>
   <data name="full-path" xml:space="preserve">
-    <value>Full path</value>
+    <value>Puna putanja</value>
     <comment>Image info</comment>
   </data>
   <data name="fullscreen" xml:space="preserve">
-    <value>Fullscreen</value>
+    <value>Puni zaslon</value>
     <comment>Menu</comment>
   </data>
   <data name="fullscreen-cursor" xml:space="preserve">
-    <value>Show cursor in fullscreen</value>
+    <value>Prikaži kursor u punom zaslonu</value>
     <comment>Settings</comment>
   </data>
   <data name="height" xml:space="preserve">
-    <value>Height</value>
+    <value>Visina</value>
     <comment>SVG options</comment>
   </data>
   <data name="help-us-translate-app" xml:space="preserve">
-    <value>Help us translate this app</value>
+    <value>Pomozite nam prevesti ovu aplikaciju</value>
     <comment>Settings</comment>
   </data>
   <data name="image" xml:space="preserve">
-    <value>Image</value>
+    <value>Slika</value>
     <comment>Print</comment>
   </data>
   <data name="image-copied-to-clipboard" xml:space="preserve">
-    <value>Image copied to clipboard</value>
+    <value>Slika kopirana u međuspremnik</value>
     <comment>Suggestion</comment>
   </data>
   <data name="image-info" xml:space="preserve">
-    <value>Image info</value>
+    <value>Informacije o slici</value>
     <comment>Menu</comment>
   </data>
   <data name="image-pasted-from-clipboard" xml:space="preserve">
-    <value>Image pasted from clipboard</value>
+    <value>Slika zalijepljena iz međuspremnika</value>
     <comment>Suggestion</comment>
   </data>
   <data name="inches" xml:space="preserve">
-    <value>inches</value>
+    <value>inča</value>
     <comment>Image info</comment>
   </data>
   <data name="input" xml:space="preserve">
-    <value>Mouse and keyboard</value>
+    <value>Miš i tipkovnica</value>
     <comment>Settings</comment>
   </data>
   <data name="install-now" xml:space="preserve">
-    <value>Install now</value>
+    <value>Instaliraj sada</value>
     <comment>Update manager</comment>
   </data>
   <data name="landscape" xml:space="preserve">
-    <value>Landscape</value>
+    <value>Horizontalno</value>
     <comment>Image info</comment>
   </data>
   <data name="landscape-orientation" xml:space="preserve">
-    <value>Landscape</value>
+    <value>Horizontalno</value>
     <comment>Print</comment>
   </data>
   <data name="left" xml:space="preserve">
-    <value>Left</value>
+    <value>Lijevo</value>
     <comment>Print</comment>
   </data>
   <data name="left-arrow" xml:space="preserve">
-    <value>Left arrow</value>
+    <value>Lijeva strelica</value>
     <comment>Menu</comment>
   </data>
   <data name="light" xml:space="preserve">
-    <value>Light</value>
+    <value>Svijestlo</value>
     <comment>Settings</comment>
   </data>
   <data name="localization" xml:space="preserve">
-    <value>Localization</value>
+    <value>Lokalizacija</value>
     <comment>Settings</comment>
   </data>
   <data name="maintain-aspect-ratio" xml:space="preserve">
-    <value>Maintain aspect ratio</value>
+    <value>Zadrži omjer slike</value>
     <comment>SVG options</comment>
   </data>
   <data name="margin-bounds" xml:space="preserve">
-    <value>Margin bounds</value>
+    <value>Granice margine</value>
     <comment>Print</comment>
   </data>
   <data name="margins" xml:space="preserve">
-    <value>Margins</value>
+    <value>Margine</value>
     <comment>Print</comment>
   </data>
   <data name="megapixels" xml:space="preserve">
-    <value>megapixels</value>
+    <value>megapiskela</value>
     <comment>Image info</comment>
   </data>
   <data name="memory-error" xml:space="preserve">
-    <value>Memory error</value>
+    <value>Greška memorije</value>
     <comment>Message box</comment>
   </data>
   <data name="minus" xml:space="preserve">
@@ -482,147 +482,147 @@
     <comment>Menu</comment>
   </data>
   <data name="modified" xml:space="preserve">
-    <value>Modified</value>
+    <value>Izmijenjeno</value>
     <comment>Status bar, image info</comment>
   </data>
   <data name="more-options" xml:space="preserve">
-    <value>More options</value>
+    <value>Više opcija</value>
     <comment>Menu</comment>
   </data>
   <data name="more-plugins" xml:space="preserve">
-    <value>More plugins</value>
+    <value>Više priključaka</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="mouse-wheel-action" xml:space="preserve">
-    <value>Mouse wheel scroll action</value>
+    <value>Radnja pomicanja kotačića miša</value>
     <comment>Settings</comment>
   </data>
   <data name="move-to-trash" xml:space="preserve">
-    <value>Move file to the Recycle Bin</value>
+    <value>Premjesti datoteku u koš za smeće</value>
     <comment>Menu</comment>
   </data>
   <data name="new-version-available" xml:space="preserve">
-    <value>New version available!</value>
+    <value>Dostupna je nova verzija!</value>
     <comment>Update manager</comment>
   </data>
   <data name="new-window" xml:space="preserve">
-    <value>New window</value>
+    <value>Novi prozor</value>
     <comment>Menu</comment>
   </data>
   <data name="new-window-desc" xml:space="preserve">
-    <value>Create new empty window</value>
+    <value>Stvori novi prazni prozor</value>
     <comment>Main window</comment>
   </data>
   <data name="next-image" xml:space="preserve">
-    <value>Next image in folder</value>
+    <value>Sljedeća slika u mapi</value>
     <comment>Menu</comment>
   </data>
   <data name="next-image-in-1-second" xml:space="preserve">
-    <value>Next image in 1 second</value>
+    <value>Sljedeća slika za 1 sekundu</value>
     <comment>Suggestion</comment>
   </data>
   <data name="next-image-in-x-seconds" xml:space="preserve">
-    <value>Next image in {0} seconds</value>
+    <value>Sljedeća slika za {0} sekunde/i</value>
     <comment>Suggestion</comment>
   </data>
   <data name="next-prev-image" xml:space="preserve">
-    <value>Next / previous image in folder</value>
+    <value>Sljedeća/prethodna slika u mapi</value>
     <comment>Settings</comment>
   </data>
   <data name="no-file" xml:space="preserve">
-    <value>No file</value>
+    <value>Nema datoteke</value>
     <comment>Status bar</comment>
   </data>
   <data name="no-files-to-open" xml:space="preserve">
-    <value>No files to open</value>
+    <value>Nema datoteka za otvaranje</value>
     <comment>Message box</comment>
   </data>
   <data name="not-saved" xml:space="preserve">
-    <value>Not saved</value>
+    <value>Nije spremljeno</value>
     <comment>Status bar</comment>
   </data>
   <data name="open" xml:space="preserve">
-    <value>Open</value>
+    <value>Otvori</value>
     <comment>Menu</comment>
   </data>
   <data name="open-external" xml:space="preserve">
-    <value>Open file with external app</value>
+    <value>Otvori datoteku u vanjskoj aplikaciji</value>
     <comment>Menu</comment>
   </data>
   <data name="open-file" xml:space="preserve">
-    <value>Open file</value>
+    <value>Otvori datoteku</value>
     <comment>Menu</comment>
   </data>
   <data name="open-folder" xml:space="preserve">
-    <value>Open folder</value>
+    <value>Otvori mapu</value>
     <comment>Menu</comment>
   </data>
   <data name="open-recursive" xml:space="preserve">
-    <value>Open folder recursively</value>
+    <value>Rekurzivno otvaraj mapu</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with" xml:space="preserve">
-    <value>Open with</value>
+    <value>Otvori s</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-choose" xml:space="preserve">
-    <value>Choose app to open</value>
+    <value>Odaberite aplikaciju za otvaranje</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-custom" xml:space="preserve">
-    <value>Open with custom app</value>
+    <value>Otvori prilagođenu aplikaciju</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-default" xml:space="preserve">
-    <value>Open with default app</value>
+    <value>Otvori zadanom aplikacijom</value>
     <comment>Menu</comment>
   </data>
   <data name="open-with-qpv" xml:space="preserve">
-    <value>Open with Quick Picture Viewer</value>
+    <value>Otvori s Quick Picture Viewerom</value>
     <comment>Settings</comment>
   </data>
   <data name="original-size" xml:space="preserve">
-    <value>Original size</value>
+    <value>Izvorna veličina</value>
     <comment>SVG options</comment>
   </data>
   <data name="paste-from-clipboard" xml:space="preserve">
-    <value>Paste from clipboard</value>
+    <value>Zalijepi iz međuspremnika</value>
     <comment>Settings</comment>
   </data>
   <data name="paste-image" xml:space="preserve">
-    <value>Paste image</value>
+    <value>Zalijepi sliku</value>
     <comment>Menu</comment>
   </data>
   <data name="perm-delete" xml:space="preserve">
-    <value>Delete file permanently</value>
+    <value>Trajno izbriši datoteku</value>
     <comment>Menu</comment>
   </data>
   <data name="picture-in-picture" xml:space="preserve">
-    <value>Picture-in-Picture mode</value>
+    <value>Način slike u slici</value>
     <comment>Menu</comment>
   </data>
   <data name="pixels" xml:space="preserve">
-    <value>pixels</value>
+    <value>piksela</value>
     <comment>Image info</comment>
   </data>
   <data name="please-open-image" xml:space="preserve">
-    <value>Please open an image to view or edit</value>
+    <value>Otvorite sliku za pregledavanje ili uređivanje</value>
     <comment>Picture panel</comment>
   </data>
   <data name="plugin" xml:space="preserve">
-    <value>Plugin</value>
+    <value>Priključak</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-manager" xml:space="preserve">
-    <value>Plugin manager</value>
+    <value>Upravitelj priključcima</value>
     <comment>Menu, Plugin manager</comment>
   </data>
   <data name="plugin-not-found" xml:space="preserve">
-    <value>Plugin directory not found</value>
+    <value>Nije pronađena mapa priključaka</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plugin-website" xml:space="preserve">
-    <value>Plugin website</value>
+    <value>Web-stranica priključka</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="plus" xml:space="preserve">
@@ -630,303 +630,303 @@
     <comment>Menu</comment>
   </data>
   <data name="portrait" xml:space="preserve">
-    <value>Portrait</value>
+    <value>Vertikalno</value>
     <comment>Image info</comment>
   </data>
   <data name="presets" xml:space="preserve">
-    <value>Presets</value>
+    <value>Pretpodešene postavke</value>
     <comment>SVG options</comment>
   </data>
   <data name="press-to-exit-fullscreen" xml:space="preserve">
-    <value>Press {0} to exit fullscreen mode</value>
+    <value>Pritisnite {0} za izlaz iz punog zaslona</value>
     <comment>Suggestion</comment>
   </data>
   <data name="prev-image" xml:space="preserve">
-    <value>Previous image in folder</value>
+    <value>Prethodna slika u mapi</value>
     <comment>Menu</comment>
   </data>
   <data name="print" xml:space="preserve">
-    <value>Print / Export to PDF</value>
+    <value>Ispiši/izvezi u PDF</value>
     <comment>Menu</comment>
   </data>
   <data name="print-conf" xml:space="preserve">
-    <value>Print configuration</value>
+    <value>Konfiguracija ispisa</value>
     <comment>Print</comment>
   </data>
   <data name="print-margins-error" xml:space="preserve">
-    <value>Unable to set document margins</value>
+    <value>Nije moguće postaviti margine dokumenta</value>
     <comment>Print</comment>
   </data>
   <data name="print-size" xml:space="preserve">
-    <value>Print size</value>
+    <value>Veličina ispisa</value>
     <comment>Image info</comment>
   </data>
   <data name="ready-to-install" xml:space="preserve">
-    <value>Ready to install</value>
+    <value>Spremno za instalaciju</value>
     <comment>Update manager</comment>
   </data>
   <data name="reload-file" xml:space="preserve">
-    <value>Reload file</value>
+    <value>Ponovno učitaj datoteku</value>
     <comment>Menu</comment>
   </data>
   <data name="reload-plugins" xml:space="preserve">
-    <value>Reload plugin list</value>
+    <value>Ponovno učitaj popis priključaka</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="resize-svg" xml:space="preserve">
-    <value>Resize SVG</value>
+    <value>Promijeni veličinu SVG-a</value>
     <comment>SVG options</comment>
   </data>
   <data name="resolution" xml:space="preserve">
-    <value>Resolution</value>
+    <value>Rezolucija</value>
     <comment>Image info</comment>
   </data>
   <data name="restart" xml:space="preserve">
-    <value>Restart</value>
+    <value>Ponovno pokreni</value>
     <comment>Settings</comment>
   </data>
   <data name="restart-required" xml:space="preserve">
-    <value>App restart required</value>
+    <value>Potrebno ponovno pokrenuti aplikaciju</value>
     <comment>Settings</comment>
   </data>
   <data name="restore-last-window-bounds" xml:space="preserve">
-    <value>Restore last window bounds</value>
+    <value>Vrati prethodne granice prozora</value>
     <comment>Settings</comment>
   </data>
   <data name="right" xml:space="preserve">
-    <value>Right</value>
+    <value>Desno</value>
     <comment>Print</comment>
   </data>
   <data name="right-arrow" xml:space="preserve">
-    <value>Right arrow</value>
+    <value>Desna strelica</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-180" xml:space="preserve">
-    <value>Rotate 180°</value>
+    <value>Rotiraj 180°</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-left" xml:space="preserve">
-    <value>Rotate counter-clockwise</value>
+    <value>Rotiraj suprotno od kazaljke na satu</value>
     <comment>Menu</comment>
   </data>
   <data name="rotate-right" xml:space="preserve">
-    <value>Rotate clockwise</value>
+    <value>Rotiraj u smjeru kazaljke na satu</value>
     <comment>Menu</comment>
   </data>
   <data name="save" xml:space="preserve">
-    <value>Save</value>
+    <value>Spremi</value>
     <comment>Menu</comment>
   </data>
   <data name="save-as" xml:space="preserve">
-    <value>Save as</value>
+    <value>Spremi kao</value>
     <comment>Menu</comment>
   </data>
   <data name="scroll-up-down" xml:space="preserve">
-    <value>Scroll up / down</value>
+    <value>Pomak gore/dolje</value>
     <comment>Settings</comment>
   </data>
   <data name="seconds" xml:space="preserve">
-    <value>seconds</value>
+    <value>sekundi</value>
     <comment>Settings</comment>
   </data>
   <data name="select-all" xml:space="preserve">
-    <value>Select all</value>
+    <value>Odaberi sve</value>
     <comment>RMB menu</comment>
   </data>
   <data name="selection-tool" xml:space="preserve">
-    <value>Selection tool</value>
+    <value>Alat za odabir</value>
     <comment>Menu</comment>
   </data>
   <data name="set-as-default-image-viewer" xml:space="preserve">
-    <value>Set as default image viewer</value>
+    <value>Postavi kao zadani preglednik slika</value>
     <comment>About</comment>
   </data>
   <data name="set-as-desktop-background" xml:space="preserve">
-    <value>Set as desktop background</value>
+    <value>Postavi kao pozadinu radne površine</value>
     <comment>Menu</comment>
   </data>
   <data name="set-background" xml:space="preserve">
-    <value>Set background</value>
+    <value>Postavi pozadinu</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="set-margins-btn" xml:space="preserve">
-    <value>Set margins</value>
+    <value>Postavi margine</value>
     <comment>Print</comment>
   </data>
   <data name="settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Postavke</value>
     <comment>Menu, Settings</comment>
   </data>
   <data name="show-file-explorer" xml:space="preserve">
-    <value>Show file in explorer</value>
+    <value>Prikaži datoteku u Exploreru</value>
     <comment>Menu</comment>
   </data>
   <data name="show-nav-arrows" xml:space="preserve">
-    <value>Show navigation arrows</value>
+    <value>Prikaži navigacijske strelice</value>
     <comment>RMB menu</comment>
   </data>
   <data name="show-slideshow-counter" xml:space="preserve">
-    <value>Show slideshow counter</value>
+    <value>Prikaži brojač prezentacije</value>
     <comment>Settings</comment>
   </data>
   <data name="show-status-bar" xml:space="preserve">
-    <value>Show status bar</value>
+    <value>Prikaži statusnu traku</value>
     <comment>RMB menu</comment>
   </data>
   <data name="show-toolbar" xml:space="preserve">
-    <value>Show toolbar</value>
+    <value>Prikaži alatnu traku</value>
     <comment>RMB menu</comment>
   </data>
   <data name="size" xml:space="preserve">
-    <value>Size</value>
+    <value>Veličina</value>
     <comment>Status bar</comment>
   </data>
   <data name="skip-this-version" xml:space="preserve">
-    <value>Skip this version</value>
+    <value>Preskoči ovu verziju</value>
     <comment>Update manager</comment>
   </data>
   <data name="slideshow" xml:space="preserve">
-    <value>Slideshow</value>
+    <value>Prezentacija</value>
     <comment>Menu</comment>
   </data>
   <data name="span" xml:space="preserve">
-    <value>Span</value>
+    <value>Obuhvati sve</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="square" xml:space="preserve">
-    <value>Square</value>
+    <value>Kvadratno</value>
     <comment>Image info</comment>
   </data>
   <data name="startup" xml:space="preserve">
-    <value>Startup</value>
+    <value>Pokretanje</value>
     <comment>Settings</comment>
   </data>
   <data name="stretch" xml:space="preserve">
-    <value>Stretch</value>
+    <value>Razvuci</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="sure-close-app" xml:space="preserve">
-    <value>All unsaved data will be lost. Are you sure you want to close the application?</value>
+    <value>Svi nespremljeni podatci bit će izgubljeni. Sigurno želite zatvoriti aplikaciju?</value>
     <comment>Message box</comment>
   </data>
   <data name="sure-perm-delete" xml:space="preserve">
-    <value>Are you sure you want to permanently delete this file?</value>
+    <value>Sigurno želite trajno izbrisati ovu datoteku?</value>
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
-    <value>Switching time</value>
+    <value>Vrijeme prebacivanja</value>
     <comment>Settings</comment>
   </data>
   <data name="theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Tema</value>
     <comment>Settings</comment>
   </data>
   <data name="tile" xml:space="preserve">
-    <value>Tile</value>
+    <value>Poploči</value>
     <comment>Wallpaper</comment>
   </data>
   <data name="title" xml:space="preserve">
-    <value>Title</value>
+    <value>Naslov</value>
     <comment>Print</comment>
   </data>
   <data name="tools" xml:space="preserve">
-    <value>Tools</value>
+    <value>Alati</value>
     <comment>Menu</comment>
   </data>
   <data name="top" xml:space="preserve">
-    <value>Top</value>
+    <value>Vrh</value>
     <comment>Print</comment>
   </data>
   <data name="translated-by" xml:space="preserve">
-    <value>Translation by</value>
+    <value>Preveo/la</value>
     <comment>Settings</comment>
   </data>
   <data name="type-options" xml:space="preserve">
-    <value>options</value>
+    <value>opcije</value>
     <comment>Picture panel, SVG options</comment>
   </data>
   <data name="ui-lang" xml:space="preserve">
-    <value>User interface language</value>
+    <value>Jezik korisničkog sučelja</value>
     <comment>Settings</comment>
   </data>
   <data name="unable-open-file" xml:space="preserve">
-    <value>Unable to open file</value>
+    <value>Nije moguće otvoriti datoteku</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-open-file-skipped" xml:space="preserve">
-    <value>Unable to open the file, file skipped</value>
+    <value>Nije moguće otvoriti datoteku, datoteka je preskočena</value>
     <comment>Message box</comment>
   </data>
   <data name="unable-to-run-external-app" xml:space="preserve">
-    <value>Unable to run external app</value>
+    <value>Nije moguće pokrenuti vanjsku aplikaciju</value>
     <comment>Message box</comment>
   </data>
   <data name="unsaved-changes" xml:space="preserve">
-    <value>Unsaved changes</value>
+    <value>Nespremljene promjene</value>
     <comment>Main window</comment>
   </data>
   <data name="unsaved-changes-question" xml:space="preserve">
-    <value>The current image has unsaved changes. What would you like to do?</value>
+    <value>Trenutna slika ima nespremljene promjene. Što želite učiniti?</value>
     <comment>Main window</comment>
   </data>
   <data name="unsupported-pixel-format" xml:space="preserve">
-    <value>Unsupported pixel format</value>
+    <value>Nepodržani format piksela</value>
     <comment>Message box</comment>
   </data>
   <data name="update-failed" xml:space="preserve">
-    <value>Update failed</value>
+    <value>Ažuriranje nije uspjelo</value>
     <comment>Update manager</comment>
   </data>
   <data name="update-text" xml:space="preserve">
-    <value>The version {0} for Quick Picture Viewer is available, you're using version {1}, update now?</value>
+    <value>Verzija {0} Quick Picture Viewera je dostupna, a koristite verziju {1}. Ažurirati sada?</value>
     <comment>Update manager</comment>
   </data>
   <data name="updating-qpv" xml:space="preserve">
-    <value>Updating Quick Picture Viewer</value>
+    <value>Ažuriranje Quick Picture Viewera</value>
     <comment>Update manager</comment>
   </data>
   <data name="use-system-setting" xml:space="preserve">
-    <value>Use system setting</value>
+    <value>Koristi postavke sustava</value>
     <comment>Settings</comment>
   </data>
   <data name="version" xml:space="preserve">
-    <value>Version</value>
+    <value>Verzija</value>
     <comment>Plugin manager</comment>
   </data>
   <data name="view" xml:space="preserve">
-    <value>View</value>
+    <value>Prikaz</value>
     <comment>RMB menu</comment>
   </data>
   <data name="warning" xml:space="preserve">
-    <value>Warning</value>
+    <value>Upozorenje</value>
     <comment>Message box</comment>
   </data>
   <data name="whats-new" xml:space="preserve">
-    <value>What's new?</value>
+    <value>Što je novo?</value>
     <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
-    <value>Width</value>
+    <value>Širina</value>
     <comment>SVG options</comment>
   </data>
   <data name="zoom" xml:space="preserve">
-    <value>Zoom</value>
+    <value>Zum</value>
     <comment>Status bar</comment>
   </data>
   <data name="zoom-in" xml:space="preserve">
-    <value>Zoom in</value>
+    <value>Povećaj prikaz</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-in-out" xml:space="preserve">
-    <value>Zoom in / out</value>
+    <value>Povećaj/smanji prikaz</value>
     <comment>Settings</comment>
   </data>
   <data name="zoom-out" xml:space="preserve">
-    <value>Zoom out</value>
+    <value>Smanji prikaz</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-to-actual-size" xml:space="preserve">
-    <value>Zoom to actual size</value>
+    <value>Zumiraj na stvarnu veličinu</value>
     <comment>Menu</comment>
   </data>
 </root>

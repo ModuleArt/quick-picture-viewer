@@ -54,12 +54,7 @@ header a:hover .logo {
 header .logo img {
     vertical-align: middle;
     width: 32px;
-    filter: var(--filter-shadow-white);
     transition: filter var(--animation-speed);
-}
-
-header a:hover .logo img {
-    filter: var(--filter-shadow-extra-black);
 }
 
 header .logo span {

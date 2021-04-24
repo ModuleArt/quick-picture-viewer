@@ -146,11 +146,12 @@
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "SelectionForm";
+			this.Opacity = 0.5D;
+			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "SelectionForm";
-			this.TransparencyKey = System.Drawing.Color.Red;
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.selectionMenu.ResumeLayout(false);
 			this.ResumeLayout(false);

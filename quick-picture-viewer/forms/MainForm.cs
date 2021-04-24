@@ -215,8 +215,9 @@ namespace quick_picture_viewer
 			openFolderBtn.Text = LangMan.Get("open-folder");
 			openRecursive.Text = LangMan.Get("open-recursive");
 
-			saveAsButton.Text = LangMan.Get("save-as") + " | Ctrl+Shift+S";
-			saveBtn.Text = LangMan.Get("save") + " | Ctrl+S";
+			saveAsBtn.Text = LangMan.Get("save-as");
+			saveMenuBtn.Text = LangMan.Get("save");
+			saveBtn.Text = LangMan.Get("save");
 			checkboardButton.Text = LangMan.Get("checkboard-background") + " | Ctrl+B";
 			fullscreenBtn.Text = LangMan.Get("fullscreen") + " | F";
 			miniViewButton.Text = LangMan.Get("picture-in-picture") + " | Ctrl+Shift+P";
@@ -406,7 +407,7 @@ namespace quick_picture_viewer
 					LangMan.Get("unsaved-changes-question"),
 					windowTitle: LangMan.Get("unsaved-changes"),
 					yesBtnText: currentFile != null ? LangMan.Get("save-as") : LangMan.Get("save"),
-					yesBtnImage: currentFile != null ? saveAsButton.Image : saveBtn.Image,
+					yesBtnImage: currentFile != null ? saveAsBtn.Image : saveBtn.Image,
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: permDeleteBtn.Image,
@@ -414,7 +415,7 @@ namespace quick_picture_viewer
 				);
 					if (window == DialogResult.Yes)
 					{
-						if (currentFile != null) saveAsButton.PerformClick();
+						if (currentFile != null) saveAsBtn.PerformClick();
 						else saveBtn.PerformClick();
 					}
 					else if (window != DialogResult.No) return;
@@ -497,7 +498,7 @@ namespace quick_picture_viewer
 				rotateRightButton.Enabled = true;
 				rotate180Button.Enabled = true;
 				cropBtn.Enabled = true;
-				saveAsButton.Enabled = true;
+				saveAsBtn.Enabled = true;
 				copyImageBtn.Enabled = true;
 				selectAllBtn.Enabled = true;
 				autoZoomButton.Enabled = true;
@@ -829,6 +830,7 @@ namespace quick_picture_viewer
 				if (autoZoom || (pictureBox.Width <= picturePanel.Width && pictureBox.Height <= picturePanel.Height))
 				{
 					AllowDrop = false;
+					Console.WriteLine("mousedown: " + AllowDrop);
 					if (currentFile != null || originalImage != null) dragImage = true;
 				}
 				else
@@ -846,6 +848,7 @@ namespace quick_picture_viewer
 		{
 			AllowDrop = true;
 			Cursor.Current = Cursors.Default;
+			Console.WriteLine("mouseup: " + AllowDrop);
 		}
 
 		private void picturePanel_MouseMove(object sender, MouseEventArgs e)
@@ -1042,7 +1045,7 @@ namespace quick_picture_viewer
 					if (e.Shift)
 					{
 						if (e.KeyCode == Keys.L) directoryLabel.PerformClick();
-						else if (e.KeyCode == Keys.S) saveAsButton.PerformClick();
+						else if (e.KeyCode == Keys.S) saveAsBtn.PerformClick();
 						else if (e.KeyCode == Keys.P) miniViewButton.PerformClick();
 						else if (e.KeyCode == Keys.A) autoZoomButton.PerformClick();
 					}
@@ -1289,7 +1292,7 @@ namespace quick_picture_viewer
 			currentFolder = null;
 			recursiveFolder = null;
 
-			saveAsButton.Enabled = false;
+			saveAsBtn.Enabled = false;
 			saveBtn.Enabled = false;
 			deleteBtn.Enabled = false;
 			permDeleteBtn.Enabled = false;
@@ -1385,7 +1388,8 @@ namespace quick_picture_viewer
 				openFolderBtn.Image = Properties.Resources.white_picfolder;
 				openRecursive.Image = Properties.Resources.white_recursive;
 
-				saveAsButton.Image = Properties.Resources.white_saveas;
+				saveAsBtn.Image = Properties.Resources.white_saveas;
+				saveMenuBtn.Image = Properties.Resources.white_save;
 				saveBtn.Image = Properties.Resources.white_save;
 				printButton.Image = Properties.Resources.white_print;
 				deleteBtn.Image = Properties.Resources.white_trash;
@@ -1550,7 +1554,7 @@ namespace quick_picture_viewer
 					LangMan.Get("unsaved-changes-question"),
 					windowTitle: LangMan.Get("unsaved-changes"),
 					yesBtnText: currentFile != null ? LangMan.Get("save-as") : LangMan.Get("save"),
-					yesBtnImage: currentFile != null ? saveAsButton.Image : saveBtn.Image,
+					yesBtnImage: currentFile != null ? saveAsBtn.Image : saveBtn.Image,
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: permDeleteBtn.Image,
@@ -1558,7 +1562,7 @@ namespace quick_picture_viewer
 				);
 				if (window == DialogResult.Yes)
 				{
-					if (currentFile != null) saveAsButton.PerformClick();
+					if (currentFile != null) saveAsBtn.PerformClick();
 					else saveBtn.PerformClick();
 				}
 				else if (window != DialogResult.No) e.Cancel = true;
@@ -1832,7 +1836,9 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
+			Console.WriteLine(ActiveControl);
 			AllowDrop = true;
+			Console.WriteLine("mouseenter: " + AllowDrop);
 		}
 
 		private void backClearBtn_Click(object sender, EventArgs e)
@@ -2434,7 +2440,7 @@ namespace quick_picture_viewer
 			}
 			if (needSaveAs) 
 			{
-				saveAsButton.PerformClick();
+				saveAsBtn.PerformClick();
 				return;
 			}
 			SaveFile(Path.Combine(currentFolder, currentFile), ext, false);
