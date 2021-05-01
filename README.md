@@ -44,21 +44,29 @@
 
 Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
 
+## 🔮 Future plans:
+
+* Enhanced zoom menu
+* Image preloader [#57]
+* Sort by menu [#62]
+* Customizable keyboard shortcuts [#27]
+* More wallpaper related options [#65]
+
 ## 🧩 Built-in plugins:
 
 Effects:
-- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- Vignette - by Module Art - Soon...
-- Drop shadow - by Module Art - Soon...
-- Photo filter - by Community - Soon...
-- Hue and saturation - by Community - Soon...
+* <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+* <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+* <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+* <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+* Vignette - by Module Art - Soon...
+* Drop shadow - by Module Art - Soon...
+* Photo filter - by Community - Soon...
+* Hue and saturation - by Community - Soon...
 
 Tools:
-- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-- Color picker - by Module Art - Soon...
+* <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+* Color picker - by Module Art - Soon...
 
 ## 🐞 Bug report:
 
@@ -66,16 +74,15 @@ If you want to report a bug, first, thank you, that helps us a lot. Please open 
 
 ## 💿 Another installation methods:
 
-- Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
+* Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
 ```powershell
 Powershell $> choco install quick-picture-viewer --version 3.0.4
 ```
-
-- Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
+* Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
 ```powershell
 Powershell $> winget install ModuleArt.QuickPictureViewer
 ```
-- Using <a href="https://github.com/lukesampson/scoop">Scoop</a>:<br>
+* Using <a href="https://github.com/lukesampson/scoop">Scoop</a>:<br>
 ```powershell
 Powershell $> scoop install mingit-busybox 7zip sudo
 Powershell $> scoop bucket add extras
@@ -92,28 +99,28 @@ Help Module Art!
 
 Code contributors:
 
-- <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
-- <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
+* <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
+* <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
 
 Translation contributors:
 
-- Chinese: <a href="https://github.com/jiwangyihao">jiwangyihao</a>
-- Croatian: <a href="https://github.com/anotherus3r">anotherus3r</a>
-- French: <a href="https://github.com/b0bdN">b0bdN</a>
-- German: <a href="https://github.com/l-33ter">l-33ter</a>
-- Hungarian: <a href="https://github.com/KristofKekesi">KristofKekesi</a>
-- Russian: <a href="https://github.com/Beelink">Beelink</a>
-- Spanish: <a href="https://github.com/asluppiter">asluppiter</a>, <a href="https://github.com/Alplox">Alplox</a>
+* Chinese: <a href="https://github.com/jiwangyihao">jiwangyihao</a>
+* Croatian: <a href="https://github.com/anotherus3r">anotherus3r</a>
+* French: <a href="https://github.com/b0bdN">b0bdN</a>
+* German: <a href="https://github.com/l-33ter">l-33ter</a>
+* Hungarian: <a href="https://github.com/KristofKekesi">KristofKekesi</a>
+* Russian: <a href="https://github.com/Beelink">Beelink</a>
+* Spanish: <a href="https://github.com/asluppiter">asluppiter</a>, <a href="https://github.com/Alplox">Alplox</a>
 
 <a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
 
 ## 🔗 Useful links:
 
-- <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a>
-- <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a>
+* <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a>
+* <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a>
 
 ## 🧰 Other great apps:
 
-- <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
-- <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> - Lightweight desktop screen recorder for Windows.<br>
-- <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> - Lightweight tool to draw or keep notes on your desktop background for Windows.
+* <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
+* <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> - Lightweight desktop screen recorder for Windows.<br>
+* <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> - Lightweight tool to draw or keep notes on your desktop background for Windows.

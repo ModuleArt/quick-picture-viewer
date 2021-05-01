@@ -50,11 +50,14 @@
 			this.openFileBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openFolderBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.openRecursive = new System.Windows.Forms.ToolStripMenuItem();
-			this.infoButton = new System.Windows.Forms.ToolStripButton();
+			this.saveMenuBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			this.saveBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveAsBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			this.externalRunBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalFavoriteBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.externalChooseBtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.infoButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator4 = new QuickLibrary.QlibToolsep();
 			this.prevButton = new System.Windows.Forms.ToolStripButton();
 			this.slideshowButton = new System.Windows.Forms.ToolStripButton();
@@ -122,9 +125,6 @@
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.suggestionLabel = new System.Windows.Forms.Label();
-			this.saveMenuBtn = new System.Windows.Forms.ToolStripDropDownButton();
-			this.saveBtn = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveAsBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -380,17 +380,44 @@
 			this.openRecursive.Text = "open recursive";
 			this.openRecursive.Click += new System.EventHandler(this.openRecursive_Click);
 			// 
-			// infoButton
+			// saveMenuBtn
 			// 
-			this.infoButton.AutoSize = false;
-			this.infoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.infoButton.Enabled = false;
-			this.infoButton.Image = ((System.Drawing.Image)(resources.GetObject("infoButton.Image")));
-			this.infoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.infoButton.Margin = new System.Windows.Forms.Padding(0);
-			this.infoButton.Name = "infoButton";
-			this.infoButton.Size = new System.Drawing.Size(24, 25);
-			this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
+			this.saveMenuBtn.AutoSize = false;
+			this.saveMenuBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.saveMenuBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveBtn,
+            this.saveAsBtn});
+			this.saveMenuBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveMenuBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+			this.saveMenuBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.saveMenuBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.saveMenuBtn.Name = "saveMenuBtn";
+			this.saveMenuBtn.Size = new System.Drawing.Size(30, 25);
+			// 
+			// saveBtn
+			// 
+			this.saveBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.saveBtn.Enabled = false;
+			this.saveBtn.ForeColor = System.Drawing.Color.Black;
+			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveBtn.Name = "saveBtn";
+			this.saveBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+			this.saveBtn.Size = new System.Drawing.Size(207, 24);
+			this.saveBtn.Text = "save";
+			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+			// 
+			// saveAsBtn
+			// 
+			this.saveAsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.saveAsBtn.Enabled = false;
+			this.saveAsBtn.ForeColor = System.Drawing.Color.Black;
+			this.saveAsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_saveas;
+			this.saveAsBtn.Name = "saveAsBtn";
+			this.saveAsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+			this.saveAsBtn.Size = new System.Drawing.Size(207, 24);
+			this.saveAsBtn.Text = "save as";
+			this.saveAsBtn.Click += new System.EventHandler(this.saveAsButton_Click);
 			// 
 			// externalBtn
 			// 
@@ -445,6 +472,18 @@
 			this.externalChooseBtn.Size = new System.Drawing.Size(277, 24);
 			this.externalChooseBtn.Text = "choose app";
 			this.externalChooseBtn.Click += new System.EventHandler(this.externalButton_Click);
+			// 
+			// infoButton
+			// 
+			this.infoButton.AutoSize = false;
+			this.infoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.infoButton.Enabled = false;
+			this.infoButton.Image = ((System.Drawing.Image)(resources.GetObject("infoButton.Image")));
+			this.infoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.infoButton.Margin = new System.Windows.Forms.Padding(0);
+			this.infoButton.Name = "infoButton";
+			this.infoButton.Size = new System.Drawing.Size(24, 25);
+			this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
 			// 
 			// toolStripSeparator4
 			// 
@@ -1331,45 +1370,6 @@
 			this.suggestionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.suggestionLabel.Visible = false;
 			// 
-			// saveMenuBtn
-			// 
-			this.saveMenuBtn.AutoSize = false;
-			this.saveMenuBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.saveMenuBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveBtn,
-            this.saveAsBtn});
-			this.saveMenuBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
-			this.saveMenuBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-			this.saveMenuBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.saveMenuBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.saveMenuBtn.Name = "saveMenuBtn";
-			this.saveMenuBtn.Size = new System.Drawing.Size(30, 25);
-			// 
-			// saveBtn
-			// 
-			this.saveBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.saveBtn.Enabled = false;
-			this.saveBtn.ForeColor = System.Drawing.Color.Black;
-			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
-			this.saveBtn.Name = "saveBtn";
-			this.saveBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.saveBtn.Size = new System.Drawing.Size(207, 24);
-			this.saveBtn.Text = "save";
-			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-			// 
-			// saveAsBtn
-			// 
-			this.saveAsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.saveAsBtn.Enabled = false;
-			this.saveAsBtn.ForeColor = System.Drawing.Color.Black;
-			this.saveAsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_saveas;
-			this.saveAsBtn.Name = "saveAsBtn";
-			this.saveAsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-			this.saveAsBtn.Size = new System.Drawing.Size(207, 24);
-			this.saveAsBtn.Text = "save as";
-			this.saveAsBtn.Click += new System.EventHandler(this.saveAsButton_Click);
-			// 
 			// picturePanel
 			// 
 			this.picturePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1378,7 +1378,6 @@
 			this.picturePanel.AutoScroll = true;
 			this.picturePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-			this.picturePanel.ContextMenuStrip = this.rmbMenu;
 			this.picturePanel.Controls.Add(this.pleaseOpenLabel);
 			this.picturePanel.Controls.Add(this.pictureBox);
 			this.picturePanel.Location = new System.Drawing.Point(0, 32);
@@ -1388,6 +1387,7 @@
 			this.picturePanel.TabIndex = 2;
 			this.picturePanel.SizeChanged += new System.EventHandler(this.picturePanel_SizeChanged);
 			this.picturePanel.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.picturePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseClick);
 			this.picturePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.picturePanel.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.picturePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
@@ -1422,6 +1422,7 @@
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
 			this.pictureBox.DoubleClick += new System.EventHandler(this.picturePanel_DoubleClick);
+			this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseClick);
 			this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseDown);
 			this.pictureBox.MouseEnter += new System.EventHandler(this.picturePanel_MouseEnter);
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);

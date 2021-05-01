@@ -830,7 +830,6 @@ namespace quick_picture_viewer
 				if (autoZoom || (pictureBox.Width <= picturePanel.Width && pictureBox.Height <= picturePanel.Height))
 				{
 					AllowDrop = false;
-					Console.WriteLine("mousedown: " + AllowDrop);
 					if (currentFile != null || originalImage != null) dragImage = true;
 				}
 				else
@@ -846,9 +845,9 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseUp(object sender, MouseEventArgs e)
 		{
+			dragImage = false;
 			AllowDrop = true;
 			Cursor.Current = Cursors.Default;
-			Console.WriteLine("mouseup: " + AllowDrop);
 		}
 
 		private void picturePanel_MouseMove(object sender, MouseEventArgs e)
@@ -1836,9 +1835,7 @@ namespace quick_picture_viewer
 
 		private void picturePanel_MouseEnter(object sender, EventArgs e)
 		{
-			Console.WriteLine(ActiveControl);
-			AllowDrop = true;
-			Console.WriteLine("mouseenter: " + AllowDrop);
+			if (!dragImage) AllowDrop = true;
 		}
 
 		private void backClearBtn_Click(object sender, EventArgs e)
@@ -2310,6 +2307,8 @@ namespace quick_picture_viewer
 				pictureBox.Image = originalImage;
 				selectionBtn.Checked = false;
 				setImageChanged(true);
+
+				setCheckboardBackground(true, false);
 			}
 		}
 
@@ -2506,6 +2505,26 @@ namespace quick_picture_viewer
 								break;
 						}
 					}
+				}
+			}
+		}
+
+		private void picturePanel_MouseClick(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Right)
+			{
+				if (selForm != null &&
+					Cursor.Position.X >= selForm.Location.X &&
+					Cursor.Position.Y >= selForm.Location.Y &&
+					Cursor.Position.X < selForm.Location.X + selForm.Width &&
+					Cursor.Position.Y < selForm.Location.Y + selForm.Height
+				)
+				{
+					selForm.ShowContextMenu(Cursor.Position);
+				} 
+				else
+				{
+					rmbMenu.Show(Cursor.Position);
 				}
 			}
 		}

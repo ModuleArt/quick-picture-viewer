@@ -152,6 +152,7 @@
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "SelectionForm";
+			this.TransparencyKey = System.Drawing.Color.Red;
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.selectionMenu.ResumeLayout(false);
 			this.ResumeLayout(false);

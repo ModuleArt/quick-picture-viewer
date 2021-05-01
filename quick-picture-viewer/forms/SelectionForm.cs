@@ -62,6 +62,11 @@ namespace quick_picture_viewer
 			}
 		}
 
+		public void ShowContextMenu(Point p)
+		{
+			selectionMenu.Show(p);
+		}
+
 		public void UpdateContainerRect()
 		{
 			SetSize(Width, Height);
