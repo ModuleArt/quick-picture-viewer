@@ -105,7 +105,8 @@ namespace quick_picture_viewer
 					this,
 					LangMan.Get("plugin-not-found"),
 					LangMan.Get("print-margins-error"),
-					DarkMode
+					DarkMode,
+					TopMost
 				);
 			}
 		}

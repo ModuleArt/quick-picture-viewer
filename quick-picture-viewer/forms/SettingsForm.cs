@@ -397,7 +397,8 @@ namespace quick_picture_viewer
 						this,
 						LangMan.Get("context-menu-notice"),
 						LangMan.Get("error"),
-						DarkMode
+						DarkMode,
+						TopMost
 					);
 					openWithCheckBox.Checked = !openWithCheckBox.Checked;
 					settingsStarted = true;
@@ -436,7 +437,8 @@ namespace quick_picture_viewer
 						this,
 						LangMan.Get("context-menu-notice"),
 						LangMan.Get("error"),
-						DarkMode
+						DarkMode,
+						TopMost
 					);
 					browseWithCheckBox.Checked = !browseWithCheckBox.Checked;
 					settingsStarted = true;
