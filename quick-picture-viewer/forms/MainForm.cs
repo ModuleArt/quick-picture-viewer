@@ -371,9 +371,9 @@ namespace quick_picture_viewer
 			}));
 		}
 
-		public void OpenFile(string path, bool goPrev = false, bool skipIfError = false, bool cantOpenLastError = false)
+		public void OpenFile(string path, bool goPrev = false, bool skipIfError = false, bool cantOpenLastError = false, string targetExtension = null)
 		{
-			FileTypeMan.OpenResult res = FileTypeMan.Open(path);
+			FileTypeMan.OpenResult res = FileTypeMan.Open(path, targetExtension);
 			showTypeOpsButton(res.ShowTypeOps, res.TypeName);
 			if (string.IsNullOrEmpty(res.ErrorMessage))
 			{
@@ -769,18 +769,15 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 
-			string ext = ".png";
 			if (currentFile != null)
 			{
 				saveFileDialog1.FileName = Path.GetFileNameWithoutExtension(currentFile);
 				saveFileDialog1.InitialDirectory = currentFolder;
 
-				ext = Path.GetExtension(currentFile);
-				switch (ext)
+				switch (Path.GetExtension(currentFile).ToLower())
 				{
 					case ".png":
 						saveFileDialog1.FilterIndex = 1;
-						ext = ".png";
 						break;
 					case ".jpg":
 					case ".jpeg":
@@ -788,38 +785,58 @@ namespace quick_picture_viewer
 					case ".jfif":
 					case ".exif":
 						saveFileDialog1.FilterIndex = 2;
-						ext = ".jpg";
 						break;
 					case ".gif":
 						saveFileDialog1.FilterIndex = 3;
-						ext = ".gif";
 						break;
 					case ".bmp":
 					case ".dib":
 					case ".rle":
 						saveFileDialog1.FilterIndex = 4;
-						ext = ".bmp";
 						break;
 					case ".tiff":
 					case ".tif":
 						saveFileDialog1.FilterIndex = 5;
-						ext = ".tiff";
 						break;
 					case ".ico":
 						saveFileDialog1.FilterIndex = 6;
-						ext = ".ico";
 						break;
 					case ".webp":
 						saveFileDialog1.FilterIndex = 7;
-						ext = ".webp";
 						break;
 				}
 			}
 
-			if (saveFileDialog1.ShowDialog() == DialogResult.OK) SaveFile(saveFileDialog1.FileName, ext, true);
-			setImageChanged(false);
-			CheckRecursiveFolder(saveFileDialog1.FileName);
-			OpenFile(saveFileDialog1.FileName);
+			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+			{
+				string ext = ".png";
+				switch (saveFileDialog1.FilterIndex)
+				{
+					case 2:
+						ext = ".jpg";
+						break;
+					case 3:
+						ext = ".gif";
+						break;
+					case 4:
+						ext = ".bmp";
+						break;
+					case 5:
+						ext = ".tif";
+						break;
+					case 6:
+						ext = ".ico";
+						break;
+					case 7:
+						ext = ".webp";
+						break;
+				}
+				SaveFile(saveFileDialog1.FileName, ext, true);
+
+				setImageChanged(false);
+				CheckRecursiveFolder(saveFileDialog1.FileName);
+				OpenFile(saveFileDialog1.FileName, targetExtension: ext);
+			}
 			saveFileDialog1.Dispose();
 		}
 
@@ -2417,7 +2434,7 @@ namespace quick_picture_viewer
 			setSlideshow(false);
 
 			bool needSaveAs = true;
-			string ext = Path.GetExtension(currentFile);
+			string ext = Path.GetExtension(currentFile).ToLower();
 			switch (ext)
 			{
 				case ".png":
