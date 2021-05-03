@@ -137,7 +137,8 @@ namespace quick_picture_viewer
 				windowTitle: LangMan.Get("warning"),
 				yesBtnText: LangMan.Get("delete-plugin"),
 				yesBtnImage: deleteBtn.Image,
-				darkMode: DarkMode
+				darkMode: DarkMode,
+				topMost: TopMost
 			);
 
 			if (window == DialogResult.Yes)
@@ -156,7 +157,8 @@ namespace quick_picture_viewer
 						this,
 						LangMan.Get("plugin-not-found"),
 						LangMan.Get("error"),
-						DarkMode
+						DarkMode,
+						TopMost
 					);
 				}
 				RefreshPluginsList();

@@ -411,7 +411,8 @@ namespace quick_picture_viewer
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: permDeleteBtn.Image,
-					darkMode: darkMode
+					darkMode: darkMode,
+					topMost: TopMost
 				);
 					if (window == DialogResult.Yes)
 					{
@@ -1574,7 +1575,8 @@ namespace quick_picture_viewer
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: permDeleteBtn.Image,
-					darkMode: darkMode
+					darkMode: darkMode,
+					topMost: TopMost
 				);
 				if (window == DialogResult.Yes)
 				{
@@ -2396,7 +2398,8 @@ namespace quick_picture_viewer
 				LangMan.Get("sure-perm-delete"),
 				yesBtnImage: permDeleteBtn.Image,
 				windowTitle: LangMan.Get("delete-file"),
-				darkMode: darkMode
+				darkMode: darkMode,
+				topMost: TopMost
 			);
 			if (d == DialogResult.Yes)
 			{
