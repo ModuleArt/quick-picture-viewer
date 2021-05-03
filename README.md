@@ -47,10 +47,10 @@ Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/iss
 ## 🔮 Future plans:
 
 * Enhanced zoom menu
-* Image preloader [#57]
-* Sort by menu [#62]
-* Customizable keyboard shortcuts [#27]
-* More wallpaper related options [#65]
+* Image preloader [<a href="https://github.com/ModuleArt/quick-picture-viewer/discussions/57">#57</a>]
+* Sort by menu [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/62">#62</a>]
+* Customizable keyboard shortcuts [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/69">#27</a>]
+* More wallpaper related options [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/65">#65</a>]
 
 ## 🧩 Built-in plugins:
 

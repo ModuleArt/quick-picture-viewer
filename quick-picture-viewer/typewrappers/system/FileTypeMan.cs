@@ -13,10 +13,10 @@ namespace quick_picture_viewer
 			public bool ShowTypeOps { get; set; }
 		}
 
-		public static OpenResult Open(string path)
+		public static OpenResult Open(string path, string targetExtension = null)
 		{
 			TypeWrapper tw;
-			switch (Path.GetExtension(path).ToLower())
+			switch (targetExtension != null ? targetExtension : Path.GetExtension(path).ToLower())
 			{
 				case ".webp":
 					tw = new WebpWrapper();

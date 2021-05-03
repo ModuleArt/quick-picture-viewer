@@ -85,6 +85,7 @@ namespace quick_picture_viewer
                 ep.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
                 bitmap.Save(tempPath, _jpgImageCodec, ep);
 
+                bitmap.Dispose();
                 return tempPath;
 			}
 		}
