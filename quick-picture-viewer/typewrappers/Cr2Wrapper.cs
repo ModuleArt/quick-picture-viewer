@@ -64,29 +64,43 @@ namespace quick_picture_viewer
 				fi.Seek(jpgStartPosition, SeekOrigin.Begin);
 
 				string baseName = Path.GetFileNameWithoutExtension(path);
-                Bitmap bitmap = new Bitmap(new PartialStream(fi, jpgStartPosition, fileSize));
+                using (Bitmap bitmap = new Bitmap(new PartialStream(fi, jpgStartPosition, fileSize))) 
+                {
+                    try
+                    {
+                        if (_jpgImageCodec != null && (orientation == 8 || orientation == 6))
+                        {
+                            if (orientation == 8) bitmap.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                            else bitmap.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        }
+                    }
+                    catch
+                    {
 
-				try
-				{
-					if (_jpgImageCodec != null && (orientation == 8 || orientation == 6))
+                    }
+
+                    int freeIndex = 0;
+                    string freePath = "qpv-cr2-";
+                    string tempPath = Path.Combine(Path.GetTempPath(), freePath + freeIndex + ".jpg");
+                    while (File.Exists(tempPath))
 					{
-						if (orientation == 8) bitmap.RotateFlip(RotateFlipType.Rotate270FlipNone);
-						else bitmap.RotateFlip(RotateFlipType.Rotate90FlipNone);
-					}
-				}
-				catch
-				{
-            
+                        try
+                        {
+                            File.Delete(tempPath);
+                        }
+                        catch
+						{
+                            freeIndex++;
+                            tempPath = Path.Combine(Path.GetTempPath(), freePath + freeIndex + ".jpg");
+                        }
+                    }
+
+                    EncoderParameters ep = new EncoderParameters(1);
+                    ep.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
+                    bitmap.Save(tempPath, _jpgImageCodec, ep);
+
+                    return tempPath;
                 }
-
-                string tempPath = Path.Combine(Path.GetTempPath(), "qpv-cr2.jpg");
-
-                EncoderParameters ep = new EncoderParameters(1);
-                ep.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
-                bitmap.Save(tempPath, _jpgImageCodec, ep);
-
-                bitmap.Dispose();
-                return tempPath;
 			}
 		}
 

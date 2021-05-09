@@ -14,12 +14,12 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\QuickPictureViewer
 DisableProgramGroupPage=yes
-LicenseFile=D:\Projects\DotNet\quick-picture-viewer\LICENSE
+LicenseFile=D:\Projects\quick-picture-viewer\LICENSE
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=D:\Projects\DotNet\quick-picture-viewer\inno-setup
+OutputDir=D:\Projects\quick-picture-viewer\inno-setup
 OutputBaseFilename=QuickPictureViewer-Setup
-SetupIconFile=D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico
+SetupIconFile=D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -50,50 +50,50 @@ Name: "openwith"; Description: "Open with {#MyAppName}"; GroupDescription: "Cont
 Name: "browsefolder"; Description: "Browse folder with {#MyAppName}"; GroupDescription: "Context menu:"; Flags: checkedonce
 
 [Files]
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\quick-picture-viewer.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\quick-picture-viewer.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\quick-picture-viewer.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\picture.ico"; DestDir: "{app}"; Flags: ignoreversion
 ; Local libraries
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\dlls\SimplePsd.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x64.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\dlls\libwebp_x86.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\dlls\SimplePsd.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; Nuget libraries
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Utf8Json.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Pfim.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\QuickLibrary.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Octokit.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Utf8Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Pfim.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Svg.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; Dependencies
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Buffers.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Memory.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Numerics.Vectors.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Fizzler.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Buffers.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Memory.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Numerics.Vectors.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Release\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; Place plugins from Debug folder
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\*"; DestDir: "{app}\plugins"; Flags: ignoreversion recursesubdirs
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\bin\Debug\plugins\*"; DestDir: "{app}\plugins"; Flags: ignoreversion recursesubdirs
 ; Ico files for different formats
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\bmp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dds.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dib.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\exif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\gif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jfif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\png.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\rle.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\svg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tga.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\webp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\psd.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
-Source: "D:\Projects\DotNet\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\cr2.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\bmp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dds.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\dib.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\exif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\gif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jfif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\jpg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\png.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\rle.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\svg.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tga.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\tif.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\webp.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\psd.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
+Source: "D:\Projects\quick-picture-viewer\quick-picture-viewer\resources\imgs\file-types\cr2.ico"; DestDir: "{app}\icons"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

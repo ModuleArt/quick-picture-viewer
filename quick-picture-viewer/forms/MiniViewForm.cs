@@ -84,21 +84,18 @@ namespace quick_picture_viewer
 			if (newZoomFactor < 1) newZoomFactor = 1;
 			if (newZoomFactor > 250) newZoomFactor = 250;
 
-			if (newZoomFactor != zoomFactor)
-			{
-				zoomFactor = newZoomFactor;
+			zoomFactor = newZoomFactor;
 
-				zoomLabel.Text = LangMan.Get("zoom") + ": " + zoomFactor.ToString() + "%";
+			zoomLabel.Text = LangMan.Get("zoom") + ": " + zoomFactor.ToString() + "%";
 
-				setAutoZoom(false);
+			setAutoZoom(false);
 
-				int newWidth = Convert.ToInt32(width * zoomFactor / 100);
-				int newHeight = Convert.ToInt32(height * zoomFactor / 100);
+			int newWidth = Convert.ToInt32(width * zoomFactor / 100);
+			int newHeight = Convert.ToInt32(height * zoomFactor / 100);
 
-				pictureBox.Size = new Size(newWidth, newHeight);
+			pictureBox.Size = new Size(newWidth, newHeight);
 
-				MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
-			}
+			MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
 		}
 
 		private void ZoomToFit()
@@ -127,6 +124,7 @@ namespace quick_picture_viewer
 				zoomLabel.Visible = b;
 				autoZoomBtn.Visible = b;
 				opacityBtn.Visible = b;
+				zoom100Btn.Visible = b;
 			}
 		}
 
@@ -144,6 +142,7 @@ namespace quick_picture_viewer
 
 		private void InitLanguage()
 		{
+			infoTooltip.SetToolTip(zoom100Btn, LangMan.Get("zoom-to-actual-size") + " (100%) | Ctrl+0");
 			infoTooltip.SetToolTip(autoZoomBtn, LangMan.Get("auto-zoom") + " | Ctrl+Shift+A");
 			infoTooltip.SetToolTip(opacityBtn, LangMan.Get("change-window-opacity") + " | Ctrl+O");
 			zoomLabel.Text = LangMan.Get("zoom") + ": " + LangMan.Get("auto");
@@ -181,13 +180,22 @@ namespace quick_picture_viewer
 					else if (e.KeyCode == Keys.O) opacityBtn.PerformClick();
 					else if (e.KeyCode == Keys.OemMinus) zoomOut();
 					else if (e.KeyCode == Keys.Oemplus) zoomIn();
+					else if (e.KeyCode == Keys.D0) zoom100Btn.PerformClick();
 				}
 			}
 		}
 
 		private void autoZoomButton_Click(object sender, EventArgs e)
 		{
-			setAutoZoom(true);
+			if (autoZoom)
+			{
+				ZoomToFit();
+				setZoomFactor(zoomFactor);
+			}
+			else
+			{
+				setAutoZoom(true);
+			}
 		}
 
 		private void setAutoZoom(bool b)
@@ -329,6 +337,12 @@ namespace quick_picture_viewer
 		private void quitPipBtn_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+		private void zoom100Btn_Click(object sender, EventArgs e)
+		{
+			if (autoZoom) ZoomToFit();
+			setZoomFactor(100);
 		}
 	}
 }

@@ -43,6 +43,7 @@
 			this.opacityBtn = new QuickLibrary.QlibTitlebarButton();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.zoom100Btn = new QuickLibrary.QlibTitlebarButton();
 			this.contextMenuStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -55,11 +56,11 @@
 			this.zoomLabel.BackColor = System.Drawing.Color.Black;
 			this.zoomLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.zoomLabel.ForeColor = System.Drawing.Color.White;
-			this.zoomLabel.Location = new System.Drawing.Point(32, 0);
+			this.zoomLabel.Location = new System.Drawing.Point(64, 0);
 			this.zoomLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.zoomLabel.Name = "zoomLabel";
 			this.zoomLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.zoomLabel.Size = new System.Drawing.Size(304, 32);
+			this.zoomLabel.Size = new System.Drawing.Size(272, 32);
 			this.zoomLabel.TabIndex = 4;
 			this.zoomLabel.Text = "zoom: auto";
 			this.zoomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,11 +259,34 @@
 			this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseMove);
 			this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picturePanel_MouseUp);
 			// 
+			// zoom100Btn
+			// 
+			this.zoom100Btn.Cursor = System.Windows.Forms.Cursors.Default;
+			this.zoom100Btn.DarkImage = null;
+			this.zoom100Btn.DarkMode = true;
+			this.zoom100Btn.FlatAppearance.BorderSize = 0;
+			this.zoom100Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+			this.zoom100Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+			this.zoom100Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.zoom100Btn.ForeColor = System.Drawing.Color.Black;
+			this.zoom100Btn.Image = global::quick_picture_viewer.Properties.Resources.white_actualsize;
+			this.zoom100Btn.IsRed = false;
+			this.zoom100Btn.LightImage = global::quick_picture_viewer.Properties.Resources.white_actualsize;
+			this.zoom100Btn.Location = new System.Drawing.Point(32, 0);
+			this.zoom100Btn.Margin = new System.Windows.Forms.Padding(0);
+			this.zoom100Btn.Name = "zoom100Btn";
+			this.zoom100Btn.Size = new System.Drawing.Size(32, 32);
+			this.zoom100Btn.TabIndex = 6;
+			this.zoom100Btn.UseVisualStyleBackColor = false;
+			this.zoom100Btn.Visible = false;
+			this.zoom100Btn.Click += new System.EventHandler(this.zoom100Btn_Click);
+			// 
 			// MiniViewForm
 			// 
 			this.AlternativeAppearance = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.ClientSize = new System.Drawing.Size(400, 400);
+			this.Controls.Add(this.zoom100Btn);
 			this.Controls.Add(this.opacityBtn);
 			this.Controls.Add(this.zoomLabel);
 			this.Controls.Add(this.autoZoomBtn);
@@ -306,5 +330,6 @@
 		private QuickLibrary.QlibToolsep qlibMenuSeparator2;
 		private QuickLibrary.QlibTitlebarButton opacityBtn;
 		private System.Windows.Forms.ToolStripMenuItem quitPipBtn;
+		private QuickLibrary.QlibTitlebarButton zoom100Btn;
 	}
 }
