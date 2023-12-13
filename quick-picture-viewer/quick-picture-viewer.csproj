@@ -99,10 +99,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="QuickLibrary, Version=2.5.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\quick-library\QuickLibrary\bin\Release\QuickLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="SimplePsd, Version=1.0.6.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>resources\dlls\SimplePsd.dll</HintPath>
@@ -524,6 +520,12 @@
     <None Include="resources\imgs\dark\black-statusbar.png" />
     <None Include="resources\imgs\light\white-show.png" />
     <None Include="resources\imgs\dark\black-show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj">
+      <Project>{90f913b5-1b48-4e7b-83aa-21c0946b4f81}</Project>
+      <Name>QuickLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
