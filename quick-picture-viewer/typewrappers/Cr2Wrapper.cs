@@ -193,11 +193,6 @@ namespace quick_picture_viewer
             m_f.Close();
         }
 
-        public override System.Runtime.Remoting.ObjRef CreateObjRef(Type requestedType)
-        {
-            return m_f.CreateObjRef(requestedType);
-        }
-
         public override int EndRead(IAsyncResult asyncResult)
         {
             return m_f.EndRead(asyncResult);
@@ -221,11 +216,6 @@ namespace quick_picture_viewer
         public override int GetHashCode()
         {
             return m_f.GetHashCode();
-        }
-
-        public override object InitializeLifetimeService()
-        {
-            return m_f.InitializeLifetimeService();
         }
 
         public override int Read(byte[] buffer, int offset, int count)

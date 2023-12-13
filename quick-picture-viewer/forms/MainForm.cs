@@ -69,7 +69,8 @@ namespace quick_picture_viewer
 			zoomTextBox.Height = 21;
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
 			zoomTextBox.LostFocus += PicturePanel_LostFocus;
-			zoomTextBox.TextBox.ContextMenu = new ContextMenu();
+			// TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+			zoomTextBox.TextBox.ContextMenuStrip = new ContextMenuStrip();
 
 			SetDarkMode(darkMode);
 			InitLanguage();

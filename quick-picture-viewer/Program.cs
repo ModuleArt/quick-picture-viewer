@@ -4,17 +4,14 @@ using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
-	static class Program
+	internal static class Program
 	{
 		[STAThread]
 		static void Main(string[] args)
 		{
-			NativeMan.SetProcessDpiAwarenessContext(NativeMan.DPI_AWARENESS_CONTEXT.DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
+            ApplicationConfiguration.Initialize();
 
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-
-			string param;
+            string param;
 			if (args.Length > 0) param = args[0] == "-1" ? string.Empty : args[0];
 			else param = string.Empty;
 
