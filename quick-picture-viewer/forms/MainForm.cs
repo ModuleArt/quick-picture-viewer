@@ -600,7 +600,7 @@ namespace quick_picture_viewer
 			pictureBox.Invoke((MethodInvoker)(() =>
 			{
 				pictureBox.Size = newSize;
-				MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
+				pictureBox.UpdatePictureBoxLocation(picturePanel);
 			}));
 		}
 
@@ -695,12 +695,12 @@ namespace quick_picture_viewer
 					picturePanel.BackColor = Color.Transparent;
 					Properties.Settings.Default.BackColor = "";
 					Properties.Settings.Default.Save();
-					MainHelper.ApplyCheckerboardBackground(pictureBox, true, darkMode);
+                    pictureBox.ApplyCheckerboardBackground(true, darkMode);
 				}
 			}
 			else
 			{
-				MainHelper.ApplyCheckerboardBackground(pictureBox, false);
+                pictureBox.ApplyCheckerboardBackground(false);
 			}
 
 			if (saveToDisk)
@@ -974,7 +974,7 @@ namespace quick_picture_viewer
 				}
 
 				picturePanel.BackColor = Color.Black;
-				MainHelper.ApplyCheckerboardBackground(pictureBox, false, darkMode);
+				pictureBox.ApplyCheckerboardBackground(false, darkMode);
 
 				typeOpsButton.Left = ClientRectangle.Width + 27;
 				pleaseOpenLabel.ForeColor = Color.White;
@@ -1003,7 +1003,7 @@ namespace quick_picture_viewer
 				if (checkboardBackground)
 				{
 					picturePanel.BackColor = Color.Transparent;
-					MainHelper.ApplyCheckerboardBackground(pictureBox, true, darkMode);
+					pictureBox.ApplyCheckerboardBackground(true, darkMode);
 				}
 				else
 				{
@@ -1878,7 +1878,7 @@ namespace quick_picture_viewer
 
 		private void MainForm_ResizeEnd(object sender, EventArgs e)
 		{
-			if (!autoZoom) MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
+			if (!autoZoom) pictureBox.UpdatePictureBoxLocation(picturePanel);
 		}
 
 		private void zoomTextBox_MouseEnter(object sender, EventArgs e)
@@ -2017,14 +2017,14 @@ namespace quick_picture_viewer
 		{
 			showStatusbarBtn.Checked = statusStrip1.Visible;
 			UpdatePicturePanelHeight();
-			MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
+			pictureBox.UpdatePictureBoxLocation(picturePanel);
 		}
 
 		private void toolStrip1_VisibleChanged(object sender, EventArgs e)
 		{
 			showToolbarBtn.Checked = toolStrip1.Visible;
 			UpdatePicturePanelHeight();
-			MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
+			pictureBox.UpdatePictureBoxLocation(picturePanel);
 		}
 
 		private void showStatusBarBtn_Click(object sender, EventArgs e)
@@ -2179,7 +2179,7 @@ namespace quick_picture_viewer
 				pictureBox.Image = originalImage;
 				setImageChanged(true);
 				UpdateSizeLabel();
-				MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
+				pictureBox.UpdatePictureBoxLocation(picturePanel);
 
 				selectionBtn.Checked = false;
 			}

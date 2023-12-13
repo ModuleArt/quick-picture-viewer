@@ -127,7 +127,7 @@
 			this.suggestionLabel = new System.Windows.Forms.Label();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
-			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.pictureBox = new QuickPictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
@@ -1469,7 +1469,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.PictureBox pictureBox;
+		private QuickPictureBox pictureBox;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.IO.FileSystemWatcher fileSystemWatcher1;
 		private QuickLibrary.QlibToolbar toolStrip1;
