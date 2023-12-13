@@ -1,11 +1,24 @@
 ﻿using QuickLibrary;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
 {
 	internal class QuickPictureBox : PictureBox
-	{
+	{ 
+		private InterpolationMode interpolationMode = InterpolationMode.Default;
+
+		/// <summary>
+		/// Sets the interpolation mode (AKA filtering mode) for the underlying Image
+		/// </summary>
+		/// <param name="mode">Interpolation mode to use</param>
+		public void SetInterpolationMode(InterpolationMode mode)
+		{
+			interpolationMode = mode;
+			Invalidate();
+		}
+
 		public void ApplyCheckerboardBackground(bool apply, bool darkMode = false)
 		{
 			if (!apply)
@@ -47,6 +60,15 @@ namespace quick_picture_viewer
 				else if (Height > picturePanel.Height) NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_VERT, true);
 				else NativeMan.ShowScrollBar(picturePanel.Handle, NativeMan.ScrollBarDirection.SB_BOTH, false);
 			}
+		}
+
+		protected override void OnPaint(PaintEventArgs e)
+		{
+			// Set the interpolation mode to nearest-neighbor
+			e.Graphics.InterpolationMode = interpolationMode;
+
+			// Call the base class to draw the image with the specified interpolation mode
+			base.OnPaint(e);
 		}
 	}
 }

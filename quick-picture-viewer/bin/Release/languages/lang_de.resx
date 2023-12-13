@@ -154,7 +154,7 @@
     <comment>Status bar, zoom text field</comment>
   </data>
   <data name="auto-size" xml:space="preserve">
-    <value>Automatische Grösse</value>
+    <value>Automatische Größe</value>
     <comment>SVG options</comment>
   </data>
   <data name="auto-zoom" xml:space="preserve">
@@ -198,7 +198,7 @@
     <comment>Picture in picture</comment>
   </data>
   <data name="check-for-app-updates" xml:space="preserve">
-    <value>Überprüfe nach App-Updates</value>
+    <value>Suche nach App-Updates</value>
     <comment>Settings</comment>
   </data>
   <data name="checkboard-background" xml:space="preserve">
@@ -454,7 +454,7 @@
     <comment>Settings</comment>
   </data>
   <data name="localization" xml:space="preserve">
-    <value>Lokalisierung</value>
+    <value>Sprache</value>
     <comment>Settings</comment>
   </data>
   <data name="maintain-aspect-ratio" xml:space="preserve">
@@ -642,7 +642,7 @@
     <comment>Suggestion</comment>
   </data>
   <data name="prev-image" xml:space="preserve">
-    <value>Vorheriges Bild in Verzeichnis</value>
+    <value>Vorheriges Bild im Verzeichnis</value>
     <comment>Menu</comment>
   </data>
   <data name="print" xml:space="preserve">
@@ -654,11 +654,11 @@
     <comment>Print</comment>
   </data>
   <data name="print-margins-error" xml:space="preserve">
-    <value>Dokumentenränder können nicht eingestellt werden</value>
+    <value>Dokumentränder können nicht eingestellt werden</value>
     <comment>Print</comment>
   </data>
   <data name="print-size" xml:space="preserve">
-    <value>Druck-Grösse</value>
+    <value>Druck-Größe</value>
     <comment>Image info</comment>
   </data>
   <data name="ready-to-install" xml:space="preserve">
@@ -674,7 +674,7 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="resize-svg" xml:space="preserve">
-    <value>Größe der SVG ändern </value>
+    <value>Größe der SVG ändern</value>
     <comment>SVG options</comment>
   </data>
   <data name="resolution" xml:space="preserve">
@@ -730,7 +730,7 @@
     <comment>Settings</comment>
   </data>
   <data name="select-all" xml:space="preserve">
-    <value>Wählen Sie Alle</value>
+    <value>Alle auswählen</value>
     <comment>RMB menu</comment>
   </data>
   <data name="selection-tool" xml:space="preserve">
@@ -778,7 +778,7 @@
     <comment>RMB menu</comment>
   </data>
   <data name="size" xml:space="preserve">
-    <value>Grösse</value>
+    <value>Größe</value>
     <comment>Status bar</comment>
   </data>
   <data name="skip-this-version" xml:space="preserve">
@@ -798,7 +798,7 @@
     <comment>Image info</comment>
   </data>
   <data name="startup" xml:space="preserve">
-    <value>Startup/Inbetriebnahme</value>
+    <value>Startverhalten</value>
     <comment>Settings</comment>
   </data>
   <data name="stretch" xml:space="preserve">
@@ -814,7 +814,7 @@
     <comment>Message box</comment>
   </data>
   <data name="switching-time" xml:space="preserve">
-    <value>Die Schaltdauer beträgt</value>
+    <value>Die Umschaltdauer beträgt</value>
     <comment>Settings</comment>
   </data>
   <data name="theme" xml:space="preserve">
@@ -866,7 +866,7 @@
     <comment>Main window</comment>
   </data>
   <data name="unsaved-changes-question" xml:space="preserve">
-    <value>Das aktuelle Bild hat nicht gespeicherte Änderungen. Was würden Sie gerne tun?</value>
+    <value>Das aktuelle Bild hat nicht gespeicherte Änderungen. Was möchten Sie tun?</value>
     <comment>Main window</comment>
   </data>
   <data name="unsupported-pixel-format" xml:space="preserve">
@@ -914,7 +914,7 @@
     <comment>Status bar</comment>
   </data>
   <data name="zoom-in" xml:space="preserve">
-    <value>Bild vergrößern/Heranzoomen</value>
+    <value>Bild vergrößern</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-in-out" xml:space="preserve">
@@ -922,7 +922,7 @@
     <comment>Settings</comment>
   </data>
   <data name="zoom-out" xml:space="preserve">
-    <value>Bild verkleinern/Hinauszoomen</value>
+    <value>Bild verkleinern</value>
     <comment>Menu</comment>
   </data>
   <data name="zoom-to-actual-size" xml:space="preserve">

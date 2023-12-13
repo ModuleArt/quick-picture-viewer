@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
@@ -50,6 +51,8 @@ namespace quick_picture_viewer
 			this.openPath = openPath;
 
 			InitializeComponent();
+
+			SetFilteringMode(InterpolationMode.Bilinear);
 
 			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
 			zoomInTimer.Interval = 100;
@@ -238,6 +241,9 @@ namespace quick_picture_viewer
 			directoryLabel.ToolTipText = LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L";
 
 			effectsBtn.Text = LangMan.Get("effects");
+			filteringModeBtn.Text = LangMan.Get("filtering");
+			bilinearBtn.Text = LangMan.Get("bilinear");
+			nearestNeighborBtn.Text = LangMan.Get("nearest-neighbor");
 			toolsBtn.Text = LangMan.Get("tools");
 			pluginManBtn.Text = LangMan.Get("plugin-manager") + " ...";
 
@@ -695,12 +701,12 @@ namespace quick_picture_viewer
 					picturePanel.BackColor = Color.Transparent;
 					Properties.Settings.Default.BackColor = "";
 					Properties.Settings.Default.Save();
-                    pictureBox.ApplyCheckerboardBackground(true, darkMode);
+					pictureBox.ApplyCheckerboardBackground(true, darkMode);
 				}
 			}
 			else
 			{
-                pictureBox.ApplyCheckerboardBackground(false);
+				pictureBox.ApplyCheckerboardBackground(false);
 			}
 
 			if (saveToDisk)
@@ -1465,6 +1471,10 @@ namespace quick_picture_viewer
 				hasChangesLabel.Image = Properties.Resources.white_erase;
 
 				effectsBtn.Image = Properties.Resources.white_effects;
+				filteringModeBtn.Image = Properties.Resources.white_filtering;
+				bilinearBtn.Image = Properties.Resources.white_bilinear;
+				nearestNeighborBtn.Image = Properties.Resources.white_nearest_neighbor;
+
 				toolsBtn.Image = Properties.Resources.white_tools;
 				pluginManBtn.Image = Properties.Resources.white_plugin;
 
@@ -2187,6 +2197,24 @@ namespace quick_picture_viewer
 			{
 				selectionBtn.Checked = true;
 			}
+		}
+
+		public void bilinearBtn_Click(object sender, EventArgs e)
+		{
+			SetFilteringMode(InterpolationMode.Bilinear);
+		}
+
+		public void nearestNeighborBtn_Click(object sender, EventArgs e)
+		{
+			SetFilteringMode(InterpolationMode.NearestNeighbor);
+		}
+
+		private void SetFilteringMode(InterpolationMode mode)
+		{
+			pictureBox.SetInterpolationMode(mode);
+
+			bilinearBtn.Checked = mode == InterpolationMode.Bilinear;
+			nearestNeighborBtn.Checked = mode == InterpolationMode.NearestNeighbor;
 		}
 
 		private Rectangle GetSelectionRect()
