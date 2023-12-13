@@ -99,10 +99,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="QuickLibrary, Version=2.5.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\quick-library\QuickLibrary\bin\Release\QuickLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="SimplePsd, Version=1.0.6.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>resources\dlls\SimplePsd.dll</HintPath>
@@ -168,7 +164,9 @@
     <Compile Include="typewrappers\WebpWrapper.cs" />
     <Compile Include="helpers\MainHelper.cs" />
     <Compile Include="typewrappers\engines\IcoEngine.cs" />
-    <Compile Include="forms\InfoForm.cs" />
+    <Compile Include="forms\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
@@ -208,7 +206,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang_ru.resx</DependentUpon>
     </Compile>
-    <Compile Include="forms\MiniViewForm.cs" />
+    <Compile Include="forms\MiniViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </Compile>
@@ -223,34 +223,48 @@
     <Compile Include="forms\SelectionForm.Designer.cs">
       <DependentUpon>SelectionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\PluginManForm.cs" />
+    <Compile Include="forms\PluginManForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\PluginManForm.Designer.cs">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </Compile>
     <Compile Include="typewrappers\SvgWrapper.cs" />
     <Compile Include="typewrappers\PsdWrapper.cs" />
-    <Compile Include="forms\SettingsForm.cs" />
+    <Compile Include="forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="helpers\ShellManager.cs" />
-    <Compile Include="typewrappers\forms\SvgOpsForm.cs" />
+    <Compile Include="typewrappers\forms\SvgOpsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="typewrappers\forms\SvgOpsForm.Designer.cs">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\PrintForm.cs" />
+    <Compile Include="forms\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\PrintForm.Designer.cs">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\EditSelForm.cs" />
+    <Compile Include="forms\EditSelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\EditSelForm.Designer.cs">
       <DependentUpon>EditSelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\WallpaperForm.cs" />
+    <Compile Include="forms\WallpaperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\WallpaperForm.Designer.cs">
       <DependentUpon>WallpaperForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\AboutForm.cs" />
+    <Compile Include="forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
@@ -498,6 +512,12 @@
     <None Include="resources\imgs\dark\black-statusbar.png" />
     <None Include="resources\imgs\light\white-show.png" />
     <None Include="resources\imgs\dark\black-show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj">
+      <Project>{90f913b5-1b48-4e7b-83aa-21c0946b4f81}</Project>
+      <Name>QuickLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

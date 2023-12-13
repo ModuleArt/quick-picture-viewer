@@ -1,0 +1,3 @@
+[submodule "dependencies/quick-library"]
+	path = dependencies/quick-library
+	url = https://github.com/ModuleArt/quick-library
