@@ -451,4 +451,22 @@
   <data name="white_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgs\light\white-save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black_filtering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-filtering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_bilinear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-bilinear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_nearest_neighbor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\dark\black-nearest-neighbor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_bilinear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-bilinear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_filtering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-filtering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_nearest_neighbor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\imgs\light\white-nearest-neighbor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

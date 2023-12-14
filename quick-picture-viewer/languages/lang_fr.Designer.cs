@@ -19,7 +19,7 @@ namespace quick_picture_viewer.languages {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class lang_fr {
@@ -597,6 +597,15 @@ namespace quick_picture_viewer.languages {
         public static string fill {
             get {
                 return ResourceManager.GetString("fill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filtrage.
+        /// </summary>
+        public static string filtering {
+            get {
+                return ResourceManager.GetString("filtering", resourceCulture);
             }
         }
         

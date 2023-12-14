@@ -95,7 +95,7 @@ namespace quick_picture_viewer
 
 			pictureBox.Size = new Size(newWidth, newHeight);
 
-			MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
+			pictureBox.UpdatePictureBoxLocation(picturePanel);
 		}
 
 		private void ZoomToFit()
@@ -157,7 +157,7 @@ namespace quick_picture_viewer
 			checkboardBackground = b;
 			checkboardBtn.Checked = b;
 			pictureBox.BackColor = checkboardBackground ? ThemeMan.DarkBackColor : Color.Black;
-			MainHelper.ApplyCheckerboardBackground(pictureBox, b, true);
+			pictureBox.ApplyCheckerboardBackground(b, true);
 		}
 
 		private void MiniViewForm_KeyDown(object sender, KeyEventArgs e)
@@ -276,7 +276,7 @@ namespace quick_picture_viewer
 
 		private void MiniViewForm_ResizeEnd(object sender, EventArgs e)
 		{
-			if (!autoZoom) MainHelper.UpdatePictureBoxLocation(picturePanel, pictureBox);
+			if (!autoZoom) pictureBox.UpdatePictureBoxLocation(picturePanel);
 			zoomLabel.ForeColor = Width > 240 ? Color.White : Color.Black;
 		}
 

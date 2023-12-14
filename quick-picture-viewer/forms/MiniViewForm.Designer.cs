@@ -42,7 +42,7 @@
 			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.opacityBtn = new QuickLibrary.QlibTitlebarButton();
 			this.picturePanel = new quick_picture_viewer.CustomPanel();
-			this.pictureBox = new System.Windows.Forms.PictureBox();
+			this.pictureBox = new QuickPictureBox();
 			this.zoom100Btn = new QuickLibrary.QlibTitlebarButton();
 			this.contextMenuStrip1.SuspendLayout();
 			this.picturePanel.SuspendLayout();
@@ -317,7 +317,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.PictureBox pictureBox;
+		private QuickPictureBox pictureBox;
 		private System.Windows.Forms.Label zoomLabel;
 		private CustomPanel picturePanel;
 		private System.Windows.Forms.ToolTip infoTooltip;

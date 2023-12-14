@@ -149,6 +149,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controls\QuickPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="languages\lang_hr.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,9 +169,10 @@
     <Compile Include="typewrappers\system\FileTypeMan.cs" />
     <Compile Include="typewrappers\system\TypeWrapper.cs" />
     <Compile Include="typewrappers\WebpWrapper.cs" />
-    <Compile Include="helpers\MainHelper.cs" />
     <Compile Include="typewrappers\engines\IcoEngine.cs" />
-    <Compile Include="forms\InfoForm.cs" />
+    <Compile Include="forms\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
@@ -208,7 +212,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang_ru.resx</DependentUpon>
     </Compile>
-    <Compile Include="forms\MiniViewForm.cs" />
+    <Compile Include="forms\MiniViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\MiniViewForm.Designer.cs">
       <DependentUpon>MiniViewForm.cs</DependentUpon>
     </Compile>
@@ -223,34 +229,48 @@
     <Compile Include="forms\SelectionForm.Designer.cs">
       <DependentUpon>SelectionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\PluginManForm.cs" />
+    <Compile Include="forms\PluginManForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\PluginManForm.Designer.cs">
       <DependentUpon>PluginManForm.cs</DependentUpon>
     </Compile>
     <Compile Include="typewrappers\SvgWrapper.cs" />
     <Compile Include="typewrappers\PsdWrapper.cs" />
-    <Compile Include="forms\SettingsForm.cs" />
+    <Compile Include="forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="helpers\ShellManager.cs" />
-    <Compile Include="typewrappers\forms\SvgOpsForm.cs" />
+    <Compile Include="typewrappers\forms\SvgOpsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="typewrappers\forms\SvgOpsForm.Designer.cs">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\PrintForm.cs" />
+    <Compile Include="forms\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\PrintForm.Designer.cs">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\EditSelForm.cs" />
+    <Compile Include="forms\EditSelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\EditSelForm.Designer.cs">
       <DependentUpon>EditSelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\WallpaperForm.cs" />
+    <Compile Include="forms\WallpaperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\WallpaperForm.Designer.cs">
       <DependentUpon>WallpaperForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\AboutForm.cs" />
+    <Compile Include="forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
@@ -463,6 +483,12 @@
     <None Include="resources\imgs\light\white-list.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\imgs\dark\black-filtering.png" />
+    <None Include="resources\imgs\light\white-filtering.png" />
+    <None Include="resources\imgs\light\white-bilinear.png" />
+    <None Include="resources\imgs\light\white-nearest-neighbor.png" />
+    <None Include="resources\imgs\dark\black-bilinear.png" />
+    <None Include="resources\imgs\dark\black-nearest-neighbor.png" />
     <Content Include="resources\imgs\picture.ico" />
     <None Include="resources\imgs\dark\black-save.png" />
     <None Include="resources\imgs\light\white-save.png" />

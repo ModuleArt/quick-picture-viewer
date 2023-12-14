@@ -357,6 +357,18 @@
     <value>Fill</value>
     <comment>Wallpaper</comment>
   </data>
+  <data name="filtering" xml:space="preserve">
+    <value>Filtering</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="bilinear" xml:space="preserve">
+    <value>Bilinear</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="nearest-neighbor" xml:space="preserve">
+    <value>Nearest Neighbor</value>
+    <comment>Menu</comment>
+  </data>
   <data name="fit" xml:space="preserve">
     <value>Fit</value>
     <comment>Wallpaper</comment>

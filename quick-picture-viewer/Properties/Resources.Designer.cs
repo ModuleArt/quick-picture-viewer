@@ -19,7 +19,7 @@ namespace quick_picture_viewer.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -96,6 +96,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap black_arrows {
             get {
                 object obj = ResourceManager.GetObject("black_arrows", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_bilinear {
+            get {
+                object obj = ResourceManager.GetObject("black_bilinear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +203,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_filtering {
+            get {
+                object obj = ResourceManager.GetObject("black_filtering", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_grid {
             get {
                 object obj = ResourceManager.GetObject("black-grid", resourceCulture);
@@ -226,6 +246,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap black_line {
             get {
                 object obj = ResourceManager.GetObject("black-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_nearest_neighbor {
+            get {
+                object obj = ResourceManager.GetObject("black_nearest_neighbor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,6 +553,16 @@ namespace quick_picture_viewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap white_bilinear {
+            get {
+                object obj = ResourceManager.GetObject("white_bilinear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white_check {
             get {
                 object obj = ResourceManager.GetObject("white_check", resourceCulture);
@@ -646,6 +686,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_exe {
             get {
                 object obj = ResourceManager.GetObject("white_exe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_filtering {
+            get {
+                object obj = ResourceManager.GetObject("white_filtering", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -786,6 +836,16 @@ namespace quick_picture_viewer.Properties {
         internal static System.Drawing.Bitmap white_move {
             get {
                 object obj = ResourceManager.GetObject("white_move", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_nearest_neighbor {
+            get {
+                object obj = ResourceManager.GetObject("white_nearest_neighbor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

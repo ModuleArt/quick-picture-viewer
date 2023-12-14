@@ -357,6 +357,18 @@
     <value>Doldur</value>
     <comment>Wallpaper</comment>
   </data>
+  <data name="filtering" xml:space="preserve">
+    <value>Filtreleme</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="bilinear" xml:space="preserve">
+    <value>Bilinear</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="nearest-neighbor" xml:space="preserve">
+    <value>En Yakın Komşu</value>
+    <comment>Menu</comment>
+  </data>
   <data name="fit" xml:space="preserve">
     <value>Sığdır</value>
     <comment>Wallpaper</comment>
