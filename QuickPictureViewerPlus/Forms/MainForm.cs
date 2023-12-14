@@ -328,7 +328,7 @@ namespace QuickPictureViewerPlus
 				picturePanel.BackColor = Color.FromArgb(Convert.ToInt32(Properties.Settings.Default.BackColor));
 			}
 
-			UpdateMan.Init("ModuleArt", "quick-picture-viewer", "QuickPictureViewer-Setup.exe", darkMode, Properties.Settings.Default.SkippedVersion);
+			UpdateMan.Init("adriengivry", "QuickPictureViewerPlus", "QuickPictureViewer-Setup.exe", darkMode, Properties.Settings.Default.SkippedVersion);
 			UpdateMan.InitLang(
 				LangMan.Get("new-version-available"),
 				LangMan.Get("update-text"),

@@ -125,7 +125,7 @@
 			this.githubBtn.Text = " GitHub";
 			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.infoTooltip.SetToolTip(this.githubBtn, "github.com/ModuleArt/quick-picture-viewer");
+			this.infoTooltip.SetToolTip(this.githubBtn, "github.com/adriengivry/QuickPictureViewerPlus");
 			this.githubBtn.UseVisualStyleBackColor = false;
 			this.githubBtn.Click += new System.EventHandler(this.button1_Click);
 			// 
