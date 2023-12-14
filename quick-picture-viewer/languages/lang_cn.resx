@@ -255,7 +255,7 @@
     <comment>Plugin manager</comment>
   </data>
   <data name="crop" xml:space="preserve">
-    <value>庄稼</value>
+    <value>裁剪</value>
     <comment>Menu</comment>
   </data>
   <data name="cur-file-not-found" xml:space="preserve">
@@ -263,7 +263,7 @@
     <comment>Message box</comment>
   </data>
   <data name="cut" xml:space="preserve">
-    <value>切</value>
+    <value>剪切</value>
     <comment>RMB menu</comment>
   </data>
   <data name="dark" xml:space="preserve">
@@ -315,7 +315,7 @@
     <comment>Menu</comment>
   </data>
   <data name="error" xml:space="preserve">
-    <value>草屋</value>
+    <value>错误</value>
     <comment>Message box</comment>
   </data>
   <data name="esc-to-exit" xml:space="preserve">
@@ -411,7 +411,7 @@
     <comment>Settings</comment>
   </data>
   <data name="height" xml:space="preserve">
-    <value>高</value>
+    <value>高度</value>
     <comment>SVG options</comment>
   </data>
   <data name="help-us-translate-app" xml:space="preserve">
@@ -727,7 +727,7 @@
     <comment>Menu</comment>
   </data>
   <data name="save" xml:space="preserve">
-    <value>救</value>
+    <value>保存</value>
     <comment>Menu</comment>
   </data>
   <data name="save-as" xml:space="preserve">
@@ -919,7 +919,7 @@
     <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
-    <value>宽</value>
+    <value>宽度</value>
     <comment>SVG options</comment>
   </data>
   <data name="zoom" xml:space="preserve">
@@ -939,7 +939,7 @@
     <comment>Menu</comment>
   </data>
   <data name="zoom-to-actual-size" xml:space="preserve">
-    <value>缩放到真实尺寸</value>
+    <value>缩放到实际大小</value>
     <comment>Menu</comment>
   </data>
 </root>
