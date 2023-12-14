@@ -20,7 +20,7 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				using (var image = Pfim.Pfim.FromFile(path))
+				using (var image = Pfim.Pfimage.FromFile(path))
 				{
 					PixelFormat format;
 
