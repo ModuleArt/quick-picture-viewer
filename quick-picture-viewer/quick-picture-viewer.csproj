@@ -282,6 +282,7 @@
     <EmbeddedResource Include="forms\InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="languages\lang_ar.resx" />
     <EmbeddedResource Include="languages\lang_cn.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -318,6 +319,9 @@
       <LastGenOutput>lang_hu.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="languages\lang_it.resx" />
+    <EmbeddedResource Include="languages\lang_ja.resx" />
+    <EmbeddedResource Include="languages\lang_pl.resx" />
     <EmbeddedResource Include="languages\lang_ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_ru.Designer.cs</LastGenOutput>
@@ -345,6 +349,7 @@
     <EmbeddedResource Include="forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="languages\lang_tr.resx" />
     <EmbeddedResource Include="typewrappers\forms\SvgOpsForm.resx">
       <DependentUpon>SvgOpsForm.cs</DependentUpon>
     </EmbeddedResource>

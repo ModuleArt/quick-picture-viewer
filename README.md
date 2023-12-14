@@ -28,45 +28,47 @@
 
 ## 😃 Features:
 
-* 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
-* ✍️ Basic image editing: Rotate, flip, crop, change file type ...
-* 🧩 Plugins ready
-* ↗️ Open image with external app or show file in explorer
-* 🖽 Picture-in-Picture mode
-* ♟️ Checkerboard background
-* 🖥️ Set image as desktop background
-* 🖨️ Print image or export to PDF
-* ℹ️ View image details
-* 🗔 Frameless mode
-* 🔝 Always on top
-* 🎞️ Slideshow
-* 🕶️ Dark mode
+- 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
+- ✍️ Basic image editing: Rotate, flip, crop, change file type ...
+- 🧩 Plugins ready
+- ↗️ Open image with external app or show file in explorer
+- 🖽 Picture-in-Picture mode
+- ♟️ Checkerboard background
+- 🖥️ Set image as desktop background
+- 🖨️ Print image or export to PDF
+- ℹ️ View image details
+- 🗔 Frameless mode
+- 🔝 Always on top mode
+- 🎞️ Slideshow
+- 🕶️ Dark mode
 
 Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
 
 ## 🔮 Future plans:
 
-* Enhanced zoom menu
-* Image preloader [<a href="https://github.com/ModuleArt/quick-picture-viewer/discussions/57">#57</a>]
-* Sort by menu [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/62">#62</a>]
-* Customizable keyboard shortcuts [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/69">#27</a>]
-* More wallpaper related options [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/65">#65</a>]
+- Enhanced zoom menu
+- Image preloader [<a href="https://github.com/ModuleArt/quick-picture-viewer/discussions/57">#57</a>]
+- Sort by menu [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/62">#62</a>]
+- Customizable keyboard shortcuts [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/69">#27</a>]
+- More wallpaper related options [<a href="https://github.com/ModuleArt/quick-picture-viewer/issues/65">#65</a>]
 
 ## 🧩 Built-in plugins:
 
 Effects:
-* <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-* <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-* <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-* <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-* Vignette - by Module Art - Soon...
-* Drop shadow - by Module Art - Soon...
-* Photo filter - by Community - Soon...
-* Hue and saturation - by Community - Soon...
+
+- <a href="https://github.com/ModuleArt/qpv-plugins#blur">Blur or pixelate</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- <a href="https://github.com/ModuleArt/qpv-plugins#grayscale">Grayscale</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- <a href="https://github.com/ModuleArt/qpv-plugins#invert">Invert colors</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- <a href="https://github.com/ModuleArt/qpv-plugins#rainbow">Rainbow</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- Vignette - by Module Art - Soon...
+- Drop shadow - by Module Art - Soon...
+- Photo filter - by Community - Soon...
+- Hue and saturation - by Community - Soon...
 
 Tools:
-* <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
-* Color picker - by Module Art - Soon...
+
+- <a href="https://github.com/ModuleArt/qpv-plugins#screenshot">Screenshot</a> - by Module Art (<a href="https://github.com/Beelink">Beelink</a>)
+- Color picker - by Module Art - Soon...
 
 ## 🐞 Bug report:
 
@@ -74,58 +76,73 @@ If you want to report a bug, first, thank you, that helps us a lot. Please open 
 
 ## 💿 Another installation methods:
 
-* Using Microsoft Store:
-<a href='//www.microsoft.com/store/apps/9pjqqrxsvwr1?cid=storebadge&ocid=badge'>
-<img src='https://github.com/ModuleArt/quick-picture-viewer/blob/master/inno-setup/MSIX/English_get-it-from-MS.png?raw=true' />
-</a><br><br>
+- Using Microsoft Store:
+  <a href='//www.microsoft.com/store/apps/9pjqqrxsvwr1?cid=storebadge&ocid=badge'>
+  <img src='https://github.com/ModuleArt/quick-picture-viewer/blob/master/inno-setup/MSIX/English_get-it-from-MS.png?raw=true' />
+  </a><br><br>
 
-* Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
+- Using <a href="https://github.com/chocolatey/choco">Chocolatey</a>:<br>
+
 ```powershell
-Powershell $> choco install quick-picture-viewer --version 3.0.4
+choco install quick-picture-viewer --version 3.0.4
 ```
-* Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
+
+- Using <a href="https://github.com/microsoft/winget-cli">Winget</a>:<br>
+
 ```powershell
-Powershell $> winget install ModuleArt.QuickPictureViewer
+winget install ModuleArt.QuickPictureViewer
 ```
-* Using <a href="https://github.com/lukesampson/scoop">Scoop</a>:<br>
+
+- Using <a href="https://github.com/lukesampson/scoop">Scoop</a>:<br>
+
 ```powershell
-Powershell $> scoop install mingit-busybox 7zip sudo
-Powershell $> scoop bucket add extras
-Powershell $> scoop install quick-picture-viewer
+scoop install mingit-busybox 7zip sudo
+scoop bucket add extras
+scoop install quick-picture-viewer
 ```
 
 ## 🔨 Contribution:
 
 Help Module Art!
 
-* Give us a star ⭐
-* Fork and Clone! Awesome
-* Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
+- Give us a star ⭐
+- Fork and Clone! Awesome
+- Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
+
+How to clone:
+
+```powershell
+git clone --recurse-submodules https://github.com/ModuleArt/quick-picture-viewer
+git submodule init
+git submodule update
+```
 
 Code contributors:
 
-* <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
-* <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
+- <a href="https://github.com/adriengivry">adriengivry</a> - Texture filtering modes
+- <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
+- <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
 
 Translation contributors:
 
-* Chinese: <a href="https://github.com/jiwangyihao">jiwangyihao</a>
-* Croatian: <a href="https://github.com/anotherus3r">anotherus3r</a>
-* French: <a href="https://github.com/b0bdN">b0bdN</a>
-* German: <a href="https://github.com/l-33ter">l-33ter</a>
-* Hungarian: <a href="https://github.com/KristofKekesi">KristofKekesi</a>
-* Russian: <a href="https://github.com/Beelink">Beelink</a>
-* Spanish: <a href="https://github.com/asluppiter">asluppiter</a>, <a href="https://github.com/Alplox">Alplox</a>
+- Arabic: <a href="https://github.com/Jalal-Althahab">Jalal-Althahab</a>
+- Chinese: <a href="https://github.com/jiwangyihao">jiwangyihao</a>
+- Croatian: <a href="https://github.com/anotherus3r">anotherus3r</a>
+- English: <a href="https://github.com/Beelink">Beelink</a>
+- French: <a href="https://github.com/b0bdN">b0bdN</a>
+- German: <a href="https://github.com/l-33ter">l-33ter</a>, <a href="https://github.com/tomo2403">tomo2403</a>
+- Hungarian: <a href="https://github.com/KristofKekesi">KristofKekesi</a>
+- Russian: <a href="https://github.com/Beelink">Beelink</a>
+- Spanish: <a href="https://github.com/asluppiter">asluppiter</a>, <a href="https://github.com/Alplox">Alplox</a>
+- Turkish: <a href="https://github.com/ataberkcemunal">ataberkcemunal</a>
 
 <a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
 
 ## 🔗 Useful links:
 
-* <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a>
-* <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a>
+- <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a>
+- <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a>
 
 ## 🧰 Other great apps:
 
-* <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
-* <a href="https://github.com/ModuleArt/quick-screen-recorder/">Quick Screen Recorder</a> - Lightweight desktop screen recorder for Windows.<br>
-* <a href="https://github.com/ModuleArt/quick-whiteboard/">Quick Whiteboard</a> - Lightweight tool to draw or keep notes on your desktop background for Windows.
+- <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
