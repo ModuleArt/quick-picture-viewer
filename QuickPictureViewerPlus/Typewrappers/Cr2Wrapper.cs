@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	public class Cr2Wrapper : TypeWrapper
 	{

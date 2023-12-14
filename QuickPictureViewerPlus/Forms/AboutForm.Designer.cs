@@ -1,4 +1,4 @@
-﻿namespace quick_picture_viewer
+﻿namespace QuickPictureViewerPlus
 {
 	partial class AboutForm
 	{
@@ -70,16 +70,16 @@
 			// 
 			// closeBtn
 			// 
-			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.DarkImage = global::QuickPictureViewerPlus.Properties.Resources.black_close;
 			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
 			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.ForeColor = System.Drawing.Color.Black;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.LightImage = global::QuickPictureViewerPlus.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(268, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
@@ -181,7 +181,7 @@
 			this.updatesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
 			this.updatesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
 			this.updatesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.updatesBtn.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
+			this.updatesBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_sync;
 			this.updatesBtn.Location = new System.Drawing.Point(10, 334);
 			this.updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.updatesBtn.Name = "updatesBtn";

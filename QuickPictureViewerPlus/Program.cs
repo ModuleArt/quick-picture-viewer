@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	internal static class Program
 	{

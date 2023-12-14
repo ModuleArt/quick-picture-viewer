@@ -4,7 +4,7 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickPictureViewerPlus", "QuickPictureViewerPlus\QuickPictureViewerPlus.csproj", "{53748C49-255E-424B-B789-5919CEFEF473}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickLibraryPlus", "QuickPictureViewerPlus\Dependencies\QuickLibraryPlus\QuickLibraryPlus\QuickLibraryPlus.csproj", "{FD9D3795-1F5A-4506-A198-6A8410264B3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickLibraryPlus", "QuickLibraryPlus\QuickLibraryPlus\QuickLibraryPlus.csproj", "{FD9D3795-1F5A-4506-A198-6A8410264B3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

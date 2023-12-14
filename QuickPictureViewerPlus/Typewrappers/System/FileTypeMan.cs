@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.IO;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	public static class FileTypeMan
 	{

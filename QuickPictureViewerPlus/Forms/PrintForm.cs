@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	partial class PrintForm : QlibFixedForm
 	{

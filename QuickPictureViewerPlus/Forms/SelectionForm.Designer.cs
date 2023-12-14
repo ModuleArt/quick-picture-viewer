@@ -1,4 +1,4 @@
-﻿namespace quick_picture_viewer
+﻿namespace QuickPictureViewerPlus
 {
 	partial class SelectionForm
 	{
@@ -44,7 +44,7 @@
 			// 
 			this.cropBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.cropBtn.ForeColor = System.Drawing.Color.Black;
-			this.cropBtn.Image = global::quick_picture_viewer.Properties.Resources.black_crop;
+			this.cropBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_crop;
 			this.cropBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.cropBtn.Name = "cropBtn";
 			this.cropBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
@@ -69,7 +69,7 @@
 			// 
 			this.selectionCopyBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.selectionCopyBtn.ForeColor = System.Drawing.Color.Black;
-			this.selectionCopyBtn.Image = global::quick_picture_viewer.Properties.Resources.black_copy;
+			this.selectionCopyBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_copy;
 			this.selectionCopyBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.selectionCopyBtn.Name = "selectionCopyBtn";
 			this.selectionCopyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
@@ -81,7 +81,7 @@
 			// 
 			this.selectionSelectAllBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.selectionSelectAllBtn.ForeColor = System.Drawing.Color.Black;
-			this.selectionSelectAllBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selectall;
+			this.selectionSelectAllBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_selectall;
 			this.selectionSelectAllBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.selectionSelectAllBtn.Name = "selectionSelectAllBtn";
 			this.selectionSelectAllBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
@@ -93,7 +93,7 @@
 			// 
 			this.editSelectionBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.editSelectionBtn.ForeColor = System.Drawing.Color.Black;
-			this.editSelectionBtn.Image = global::quick_picture_viewer.Properties.Resources.black_editsel;
+			this.editSelectionBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_editsel;
 			this.editSelectionBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.editSelectionBtn.Name = "editSelectionBtn";
 			this.editSelectionBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
@@ -121,7 +121,7 @@
 			// 
 			this.cutBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.cutBtn.ForeColor = System.Drawing.Color.Black;
-			this.cutBtn.Image = global::quick_picture_viewer.Properties.Resources.black_cut;
+			this.cutBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_cut;
 			this.cutBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.cutBtn.Name = "cutBtn";
 			this.cutBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));

@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	partial class AboutForm : QlibFixedForm
 	{

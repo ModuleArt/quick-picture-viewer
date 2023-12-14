@@ -1,4 +1,4 @@
-﻿namespace quick_picture_viewer
+﻿namespace QuickPictureViewerPlus
 {
 	partial class MiniViewForm
 	{
@@ -41,7 +41,7 @@
 			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.resizeBtn = new QuickLibrary.QlibTitlebarButton();
 			this.opacityBtn = new QuickLibrary.QlibTitlebarButton();
-			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.picturePanel = new QuickPictureViewerPlus.CustomPanel();
 			this.pictureBox = new QuickPictureBox();
 			this.zoom100Btn = new QuickLibrary.QlibTitlebarButton();
 			this.contextMenuStrip1.SuspendLayout();
@@ -84,7 +84,7 @@
 			// 
 			this.checkboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
 			this.checkboardBtn.ForeColor = System.Drawing.Color.White;
-			this.checkboardBtn.Image = global::quick_picture_viewer.Properties.Resources.white_grid;
+			this.checkboardBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_grid;
 			this.checkboardBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.checkboardBtn.Name = "checkboardBtn";
 			this.checkboardBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
@@ -108,7 +108,7 @@
 			// 
 			this.newWindowBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
 			this.newWindowBtn.ForeColor = System.Drawing.Color.White;
-			this.newWindowBtn.Image = global::quick_picture_viewer.Properties.Resources.white_newwindow;
+			this.newWindowBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_newwindow;
 			this.newWindowBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.newWindowBtn.Name = "newWindowBtn";
 			this.newWindowBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
@@ -120,7 +120,7 @@
 			// 
 			this.quitPipBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
 			this.quitPipBtn.ForeColor = System.Drawing.Color.White;
-			this.quitPipBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.quitPipBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_close;
 			this.quitPipBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.quitPipBtn.Name = "quitPipBtn";
 			this.quitPipBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
@@ -139,9 +139,9 @@
 			this.autoZoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
 			this.autoZoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.autoZoomBtn.ForeColor = System.Drawing.Color.Black;
-			this.autoZoomBtn.Image = global::quick_picture_viewer.Properties.Resources.white_autozoom;
+			this.autoZoomBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_autozoom;
 			this.autoZoomBtn.IsRed = false;
-			this.autoZoomBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_autozoom;
+			this.autoZoomBtn.LightImage = global::QuickPictureViewerPlus.Properties.Resources.white_autozoom;
 			this.autoZoomBtn.Location = new System.Drawing.Point(0, 0);
 			this.autoZoomBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.autoZoomBtn.Name = "autoZoomBtn";
@@ -161,9 +161,9 @@
 			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.ForeColor = System.Drawing.Color.Black;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_close;
 			this.closeBtn.IsRed = true;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.LightImage = global::QuickPictureViewerPlus.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(368, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
@@ -209,9 +209,9 @@
 			this.opacityBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
 			this.opacityBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.opacityBtn.ForeColor = System.Drawing.Color.Black;
-			this.opacityBtn.Image = global::quick_picture_viewer.Properties.Resources.white_opacity;
+			this.opacityBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_opacity;
 			this.opacityBtn.IsRed = false;
-			this.opacityBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_opacity;
+			this.opacityBtn.LightImage = global::QuickPictureViewerPlus.Properties.Resources.white_opacity;
 			this.opacityBtn.Location = new System.Drawing.Point(336, 0);
 			this.opacityBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.opacityBtn.Name = "opacityBtn";
@@ -269,9 +269,9 @@
 			this.zoom100Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
 			this.zoom100Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.zoom100Btn.ForeColor = System.Drawing.Color.Black;
-			this.zoom100Btn.Image = global::quick_picture_viewer.Properties.Resources.white_actualsize;
+			this.zoom100Btn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_actualsize;
 			this.zoom100Btn.IsRed = false;
-			this.zoom100Btn.LightImage = global::quick_picture_viewer.Properties.Resources.white_actualsize;
+			this.zoom100Btn.LightImage = global::QuickPictureViewerPlus.Properties.Resources.white_actualsize;
 			this.zoom100Btn.Location = new System.Drawing.Point(32, 0);
 			this.zoom100Btn.Margin = new System.Windows.Forms.Padding(0);
 			this.zoom100Btn.Name = "zoom100Btn";

@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 using System.Windows.Forms;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
     public sealed class WebP : IDisposable
     {

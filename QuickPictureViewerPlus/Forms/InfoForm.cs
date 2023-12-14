@@ -5,7 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	partial class InfoForm : QlibFixedForm
 	{

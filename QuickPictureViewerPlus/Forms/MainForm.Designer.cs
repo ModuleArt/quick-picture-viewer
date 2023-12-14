@@ -1,4 +1,4 @@
-﻿namespace quick_picture_viewer
+﻿namespace QuickPictureViewerPlus
 {
 	partial class MainForm
 	{
@@ -49,7 +49,7 @@
 			this.qlibToolsep3 = new QuickLibrary.QlibToolsep();
 			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
 			this.suggestionLabel = new System.Windows.Forms.Label();
-			this.picturePanel = new quick_picture_viewer.CustomPanel();
+			this.picturePanel = new QuickPictureViewerPlus.CustomPanel();
 			this.pleaseOpenLabel = new System.Windows.Forms.Label();
 			this.suggestionIcon = new System.Windows.Forms.PictureBox();
 			this.navNextBtn = new System.Windows.Forms.Button();
@@ -120,7 +120,7 @@
 			this.settingsButton = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.framelessCloseBtn = new System.Windows.Forms.ToolStripButton();
-			this.pictureBox = new quick_picture_viewer.QuickPictureBox();
+			this.pictureBox = new QuickPictureViewerPlus.QuickPictureBox();
 			this.showMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showNavArrowsBtn = new System.Windows.Forms.ToolStripMenuItem();
 			this.showToolbarBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -443,7 +443,7 @@
 			this.navNextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.navNextBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.navNextBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.navNextBtn.Image = global::quick_picture_viewer.Properties.Resources.white_next;
+			this.navNextBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_next;
 			this.navNextBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.navNextBtn.Location = new System.Drawing.Point(625, 193);
 			this.navNextBtn.Margin = new System.Windows.Forms.Padding(27);
@@ -465,7 +465,7 @@
 			this.navPrevBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.navPrevBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.navPrevBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.navPrevBtn.Image = global::quick_picture_viewer.Properties.Resources.white_prev;
+			this.navPrevBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.white_prev;
 			this.navPrevBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.navPrevBtn.Location = new System.Drawing.Point(27, 193);
 			this.navPrevBtn.Margin = new System.Windows.Forms.Padding(27);
@@ -487,7 +487,7 @@
 			this.typeOpsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.typeOpsButton.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.typeOpsButton.ForeColor = System.Drawing.Color.White;
-			this.typeOpsButton.Image = global::quick_picture_viewer.Properties.Resources.white_options;
+			this.typeOpsButton.Image = global::QuickPictureViewerPlus.Properties.Resources.white_options;
 			this.typeOpsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.typeOpsButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.typeOpsButton.Location = new System.Drawing.Point(537, 358);
@@ -506,7 +506,7 @@
 			// 
 			this.selectionLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.selectionLabel.BackColor = System.Drawing.Color.Transparent;
-			this.selectionLabel.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
+			this.selectionLabel.Image = global::QuickPictureViewerPlus.Properties.Resources.black_selection;
 			this.selectionLabel.IsLink = true;
 			this.selectionLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.selectionLabel.LinkColor = System.Drawing.Color.Black;
@@ -522,7 +522,7 @@
 			// 
 			this.directoryLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
 			this.directoryLabel.BackColor = System.Drawing.Color.Transparent;
-			this.directoryLabel.Image = global::quick_picture_viewer.Properties.Resources.black_picfolder;
+			this.directoryLabel.Image = global::QuickPictureViewerPlus.Properties.Resources.black_picfolder;
 			this.directoryLabel.IsLink = true;
 			this.directoryLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.directoryLabel.LinkColor = System.Drawing.Color.Black;
@@ -537,7 +537,7 @@
 			// fileLabel
 			// 
 			this.fileLabel.BackColor = System.Drawing.Color.Transparent;
-			this.fileLabel.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.fileLabel.Image = global::QuickPictureViewerPlus.Properties.Resources.black_imgfile;
 			this.fileLabel.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
 			this.fileLabel.Name = "fileLabel";
 			this.fileLabel.Size = new System.Drawing.Size(41, 17);
@@ -600,7 +600,7 @@
 			this.openFileBtn,
 			this.openFolderBtn,
 			this.openRecursive});
-			this.openBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
+			this.openBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_open;
 			this.openBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.openBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.openBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -611,7 +611,7 @@
 			// 
 			this.openFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.openFileBtn.ForeColor = System.Drawing.Color.Black;
-			this.openFileBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.openFileBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_imgfile;
 			this.openFileBtn.Name = "openFileBtn";
 			this.openFileBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
 			this.openFileBtn.Size = new System.Drawing.Size(237, 24);
@@ -622,7 +622,7 @@
 			// 
 			this.openFolderBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.openFolderBtn.ForeColor = System.Drawing.Color.Black;
-			this.openFolderBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.openFolderBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_imgfile;
 			this.openFolderBtn.Name = "openFolderBtn";
 			this.openFolderBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
 			| System.Windows.Forms.Keys.O)));
@@ -634,7 +634,7 @@
 			// 
 			this.openRecursive.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.openRecursive.ForeColor = System.Drawing.Color.Black;
-			this.openRecursive.Image = global::quick_picture_viewer.Properties.Resources.black_recursive;
+			this.openRecursive.Image = global::QuickPictureViewerPlus.Properties.Resources.black_recursive;
 			this.openRecursive.Name = "openRecursive";
 			this.openRecursive.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
 			this.openRecursive.Size = new System.Drawing.Size(237, 24);
@@ -648,7 +648,7 @@
 			this.saveMenuBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.saveBtn,
 			this.saveAsBtn});
-			this.saveMenuBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveMenuBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_save;
 			this.saveMenuBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.saveMenuBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.saveMenuBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -660,7 +660,7 @@
 			this.saveBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.saveBtn.Enabled = false;
 			this.saveBtn.ForeColor = System.Drawing.Color.Black;
-			this.saveBtn.Image = global::quick_picture_viewer.Properties.Resources.black_save;
+			this.saveBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_save;
 			this.saveBtn.Name = "saveBtn";
 			this.saveBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
 			this.saveBtn.Size = new System.Drawing.Size(207, 24);
@@ -672,7 +672,7 @@
 			this.saveAsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.saveAsBtn.Enabled = false;
 			this.saveAsBtn.ForeColor = System.Drawing.Color.Black;
-			this.saveAsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_saveas;
+			this.saveAsBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_saveas;
 			this.saveAsBtn.Name = "saveAsBtn";
 			this.saveAsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
 			| System.Windows.Forms.Keys.S)));
@@ -713,7 +713,7 @@
 			this.externalFavoriteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.externalFavoriteBtn.Enabled = false;
 			this.externalFavoriteBtn.ForeColor = System.Drawing.Color.Black;
-			this.externalFavoriteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_paint;
+			this.externalFavoriteBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_paint;
 			this.externalFavoriteBtn.Name = "externalFavoriteBtn";
 			this.externalFavoriteBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
 			| System.Windows.Forms.Keys.O)));
@@ -833,7 +833,7 @@
 			this.zoom100Btn.AutoSize = false;
 			this.zoom100Btn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.zoom100Btn.Enabled = false;
-			this.zoom100Btn.Image = global::quick_picture_viewer.Properties.Resources.black_actualsize;
+			this.zoom100Btn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_actualsize;
 			this.zoom100Btn.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.zoom100Btn.Margin = new System.Windows.Forms.Padding(0);
 			this.zoom100Btn.Name = "zoom100Btn";
@@ -845,7 +845,7 @@
 			this.selectionBtn.AutoSize = false;
 			this.selectionBtn.CheckOnClick = true;
 			this.selectionBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.selectionBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selection;
+			this.selectionBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_selection;
 			this.selectionBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.selectionBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.selectionBtn.Name = "selectionBtn";
@@ -867,7 +867,7 @@
 			this.toolStripSeparator7,
 			this.cropBtn});
 			this.editButton.ForeColor = System.Drawing.Color.Black;
-			this.editButton.Image = global::quick_picture_viewer.Properties.Resources.black_edit;
+			this.editButton.Image = global::QuickPictureViewerPlus.Properties.Resources.black_edit;
 			this.editButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.editButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.editButton.Margin = new System.Windows.Forms.Padding(0);
@@ -916,7 +916,7 @@
 			this.rotateRightButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.rotateRightButton.Enabled = false;
 			this.rotateRightButton.ForeColor = System.Drawing.Color.Black;
-			this.rotateRightButton.Image = global::quick_picture_viewer.Properties.Resources.black_rotater;
+			this.rotateRightButton.Image = global::QuickPictureViewerPlus.Properties.Resources.black_rotater;
 			this.rotateRightButton.Name = "rotateRightButton";
 			this.rotateRightButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
 			this.rotateRightButton.Size = new System.Drawing.Size(243, 24);
@@ -953,7 +953,7 @@
 			this.customAngleBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.customAngleBtn.Enabled = false;
 			this.customAngleBtn.ForeColor = System.Drawing.Color.Black;
-			this.customAngleBtn.Image = global::quick_picture_viewer.Properties.Resources.black_angle;
+			this.customAngleBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_angle;
 			this.customAngleBtn.Name = "customAngleBtn";
 			this.customAngleBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
 			| System.Windows.Forms.Keys.J)));
@@ -977,7 +977,7 @@
 			// 
 			this.cropBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.cropBtn.ForeColor = System.Drawing.Color.Black;
-			this.cropBtn.Image = global::quick_picture_viewer.Properties.Resources.black_crop;
+			this.cropBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_crop;
 			this.cropBtn.Name = "cropBtn";
 			this.cropBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
 			| System.Windows.Forms.Keys.X)));
@@ -992,7 +992,7 @@
 			this.filteringModeBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.bilinearBtn,
 			this.nearestNeighborBtn});
-			this.filteringModeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_filtering;
+			this.filteringModeBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_filtering;
 			this.filteringModeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.filteringModeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.filteringModeBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -1003,7 +1003,7 @@
 			// 
 			this.bilinearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.bilinearBtn.ForeColor = System.Drawing.Color.Black;
-			this.bilinearBtn.Image = global::quick_picture_viewer.Properties.Resources.black_bilinear;
+			this.bilinearBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_bilinear;
 			this.bilinearBtn.Name = "bilinearBtn";
 			this.bilinearBtn.Size = new System.Drawing.Size(186, 24);
 			this.bilinearBtn.Text = "Bilinear";
@@ -1013,7 +1013,7 @@
 			// 
 			this.nearestNeighborBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.nearestNeighborBtn.ForeColor = System.Drawing.Color.Black;
-			this.nearestNeighborBtn.Image = global::quick_picture_viewer.Properties.Resources.black_nearest_neighbor;
+			this.nearestNeighborBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_nearest_neighbor;
 			this.nearestNeighborBtn.Name = "nearestNeighborBtn";
 			this.nearestNeighborBtn.Size = new System.Drawing.Size(186, 24);
 			this.nearestNeighborBtn.Text = "Nearest Neighbor";
@@ -1023,7 +1023,7 @@
 			// 
 			this.effectsBtn.AutoSize = false;
 			this.effectsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.effectsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_effects;
+			this.effectsBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_effects;
 			this.effectsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.effectsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.effectsBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -1036,7 +1036,7 @@
 			// 
 			this.toolsBtn.AutoSize = false;
 			this.toolsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_tools;
+			this.toolsBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_tools;
 			this.toolsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.toolsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolsBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -1049,7 +1049,7 @@
 			// 
 			this.checkboardButton.AutoSize = false;
 			this.checkboardButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.checkboardButton.Image = global::quick_picture_viewer.Properties.Resources.black_grid;
+			this.checkboardButton.Image = global::QuickPictureViewerPlus.Properties.Resources.black_grid;
 			this.checkboardButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.checkboardButton.Margin = new System.Windows.Forms.Padding(0);
 			this.checkboardButton.Name = "checkboardButton";
@@ -1110,7 +1110,7 @@
 			this.reloadButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.reloadButton.Enabled = false;
 			this.reloadButton.ForeColor = System.Drawing.Color.Black;
-			this.reloadButton.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
+			this.reloadButton.Image = global::QuickPictureViewerPlus.Properties.Resources.black_sync;
 			this.reloadButton.Name = "reloadButton";
 			this.reloadButton.ShortcutKeys = System.Windows.Forms.Keys.F5;
 			this.reloadButton.Size = new System.Drawing.Size(262, 24);
@@ -1122,7 +1122,7 @@
 			this.deleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.deleteBtn.Enabled = false;
 			this.deleteBtn.ForeColor = System.Drawing.Color.Black;
-			this.deleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
+			this.deleteBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_trash;
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.ShortcutKeys = System.Windows.Forms.Keys.Delete;
 			this.deleteBtn.Size = new System.Drawing.Size(262, 24);
@@ -1134,7 +1134,7 @@
 			this.permDeleteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.permDeleteBtn.Enabled = false;
 			this.permDeleteBtn.ForeColor = System.Drawing.Color.Black;
-			this.permDeleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_permdel;
+			this.permDeleteBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_permdel;
 			this.permDeleteBtn.Name = "permDeleteBtn";
 			this.permDeleteBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Delete)));
 			this.permDeleteBtn.Size = new System.Drawing.Size(262, 24);
@@ -1173,7 +1173,7 @@
 			this.qlibMenuSeparator1,
 			this.backClearBtn});
 			this.backColorBtn.ForeColor = System.Drawing.Color.Black;
-			this.backColorBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
+			this.backColorBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_palette;
 			this.backColorBtn.Name = "backColorBtn";
 			this.backColorBtn.Size = new System.Drawing.Size(262, 24);
 			this.backColorBtn.Text = "background color";
@@ -1182,7 +1182,7 @@
 			// 
 			this.backCustomBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.backCustomBtn.ForeColor = System.Drawing.Color.Black;
-			this.backCustomBtn.Image = global::quick_picture_viewer.Properties.Resources.black_palette;
+			this.backCustomBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_palette;
 			this.backCustomBtn.Name = "backCustomBtn";
 			this.backCustomBtn.ShortcutKeys = System.Windows.Forms.Keys.F3;
 			this.backCustomBtn.Size = new System.Drawing.Size(179, 24);
@@ -1238,7 +1238,7 @@
 			// 
 			this.newWindowButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.newWindowButton.ForeColor = System.Drawing.Color.Black;
-			this.newWindowButton.Image = global::quick_picture_viewer.Properties.Resources.black_newwindow;
+			this.newWindowButton.Image = global::QuickPictureViewerPlus.Properties.Resources.black_newwindow;
 			this.newWindowButton.Name = "newWindowButton";
 			this.newWindowButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
 			this.newWindowButton.Size = new System.Drawing.Size(262, 24);
@@ -1261,7 +1261,7 @@
 			// 
 			this.pluginManBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.pluginManBtn.ForeColor = System.Drawing.Color.Black;
-			this.pluginManBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
+			this.pluginManBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_plugin;
 			this.pluginManBtn.Name = "pluginManBtn";
 			this.pluginManBtn.ShortcutKeys = System.Windows.Forms.Keys.F2;
 			this.pluginManBtn.Size = new System.Drawing.Size(262, 24);
@@ -1284,7 +1284,7 @@
 			// 
 			this.settingsButton.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.settingsButton.ForeColor = System.Drawing.Color.Black;
-			this.settingsButton.Image = global::quick_picture_viewer.Properties.Resources.black_settings;
+			this.settingsButton.Image = global::QuickPictureViewerPlus.Properties.Resources.black_settings;
 			this.settingsButton.Name = "settingsButton";
 			this.settingsButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Oemcomma)));
 			this.settingsButton.Size = new System.Drawing.Size(262, 24);
@@ -1295,7 +1295,7 @@
 			// 
 			this.aboutBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.aboutBtn.ForeColor = System.Drawing.Color.Black;
-			this.aboutBtn.Image = global::quick_picture_viewer.Properties.Resources.black_about;
+			this.aboutBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_about;
 			this.aboutBtn.Name = "aboutBtn";
 			this.aboutBtn.ShortcutKeys = System.Windows.Forms.Keys.F1;
 			this.aboutBtn.Size = new System.Drawing.Size(262, 24);
@@ -1307,7 +1307,7 @@
 			this.framelessCloseBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 			this.framelessCloseBtn.AutoSize = false;
 			this.framelessCloseBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.framelessCloseBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.framelessCloseBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_close;
 			this.framelessCloseBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.framelessCloseBtn.Name = "framelessCloseBtn";
 			this.framelessCloseBtn.Size = new System.Drawing.Size(24, 25);
@@ -1343,7 +1343,7 @@
 			this.showStatusbarBtn});
 			this.showMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.showMenuItem.ForeColor = System.Drawing.Color.Black;
-			this.showMenuItem.Image = global::quick_picture_viewer.Properties.Resources.black_show;
+			this.showMenuItem.Image = global::QuickPictureViewerPlus.Properties.Resources.black_show;
 			this.showMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.showMenuItem.Name = "showMenuItem";
 			this.showMenuItem.Size = new System.Drawing.Size(287, 24);
@@ -1354,7 +1354,7 @@
 			this.showNavArrowsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.showNavArrowsBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.showNavArrowsBtn.ForeColor = System.Drawing.Color.Black;
-			this.showNavArrowsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_arrows;
+			this.showNavArrowsBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_arrows;
 			this.showNavArrowsBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.showNavArrowsBtn.Name = "showNavArrowsBtn";
 			this.showNavArrowsBtn.ShortcutKeys = System.Windows.Forms.Keys.F6;
@@ -1367,7 +1367,7 @@
 			this.showToolbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.showToolbarBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.showToolbarBtn.ForeColor = System.Drawing.Color.Black;
-			this.showToolbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_toolbar;
+			this.showToolbarBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_toolbar;
 			this.showToolbarBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.showToolbarBtn.Name = "showToolbarBtn";
 			this.showToolbarBtn.ShortcutKeys = System.Windows.Forms.Keys.F7;
@@ -1380,7 +1380,7 @@
 			this.showStatusbarBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.showStatusbarBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.showStatusbarBtn.ForeColor = System.Drawing.Color.Black;
-			this.showStatusbarBtn.Image = global::quick_picture_viewer.Properties.Resources.black_statusbar;
+			this.showStatusbarBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_statusbar;
 			this.showStatusbarBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.showStatusbarBtn.Name = "showStatusbarBtn";
 			this.showStatusbarBtn.ShortcutKeys = System.Windows.Forms.Keys.F8;
@@ -1393,7 +1393,7 @@
 			this.wallpaperBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.wallpaperBtn.Enabled = false;
 			this.wallpaperBtn.ForeColor = System.Drawing.Color.Black;
-			this.wallpaperBtn.Image = global::quick_picture_viewer.Properties.Resources.black_desktop;
+			this.wallpaperBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_desktop;
 			this.wallpaperBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.wallpaperBtn.Name = "wallpaperBtn";
 			this.wallpaperBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
@@ -1408,7 +1408,7 @@
 			this.copyImageBtn,
 			this.copyFileBtn});
 			this.copyBtn.ForeColor = System.Drawing.Color.Black;
-			this.copyBtn.Image = global::quick_picture_viewer.Properties.Resources.black_copy;
+			this.copyBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_copy;
 			this.copyBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.copyBtn.Name = "copyBtn";
 			this.copyBtn.Size = new System.Drawing.Size(287, 24);
@@ -1418,7 +1418,7 @@
 			// 
 			this.copyImageBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.copyImageBtn.ForeColor = System.Drawing.Color.Black;
-			this.copyImageBtn.Image = global::quick_picture_viewer.Properties.Resources.black_image;
+			this.copyImageBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_image;
 			this.copyImageBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.copyImageBtn.Name = "copyImageBtn";
 			this.copyImageBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
@@ -1431,7 +1431,7 @@
 			// 
 			this.copyFileBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.copyFileBtn.ForeColor = System.Drawing.Color.Black;
-			this.copyFileBtn.Image = global::quick_picture_viewer.Properties.Resources.black_imgfile;
+			this.copyFileBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_imgfile;
 			this.copyFileBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.copyFileBtn.Name = "copyFileBtn";
 			this.copyFileBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
@@ -1445,7 +1445,7 @@
 			// 
 			this.pasteBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.pasteBtn.ForeColor = System.Drawing.Color.Black;
-			this.pasteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_paste;
+			this.pasteBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_paste;
 			this.pasteBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.pasteBtn.Name = "pasteBtn";
 			this.pasteBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
@@ -1458,7 +1458,7 @@
 			this.selectAllBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.selectAllBtn.Enabled = false;
 			this.selectAllBtn.ForeColor = System.Drawing.Color.Black;
-			this.selectAllBtn.Image = global::quick_picture_viewer.Properties.Resources.black_selectall;
+			this.selectAllBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_selectall;
 			this.selectAllBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.selectAllBtn.Name = "selectAllBtn";
 			this.selectAllBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));

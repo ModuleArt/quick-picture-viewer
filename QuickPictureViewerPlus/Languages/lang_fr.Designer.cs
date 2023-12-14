@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace quick_picture_viewer.languages {
+namespace QuickPictureViewerPlus.languages {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace quick_picture_viewer.languages {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("quick_picture_viewer.languages.lang_fr", typeof(lang_fr).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("QuickPictureViewerPlus.languages.lang_fr", typeof(lang_fr).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

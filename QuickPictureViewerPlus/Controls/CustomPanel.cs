@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	class CustomPanel : Panel
 	{

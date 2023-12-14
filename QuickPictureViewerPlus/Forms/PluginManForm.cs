@@ -6,7 +6,7 @@ using System.IO.Compression;
 using System.IO;
 using System.Diagnostics;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	public partial class PluginManForm : QlibFixedForm
 	{

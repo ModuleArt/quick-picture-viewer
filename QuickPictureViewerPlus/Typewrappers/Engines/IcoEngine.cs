@@ -4,7 +4,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
     /// <summary>
     /// Adapted from this gist: https://gist.github.com/darkfall/1656050

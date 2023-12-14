@@ -1,4 +1,4 @@
-﻿namespace quick_picture_viewer
+﻿namespace QuickPictureViewerPlus
 {
 	partial class SettingsForm
 	{
@@ -624,7 +624,7 @@
 			this.browseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.browseBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.browseBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.browseBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
+			this.browseBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_open;
 			this.browseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.browseBtn.Location = new System.Drawing.Point(262, 184);
 			this.browseBtn.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
@@ -783,16 +783,16 @@
 			// 
 			// closeBtn
 			// 
-			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.DarkImage = global::QuickPictureViewerPlus.Properties.Resources.black_close;
 			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
 			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.ForeColor = System.Drawing.Color.Black;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.LightImage = global::QuickPictureViewerPlus.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(388, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";

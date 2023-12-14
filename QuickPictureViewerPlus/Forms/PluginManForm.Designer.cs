@@ -1,4 +1,4 @@
-﻿namespace quick_picture_viewer
+﻿namespace QuickPictureViewerPlus
 {
 	partial class PluginManForm
 	{
@@ -114,7 +114,7 @@
 			// pluginWebsiteBtn
 			// 
 			this.pluginWebsiteBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.pluginWebsiteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_website;
+			this.pluginWebsiteBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_website;
 			this.pluginWebsiteBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.pluginWebsiteBtn.Name = "pluginWebsiteBtn";
 			this.pluginWebsiteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -138,7 +138,7 @@
 			// deleteBtn
 			// 
 			this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.deleteBtn.Image = global::quick_picture_viewer.Properties.Resources.black_trash;
+			this.deleteBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_trash;
 			this.deleteBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.deleteBtn.Name = "deleteBtn";
 			this.deleteBtn.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -155,16 +155,16 @@
 			// 
 			// closeBtn
 			// 
-			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.DarkImage = global::QuickPictureViewerPlus.Properties.Resources.black_close;
 			this.closeBtn.DarkMode = false;
 			this.closeBtn.FlatAppearance.BorderSize = 0;
 			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
 			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.closeBtn.ForeColor = System.Drawing.Color.Black;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
+			this.closeBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_close;
 			this.closeBtn.IsRed = true;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
+			this.closeBtn.LightImage = global::QuickPictureViewerPlus.Properties.Resources.white_close;
 			this.closeBtn.Location = new System.Drawing.Point(668, 0);
 			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.closeBtn.Name = "closeBtn";
@@ -179,7 +179,7 @@
 			this.morePluginsBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.morePluginsBtn.FlatAppearance.BorderSize = 0;
 			this.morePluginsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.morePluginsBtn.Image = global::quick_picture_viewer.Properties.Resources.black_plugin;
+			this.morePluginsBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_plugin;
 			this.morePluginsBtn.Location = new System.Drawing.Point(490, 358);
 			this.morePluginsBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.morePluginsBtn.Name = "morePluginsBtn";
@@ -202,7 +202,7 @@
 			this.addPluginBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.addPluginBtn.FlatAppearance.BorderSize = 0;
 			this.addPluginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.addPluginBtn.Image = global::quick_picture_viewer.Properties.Resources.black_open;
+			this.addPluginBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_open;
 			this.addPluginBtn.Location = new System.Drawing.Point(10, 358);
 			this.addPluginBtn.Margin = new System.Windows.Forms.Padding(0);
 			this.addPluginBtn.Name = "addPluginBtn";
@@ -219,7 +219,7 @@
 			this.refreshBtn.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.refreshBtn.FlatAppearance.BorderSize = 0;
 			this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.refreshBtn.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
+			this.refreshBtn.Image = global::QuickPictureViewerPlus.Properties.Resources.black_sync;
 			this.refreshBtn.Location = new System.Drawing.Point(220, 358);
 			this.refreshBtn.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.refreshBtn.Name = "refreshBtn";

@@ -12,7 +12,7 @@ using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	public partial class MainForm : Form
 	{
@@ -167,11 +167,11 @@ namespace quick_picture_viewer
 					case "fr":
 					case "hu":
 					case "ru":
-						LangMan.Init("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
+						LangMan.Init("QuickPictureViewerPlus", "QuickPictureViewerPlus.languages.lang_" + CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 						Properties.Settings.Default.Language = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 						break;
 					default:
-						LangMan.Init("quick_picture_viewer");
+						LangMan.Init("QuickPictureViewerPlus");
 						Properties.Settings.Default.Language = LangMan.defaultLang;
 						break;
 				}
@@ -179,7 +179,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				LangMan.Init("quick_picture_viewer", "quick_picture_viewer.languages.lang_" + Properties.Settings.Default.Language);
+				LangMan.Init("QuickPictureViewerPlus", "QuickPictureViewerPlus.languages.lang_" + Properties.Settings.Default.Language);
 			}
 
 			pleaseOpenLabel.Text = LangMan.Get("please-open-image");

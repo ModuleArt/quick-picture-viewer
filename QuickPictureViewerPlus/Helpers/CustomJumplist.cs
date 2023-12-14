@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Windows.Shell;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
     public class CustomJumplist
     {

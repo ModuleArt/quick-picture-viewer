@@ -1,6 +1,6 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	class CustomOpenFolderDialog
 	{

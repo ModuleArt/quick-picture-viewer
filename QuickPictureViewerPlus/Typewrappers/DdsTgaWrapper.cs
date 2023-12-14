@@ -4,7 +4,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	public class DdsTgaWrapper : TypeWrapper
 	{

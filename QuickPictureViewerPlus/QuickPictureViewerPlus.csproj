@@ -27,7 +27,7 @@
     <ApplicationIcon>resources\imgs\picture.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>quick_picture_viewer.Program</StartupObject>
+    <StartupObject>QuickPictureViewerPlus.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -94,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="languages\lang_tr.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuickLibraryPlus\QuickLibraryPlus\QuickLibraryPlus.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">

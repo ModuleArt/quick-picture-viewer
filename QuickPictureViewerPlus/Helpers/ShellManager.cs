@@ -1,6 +1,6 @@
 ﻿using QuickLibrary;
 
-namespace quick_picture_viewer
+namespace QuickPictureViewerPlus
 {
 	public static class ShellManager
 	{
