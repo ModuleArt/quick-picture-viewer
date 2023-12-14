@@ -1,3 +1,0 @@
-[submodule "dependencies/quick-library"]
-	path = dependencies/quick-library
-	url = https://github.com/adriengivry/quick-library

@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about" xml:space="preserve">
+    <value>About</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="all-files" xml:space="preserve">
+    <value>All files</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>All image formats</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="always-on-top" xml:space="preserve">
+    <value>Always on top</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="app-description" xml:space="preserve">
+    <value>Lightweight, versatile desktop image viewer for Windows. The best replacement for the default Windows photo viewer.</value>
+    <comment>About</comment>
+  </data>
+  <data name="app-is-up-to-date" xml:space="preserve">
+    <value>Application is up to date!</value>
+    <comment>Update Manager</comment>
+  </data>
+  <data name="app-startup-actions" xml:space="preserve">
+    <value>App startup actions</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="aspect-ratio" xml:space="preserve">
+    <value>Aspect ratio</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="auto" xml:space="preserve">
+    <value>Auto</value>
+    <comment>Status bar, zoom text field</comment>
+  </data>
+  <data name="auto-size" xml:space="preserve">
+    <value>Auto size</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="auto-zoom" xml:space="preserve">
+    <value>Auto zoom</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="background-color" xml:space="preserve">
+    <value>Background color</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="bottom" xml:space="preserve">
+    <value>Bottom</value>
+    <comment>Print</comment>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>Browse</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="browse-folder-with-qpv" xml:space="preserve">
+    <value>Browse with Quick Picture Viewer</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="browse-for-plugins" xml:space="preserve">
+    <value>Browse for plugins</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="center" xml:space="preserve">
+    <value>Center</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="center-image" xml:space="preserve">
+    <value>Center image</value>
+    <comment>Print</comment>
+  </data>
+  <data name="centimeters" xml:space="preserve">
+    <value>centimeters</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="change-window-opacity" xml:space="preserve">
+    <value>Change window opacity</value>
+    <comment>Picture in picture</comment>
+  </data>
+  <data name="check-for-app-updates" xml:space="preserve">
+    <value>Check for app updates</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="checkboard-background" xml:space="preserve">
+    <value>Checkerboard background</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="choose-color" xml:space="preserve">
+    <value>Choose color</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="choose-fit" xml:space="preserve">
+    <value>Choose a fit</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="clear" xml:space="preserve">
+    <value>Clear</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="comma" xml:space="preserve">
+    <value>Comma</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="compression" xml:space="preserve">
+    <value>Compression</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="context-menu" xml:space="preserve">
+    <value>Context menu</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="context-menu-notice" xml:space="preserve">
+    <value>To change context menu options you need to run the app with Administrator</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>Copy</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="copy-file" xml:space="preserve">
+    <value>Copy original file</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="copy-image" xml:space="preserve">
+    <value>Copy this image</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>Created</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="created-by" xml:space="preserve">
+    <value>Created by</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="crop" xml:space="preserve">
+    <value>Crop</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="cur-file-not-found" xml:space="preserve">
+    <value>Current file could not be found</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="cut" xml:space="preserve">
+    <value>Cut</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Dark</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="delete-file" xml:space="preserve">
+    <value>Delete file</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="delete-plugin" xml:space="preserve">
+    <value>Delete plugin</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="delete-plugin-warning" xml:space="preserve">
+    <value>Are you sure you want to remove the plugin?</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="desc" xml:space="preserve">
+    <value>Description</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="disk-size" xml:space="preserve">
+    <value>Disk size</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="dont-save" xml:space="preserve">
+    <value>Don't save</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="downloading-update" xml:space="preserve">
+    <value>Downloading update...</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="dragged-image" xml:space="preserve">
+    <value>Dragged image</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="edit-image" xml:space="preserve">
+    <value>Edit image</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Edit selection area</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="effects" xml:space="preserve">
+    <value>Effects</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="esc-to-exit" xml:space="preserve">
+    <value>Press {0} to exit app</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>Exit Picture-in-Picture mode</value>
+    <comment>Picture in picture</comment>
+  </data>
+  <data name="extension" xml:space="preserve">
+    <value>Extension</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="fav-external-app" xml:space="preserve">
+    <value>Favorite external app</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="file" xml:space="preserve">
+    <value>File</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="file-copied-to-clipboard" xml:space="preserve">
+    <value>File copied to clipboard</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>File moved to the Recycle Bin</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="file-properties" xml:space="preserve">
+    <value>File properties</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="file-reloaded" xml:space="preserve">
+    <value>File reloaded</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="fill" xml:space="preserve">
+    <value>Fill</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="filtering" xml:space="preserve">
+    <value>Filtering</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="bilinear" xml:space="preserve">
+    <value>Bilinear</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="nearest-neighbor" xml:space="preserve">
+    <value>Nearest Neighbor</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="fit" xml:space="preserve">
+    <value>Fit</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="flip-horizontal" xml:space="preserve">
+    <value>Flip horizontal</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="flip-vertical" xml:space="preserve">
+    <value>Flip vertical</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="folder" xml:space="preserve">
+    <value>Folder</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="frameless-mode" xml:space="preserve">
+    <value>Frameless mode</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="from-clipboard" xml:space="preserve">
+    <value>From clipboard</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>From "{0}"</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="full-path" xml:space="preserve">
+    <value>Full path</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="fullscreen" xml:space="preserve">
+    <value>Fullscreen</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="fullscreen-cursor" xml:space="preserve">
+    <value>Show cursor in fullscreen</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="height" xml:space="preserve">
+    <value>Height</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Help us translate this app</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>Image</value>
+    <comment>Print</comment>
+  </data>
+  <data name="image-copied-to-clipboard" xml:space="preserve">
+    <value>Image copied to clipboard</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="image-info" xml:space="preserve">
+    <value>Image info</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="image-pasted-from-clipboard" xml:space="preserve">
+    <value>Image pasted from clipboard</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="inches" xml:space="preserve">
+    <value>inches</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="input" xml:space="preserve">
+    <value>Mouse and keyboard</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="install-now" xml:space="preserve">
+    <value>Install now</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="landscape" xml:space="preserve">
+    <value>Landscape</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="landscape-orientation" xml:space="preserve">
+    <value>Landscape</value>
+    <comment>Print</comment>
+  </data>
+  <data name="left" xml:space="preserve">
+    <value>Left</value>
+    <comment>Print</comment>
+  </data>
+  <data name="left-arrow" xml:space="preserve">
+    <value>Left arrow</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Light</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="localization" xml:space="preserve">
+    <value>Localization</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="maintain-aspect-ratio" xml:space="preserve">
+    <value>Maintain aspect ratio</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="margin-bounds" xml:space="preserve">
+    <value>Margin bounds</value>
+    <comment>Print</comment>
+  </data>
+  <data name="margins" xml:space="preserve">
+    <value>Margins</value>
+    <comment>Print</comment>
+  </data>
+  <data name="megapixels" xml:space="preserve">
+    <value>megapixels</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>Memory error</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="minus" xml:space="preserve">
+    <value>Minus</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="modified" xml:space="preserve">
+    <value>Modified</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="more-options" xml:space="preserve">
+    <value>More options</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="more-plugins" xml:space="preserve">
+    <value>More plugins</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="mouse-wheel-action" xml:space="preserve">
+    <value>Mouse wheel scroll action</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="move-to-trash" xml:space="preserve">
+    <value>Move file to the Recycle Bin</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="new-version-available" xml:space="preserve">
+    <value>New version available!</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="new-window" xml:space="preserve">
+    <value>New window</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="new-window-desc" xml:space="preserve">
+    <value>Create new empty window</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="next-image" xml:space="preserve">
+    <value>Next image in folder</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="next-image-in-1-second" xml:space="preserve">
+    <value>Next image in 1 second</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="next-image-in-x-seconds" xml:space="preserve">
+    <value>Next image in {0} seconds</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="next-prev-image" xml:space="preserve">
+    <value>Next / previous image in folder</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="no-file" xml:space="preserve">
+    <value>No file</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="no-files-to-open" xml:space="preserve">
+    <value>No files to open</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="not-saved" xml:space="preserve">
+    <value>Not saved</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="open" xml:space="preserve">
+    <value>Open</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-external" xml:space="preserve">
+    <value>Open file with external app</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-file" xml:space="preserve">
+    <value>Open file</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Open folder</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Open folder recursively</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with" xml:space="preserve">
+    <value>Open with</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-choose" xml:space="preserve">
+    <value>Choose app to open</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-custom" xml:space="preserve">
+    <value>Open with custom app</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-default" xml:space="preserve">
+    <value>Open with default app</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-qpv" xml:space="preserve">
+    <value>Open with Quick Picture Viewer</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="original-size" xml:space="preserve">
+    <value>Original size</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="paste-from-clipboard" xml:space="preserve">
+    <value>Paste from clipboard</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="paste-image" xml:space="preserve">
+    <value>Paste image</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>Delete file permanently</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="picture-in-picture" xml:space="preserve">
+    <value>Picture-in-Picture mode</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="pixels" xml:space="preserve">
+    <value>pixels</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="please-open-image" xml:space="preserve">
+    <value>Please open an image to view or edit</value>
+    <comment>Picture panel</comment>
+  </data>
+  <data name="plugin" xml:space="preserve">
+    <value>Plugin</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-manager" xml:space="preserve">
+    <value>Plugin manager</value>
+    <comment>Menu, Plugin manager</comment>
+  </data>
+  <data name="plugin-not-found" xml:space="preserve">
+    <value>Plugin directory not found</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-website" xml:space="preserve">
+    <value>Plugin website</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plus" xml:space="preserve">
+    <value>Plus</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="portrait" xml:space="preserve">
+    <value>Portrait</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="presets" xml:space="preserve">
+    <value>Presets</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="press-to-exit-fullscreen" xml:space="preserve">
+    <value>Press {0} to exit fullscreen mode</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="prev-image" xml:space="preserve">
+    <value>Previous image in folder</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="print" xml:space="preserve">
+    <value>Print / Export to PDF</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="print-conf" xml:space="preserve">
+    <value>Print configuration</value>
+    <comment>Print</comment>
+  </data>
+  <data name="print-margins-error" xml:space="preserve">
+    <value>Unable to set document margins</value>
+    <comment>Print</comment>
+  </data>
+  <data name="print-size" xml:space="preserve">
+    <value>Print size</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="ready-to-install" xml:space="preserve">
+    <value>Ready to install</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="reload-file" xml:space="preserve">
+    <value>Reload file</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Reload plugin list</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="resize-svg" xml:space="preserve">
+    <value>Resize SVG</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="resolution" xml:space="preserve">
+    <value>Resolution</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>Restart</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="restart-required" xml:space="preserve">
+    <value>App restart required</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="restore-last-window-bounds" xml:space="preserve">
+    <value>Restore last window bounds</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="right" xml:space="preserve">
+    <value>Right</value>
+    <comment>Print</comment>
+  </data>
+  <data name="right-arrow" xml:space="preserve">
+    <value>Right arrow</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="rotate-180" xml:space="preserve">
+    <value>Rotate 180°</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="rotate-left" xml:space="preserve">
+    <value>Rotate counter-clockwise</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="rotate-right" xml:space="preserve">
+    <value>Rotate clockwise</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Save</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="save-as" xml:space="preserve">
+    <value>Save as</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="scroll-up-down" xml:space="preserve">
+    <value>Scroll up / down</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="seconds" xml:space="preserve">
+    <value>seconds</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Select all</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Selection tool</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="set-as-default-image-viewer" xml:space="preserve">
+    <value>Set as default image viewer</value>
+    <comment>About</comment>
+  </data>
+  <data name="set-as-desktop-background" xml:space="preserve">
+    <value>Set as desktop background</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="set-background" xml:space="preserve">
+    <value>Set background</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="set-margins-btn" xml:space="preserve">
+    <value>Set margins</value>
+    <comment>Print</comment>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Menu, Settings</comment>
+  </data>
+  <data name="show-file-explorer" xml:space="preserve">
+    <value>Show file in explorer</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Show navigation arrows</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-slideshow-counter" xml:space="preserve">
+    <value>Show slideshow counter</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="show-status-bar" xml:space="preserve">
+    <value>Show status bar</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-toolbar" xml:space="preserve">
+    <value>Show toolbar</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="size" xml:space="preserve">
+    <value>Size</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>Skip this version</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="slideshow" xml:space="preserve">
+    <value>Slideshow</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="span" xml:space="preserve">
+    <value>Span</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="square" xml:space="preserve">
+    <value>Square</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="startup" xml:space="preserve">
+    <value>Startup</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="stretch" xml:space="preserve">
+    <value>Stretch</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="sure-close-app" xml:space="preserve">
+    <value>All unsaved data will be lost. Are you sure you want to close the application?</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>Are you sure you want to permanently delete this file?</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="switching-time" xml:space="preserve">
+    <value>Switching time</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="tile" xml:space="preserve">
+    <value>Tile</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Title</value>
+    <comment>Print</comment>
+  </data>
+  <data name="tools" xml:space="preserve">
+    <value>Tools</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="top" xml:space="preserve">
+    <value>Top</value>
+    <comment>Print</comment>
+  </data>
+  <data name="translated-by" xml:space="preserve">
+    <value>Translation by</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="type-options" xml:space="preserve">
+    <value>options</value>
+    <comment>Picture panel, SVG options</comment>
+  </data>
+  <data name="ui-lang" xml:space="preserve">
+    <value>User interface language</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="unable-open-file" xml:space="preserve">
+    <value>Unable to open file</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>Unable to open the file, file skipped</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-to-run-external-app" xml:space="preserve">
+    <value>Unable to run external app</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unsaved-changes" xml:space="preserve">
+    <value>Unsaved changes</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsaved-changes-question" xml:space="preserve">
+    <value>The current image has unsaved changes. What would you like to do?</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>Unsupported pixel format</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="update-failed" xml:space="preserve">
+    <value>Update failed</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="update-text" xml:space="preserve">
+    <value>The version {0} for Quick Picture Viewer is available, you're using version {1}, update now?</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="updating-qpv" xml:space="preserve">
+    <value>Updating Quick Picture Viewer</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="use-system-setting" xml:space="preserve">
+    <value>Use system setting</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="view" xml:space="preserve">
+    <value>View</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Warning</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="whats-new" xml:space="preserve">
+    <value>What's new?</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="width" xml:space="preserve">
+    <value>Width</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="zoom" xml:space="preserve">
+    <value>Zoom</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="zoom-in" xml:space="preserve">
+    <value>Zoom in</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="zoom-in-out" xml:space="preserve">
+    <value>Zoom in / out</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="zoom-out" xml:space="preserve">
+    <value>Zoom out</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="zoom-to-actual-size" xml:space="preserve">
+    <value>Zoom to actual size</value>
+    <comment>Menu</comment>
+  </data>
+</root>
