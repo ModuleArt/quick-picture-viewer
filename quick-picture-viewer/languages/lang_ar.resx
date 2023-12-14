@@ -1,0 +1,932 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about" xml:space="preserve">
+    <value>حول</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="all-files" xml:space="preserve">
+    <value>جميع الملفات</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>جميع تنسيقات الصور</value>
+    <comment>Open file dialog</comment>
+  </data>
+  <data name="always-on-top" xml:space="preserve">
+    <value>دائماً في الأعلى</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="app-description" xml:space="preserve">
+    <value>عارض صور سطح المكتب خفيف الوزن ومتعدد الاستخدامات لنظام التشغيل ويندوز. أفضل بديل لعارض صور ويندوز الافتراضي.</value>
+    <comment>About</comment>
+  </data>
+  <data name="app-is-up-to-date" xml:space="preserve">
+    <value>التطبيق محدث!</value>
+    <comment>Update Manager</comment>
+  </data>
+  <data name="app-startup-actions" xml:space="preserve">
+    <value>إجراءات بدء تشغيل التطبيق</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="aspect-ratio" xml:space="preserve">
+    <value>ابعاد متزنة</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="auto" xml:space="preserve">
+    <value>تلقائي</value>
+    <comment>Status bar, zoom text field</comment>
+  </data>
+  <data name="auto-size" xml:space="preserve">
+    <value>حجم تلقائي</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="auto-zoom" xml:space="preserve">
+    <value>تكبير تلقائي</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="background-color" xml:space="preserve">
+    <value>لون الخلفية</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="bottom" xml:space="preserve">
+    <value>أسفل</value>
+    <comment>Print</comment>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>تصفح</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="browse-folder-with-qpv" xml:space="preserve">
+    <value>تصفح مع عارض الصور السريع</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="browse-for-plugins" xml:space="preserve">
+    <value>تصفح بحثًا عن المكونات الإضافية</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="center" xml:space="preserve">
+    <value>مركز</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="center-image" xml:space="preserve">
+    <value>صورة المركز</value>
+    <comment>Print</comment>
+  </data>
+  <data name="centimeters" xml:space="preserve">
+    <value>سم</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="change-window-opacity" xml:space="preserve">
+    <value>تغيير عتامة النافذة</value>
+    <comment>Picture in picture</comment>
+  </data>
+  <data name="check-for-app-updates" xml:space="preserve">
+    <value>تحقق من وجود تحديثات التطبيق</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="checkboard-background" xml:space="preserve">
+    <value>خلفية لوحة المدقق</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="choose-color" xml:space="preserve">
+    <value>اختر لون</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="choose-fit" xml:space="preserve">
+    <value>اختر نوبة</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="clear" xml:space="preserve">
+    <value>صافي</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="comma" xml:space="preserve">
+    <value>فقرة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="compression" xml:space="preserve">
+    <value>ضغط</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="context-menu" xml:space="preserve">
+    <value>قائمة السياق</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="context-menu-notice" xml:space="preserve">
+    <value>لتغيير خيارات قائمة السياق ، تحتاج إلى تشغيل التطبيق في وضع المسؤول</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>نسخ</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="copy-file" xml:space="preserve">
+    <value>نسخ الملف الأصلي</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="copy-image" xml:space="preserve">
+    <value>نسخ هذه الصورة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>انشأت</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="created-by" xml:space="preserve">
+    <value>انشأ بواسطة</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="crop" xml:space="preserve">
+    <value>اقتصاص</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="cur-file-not-found" xml:space="preserve">
+    <value>تعذر العثور على الملف الحالي</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="cut" xml:space="preserve">
+    <value>قطع</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>داكن</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="delete-file" xml:space="preserve">
+    <value>حذف ملف</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="delete-plugin" xml:space="preserve">
+    <value>حذف البرنامج المساعد</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="delete-plugin-warning" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد إزالة البرنامج المساعد؟</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="desc" xml:space="preserve">
+    <value>وصف</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="disk-size" xml:space="preserve">
+    <value>حجم القرص</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="dont-save" xml:space="preserve">
+    <value>لا تحفظ</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="downloading-update" xml:space="preserve">
+    <value>تحميل التحديث...</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="dragged-image" xml:space="preserve">
+    <value>الصورة المسحوبة</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="edit-image" xml:space="preserve">
+    <value>تحرير الصورة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>تحرير منطقة التحديد</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="effects" xml:space="preserve">
+    <value>تأثيرات</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>خطأ</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="esc-to-exit" xml:space="preserve">
+    <value>اضغط على {0} للخروج من التطبيق</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>اخرج من وضع صورة داخل صورة</value>
+    <comment>Picture in picture</comment>
+  </data>
+  <data name="extension" xml:space="preserve">
+    <value>الاضافة</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="fav-external-app" xml:space="preserve">
+    <value>التطبيق الخارجي المفضل</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="file" xml:space="preserve">
+    <value>ملف</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="file-copied-to-clipboard" xml:space="preserve">
+    <value>تم نسخ الملف إلى الحافظة</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>تم نقل الملف إلى سلة المحذوفات</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="file-properties" xml:space="preserve">
+    <value>خصائص الملف</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="file-reloaded" xml:space="preserve">
+    <value>أعيد تحميل الملف</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="fill" xml:space="preserve">
+    <value>تعبئة</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="fit" xml:space="preserve">
+    <value>ملائم</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="flip-horizontal" xml:space="preserve">
+    <value>انعكاس أفقي</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="flip-vertical" xml:space="preserve">
+    <value>انعكاس رأسي</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="folder" xml:space="preserve">
+    <value>مجلد</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="frameless-mode" xml:space="preserve">
+    <value>وضع الاطار الاقل</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="from-clipboard" xml:space="preserve">
+    <value>من الحافظة</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>من "{0}"</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="full-path" xml:space="preserve">
+    <value>مسار كامل</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="fullscreen" xml:space="preserve">
+    <value>شاشة كاملة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="fullscreen-cursor" xml:space="preserve">
+    <value>عرض المؤشر في وضع ملء الشاشة</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="height" xml:space="preserve">
+    <value>ارتفاع</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>ساعدنا في ترجمة هذا التطبيق</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>صورة</value>
+    <comment>Print</comment>
+  </data>
+  <data name="image-copied-to-clipboard" xml:space="preserve">
+    <value>تم نسخ الصورة إلى الحافظة</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="image-info" xml:space="preserve">
+    <value>معلومات الصورة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="image-pasted-from-clipboard" xml:space="preserve">
+    <value>تم لصق الصورة من الحافظة</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="inches" xml:space="preserve">
+    <value>بوصات</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="input" xml:space="preserve">
+    <value>الماوس ولوحة المفاتيح</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="install-now" xml:space="preserve">
+    <value>تثبيت الآن</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="landscape" xml:space="preserve">
+    <value>المناظر الطبيعيه</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="landscape-orientation" xml:space="preserve">
+    <value>المناظر الطبيعيه</value>
+    <comment>Print</comment>
+  </data>
+  <data name="left" xml:space="preserve">
+    <value>اليسار</value>
+    <comment>Print</comment>
+  </data>
+  <data name="left-arrow" xml:space="preserve">
+    <value>السهم الايسر</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>خفيفة</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="localization" xml:space="preserve">
+    <value>الموقع</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="maintain-aspect-ratio" xml:space="preserve">
+    <value>الحفاظ على نسبة العرض إلى الارتفاع</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="margin-bounds" xml:space="preserve">
+    <value>حدود الهامش</value>
+    <comment>Print</comment>
+  </data>
+  <data name="margins" xml:space="preserve">
+    <value>الهوامش</value>
+    <comment>Print</comment>
+  </data>
+  <data name="megapixels" xml:space="preserve">
+    <value>ميغا بكسل</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>خطأ في الذاكرة</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="minus" xml:space="preserve">
+    <value>ناقص</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="modified" xml:space="preserve">
+    <value>تم التعديل</value>
+    <comment>Status bar, image info</comment>
+  </data>
+  <data name="more-options" xml:space="preserve">
+    <value>المزيد من الخيارات</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="more-plugins" xml:space="preserve">
+    <value>المزيد من الإضافات</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="mouse-wheel-action" xml:space="preserve">
+    <value>حدث عجلة تمرير الفأرة</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="move-to-trash" xml:space="preserve">
+    <value>نقل الملف إلى سلة المخذوفات</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="new-version-available" xml:space="preserve">
+    <value>إصدار جديدة متاحة!</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="new-window" xml:space="preserve">
+    <value>نافذة جديدة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="new-window-desc" xml:space="preserve">
+    <value>إنشاء نافذة فارغة جديدة</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="next-image" xml:space="preserve">
+    <value>الصورة التالية في المجلد</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="next-image-in-1-second" xml:space="preserve">
+    <value>الصورة التالية في غضون 1 ثانية</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="next-image-in-x-seconds" xml:space="preserve">
+    <value>الصورة التالية في غضون {0} ثانية</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="next-prev-image" xml:space="preserve">
+    <value>الصورة التالية / السابقة في المجلد</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="no-file" xml:space="preserve">
+    <value>لا يوجد ملف</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="no-files-to-open" xml:space="preserve">
+    <value>لا يوجد ملف لفتحة</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="not-saved" xml:space="preserve">
+    <value>لم يحفظ</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="open" xml:space="preserve">
+    <value>فتح</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-external" xml:space="preserve">
+    <value>افتح الملف باستخدام تطبيق خارجي</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-file" xml:space="preserve">
+    <value>افتح الملف</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>افتح المجلد</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>افتح المجلد بشكل متكرر</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with" xml:space="preserve">
+    <value>افتح مع</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-choose" xml:space="preserve">
+    <value>اختر التطبيق المراد فتحه</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-custom" xml:space="preserve">
+    <value>فتح مع التطبيق المخصص</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-default" xml:space="preserve">
+    <value>فتح مع التطبيق الافتراضي</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="open-with-qpv" xml:space="preserve">
+    <value>فتح مع عارض الصور السريع</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="original-size" xml:space="preserve">
+    <value>الحجم الأصلي</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="paste-from-clipboard" xml:space="preserve">
+    <value>لصق من الحافظة</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="paste-image" xml:space="preserve">
+    <value>الصق الصورة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>حذف الملف نهائيا</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="picture-in-picture" xml:space="preserve">
+    <value>وضع الصورة داخل الصورة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="pixels" xml:space="preserve">
+    <value>بكسل</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="please-open-image" xml:space="preserve">
+    <value>الرجاء فتح صورة لعرضها أو تحريرها</value>
+    <comment>Picture panel</comment>
+  </data>
+  <data name="plugin" xml:space="preserve">
+    <value>المكونات الأضافية</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-manager" xml:space="preserve">
+    <value>مدير المكونات الأضافية</value>
+    <comment>Menu, Plugin manager</comment>
+  </data>
+  <data name="plugin-not-found" xml:space="preserve">
+    <value>دليل المكونات الأضافية غير موجود</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plugin-website" xml:space="preserve">
+    <value>موقع المكونات الأضافية</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="plus" xml:space="preserve">
+    <value>زائد</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="portrait" xml:space="preserve">
+    <value>لوحة</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="presets" xml:space="preserve">
+    <value>الإعدادات المسبقة</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="press-to-exit-fullscreen" xml:space="preserve">
+    <value>اضغط على {0} للخروج من وضع ملء الشاشة</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="prev-image" xml:space="preserve">
+    <value>الصورة السابقة في المجلد</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="print" xml:space="preserve">
+    <value>طباعة / تصدير إلى PDF</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="print-conf" xml:space="preserve">
+    <value>تكوين الطباعة</value>
+    <comment>Print</comment>
+  </data>
+  <data name="print-margins-error" xml:space="preserve">
+    <value>تعذر تعيين هوامش المستند</value>
+    <comment>Print</comment>
+  </data>
+  <data name="print-size" xml:space="preserve">
+    <value>حجم الطباعة</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="ready-to-install" xml:space="preserve">
+    <value>جاهز للتركيب</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="reload-file" xml:space="preserve">
+    <value>إعادة تحميل الملف</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>إعادة تحميل قائمة المكونات الإضافية</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="resize-svg" xml:space="preserve">
+    <value>تغيير حجم SVG</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="resolution" xml:space="preserve">
+    <value>الدقة</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>إعادة تشغيل</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="restart-required" xml:space="preserve">
+    <value>مطلوب إعادة تشغيل التطبيق</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="restore-last-window-bounds" xml:space="preserve">
+    <value>استعادة حدود النافذة الأخيرة</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="right" xml:space="preserve">
+    <value>يمين</value>
+    <comment>Print</comment>
+  </data>
+  <data name="right-arrow" xml:space="preserve">
+    <value>السهم الأيمن</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="rotate-180" xml:space="preserve">
+    <value>استدارة 180 درجة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="rotate-left" xml:space="preserve">
+    <value>تدوير عكس اتجاه عقارب الساعة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="rotate-right" xml:space="preserve">
+    <value>تدوير في اتجاه عقارب الساعة</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>حفظ</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="save-as" xml:space="preserve">
+    <value>حفظ كـ</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="scroll-up-down" xml:space="preserve">
+    <value>انتقل لأعلى / لأسفل</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="seconds" xml:space="preserve">
+    <value>ثواني</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="select-all" xml:space="preserve">
+    <value>تحديد الكل</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>أداة التحديد</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="set-as-default-image-viewer" xml:space="preserve">
+    <value>تعيين كعارض الصور الافتراضي</value>
+    <comment>About</comment>
+  </data>
+  <data name="set-as-desktop-background" xml:space="preserve">
+    <value>ضبط كخلفية لسطح المكتب</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="set-background" xml:space="preserve">
+    <value>تعيين الخلفية</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="set-margins-btn" xml:space="preserve">
+    <value>تعيين الهوامش</value>
+    <comment>Print</comment>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>الأعدادات</value>
+    <comment>Menu, Settings</comment>
+  </data>
+  <data name="show-file-explorer" xml:space="preserve">
+    <value>إظهار الملف في المستكشف</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>إظهار أسهم التنقل</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-slideshow-counter" xml:space="preserve">
+    <value>إظهار عداد عرض الشرائح</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="show-status-bar" xml:space="preserve">
+    <value>أظهر شريط الحالة</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="show-toolbar" xml:space="preserve">
+    <value>إظهار شريط الأدوات</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="size" xml:space="preserve">
+    <value>حجم</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>تخطي هذه النسخة</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="slideshow" xml:space="preserve">
+    <value>عرض الشرائح</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="span" xml:space="preserve">
+    <value>امتداد</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="square" xml:space="preserve">
+    <value>مربع</value>
+    <comment>Image info</comment>
+  </data>
+  <data name="startup" xml:space="preserve">
+    <value>بدء</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="stretch" xml:space="preserve">
+    <value>تمدد</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="sure-close-app" xml:space="preserve">
+    <value>ستفقد جميع البيانات غير المحفوظة. هل أنت متأكد أنك تريد إغلاق التطبيق؟</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حذف هذا الملف نهائيًا؟</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="switching-time" xml:space="preserve">
+    <value>وقت التبديل</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="theme" xml:space="preserve">
+    <value>سمة</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="tile" xml:space="preserve">
+    <value>البلاط</value>
+    <comment>Wallpaper</comment>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>عنوان</value>
+    <comment>Print</comment>
+  </data>
+  <data name="tools" xml:space="preserve">
+    <value>أدوات</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="top" xml:space="preserve">
+    <value>أعلى</value>
+    <comment>Print</comment>
+  </data>
+  <data name="translated-by" xml:space="preserve">
+    <value>تمت الترجمة بواسطة</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="type-options" xml:space="preserve">
+    <value>خيارات</value>
+    <comment>Picture panel, SVG options</comment>
+  </data>
+  <data name="ui-lang" xml:space="preserve">
+    <value>لغة واجهة المستخدم</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="unable-open-file" xml:space="preserve">
+    <value>غير قادر على فتح ملف</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>تعذر فتح الملف ، تم تخطي الملف</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unable-to-run-external-app" xml:space="preserve">
+    <value>تعذر تشغيل التطبيق الخارجي</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="unsaved-changes" xml:space="preserve">
+    <value>التغييرات غير المحفوظة</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsaved-changes-question" xml:space="preserve">
+    <value>الصورة الحالية بها تغييرات غير محفوظة. ماذا تريد ان تفعل؟</value>
+    <comment>Main window</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>تنسيق بكسل غير مدعوم</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="update-failed" xml:space="preserve">
+    <value>فشل التحديث</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="update-text" xml:space="preserve">
+    <value>يتوفر الإصدار {0} من عارض الصور السريع ، هل تستخدم الإصدار {1} ، فهل تريد التحديث الآن؟</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="updating-qpv" xml:space="preserve">
+    <value>تحديث عارض الصور السريع</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="use-system-setting" xml:space="preserve">
+    <value>استخدم إعدادات النظام</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>إصدار</value>
+    <comment>Plugin manager</comment>
+  </data>
+  <data name="view" xml:space="preserve">
+    <value>معاينة</value>
+    <comment>RMB menu</comment>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>تحذير</value>
+    <comment>Message box</comment>
+  </data>
+  <data name="whats-new" xml:space="preserve">
+    <value>ما الجديد؟</value>
+    <comment>Update manager</comment>
+  </data>
+  <data name="width" xml:space="preserve">
+    <value>عرض</value>
+    <comment>SVG options</comment>
+  </data>
+  <data name="zoom" xml:space="preserve">
+    <value>تكبير</value>
+    <comment>Status bar</comment>
+  </data>
+  <data name="zoom-in" xml:space="preserve">
+    <value>تكبير للداخل</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="zoom-in-out" xml:space="preserve">
+    <value>تكبير للداخل / للخارج</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="zoom-out" xml:space="preserve">
+    <value>تكبير للخارج</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="zoom-to-actual-size" xml:space="preserve">
+    <value>تكبير الحجم الفعلي</value>
+    <comment>Menu</comment>
+  </data>
+</root>
