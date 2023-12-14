@@ -850,7 +850,7 @@
     <comment>Print</comment>
   </data>
   <data name="translated-by" xml:space="preserve">
-    <value>Çeviri</value>
+    <value>Çeviren:</value>
     <comment>Settings</comment>
   </data>
   <data name="type-options" xml:space="preserve">
@@ -914,7 +914,7 @@
     <comment>Message box</comment>
   </data>
   <data name="whats-new" xml:space="preserve">
-    <value>Ne var ne yok?</value>
+    <value>Neler yeni?</value>
     <comment>Update manager</comment>
   </data>
   <data name="width" xml:space="preserve">
@@ -922,7 +922,7 @@
     <comment>SVG options</comment>
   </data>
   <data name="zoom" xml:space="preserve">
-    <value>Yakınlaştır</value>
+    <value>Yakınlaştırma</value>
     <comment>Status bar</comment>
   </data>
   <data name="zoom-in" xml:space="preserve">
