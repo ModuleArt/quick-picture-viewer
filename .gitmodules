@@ -1,0 +1,4 @@
+
+[submodule "QuickPictureViewerPlus/Dependencies/QuickLibraryPlus"]
+	path = QuickPictureViewerPlus/Dependencies/QuickLibraryPlus
+	url = https://github.com/adriengivry/QuickLibraryPlus

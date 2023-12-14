@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>quick_picture_viewer</RootNamespace>
+    <RootNamespace>QuickPictureViewerPlus</RootNamespace>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -81,9 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\imgs\picture.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\dependencies\QuickLibrary\QuickLibrary\QuickLibrary.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Fizzler" Version="1.3.0" />
