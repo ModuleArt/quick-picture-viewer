@@ -1,6 +1,7 @@
 ﻿using QuickLibrary;
 using System.Drawing;
 using System.IO;
+using WebP.Net;
 
 namespace quick_picture_viewer
 {
@@ -17,7 +18,7 @@ namespace quick_picture_viewer
 			try
 			{
 				byte[] rawWebP = File.ReadAllBytes(path);
-				using (WebP webp = new WebP())
+				using (var webp = new WebPObject(rawWebP))
 				{
 					WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
 					decoderOptions.use_threads = 1;
