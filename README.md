@@ -76,7 +76,7 @@ If you want to report a bug, first, thank you, that helps us a lot. Please open 
 
 ## 💿 Another installation methods:
 
-- Using Microsoft Store:
+- Using Microsoft Store:<br>
   <a href='//www.microsoft.com/store/apps/9pjqqrxsvwr1?cid=storebadge&ocid=badge'>
   <img src='https://github.com/ModuleArt/quick-picture-viewer/blob/master/inno-setup/MSIX/English_get-it-from-MS.png?raw=true' />
   </a><br><br>
@@ -121,7 +121,7 @@ Code contributors:
 
 - <a href="https://github.com/adriengivry">adriengivry</a> - Texture filtering modes
 - <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
-- <a href="https://github.com/Beelink">Beelink</a> - Everything else =)
+- <a href="https://github.com/Beelink">Beelink</a> - Everything else 😘
 
 Translation contributors:
 
