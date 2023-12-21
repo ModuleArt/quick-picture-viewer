@@ -72,9 +72,6 @@
     <Content Include="resources\imgs\picture.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Fizzler" Version="1.3.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Octokit" Version="0.50.0" />
@@ -87,6 +84,9 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="QuickLibrary">
+      <HintPath>..\dependencies\quick-library\QuickLibrary\bin\Release\QuickLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="SimplePsd">
       <HintPath>..\libs\SimplePsd.dll</HintPath>
     </Reference>
