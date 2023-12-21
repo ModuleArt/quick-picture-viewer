@@ -23,6 +23,11 @@ namespace quick_picture_viewer
 			},
 			new Language
 			{
+				Code = "ar",
+				Authors = new string[] { "Jalal-Althahab" }
+			},
+			new Language
+			{
 				Code = "cn",
 				Authors = new string[] { "jiwangyihao" }
 			},
@@ -39,7 +44,7 @@ namespace quick_picture_viewer
 			new Language
 			{
 				Code = "de",
-				Authors = new string[] { "l-33ter" }
+				Authors = new string[] { "l-33ter", "tomo2403" }
 			},
 			new Language
 			{
@@ -55,6 +60,11 @@ namespace quick_picture_viewer
 			{
 				Code = "es",
 				Authors = new string[] { "asluppiter", "Alplox" }
+			},
+			new Language
+			{
+				Code = "es",
+				Authors = new string[] { "ataberkcemunal" }
 			}
 		};
 

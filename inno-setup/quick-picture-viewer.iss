@@ -1,5 +1,5 @@
 #define MyAppName "Quick Picture Viewer"
-#define MyAppVersion "3.1.4"
+#define MyAppVersion "3.1.5"
 #define MyAppPublisher "Module Art"
 #define MyAppURL "https://moduleart.github.io/quick-picture-viewer"
 #define MyAppExeName "quick-picture-viewer.exe"

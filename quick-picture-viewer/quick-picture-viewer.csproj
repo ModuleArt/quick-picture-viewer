@@ -1,21 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{53748C49-255E-424B-B789-5919CEFEF473}</ProjectGuid>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>quick_picture_viewer</RootNamespace>
-    <AssemblyName>quick-picture-viewer</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,27 +18,10 @@
     <ApplicationVersion>3.1.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>resources\imgs\picture.ico</ApplicationIcon>
@@ -68,9 +39,6 @@
     <ManifestKeyFile>quick-picture-viewer_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -81,341 +49,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CustomMarshalers" />
-    <Reference Include="Fizzler, Version=1.3.0.0, Culture=neutral, PublicKeyToken=4ebff4844e382110, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fizzler.1.3.0\lib\netstandard2.0\Fizzler.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
-    </Reference>
-    <Reference Include="Octokit, Version=0.50.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Octokit.0.50.0\lib\net46\Octokit.dll</HintPath>
-    </Reference>
-    <Reference Include="Pfim, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Pfim.0.10.0\lib\netstandard2.0\Pfim.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="SimplePsd, Version=1.0.6.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>resources\dlls\SimplePsd.dll</HintPath>
-    </Reference>
-    <Reference Include="Svg, Version=3.2.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
-      <HintPath>..\packages\Svg.3.2.3\lib\net461\Svg.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core" />
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="WindowsFormsIntegration" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="controls\QuickPictureBox.cs">
+    <Compile Update="controls\QuickPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="languages\lang_hr.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_hr.resx</DependentUpon>
-    </Compile>
-    <Compile Include="typewrappers\BitmapWrapper.cs" />
-    <Compile Include="typewrappers\Cr2Wrapper.cs" />
-    <Compile Include="helpers\CustomJumplist.cs" />
-    <Compile Include="helpers\CustomOpenFolderDialog.cs" />
-    <Compile Include="controls\CustomPanel.cs">
+    <Compile Update="controls\CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="typewrappers\DdsTgaWrapper.cs" />
-    <Compile Include="typewrappers\IcoWrapper.cs" />
-    <Compile Include="typewrappers\system\FileTypeMan.cs" />
-    <Compile Include="typewrappers\system\TypeWrapper.cs" />
-    <Compile Include="typewrappers\WebpWrapper.cs" />
-    <Compile Include="typewrappers\engines\IcoEngine.cs" />
-    <Compile Include="forms\InfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\InfoForm.Designer.cs">
-      <DependentUpon>InfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="languages\lang_cn.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_cn.resx</DependentUpon>
-    </Compile>
-    <Compile Include="languages\lang_de.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_de.resx</DependentUpon>
-    </Compile>
-    <Compile Include="languages\lang_en.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_en.resx</DependentUpon>
-    </Compile>
-    <Compile Include="languages\lang_es.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_es.resx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="languages\lang_fr.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_fr.resx</DependentUpon>
-    </Compile>
-    <Compile Include="languages\lang_hu.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_hu.resx</DependentUpon>
-    </Compile>
-    <Compile Include="languages\lang_ru.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>lang_ru.resx</DependentUpon>
-    </Compile>
-    <Compile Include="forms\MiniViewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\MiniViewForm.Designer.cs">
-      <DependentUpon>MiniViewForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="forms\SelectionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\SelectionForm.Designer.cs">
-      <DependentUpon>SelectionForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\PluginManForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\PluginManForm.Designer.cs">
-      <DependentUpon>PluginManForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="typewrappers\SvgWrapper.cs" />
-    <Compile Include="typewrappers\PsdWrapper.cs" />
-    <Compile Include="forms\SettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\SettingsForm.Designer.cs">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="helpers\ShellManager.cs" />
-    <Compile Include="typewrappers\forms\SvgOpsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="typewrappers\forms\SvgOpsForm.Designer.cs">
-      <DependentUpon>SvgOpsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\PrintForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\PrintForm.Designer.cs">
-      <DependentUpon>PrintForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\EditSelForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\EditSelForm.Designer.cs">
-      <DependentUpon>EditSelForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\WallpaperForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\WallpaperForm.Designer.cs">
-      <DependentUpon>WallpaperForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\AboutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\AboutForm.Designer.cs">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="typewrappers\engines\WebpEngine.cs" />
-    <EmbeddedResource Include="forms\InfoForm.resx">
-      <DependentUpon>InfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_ar.resx" />
-    <EmbeddedResource Include="languages\lang_cn.resx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_cn.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_de.resx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_de.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_es.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_fr.resx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_fr.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_hr.resx">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_hr.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_hu.resx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_hu.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_it.resx" />
-    <EmbeddedResource Include="languages\lang_ja.resx" />
-    <EmbeddedResource Include="languages\lang_pl.resx" />
-    <EmbeddedResource Include="languages\lang_ru.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_ru.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_en.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\MiniViewForm.resx">
-      <DependentUpon>MiniViewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\SelectionForm.resx">
-      <DependentUpon>SelectionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\PluginManForm.resx">
-      <DependentUpon>PluginManForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\PrintForm.resx">
-      <DependentUpon>PrintForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\SettingsForm.resx">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="languages\lang_tr.resx" />
-    <EmbeddedResource Include="typewrappers\forms\SvgOpsForm.resx">
-      <DependentUpon>SvgOpsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\EditSelForm.resx">
-      <DependentUpon>EditSelForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\WallpaperForm.resx">
-      <DependentUpon>WallpaperForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\AboutForm.resx">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="app.manifest" />
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\imgs\light\white-zoomout.png" />
-    <None Include="resources\imgs\light\white-zoomin.png" />
-    <None Include="resources\imgs\light\white-zoom.png" />
-    <None Include="resources\imgs\light\white-trash.png" />
-    <None Include="resources\imgs\light\white-size.png" />
-    <None Include="resources\imgs\light\white-saveas.png" />
-    <None Include="resources\imgs\light\white-rotater.png" />
-    <None Include="resources\imgs\light\white-rotatel.png" />
-    <None Include="resources\imgs\light\white-print.png" />
-    <None Include="resources\imgs\light\white-prev.png" />
-    <None Include="resources\imgs\light\white-popup.png" />
-    <None Include="resources\imgs\light\white-picfolder.png" />
-    <None Include="resources\imgs\light\white-paste.png" />
-    <None Include="resources\imgs\light\white-open.png" />
-    <None Include="resources\imgs\light\white-ontop.png" />
-    <None Include="resources\imgs\light\white-next.png" />
-    <None Include="resources\imgs\light\white-info.png" />
-    <None Include="resources\imgs\light\white-imgfile.png" />
-    <None Include="resources\imgs\light\white-history.png" />
-    <None Include="resources\imgs\light\white-grid.png" />
-    <None Include="resources\imgs\light\white-fullscreen.png" />
-    <None Include="resources\imgs\light\white-flipv.png" />
-    <None Include="resources\imgs\light\white-fliph.png" />
-    <None Include="resources\imgs\light\white-erase.png" />
-    <None Include="resources\imgs\light\white-desktop.png" />
-    <None Include="resources\imgs\light\white-copy.png" />
-    <None Include="resources\imgs\light\white-clock.png" />
-    <None Include="resources\imgs\light\white-autozoom.png" />
-    <None Include="resources\imgs\light\white-about.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -430,107 +69,26 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\imgs\light\white-settings.png" />
-    <None Include="resources\imgs\light\white-close.png" />
-    <None Include="resources\imgs\light\white-miniview.png" />
-    <None Include="resources\imgs\light\white-newwindow.png" />
-    <None Include="resources\imgs\light\white-sync.png" />
-    <None Include="resources\imgs\light\white-crop.png" />
-    <None Include="resources\imgs\light\white-degree.png" />
-    <None Include="resources\imgs\light\white-edit.png" />
-    <None Include="resources\imgs\light\white-options.png" />
-    <None Include="resources\imgs\light\white-more.png" />
-    <None Include="resources\imgs\light\white-slideshow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\imgs\dark\black-close.png" />
-    <None Include="resources\imgs\light\white-square.png" />
-    <None Include="resources\imgs\light\white-restore.png" />
-    <None Include="resources\imgs\light\white-line.png" />
-    <None Include="resources\imgs\light\white-image.png" />
-    <None Include="resources\imgs\light\white-move.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\imgs\light\white-opacity.png" />
-    <None Include="resources\imgs\dark\black-tools.png" />
-    <None Include="resources\imgs\dark\black-effects.png" />
-    <None Include="resources\imgs\light\white-effects.png" />
-    <None Include="resources\imgs\light\white-tools.png" />
-    <None Include="resources\imgs\dark\black-saveas.png" />
-    <None Include="resources\imgs\dark\black-sync.png" />
-    <None Include="resources\imgs\dark\black-website.png" />
-    <None Include="resources\imgs\light\white-website.png" />
-    <None Include="resources\imgs\light\white-warning.png" />
-    <None Include="resources\imgs\dark\black-newwindow.png" />
-    <None Include="resources\imgs\dark\black-trash.png" />
-    <None Include="resources\imgs\dark\black-grid.png" />
-    <None Include="resources\imgs\dark\black-open.png" />
-    <None Include="resources\imgs\light\white-check.png" />
-    <None Include="resources\imgs\dark\black-check.png" />
-    <None Include="resources\imgs\dark\black-options.png" />
-    <None Include="resources\imgs\dark\black-plugin.png" />
-    <None Include="resources\imgs\light\white-plugin.png" />
-    <None Include="resources\imgs\light\white-angle.png" />
-    <None Include="resources\imgs\dark\black-angle.png" />
-    <None Include="resources\imgs\light\white-frame.png" />
-    <None Include="resources\imgs\light\white-actualsize.png" />
-    <None Include="resources\imgs\dark\black-palette.png" />
-    <None Include="resources\imgs\light\white-palette.png" />
-    <None Include="resources\imgs\light\white-paint.png" />
-    <None Include="resources\imgs\dark\black-paint.png" />
-    <None Include="resources\imgs\dark\black-square.png" />
-    <None Include="resources\imgs\dark\black-line.png" />
-    <None Include="resources\imgs\light\white-exe.png" />
-    <None Include="resources\imgs\light\white-list.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\imgs\dark\black-filtering.png" />
-    <None Include="resources\imgs\light\white-filtering.png" />
-    <None Include="resources\imgs\light\white-bilinear.png" />
-    <None Include="resources\imgs\light\white-nearest-neighbor.png" />
-    <None Include="resources\imgs\dark\black-bilinear.png" />
-    <None Include="resources\imgs\dark\black-nearest-neighbor.png" />
     <Content Include="resources\imgs\picture.ico" />
-    <None Include="resources\imgs\dark\black-save.png" />
-    <None Include="resources\imgs\light\white-save.png" />
-    <None Include="resources\imgs\light\white-cut.png" />
-    <None Include="resources\imgs\dark\black-cut.png" />
-    <None Include="resources\imgs\dark\black-permdel.png" />
-    <None Include="resources\imgs\light\white-permdel.png" />
-    <None Include="resources\imgs\dark\black-about.png" />
-    <None Include="resources\imgs\dark\black-settings.png" />
-    <None Include="resources\imgs\dark\black-desktop.png" />
-    <None Include="resources\imgs\light\white-editsel.png" />
-    <None Include="resources\imgs\dark\black-editsel.png" />
-    <None Include="resources\imgs\dark\black-actualsize.png" />
-    <None Include="resources\imgs\dark\black-selectall.png" />
-    <None Include="resources\imgs\light\white-selectall.png" />
-    <None Include="resources\imgs\dark\black-arrows.png" />
-    <None Include="resources\imgs\light\white-arrows.png" />
-    <None Include="resources\imgs\dark\black-crop.png" />
-    <None Include="resources\imgs\light\white-selection.png" />
-    <None Include="resources\imgs\dark\black-selection.png" />
-    <None Include="resources\imgs\dark\black-recursive.png" />
-    <None Include="resources\imgs\light\white-recursive.png" />
-    <None Include="resources\imgs\dark\black-picfolder.png" />
-    <None Include="resources\imgs\dark\black-imgfile.png" />
-    <None Include="resources\imgs\dark\black-image.png" />
-    <None Include="resources\imgs\dark\black-copy.png" />
-    <None Include="resources\imgs\dark\black-rotater.png" />
-    <None Include="resources\imgs\dark\black-edit.png" />
-    <None Include="resources\imgs\dark\black-paste.png" />
-    <None Include="resources\imgs\light\white-statusbar.png" />
-    <None Include="resources\imgs\light\white-toolbar.png" />
-    <None Include="resources\imgs\dark\black-toolbar.png" />
-    <None Include="resources\imgs\dark\black-statusbar.png" />
-    <None Include="resources\imgs\light\white-show.png" />
-    <None Include="resources\imgs\dark\black-show.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj">
-      <Project>{90f913b5-1b48-4e7b-83aa-21c0946b4f81}</Project>
-      <Name>QuickLibrary</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <PackageReference Include="Fizzler" Version="1.3.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Octokit" Version="0.50.0" />
+    <PackageReference Include="Pfim" Version="0.10.0" />
+    <PackageReference Include="Svg" Version="3.2.3" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="WindowsAPICodePack-Core" Version="1.1.2" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.3.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SimplePsd">
+      <HintPath>..\libs\SimplePsd.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
