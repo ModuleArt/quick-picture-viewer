@@ -16,11 +16,12 @@
   <a title="Crowdin" target="_blank" href="https://crowdin.com/project/quick-picture-viewer"><img src="https://badges.crowdin.net/quick-picture-viewer/localized.svg"></a>
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF" />
-  </a>
+  </a><br>
   <a href="https://moduleart.github.io/quick-picture-viewer">
     <img src="/docs/screenshots/main.png">
   </a>
   <br>
+  v3.1.5  - December 21, 2023 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.5/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a><br>
   v3.1.4 (Stable) - May 9, 2021 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.4/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a>
   <br><br>
   <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">Older versions and release notes</a>
@@ -103,27 +104,36 @@ scoop install quick-picture-viewer
 
 ## 🔨 Contribution:
 
-Help Module Art!
+#### Help Module Art!
 
 - Give us a star ⭐
 - Fork and Clone! Awesome
 - Select existing <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">issues</a> or create a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
 
-How to clone:
+#### How to clone:
+
+1. Clone:
 
 ```powershell
-git clone --recurse-submodules https://github.com/ModuleArt/quick-picture-viewer
+git clone --recurse-submodules https://github.com/ModuleArt/qpv-plugins
+```
+
+2. Download submodules:
+
+```
 git submodule init
 git submodule update
 ```
 
-Code contributors:
+3. Build submodules.
 
-- <a href="https://github.com/adriengivry">adriengivry</a> - Texture filtering modes
-- <a href="https://github.com/FLeXyo">FLeXyo</a> - Open folder recursively feature
+#### Code contributors:
+
+- <a href="https://github.com/adriengivry">adriengivry</a> - <a href="https://github.com/ModuleArt/quick-picture-viewer/pull/133">Texture filtering modes</a>
+- <a href="https://github.com/FLeXyo">FLeXyo</a> - <a href="https://github.com/ModuleArt/quick-picture-viewer/pull/50">Open folder recursively feature</a>
 - <a href="https://github.com/Beelink">Beelink</a> - Everything else 😘
 
-Translation contributors:
+#### Translation contributors:
 
 - Arabic: <a href="https://github.com/Jalal-Althahab">Jalal-Althahab</a>
 - Chinese: <a href="https://github.com/jiwangyihao">jiwangyihao</a>
@@ -138,10 +148,10 @@ Translation contributors:
 
 <a href="https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app">Help us translate this app</a>
 
-## 🔗 Useful links:
+## 📦 Related projects:
 
-- <a href="https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/">How to uninstall built-in photos app in Windows 10</a>
-- <a href="https://github.com/tibold/svg-explorer-extension/">Extension module for Windows Explorer to render SVG thumbnails</a>
+- <a href="https://github.com/ModuleArt/quick-library/">Quick Library</a> - Windows Forms Control class library for "Quick" apps (.NET Framework)<br>
+- <a href="https://github.com/ModuleArt/qpv-plugins/">QPV Plugins</a> - Set of preinstalled plugins for the <a href="https://moduleart.github.io/quick-picture-viewer/">Quick Picture Viewer</a>
 
 ## 🧰 Other great apps:
 

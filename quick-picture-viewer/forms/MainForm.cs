@@ -69,7 +69,7 @@ namespace quick_picture_viewer
 			zoomTextBox.Height = 21;
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
 			zoomTextBox.LostFocus += PicturePanel_LostFocus;
-			zoomTextBox.TextBox.ContextMenu = new ContextMenu();
+			zoomTextBox.TextBox.ContextMenuStrip = new ContextMenuStrip();
 
 			SetDarkMode(darkMode);
 			InitLanguage();
