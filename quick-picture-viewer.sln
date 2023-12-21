@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "quick-picture-viewer", "quick-picture-viewer\quick-picture-viewer.csproj", "{53748C49-255E-424B-B789-5919CEFEF473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLibrary", "dependencies\quick-library\QuickLibrary\QuickLibrary.csproj", "{90F913B5-1B48-4E7B-83AA-21C0946B4F81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "qpv-plugins", "dependencies\qpv-plugins\qpv-plugins\qpv-plugins.csproj", "{92A1C3C9-BF8B-4141-800A-F5782018BDB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickLibrary", "dependencies\qpv-plugins\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj", "{607B9F79-472A-425A-93AB-89DD81811F22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{53748C49-255E-424B-B789-5919CEFEF473}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53748C49-255E-424B-B789-5919CEFEF473}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53748C49-255E-424B-B789-5919CEFEF473}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90F913B5-1B48-4E7B-83AA-21C0946B4F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90F913B5-1B48-4E7B-83AA-21C0946B4F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90F913B5-1B48-4E7B-83AA-21C0946B4F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90F913B5-1B48-4E7B-83AA-21C0946B4F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A1C3C9-BF8B-4141-800A-F5782018BDB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A1C3C9-BF8B-4141-800A-F5782018BDB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A1C3C9-BF8B-4141-800A-F5782018BDB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A1C3C9-BF8B-4141-800A-F5782018BDB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607B9F79-472A-425A-93AB-89DD81811F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607B9F79-472A-425A-93AB-89DD81811F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607B9F79-472A-425A-93AB-89DD81811F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607B9F79-472A-425A-93AB-89DD81811F22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,10 +9,7 @@ namespace quick_picture_viewer
 		[STAThread]
 		static void Main(string[] args)
 		{
-			NativeMan.SetProcessDpiAwarenessContext(NativeMan.DPI_AWARENESS_CONTEXT.DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
-
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
+			ApplicationConfiguration.Initialize();
 
 			string param;
 			if (args.Length > 0) param = args[0] == "-1" ? string.Empty : args[0];
