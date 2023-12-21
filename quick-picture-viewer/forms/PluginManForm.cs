@@ -167,12 +167,20 @@ namespace quick_picture_viewer
 
 		private void morePluginsBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/ModuleArt/qpv-plugins");
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "https://github.com/ModuleArt/qpv-plugins"
+			});
 		}
 
 		private void pluginWebsiteBtn_Click(object sender, EventArgs e)
 		{
-			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0) Process.Start(pluginsLinks[listView1.SelectedIndices[0]]);
+			if (listView1.SelectedIndices != null && listView1.SelectedIndices.Count > 0) Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = pluginsLinks[listView1.SelectedIndices[0]]
+			});
 		}
 
 		private void AutoSizeColumns()

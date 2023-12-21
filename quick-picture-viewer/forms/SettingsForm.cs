@@ -3,6 +3,7 @@ using QuickLibrary;
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace quick_picture_viewer
@@ -311,7 +312,11 @@ namespace quick_picture_viewer
 
 		private void Ll_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/" + (sender as LinkLabel).Text);
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "https://github.com/" + (sender as LinkLabel).Text
+			});
 		}
 
 		private void SettingsForm_Load(object sender, EventArgs e)
@@ -475,8 +480,13 @@ namespace quick_picture_viewer
 			{
 				const string browseWithKey1 = "HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\QuickPictureViewer";
 				const string browseWithKey2 = "HKEY_CLASSES_ROOT\\Directory\\shell\\QuickPictureViewer";
-				string browseWithValue1 = (string)Registry.GetValue(browseWithKey1, string.Empty, string.Empty);
-				string browseWithValue2 = (string)Registry.GetValue(browseWithKey2, string.Empty, string.Empty);
+
+				string key1 = Registry.GetValue(browseWithKey1, string.Empty, string.Empty)?.ToString();
+				string key2 = Registry.GetValue(browseWithKey2, string.Empty, string.Empty)?.ToString();
+
+				string browseWithValue1 = !String.IsNullOrEmpty(key1) ? key1.ToString() : "";
+				string browseWithValue2 = !String.IsNullOrEmpty(key2) ? key2.ToString() : "";
+
 				if (browseWithValue1.Length > 0 && browseWithValue2.Length > 0) return true;
 				return false;
 			}
@@ -488,12 +498,20 @@ namespace quick_picture_viewer
 
 		private void makeDefaultBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("ms-settings:defaultapps");
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "ms-settings:defaultapps"
+			});
 		}
 
 		private void helpTranslateBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app");
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "https://github.com/ModuleArt/quick-picture-viewer/wiki/Help-us-translate-this-app"
+			});
 		}
 	}
 }

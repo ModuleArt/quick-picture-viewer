@@ -53,7 +53,11 @@ namespace quick_picture_viewer
 
 		private void makeDefaultBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("ms-settings:defaultapps");
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "ms-settings:defaultapps"
+			});
 		}
 
 		private void updatesBtn_Click(object sender, EventArgs e)
@@ -64,12 +68,20 @@ namespace quick_picture_viewer
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/ModuleArt/quick-picture-viewer/");
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "https://github.com/ModuleArt/quick-picture-viewer/"
+			});
 		}
 
 		private void developerBtn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://moduleart.github.io");
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "https://moduleart.github.io"
+			});
 		}
 	}
 }

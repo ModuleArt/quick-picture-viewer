@@ -27,214 +27,211 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
+			components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
-			this.productLabel = new System.Windows.Forms.Label();
-			this.versionLabel = new System.Windows.Forms.Label();
-			this.infoTooltip = new System.Windows.Forms.ToolTip(this.components);
-			this.closeBtn = new QuickLibrary.QlibTitlebarButton();
-			this.developerBtn = new System.Windows.Forms.Button();
-			this.githubBtn = new System.Windows.Forms.Button();
-			this.descTextBox = new System.Windows.Forms.TextBox();
-			this.makeDefaultBtn = new System.Windows.Forms.Button();
-			this.copyrightLabel = new System.Windows.Forms.Label();
-			this.updatesBtn = new System.Windows.Forms.Button();
-			this.logoPictureBox = new System.Windows.Forms.PictureBox();
-			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
-			this.SuspendLayout();
+			productLabel = new System.Windows.Forms.Label();
+			versionLabel = new System.Windows.Forms.Label();
+			infoTooltip = new System.Windows.Forms.ToolTip(components);
+			closeBtn = new QuickLibrary.QlibTitlebarButton();
+			developerBtn = new System.Windows.Forms.Button();
+			githubBtn = new System.Windows.Forms.Button();
+			descTextBox = new System.Windows.Forms.TextBox();
+			makeDefaultBtn = new System.Windows.Forms.Button();
+			copyrightLabel = new System.Windows.Forms.Label();
+			updatesBtn = new System.Windows.Forms.Button();
+			logoPictureBox = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
+			SuspendLayout();
 			// 
 			// productLabel
 			// 
-			this.productLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.productLabel.Location = new System.Drawing.Point(10, 170);
-			this.productLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-			this.productLabel.Name = "productLabel";
-			this.productLabel.Size = new System.Drawing.Size(280, 19);
-			this.productLabel.TabIndex = 27;
-			this.productLabel.Text = "Quick Picture Viewer";
-			this.productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			productLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+			productLabel.Location = new System.Drawing.Point(10, 170);
+			productLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+			productLabel.Name = "productLabel";
+			productLabel.Size = new System.Drawing.Size(280, 19);
+			productLabel.TabIndex = 27;
+			productLabel.Text = "Quick Picture Viewer";
+			productLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// versionLabel
 			// 
-			this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.versionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(124)))), ((int)(((byte)(76)))));
-			this.versionLabel.Location = new System.Drawing.Point(10, 199);
-			this.versionLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.versionLabel.Name = "versionLabel";
-			this.versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.versionLabel.Size = new System.Drawing.Size(280, 19);
-			this.versionLabel.TabIndex = 28;
-			this.versionLabel.Text = "version";
-			this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			versionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+			versionLabel.ForeColor = System.Drawing.Color.FromArgb(146, 124, 76);
+			versionLabel.Location = new System.Drawing.Point(10, 199);
+			versionLabel.Margin = new System.Windows.Forms.Padding(0);
+			versionLabel.Name = "versionLabel";
+			versionLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			versionLabel.Size = new System.Drawing.Size(280, 19);
+			versionLabel.TabIndex = 28;
+			versionLabel.Text = "version";
+			versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// closeBtn
 			// 
-			this.closeBtn.DarkImage = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.DarkMode = false;
-			this.closeBtn.FlatAppearance.BorderSize = 0;
-			this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-			this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.closeBtn.ForeColor = System.Drawing.Color.Black;
-			this.closeBtn.Image = global::quick_picture_viewer.Properties.Resources.black_close;
-			this.closeBtn.IsRed = true;
-			this.closeBtn.LightImage = global::quick_picture_viewer.Properties.Resources.white_close;
-			this.closeBtn.Location = new System.Drawing.Point(268, 0);
-			this.closeBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.closeBtn.Name = "closeBtn";
-			this.closeBtn.Size = new System.Drawing.Size(32, 32);
-			this.closeBtn.TabIndex = 4;
-			this.infoTooltip.SetToolTip(this.closeBtn, "Close (Alt+F4)");
-			this.closeBtn.UseVisualStyleBackColor = true;
-			this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+			closeBtn.DarkImage = Properties.Resources.black_close;
+			closeBtn.DarkMode = false;
+			closeBtn.FlatAppearance.BorderSize = 0;
+			closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(140, 140, 140);
+			closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(204, 204, 204);
+			closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			closeBtn.ForeColor = System.Drawing.Color.Black;
+			closeBtn.Image = Properties.Resources.black_close;
+			closeBtn.IsRed = true;
+			closeBtn.LightImage = Properties.Resources.white_close;
+			closeBtn.Location = new System.Drawing.Point(268, 0);
+			closeBtn.Margin = new System.Windows.Forms.Padding(0);
+			closeBtn.Name = "closeBtn";
+			closeBtn.Size = new System.Drawing.Size(32, 32);
+			closeBtn.TabIndex = 4;
+			infoTooltip.SetToolTip(closeBtn, "Close (Alt+F4)");
+			closeBtn.UseVisualStyleBackColor = true;
+			closeBtn.Click += closeBtn_Click;
 			// 
 			// developerBtn
 			// 
-			this.developerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
-			this.developerBtn.FlatAppearance.BorderSize = 0;
-			this.developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
-			this.developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
-			this.developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.developerBtn.Image = ((System.Drawing.Image)(resources.GetObject("developerBtn.Image")));
-			this.developerBtn.Location = new System.Drawing.Point(155, 376);
-			this.developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.developerBtn.Name = "developerBtn";
-			this.developerBtn.Size = new System.Drawing.Size(135, 32);
-			this.developerBtn.TabIndex = 2;
-			this.developerBtn.Text = " Module Art";
-			this.developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.infoTooltip.SetToolTip(this.developerBtn, "moduleart.github.io");
-			this.developerBtn.UseVisualStyleBackColor = false;
-			this.developerBtn.Click += new System.EventHandler(this.developerBtn_Click);
+			developerBtn.BackColor = System.Drawing.Color.FromArgb(217, 184, 113);
+			developerBtn.FlatAppearance.BorderSize = 0;
+			developerBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(170, 144, 88);
+			developerBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
+			developerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			developerBtn.Image = (System.Drawing.Image)resources.GetObject("developerBtn.Image");
+			developerBtn.Location = new System.Drawing.Point(155, 376);
+			developerBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			developerBtn.Name = "developerBtn";
+			developerBtn.Size = new System.Drawing.Size(135, 32);
+			developerBtn.TabIndex = 2;
+			developerBtn.Text = " Module Art";
+			developerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			developerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			infoTooltip.SetToolTip(developerBtn, "moduleart.github.io");
+			developerBtn.UseVisualStyleBackColor = false;
+			developerBtn.Click += developerBtn_Click;
 			// 
 			// githubBtn
 			// 
-			this.githubBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
-			this.githubBtn.FlatAppearance.BorderSize = 0;
-			this.githubBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
-			this.githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
-			this.githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.githubBtn.Image = ((System.Drawing.Image)(resources.GetObject("githubBtn.Image")));
-			this.githubBtn.Location = new System.Drawing.Point(10, 376);
-			this.githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.githubBtn.Name = "githubBtn";
-			this.githubBtn.Size = new System.Drawing.Size(135, 32);
-			this.githubBtn.TabIndex = 1;
-			this.githubBtn.Text = " GitHub";
-			this.githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.infoTooltip.SetToolTip(this.githubBtn, "github.com/ModuleArt/quick-picture-viewer");
-			this.githubBtn.UseVisualStyleBackColor = false;
-			this.githubBtn.Click += new System.EventHandler(this.button1_Click);
+			githubBtn.BackColor = System.Drawing.Color.FromArgb(217, 184, 113);
+			githubBtn.FlatAppearance.BorderSize = 0;
+			githubBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(170, 144, 88);
+			githubBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
+			githubBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			githubBtn.Image = (System.Drawing.Image)resources.GetObject("githubBtn.Image");
+			githubBtn.Location = new System.Drawing.Point(10, 376);
+			githubBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			githubBtn.Name = "githubBtn";
+			githubBtn.Size = new System.Drawing.Size(135, 32);
+			githubBtn.TabIndex = 1;
+			githubBtn.Text = " GitHub";
+			githubBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			githubBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			infoTooltip.SetToolTip(githubBtn, "github.com/ModuleArt/quick-picture-viewer");
+			githubBtn.UseVisualStyleBackColor = false;
+			githubBtn.Click += button1_Click;
 			// 
 			// descTextBox
 			// 
-			this.descTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(205)))), ((int)(((byte)(126)))));
-			this.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.descTextBox.Location = new System.Drawing.Point(20, 228);
-			this.descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.descTextBox.Multiline = true;
-			this.descTextBox.Name = "descTextBox";
-			this.descTextBox.ReadOnly = true;
-			this.descTextBox.Size = new System.Drawing.Size(260, 96);
-			this.descTextBox.TabIndex = 5;
-			this.descTextBox.Text = "description";
-			this.descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			descTextBox.BackColor = System.Drawing.Color.FromArgb(241, 205, 126);
+			descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			descTextBox.Location = new System.Drawing.Point(20, 228);
+			descTextBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			descTextBox.Multiline = true;
+			descTextBox.Name = "descTextBox";
+			descTextBox.ReadOnly = true;
+			descTextBox.Size = new System.Drawing.Size(260, 96);
+			descTextBox.TabIndex = 5;
+			descTextBox.Text = "description";
+			descTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// makeDefaultBtn
 			// 
-			this.makeDefaultBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
-			this.makeDefaultBtn.Enabled = false;
-			this.makeDefaultBtn.FlatAppearance.BorderSize = 0;
-			this.makeDefaultBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
-			this.makeDefaultBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
-			this.makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.makeDefaultBtn.Location = new System.Drawing.Point(10, 418);
-			this.makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-			this.makeDefaultBtn.Name = "makeDefaultBtn";
-			this.makeDefaultBtn.Size = new System.Drawing.Size(280, 32);
-			this.makeDefaultBtn.TabIndex = 3;
-			this.makeDefaultBtn.Text = "set as default photo viewer";
-			this.makeDefaultBtn.UseVisualStyleBackColor = false;
-			this.makeDefaultBtn.Click += new System.EventHandler(this.makeDefaultBtn_Click);
+			makeDefaultBtn.BackColor = System.Drawing.Color.FromArgb(217, 184, 113);
+			makeDefaultBtn.Enabled = false;
+			makeDefaultBtn.FlatAppearance.BorderSize = 0;
+			makeDefaultBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(170, 144, 88);
+			makeDefaultBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
+			makeDefaultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			makeDefaultBtn.Location = new System.Drawing.Point(10, 418);
+			makeDefaultBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+			makeDefaultBtn.Name = "makeDefaultBtn";
+			makeDefaultBtn.Size = new System.Drawing.Size(280, 32);
+			makeDefaultBtn.TabIndex = 3;
+			makeDefaultBtn.Text = "set as default photo viewer";
+			makeDefaultBtn.UseVisualStyleBackColor = false;
+			makeDefaultBtn.Click += makeDefaultBtn_Click;
 			// 
 			// copyrightLabel
 			// 
-			this.copyrightLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.copyrightLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(124)))), ((int)(((byte)(76)))));
-			this.copyrightLabel.Location = new System.Drawing.Point(10, 470);
-			this.copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-			this.copyrightLabel.Name = "copyrightLabel";
-			this.copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.copyrightLabel.Size = new System.Drawing.Size(280, 19);
-			this.copyrightLabel.TabIndex = 44;
-			this.copyrightLabel.Text = "Copyright © 2021 Module Art";
-			this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			copyrightLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+			copyrightLabel.ForeColor = System.Drawing.Color.FromArgb(146, 124, 76);
+			copyrightLabel.Location = new System.Drawing.Point(10, 470);
+			copyrightLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+			copyrightLabel.Name = "copyrightLabel";
+			copyrightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			copyrightLabel.Size = new System.Drawing.Size(280, 19);
+			copyrightLabel.TabIndex = 44;
+			copyrightLabel.Text = "Copyright © 2023 Module Art";
+			copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// updatesBtn
 			// 
-			this.updatesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
-			this.updatesBtn.FlatAppearance.BorderSize = 0;
-			this.updatesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(144)))), ((int)(((byte)(88)))));
-			this.updatesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
-			this.updatesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.updatesBtn.Image = global::quick_picture_viewer.Properties.Resources.black_sync;
-			this.updatesBtn.Location = new System.Drawing.Point(10, 334);
-			this.updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.updatesBtn.Name = "updatesBtn";
-			this.updatesBtn.Size = new System.Drawing.Size(280, 32);
-			this.updatesBtn.TabIndex = 0;
-			this.updatesBtn.Text = " check for updates";
-			this.updatesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.updatesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.updatesBtn.UseVisualStyleBackColor = false;
-			this.updatesBtn.Click += new System.EventHandler(this.updatesBtn_Click);
+			updatesBtn.BackColor = System.Drawing.Color.FromArgb(217, 184, 113);
+			updatesBtn.FlatAppearance.BorderSize = 0;
+			updatesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(170, 144, 88);
+			updatesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(193, 164, 101);
+			updatesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			updatesBtn.Image = Properties.Resources.black_sync;
+			updatesBtn.Location = new System.Drawing.Point(10, 334);
+			updatesBtn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			updatesBtn.Name = "updatesBtn";
+			updatesBtn.Size = new System.Drawing.Size(280, 32);
+			updatesBtn.TabIndex = 0;
+			updatesBtn.Text = " check for updates";
+			updatesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			updatesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			updatesBtn.UseVisualStyleBackColor = false;
+			updatesBtn.Click += updatesBtn_Click;
 			// 
 			// logoPictureBox
 			// 
-			this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-			this.logoPictureBox.Location = new System.Drawing.Point(0, 32);
-			this.logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
-			this.logoPictureBox.Name = "logoPictureBox";
-			this.logoPictureBox.Size = new System.Drawing.Size(300, 128);
-			this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.logoPictureBox.TabIndex = 41;
-			this.logoPictureBox.TabStop = false;
+			logoPictureBox.Image = (System.Drawing.Image)resources.GetObject("logoPictureBox.Image");
+			logoPictureBox.Location = new System.Drawing.Point(0, 32);
+			logoPictureBox.Margin = new System.Windows.Forms.Padding(0);
+			logoPictureBox.Name = "logoPictureBox";
+			logoPictureBox.Size = new System.Drawing.Size(300, 128);
+			logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			logoPictureBox.TabIndex = 41;
+			logoPictureBox.TabStop = false;
 			// 
 			// AboutForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.ClientSize = new System.Drawing.Size(300, 509);
-			this.Controls.Add(this.closeBtn);
-			this.Controls.Add(this.developerBtn);
-			this.Controls.Add(this.githubBtn);
-			this.Controls.Add(this.updatesBtn);
-			this.Controls.Add(this.copyrightLabel);
-			this.Controls.Add(this.makeDefaultBtn);
-			this.Controls.Add(this.descTextBox);
-			this.Controls.Add(this.logoPictureBox);
-			this.Controls.Add(this.versionLabel);
-			this.Controls.Add(this.productLabel);
-			this.CustomBack = true;
-			this.CustomBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(205)))), ((int)(((byte)(126)))));
-			this.Draggable = true;
-			this.EscToClose = true;
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MaximizeBox = false;
-			this.MinimizeBox = false;
-			this.Name = "AboutForm";
-			this.ShowIcon = false;
-			this.ShowInTaskbar = false;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "AboutForm";
-			this.Load += new System.EventHandler(this.AboutForm_Load);
-			((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
-
+			AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			ClientSize = new System.Drawing.Size(300, 509);
+			Controls.Add(closeBtn);
+			Controls.Add(developerBtn);
+			Controls.Add(githubBtn);
+			Controls.Add(updatesBtn);
+			Controls.Add(copyrightLabel);
+			Controls.Add(makeDefaultBtn);
+			Controls.Add(descTextBox);
+			Controls.Add(logoPictureBox);
+			Controls.Add(versionLabel);
+			Controls.Add(productLabel);
+			CustomBack = true;
+			CustomBackColor = System.Drawing.Color.FromArgb(241, 205, 126);
+			Draggable = true;
+			EscToClose = true;
+			Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
+			MinimizeBox = false;
+			Name = "AboutForm";
+			ShowIcon = false;
+			ShowInTaskbar = false;
+			StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			Text = "AboutForm";
+			Load += AboutForm_Load;
+			((System.ComponentModel.ISupportInitialize)logoPictureBox).EndInit();
+			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion

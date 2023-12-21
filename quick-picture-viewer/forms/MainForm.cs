@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace quick_picture_viewer
 {
@@ -1383,7 +1384,12 @@ namespace quick_picture_viewer
 		{
 			string args = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "shell32.dll");
 			args += ",OpenAs_RunDLL " + path;
-			Process.Start("rundll32.exe", args);
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = "rundll32.exe",
+				Arguments = args
+			});
 		}
 
 		private void externalButton_Click(object sender, EventArgs e)
@@ -1744,7 +1750,11 @@ namespace quick_picture_viewer
 
 		public void NewWindow()
 		{
-			Process.Start(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "quick-picture-viewer.exe"));
+			Process.Start(new ProcessStartInfo
+			{
+				UseShellExecute = true,
+				FileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "quick-picture-viewer.exe")
+			});
 		}
 
 		private void rotate180Button_Click(object sender, EventArgs e)
@@ -1823,7 +1833,12 @@ namespace quick_picture_viewer
 			{
 				string ext = "bmp";
 				if (currentFile != null) ext = Path.GetExtension(currentFile).Substring(1, Path.GetExtension(currentFile).Length - 1);
-				Process.Start(FileAssociation.GetExecFileAssociatedToExtension(ext), '"' + Path.Combine(currentFolder, currentFile) + '"');
+				Process.Start(new ProcessStartInfo
+				{
+					UseShellExecute = true,
+					FileName = FileAssociation.GetExecFileAssociatedToExtension(ext),
+					Arguments = '"' + Path.Combine(currentFolder, currentFile) + '"'
+				});
 			}
 			catch
 			{
@@ -1835,7 +1850,12 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				Process.Start(Properties.Settings.Default.FavoriteExternalApp, '"' + Path.Combine(currentFolder, currentFile) + '"');
+				Process.Start(new ProcessStartInfo
+				{
+					UseShellExecute = true,
+					FileName = Properties.Settings.Default.FavoriteExternalApp,
+					Arguments = '"' + Path.Combine(currentFolder, currentFile) + '"'
+				});
 			}
 			catch
 			{
@@ -2411,7 +2431,12 @@ namespace quick_picture_viewer
 			if (File.Exists(path))
 			{
 				string argument = "/select, \"" + path + "\"";
-				Process.Start("explorer.exe", argument);
+				Process.Start(new ProcessStartInfo
+				{
+					UseShellExecute = true,
+					FileName = "explorer.exe",
+					Arguments = argument
+				});
 			}
 			else
 			{

@@ -55,6 +55,11 @@
     <Compile Update="controls\CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -84,11 +89,17 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="QuickLibrary">
-      <HintPath>..\dependencies\quick-library\QuickLibrary\bin\Release\QuickLibrary.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="SimplePsd">
       <HintPath>..\libs\SimplePsd.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>
