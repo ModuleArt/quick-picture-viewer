@@ -64,7 +64,7 @@ namespace quick_picture_viewer
 			},
 			new Language
 			{
-				Code = "es",
+				Code = "tr",
 				Authors = new string[] { "ataberkcemunal" }
 			}
 		};
