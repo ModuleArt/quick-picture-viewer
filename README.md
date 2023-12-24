@@ -29,7 +29,6 @@
 
 ## 😃 Features:
 
-- 🖼️ Supported image formats: .png, .jpg, .jpeg, .jpe, .jfif, .exif, .gif, .bmp, .dib, .rle, .tiff, .tif, .ico, .webp, .svg, .dds, .tga, .psd, .cr2 ...
 - ✍️ Basic image editing: Rotate, flip, crop, change file type ...
 - 🧩 Plugins ready
 - ↗️ Open image with external app or show file in explorer
@@ -44,6 +43,23 @@
 - 🕶️ Dark mode
 
 Want more? Open a <a href="https://github.com/ModuleArt/quick-picture-viewer/issues/new">new issue</a> or 👍 an <a href="https://github.com/ModuleArt/quick-picture-viewer/issues">existing one</a> so we can talk about it.
+
+## 📄 Supported file formats:
+
+| File format | Extenstions                | Open | Save | Using                                                                                                   |
+| ----------- | -------------------------- | ---- | ---- | ------------------------------------------------------------------------------------------------------- |
+| PNG         | png                        | ✅   | ✅   | <a href="https://learn.microsoft.com/en-us/dotnet/api/system.drawing?view=net-8.0"> System.Drawing </a> |
+| JPEG        | jpg, jpeg, jpe, jfif, exif | ✅   | ✅   | <a href="https://learn.microsoft.com/en-us/dotnet/api/system.drawing?view=net-8.0"> System.Drawing </a> |
+| GIF         | gif                        | ✅   | ✅   | <a href="https://learn.microsoft.com/en-us/dotnet/api/system.drawing?view=net-8.0"> System.Drawing </a> |
+| BMP         | bmp, dib, rle              | ✅   | ✅   | <a href="https://learn.microsoft.com/en-us/dotnet/api/system.drawing?view=net-8.0"> System.Drawing </a> |
+| TIFF        | tiff, tif                  | ✅   | ✅   | <a href="https://learn.microsoft.com/en-us/dotnet/api/system.drawing?view=net-8.0"> System.Drawing </a> |
+| ICO         | ico                        | ✅   | ✅   |                                                                                                         |
+| WEBP        | webp                       | ✅   | ✅   | <a href="https://github.com/Sharp0802/WebP.Net"> WebP.Net </a>                                          |
+| SVG         | svg                        | ✅   | ❌   |                                                                                                         |
+| PSD         | psd                        | ✅   | ❌   |                                                                                                         |
+| DDS         | dds                        | ✅   | ❌   |                                                                                                         |
+| TGA         | tga                        | ✅   | ❌   |                                                                                                         |
+| CR2         | cr2                        | ✅   | ❌   |                                                                                                         |
 
 ## 🔮 Future plans:
 

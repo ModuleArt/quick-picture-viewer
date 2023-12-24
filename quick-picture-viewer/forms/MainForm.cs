@@ -413,8 +413,8 @@ namespace quick_picture_viewer
 					this,
 					LangMan.Get("unsaved-changes-question"),
 					windowTitle: LangMan.Get("unsaved-changes"),
-					yesBtnText: currentFile != null ? LangMan.Get("save-as") : LangMan.Get("save"),
-					yesBtnImage: currentFile != null ? saveAsBtn.Image : saveBtn.Image,
+					yesBtnText: currentFile == null ? LangMan.Get("save-as") : LangMan.Get("save"),
+					yesBtnImage: currentFile == null ? saveAsBtn.Image : saveBtn.Image,
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: permDeleteBtn.Image,
@@ -423,7 +423,7 @@ namespace quick_picture_viewer
 				);
 					if (window == DialogResult.Yes)
 					{
-						if (currentFile != null) saveAsBtn.PerformClick();
+						if (currentFile == null) saveAsBtn.PerformClick();
 						else saveBtn.PerformClick();
 					}
 					else if (window != DialogResult.No) return;
@@ -1586,8 +1586,8 @@ namespace quick_picture_viewer
 					this,
 					LangMan.Get("unsaved-changes-question"),
 					windowTitle: LangMan.Get("unsaved-changes"),
-					yesBtnText: currentFile != null ? LangMan.Get("save-as") : LangMan.Get("save"),
-					yesBtnImage: currentFile != null ? saveAsBtn.Image : saveBtn.Image,
+					yesBtnText: currentFile == null ? LangMan.Get("save-as") : LangMan.Get("save"),
+					yesBtnImage: currentFile == null ? saveAsBtn.Image : saveBtn.Image,
 					showNoBtn: true,
 					noBtnText: LangMan.Get("dont-save"),
 					noBtnImage: permDeleteBtn.Image,
@@ -1596,7 +1596,7 @@ namespace quick_picture_viewer
 				);
 				if (window == DialogResult.Yes)
 				{
-					if (currentFile != null) saveAsBtn.PerformClick();
+					if (currentFile == null) saveAsBtn.PerformClick();
 					else saveBtn.PerformClick();
 				}
 				else if (window != DialogResult.No) e.Cancel = true;
