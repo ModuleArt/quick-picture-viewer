@@ -113,7 +113,7 @@ namespace quick_picture_viewer
 			themeRestart.LinkColor = ThemeMan.AccentColor;
 			localizationRestart.LinkColor = ThemeMan.AccentColor;
 
-			if (ThemeMan.isWindows10()) makeDefaultBtn.Enabled = true;
+			if (ThemeMan.isWindows10orLater()) makeDefaultBtn.Enabled = true;
 		}
 
 		private void InitLanguage()

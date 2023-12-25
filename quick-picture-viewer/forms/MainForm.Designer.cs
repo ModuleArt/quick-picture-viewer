@@ -80,12 +80,12 @@
 			customAngleBtn = new System.Windows.Forms.ToolStripMenuItem();
 			toolStripSeparator7 = new QuickLibrary.QlibToolsep();
 			cropBtn = new System.Windows.Forms.ToolStripMenuItem();
-			filteringModeBtn = new System.Windows.Forms.ToolStripDropDownButton();
-			bilinearBtn = new System.Windows.Forms.ToolStripMenuItem();
-			nearestNeighborBtn = new System.Windows.Forms.ToolStripMenuItem();
 			effectsBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			toolsBtn = new System.Windows.Forms.ToolStripDropDownButton();
 			toolStripSeparator3 = new QuickLibrary.QlibToolsep();
+			filteringModeBtn = new System.Windows.Forms.ToolStripDropDownButton();
+			bilinearBtn = new System.Windows.Forms.ToolStripMenuItem();
+			nearestNeighborBtn = new System.Windows.Forms.ToolStripMenuItem();
 			checkboardButton = new System.Windows.Forms.ToolStripButton();
 			fullscreenBtn = new System.Windows.Forms.ToolStripButton();
 			miniViewButton = new System.Windows.Forms.ToolStripButton();
@@ -185,6 +185,7 @@
 			selectionLabel.Visible = false;
 			selectionLabel.VisitedLinkColor = System.Drawing.Color.Black;
 			selectionLabel.Click += selectionLabel_Click;
+			selectionLabel.MouseMove += selectionLabel_MouseMove;
 			// 
 			// directoryLabel
 			// 
@@ -201,6 +202,7 @@
 			directoryLabel.Visible = false;
 			directoryLabel.VisitedLinkColor = System.Drawing.Color.Black;
 			directoryLabel.Click += directoryLabel_Click;
+			directoryLabel.MouseMove += directoryLabel_MouseMove;
 			// 
 			// fileLabel
 			// 
@@ -720,38 +722,6 @@
 			cropBtn.Text = "crop";
 			cropBtn.Click += cropBtn_Click;
 			// 
-			// filteringModeBtn
-			// 
-			filteringModeBtn.AutoSize = false;
-			filteringModeBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			filteringModeBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { bilinearBtn, nearestNeighborBtn });
-			filteringModeBtn.Image = Properties.Resources.black_filtering;
-			filteringModeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-			filteringModeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-			filteringModeBtn.Margin = new System.Windows.Forms.Padding(0);
-			filteringModeBtn.Name = "filteringModeBtn";
-			filteringModeBtn.Size = new System.Drawing.Size(30, 25);
-			// 
-			// bilinearBtn
-			// 
-			bilinearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			bilinearBtn.ForeColor = System.Drawing.Color.Black;
-			bilinearBtn.Image = Properties.Resources.black_bilinear;
-			bilinearBtn.Name = "bilinearBtn";
-			bilinearBtn.Size = new System.Drawing.Size(186, 24);
-			bilinearBtn.Text = "Bilinear";
-			bilinearBtn.Click += bilinearBtn_Click;
-			// 
-			// nearestNeighborBtn
-			// 
-			nearestNeighborBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-			nearestNeighborBtn.ForeColor = System.Drawing.Color.Black;
-			nearestNeighborBtn.Image = Properties.Resources.black_nearest_neighbor;
-			nearestNeighborBtn.Name = "nearestNeighborBtn";
-			nearestNeighborBtn.Size = new System.Drawing.Size(186, 24);
-			nearestNeighborBtn.Text = "Nearest Neighbor";
-			nearestNeighborBtn.Click += nearestNeighborBtn_Click;
-			// 
 			// effectsBtn
 			// 
 			effectsBtn.AutoSize = false;
@@ -789,6 +759,38 @@
 			toolStripSeparator3.Name = "toolStripSeparator3";
 			toolStripSeparator3.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			toolStripSeparator3.Size = new System.Drawing.Size(1, 24);
+			// 
+			// filteringModeBtn
+			// 
+			filteringModeBtn.AutoSize = false;
+			filteringModeBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			filteringModeBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { bilinearBtn, nearestNeighborBtn });
+			filteringModeBtn.Image = Properties.Resources.black_filtering;
+			filteringModeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+			filteringModeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+			filteringModeBtn.Margin = new System.Windows.Forms.Padding(0);
+			filteringModeBtn.Name = "filteringModeBtn";
+			filteringModeBtn.Size = new System.Drawing.Size(30, 25);
+			// 
+			// bilinearBtn
+			// 
+			bilinearBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			bilinearBtn.ForeColor = System.Drawing.Color.Black;
+			bilinearBtn.Image = Properties.Resources.black_bilinear;
+			bilinearBtn.Name = "bilinearBtn";
+			bilinearBtn.Size = new System.Drawing.Size(186, 24);
+			bilinearBtn.Text = "Bilinear";
+			bilinearBtn.Click += bilinearBtn_Click;
+			// 
+			// nearestNeighborBtn
+			// 
+			nearestNeighborBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+			nearestNeighborBtn.ForeColor = System.Drawing.Color.Black;
+			nearestNeighborBtn.Image = Properties.Resources.black_nearest_neighbor;
+			nearestNeighborBtn.Name = "nearestNeighborBtn";
+			nearestNeighborBtn.Size = new System.Drawing.Size(186, 24);
+			nearestNeighborBtn.Text = "Nearest Neighbor";
+			nearestNeighborBtn.Click += nearestNeighborBtn_Click;
 			// 
 			// checkboardButton
 			// 

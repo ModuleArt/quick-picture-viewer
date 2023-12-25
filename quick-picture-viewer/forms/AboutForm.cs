@@ -23,7 +23,7 @@ namespace quick_picture_viewer
 			if (IntPtr.Size == 4) versionLabel.Text += " (x32)";
 			else if (IntPtr.Size == 8) versionLabel.Text += " (x64)";
 
-			if (ThemeMan.isWindows10()) makeDefaultBtn.Enabled = true;
+			if (ThemeMan.isWindows10orLater()) makeDefaultBtn.Enabled = true;
 		}
 
 		protected override void OnHandleCreated(EventArgs e)

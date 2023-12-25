@@ -11,7 +11,6 @@ using System.IO;
 using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace quick_picture_viewer
 {
@@ -238,8 +237,6 @@ namespace quick_picture_viewer
 
 			hasChangesLabel.Text = " " + LangMan.Get("not-saved");
 			zoomLabel.Text = " " + LangMan.Get("zoom") + ": " + LangMan.Get("auto");
-			selectionLabel.ToolTipText = LangMan.Get("edit-selection") + " ... | Alt+S";
-			directoryLabel.ToolTipText = LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L";
 
 			effectsBtn.Text = LangMan.Get("effects");
 			filteringModeBtn.Text = LangMan.Get("filtering");
@@ -364,7 +361,7 @@ namespace quick_picture_viewer
 		private void UpdateMan_UpdateFailed(object sender, UpdateFailedEventArgs e)
 		{
 			showSuggestion(
-				LangMan.Get("update-failed") + ": " + (e.Exception.Message.Length > 64 ? e.Exception.Message.Substring(0, 64) + "..." : e.Exception.Message), 
+				LangMan.Get("update-failed") + ": " + (e.Exception.Message.Length > 64 ? e.Exception.Message.Substring(0, 64) + "..." : e.Exception.Message),
 				SuggestionIcon.Warning
 			);
 		}
@@ -440,7 +437,7 @@ namespace quick_picture_viewer
 					pictureBox.Image = null;
 				}
 
-				const int exifOrientationID = 0x112; 
+				const int exifOrientationID = 0x112;
 				if (bitmap.PropertyIdList.Contains(exifOrientationID))
 				{
 					var prop = bitmap.GetPropertyItem(exifOrientationID);
@@ -1770,7 +1767,7 @@ namespace quick_picture_viewer
 			}
 			else
 			{
-				originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);	
+				originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
 			}
 			pictureBox.Image = originalImage;
 			setImageChanged(true);
@@ -1871,7 +1868,7 @@ namespace quick_picture_viewer
 			if (lastSlashIndex >= 0)
 			{
 				string appName = Properties.Settings.Default.FavoriteExternalApp.Substring(
-					lastSlashIndex + 1, 
+					lastSlashIndex + 1,
 					Properties.Settings.Default.FavoriteExternalApp.Length - lastSlashIndex - 1
 				);
 				externalFavoriteBtn.Text = LangMan.Get("open-with") + " \"" + appName + "\"";
@@ -2014,7 +2011,7 @@ namespace quick_picture_viewer
 				if (title.Length > 4 && title.Substring(title.Length - 4, 4) == " ...") title = title.Substring(0, title.Length - 4);
 				title = string.Format(LangMan.Get("from-format"), title);
 
-				if((sender as PluginMenuItem).OwnerItem.Name == "effectsBtn")
+				if ((sender as PluginMenuItem).OwnerItem.Name == "effectsBtn")
 				{
 					originalImage = e.input as Bitmap;
 					pictureBox.Image = originalImage;
@@ -2256,10 +2253,10 @@ namespace quick_picture_viewer
 			}
 			else if (result.Width > originalImage.Width - result.X) result.Width = originalImage.Width - result.X;
 
-			if (result.Y < 0) 
+			if (result.Y < 0)
 			{
 				result.Height += result.Y;
-				result.Y = 0; 
+				result.Y = 0;
 			}
 			else if (result.Height > originalImage.Height - result.Y) result.Height = originalImage.Height - result.Y;
 
@@ -2306,7 +2303,7 @@ namespace quick_picture_viewer
 
 			navNextBtn.Visible = !nextButton.Visible && nextButton.Enabled;
 			navPrevBtn.Visible = navNextBtn.Visible;
-			
+
 			Properties.Settings.Default.ShowNavArrows = !nextButton.Visible;
 			Properties.Settings.Default.Save();
 			showNavArrowsBtn.Checked = Properties.Settings.Default.ShowNavArrows;
@@ -2346,7 +2343,7 @@ namespace quick_picture_viewer
 				showSuggestion(LangMan.Get("image-copied-to-clipboard"), SuggestionIcon.Check);
 
 				Rectangle topRect = new Rectangle(0, 0, originalImage.Width, r.Y);
-				Bitmap topPart = topRect.Width > 0 && topRect.Height > 0 ? originalImage.Clone(topRect, originalImage.PixelFormat) : null; 
+				Bitmap topPart = topRect.Width > 0 && topRect.Height > 0 ? originalImage.Clone(topRect, originalImage.PixelFormat) : null;
 
 				Rectangle leftRect = new Rectangle(0, r.Y, r.X, r.Height);
 				Bitmap leftPart = leftRect.Width > 0 && leftRect.Height > 0 ? originalImage.Clone(leftRect, originalImage.PixelFormat) : null;
@@ -2478,10 +2475,10 @@ namespace quick_picture_viewer
 		{
 			setSlideshow(false);
 			string p = CustomOpenFolderDialog.GetFolder(LangMan.Get("open-folder"));
-			if (p != null) 
+			if (p != null)
 			{
 				recursiveFolder = null;
-				openFirstFileInFolder(p); 
+				openFirstFileInFolder(p);
 			}
 		}
 
@@ -2510,7 +2507,7 @@ namespace quick_picture_viewer
 					needSaveAs = false;
 					break;
 			}
-			if (needSaveAs) 
+			if (needSaveAs)
 			{
 				saveAsBtn.PerformClick();
 				return;
@@ -2530,7 +2527,7 @@ namespace quick_picture_viewer
 					pictureBox.Image.Dispose();
 					pictureBox.Image = null;
 				}
-				
+
 				using (MemoryStream memory = new MemoryStream())
 				{
 					using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
@@ -2594,12 +2591,22 @@ namespace quick_picture_viewer
 				)
 				{
 					selForm.ShowContextMenu(Cursor.Position);
-				} 
+				}
 				else
 				{
 					rmbMenu.Show(Cursor.Position);
 				}
 			}
+		}
+
+		private void directoryLabel_MouseMove(object sender, MouseEventArgs e)
+		{
+			infoTooltip.SetToolTip(directoryLabel.Owner, LangMan.Get("show-file-explorer") + " | Ctrl+Shift+L");
+		}
+
+		private void selectionLabel_MouseMove(object sender, MouseEventArgs e)
+		{
+			infoTooltip.SetToolTip(selectionLabel.Owner, LangMan.Get("edit-selection") + " ... | Alt+S");
 		}
 	}
 }
