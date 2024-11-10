@@ -155,4 +155,4 @@ git submodule update
 
 ## 🧰 Other great apps:
 
-- <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
+- <a href="https://github.com/ModuleArt/plain-color">PlainColor</a> - Lightweight stylish cross-platform color picker app<br>
