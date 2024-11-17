@@ -4,7 +4,7 @@
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  <a href="https://moduleart.github.io/quick-picture-viewer/">Quick Picture Viewer</a> is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
+  <a href="https://moduleart.github.io/quickpictureviewer">Quick Picture Viewer</a> is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
   <br><br>
   <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">
     <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/moduleart/quick-picture-viewer?include_prereleases">
@@ -17,7 +17,7 @@
   <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
     <img src="https://img.shields.io/badge/planner-trello-%230079BF" />
   </a><br>
-  <a href="https://moduleart.github.io/quick-picture-viewer">
+  <a href="https://moduleart.github.io/quickpictureviewer">
     <img src="/docs/screenshots/main.png">
   </a>
   <br>
@@ -151,7 +151,7 @@ git submodule update
 ## 📦 Related projects:
 
 - <a href="https://github.com/ModuleArt/quick-library/">Quick Library</a> - Windows Forms Control class library for "Quick" apps (.NET Framework)<br>
-- <a href="https://github.com/ModuleArt/qpv-plugins/">QPV Plugins</a> - Set of preinstalled plugins for the <a href="https://moduleart.github.io/quick-picture-viewer/">Quick Picture Viewer</a>
+- <a href="https://github.com/ModuleArt/qpv-plugins/">QPV Plugins</a> - Set of preinstalled plugins for the <a href="https://moduleart.github.io/quickpictureviewer">Quick Picture Viewer</a>
 
 ## 🧰 Other great apps:
 
