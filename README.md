@@ -112,20 +112,18 @@ scoop install quick-picture-viewer
 
 #### How to clone:
 
-1. Clone:
-
+When cloning the repository, do **not** forget to include its submodules (`--recurse-submodules`):
 ```powershell
-git clone --recurse-submodules https://github.com/ModuleArt/qpv-plugins
+git clone --recurse-submodules https://github.com/ModuleArt/quick-picture-viewer
 ```
 
-2. Download submodules:
-
+Otherwise, you can initialize them after cloning:
+```powershell
+git clone https://github.com/ModuleArt/quick-picture-viewer
+cd quick-picture-viewer
+git submodule update --init --recursive
 ```
-git submodule init
-git submodule update
-```
 
-3. Build submodules.
 
 #### Code contributors:
 
