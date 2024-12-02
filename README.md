@@ -14,11 +14,9 @@
     <img alt="Module Art website" src="https://img.shields.io/badge/www-moduleart-%2300BCD4">
   </a>
   <a title="Crowdin" target="_blank" href="https://crowdin.com/project/quick-picture-viewer"><img src="https://badges.crowdin.net/quick-picture-viewer/localized.svg"></a>
-  <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
-    <img src="https://img.shields.io/badge/planner-trello-%230079BF" />
-  </a><br>
+  <br>
   <a href="https://moduleart.github.io/quickpictureviewer">
-    <img src="/docs/screenshots/main.png">
+    <img src="https://moduleart.github.io/assets/images/projects/quick-picture-viewer/1.webp">
   </a>
   <br>
 <!--   v3.1.5  - December 21, 2023 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.5/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a><br> -->
