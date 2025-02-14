@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about" xml:space="preserve">
+    <value>Про програму</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="all-files" xml:space="preserve">
+    <value>Усі файли</value>
+    <comment>Діалогове вікно відкриття файлу</comment>
+  </data>
+  <data name="all-image-formats" xml:space="preserve">
+    <value>Усі формати зображень</value>
+    <comment>Діалогове вікно відкриття файлу</comment>
+  </data>
+  <data name="always-on-top" xml:space="preserve">
+    <value>Завжди зверху</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="app-description" xml:space="preserve">
+    <value>Легкий, універсальний настільний переглядач зображень для Windows. Найкраща заміна стандартному переглядачу фотографій Windows.</value>
+    <comment>Про програму</comment>
+  </data>
+  <data name="app-is-up-to-date" xml:space="preserve">
+    <value>Програма оновлена!</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="app-startup-actions" xml:space="preserve">
+    <value>Дії при запуску програми</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="aspect-ratio" xml:space="preserve">
+    <value>Співвідношення сторін</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="auto" xml:space="preserve">
+    <value>Авто</value>
+    <comment>Рядок стану, поле введення масштабу</comment>
+  </data>
+  <data name="auto-size" xml:space="preserve">
+    <value>Авторозмір</value>
+    <comment>Параметри SVG</comment>
+  </data>
+  <data name="auto-zoom" xml:space="preserve">
+    <value>Автомасштабування</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="background-color" xml:space="preserve">
+    <value>Колір фону</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="bottom" xml:space="preserve">
+    <value>Знизу</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>Огляд</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="browse-folder-with-qpv" xml:space="preserve">
+    <value>Переглядати за допомогою Quick Picture Viewer</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="browse-for-plugins" xml:space="preserve">
+    <value>Переглянути плагіни</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="center" xml:space="preserve">
+    <value>По центру</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="center-image" xml:space="preserve">
+    <value>Зображення по центру</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="centimeters" xml:space="preserve">
+    <value>сантиметри</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="change-window-opacity" xml:space="preserve">
+    <value>Змінити прозорість вікна</value>
+    <comment>Картинка в картинці</comment>
+  </data>
+  <data name="check-for-app-updates" xml:space="preserve">
+    <value>Перевіряти оновлення програми</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="checkboard-background" xml:space="preserve">
+    <value>Фон у шахівницю</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="choose-color" xml:space="preserve">
+    <value>Вибрати колір</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="choose-fit" xml:space="preserve">
+    <value>Вибрати режим заповнення</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="clear" xml:space="preserve">
+    <value>Очистити</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="comma" xml:space="preserve">
+    <value>Кома</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="compression" xml:space="preserve">
+    <value>Стиснення</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="context-menu" xml:space="preserve">
+    <value>Контекстне меню</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="context-menu-notice" xml:space="preserve">
+    <value>Щоб змінити параметри контекстного меню, потрібно запустити програму від імені адміністратора</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>Копіювати</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="copy-file" xml:space="preserve">
+    <value>Копіювати оригінальний файл</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="copy-image" xml:space="preserve">
+    <value>Копіювати це зображення</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>Створено</value>
+    <comment>Рядок стану, інформація про зображення</comment>
+  </data>
+  <data name="created-by" xml:space="preserve">
+    <value>Створено</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="crop" xml:space="preserve">
+    <value>Обрізати</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="cur-file-not-found" xml:space="preserve">
+    <value>Поточний файл не знайдено</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="cut" xml:space="preserve">
+    <value>Вирізати</value>
+    <comment>Меню правої кнопки миші</comment>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Темна</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="delete-file" xml:space="preserve">
+    <value>Видалити файл</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="delete-plugin" xml:space="preserve">
+    <value>Видалити плагін</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="delete-plugin-warning" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити плагін?</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="desc" xml:space="preserve">
+    <value>Опис</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="disk-size" xml:space="preserve">
+    <value>Розмір на диску</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="dont-save" xml:space="preserve">
+    <value>Не зберігати</value>
+    <comment>Головне вікно</comment>
+  </data>
+  <data name="downloading-update" xml:space="preserve">
+    <value>Завантаження оновлення...</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="dragged-image" xml:space="preserve">
+    <value>Перетягнуте зображення</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="edit-image" xml:space="preserve">
+    <value>Редагувати зображення</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="edit-selection" xml:space="preserve">
+    <value>Редагувати область виділення</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="effects" xml:space="preserve">
+    <value>Ефекти</value>
+    <comment>Меню</comment>
+  </data>
+<data name="error" xml:space="preserve">
+    <value>Помилка</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="esc-to-exit" xml:space="preserve">
+    <value>Натисніть {0}, щоб вийти з програми</value>
+    <comment>Головне вікно</comment>
+  </data>
+  <data name="exit-picture-in-picture" xml:space="preserve">
+    <value>Вийти з режиму "Картинка в картинці"</value>
+    <comment>Картинка в картинці</comment>
+  </data>
+  <data name="extension" xml:space="preserve">
+    <value>Розширення</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="fav-external-app" xml:space="preserve">
+    <value>Улюблена зовнішня програма</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="file" xml:space="preserve">
+    <value>Файл</value>
+    <comment>Рядок стану, інформація про зображення</comment>
+  </data>
+  <data name="file-copied-to-clipboard" xml:space="preserve">
+    <value>Файл скопійовано в буфер обміну</value>
+    <comment>Підказка</comment>
+  </data>
+  <data name="file-moved-to-trash" xml:space="preserve">
+    <value>Файл переміщено в кошик</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="file-properties" xml:space="preserve">
+    <value>Властивості файлу</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="file-reloaded" xml:space="preserve">
+    <value>Файл перезавантажено</value>
+    <comment>Підказка</comment>
+  </data>
+  <data name="fill" xml:space="preserve">
+    <value>Заповнення</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="filtering" xml:space="preserve">
+    <value>Фільтрація</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="bilinear" xml:space="preserve">
+    <value>Білінійна</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="nearest-neighbor" xml:space="preserve">
+    <value>Найближчий сусід</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="fit" xml:space="preserve">
+    <value>Вписати</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="flip-horizontal" xml:space="preserve">
+    <value>Відзеркалити горизонтально</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="flip-vertical" xml:space="preserve">
+    <value>Відзеркалити вертикально</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="folder" xml:space="preserve">
+    <value>Папка</value>
+    <comment>Рядок стану, інформація про зображення</comment>
+  </data>
+  <data name="frameless-mode" xml:space="preserve">
+    <value>Режим без рамки</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="from-clipboard" xml:space="preserve">
+    <value>З буфера обміну</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="from-format" xml:space="preserve">
+    <value>З "{0}"</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="full-path" xml:space="preserve">
+    <value>Повний шлях</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="fullscreen" xml:space="preserve">
+    <value>Повноекранний режим</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="fullscreen-cursor" xml:space="preserve">
+    <value>Показувати курсор у повноекранному режимі</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="height" xml:space="preserve">
+    <value>Висота</value>
+    <comment>Параметри SVG</comment>
+  </data>
+  <data name="help-us-translate-app" xml:space="preserve">
+    <value>Допоможіть нам перекласти цю програму</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>Зображення</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="image-copied-to-clipboard" xml:space="preserve">
+    <value>Зображення скопійовано в буфер обміну</value>
+    <comment>Підказка</comment>
+  </data>
+  <data name="image-info" xml:space="preserve">
+    <value>Інформація про зображення</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="image-pasted-from-clipboard" xml:space="preserve">
+    <value>Зображення вставлено з буфера обміну</value>
+    <comment>Підказка</comment>
+  </data>
+  <data name="inches" xml:space="preserve">
+    <value>дюйми</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="input" xml:space="preserve">
+    <value>Миша та клавіатура</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="install-now" xml:space="preserve">
+    <value>Встановити зараз</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="landscape" xml:space="preserve">
+    <value>Пейзаж</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="landscape-orientation" xml:space="preserve">
+    <value>Альбомна</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="left" xml:space="preserve">
+    <value>Зліва</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="left-arrow" xml:space="preserve">
+    <value>Ліва стрілка</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Світла</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="localization" xml:space="preserve">
+    <value>Локалізація</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="maintain-aspect-ratio" xml:space="preserve">
+    <value>Зберігати співвідношення сторін</value>
+    <comment>Параметри SVG</comment>
+  </data>
+  <data name="margin-bounds" xml:space="preserve">
+    <value>Межі полів</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="margins" xml:space="preserve">
+    <value>Поля</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="megapixels" xml:space="preserve">
+    <value>мегапікселі</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="memory-error" xml:space="preserve">
+    <value>Помилка пам'яті</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="minus" xml:space="preserve">
+    <value>Мінус</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="modified" xml:space="preserve">
+    <value>Змінено</value>
+    <comment>Рядок стану, інформація про зображення</comment>
+  </data>
+  <data name="more-options" xml:space="preserve">
+    <value>Більше параметрів</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="more-plugins" xml:space="preserve">
+    <value>Більше плагінів</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="mouse-wheel-action" xml:space="preserve">
+    <value>Дія прокручування коліщатка миші</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="move-to-trash" xml:space="preserve">
+    <value>Перемістити файл у кошик</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="new-version-available" xml:space="preserve">
+    <value>Доступна нова версія!</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="new-window" xml:space="preserve">
+    <value>Нове вікно</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="new-window-desc" xml:space="preserve">
+    <value>Створити нове порожнє вікно</value>
+    <comment>Головне вікно</comment>
+  </data>
+  <data name="next-image" xml:space="preserve">
+    <value>Наступне зображення в папці</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="next-image-in-1-second" xml:space="preserve">
+    <value>Наступне зображення через 1 секунду</value>
+    <comment>Підказка</comment>
+  </data>
+  <data name="next-image-in-x-seconds" xml:space="preserve">
+    <value>Наступне зображення через {0} секунд</value>
+    <comment>Підказка</comment>
+  </data>
+  <data name="next-prev-image" xml:space="preserve">
+    <value>Наступне / попереднє зображення в папці</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="no-file" xml:space="preserve">
+    <value>Немає файлу</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="no-files-to-open" xml:space="preserve">
+    <value>Немає файлів для відкриття</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="not-saved" xml:space="preserve">
+    <value>Не збережено</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="open" xml:space="preserve">
+    <value>Відкрити</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-external" xml:space="preserve">
+    <value>Відкрити файл у зовнішній програмі</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-file" xml:space="preserve">
+    <value>Відкрити файл</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-folder" xml:space="preserve">
+    <value>Відкрити папку</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-recursive" xml:space="preserve">
+    <value>Відкрити папку рекурсивно</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-with" xml:space="preserve">
+    <value>Відкрити за допомогою</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-with-choose" xml:space="preserve">
+    <value>Вибрати програму для відкриття</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-with-custom" xml:space="preserve">
+    <value>Відкрити за допомогою іншої програми</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-with-default" xml:space="preserve">
+    <value>Відкрити за допомогою програми за замовчуванням</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="open-with-qpv" xml:space="preserve">
+    <value>Відкрити за допомогою Quick Picture Viewer</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="original-size" xml:space="preserve">
+    <value>Оригінальний розмір</value>
+    <comment>Параметри SVG</comment>
+  </data>
+  <data name="paste-from-clipboard" xml:space="preserve">
+    <value>Вставити з буфера обміну</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="paste-image" xml:space="preserve">
+    <value>Вставити зображення</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="perm-delete" xml:space="preserve">
+    <value>Видалити файл назавжди</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="picture-in-picture" xml:space="preserve">
+    <value>Режим "Картинка в картинці"</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="pixels" xml:space="preserve">
+    <value>пікселі</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="please-open-image" xml:space="preserve">
+    <value>Будь ласка, відкрийте зображення для перегляду або редагування</value>
+    <comment>Панель зображень</comment>
+  </data>
+  <data name="plugin" xml:space="preserve">
+    <value>Плагін</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+<data name="plugin-manager" xml:space="preserve">
+    <value>Менеджер плагінів</value>
+    <comment>Меню, Менеджер плагінів</comment>
+  </data>
+  <data name="plugin-not-found" xml:space="preserve">
+    <value>Каталог плагінів не знайдено</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="plugin-website" xml:space="preserve">
+    <value>Веб-сайт плагінів</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="plus" xml:space="preserve">
+    <value>Плюс</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="portrait" xml:space="preserve">
+    <value>Портрет</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="presets" xml:space="preserve">
+    <value>Пресети</value>
+    <comment>Параметри SVG</comment>
+  </data>
+  <data name="press-to-exit-fullscreen" xml:space="preserve">
+    <value>Натисніть {0}, щоб вийти з повноекранного режиму</value>
+    <comment>Підказка</comment>
+  </data>
+  <data name="prev-image" xml:space="preserve">
+    <value>Попереднє зображення в папці</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="print" xml:space="preserve">
+    <value>Друк / Експорт в PDF</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="print-conf" xml:space="preserve">
+    <value>Налаштування друку</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="print-margins-error" xml:space="preserve">
+    <value>Не вдалося встановити поля документа</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="print-size" xml:space="preserve">
+    <value>Розмір друку</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="ready-to-install" xml:space="preserve">
+    <value>Готово до встановлення</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="reload-file" xml:space="preserve">
+    <value>Перезавантажити файл</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="reload-plugins" xml:space="preserve">
+    <value>Перезавантажити список плагінів</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="resize-svg" xml:space="preserve">
+    <value>Змінити розмір SVG</value>
+    <comment>Параметри SVG</comment>
+  </data>
+  <data name="resolution" xml:space="preserve">
+    <value>Роздільна здатність</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>Перезапустити</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="restart-required" xml:space="preserve">
+    <value>Потрібен перезапуск програми</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="restore-last-window-bounds" xml:space="preserve">
+    <value>Відновити останні межі вікна</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="right" xml:space="preserve">
+    <value>Справа</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="right-arrow" xml:space="preserve">
+    <value>Права стрілка</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="rotate-180" xml:space="preserve">
+    <value>Повернути на 180°</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="rotate-left" xml:space="preserve">
+    <value>Повернути проти годинникової стрілки</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="rotate-right" xml:space="preserve">
+    <value>Повернути за годинниковою стрілкою</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Зберегти</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="save-as" xml:space="preserve">
+    <value>Зберегти як</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="scroll-up-down" xml:space="preserve">
+    <value>Прокручування вгору / вниз</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="seconds" xml:space="preserve">
+    <value>секунди</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="select-all" xml:space="preserve">
+    <value>Вибрати все</value>
+    <comment>Меню ПКМ</comment>
+  </data>
+  <data name="selection-tool" xml:space="preserve">
+    <value>Інструмент виділення</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="set-as-default-image-viewer" xml:space="preserve">
+    <value>Встановити як програму перегляду зображень за замовчуванням</value>
+    <comment>Про програму</comment>
+  </data>
+  <data name="set-as-desktop-background" xml:space="preserve">
+    <value>Встановити як фоновий малюнок робочого столу</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="set-background" xml:space="preserve">
+    <value>Встановити фон</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="set-margins-btn" xml:space="preserve">
+    <value>Встановити поля</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Налаштування</value>
+    <comment>Меню, Налаштування</comment>
+  </data>
+  <data name="show-file-explorer" xml:space="preserve">
+    <value>Показати файл в провіднику</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="show-nav-arrows" xml:space="preserve">
+    <value>Показувати стрілки навігації</value>
+    <comment>Меню ПКМ</comment>
+  </data>
+  <data name="show-slideshow-counter" xml:space="preserve">
+    <value>Показувати лічильник слайд-шоу</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="show-status-bar" xml:space="preserve">
+    <value>Показувати рядок стану</value>
+    <comment>Меню ПКМ</comment>
+  </data>
+  <data name="show-toolbar" xml:space="preserve">
+    <value>Показувати панель інструментів</value>
+    <comment>Меню ПКМ</comment>
+  </data>
+  <data name="size" xml:space="preserve">
+    <value>Розмір</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="skip-this-version" xml:space="preserve">
+    <value>Пропустити цю версію</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="slideshow" xml:space="preserve">
+    <value>Слайд-шоу</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="span" xml:space="preserve">
+    <value>Розтягнути</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="square" xml:space="preserve">
+    <value>Квадрат</value>
+    <comment>Інформація про зображення</comment>
+  </data>
+  <data name="startup" xml:space="preserve">
+    <value>Запуск</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="stretch" xml:space="preserve">
+    <value>Розтягнути</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="sure-close-app" xml:space="preserve">
+    <value>Усі незбережені дані буде втрачено. Ви впевнені, що хочете закрити програму?</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="sure-perm-delete" xml:space="preserve">
+    <value>Ви впевнені, що хочете назавжди видалити цей файл?</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="switching-time" xml:space="preserve">
+    <value>Час перемикання</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="theme" xml:space="preserve">
+    <value>Тема</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="tile" xml:space="preserve">
+    <value>Плитка</value>
+    <comment>Шпалери</comment>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Заголовок</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="tools" xml:space="preserve">
+    <value>Інструменти</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="top" xml:space="preserve">
+    <value>Зверху</value>
+    <comment>Друк</comment>
+  </data>
+  <data name="translated-by" xml:space="preserve">
+    <value>Переклад від</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="type-options" xml:space="preserve">
+    <value>параметри</value>
+    <comment>Панель зображень, Параметри SVG</comment>
+  </data>
+  <data name="ui-lang" xml:space="preserve">
+    <value>Мова інтерфейсу користувача</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="unable-open-file" xml:space="preserve">
+    <value>Не вдалося відкрити файл</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="unable-open-file-skipped" xml:space="preserve">
+    <value>Не вдалося відкрити файл, файл пропущено</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="unable-to-run-external-app" xml:space="preserve">
+    <value>Не вдалося запустити зовнішню програму</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="unsaved-changes" xml:space="preserve">
+    <value>Незбережені зміни</value>
+    <comment>Головне вікно</comment>
+  </data>
+  <data name="unsaved-changes-question" xml:space="preserve">
+    <value>Поточне зображення має незбережені зміни. Що ви хочете зробити?</value>
+    <comment>Головне вікно</comment>
+  </data>
+  <data name="unsupported-pixel-format" xml:space="preserve">
+    <value>Непідтримуваний формат пікселів</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="update-failed" xml:space="preserve">
+    <value>Оновлення не вдалося</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="update-text" xml:space="preserve">
+    <value>Версія {0} для Quick Picture Viewer доступна, ви використовуєте версію {1}, оновити зараз?</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="updating-qpv" xml:space="preserve">
+    <value>Оновлення Quick Picture Viewer</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="use-system-setting" xml:space="preserve">
+    <value>Використовувати системні налаштування</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Версія</value>
+    <comment>Менеджер плагінів</comment>
+  </data>
+  <data name="view" xml:space="preserve">
+    <value>Вигляд</value>
+    <comment>Меню ПКМ</comment>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Попередження</value>
+    <comment>Повідомлення</comment>
+  </data>
+  <data name="whats-new" xml:space="preserve">
+    <value>Що нового?</value>
+    <comment>Менеджер оновлень</comment>
+  </data>
+  <data name="width" xml:space="preserve">
+    <value>Ширина</value>
+    <comment>Параметри SVG</comment>
+  </data>
+  <data name="zoom" xml:space="preserve">
+    <value>Масштаб</value>
+    <comment>Рядок стану</comment>
+  </data>
+  <data name="zoom-in" xml:space="preserve">
+    <value>Збільшити</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="zoom-in-out" xml:space="preserve">
+    <value>Збільшення / зменшення</value>
+    <comment>Налаштування</comment>
+  </data>
+  <data name="zoom-out" xml:space="preserve">
+    <value>Зменшити</value>
+    <comment>Меню</comment>
+  </data>
+  <data name="zoom-to-actual-size" xml:space="preserve">
+    <value>Зум до фактичного розміру</value>
+    <comment>Меню</comment>
+  </data>
+</root>
