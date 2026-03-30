@@ -90,6 +90,7 @@ namespace quick_picture_viewer
 			else if (mouseWheelAction == 2) mouseWheelActionRadio3.Checked = true;
 
 			updatesCheckBox.Checked = Properties.Settings.Default.CheckForUpdates;
+			if (MainForm.IsInstalledFromStore()) updatesCheckBox.Visible = false;
 			startupPasteCheckBox.Checked = Properties.Settings.Default.StartupPaste;
 			startupBoundsCheckBox.Checked = Properties.Settings.Default.StartupRestoreBounds;
 
