@@ -16,10 +16,13 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				return new FileTypeMan.OpenResult
+				using (var icon = new Icon(path, 128, 128))
 				{
-					Bmp = new Icon(path, 128, 128).ToBitmap()
-				};
+					return new FileTypeMan.OpenResult
+					{
+						Bmp = icon.ToBitmap()
+					};
+				}
 			}
 			catch
 			{

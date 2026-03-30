@@ -15,10 +15,14 @@ namespace quick_picture_viewer
 		{
 			try
 			{
-				return new FileTypeMan.OpenResult
+				using (var ms = new MemoryStream(File.ReadAllBytes(path)))
+				using (var tmp = new Bitmap(ms))
 				{
-					Bmp = new Bitmap(path)
-				};
+					return new FileTypeMan.OpenResult
+					{
+						Bmp = new Bitmap(tmp)
+					};
+				}
 			}
 			catch
 			{
