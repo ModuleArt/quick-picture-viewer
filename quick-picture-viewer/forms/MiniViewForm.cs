@@ -46,7 +46,7 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += new MouseEventHandler(picturePanel_MouseWheel);
 
-			if (ThemeMan.isWindows10()) ThemeMan.setDarkModeToControl(picturePanel.Handle);
+			if (ThemeMan.isWindows10orLater()) ThemeMan.setDarkModeToControl(picturePanel.Handle);
 			if (Properties.Settings.Default.PipOpacity == 0.25 || Properties.Settings.Default.PipOpacity == 0.75) Opacity = Properties.Settings.Default.PipOpacity;
 		}
 

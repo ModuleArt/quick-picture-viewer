@@ -1,6 +1,7 @@
 ﻿using QuickLibrary;
 using System.Drawing;
 using System.IO;
+using WebP.Net;
 
 namespace quick_picture_viewer
 {
@@ -17,14 +18,11 @@ namespace quick_picture_viewer
 			try
 			{
 				byte[] rawWebP = File.ReadAllBytes(path);
-				using (WebP webp = new WebP())
+				using (var webp = new WebPObject(rawWebP))
 				{
-					WebPDecoderOptions decoderOptions = new WebPDecoderOptions();
-					decoderOptions.use_threads = 1;
-					decoderOptions.alpha_dithering_strength = 100;
-					return new FileTypeMan.OpenResult 
+					return new FileTypeMan.OpenResult
 					{
-						Bmp = webp.Decode(rawWebP, decoderOptions)
+						Bmp = new Bitmap(webp.GetImage())
 					};
 				}
 			}
@@ -39,7 +37,13 @@ namespace quick_picture_viewer
 
 		public static void Save(Bitmap bmp, string path)
 		{
-			using (WebP webp = new WebP()) webp.Save(bmp, path);
+			using (var webp = new WebPObject(bmp))
+			{
+				byte[] rawWebP = webp.GetWebPLossless();
+
+				using var writer = new BinaryWriter(File.OpenWrite(path));
+				writer.Write(rawWebP);
+			}
 		}
 	}
 }
