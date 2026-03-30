@@ -836,11 +836,12 @@ namespace quick_picture_viewer
 						ext = ".webp";
 						break;
 				}
-				SaveFile(saveFileDialog1.FileName, ext, true);
-
-				setImageChanged(false);
-				CheckRecursiveFolder(saveFileDialog1.FileName);
-				OpenFile(saveFileDialog1.FileName, targetExtension: ext);
+				if (SaveFile(saveFileDialog1.FileName, ext, true))
+				{
+					setImageChanged(false);
+					CheckRecursiveFolder(saveFileDialog1.FileName);
+					OpenFile(saveFileDialog1.FileName, targetExtension: ext);
+				}
 			}
 			saveFileDialog1.Dispose();
 		}
@@ -2512,14 +2513,71 @@ namespace quick_picture_viewer
 				saveAsBtn.PerformClick();
 				return;
 			}
-			SaveFile(Path.Combine(currentFolder, currentFile), ext, false);
-			setImageChanged(false);
+			if (SaveFile(Path.Combine(currentFolder, currentFile), ext, false))
+				setImageChanged(false);
 		}
 
-		private void SaveFile(string path, string ext, bool dispose)
+		private bool SaveFile(string path, string ext, bool dispose)
 		{
 			using (Bitmap bmpToSave = new Bitmap(originalImage))
 			{
+				try
+				{
+					using (MemoryStream memory = new MemoryStream())
+					{
+						using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+						{
+							byte[] bytes;
+							switch (ext)
+							{
+								case ".png":
+									bmpToSave.Save(memory, ImageFormat.Png);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case ".jpg":
+								case ".jpeg":
+								case ".jpe":
+								case ".jfif":
+								case ".exif":
+									bmpToSave.Save(memory, ImageFormat.Jpeg);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case ".gif":
+									bmpToSave.Save(memory, ImageFormat.Gif);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case ".bmp":
+								case ".dib":
+								case ".rle":
+									bmpToSave.Save(memory, ImageFormat.Bmp);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case ".tiff":
+								case ".tif":
+									bmpToSave.Save(memory, ImageFormat.Tiff);
+									bytes = memory.ToArray();
+									fs.Write(bytes, 0, bytes.Length);
+									break;
+								case ".ico":
+									IcoEngine.ConvertToIcon(bmpToSave, memory);
+									break;
+								case ".webp":
+									WebpWrapper.Save(bmpToSave, path);
+									break;
+							}
+						}
+					}
+				}
+				catch (IOException ex)
+				{
+					showSuggestion(LangMan.Get("not-saved") + ": " + ex.Message, SuggestionIcon.Warning);
+					return false;
+				}
+
 				if (dispose)
 				{
 					originalImage.Dispose();
@@ -2527,56 +2585,8 @@ namespace quick_picture_viewer
 					pictureBox.Image.Dispose();
 					pictureBox.Image = null;
 				}
-
-				using (MemoryStream memory = new MemoryStream())
-				{
-					using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
-					{
-						byte[] bytes;
-						switch (ext)
-						{
-							case ".png":
-								bmpToSave.Save(memory, ImageFormat.Png);
-								bytes = memory.ToArray();
-								fs.Write(bytes, 0, bytes.Length);
-								break;
-							case ".jpg":
-							case ".jpeg":
-							case ".jpe":
-							case ".jfif":
-							case ".exif":
-								bmpToSave.Save(memory, ImageFormat.Jpeg);
-								bytes = memory.ToArray();
-								fs.Write(bytes, 0, bytes.Length);
-								break;
-							case ".gif":
-								bmpToSave.Save(memory, ImageFormat.Gif);
-								bytes = memory.ToArray();
-								fs.Write(bytes, 0, bytes.Length);
-								break;
-							case ".bmp":
-							case ".dib":
-							case ".rle":
-								bmpToSave.Save(memory, ImageFormat.Bmp);
-								bytes = memory.ToArray();
-								fs.Write(bytes, 0, bytes.Length);
-								break;
-							case ".tiff":
-							case ".tif":
-								bmpToSave.Save(memory, ImageFormat.Tiff);
-								bytes = memory.ToArray();
-								fs.Write(bytes, 0, bytes.Length);
-								break;
-							case ".ico":
-								IcoEngine.ConvertToIcon(bmpToSave, memory);
-								break;
-							case ".webp":
-								WebpWrapper.Save(bmpToSave, path);
-								break;
-						}
-					}
-				}
 			}
+			return true;
 		}
 
 		private void picturePanel_MouseClick(object sender, MouseEventArgs e)
