@@ -2202,8 +2202,10 @@ namespace quick_picture_viewer
 		{
 			if (selForm != null && originalImage != null)
 			{
-				originalImage = originalImage.Clone(GetSelectionRect(), originalImage.PixelFormat);
+				Bitmap oldImage = originalImage;
+				originalImage = oldImage.Clone(GetSelectionRect(), oldImage.PixelFormat);
 				pictureBox.Image = originalImage;
+				oldImage.Dispose();
 				setImageChanged(true);
 				UpdateSizeLabel();
 				pictureBox.UpdatePictureBoxLocation(picturePanel);
