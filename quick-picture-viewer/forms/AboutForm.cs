@@ -24,6 +24,7 @@ namespace quick_picture_viewer
 			else if (IntPtr.Size == 8) versionLabel.Text += " (x64)";
 
 			if (ThemeMan.isWindows10orLater()) makeDefaultBtn.Enabled = true;
+			if (MainForm.IsInstalledFromStore()) updatesBtn.Visible = false;
 		}
 
 		protected override void OnHandleCreated(EventArgs e)

@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -37,6 +38,15 @@ namespace quick_picture_viewer
 
 		public SelectionForm selForm = null;
 		private EditSelForm editSelForm = null;
+
+		[DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+		private static extern int GetCurrentPackageFullName(ref int packageFullNameLength, IntPtr packageFullName);
+
+		internal static bool IsInstalledFromStore()
+		{
+			int length = 0;
+			return GetCurrentPackageFullName(ref length, IntPtr.Zero) != 15700;
+		}
 
 		private string currentFolder;
 		private string recursiveFolder;
@@ -341,7 +351,7 @@ namespace quick_picture_viewer
 			UpdateMan.UpdateFailed += UpdateMan_UpdateFailed;
 			UpdateMan.IsUpToDate += UpdateMan_IsUpToDate;
 			UpdateMan.UpdateSkipped += UpdateMan_UpdateSkipped;
-			if (Properties.Settings.Default.CheckForUpdates) UpdateMan.CheckForUpdates(false, TopMost, Handle);
+			if (Properties.Settings.Default.CheckForUpdates && !IsInstalledFromStore()) UpdateMan.CheckForUpdates(false, TopMost, Handle);
 
 			ReloadPlugins();
 
