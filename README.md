@@ -4,7 +4,7 @@
 <h1 align="center">Quick Picture Viewer</h1>
 
 <p align="center">
-  <a href="https://moduleart.github.io/quick-picture-viewer/">Quick Picture Viewer</a> is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
+  <a href="https://moduleart.github.io/quickpictureviewer">Quick Picture Viewer</a> is a lightweight, versatile desktop image viewer for Windows.<br>The best replacement for the default Windows photo viewer.
   <br><br>
   <a href="https://github.com/ModuleArt/quick-picture-viewer/releases">
     <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/moduleart/quick-picture-viewer?include_prereleases">
@@ -14,11 +14,9 @@
     <img alt="Module Art website" src="https://img.shields.io/badge/www-moduleart-%2300BCD4">
   </a>
   <a title="Crowdin" target="_blank" href="https://crowdin.com/project/quick-picture-viewer"><img src="https://badges.crowdin.net/quick-picture-viewer/localized.svg"></a>
-  <a alt="Trello roadmap" href="https://trello.com/b/mFgTs747/quick-picture-viewer">
-    <img src="https://img.shields.io/badge/planner-trello-%230079BF" />
-  </a><br>
-  <a href="https://moduleart.github.io/quick-picture-viewer">
-    <img src="/docs/screenshots/main.png">
+  <br>
+  <a href="https://moduleart.github.io/quickpictureviewer">
+    <img src="https://moduleart.github.io/assets/images/projects/quick-picture-viewer/1.webp">
   </a>
   <br>
   <!-- v3.1.5 (Beta) - December 21, 2023 - <a href="https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.5/QuickPictureViewer-Setup.exe">Download (3.4 MB)</a><br> -->
@@ -128,20 +126,18 @@ scoop install quick-picture-viewer
 
 #### How to clone:
 
-1. Clone:
-
+When cloning the repository, do **not** forget to include its submodules (`--recurse-submodules`):
 ```powershell
-git clone --recurse-submodules https://github.com/ModuleArt/qpv-plugins
+git clone --recurse-submodules https://github.com/ModuleArt/quick-picture-viewer
 ```
 
-2. Download submodules:
-
+Otherwise, you can initialize them after cloning:
+```powershell
+git clone https://github.com/ModuleArt/quick-picture-viewer
+cd quick-picture-viewer
+git submodule update --init --recursive
 ```
-git submodule init
-git submodule update
-```
 
-3. Build submodules.
 
 #### Code contributors:
 
@@ -167,8 +163,8 @@ git submodule update
 ## 📦 Related projects:
 
 - <a href="https://github.com/ModuleArt/quick-library/">Quick Library</a> - Windows Forms Control class library for "Quick" apps (.NET Framework)<br>
-- <a href="https://github.com/ModuleArt/qpv-plugins/">QPV Plugins</a> - Set of preinstalled plugins for the <a href="https://moduleart.github.io/quick-picture-viewer/">Quick Picture Viewer</a>
+- <a href="https://github.com/ModuleArt/qpv-plugins/">QPV Plugins</a> - Set of preinstalled plugins for the <a href="https://moduleart.github.io/quickpictureviewer">Quick Picture Viewer</a>
 
 ## 🧰 Other great apps:
 
-- <a href="https://github.com/ModuleArt/quick-color-picker/">Quick Color Picker</a> - Lightweight desktop color picker and color editor utility for Windows.<br>
+- <a href="https://github.com/ModuleArt/plain-color">PlainColor</a> - Lightweight stylish cross-platform color picker app<br>
