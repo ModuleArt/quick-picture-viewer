@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -37,6 +38,9 @@ namespace quick_picture_viewer
 
 		public SelectionForm selForm = null;
 		private EditSelForm editSelForm = null;
+
+		[DllImport("shlwapi.dll", CharSet = CharSet.Unicode)]
+		private static extern int StrCmpLogicalW(string x, string y);
 
 		private string currentFolder;
 		private string recursiveFolder;
@@ -1261,6 +1265,7 @@ namespace quick_picture_viewer
 					if (exts.Contains(ext)) arlist.Add(allFiles[i]);
 				}
 			}
+			arlist.Sort((a, b) => StrCmpLogicalW(Path.GetFileName(a), Path.GetFileName(b)));
 			return arlist.ToArray();
 		}
 
