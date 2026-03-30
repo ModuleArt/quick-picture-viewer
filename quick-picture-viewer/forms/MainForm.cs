@@ -1298,6 +1298,8 @@ namespace quick_picture_viewer
 
 		private void closeFile()
 		{
+			selectionBtn.Checked = false;
+
 			if (originalImage != null)
 			{
 				originalImage.Dispose();
@@ -2193,6 +2195,7 @@ namespace quick_picture_viewer
 
 		private void SelForm_SizeChanged(object sender, EventArgs e)
 		{
+			if (originalImage == null) return;
 			Rectangle r = GetSelectionRect();
 			selectionLabel.Text = " X: " + r.X + " Y: " + r.Y + " (" + r.Width + " x " + r.Height + ")";
 			if (editSelForm != null) editSelForm.SetSelection(r);
