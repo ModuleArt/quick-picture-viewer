@@ -12,6 +12,7 @@ using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using DrawingImage = System.Drawing.Image;
 
 namespace quick_picture_viewer
 {
@@ -35,6 +36,9 @@ namespace quick_picture_viewer
 		private System.Timers.Timer slideshowTimer = new System.Timers.Timer();
 		private System.Threading.Timer suggestionTimer;
 		private bool framelessMode = false;
+		private readonly Dictionary<ToolStripItem, DrawingImage> toolbarSourceImages = new Dictionary<ToolStripItem, DrawingImage>();
+		private readonly Dictionary<ToolStripItem, DrawingImage> toolbarScaledImages = new Dictionary<ToolStripItem, DrawingImage>();
+		private readonly Dictionary<ToolStripItem, Size> toolbarLogicalSizes = new Dictionary<ToolStripItem, Size>();
 
 		public SelectionForm selForm = null;
 		private EditSelForm editSelForm = null;
@@ -53,6 +57,8 @@ namespace quick_picture_viewer
 
 			InitializeComponent();
 
+			foreach (ToolStripItem item in toolStrip1.Items) toolbarLogicalSizes[item] = item.Size;
+
 			SetFilteringMode(InterpolationMode.Bilinear);
 
 			zoomInTimer.Elapsed += new ElapsedEventHandler(zoomInTimer_Event);
@@ -66,8 +72,6 @@ namespace quick_picture_viewer
 
 			picturePanel.MouseWheel += picturePanel_MouseWheel;
 
-			zoomTextBox.TextBox.AutoSize = false;
-			zoomTextBox.Height = 21;
 			zoomTextBox.TextBox.MouseWheel += TextBox_MouseWheel;
 			zoomTextBox.LostFocus += PicturePanel_LostFocus;
 			zoomTextBox.TextBox.ContextMenuStrip = new ContextMenuStrip();
@@ -116,6 +120,77 @@ namespace quick_picture_viewer
 			closeFile();
 			base.OnHandleCreated(e);
 		}
+
+		protected override void OnDpiChanged(DpiChangedEventArgs e)
+		{
+			base.OnDpiChanged(e);
+			ApplyToolbarDpiScale(e.DeviceDpiNew);
+		}
+
+		private void ApplyToolbarDpiScale(int dpi)
+		{
+			int Scale(int logicalPixels)
+			{
+				return (int)Math.Round(logicalPixels * dpi / 96F, MidpointRounding.AwayFromZero);
+			}
+
+			toolStrip1.Height = Scale(32);
+			toolStrip1.Padding = new Padding(Scale(4), Scale(5), Scale(4), Scale(5));
+
+			foreach (ToolStripItem item in toolStrip1.Items)
+			{
+				Size logicalSize = toolbarLogicalSizes[item];
+				item.AutoSize = false;
+				item.Size = new Size(Scale(logicalSize.Width), Scale(logicalSize.Height));
+
+				if (item.Image == null) continue;
+
+				DrawingImage previousScaledImage = null;
+				bool currentImageIsScaled = toolbarScaledImages.TryGetValue(item, out previousScaledImage) &&
+					ReferenceEquals(item.Image, previousScaledImage);
+
+				if (!currentImageIsScaled) toolbarSourceImages[item] = item.Image;
+
+				DrawingImage sourceImage = toolbarSourceImages[item];
+				int targetSize = Scale(16);
+				DrawingImage scaledImage = sourceImage;
+
+				if (sourceImage.Width != targetSize || sourceImage.Height != targetSize)
+				{
+					Bitmap bitmap = new Bitmap(targetSize, targetSize, PixelFormat.Format32bppPArgb);
+					using (Graphics graphics = Graphics.FromImage(bitmap))
+					{
+						graphics.CompositingMode = CompositingMode.SourceCopy;
+						graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+						graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+						graphics.DrawImage(sourceImage, new Rectangle(0, 0, targetSize, targetSize));
+					}
+					scaledImage = bitmap;
+					toolbarScaledImages[item] = scaledImage;
+				}
+				else
+				{
+					toolbarScaledImages.Remove(item);
+				}
+
+				item.ImageScaling = ToolStripItemImageScaling.None;
+				item.Image = scaledImage;
+
+				if (previousScaledImage != null && !ReferenceEquals(previousScaledImage, scaledImage))
+				{
+					previousScaledImage.Dispose();
+				}
+			}
+
+			zoomTextBox.ControlAlign = ContentAlignment.MiddleCenter;
+			zoomTextBox.Margin = new Padding(Scale(7), 0, Scale(7), 0);
+			zoomTextBox.TextBox.AutoSize = true;
+			int preferredHeight = zoomTextBox.TextBox.GetPreferredSize(Size.Empty).Height;
+			zoomTextBox.Size = new Size(Scale(toolbarLogicalSizes[zoomTextBox].Width), preferredHeight);
+
+			toolStrip1.PerformLayout();
+		}
+
 		private void PicturePanel_LostFocus(object sender, EventArgs e)
 		{
 			if (ActiveControl != zoomTextBox.TextBox) ActiveControl = picturePanel;
@@ -349,6 +424,7 @@ namespace quick_picture_viewer
 			ReloadPlugins();
 
 			base.OnLoad(e);
+			ApplyToolbarDpiScale(DeviceDpi);
 		}
 
 		private void UpdateMan_UpdateSkipped(object sender, UpdateSkippedEventArgs e)
@@ -2035,6 +2111,10 @@ namespace quick_picture_viewer
 
 		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
+			foreach (DrawingImage image in toolbarScaledImages.Values) image.Dispose();
+			toolbarScaledImages.Clear();
+			toolbarSourceImages.Clear();
+
 			if (restartApp) NewWindow();
 		}
 
